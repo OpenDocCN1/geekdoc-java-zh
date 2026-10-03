@@ -1,66 +1,51 @@
+
+
 # Sams 24 小时学会 Java，第八版
-
-
-
-
-
-
-
-
-
-
-
-
 
 如需批量购买本书，或需了解特殊销售机会（可能包括电子版；定制封面设计；以及针对您的业务、培训目标、营销重点或品牌兴趣特定特定），请联系我们的企业销售部门 `corpsales@pearsoned.com` 或拨打 (800) 382-3419。
 
-
-
-
-
-39:             // display the name of the month
-40:             switch (month) {
-41:                 case 1:
-42:                     System.out.print("January");
-43:                     break;
-44:                 case 2:
-45:                     System.out.print("February");
-46:                     break;
-47:                 case 3:
-48:                     System.out.print("March");
-49:                     break;
-50:                 case 4:
-51:                     System.out.print("April");
-52:                     break;
-53:                 case 5:
-54:                     System.out.print("May");
-55:                     break;
-56:                 case 6:
-57:                     System.out.print("June");
-58:                     break;
-59:                 case 7:
-60:                     System.out.print("July");
-61:                     break;
-62:                 case 8:
-63:                     System.out.print("August");
-64:                     break;
-65:                 case 9:
-66:                     System.out.print("September");
-67:                     break;
-68:                 case 10:
-69:                     System.out.print("October");
-70:                     break;
-71:                 case 11:
-72:                     System.out.print("November");
-73:                     break;
-74:                 case 12:
-75:                     System.out.print("December");
-76:                     break;
-77:             }
-78:             // display the date and year
-79:             System.out.println(" " + day + ", " + year + ".");
-80:         }
-81:
+```java
+// display the name of the month
+switch (month) {
+    case 1:
+        System.out.print("January");
+        break;
+    case 2:
+        System.out.print("February");
+        break;
+    case 3:
+        System.out.print("March");
+        break;
+    case 4:
+        System.out.print("April");
+        break;
+    case 5:
+        System.out.print("May");
+        break;
+    case 6:
+        System.out.print("June");
+        break;
+    case 7:
+        System.out.print("July");
+        break;
+    case 8:
+        System.out.print("August");
+        break;
+    case 9:
+        System.out.print("September");
+        break;
+    case 10:
+        System.out.print("October");
+        break;
+    case 11:
+        System.out.print("November");
+        break;
+    case 12:
+        System.out.print("December");
+        break;
+}
+// display the date and year
+System.out.println(" " + day + ", " + year + ".");
 ```
 
 保存程序后，在运行之前，请仔细检查代码，以了解条件语句是如何使用的。
@@ -79,15 +64,11 @@
 - 第 17–23 行显示三种可能的问候语之一：“Good morning.”“Good afternoon.”或“Good evening.”显示的问候语根据 `hour` 变量的值进行选择。
 - 第 26–32 行显示当前分钟以及一些辅助文本。如果 `minute` 的值为 0，则由于第 27 行的 `if` 语句，第 28–31 行将被忽略。该语句是必要的，因为程序告诉某人现在是几点零分是不符合逻辑的。第 28 行显示 `minute` 变量的当前值。第 29–30 行使用三元运算符根据 `minute` 是否等于 1 来显示“minutes”或“minute”。
 - 第 35–37 行通过另一个三元运算符显示当前小时。第 36 行的三元条件语句导致小时大于 12 时以不同的方式显示，这防止了计算机输出类似“15 点”的时间。
-- 第 40–76 行是程序的大部分是一个长的 `switch` 语句，根据存储在 `month` 变量中的整数值显示不同的月份。
+- 第 40–76 行是程序的大部分，是一个长的 `switch` 语句，根据存储在 `month` 变量中的整数值显示不同的月份。
 - 第 79 行通过显示当前日期和年份完成显示。
 - 第 80–81 行关闭 `main()` 语句块。
 
-你将在创建第一个对象 中学习如何创建和操作对象。
-
-
-
-
+你将在创建第一个对象中学习如何创建和操作对象。
 
 **A.** 可以不使用 `else` 或 `switch`，许多程序员也从不使用三元运算符 `?`。然而，在程序中使用 `else` 和 `switch` 往往是有益的，因为它们能让程序更易理解。一组链在一起的 `if` 语句可能会变得难以管理。
 
@@ -149,25 +130,20 @@
 
 为了提高你在 Java 条件语句方面的技巧，请通过以下活动回顾本小时的主题：
 
-![Image](img/arrow.jpg) 在 `Clock` 程序的某一行 `break` 语句前加上“//” 使其成为注释；然后编译它，并运行程序看看会发生什么。尝试多删除几个 `break` 语句再试一次。
-
-![Image](img/arrow.jpg) 创建一个短程序，在一个名为 `grade` 的整数变量中存储一个从 1 到 100 之间任选的值。使用这个 `grade` 变量配合条件语句，为所有‘A’、‘B’、‘C’、‘D’和‘F’的学生显示不同的信息。先尝试用 `if` 语句，然后尝试用 `switch` 语句。
+- ![Image](img/arrow.jpg) 在 `Clock` 程序的某一行 `break` 语句前加上“//”使其成为注释；然后编译它，并运行程序看看会发生什么。尝试多删除几个 `break` 语句再试一次。
+- ![Image](img/arrow.jpg) 创建一个短程序，在一个名为 `grade` 的整数变量中存储一个从 1 到 100 之间任选的值。使用这个 `grade` 变量配合条件语句，为所有‘A’、‘B’、‘C’、‘D’和‘F’的学生显示不同的信息。先尝试用 `if` 语句，然后尝试用 `switch` 语句。
 
 要查看实现这些活动的 Java 程序，请访问书籍网站 [www.java24hours.com](http://www.java24hours.com)。
 
 # 第 8 小时：使用循环重复操作
 
-### 本小时的任务列表：
+### 本小时的任务列表
 
-![Image](img/arrow.jpg) 使用 `for` 循环。
-
-![Image](img/arrow.jpg) 使用 `while` 循环。
-
-![Image](img/arrow.jpg) 使用 `do`-`while` 循环。
-
-![Image](img/arrow.jpg) 提前退出循环。
-
-![Image](img/arrow.jpg) 为循环命名。
+- ![Image](img/arrow.jpg) 使用 `for` 循环。
+- ![Image](img/arrow.jpg) 使用 `while` 循环。
+- ![Image](img/arrow.jpg) 使用 `do`-`while` 循环。
+- ![Image](img/arrow.jpg) 提前退出循环。
+- ![Image](img/arrow.jpg) 为循环命名。
 
 学生最令人苦恼的惩罚之一是让他们在黑板上反复写某些东西。在《辛普森一家》中，在一次经常去黑板的某次经历中，巴特·辛普森必须写几十次“我再也不问圣诞老人什么时候上厕所了”。这种惩罚对孩子可能有效，但对计算机来说完全没用。
 
@@ -191,32 +167,27 @@ Java 最复杂的循环语句是 `for`。`for` 循环以固定次数执行程序
 
 ```java
 for (int dex = 0; dex < 1000; dex++) {
-  if (dex % 12 == 0) {
-    System.out.println("#: " + dex);
-  }
+    if (dex % 12 == 0) {
+        System.out.println("#: " + dex);
+    }
 }
 ```
 
 这个循环显示 0 到 999 之间所有能 12 整除的数字。
 
-`for` 循环有一个决定循环何时开始和结束的变量。这个变量被称为计数器（*索引*）。前面的循环中的计数器是变量 `dex`。
+`for` 循环有一个决定循环何时开始和结束的变量。这个变量被称为计数器（索引）。前面的循环中的计数器是变量 `dex`。
 
 `for` 循环在 `for` 关键字后的括号内有三个部分：初始化、条件和变化部分。这些部分用分号隔开。示例说明了这三个部分：
 
-![Image](img/arrow.jpg) 初始化部分——在第一部分，变量 `dex` 被赋予了初始值 0。
-
-![Image](img/arrow.jpg) 条件部分——在第二部分，有一个可能你在 `if` 语句中使用的条件测试：`dex < 1000`。
-
-![Image](img/arrow.jpg) 变化部分——第三部分是改变 `dex` 变量值的语句，在本例中使用增增运算符。
+- ![Image](img/arrow.jpg) 初始化部分——在第一部分，变量 `dex` 被赋予了初始值 0。
+- ![Image](img/arrow.jpg) 条件部分——在第二部分，有一个可能你在 `if` 语句中使用的条件测试：`dex < 1000`。
+- ![Image](img/arrow.jpg) 变化部分——第三部分是改变 `dex` 变量值的语句，在本例中使用增增运算符。
 
 在初始化部分，你设置计数器变量。你可以在 `for` 语句中创建变量，正如前面的示例使用整数变量 `dex` 所示。你也可以在程序的其他地方创建变量。该变量在循环开始时具有这个值。
 
 条件部分包含一个必须保持为 `true` 循环才能继续测试。当测试为 `false` 时，循环结束。在本例中，当 `dex` 变量等于或大于 1,000 时循环结束。
 
-
-
-
-`for`语句的最后部分包含一个改变计数器变量值的语句。该语句在每次循环执行时都会处理。计数器必须以某种方式发生变化，否则循环将永远不会。在示例中，`dex` 在变化部分被增加了 1。如果 `dex` 不发生变化，它将保持原始值 0 不变，而条件 `dex < 1000` 将始终为真。
+`for` 语句的最后部分包含一个改变计数器变量值的语句。该语句在每次循环执行时都会处理。计数器必须以某种方式发生变化，否则循环将永远不会结束。在示例中，`dex` 在变化部分被增加了 1。如果 `dex` 不发生变化，它将保持原始值 0 不变，而条件 `dex < 1000` 将始终为真。
 
 `for` 语句的块在循环的每次遍历中都会被执行。
 
@@ -224,23 +195,23 @@ for (int dex = 0; dex < 1000; dex++) {
 
 点击此处查看代码图片
 
-```
+```java
 if (dex % 12 == 0) {
     System.out.println("#: " + dex);
 }
 ```
 
-这些语句被执行了 1,000 次。循环通过将 `dex` 变量设置为 0 开始。在循环的每次通过中，它将 `dex` 加 1。当 `dex` 不再小于小于 1,000 时，循环停止。
+这些语句被执行了 1,000 次。循环通过将 `dex` 变量设置为 0 开始。在循环的每次通过中，它将 `dex` 加 1。当 `dex` 不再小于 1,000 时，循环停止。
 
 ### 注意事项
 
 在提到循环时，你可能会听到一个特殊的术语是“迭代”（iteration）。一次迭代是指循环的单次遍历。用于控制循环的计数变量被称为“迭代器”（iterator）。
 
-正如你在 `if` 语句中看到的那样，如果 `for` 循环只包含一条语句，则不需要括号。下例所示所示：
+正如你在 `if` 语句中看到的那样，如果 `for` 循环只包含一条语句，则不需要括号。下例所示：
 
 点击此处查看代码图片
 
-```
+```java
 for (int p = 0; p < 500; p++)
     System.out.println("I will not sell miracle cures");
 ```
@@ -249,31 +220,35 @@ for (int p = 0; p < 500; p++)
 
 点击此处查看代码图片
 
-```
+```java
 for (int p = 0; p < 500; p++) {
     System.out.println("I will not sell miracle cures");
 }
 ```
 
-你在此小时内创建的第一个程序将显示前 200 个 9 的倍数：9、18、27 等，以此此类推，直到 1,800（9 × 200）。在 NetBeans 中，在 `com.java24hours` 包中创建一个名为 `Nines` 的空 Java 文件，并输入列表 8.1 中的文本。当你保存文件时，它被存储为 `Nines.java`。
+你在此小时内创建的第一个程序将显示前 200 个 9 的倍数：9、18、27 等，以此类推，直到 1,800（9 × 200）。在 NetBeans 中，在 `com.java24hours` 包中创建一个名为 `Nines` 的空 Java 文件，并输入列表 8.1 中的文本。当你保存文件时，它被存储为 `Nines.java`。
 
 **列表 8.1 `Nines.java` 的完整文本**
 
 点击此处查看代码图片
 
+```java
+package com.java24hours;
+
+class Nines {
+    public static void main(String[] arguments) {
+        for (int dex = 1; dex <= 200; dex++) {
+            int multiple = 9 * dex;
+            System.out.print(multiple + " ");
+        }
+        System.out.println();
+    }
+}
 ```
-1: package com.java24hours;
-2:
-3: class Nines {
-4:     public static void main(String[] arguments) {
-5:         for (int dex = 1; dex <= 200; dex++) {
-6:             int multiple = 9 * dex;
-7:             System.out.print(multiple + " ");
-8:         }
-9:     System.out.println();
-10:     }
-11: }
-```
+
+
+
+
 
 `Nines` 程序在第 5 行包含一个 `for` 语句。该语句有三个部分：
 
@@ -289,7 +264,7 @@ for (int p = 0; p < 500; p++) {
 
 **图 8.1**
 
-Nines 程序的输出。
+`Nines` 程序的输出。
 
 NetBeans 中的输出窗口不会自动换行，因此所有数字都显示在同一行。要使文本换行，请在 Output（输出）窗格的任何位置点击右键，并从弹出菜单中选择 Wrap Text（自动换行）。
 
@@ -299,11 +274,13 @@ NetBeans 中的输出窗口不会自动换行，因此所有数字都显示在�
 
 点击此处查看代码图片
 
-```
+```java
 int gameLives = 3;
 
 while (gameLives > 0) {
+
     // 循环内部的语句
+
 }
 ```
 
@@ -311,8 +288,9 @@ while (gameLives > 0) {
 
 点击此处查看代码图片
 
-```
+```java
 for (int p = 0; p < 500; p++)
+
     System.out.println("I will not sell miracle cures");
 ```
 
@@ -324,13 +302,17 @@ for (int p = 0; p < 500; p++)
 
 点击此处查看代码图片
 
-```
+```java
 int limit = 5;
+
 int count = 1;
 
 do {
+
     System.out.println("I will not sell miracle cures");
+
     count++;
+
 } while (count < limit);
 ```
 
@@ -340,18 +322,21 @@ do {
 
 点击此处查看代码图片
 
-```
+```java
 int index = 0;
 
 while (index <= 1000) {
+
     index = index + 5;
+
     if (index == 400) {
+
         break;
+
     }
+
 }
 ```
-
-
 
 另一个可以在循环内部使用的特殊情况语句是 `continue`。`continue` 语句会导致循环退出当前的迭代，并从循环的第一条语句重新开始。请考虑以下代码：
 
@@ -361,17 +346,23 @@ while (index <= 1000) {
 int index = 0;
 
 while (index <= 1000) {
+
     index = index + 5;
+
     if (index == 400) {
+
         continue;
+
     }
+
     System.out.println("The index is " + index);
+
 }
 ```
 
 在这个循环内部，除非 `index` 的值等于 400，否则语句都会被正常处理。在这种情况下，`continue` 语句会导致循环返回到 `while` 语句，而不是正常地执行到 `System.out.println()` 语句。由于 `continue` 语句的存在，循环永远不会显示以下文本：
 
-The index is 400
+`The index is 400`
 
 你可以在所有类型的循环中使用 `break` 和 `continue` 语句。
 
@@ -381,9 +372,13 @@ The index is 400
 
 ```java
 while (true) {
+
     if (quitKeyPressed == true) {
+
         break;
+
     }
+
 }
 ```
 
@@ -397,15 +392,23 @@ while (true) {
 
 ```java
 int points = 0;
+
 int target = 100;
 
 while (target <= 100) {
+
     for (int i = 0; i < target; i++) {
+
         if (points > 50) {
+
             break;
+
         }
+
         points = points + i;
+
     }
+
 }
 ```
 
@@ -419,16 +422,25 @@ while (target <= 100) {
 
 ```java
 int points = 0;
+
 int target = 100;
+
 targetLoop:
 
 while (target <= 100) {
+
     for (int i = 0; i < target; i++) {
+
         if (points > 50) {
+
             break targetLoop;
+
         }
+
         points = points + i;
+
     }
+
 }
 ```
 
@@ -442,8 +454,11 @@ while (target <= 100) {
 
 ```java
 int i, j;
+
 for (i = 0, j = 0; i * j < 1000; i++, j += 2) {
+
     System.out.println(i + " * " + j + " = " + (i * j));
+
 }
 ```
 
@@ -455,10 +470,13 @@ for (i = 0, j = 0; i * j < 1000; i++, j += 2) {
 
 ```java
 int displayCount = 1;
+
 int endValue = 13;
 
 for ( ; displayCount < endValue; displayCount++) {
+
     // loop statements would be here
+
 }
 ```
 
@@ -474,30 +492,50 @@ for ( ; displayCount < endValue; displayCount++) {
 
 使用 NetBeans 在 `com.java24hours` 包中创建一个名为 `Benchmark` 的新空 Java 文件。输入列表 8.2 的文本并在完成后保存程序。
 
-**列表 8.2** `Benchmark.java` 的完整源代码**
+**列表 8.2** `Benchmark.java` 的完整源代码
 
 点击此处查看代码图片
 
 ```java
 1: package com.java24hours;
+
 2:
+
 3: class Benchmark {
+
 4:     public static void main(String[] arguments) {
+
 5:         long startTime = System.currentTimeMillis();
+
 6:         long endTime = startTime + 60000;
+
 7:         long index = 0;
+
 8:         while (true) {
+
 9:             double x = Math.sqrt(index);
+
 10:            long now = System.currentTimeMillis();
+
 11:            if (now > endTime) {
+
 12:                break;
+
 13:            }
+
 14:            index++;
+
 15:        }
+
 16:        System.out.println(index + " loops in minute.");
+
 17:    }
+
 18: }
 ```
+
+
+
 
 在程序中发生了以下情况：
 
@@ -525,22 +563,19 @@ for ( ; displayCount < endValue; displayCount++) {
 
 **图 8.2**
 
-Benchmark 程序的输出。
+`Benchmark` 程序的输出。
 
 `Benchmark` 程序是一个查看你的计算机是否比我的极极方法。在测试此程序期间，我的笔记本电脑执行了大约 119 亿次计算。如果你的计算机有更好的结果，不要只给我送哀。多买买我的书，这样我就可以升级我的电脑。
 
-### 总结
-
-
-
+## 总结
 
 循环是大多数编程语言的基础组成部分。通过顺序显示多个图形来创建动画，是你如果没有使用循环在 Java 或任何其他编程语言中无法完成的的任务之一。
 
 巴特·辛普（Bart Simpson）在黑板上的所有惩罚在网络上都有记录。访问 [`simpsons.wikia.com/wiki/List_of_chalkboard_gags`](http://simpsons.wikia.com/wiki/List_of_chalkboard_gags) 查看该列表。
 
-### 工作坊
+## 工作坊
 
-#### 问答
+### 问答
 
 **Q. “初始化”（initialization）一词在多个地方都有。它是什么意思？**
 
@@ -564,31 +599,31 @@ Benchmark 程序的输出。
 
 在形成特许经营权的 1923 年股票出售中，1,000 名粉丝以每股 5 美元元的价格购买了股份。2011 年的出售为兰博球场（球队的主场）的升级筹集了 6700 万美元。
 
-关于股票的更多信息可以在网络上的 [www.packers.com/community/shareholders.html](http://www.packers.com/community/shareholders.html)找到。
+关于股票的更多信息可以在网络上的 [www.packers.com/community/shareholders.html](http://www.packers.com/community/shareholders.html) 找到。
 
-### 测验
+## 测验
 
 以下问题将测试你对循环的理解。本本主题的精神，请重复这些每个问题直到你答对为止。
 
-**1.** 必须使用什么来分隔 `for` 语句的每个部分？**
+**1.** 必须使用什么来分隔 `for` 语句的每个部分？
 
-**A.** 逗号
-**B.** 分号
+**A.** 逗号  
+**B.** 分号  
 **C.** 下班的警察人员
 
-**2.** 哪条语句会导致程序回到开始循环的语句并从那里继续执行？**
+**2.** 哪条语句会导致程序回到开始循环的语句并从那里继续执行？
 
-**A.** `continue`
-**B.** `next`
+**A.** `continue`  
+**B.** `next`  
 **C.** `skip`
 
-**3.** Java 中哪种循环语句始终至少运行一次？**
+**3.** Java 中哪种循环语句始终至少运行一次？
 
-**A.** `for`
-**B.** `while`
+**A.** `for`  
+**B.** `while`  
 **C.** `do-while`
 
-#### 答案
+### 答案
 
 **1. B.** 逗号用于分隔部分内的内容，但分号用于分隔部分。
 
@@ -596,7 +631,7 @@ Benchmark 程序的输出。
 
 **3. C.** `do`-`while` 条件在第一次通过循环之后才会被求值。
 
-#### 活动
+### 活动
 
 如果你的头没有因为这些循环而转圈的话，请通过以下活动复习本小时的主题：
 
@@ -608,38 +643,36 @@ Benchmark 程序的输出。
 
 # 第三部分：处理方式处理信息
 
-# 第 9 小时
+# 第 9 小时：使用数组存储信息
 
-使用数组存储信息
+## 本小时待办事项
 
-### 本小时待办事项：
-
-![Image](img/arrow.jpg) 创建一个数组。
-![Image](img/arrow.jpg) 设置数组的大小。
-![Image](img/arrow.jpg) 在数组元素中存储一个值。
-![Image](img/arrow.jpg) 修改数组中的信息。
-![Image](img/arrow.jpg) 创建多维数组。
+![Image](img/arrow.jpg) 创建一个数组。  
+![Image](img/arrow.jpg) 设置数组的大小。  
+![Image](img/arrow.jpg) 在数组元素中存储一个值。  
+![Image](img/arrow.jpg) 修改数组中的信息。  
+![Image](img/arrow.jpg) 创建多维数组。  
 ![Image](img/arrow.jpg) 对数组排序。
 
 没有人比圣诞老人从计算机的发展中受益更多。几个世纪以来，人类让他承担着巨大的负担来收集和处理信息。老圣尼必须跟踪以下事项：
 
-![Image](img/arrow.jpg) 坏孩子
-![Image](img/arrow.jpg) 乖孩子
-![Image](img/arrow.jpg) 礼物请求
-![Image](img/arrow.jpg) 坏孩子
-![Image](img/arrow.jpg) 乖孩子
-![Image](img/arrow.jpg) 礼物请求
-![Image](img/arrow.jpg) 坏孩子
-![Image](img/arrow.jpg) 乖孩子
-![Image](img/arrow.jpg) 礼物请求
-![Image](img/arrow.jpg) 坏孩子
-![Image](img/arrow.jpg) 乖孩子
-![Image](img/arrow.jpg) 礼物请求
-![Image](img/arrow.jpg) 坏孩子
-![Image](img/arrow.jpg) 乖孩子
-![Image](img/arrow.jpg) 礼物请求
-![Image](img/arrow.jpg) 坏孩子
-![Image](img/arrow.jpg) 乖孩子
+![Image](img/arrow.jpg) 坏孩子  
+![Image](img/arrow.jpg) 乖孩子  
+![Image](img/arrow.jpg) 礼物请求  
+![Image](img/arrow.jpg) 坏孩子  
+![Image](img/arrow.jpg) 乖孩子  
+![Image](img/arrow.jpg) 礼物请求  
+![Image](img/arrow.jpg) 坏孩子  
+![Image](img/arrow.jpg) 乖孩子  
+![Image](img/arrow.jpg) 礼物请求  
+![Image](img/arrow.jpg) 坏孩子  
+![Image](img/arrow.jpg) 乖孩子  
+![Image](img/arrow.jpg) 礼物请求  
+![Image](img/arrow.jpg) 坏孩子  
+![Image](img/arrow.jpg) 乖孩子  
+![Image](img/arrow.jpg) 礼物请求  
+![Image](img/arrow.jpg) 坏孩子  
+![Image](img/arrow.jpg) 乖孩子  
 ![Image](img/arrow.jpg) 礼物请求
 
 计算机对圣诞老人是一个巨大的福音。它们非常适合对信息进行存储、分类和研究。到目前为止，你处理过的变量都是单个项目，例如浮点数或字符串。数组是具有相同类型的变量组。任何可以存储为变量的信息类型都可以变成数组。
@@ -650,7 +683,9 @@ Benchmark 程序的输出。
 
 你可以为任何可以存储为变量的类型类型创建数组。以下语句创建一个字符串数组：
 
-`String[] naughtyChild;` 这里是分别是创建整数和布尔值数组的语句：
+`String[] naughtyChild;`
+
+这里是分别是创建整数和布尔值数组的语句：
 
 此处查看代码图像
 
@@ -662,16 +697,17 @@ Benchmark 程序的输出。
 
 Java 创建数组时括号的位置是灵活的。你可以将它们放在变量名之后而不是变量类型之后，如下：
 
-`String niceChild[];` 为了让人更容易发现数组，你应该坚持一种风格而不是来回切换。本书中的程序总是将括号放在变量或对象类型之后。
+`String niceChild[];`
+
+为了让人更容易发现数组，你应该坚持一种风格而不是来回切换。本书中的程序总是将括号放在变量或对象类型之后。
 
 之前的示例创建了持有数组的变量，但没有在其中存储任何值。为了这样做，你可以结合变量类型使用 `new` 关键字，或者在 `{}` 中存储值。使用 `new` 时必须指定数组中存储了多少不同的项目。数组中的每个项目被称为元素。以下语句创建一个数组并为其持有的值留出空间：
 
 此处查看代码图像
 
-`int[] elfSeniority = new int[250];` 这个示例创建一个名为 `elfSeniority` 的整数数组。该数组有 250 个元素，可以存储圣诞老人的每个精灵在北极工作的月数。（如果圣诞老人经营的是工会，这些信息极其重要。）
+`int[] elfSeniority = new int[250];`
 
-
-
+这个示例创建一个名为 `elfSeniority` 的整数数组。该数组有 250 个元素，可以存储圣诞老人的每个精灵在北极工作的月数。（如果圣诞老人经营的是工会，这些信息极其重要。）
 
 当你使用 `new` 语句创建数组时，必须指定元素的数量。数组的每个元素都会赋予一个初始值，该值取决于数组的类型。所有数值数组的初始值均为 `0`，`char` 数组等于 `'\0'`，`boolean` 数组的值为 `false`。`String` 数组以及所有其他对象的初始值为 `null`。
 
@@ -691,6 +727,7 @@ String[] reindeerNames = { "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cup
 
 ```java
 String[] reindeerNames = new String[8];
+
 reindeerNames[0] = "Dasher";
 reindeerNames[1] = "Dancer";
 reindeerNames[2] = "Prancer";
@@ -705,7 +742,7 @@ reindeerNames[7] = "Blitzen";
 
 数组创建后，你就无法为更多元素留出空间。即使你想起了最著名的那只驯，也无法将“Rudolph”作为 `reindeerNames` 数组的第九个元素。Java 编译器不会让可怜的 Rudolph 加入到任何 `reindeerNames` 中。
 
-### 使用数组
+## 使用数组
 
 你在程序中使用数组就像使用任何变量一样，唯一的区别是：数组项的元素编号必须位于数组名称旁边的方括号内。你可以在任何可以使用变量的地方使用数组元素，例如这些语句：
 
@@ -713,8 +750,11 @@ reindeerNames[7] = "Blitzen";
 
 ```java
 elfSeniority[193] += 1;
+
 niceChild[9428] = "Eli";
+
 currentNation = 413;
+
 if (hostileAirTravelNations[currentNation] == true) {
     sendGiftByMail();
 }
@@ -738,6 +778,7 @@ String[] topGifts = new String[10];
 
 ```java
 String[] reindeerNames = { "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donder", "Blitzen", "Rudolph" };
+
 System.out.println("There are " + reindeerNames.length + " reindeer.");
 ```
 
@@ -760,14 +801,17 @@ class SpaceRemover {
     public static void main(String[] arguments) {
         String mostFamous = "Rudolph the Nosed Reindeer";
         char[] mfl = mostFamous.toCharArray();
+
         for (int dex = 0; dex < mfl.length; dex++) {
             char current = mfl[dex];
+
             if (current != ' ') {
                 System.out.print(current);
             } else {
                 System.out.print('.');
             }
         }
+
         System.out.println();
     }
 }
@@ -777,7 +821,7 @@ class SpaceRemover {
 
 **图 9.1** Spaceover 的输出。
 
-### 多维数组
+## 多维数组
 
 目前为止数组都是一维的，因此可以使用一个数字检索元素。某些类型的信息需要更多维度来存储，例如 (x,y) 坐标系中的点。数组的一个维度可以存储 x 坐标，另一个维度可以存储 y 坐标。
 
@@ -787,6 +831,7 @@ class SpaceRemover {
 
 ```java
 boolean[][] selectedPoint = new boolean[50][50];
+
 selectedPoint[4][13] = true;
 selectedPoint[7][6] = true;
 selectedPoint[11][22] = true;
@@ -796,22 +841,24 @@ selectedPoint[11][22] = true;
 
 数组可以拥有任意数量的维度，但记住它们可能会占用大量内存。创建一个 50 比 50 的 `selectedPoint` 数组等同于创建 2500 个独立变量。
 
-### 数组排序
+## 数组排序
 
 当你将一组相似的项目放入数组时，你可以做的一之一就是重新排列项目。以下语句交换了名为 `numbers` 的整数数组中两个元素的值：
 
 ```java
 int[] numbers = { 3, 7, 9, 12, 5, 0, 8, 19 };
+
 int temporary = numbers[5];
+
 numbers[5] = numbers[6];
+
 numbers[6] = temporary;
 ```
 
 
 
 
-
-这些语句会导致 `numbers[5]` 和 `numbers[6]` 交换彼此的值。名为 `temporary` 的整数变量被用作交换交换的其中一个值的临时存储位置。排序是将一组相关项目按照特定顺序排列的过程，例如将一个数字列表从低到高进行排序。
+这些语句会导致 `numbers[5]` 和 `numbers[6]` 交换彼此的值。名为 `temporary` 的整数变量被用作交换其中一个值的临时存储位置。排序是将一组相关项目按照特定顺序排列的过程，例如将一个数字列表从低到高进行排序。
 
 圣诞老人可以使用排序功能根据姓氏对礼物赠送者的顺序进行排序，这样 Willie Aames 和 Hank Aaron 就能比那些字母顺序上倒霉的 Steve Zahn 和 Mark Zuckerberg 更早地获得他们的圣诞节战利品。
 
@@ -827,27 +874,43 @@ numbers[6] = temporary;
 
 为了看到实际效果，请在 `com.java24hours` 包中创建一个名为 `NameSorter` 的空 Java 文件，并在源编辑器中输入列表 9.2 的文本。
 
-### 列表 9.2 NameSorter.java 的完整源代码
+### 列表 9.2 `NameSorter.java` 的完整源代码
 
 ```java
 package com.java24hours;
 
 class NameSorter {
+
     public static void main(String[] arguments) {
+
         String names[] = { "Glimmer", "Marvel", "Rue", "Clove",
+
         "Thresh", "Foxface", "Cato", "Peeta", "Katniss" };
+
         System.out.println("The original order:");
+
         for (int i = 0; i < names.length; i++) {
+
             System.out.println(i + ": " + names[i]);
+
         }
+
         System.out.println();
+
         Arrays.sort(names);
+
         System.out.println("The new order:");
+
         for (int i = 0; i < names.length; i++) {
+
             System.out.println(i + ": " + names[i]);
+
         }
+
         System.out.println();
+
     }
+
 }
 ```
 
@@ -857,63 +920,101 @@ class NameSorter {
 
 **图 9.2 `NameSorter` 程序的输出。**
 
-当你处理字符串和整数、浮点数等基本变量类型时，你只能使用 `Arrays` 类按升序对它们进行排序。如果你在排序期间想要元素的元素的排列方式，或者想要比 `Arrays` 类更高的效率，你可以编写代码来手动进行排序。
+当你处理字符串和整数、浮点数等基本变量类型时，你只能使用 `Arrays` 类按升序对它们进行排序。如果你在排序期间想要元素的排列方式，或者想要比 `Arrays` 类更高的效率，你可以编写代码来手动进行排序。
 
 ### 统计字符串中的字符
 
-英语中出现频率最高的字母是 E, R, S, T, L, N, C, D, M 和 O，按顺序排列。如果你发现自己出现在联播游戏节目《幸运转盘》（Wheel of Fortune）中，这是一个值得了解的事实。
+英语中出现频率最高的字母是 E、R、S、T、L、N、C、D、M 和 O，按顺序排列。如果你发现自己出现在联播游戏节目《幸运转盘》（Wheel of Fortune）中，这是一个值得了解的事实。
 
-**注意**
-
-如果你不熟悉这个节目，《幸运转盘》是一个游戏，三位参赛者猜一个短语、名称或引言的字母。如果他们猜对了一个字母且该字母是辅音，他们就能赢得大转盘转出的金额。为了重现这种体验，你可以在摄影棚观众面前和朋友玩猜字游戏，当有人猜对字母时发放随机金额，并给获胜者送一台新的 Shark Rotator 吸尘器。
+> **注意**
+>
+> 如果你不熟悉这个节目，《幸运转盘》是一个游戏，三位参赛者猜一个短语、名称或引言的字母。如果他们猜对了一个字母且该字母是辅音，他们就能赢得大转盘转出的金额。为了重现这种体验，你可以在摄影棚观众面前和朋友玩猜字游戏，当有人猜对字母时发放随机金额，并给获胜者送一台新的 Shark Rotator 吸尘器。
 
 你的下一个 Java 程序将统计你感兴趣输入的任意不同短语和表达式中的字母频率。使用一个数组来统计每个字母出现的次数。完成后，程序将显示每个字母在短语中出现的次数。
 
-在 NetBeans 中创建一个名为 `Wheel.java` 的空 Java 文件，将其放入 `com.java24hours` 包中，填充列表 9.3 的内容，完成后保存文件。可以随时在第 17 行和第 18 行之间添加短语，并像第 17 行一样格式格式。
+在 NetBeans 中创建一个名为 `Wheel.java` 的空 Java 文件，将其放入 `com.java24hours` 包中，填充列表 9.3 的内容，完成后保存文件。可以随时在第 17 行和第 18 行之间添加短语，并像第 17 行一样格式化。
 
-### 列表 9.3 Wheel.java 的完整源代码
+### 列表 9.3 `Wheel.java` 的完整源代码
 
 ```java
 package com.java24hours;
 
 class Wheel {
+
     public static void main(String[] arguments) {
+
         String phrase[] = {
+
         "A STITCH IN TIME SAVES NINE",
+
         "DON'T EAT YELLOW SNOW",
+
         "TASTE THE RAINBOW",
+
         "EVERY GOOD DOES FINE",
+
         "I WANT MY",
+
         "LIKE IKE",
+
         "PLAY IT AGAIN, SAM",
+
         "FROSTY THE SNOWMAN",
+
         "ONE MORE FOR THE ROAD",
+
         "HOME ADVANTAGE",
+
         "SHEIELD WEDNESDAY",
+
         "GROVER CLEVELAND OHIO",
+
         "SPAGHETTI WESTERN",
+
         "TEEN TITANS GO",
+
         "IT'S WONDERFUL LIFE"
+
         };
+
         int[] letterCount = new int[26];
+
         for (int count = 0; count < phrase.length; count++) {
+
             String current = phrase[count];
+
             char[] letters = current.toCharArray();
+
             for (int count2 = 0; count2 < letters.length; count2++) {
+
                 char lett = letters[count2];
+
                 if ((lett >= 'A') & (lett <= 'Z')) {
+
                     letterCount[lett - 'A']++;
+
                 }
+
             }
+
         }
+
         for (char count = 'A'; count <= 'Z'; count++) {
+
             System.out.print(count + ": " + letterCount[count - 'A'] + " ");
+
             if (count == 'M') {
+
                 System.out.println();
+
             }
+
         }
+
         System.out.println();
+
     }
+
 }
 ```
 
@@ -925,33 +1026,29 @@ class Wheel {
 
 `Wheel` 程序发生了以下操作：
 
-- 5-21 行：短语存储在名为 `phrase` 的字符串数组中。
-- 22 行：创建了一个包含 26 个元素的整数数组 `letterCount`。该数组用于存储每个字母出现的次数。元素的顺序从 ‘A’ 到 ‘Z’。`letterCount[0]` 存储 ‘A’ 的计数，`letterCount[1]` 存储 ‘B’ 的计数，以此此类推，直到 `letterCount[25]` 代表 ‘Z’。
+- 5–21 行：短语存储在名为 `phrase` 的字符串数组中。
+- 22 行：创建了一个包含 26 个元素的整数数组 `letterCount`。该数组用于存储每个字母出现的次数。元素的顺序从 ‘A’ 到 ‘Z’。`letterCount[0]` 存储 ‘A’ 的计数，`letterCount[1]` 存储 ‘B’ 的计数，以此类推，直到 `letterCount[25]` 代表 ‘Z’。
 - 23 行：一个 `for` 循环遍历 `phrase` 数组中的短语。使用 `phrase.length` 变量在达到最后一个短语后结束循环。
 - 24 行：字符串变量 `current` 被赋值为 `phrase` 数组的当前元素。
 - 25 行：创建一个字符数组并存储当前短语中的所有字符。
 - 26 行：一个 `for` 循环遍历当前短语中的字母。使用 `letters.length` 变量在达到最后一个字母后结束循环。
-- 27 行：创建一个字符变量 `lett`，其值为为当前字母。
-- 28-30 行：一个 `if` 语句排除所有不属于字母的字符（例如标点符号和空格）。根据当前字符的数值，`letterCount` 数组中的一个元素增加 1。
+- 27 行：创建一个字符变量 `lett`，其值为当前字母。
+- 28–30 行：一个 `if` 语句排除所有不属于字母的字符（例如标点符号和空格）。根据当前字符的数值，`letterCount` 数组中的一个元素增加 1。
 - 33 行：一个 `for` 循环从 ‘A’ 到 ‘Z’ 遍历字母表。
 
-
-
-
-
-![Image](img/arrow.jpg) 第 34–40 行——显示当前字母，后跟分号以及该字母在 `phrase` 数组存储的短语中出现的次数。当当前字母为‘M’时，会显示换行，因此输出分布在两行。
+![Image](img/arrow.jpg) 第 34–40 行——显示当前字母，后跟分号以及该字母在 `phrase` 数组存储的短语中出现的次数。当当前字母为 ‘M’ 时，会显示换行，因此输出分布在两行。
 
 此项目展示了如何使用两个嵌套的 `for` 循环来遍历一组短语，每次处理一个字母。Java 为每个字符分配了一个数值；这个数值比数组内部的字符更易使用。
 
-### 注意
-
-与‘A’到‘Z’每个字符关联的数值是 ASCII 字符集所使用的数值。ASCII 字符集是 Unicode 的一部分，Java 语言支持的完整字符集。Unicode 包含了对世界范围内语言使用的超过 60,000 种不同字符的支持。ASCII 仅限于 256 个。
+> **注意**
+>
+> 与 ‘A’ 到 ‘Z’ 每个字符关联的数值是 ASCII 字符集所使用的数值。ASCII 字符集是 Unicode 的一部分，Java 语言支持的完整字符集。Unicode 包含了对世界范围内语言使用的超过 60,000 种不同字符的支持。ASCII 仅限于 256 个。
 
 ### 总结
 
-数组使程序中存储复杂类型的信息并对其进行操作成为可能。对于任何可以排列成列表并可以使用你在第 8 小节“使用循环重复操作”中学习学习的循环语句轻松访问的信息，数组都是理想的工具。
+数组使程序中存储复杂类型的信息并对其进行操作成为可能。对于任何可以排列成列表并可以使用你在第 8 小节“使用循环重复操作”中学习的循环语句轻松访问的信息，数组都是理想的工具。
 
-诚实地说，圣诞老人的信息处理需求可能已经超数组的范围。每年制造的孩子越来越多，他们想要的礼物在复杂性和开销上也在不断增加。
+诚实地说，圣诞老人的信息处理需求可能已经超出数组的范围。每年制造的孩子越来越多，他们想要的礼物在复杂性和开销上也在不断增加。
 
 你的程序可能会使用数组来存储那些用变量处理起来困难的信息，即使你没有创建任何列表或对其进行双重检查。
 
@@ -959,7 +1056,7 @@ class Wheel {
 
 #### 问答
 
-**Q. 字母的数值范围（从‘A’的 65 到‘Z’的 90）是 Java 基础语言的一部分吗？如果是，1 到 64 是留给什么的？**
+**Q. 字母的数值范围（从 ‘A’ 的 65 到 ‘Z’ 的 90）是 Java 基础语言的一部分吗？如果是，1 到 64 是留给什么的？**
 
 **A.** 数字 1 到 64 包含了数字、标点符号和一些不可打印字符，如换行符、新行符和退格键。每个可以在 Java 程序中使用的打印字符都关联有一个数字，也包括一些不可打印字符。Java 使用 Unicode 编号系统。前 127 个字符来自 ASCII 字符集，你可能在其他编程语言中使用过它们。
 
@@ -967,15 +1064,13 @@ class Wheel {
 
 **A.** 你可以测试数组的任何维度。对于第一维度，使用数组名配合 `length`，例如 `x.length`。后续维度可以通过对该维度的 `[0]` 元素使用 `length` 来测量。考虑一个名为 `data` 的数组，它是通过以下语句创建的：
 
-点击查看代码图像
-
 ```java
 int[][][] data = new int[12][13][14];
 ```
 
 该数组的维度可以通过使用 `data.length` 变量测量第一维度，`data[0].length` 测量第二维度，以及 `data[0][0].length` 测量第三维度。
 
-**Q. 为什么新英格兰爱足者队主教练比尔·贝利奇（Bill Belichick）在场边穿那件破旧的连帽衫？**
+**Q. 为什么新英格兰爱国者队主教练比尔·贝利奇（Bill Belichick）在场边穿那件破旧的连帽衫？**
 
 **A.** 当你在十年内的胜利次数超过 NFL 历史上任何教练时（从 2003 年到 2012 年共 140 胜），你的老板让你设定自己的着装规范。体育记者认为，贝利奇开始穿无袖连帽衫是为了回应 NFL 与锐跑的一项交易，该交易要求所有教练必须穿授权的球队服装。
 
@@ -985,7 +1080,7 @@ int[][][] data = new int[12][13][14];
 
 ### 测验
 
-如果你的大脑是一个数组，你可以通过回答以下关于数组的每个来测试它的 `length`。
+如果你的大脑是一个数组，你可以通过回答以下关于数组的问题来测试它的 `length`。
 
 **1.** 数组最适合存储什么类型的信息？
 
@@ -993,7 +1088,7 @@ int[][][] data = new int[12][13][14];
 
 **B.** 相关信息的对
 
-**C.** 冷常知识
+**C.** 冷知识
 
 **2.** 你可以使用哪个变量来检查数组的上边界？
 
@@ -1029,13 +1124,9 @@ int[][][] data = new int[12][13][14];
 
 要查看实现这些活动的 Java 程序，请访问书籍网站 [www.java24hours.com](http://www.java24hours.com)。
 
-
-
-
-
 在 Java 中，你通过使用类作为模板来创建对象。`class` 是对象的副本，决定了对象应该拥有的属性和行为。“类（class）”这个词对你来说应该很熟悉，因为 Java 程序被称为类。你用 Java 创建的每个程序都是一个类，你可以将其作为创建新对象的模板。例如，任何使用字符串的 Java 程序都在使用从 `String` 类创建的对象。该类包含了决定 `String` 对象是什么的属性，以及决定 `String` 对象可以做什么的行为。
 
-在面向对象编程（OOP）中，计算机程序是一组共同工作以完成某项任务的对象。某些简单的程序看起来似乎只由一个对象组成：即类文件。但即使即使是这些程序，也在使用其他对象来完成工作。
+在面向对象编程（OOP）中，计算机程序是一组共同工作以完成某项任务的对象。某些简单的程序看起来似乎只由一个对象组成：即类文件。但即使是这些程序，也在使用其他对象来完成工作。
 
 ### 对象的运作
 
@@ -1047,33 +1138,33 @@ int[][][] data = new int[12][13][14];
 
 ![Image](img/arrow.jpg) 用于存储图表标题的属性
 
-要求 `PieChart` 对象绘制自己可能看起来很奇怪，因为图表在现实世界中并不会自己绘制。OOP 中的对象尽可能自己自己工作。这种能力使得它们更容易整合到其他程序中。例如，如果一个 `PieChart` 对象不知道如何绘制自己，那么每你在另一个程序中使用该 `PieChart` 对象时，你都必须创建一个绘制它的行为。
+要求 `PieChart` 对象绘制自己可能看起来很奇怪，因为图表在现实世界中并不会自己绘制。OOP 中的对象尽可能自己工作。这种能力使得它们更容易整合到其他程序中。例如，如果一个 `PieChart` 对象不知道如何绘制自己，那么每次你在另一个程序中使用该 `PieChart` 对象时，你都必须创建一个绘制它的行为。
 
 OOP 的另一个例子，请考虑马修·布罗德里克（Matthew Broderick）的角色在经典黑客电影《游戏实战》（*WarGames*）中使用的自动拨号器程序，用来寻找他可以入侵的计算机。
 
-### 注意
-
-自动拨号器是一种使用称为调制解调器（modem）的设备顺序拨打一系列电话的软件。此类程序的目的是找到其他接听的计算机，这样你以后就可以给它们打电话看看它们是什么。
-
-小于 30 岁的读者可能很难相信，计算机曾通过电话拨号连接。你必须知道计算机的电话号码才能连接到它，如果它已经在与另一台计算机通话，你就会得到忙音信号。
-
-现在我可能需要解释一下什么是忙音。
-
-引用诗人 T.S 艾莉特（T.S. Eliot）的话：“我老了……我老了。”
-
-今天使用自动拨号器会引起你当地电话公司和执法部门的注意。在 20 世纪 80 年代，这是一种不出门就能反叛的好方法。大卫·莱特曼（布罗德里克饰演的角色）使用他的自动拨号器寻找视频游戏公司的私人计算机系统，以便在公司新游戏发布之前玩到。相反，莱特曼发现了一台秘密政府计算机，它可以运行从国际象棋到全球热核战争的所有程序。
+> **注意**
+>
+> 自动拨号器是一种使用称为调制解调器（modem）的设备顺序拨打一系列电话的软件。此类程序的目的是找到其他接听的计算机，这样你以后就可以给它们打电话看看它们是什么。
+>
+> 小于 30 岁的读者可能很难相信，计算机曾通过电话拨号连接。你必须知道计算机的电话号码才能连接到它，如果它已经在与另一台计算机通话，你就会得到忙音信号。
+>
+> 现在我可能需要解释一下什么是忙音。
+>
+> 引用诗人 T.S. 艾略特（T.S. Eliot）的话：“我老了……我老了。”
+>
+> 今天使用自动拨号器会引起你当地电话公司和执法部门的注意。在 20 世纪 80 年代，这是一种不出门就能反叛的好方法。大卫·莱特曼（布罗德里克饰演的角色）使用他的自动拨号器寻找视频游戏公司的私人计算机系统，以便在公司新游戏发布之前玩到。相反，莱特曼发现了一台秘密政府计算机，它可以运行从国际象棋到全球热核战争的所有程序。
 
 自动拨号器像任何计算机程序一样，可以被看作一组共同工作的对象。它可以被分解为：
 
-![Image](img/arrow.jpg) 一个 `Modem` 对象，它知道自己的连接速度等属性，并具有让调制解调器拨号以及检测另一台计算机何时接听电话的行为
+![Image](img/arrow.jpg) 一个 `Modem` 对象，它知道自己的连接速度等属性，并具有让调制解调器拨号以及检测另一台计算机何时接听电话的行为。
 
-![Image](img/arrow.jpg) 一个 `Monitor` 对象，它跟踪拨打了哪些号码以及哪些是计算机
+![Image](img/arrow.jpg) 一个 `Monitor` 对象，它跟踪拨打了哪些号码以及哪些是计算机。
 
-每个对象都独立于存在。
+每个对象都独立存在。
 
 设计一个完全独立的 `Modem` 对象的优点是，它可以被用于其他需要调制解调器功能的程序。
 
-使用自包含对象的另一个原因是它们更容易被调试。计算机程序的规模会迅速变得庞肿。如果你在调试像 `Modem` 对象这样的东西并且知道它不依赖于任何东西，你就可以专注于确保 `Modem` 对象执行了它应该执行的工作，并持有它执行工作所需的信息。
+使用自包含对象的另一个原因是它们更容易被调试。计算机程序的规模会迅速变得臃肿。如果你在调试像 `Modem` 对象这样的东西并且知道它不依赖于任何东西，你就可以专注于确保 `Modem` 对象执行了它应该执行的工作，并持有它执行工作所需的信息。
 
 将 Java 这样的面向对象的语言作为第一种编程语言是有益的，因为你不需要去摒弃其他编程风格的习惯。
 
@@ -1089,19 +1180,27 @@ public class Modem {
 
 从这个类创建的对象什么也做不了，因为它没有任何属性或行为。你需要添加这些内容来使该类变得有用，如下语句所示：
 
-点击此处查看代码图像
-
 ```java
 public class Modem {
+
     int speed;
 
     public void displaySpeed() {
-        System.out.println("Speed: " + speed);
-    }
-}
 ```
 
-`Modem` 类现在应该开始看起来你在第 1 小节 到第 9 小节 编写的程序了。`Modem` 类以 `class` 语句开始，但它包含了 `public` 关键字。这意味着该类供公共使用——换句话说，任何想要使用 `Modem` 对象的程序。
+
+
+
+```java
+        System.out.println("Speed: " + speed);
+
+    }
+
+}
+
+```
+
+`Modem` 类现在应该开始看起来你在第 1 小节到第 9 小节编写的程序了。`Modem` 类以 `class` 语句开始，但它包含了 `public` 关键字。这意味着该类供公共使用——换句话说，任何想要使用 `Modem` 对象的程序。
 
 `Modem` 类的第一部分创建名为 `speed` 的整数变量。这个变量是对象的属性。
 
@@ -1133,7 +1232,7 @@ device.displaySpeed();
 
 OOP 的一大优势是继承，它允许一个对象从另一个对象继承行为和属性。
 
-当你开始创建对象时，有时发现你想要的新对象非常你已经拥有的对象。
+当你开始创建对象时，有时发现你想要的新对象非常像你已经拥有的对象。
 
 如果大卫·莱特曼想要一个能够处理修正以及 1983 年《游戏实战》发布时还没有的高功能对象呢？莱特曼可以通过复制 `Modem` 对象的语句并进行修改来创建一个 `ErrorCorrectionModem` 对象。然而，如果 `ErrorCorrectionModem` 的大部分行为和属性与 `Modem` 相同，这就是许多不必要的工作。这意味着如果需要更改内容，莱特曼将会有两个独立的程序。
 
@@ -1145,7 +1244,9 @@ OOP 的一大优势是继承，它允许一个对象从另一个对象继承行�
 
 ```java
 public class ErrorCorrectionModem extends Modem {
+
     // 程序写在这里
+
 }
 ```
 
@@ -1153,12 +1254,9 @@ public class ErrorCorrectionModem extends Modem {
 
 继承允许在不重复工作的情况下开发各种相关的类，它使得代码从一个类传递到另一个类，再到另一个类。这种父类的类的分组被称为类层级结构，你在 Java 程序中使用的所有标准类都是层级结构的一部分。
 
-
-
-
 理解了子类和父类后，理解层级结构就会变得简单。继承自另一个类的类被称为 `subclass`（子类）。被继承的类被称为 `superclass`（父类）。
 
-在之前的 **战争游戏*（*WarGames*）示例中，`Modem` 类是 `ErrorCorrectionModem` 类的父类。`ErrorCorrectionModem` 是 `Modem` 的子类。
+在之前的《战争游戏》（*WarGames*）示例中，`Modem` 类是 `ErrorCorrectionModem` 类的父类。`ErrorCorrectionModem` 是 `Modem` 的子类。
 
 在层级结构中，一个类可以有多个继承自它的类——`Modem` 的另一个子类可以是 `ISDNModem`，因为 ISDN 调制调器具有某些行为和属性，使得它们区别于纠错型调制调器。如果 `ErrorCorrectionModem` 有一个子类，例如 `InternalErrorCorrectionModem`，它将继承层级结构中位于它上面的所有类——即 `ErrorCorrectionModem` 和 `Modem`。这些继承关系如图图 10.2 所示。
 
@@ -1174,13 +1272,10 @@ Java 语言中的各个类广泛使用了继承，因此理解它至关重要。
 
 在 Java 中，你需要完成的最常见任务之一是将信息从一种形式转换为另一种形式。你可以进行的几种类型转换包括以下：
 
-![Image](img/arrow.jpg) 将一个对象转换为另一个对象
-
-![Image](img/arrow.jpg) 将对象转换为另一个对象
-
-![Image](img/arrow.jpg) 将对象转换为简单变量
-
-![Image](img/arrow.jpg) 将简单变量转换为对象
+- ![Image](img/arrow.jpg) 将一个对象转换为另一个对象
+- ![Image](img/arrow.jpg) 将对象转换为另一个对象
+- ![Image](img/arrow.jpg) 将对象转换为简单变量
+- ![Image](img/arrow.jpg) 将简单变量转换为对象
 
 在第 5 小节中，你将学习更多关于数据类型的知识。这些类型包括 `int`、`float`、`double`、`long`、`short`、`byte`、`char` 和 `boolean`。当你需要将一个基本类型转换为另一个类型时，可能需要显式进行转换。如果将 `double` 变量转换为 `int` 类型，可能会丢失精度。
 
@@ -1210,16 +1305,13 @@ Java 语言中的各个类广泛使用了继承，因此理解它至关重要。
 
 拆箱是指将对象转换为简单值。
 
-
-
-
-
 从对象到变量的一种常见转换是在数值表达式中使用字符串。当字符串的值可以转换为整数时，可以使用 `Integer` 类的 `parseInt()` 方法来完成，如本例所示：
 
 点击此处查看代码图像
 
 ```java
 String count = "25";
+
 int myCount = Integer.parseInt(count);
 ```
 
@@ -1227,7 +1319,7 @@ int myCount = Integer.parseInt(count);
 
 你创建的下一个项目是 `NewRoot`，该应用程序将命令行参数中的字符串值转换为数值，这是当你从命令行接收接收用户输入时的一种常用技术。
 
-回到 NetBeans 中的 `Java24` 项目，选择文件（File）、新建文件（New File），然后在 `com.java24hours` 程序包中创建一个名为 `NewRoot` 的新空 Java 文件（Empty Java File）。在源编辑器中输入 代码列表 10.1，并记得保存文件。
+回到 NetBeans 中的 `Java24` 项目，选择文件（File）、新建文件（New File），然后在 `com.java24hours` 程序包中创建一个名为 `NewRoot` 的新空 Java 文件（Empty Java File）。在源编辑器中输入代码列表 10.1，并记得保存文件。
 
 **代码列表 10.1 NewRoot.java 的完整文本**
 
@@ -1237,17 +1329,29 @@ int myCount = Integer.parseInt(count);
 package com.java24hours;
 
 class NewRoot {
+
     public static void main(String[] arguments) {
+
         int number = 100;
+
         if (arguments.length > 0) {
+
             number = Integer.parseInt(arguments[0]);
+
         }
+
         System.out.println("The square root of "
+
                 + number
+
                 + " is "
+
                 + Math.sqrt(number)
+
         );
+
     }
+
 }
 ```
 
@@ -1258,13 +1362,13 @@ class NewRoot {
 3. 在参数（Arguments）字段中输入 `9025`。
 4. 点击 OK 关闭对话框。
 
-要运行程序，选择运行（Run）、运行主项目（Run Main Project）（而不是运行、运行文件）。程序将将数字及其平方根，如图 10.3
+要运行程序，选择运行（Run）、运行主项目（Run Main Project）（而不是运行、运行文件）。程序将将数字及其平方根，如图 10.3。
 
 **图 10.3**
 
 `NewRoot` 程序的输出。
 
-`NewRoot` 应用程序是第 4 节` 方法并将字符串作为唯一参数传递，如第 7 行所示：
+`NewRoot` 应用程序是第 4 节方法并将字符串作为唯一参数传递，如第 7 行所示：
 
 点击此处查看代码图像
 
@@ -1280,9 +1384,8 @@ number = Integer.parseInt(arguments[0]);
 
 为了在本节的下一个项目中查看类和继承的运行示例，你将创建代表两种类型对象的类：电缆调制解调器（cable modems，通过 `CableModem` 类实现）和 DSL 调制解调器（DSL modems，通过 `DslModem` 类实现）。工作重点关注这些对象的简单属性和行为：
 
-![Image](img/arrow.jpg) 每个对象都应该有一个可以显示的速度。
-
-![Image](img/arrow.jpg) 每个对象都应该连接到互联网。
+- ![Image](img/arrow.jpg) 每个对象都应该有一个可以显示的速度。
+- ![Image](img/arrow.jpg) 每个对象都应该连接到互联网。
 
 电缆调制解调器 DSL 调制解调器的共同点是它们都有速度。因为这是它们共有的，可以将其放入一个类中，该类是 `CableModem` 和 `DslModem` 类的超类。将此类命名为 `Modem`。在 NetBeans 中，在 `com.java24hours` 程序包中创建一个名为 `Modem` 的新空 Java 类。在源编辑器中输入代码列表 10.2 并保存文件。
 
@@ -1294,11 +1397,15 @@ number = Integer.parseInt(arguments[0]);
 package com.java24hours;
 
 class Modem {
+
     int speed;
 
     public void displaySpeed() {
+
         System.out.println("Speed: " + speed);
+
     }
+
 }
 ```
 
@@ -1312,12 +1419,17 @@ class Modem {
 package com.java24hours;
 
 class CableModem extends Modem {
+
     String method = "cable connection";
 
     public void connect() {
+
         System.out.println("Connecting to the Internet ...");
+
         System.out.println("Using a " + method);
+
     }
+
 }
 ```
 
@@ -1325,16 +1437,18 @@ class CableModem extends Modem {
 
 **代码列表 10.4 DslModem.java 的完整文本**
 
-点击此处查看代码图像 {
+点击此处查看代码图像
+
+```java
         System.out.println("Connecting to the Internet ...");
         System.out.println("Using a " + method);
     }
 }
 ```
 
-如果没有错误，你现在有了三个类文件：`Modem.class`、`CableModem.class` 和 `DslModem.class`。然而，你不能运行任何这些类文件，因为它们没有像你创建的其他程序那 `main()` 块。你需要创建一个短应用程序来测试你刚刚构建的类层次结构。
+如果没有错误，你现在有了三个类文件：`Modem.class`、`CableModem.class` 和 `DslModem.class`。然而，你不能运行任何这些类文件，因为它们没有像你创建的其他程序那样的 `main()` 块。你需要创建一个短应用程序来测试你刚刚构建的类层次结构。
 
-回到 NetBeans 在 `com.java24hours` 中创建一个名为 `ModemTester` 的新空 Java 文件。在源编辑器中输入代码列表 10.5 并保存文件。
+回到 NetBeans，在 `com.java24hours` 中创建一个名为 `ModemTester` 的新空 Java 文件。在源编辑器中输入代码列表 10.5 并保存文件。
 
 **代码列表 10.5 ModemTester.java 的完整文本**
 
@@ -1357,16 +1471,10 @@ class ModemTester {
 }
 ```
 
-
-
-
-![Image](img/arrow.jpg) 第 10 行——调用 `surfBoard` 对象的 `displaySpeed()` 方法。该方法继承自 `Modem`——尽管它在 `CableModem` 类中并不存在，但你可以调用它。
-
-![Image](img/arrow.jpg) 第 11 行——调用 `surfBoard` 对象的 `connect()` 方法。
-
-![Image](img/arrow.jpg) 第 12 行——调用 `gateway` 对象的 `displaySpeed()` 方法。
-
-![Image](img/arrow.jpg) 第 13 行——调用 `gateway` 对象的 `connect()` 方法。
+- ![Image](img/arrow.jpg) 第 10 行——调用 `surfBoard` 对象的 `displaySpeed()` 方法。该方法继承自 `Modem`——尽管它在 `CableModem` 类中并不存在，但你可以调用它。
+- ![Image](img/arrow.jpg) 第 11 行——调用 `surfBoard` 对象的 `connect()` 方法。
+- ![Image](img/arrow.jpg) 第 12 行——调用 `gateway` 对象的 `displaySpeed()` 方法。
+- ![Image](img/arrow.jpg) 第 13 行——调用 `gateway` 对象的 `connect()` 方法。
 
 ### 总结
 
@@ -1382,7 +1490,7 @@ class ModemTester {
 
 **答：** 在某些编程语言（如 C++）中类是可以的，但 Java 不行。多继承是一项强大的功能，但它让 OOP 变得更难学习和使用。Java 开发者决定任何类只能继承一个父类，尽管一个类可以有许多子类。补偿这种限制的一种方法是从一种称为接口（interface）的特殊类型类继承方法。你将在第 15 节“创建多线程程序”中学习更多关于接口的知识。
 
-**问：什么时候你想创建一个非（public）方法？**
+**问：什么时候你想创建一个非 `public` 方法？**
 
 **答：** 主要的情况是该方法专门供你正在编写的程序使用。如果你正在编写一个游戏程序，并且你的 `shootRayGun()` 方法专门针对你编写的游戏，那么它可以是一个私有方法。要让一个方法不是 `public`，只需在方法名前省略 `public` 语句即可。
 
@@ -1394,6 +1502,8 @@ class ModemTester {
 
 **答：** 不，尽管如果你把开过的瓶留好几年，它的颜色会发生。醋、红辣椒和盐的成分对于细菌生长是一个极其恶劣的环境。
 
+
+
 Tabasco 辣椒酱的 McIlhenny 公司表示，原品牌的保质期为五年。其他版本的保质期从 18 个月到三年不等。
 
 作为该产品的忠实粉丝，很难相信有人会留一瓶 Tabasco 久到产生这个问题。
@@ -1402,7 +1512,7 @@ Tabasco 辣椒酱的 McIlhenny 公司表示，原品牌的保质期为五年。�
 
 以下问题测试了你对对象以及使用它们的程序的了解。
 
-**1。** 使用什么语句来允许一个类继承另一个类？
+**1.** 使用什么语句来允许一个类继承另一个类？
 
 **A.** `inherits`
 
@@ -1410,7 +1520,7 @@ Tabasco 辣椒酱的 McIlhenny 公司表示，原品牌的保质期为五年。�
 
 **C.** `handItOverAndNobodyGetsHurt`
 
-**2。** 为什么编译后的 Java 程序以 `.class` 文件扩展名保存？
+**2.** 为什么编译后的 Java 程序以 `.class` 文件扩展名保存？
 
 **A.** Java 开发者认为这是一种很有格调语言。
 
@@ -1418,7 +1528,7 @@ Tabasco 辣椒酱的 McIlhenny 公司表示，原品牌的保质期为五年。�
 
 **C.** 每个 Java 程序都是一个类。
 
-**3。** 组成对象的两个要素是什么？
+**3.** 组成对象的两个要素是什么？
 
 **A.** 属性和行为
 
@@ -1442,7 +1552,7 @@ Tabasco 辣椒酱的 McIlhenny 公司表示，原品牌的保质期为五年。�
 
 ![Image](img/arrow.jpg) 为 modem 添加一个 `disconnect()` 方法。
 
-## 第 11 节描述你的对象像什么
+## 第 11 节 描述你的对象像什么
 
 ### 本节待办事项：
 
@@ -1459,9 +1569,6 @@ Tabasco 辣椒酱的 McIlhenny 公司表示，原品牌的保质期为五年。�
 属性是存储在对象中的信息可以是整数、字符和布尔值等变量，或者是 `String` 或 `Calendar` 等对象。
 
 要查看实现这些 Java 程序，请访问书籍网站。
-
-
-
 
 将变量设为 `public`（公有的）使得另一个使用 `Gremlin` 对象的程序修改该变量。
 
@@ -1540,7 +1647,7 @@ Gremlin.gremlinCount++;
 
 **注意**
 
-`System.out.println()` 方法看起来很奇怪，因为它有两个点。这是因为该语句涉及两个类：`System` 类和 `PrintStream` 类。`System` 类有一个 ` `Print`  变量。`println()` 是 `PrintStream` 类的方法。`System.out.println()` 语句实际上意味着“使用 `System` 类的 `out` 实例的 `println()` 方法”。
+`System.out.println()` 方法看起来很奇怪，因为它有两个点。这是因为该语句涉及两个类：`System` 类和 `PrintStream` 类。`System` 类有一个 `out` 变量。`println()` 是 `PrintStream` 类的方法。`System.out.println()` 语句实际上意味着“使用 `System` 类的 `out` 实例的 `println()` 方法”。
 
 ### 声明方法
 
@@ -1571,9 +1678,6 @@ public Gremlin replicate(String creator) {
 ```
 if (haskins.active() == true) {
 ```
-
-
-
 
 ```java
 System.out.println(haskins.guid + " is active.");
@@ -1612,7 +1716,7 @@ public void setGuid(int newValue) {
 
 **提示**
 
-集成开发环境（IDE）通常可以自动创建访问方法。NetBeans 提供了这种功能。打开第 10 节，“创建第一个对象”。在代码编辑器器的任何地方右键点击，选择菜单 `Refactor`（重构）、`Encapsulate Fields`（封装字段）。会弹出一个对话框。点击 `All`（全部），然后点击 `Refactor`。NetBeans 将 `speed` 变量变为 `private` 并创建 `getSpeed()` 和 `setSpeed()` 方法。
+集成开发环境（IDE）通常可以自动创建访问方法。NetBeans 提供了这种功能。打开第 10 节，“创建第一个对象”。在代码编辑器的任何地方右键点击，选择菜单 `Refactor`（重构）、`Encapsulate Fields`（封装字段）。会弹出一个对话框。点击 `All`（全部），然后点击 `Refactor`。NetBeans 将 `speed` 变量变为 `private` 并创建 `getSpeed()` 和 `setSpeed()` 方法。
 
 ### 具有不同参数的相似方法
 
@@ -1661,9 +1765,11 @@ public Gremlin(String name, int age) {
     maximumAge = age;
 }
 ```
+
 （注：提供的源文本在构造方法块中存在一些格式不一致之处，我已将其清理为标准的 Java 语法并保留了逻辑）。
 
 根据提供的文本：
+
 ```java
 public Gremlin() {
     creator = "Michael Finnell"; // creator 是一个字符串
@@ -1720,14 +1826,13 @@ if (numFiles < 1) {
 System.out.println(warning);
 ```
 
-
-
-
 这段代码无法运行——在 NetBeans 中无法编译——因为 `warning` 变量是在 `if` 块的括号内部创建的。这些括号定义了变量的作用域。`warning` 变量在括号外部不存在，因此 `System.out.println()` 方法无法将其作为参数使用。
 
 当你在一组括号内部嵌套另一括号时，需要注意被包含变量的作用域。请看示例：
 
 点击此处查看代码图像
+
+
 
 ```java
 if (humanCount < 5) {
@@ -1879,8 +1984,6 @@ public class Gremlin {
 }
 ```
 
-
-
 保存文件，NetBeans 会自动编译。此类缺少 `main()` 方法，因此无法直接运行。为了测试这个新的 `Gremlin` 类，你需要创建第二个类，该类能够创建 `Gremlin` 对象。
 
 `GremlinLab` 类是一个简单的应用程序，它创建 `Gremlin` 对象，然后通过 `Gremlin` 类的类方法 `getGremlinCount()` 统计已创建的对象数量。
@@ -1933,9 +2036,6 @@ public class Gremlin {
 
 在编译 `GremlinLab.java` 文件后，使用任何你想尝试的命令行参数对其进行测试。可以创建的 `Gremlin` 对象数量取决于运行 `GremlinLab` 应用程序时系统可用的内存。
 
-
-
-
 # 3. B. 当变量在作用域外使用时，编译器会报错。
 
 #### 活动
@@ -1950,7 +2050,7 @@ public class Gremlin {
 
 # 第 12 小时：充分利用现有对象
 
-### 本小时的待办事项：
+### 本小时的待办事项
 
 ![Image](img/arrow.jpg) 设计超类和子类。
 
@@ -2006,13 +2106,13 @@ OOP 的另一个有用方面是能够创建一个可以在不同程序中使用�
 
 在 `InputStreamReader` 对象类中定义的某些方法也定义在它的某个超类中。例如，`close()` 方法既是 `InputStreamReader` 类的一部分，也是 `Reader` 类的一部分。当方法在子类及其超类中定义时，将使用子类的方法。这允许子类更改、替换或完全消除其超类的某些行为或属性。
 
-在子类中创建一个新方法以更改继承自超类的行为被称为*重写*（overriding）该方法。每当继承的行为产生非预期的结果或你想做某些事情时，都需要重写方法。
+在子类中创建一个新方法以更改继承自超类的行为被称为重写（overriding）该方法。每当继承的行为产生非预期的结果或你想做某些事情时，都需要重写方法。
 
 ### 建立继承
 
 使用 `extends` 语句将类定义为另一个类的子类，如下：
 
-```
+```java
 class FileReader extends InputStreamReader {
     // 行为和属性
 }
@@ -2046,6 +2146,8 @@ public int read(char[] cbuf) {
 
 在子类中重写方法时，应该在方法声明前加上 `@Override`，如此示例所示：
 
+
+
 ```java
 @Override
 public void setPosition(int x, int y) {
@@ -2055,11 +2157,7 @@ public void setPosition(int x, int y) {
 }
 ```
 
-
-
-
-
-`@Override` 文本是一种特殊的注释被称为注解（annotation），它能告诉 Java 编译器比它自己能推断出的更多的信息。通过在方法前加上 `@Override` 注解，你给了编译器一个机会来检查该方法是否真的重写了父类方法。如果没有重写——例如，你可能漏掉了第二个整数参数——程序将无法编译。
+`@Override` 文本是一种特殊的注释，被称为注解（annotation），它能告诉 Java 编译器比它自己能推断出的更多的信息。通过在方法前加上 `@Override` 注解，你给了编译器一个机会来检查该方法是否真的重写了父类方法。如果没有重写——例如，你可能漏掉了第二个整数参数——程序将无法编译。
 
 如果没有这个注解，编译器就无法发现这个潜在问题。没有第二个整数参数的方法看起来就像任何其他方法一样。
 
@@ -2085,7 +2183,7 @@ this.title = "Cagney";
 
 通过 `super` 访问的变量不能是 `private`，因为这些在子类中是不可用的。
 
-为了关联构造函数，子类构造函数的第一语句必须是对父类构造函数的调用。这需要 `super` 关键字，如下语句所示：
+为了关联构造函数，子类构造函数的第一条语句必须是对父类构造函数的调用。这需要 `super` 关键字，如下语句所示：
 
 点击此处查看代码图像
 
@@ -2097,13 +2195,13 @@ public DataReader(String name, int length) {
 
 这个示例是子类的构造函数，它使用语句 `super(name, length)` 来调用其父类中可比的构造函数。
 
-如果你不使用 `super()` 调用父类中的构造函数，Java 在子类构造函数开始时自动调用无参数的 `super()`。如果这个父类构造函数不存在或提供了意外的行为，就会导致错误，因此最好自己调用父类构造函数。
+如果你不使用 `super()` 调用父类中的构造函数，Java 会在子类构造函数开始时自动调用无参数的 `super()`。如果这个父类构造函数不存在或提供了意外的行为，就会导致错误，因此最好自己调用父类构造函数。
 
 ## 与现有对象操作
 
 面向对象编程（OOP）鼓励重用。如果你为某个 Java 编程项目开发了一个对象，那么可以在不修改的情况下将该对象整合到另一个项目中。
 
-如果一个 Java 类设计得良好，就可能让该类在其他程序中使用。你的程序中可用的对象越多，你在创建自己的软件时需要的工作就越少。如果有一个符合你需求的优秀拼写检查对象，你可以使用它而不是编写自己的。理想情况下，你甚至可以给老板留下一个关于为项目添加拼写检查功能花费多久时间的假象，并利用这段额外时间在办公室打长途电话。
+如果一个 Java 类设计得良好，就可能让该类在其他程序中使用。你的程序中可用的对象越多，你在创建自己的软件时需要的工作就越少。如果有一个符合你需求的优秀拼写检查对象，你可以使用它，而不是编写自己的。理想情况下，你甚至可以给老板留下一个关于为项目添加拼写检查功能花费多久时间的假象，并利用这段额外时间在办公室打长途电话。
 
 **注意**
 
@@ -2155,7 +2253,7 @@ ArrayList structure = new ArrayList();
 
 虽然你可以这样做，但泛型让你的代码更可靠，因为它们给了编译器一种防止更多错误的方法。在这里，它们阻止你通过放入错误的对象类来误用列表。如果你尝试向预期持有 `String` 的列表放入 `Integer` 对象，编译器会报错。
 
-与数组不同，数组列表在创建时没有固定的元素数量。列表创建时有 10 个元素。如果你知道要存储比这多多的对象，可以指定大小作为构造函数的参数。创建一个 300 元素列表语句：
+与数组不同，数组列表在创建时没有固定的元素数量。列表创建时有 10 个元素。如果你知道要存储比这多得多的对象，可以指定大小作为构造函数的参数。创建一个 300 元素列表的语句：
 
 点击此处查看代码图像
 
@@ -2173,14 +2271,11 @@ structure.add("Velma");
 
 你按顺序添加对象，因此如果这些是添加到 `structure` 的前三个对象，元素 0 是“Vance”，元素 1 是“Vernon”，元素 2 是“Velma”。
 
-
-
-
 你通过调用 `get()` 方法并将元素的索引号作为参数，从列表中检索一个元素：
 
 点击此处查看代码图片
 
-```
+```java
 String name = structure.get(1);
 ```
 
@@ -2190,7 +2285,7 @@ String name = structure.get(1);
 
 点击此处查看代码图片
 
-```
+```java
 if (structure.contains("Velma")) {
     System.out.println("Velma found");
 }
@@ -2198,28 +2293,28 @@ if (structure.contains("Velma")) {
 
 你可以使用对象本身或其索引号从列表中删除对象：
 
-```
+```java
 structure.remove(0);
 structure.remove("Vernon");
 ```
 
-这两条语句后，“Velma” 成为列表中唯一的字符串。
+执行这两条语句后，“Velma”成为列表中唯一的字符串。
 
 ## 遍历数组列表（Array List）
 
 Java 包含一种特殊的 `for` 循环，可以轻松地加载数组列表并依次检查其每个元素。
 
-这个循环只有两个部分，比你在 第 8 小节 “用循环重复操作”中学到的 `for` 循环少了一个。
+这个循环只有两个部分，比你在第 8 小节“用循环重复操作”中学到的 `for` 循环少了一个。
 
 第一部分是初始化部分：用于持有从列表中检索的每个对象的变量类和名称。该对象应该属于持有列表的同一个类。
 
 第二部分是标识列表。
 
-以下是遍历 `structure` 列表并将每个名称显示在屏幕的代码：
+以下是遍历 `structure` 列表并将每个名称显示在屏幕上的代码：
 
 点击此处查看代码图片
 
-```
+```java
 for (String name : structure) {
     System.out.println(name);
 }
@@ -2227,9 +2322,9 @@ for (String name : structure) {
 
 本节的第一个项目是 `StringLister`，该应用程序将演示数组列表和特殊的 `for` 循环，展示一个按字母顺序排列的字符串列表。该列表来自数组和命令行参数。
 
-在 NetBeans 中打开你的 Java24 项目，选择 File（文件）、New File（新建文件），然后在 `com.java24hours` 包中创建一个一个名为 `StringLister` 的新 Empty Java File（空 Java 文件）。在源编辑器中输入 代码列表 12.1 并保存文件。
+在 NetBeans 中打开你的 Java24 项目，选择 File（文件）、New File（新建文件），然后在 `com.java24hours` 包中创建一个名为 `StringLister` 的新 Empty Java File（空 Java 文件）。在源编辑器中输入代码列表 12.1 并保存文件。
 
-**列表 12.1** StringLister.java 的完整文本。
+**列表 12.1** `StringLister.java` 的完整文本。
 
 点击此处查看代码图片
 
@@ -2262,7 +2357,7 @@ public class StringLister {
 }
 ```
 
-在运行应用程序之前，你应该使用 Run（运行）、Set Configuration（设置配置）命令将主类设置为 `com.java24hours.StringLister`，并将参数设置为一个或多个由空格分隔的，例如 `Scotty Jason Dillon`。然后选择 Run Project（运行项目）查看结果。在命令行指定的名称被添加到第 6–7 行存储在数组中的名称中。由于在程序运行之前不知道名称的总数，因此列表比数组更适合这些字符串的存储媒介。列表中的字符串使用 `Collections` 类的一个方法按字母顺序排序：`Collections.sort(list)`。该类与 `ArrayList` 一样属于 `java.util` 包。数组列表和其他有用结构被称为集合（collections）。当你运行程序时，输出应该是按字母顺序排列的名称列表（参见图 12.2）。数组列表的灵活尺寸允许你的额外名称添加到数据结构中与其他名称一起排序。
+在运行应用程序之前，你应该使用 Run（运行）、Set Configuration（设置配置）命令将主类设置为 `com.java24hours.StringLister`，并将参数设置为一个或多个由空格分隔的名称，例如 `Scotty Jason Dillon`。然后选择 Run Project（运行项目）查看结果。在命令行指定的名称被添加到第 6–7 行存储在数组中的名称中。由于在程序运行之前不知道名称的总数，因此列表比数组更适合这些字符串的存储媒介。列表中的字符串使用 `Collections` 类的一个方法按字母顺序排序：`Collections.sort(list)`。该类与 `ArrayList` 一样属于 `java.util` 包。数组列表和其他有用结构被称为集合（collections）。当你运行程序时，输出应该是按字母顺序排列的名称列表（参见图 12.2）。数组列表的灵活尺寸允许你的额外名称添加到数据结构中与其他名称一起排序。
 
 **图 12.2** `StringLister` 程序的输出。
 
@@ -2276,11 +2371,11 @@ public class StringLister {
 - 将对象移动到新的 `(x,y,z)` 坐标
 - 按指定的 `x`、`y` 和 `z` 值增量移动对象
 
-Java 已经有一个表示二维维点的标准类，称为 `Point`。该类可以在 `java.awt` 包中找到。它有两个名为 `x` 和 `y` 的整数变量，用于存储 `Point` 对象的 `(x,y)` 位置。它还有一个用于将 `Point` 对象放置在 `(x,y)` 位置的 `move()` 方法，以及一个按指定的 `x` 和 `y` 移动对象的 `translate()` 方法。
+Java 已经有一个表示二维点的标准类，称为 `Point`。该类可以在 `java.awt` 包中找到。它有两个名为 `x` 和 `y` 的整数变量，用于存储 `Point` 对象的 `(x,y)` 位置。它还有一个用于将 `Point` 对象放置在 `(x,y)` 位置的 `move()` 方法，以及一个按指定的 `x` 和 `y` 移动对象的 `translate()` 方法。
 
 在 Java2 项目中，在 `com.java24hours` 包中创建一个名为 `Point3D` 的 Empty File，并将代码列表 12.2 的文本输入其中。完成后保存文件。
 
-**列表 12.2** Point3D.java 的完整文本。
+**列表 12.2** `Point3D.java` 的完整文本。
 
 点击此处查看代码图片
 
@@ -2310,9 +2405,9 @@ public class Point3D extends Point {
 
 `Point3D` 类没有 `main()` 方法，因此你无法将其作为应用程序运行，但在任何需要三维点的地方都可以使用。`Point3D` 类只执行其父类 `Point` 未完成的工作。这主要涉及对整数变量 `z` 的跟踪，并将其作为 `move()` 方法、`translate()` 方法和 `Point3D()` 构造函数的参数。所有方法都使用了关键字 `super` 和 `this`。`this` 语句用于引用当前的 `Point3D` 对象，因此第 10 行的 `this.z = z` 将变量 `z` 设置为传递给方法的值。`super` 语句引用父类 `Point`。第 9 行的 `super(x,y)` 调用了父类中的 `Point(x,y)` 构造函数，然后设置 `Point3D` 对象的 `(x,y)` 坐标。由于 `Point` 已经能够处理 `x` 和 `y` 轴，让 `Point3D` 类也这样做是多余的。
 
-为了测试新的 `Point3D` 类，创建一个使用 `Point` 和 `Point3D` 对象并移动它们的程序。在 `com.java24hours` 包中创建创建一个名为 `PointTester` 的新文件，并将代码列表 12.3 输入其中。该文件在保存时会自动编译。
+为了测试新的 `Point3D` 类，创建一个使用 `Point` 和 `Point3D` 对象并移动它们的程序。在 `com.java24hours` 包中创建一个名为 `PointTester` 的新文件，并将代码列表 12.3 输入其中。该文件在保存时会自动编译。
 
-**列表 12.3** PointTester.java 的完整文本。
+**列表 12.3** `PointTester.java` 的完整文本。
 
 ```java
 package com.java24hours;
@@ -2329,7 +2424,6 @@ class PointTester {
     }
 }
 ```
-
 
 
 
@@ -2384,31 +2478,42 @@ class PointTester {
 
 问：为什么人们在发现某些东西时会大喊“尤里卡（Eureka）！”？
 
-答：Eureka 借自古希腊，意为“我找到了！”这句话是希腊学者阿基米德进入浴缸时发出的。水位的上升让他理解到，排水水的体积必须等于他身体部位的体积。关于阿基米德的故事两个世纪后由维特鲁威在他关于建筑的著作《建筑五》（*De Architectura*）中流传。“尤里卡”自 1849 年以来一直是加利福尼亚州的名字，指的是在萨特工厂（Sutter’s Mill）附近发现黄金时的欢呼。
+答：Eureka 借自古希腊，意为“我找到了！”这句话是希腊学者阿基米德进入浴缸时发出的。水位的上升让他理解到，排水水的体积必须等于他身体部位的体积。关于阿基米德的故事两个世纪后由维特鲁威在他关于建筑的著作《建筑五》（De Architectura）中流传。“尤里卡”自 1849 年以来一直是加利福尼亚州的名字，指的是在萨特工厂（Sutter’s Mill）附近发现黄金时的欢呼。
 
 ### 练习
 
 为了确定你从过去的工作中继承了什么种知识，请回答以下问题。
 
 1. 如果超类处理某种方法的方式在你子类中没有使用，你可以做什么？
-A. 删除超类中的该方法。
-B. 在子类中重写该方法。
-C. 给《圣何塞镜讯报》的编辑写一封恶毒信，希望 Java 开发者能看到它。
+
+   A. 删除超类中的该方法。
+
+   B. 在子类中重写该方法。
+
+   C. 给《圣何塞镜讯报》的编辑写一封恶毒信，希望 Java 开发者能看到它。
 
 2. 你可以使用哪些方法来获取存储在列表（array list）中的元素？
-A. `get()`
-B. `read()`
-C. `elementAt()`
+
+   A. `get()`
+
+   B. `read()`
+
+   C. `elementAt()`
 
 3. 你可以使用什么语句来引用当前对象的方法和变量？
-A. `this`
-B. `that`
-C. `theOther`
+
+   A. `this`
+
+   B. `that`
+
+   C. `theOther`
 
 #### 答案
 
 1. B. 因为你可以重写该方法，所以你不需要更改超类的任何方面或其工作方式。
+
 2. A. `get()` 方法有一个参数——元素的索引号。
+
 3. A. `this` 关键字指的是它所出现的对象。
 
 #### 活动
@@ -2422,7 +2527,7 @@ C. `theOther`
 
 # 第四部分：高级主题
 
-# 第 13 章在数据结构中存储对象
+# 第 13 章 在数据结构中存储对象
 
 ### 本节目标
 
@@ -2440,17 +2545,13 @@ C. `theOther`
 
 `java.util` 包中有一个类可以完成数组能做的一切事情，但没有大小的限制：`ArrayList`。
 
-
-
-
-
 `array list`（数组列表）是一种用于存储相同类或相同公共父类实例对象的数据结构。该列表可以在程序运行期间根据需要增长或收缩。
 
 创建数组列表最简单的方法是调用其不带任何参数的构造函数：
 
 点击此处查看代码图像
 
-```
+```java
 ArrayList servants = new ArrayList();
 ```
 
@@ -2458,7 +2559,7 @@ ArrayList servants = new ArrayList();
 
 点击此处查看代码图像
 
-```
+```java
 ArrayList servants = new ArrayList(30);
 ```
 
@@ -2470,7 +2571,7 @@ ArrayList servants = new ArrayList(30);
 
 点击此处查看代码图像
 
-```
+```java
 ArrayList<String> servants = new ArrayList<String>();
 ```
 
@@ -2478,7 +2579,7 @@ ArrayList<String> servants = new ArrayList<String>();
 
 要添加对象，调用数组列表的 `add(Object)` 方法并将该对象作为参数。以下是添加五个字符串的语句：
 
-```
+```java
 servants.add("Bates");
 servants.add("Anna");
 servants.add("Thomas");
@@ -2492,7 +2593,7 @@ servants.add("Daisy");
 
 点击此处查看代码图像
 
-```
+```java
 servants.remove("Mrs. O'Brien");
 ```
 
@@ -2500,15 +2601,13 @@ servants.remove("Mrs. O'Brien");
 
 点击此处查看代码图像
 
-```
+```java
 int servantCount = servants.size();
 ```
 
 当你使用泛型指定了列表包含的类时，使用 `for` 循环遍历列表的每个元素是十分简单的：
 
-点击此处查看代码图像
-
-```
+```java
 for (String servant : servants) {
     System.out.println(servant);
 }
@@ -2520,7 +2619,7 @@ for (String servant : servants) {
 
 点击此处查看代码图像
 
-```
+```java
 ArrayList<String> aristocrats = new ArrayList<String>();
 aristocrats.add(0, "Lord Robert");
 aristocrats.add(1, "Lady Mary");
@@ -2535,7 +2634,7 @@ aristocrats.add(0, "Lady Grantham");
 
 可以通过指定位置作为 `remove(int)` 的参数来从列表中移除元素：
 
-```
+```java
 aristocrats.remove(4);
 ```
 
@@ -2543,7 +2642,7 @@ aristocrats.remove(4);
 
 点击此处查看代码图像
 
-```
+```java
 for (int i = 0; i < aristocrats.size(); i++) {
     String aristocrat = aristocrats.get(i);
     System.out.println(aristocrat);
@@ -2554,45 +2653,56 @@ for (int i = 0; i < aristocrats.size(); i++) {
 
 点击此处查看代码图像
 
-```
+```java
 int index = servants.indexOf("Car");
 ```
 
 还有一个 `contains()` 方法，根据指定对象是否被找到来返回 `true` 或 `false`。这里是使用该方法的示例示例：
 
-```
+```java
 boolean hasCar = servants.contains("Car");
 ```
 
 该项目使用了这些技术，在一个 10 类网格上进行射击。有些点包含目标，有些没有。通过调用 `Point(int, int)` 构造函数创建点：
 
-```
+```java
 Point p = new Point(5,9);
 ```
 
-这里有一个用 X 标记目标、用 "." 标记空位的 10 类网格：![Image](img/barrow.jpg)
+这里有一个用 X 标记目标、用 "." 标记空位的 10 类网格：
+
+![Image](img/barrow.jpg)
+
+```text
 1 2 3 4 5 6 7 8 9
+
 1 . . . . . . . . .
+
 2 . . . . . . . . .
+
 3 . . . . . . . . .
+
 4 . . . . . . . . .
+
 5 . . . . X . . . .
+
 6 . . . . . . . . .
+
 7 . . . . . . . . .
+
 8 . . . . . . . . .
+
 9 . . . . . . . . .
+```
 
 从左到右列代表 x 坐标。从上到下行代表 y 坐标。
 
 在此项目之前，你看到了数组列表可以持有字符串。它们可以持有 `Point` 或任何其他类。该语句创建了 (5,9) 的点：
 
-```
+```java
 Point p = new Point(5,9);
 ```
 
-
-
-
 ```java
 38:             System.out.print("  ");
 39:          }
@@ -2648,15 +2758,16 @@ Point p = new Point(5,9);
 
 当目标被射击命中时，通过调用以射击点作为参数的 `remove(Object)` 方法从 `targets` 数组列表中移除。
 
-注意
+### 注意
 
 在 `Battlepoint` 应用的 `shoot()` 方法中，将从列表中移除的 `Point` 对象是代表射击点的。它与命中的目标具有相同的 (x,y) 坐标。
 
-### 哈希映射 (Hash Maps)
+### 哈希映射（Hash Maps）
 
 在编程中，使用一条信息来访问另一个是很常见的。在数据结构中，数组列表（ArrayList）是这种能力最简单的示例，使用索引号从列表中检索一个对象。这里有一个从 `aristocrats` 列表中提取第一个字符串的示例：
 
 点击此处查看代码图像
+
 ```java
 String first = aristocrats.get(0);
 ```
@@ -2666,127 +2777,7 @@ String first = aristocrats.get(0);
 该名称指的是键如何映射到值。这种结构化数据的一个例子是电话列表。一个人的名字（字符串）可以用于检索该人的电话号码。可以通过调用不带参数的构造函数来创建一个哈希映射：
 
 点击此处查看代码图像
-```java
-HashMap phonebook = new HashMap();
-```
 
-在新的哈希映射中可以指定两个控制其效率的方面面：初始容量（initial capacity）和负载因子（load factor）。它们通过两个参数设置，容量在前，负载因子在后：
-
-点击此处查看代码图像
-```java
-HashMap phonebook = new HashMap(30, 0.7F);
-```
-
-容量是存储哈希映射值的桶（buckets）的数量。负载因子是一个从 0（空）到 1.0（满）之间的浮点数，因此 0.7 意味着当桶填充了 70% 时，容量就会增加。默认值为容量为 16，负载因子为 .75，这通常足够了。
-
-应该使用泛型（Generics）来指示键和值的类型。它们被放在 `<` 和 `>` 字符之间，并用逗号分隔，如下例所示：
-
-点击此处查看代码图像
-```java
-HashMap<String, Long> phonebook = new HashMap<>();
-```
-
-这创建了一个名为 `phonebook` 的哈希映射，其键为字符串，值为 `Long` 对象。第二组 `<` 和 `>` 是空的，假设与前一组 `<` 和 `>` 中的类相同。
-
-对象存储在哈希映射中，键为字符串，值为 `Long` 对象。通过调用以射击点作为参数的 `remove(Object)` 方法，在数组列表中存储对象：
-
-点击此处查看代码图像
-```
-HashMap<String, Long> phonebook = new HashMap<>();
-```
-（注：此处原文示例代码与描述略有出入，翻译保持逻辑一致）
-修正：重新对齐原文逻辑。
-原文：`HashMap<String, Long> phonebook = new HashMap<>();`
-描述：这创建了一个名为 `phonebook` 的哈希映射，其键为字符串，值为 `Long` 对象。第二组 `<` 和 `>` 是空的，假设与前一组 `<` 和 `>` 中的类相同。
-
-*等等，我重新审视了原文代码块：*
-原文是：
-```java
-HashMap<String, Long> phonebook = new HashMap<>();
-```
-描述是：这创建了一个名为 `phonebook` 的哈希映射，其键为字符串，值为 `Long` 对象。第二组 `<` 和 `>` 是空的，假设与前一组 `<` 和 `>` 中的类相同。
-（抱歉，我发现原文文本中存在代码块与描述的细微重复或偏差，我将严格按照文本逻辑进行精确翻译：）
-
-Objects are stored in the hash map with keys that are strings and values are `Long` objects. The second set of `<` and `>` is empty, which assumes the same classes as those in the previous `<` and `>`. 
-*重新翻译对应段落：*
-对象被存储在哈希映射中，键为字符串，值为 `Long` 对象。第二组 `<` 和 `>` 是空的，假设与前一组 `<` 和 `>` 中的类相同。
-
-（注：原文提供的文本块似乎有些乱序或代码块与描述交织，我将根据您提供的文本顺序进行完整流畅翻译）
-
-[content]
-```java
-38:             System.out.print("  ");
-39:          }
-40:          System.out.println();
-41:      }
-42:    System.out.println();
-43:    }
-44:
-45:    private void createTargets() {
-46:        Point p1 = new Point(5,9);
-47:        targets.add(p1);
-48:        Point p2 = new Point(4,5);
-49:        targets.add(p2);
-50:        Point p3 = new Point(9,2);
-51:        targets.add(p3);
-52:    }
-53:
-54:    private void shoot(int x, int y) {
-55:        Point shot = new Point(x,y);
-56:        System.out.print("Firing at (" + x + "," + y + ") ... ");
-57:        if (targets.indexOf(shot) > -1) {
-58:              System.out.println("you sank my battlepoint!");
-59:              // delete the destroyed target
-60:              targets.remove(shot);
-61:        } else {
-62:              System.out.println("miss.");
-63:        }
-64:    }
-65:    
-66:    public static void main(String[] arguments) {
-67:        new Battlepoint();
-68:    }
-69: }
-```
-
-`Battlepoint` 应用中的注释描述了构造函数的每个部分以及程序中条件逻辑的重要部分。
-
-该应用程序创建了三个 `Point` 对象作为目标，并将它们添加到数组中（第 45–52 行）。会显示一张地图，列出这些目标（第 22–43 行）。
-
-接下来，通过调用 `shoot(int, int)` 方法对三个点进行射击（第 54–64 行）。每次调用，应用程序都会报告射击是否击中了某个目标。如果命中了，该目标将从列表中移除。
-
-最后，再次显示地图，应用程序终止。
-
-输出结果所示于图 13.1。
-
-![Image](img/13fig01.jpg)
-
-**图 13.1**
-
-将 `Point` 对象放入数组列表中并对其进行射击。
-
-三个目标在图 13.1 顶部的地图中显示。一个目标在命中后会被移除。输出底部的地图反映了这一变化。
-
-当目标被射击命中时，通过调用以射击点作为参数的 `remove(Object)` 方法从 `targets` 数组列表中移除。
-
-注意
-
-在 `Battlepoint` 应用的 `shoot()` 方法中，将从列表中移除的 `Point` 对象是代表射击点的。它与命中的目标具有相同的 (x,y) 坐标。
-
-### 哈希映射 (Hash Maps)
-
-在编程中，使用一条信息来访问另一个是很常见的。在数据结构中，数组列表（ArrayList）是这种能力最简单的示例，使用索引号从列表中检索一个对象。这里有一个从 `aristocrats` 列表中提取第一个字符串的示例：
-
-点击此处查看代码图像
-```java
-String first = aristocrats.get(0);
-```
-
-数组也使用索引号来检索数组中的每个项。哈希映射（Hash maps）是 Java 中的一种数据结构，使用一个对象检索另一个对象。第一个对象是 `key`（键），第二个对象是 `value`（值）。这种结构实现为 `java.util` 中的 `HashMap` 类。
-
-该名称指的是键如何映射到值。这种结构化数据的一个例子是电话列表。一个人的名字（字符串）可以用于检索该人的电话号码。可以通过调用不带参数的构造函数来创建一个哈希映射：
-
-点击此处查看代码图像
 ```java
 HashMap phonebook = new HashMap();
 ```
@@ -2794,6 +2785,9 @@ HashMap phonebook = new HashMap();
 在新的哈希映射中可以指定两个控制其效率的方面：初始容量（initial capacity）和负载因子（load factor）。它们通过两个参数设置，容量在前，负载因子在后：
 
 点击此处查看代码图像
+
+
+
 ```java
 HashMap phonebook = new HashMap(30, 0.7F);
 ```
@@ -2803,6 +2797,7 @@ HashMap phonebook = new HashMap(30, 0.7F);
 应该使用泛型（Generics）来指示键和值的类型。它们被放在 `<` 和 `>` 字符之间，并用逗号分隔，如下例所示：
 
 点击此处查看代码图像
+
 ```java
 HashMap<String, Long> phonebook = new HashMap<>();
 ```
@@ -2811,18 +2806,13 @@ HashMap<String, Long> phonebook = new HashMap<>();
 
 对象被存储在哈希映射中，键为字符串，值为 `Long` 对象。（注：此处原文文本逻辑存在重复，翻译已按语意整合）
 
-*抱歉，我注意到您提供的原始文本中代码块与描述的对应关系有些混乱，我将完全按照您提供的文本内容进行逐行翻译。*
-
 （由于原文中包含了多次重复的描述，以下为完整翻译后的最终内容）
-
-
-
 
 `java.awt` 包中的 `Font` 类用于创建字体并使用它们在图形用户界面中显示文本。字体包括字体名称、字号大小以及其样式是普通、粗体还是斜体。
 
 哈希映射（Hash maps）可以包含任何类别的对象。在 NetBeans 中，在 `com.java24hours` 包中创建一个 Java 文件，并将其命名为 `FontMapper`。在文件中输入代码列表 13.2 并保存。
 
-**代码列表 13.2 `FontMapper.java` 的全文**
+## 代码列表 13.2：`FontMapper.java` 的全文
 
 点击此处查看代码图像
 
@@ -2872,55 +2862,61 @@ HashMap<String, Long> phonebook = new HashMap<>();
 
 在哈希映射中存储 `Font` 对象。
 
-### 总结
+## 总结
 
 列表（Array lists）和哈希映射（Hash maps）是 `java.util` 包中两个非常有用的数据结构。`ArrayList` 类扩展了数组的功能，使其能够克服该数据类型的固定大小限制。哈希映射允许使用任何类型的对象作为键来检索值。
 
 还有位集（`BitSet` 类），它持有 0 和 1 的位值；栈（`Stack`），它是一种类似于列表的后进先出数据集合；排序结构 `TreeMap` 和 `TreeSet`；以及属性（`Properties`），这是一种特殊的哈希映射，用于在文件或其他存储位置中持有程序的配置属性。
 
-### 工作坊
+## 工作坊
 
-#### 问答
+### 问答
 
 **Q. 类被同步（synchronized）意味着什么？**
 
-**A.** 同步是 Java 虚拟机确保其他用户以一致且准确的方式访问对象的实例变量和方法的方法。当你学习第 15 节“创建多线程程序”中的线程时，这个概念将变得更有意义。Java 程序可以设计为执行多于一个任务。每个任务都被放在自己的线程中。当多个线程访问同一个对象时，确保该对象在每个线程中的行为相同至关重要。因此，当类的方法需要同步时（如向量 Vector 和哈表 Hasht），Java 虚拟机必须付出更多努力，并可能会遇到导致线程停止的错误。列表和哈希映射复制了向量和哈表的功能，因为需要不需要同步的数据结构。结果是，它们的运行效率更高。
+**A.** 同步是 Java 虚拟机确保其他用户以一致且准确的方式访问对象的实例变量和方法的方法。当你学习第 15 节“创建多线程程序”中的线程时，这个概念将变得更有意义。Java 程序可以设计为执行多于一个任务。每个任务都被放在自己的线程中。当多个线程访问同一个对象时，确保该对象在每个线程中的行为相同至关重要。因此，当类的方法需要同步时（如向量 `Vector` 和哈表 `Hasht`），Java 虚拟机必须付出更多努力，并可能会遇到导致线程停止的错误。列表和哈希映射复制了向量和哈表的功能，因为需要不需要同步的数据结构。结果是，它们的运行效率更高。
 
 **Q. 华盛顿将军队（Washington Generals）曾击败过环球旅行者（Globetrotters）吗？**
 
 **A.** 在过去的十年里，将军队曾击败环球旅行者七次，最近一次是在 1971 年。在田纳西州马丁市比赛中，将军队凭借队主“红”Klotz 的进球以 100–99 获胜。尽管将军队今天以弱鱼队闻名，但他们于 1921 年作为 Sphas 队开始，是一支在东部和美国篮球联赛比赛的正规球队。Sphas（南费城协会的缩写）曾获得过冠军。Klotz 曾是 Sphas 队的球员，他买下了这支球队并在 1952 年他们成为哈尔姆著名球队的永久合作伙伴时将队名改为将军队。1971 年的胜利胜利结束了环球旅行者 49 场的连胜。
 
-### 测验
+## 测验
 
 以下问题将测试你掌握了关于数据结构的多少知识。
 
-**1。 下列哪项在创建后不能增加或缩小大小？**
+**1。下列哪项在创建后不能增加或缩小大小？**
 
 A. 列表 (Array lists)
+
 B. 数组 (Arrays)
+
 C. 哈希映射 (Hash maps)
 
-**2。 使用什么方法可以获取映射中有多少个项？**
+**2。使用什么方法可以获取映射中有多少个项？**
 
 A. `length()`
+
 B. `size()`
+
 C. `count()`
 
-**3。 什么数据类型或类可以作为哈希映射的键？**
+**3。什么数据类型或类可以作为哈希映射的键？**
 
 A. `int`
+
 B. `Integer`
+
 C. `String`
 
-#### 答案
+### 答案
 
-**1。 B.** 数组的大小在创建后不能改变。列表和哈希映射根据需要改变大小。
+**1。B.** 数组的大小在创建后不能改变。列表和哈希映射根据需要改变大小。
 
-**2。 B.** `size()` 方法指示映射中的项数。
+**2。B.** `size()` 方法指示映射中的项数。
 
-**3。 A、B 或 C.** 哈希映射可以使用任何类作为键以及任何类作为值。
+**3。A、B 或 C.** 哈希映射可以使用任何类作为键以及任何类作为值。
 
-#### 活动
+### 活动
 
 你可以通过以下活动应用结构化编程知识：
 
@@ -2932,7 +2928,7 @@ C. `String`
 
 # 第 14 章 程序中的错误处理
 
-### 本节任务清单：
+## 本节任务清单
 
 ![Image](img/arrow.jpg) 了解为什么错误被称为异常（exceptions）。
 
@@ -2945,9 +2941,6 @@ C. `String`
 ![Image](img/arrow.jpg) 创建你自己的异常。
 
 异常通常可以通过一种保持程序正常运行的方式进行处理。
-
-
-
 
 虽然你现在才开始学习它们，但在之前的 13 小时里，你可能已经对异常非常熟悉了。当你编写的 Java 程序能够编译成功但在运行时遇到问题时，这些错误就会出现。
 
@@ -2966,7 +2959,7 @@ System.out.println(greek[3]);
 
 点击此处查看代码图像
 
-```
+```text
 Exception in thread "main" java.lang.ArrayIndexOutBoundsException: 3
     at SampleProgram.main(SampleProgram.java:4)
 ```
@@ -2975,20 +2968,23 @@ Exception in thread "main" java.lang.ArrayIndexOutBoundsException: 3
 
 错误消息指向 `java.lang` 包中一个名为 `ArrayIndexOutOfBoundsException` 的类。该类是一个异常，是一个代表程序中发生的异常情况的对象。
 
-异常处理是类在发生错误或其他异常情况时相互通信的一种方式
+异常处理是类在发生错误或其他异常情况时相互通信的一种方式。
 
 当 Java 类遇到异常时，它会向类的用户报告该错误。在这个例中，类的用户是 JVM。
 
 ### 注意
-使用了两个术来描述这个过程：`throw`（抛出）和 `catch`（捕获）。对象抛出异常以通知其他对象异常的发生。这些异常被其他对象或 Java 虚拟机捕获。
 
-所有异常都是 `java.lang` 包中 `Exception` 的子类。`ArrayIndexOutOfBoundsException` 正如你所期的——它报告访问了数组边界之外的元素。
+
+
+使用了两个术语来描述这个过程：`throw`（抛出）和 `catch`（捕获）。对象抛出异常以通知其他对象异常的发生。这些异常被其他对象或 Java 虚拟机捕获。
+
+所有异常都是 `java.lang` 包中 `Exception` 的子类。`ArrayIndexOutOfBoundsException` 正如你所预期的——它报告访问了数组边界之外的元素。
 
 Java 中有数百种异常。许多异常如数组异常指示了可以通过编程更改来修复的问题。这些异常类似于编译错误。在你纠正了情况后，就不再需要担心该异常了。
 
 其他异常必须在程序每次运行时通过五个新关键字来处理：`try`、`catch`、`finally`、`throw` 和 `throws`。
 
-### 在 `try`-`catch` 块中捕获异常
+## 在 `try`-`catch` 块中捕获异常
 
 到目前为止，你通过修复引起异常的问题来处理异常。有时你无法以这种方式处理异常，必须在 Java 类内部处理该问题。
 
@@ -3024,7 +3020,7 @@ Java 中有数百种异常。许多异常如数组异常指示了可以通过编
 
 多次使用不同的数字作为参数运行程序。它应该能够成功处理它们，这可能会让你好奇这个项目与异常有什么关系。
 
-为了看到相关性，将 `Calculator` 应用程序的命令行参数改为 `1 3 5x`。第三个参数包含一个拼写错误——数字 5 之后不应该是 `x`。`Calculator` 应用程序无法感知，，它尝试加上 `5x`，导致以下结果：
+为了看到相关性，将 `Calculator` 应用程序的命令行参数改为 `1 3 5x`。第三个参数包含一个拼写错误——数字 5 之后不应该是 `x`。`Calculator` 应用程序无法感知，它尝试加上 `5x`，导致以下结果：
 
 输出 ![Image](img/arrow1.jpg)
 
@@ -3058,18 +3054,15 @@ Exception in thread "main" java.lang.NumberFormatException: For input: "5x"
 15: }
 ```
 
-任何你想让类处理的异常，都必须使用 `try`-`catch` 块。`Exception` 对象应该是多个子类之一。在你保存应用程序后，自定义项目配置并使用命令行参数 `1 3 5x` 运行 `com.java24hours.NewCalculator`。你应该能看到在图 14.2](#ch14.xhtml_ch14fig2)中所示的输出。
+任何你想让类处理的异常，都必须使用 `try`-`catch` 块。`Exception` 对象应该是多个子类之一。在你保存应用程序后，自定义项目配置并使用命令行参数 `1 3 5x` 运行 `com.java24hours.NewCalculator`。你应该能看到在图 14.2 中所示的输出。
 
 ![Image](img/14fig02.jpg)
 
 **图 14.2** `NewCalculator` 应用程序的输出。
 
-
-
-
 第 7–11 行中的 `try`-`catch` 块处理由 `Float.parseFloat()` 抛出的 `NumberFormatException` 错误。这些异常在 `NewCalculator` 类内部捕获：对于任何非数字参数，都会显示一条错误信息。由于异常在类内部被处理，`JVM` 不会显示错误。你通常可以使用 `try`-`catch` 块来处理与用户输入和其他意外数据相关的问题。
 
-### 捕获多种不同的异常
+## 捕获多种不同的异常
 
 一个 `try`-`catch` 块可以用于处理多种不同类型的异常，即使它们是由不同的语句抛出的。
 
@@ -3113,7 +3106,7 @@ try {
 
 ![Image](img/arrow.jpg) 除以零
 
-在 `com.java24hours` 包中为 `NumberDivider` 创建一个新的 Java 文件，并将列表 14.3 的文本输入到源编辑器中
+在 `com.java24hours` 包中为 `NumberDivider` 创建一个新的 Java 文件，并将列表 14.3 的文本输入到源编辑器中。
 
 **列表 14.3** `NumberDivider.java` 的全文
 
@@ -3151,13 +3144,13 @@ try {
 
 如果你使用零作为参数，第 14 行将抛出 `ArithmeticException`。
 
-[图 14.3] 显示了成功运行的一些示例输出。
+图 14.3 显示了成功运行的一些示例输出。
 
 ![Image](img/14fig) **图 14.3**
 
-### 在异常发生后执行某些操作
+## 在异常发生后执行某些操作
 
-有时你希望在异常发生后做一些事情。你可以通过使用 `try`-`catch`-finally` 块来处理此，其形式如下：
+有时你希望在异常发生后做一些事情。你可以通过使用 `try`-`catch`-`finally` 块来处理此情况，其形式如下：
 
 点击此处查看代码图像
 
@@ -3173,11 +3166,11 @@ try {
 
 无论是否发生异常，`finally` 部分都会执行。
 
-### 读取和写入文件
+## 读取和写入文件
 
 当从文件读取数据时，异常可能通过几种方式发生：文件可能不存在、可能会发生错误等。
 
-到在本节的目前，你已经学习了如何处理异常。如果你想在处理异常后再次抛出它，可以使用 `throw` 语句后跟跟要抛出的异常对象。
+到目前为止，你已经学习了如何处理异常。如果你想在处理异常后再次抛出它，可以使用 `throw` 语句后跟要抛出的异常对象。
 
 以下代码在 `catch` 块中处理了 `NumberFormatException`，然后将其抛出：
 
@@ -3209,7 +3202,7 @@ try {
 }
 ```
 
-### 抛出异常
+## 抛出异常
 
 当你调用 Java 库的方法时，编译器经常会显示关于异常的消息。例如：
 
@@ -3221,19 +3214,13 @@ try {
 NetReader.java:14: unreported exception java.net.MalformedURLException; must be caught or declared
 ```
 
-每当你看到看到异常“必须捕获或声明”的错误时，这表明你正在尝试使用的方法抛出了该异常。任何调用这些方法的类（例如编写的应用程序）必须执行以下操作之一：
+每当你看到异常“必须捕获或声明”的错误时，这表明你正在尝试使用的方法抛出了该异常。任何调用这些方法的类（例如编写的应用程序）必须执行以下操作之一：
 
 ![Image](img/arrow.jpg) 使用 `try`-`catch` 块处理异常
 
 ![Image](img/arrow.jpg) 抛出异常
 
-![Image](img/arrow.jpg) 使用 `try`-`catch` 块处理异常
-
 `Exception` 是所有异常子类的父类。`catch` 语句将捕获该类以及在类层次结构中它的任何子类。
-
-
-
-
 
 当 `Database` 类正在执行任务时，如果信用卡发行机构的计算机对任何连接尝试都没有响应会发生什么？这种错误正是 `try`-`catch` 块设计用于处理的类型，它被用于 `Database` 内部处理连接错误。
 
@@ -3278,7 +3265,7 @@ public void loadURL(String address) throws MalformedURLException {
 点击此处查看代码图像
 
 ```java
-URL source = new URL("[http:www.java24hours.com](http://hwww.java24hours.com)");
+URL source = new URL("http:www.java24hours.com");
 ```
 
 字符串 `http:www.java24hours.com` 并不是一个有效的 URL，因为它缺少了一些标点符号：冒号后的两个斜杠字符（`//`）。
@@ -3293,23 +3280,26 @@ Java 程序中可能发生的某些异常不需要以任何方式处理。当编
 
 未检查异常都是 `java.lang` 包中 `RuntimeException` 的子类。未检查异常的一个例子是 `IndexOutOfBoundsException`，它表示用于访问数组、字符串或数组列表的索引不在其范围内。如果一个数组有五个元素，而你尝试读取第 10 个元素，就会发生此异常。
 
-另一个是 `NullPointerException`，它发生在使用没有值的对象时。对象变量在赋值一个对象之前，其值为 `null`。某些方法在无法返回对象时也会返回 `null`。如果一个语句错误地假设一个对象有值，就会发生 `NullPointerException`。
 
-这两种错误都是程序员可以（也应该）在代码中防止的错误，而不是需要异常处理的内容。如果你编写了一个访问越界数组元素的程序，请修复执行该操作的代码并重新编译。如果你预期的对象有值但它等于 `null`，请在使用对象之前通过 `if` 条件对这种情况进行检查。
 
-Java 中未检查异常的原理是：它们要么可以通过编写良好的代码来防止，要么发生得太频繁，以至于一直捕获它们会使程序变得异常复杂。在调用对象方法的每条语句中，都可能发生 `NullPointerException`。
+另一个是`NullPointerException`，它发生在使用没有值的对象时。对象变量在赋值一个对象之前，其值为`null`。某些方法在无法返回对象时也会返回`null`。如果一个语句错误地假设一个对象有值，就会发生`NullPointerException`。
 
-当然，仅仅因为异常可以被忽略并不意味着它应该被忽略。你仍然可以选择对未检查异常使用 `try`、`catch` 和 `throws`。
+这两种错误都是程序员可以（也应该）在代码中防止的错误，而不是需要异常处理的内容。如果你编写了一个访问越界数组元素的程序，请修复执行该操作的代码并重新编译。如果你预期的对象有值但它等于`null`，请在使用对象之前通过`if`条件对这种情况进行检查。
+
+Java 中未检查异常的原理是：它们要么可以通过编写良好的代码来防止，要么发生得太频繁，以至于一直捕获它们会使程序变得异常复杂。在调用对象方法的每条语句中，都可能发生`NullPointerException`。
+
+当然，仅仅因为异常可以被忽略并不意味着它应该被忽略。你仍然可以选择对未检查异常使用`try`、`catch`和`throws`。
 
 ## 抛出和捕获异常
 
 在本小时的最后一个项目中，你创建一个类，使用异常来告诉另一个类已发生的错误。
 
-项目中的类有 `HomePage`（一个代表 Web 个人主页的类）和 `PageCatalog`（一个对这些页面的应用程序）。
+项目中的类有`HomePage`（一个代表 Web 个人主页的类）和`PageCatalog`（一个对这些页面的应用程序）。
 
-在一个名为 `HomePage` 的新文件中输入 `Listing 14.4` 的文本，位于 `java24hours` 包中。
+在一个名为`HomePage`的新文件中输入`Listing 14.4`的文本，位于`java24hours`包中。
 
 **列表 14.4 HomePage 的全文**
+
 点击此处查看代码图像
 
 ```java
@@ -3334,15 +3324,11 @@ public class HomePage {
 }
 ```
 
-你可以在其他程序中使用 `HomePage` 类。该类代表页面。它有三个变量：`address`，代表地址的 `URL` 对象；`owner`，所有者；`category`，描述页面的短说明。
+你可以在其他程序中使用`HomePage`类。该类代表页面。它有三个变量：`address`，代表地址的`URL`对象；`owner`，所有者；`category`，描述页面的短说明。
 
-和任何创建 `URL` 对象的类一样，`HomePage` 必须在 `try`-`catch` 块中处理 `MalformedURLException`，或者声明忽略这些错误。该类选择了后者，如列表 14.4 第 10–11 行和 17–18 行所示。通过在两个构造方法中使用 `throws`，`HomePage` 消除了以任何方式处理 `MalformedURLException` 的需求。
+和任何创建`URL`对象的类一样，`HomePage`必须在`try`-`catch`块中处理`MalformedURLException`，或者声明忽略这些错误。该类选择了后者，如列表 14.4 第 10–11 行和 17–18 行所示。通过在两个构造方法中使用`throws`，`HomePage`消除了以任何方式处理`MalformedURLException`的需求。
 
-要创建一个使用 `HomePage` 类的应用程序，返回 NetBeans 并创建一个名为 `PageCatalog` 的 Java 文件，其中包含 `Listing 14.5` 的文本。
-
-
-
-
+要创建一个使用`HomePage`类的应用程序，返回 NetBeans 并创建一个名为`PageCatalog`的 Java 文件，其中包含`Listing 14.5`的文本。
 
 ```java
 catalog[3] = new HomePage("Taegan Goddard",
@@ -3368,19 +3354,19 @@ for (int i = 0; i < catalog.length; i++) {
 
 `PageCatalog`应用程序的错误输出。
 
-`PageCatalog`应用程序创建了一个 `HomePage` 对象的数组，然后显示该数组的内容。每个 `HomePage` 对象创建时最多使用三个参数：
+`PageCatalog`应用程序创建了一个`HomePage`对象的数组，然后显示该数组的内容。每个`HomePage`对象创建时最多使用三个参数：
 
 ![Image](img/arrow.jpg) 页面所有者的名称
 
-![Image](img/arrow.jpg) 页面的地址（作为 `String` 类型，而非 `URL`）
+![Image](img/arrow.jpg) 页面的地址（作为`String`类型，而非`URL`）
 
 ![Image](img/arrow.jpg) 页面的类别
 
 第三个参数是可选的，并且在第 17–18 行中未使用。
 
-`HomePage`类的构造函数在接收到无法转换为有效 `URL` 对象的字符串时会抛出 `MalformedURLException` 错误。这些异常在 `PageCatalog`应用程序中通过 `try`-`catch` 块进行处理。
+`HomePage`类的构造函数在接收到无法转换为有效`URL`对象的字符串时会抛出`MalformedURLException`错误。这些异常在`PageCatalog`应用程序中通过`try`-`catch`块进行处理。
 
-要修正导致“no protocol”错误的问题，请编辑第 18 行，使字符串以 `http://` 文字开头，就像第 9–16 行中的其他网络地址一样。当你再次运行程序时，你会看到如图 14.5 所示的输出。
+要修正导致“no protocol”错误的问题，请编辑第 18 行，使字符串以`http://`文字开头，就像第 9–16 行中的其他网络地址一样。当你再次运行程序时，你会看到如图 14.5 所示的输出。
 
 ![Image](img/14fig05.jpg)
 
@@ -3398,7 +3384,7 @@ for (int i = 0; i < catalog.length; i++) {
 
 ![Image](img/arrow.jpg) 忽略异常，交给另一个类或 Java 虚拟机来处理。
 
-![Image](img/arrow.jpg) 在同一个 `try`-`catch` 块中捕获几个不同的异常。
+![Image](img/arrow.jpg) 在同一个`try`-`catch`块中捕获几个不同的异常。
 
 ![Image](img/arrow.jpg) 抛出自己的异常
 
@@ -3410,13 +3396,13 @@ for (int i = 0; i < catalog.length; i++) {
 
 **问：可以创建你自己的异常吗？**
 
-**答：** 这不仅是可能的，而且是一个非常好的主意。为可能出现的问题自定义异常可以使你的类更加健壮。你可以通过将自定义异常变为现有异常（例如所有异常的父类 `Exception`）的子类来轻松创建它们。在 `Exception` 的子类中，你可能想要重写两个构造函数：无参数的 `Exception()` 和带有 `String` 参数的 `Exception()`。在后者中，该字符串应该是描述已发生错误的消息。
+**答：** 这不仅是可能的，而且是一个非常好的主意。为可能出现的问题自定义异常可以使你的类更加健壮。你可以通过将自定义异常变为现有异常（例如所有异常的父类`Exception`）的子类来轻松创建它们。在`Exception`的子类中，你可能想要重写两个构造函数：无参数的`Exception()`和带有`String`参数的`Exception()`。在后者中，该字符串应该是描述已发生错误的消息。
 
 **问：为什么这一小时除了异常之外，没有涵盖如何抛出和捕捉错误？**
 
-**答：** Java 将问题分为 `Errors`（错误）和 `Exceptions`（异常），因为它们的严重程度不同。异常的程度较轻，因此它们应该在程序中使用 `try`-`catch` 或在方法声明中使用 `throws` 来处理。相反，错误更为严重，无法在程序中得到妥善处理。
+**答：** Java 将问题分为`Errors`（错误）和`Exceptions`（异常），因为它们的严重程度不同。异常的程度较轻，因此它们应该在程序中使用`try`-`catch`或在方法声明中使用`throws`来处理。相反，错误更为严重，无法在程序中得到妥善处理。
 
-这些错误的两个例子是栈溢出（stack overflows）和内存溢出（out-of-memory errors）。这些可能导致 `JVM` 崩溃，而且你无法在 `JVM` 运行时修复它们。
+这些错误的两个例子是栈溢出（stack overflows）和内存溢出（out-of-memory errors）。这些可能导致`JVM`崩溃，而且你无法在`JVM`运行时修复它们。
 
 **问：仍在报纸连连连漫画是哪一个？**
 
@@ -3428,7 +3414,7 @@ Dirks 是一个移居美国的德国移民，受他家乡的一个儿童故事�
 
 尽管这一小时充满了错误，但看看你是否能在不犯任何错误的情况下回答以下问题。
 
-**1. 一个 `catch` 语句可以处理多少个异常？**
+**1. 一个`catch`语句可以处理多少个异常？**
 
 A. 仅一个。
 
@@ -3436,11 +3422,11 @@ B. 几个不同的异常。
 
 C. 此答案留空。
 
-**2. `finally` 部分中的语句在什么时候运行？**
+**2. `finally`部分中的语句在什么时候运行？**
 
-A. 在 `try`-`catch` 块因异常而结束后执行
+A. 在`try`-`catch`块因异常而结束后执行
 
-B. 在 `try`-`catch` 块在没有异常的情况下结束后执行
+B. 在`try`-`catch`块在没有异常的情况下结束后执行
 
 C. A 和 B 都是
 
@@ -3454,9 +3440,9 @@ C. 引入替补
 
 #### 答案
 
-**1.** `catch` 语句中的 `Exception` 对象可以处理其自身类及其所有父类的异常。
+**1.** `catch`语句中的`Exception`对象可以处理其自身类及其所有父类的异常。
 
-**2.** `finally` 部分的语句或语句总会在 `try`-`catch` 块之后执行，无论是否发生了异常。
+**2.** `finally`部分的语句或语句总会在`try`-`catch`块之后执行，无论是否发生了异常。
 
 **3.** 每个答案都是正确的，但 A 比其他更准确。
 
@@ -3464,31 +3450,29 @@ C. 引入替补
 
 为了看看你是否是一个优秀的 Java 程序员，尝试在完成以下任务时尽可能少犯错误：
 
-- 修改 `NumberDivider` 应用程序，使其抛出它捕获的所有异常，并运行程序查看发生了什么。
-- 创建一个 `Multiplier` 应用程序，接收三个数字作为命令行参数，并对非数字参数抛出异常。
+- 修改`NumberDivider`应用程序，使其抛出它捕获的所有异常，并运行程序查看发生了什么。
 
-
-
+- 创建一个`Multiplier`应用程序，接收三个数字作为命令行参数，并对非数字参数抛出异常。
 
 线程（Threads）是一种组织程序的方式，使其能够同时执行多件事。每个必须同时发生的任务都应该放置在自己的线程中，这通常通过将每个任务实现为一个独立的类完成。
 
-线程由 `Thread` 类和 `Runnable` 接口表示，它们都属于 `java.lang` 类包。由于它们属于这个包，因此你不需要在程序中使用 `import` 语句来引用它们。
+线程由`Thread`类和`Runnable`接口表示，它们都属于`java.lang`类包。由于它们属于这个包，因此你不需要在程序中使用`import`语句来引用它们。
 
-`Thread` 类最简单的用法之一是用来减慢程序执行某些操作的速度。
+`Thread`类最简单的用法之一是用来减慢程序执行某些操作的速度。
 
 ## 减慢程序运行
 
-`Thread` 类有一个 `sleep()` 方法，你可以在任何需要停止运行一段时间的程序中调用它。你经常在带有动画的程序中看到这种技术，因为它可以防止图像显示的速度超过 Java 虚拟机的处理能力。
+`Thread`类有一个`sleep()`方法，你可以在任何需要停止运行一段时间的程序中调用它。你经常在带有动画的程序中看到这种技术，因为它可以防止图像显示的速度超过 Java 虚拟机的处理能力。
 
-要使用 `sleep()` 方法，请调用 `Thread.sleep()` 并传入要暂停的毫秒数，如下句所示：
+要使用`sleep()`方法，请调用`Thread.sleep()`并传入要暂停的毫秒数，如下句所示：
 
 ```java
 Thread.sleep(5000);
 ```
 
-上述语句会导致 JVM 在执行任何其他操作之前暂停五秒钟（5,000 毫秒）。如果由于某种原因 JVM 无法暂停那么久，`sleep()` 方法将抛出一个 `InterruptedException`。
+上述语句会导致 JVM 在执行任何其他操作之前暂停五秒钟（5,000 毫秒）。如果由于某种原因 JVM 无法暂停那么久，`sleep()`方法将抛出一个`InterruptedException`。
 
-因为可能会抛出此异常，当你使用 `sleep()` 方法时必须以某种方式处理它。此一种方法是将 `Thread.sleep()` 语句放在 `try-catch` 块中：
+因为可能会抛出此异常，当你使用`sleep()`方法时必须以某种方式处理它。此一种方法是将`Thread.sleep()`语句放在`try-catch`块中：
 
 ```java
 try {
@@ -3508,10 +3492,11 @@ try {
 
 将任务放在自己的线程中的两种方法包括：
 
-1. 将任务放在实现 `Runnable` 接口的类中。
-2. 将任务放在作为 `Thread` 子类的类中。
+1. 将任务放在实现`Runnable`接口的类中。
 
-为了支持 `Runnable` 接口，在创建类时使用了 `implements` 关键字，如下例所示：
+2. 将任务放在作为`Thread`子类的类中。
+
+为了支持`Runnable`接口，在创建类时使用了`implements`关键字，如下例所示：
 
 ```java
 public class LoadStocks implements Runnable {
@@ -3521,7 +3506,7 @@ public class LoadStocks implements Runnable {
 
 当类实现一个接口时，表示该类除了自身的方法外还包含一些额外的行为。
 
-实现 `Runnable` 接口的类必须包含 `run()` 方法，其结构如下：
+实现`Runnable`接口的类必须包含`run()`方法，其结构如下：
 
 ```java
 public void run() {
@@ -3529,16 +3514,17 @@ public void run() {
 }
 ```
 
-`run()` 方法应该处理线程创建时要完成的任务。在股票市场的示例中，`run()` 方法可以包含从磁盘加载数据并根据这些数据编译统计数据的语句。
+`run()`方法应该处理线程创建时要完成的任务。在股票市场的示例中，`run()`方法可以包含从磁盘加载数据并根据这些数据编译统计数据的语句。
 
-当运行一个线程应用程序时，其 `run()` 方法中的语句不会自动执行。在 Java 中可以启动和停止线程，但在你完成以下两件事之前，线程不会开始运行：
+当运行一个线程应用程序时，其`run()`方法中的语句不会自动执行。在 Java 中可以启动和停止线程，但在你完成以下两件事之前，线程不会开始运行：
 
-1. 通过调用 `Thread` 构造函数创建线程类的对象。
-2. 通过调用其 `start()` 方法启动线程。
+1. 通过调用`Thread`构造函数创建线程类的对象。
 
-`Thread` 构造函数接受一个参数：包含线程 `run()` 方法的对象。通常你使用 `this` 关键字作为参数，这表示当前类包含了 `run()` 方法。
+2. 通过调用其`start()`方法启动线程。
 
-列表 15.1 包含一个寻找前一百个质数的 Java 应用程序，将其存储在 `StringBuffer` 中。当找到所有质数后，将显示它们。在 NetBeans 中，在 `com.java24hours` 包中创建一个名为 `PrimeFinder` 的新 Java 文件，将列表中的文本输入文件中，并且——等等——不要忘记保存。
+`Thread`构造函数接受一个参数：包含线程`run()`方法的对象。通常你使用`this`关键字作为参数，这表示当前类包含了`run()`方法。
+
+列表 15.1 包含一个寻找前一百个质数的 Java 应用程序，将其存储在`StringBuffer`中。当找到所有质数后，将显示它们。在 NetBeans 中，在`com.java24hours`包中创建一个名为`PrimeFinder`的新 Java 文件，将列表中的文本输入文件中，并且——等等——不要忘记保存。
 
 **列表 15.1 PrimeFinder.java 的全文**
 
@@ -3604,18 +3590,17 @@ public void run() {
 59: }
 ```
 
-寻找一百万质数是一项耗时任务，因此该工作非常适合放在自己的线程中。当线程在后台工作时，PrimeFinder 应用程序显示了经过了多少秒。输出的开头如图 15.1](#ch15.xhtml_ch15fig1）所示。
+
+
+寻找一百万质数是一项耗时任务，因此该工作非常适合放在自己的线程中。当线程在后台工作时，`PrimeFinder` 应用程序显示了经过了多少秒。输出的开头如图 15.1](#ch15.xhtml_ch15fig1）所示。
 
 **图 15.1 PrimeFinder 应用程序的输出。**
 
 应用程序中的大多数语句用于寻找质数。以下语句用于在此程序实现线程：
 
-- 第 3 行：PrimeFinder 类实现了 `Runnable` 接口。
+- 第 3 行：`PrimeFinder` 类实现了 `Runnable` 接口。
 - 第 4 行：创建一个名为 `go` 的 `Thread` 对象变量但尚未赋值。
 - 第 22-25 行：如果 `go` 对象变量值为 `null`，表示线程尚未创建，则创建一个新的 `Thread` 对象并存储在变量中。通过调用线程的 `start()` 方法启动线程。
-
-
-
 
 ![Image](img/arrow.jpg) 第 28–44 行——`run()` 方法寻找一个从 2 开始的质数序列，通过调用其 `append()` 方法将每个质数存储在 `primes` 字符串缓冲区中。
 
@@ -3626,8 +3611,6 @@ new PrimeFinder();
 ```
 
 通常情况下，你会期望看到该对象被赋值给一个变量，如下：
-
-点击此处查看代码图像
 
 ```java
 PrimeFinder frame = new PrimeFinder();
@@ -3663,8 +3646,6 @@ PrimeFinder frame = new PrimeFinder();
 
 在你使用 `import` 使某些类可用后，就可以准备好以下语句开始应用程序：
 
-点击此处查看代码图像
-
 ```java
 public class LinkRotator extends JFrame
     implements Runnable, ActionListener {
@@ -3676,8 +3657,6 @@ public class LinkRotator extends JFrame
 
 在 `LinkRotator` 中要做的第一件事是创建类的变量和对象。创建一个名为 `pageTitle` 的六元素 `String` 对象数组，和一个名为 `pageLink` 的六元素 `URI` 对象数组：
 
-点击此处查看代码图像
-
 ```java
 String[] pageTitle = new String[6];
 URI[] pageLink = new URI[6];
@@ -3686,8 +3665,6 @@ URI[] pageLink = new URI[6];
 `pageTitle` 数组存储显示的六个网站的标题。`URI` 对象类存储网站地址的值。`URI` 拥有跟踪网页地址所需的所有行为和属性。
 
 最后要创建三个三个是一个整数变量、一个 `Thread` 对象和一个用户界面标签：
-
-点击此处查看代码图像
 
 ```java
 int current = 0;
@@ -3700,8 +3677,6 @@ JLabel siteLabel = new JLabel();
 ### 构造函数
 
 程序的构造函数在程序运行时会自动执行。该方法被用于给数组 `pageTitle` 和 `pageLink` 赋值。它还用于创建一个出现在用户界面上的可点击按钮。该方法包含以下语句：
-
-点击此处查看代码图像
 
 ```java
 pageTitle = new String[] {
@@ -3731,8 +3706,6 @@ pageLink[5] = getURI("http://workbench.cadenhead.org");
 
 `getURI(String)` 方法接收网页地址作为参数，返回该地址的 `URI` 对象。如果字符串不是有效地址，它将返回 `null`：
 
-点击此处查看代码图像
-
 ```java
 URI getURI(String urlText) {
     URI pageURI = null;
@@ -3753,8 +3726,6 @@ URI getURI(String urlText) {
 
 `start()` 方法作为构造函数的最后一个语句被调用。这里是该方法：
 
-点击此处查看代码图像
-
 ```java
 public void start() {
     if (runner == null) {
@@ -3766,10 +3737,6 @@ public void start() {
 
 如果 `runner` 尚未启动，则该方法将启动它。
 
-
-
-
-
 语句 `runner = new Thread(this)` 创建了一个带有一个参数的 `Thread` 对象：该参数是 `this` 关键字。`this` 关键字指向程序本身，将其指定为在线程中运行的类。
 
 调用 `runner.start()` 会导致线程开始运行。当线程开始时，该线程的 `run()` 方法会被调用。由于 `runner` 线程是 `LinkRotator` 程序本身，因此调用的是应用程序的 `run()` 方法。
@@ -3777,8 +3744,6 @@ public void start() {
 ## 运行线程
 
 `run()` 方法是线程执行主要工作的地方。在 `LinkRotator` 程序中，以下代表 `run()` 方法：
-
-点击此处代码图片
 
 ```java
 public void run() {
@@ -3813,8 +3778,6 @@ public void run() {
 
 以下是 `LinkRotator` 的 `actionPerformed()` 方法：
 
-点击此处代码图片
-
 ```java
 public void actionPerformed(ActionEvent event) {
     Desktop desktop = Desktop.getDesktop();
@@ -3842,7 +3805,7 @@ public void actionPerformed(ActionEvent event) {
 
 **列表 15.2** LinkRotator.java 的**全文**。
 
-点击此处代码图片
+
 
 ```java
 1: package com.java24hours;
@@ -3863,7 +3826,7 @@ public void actionPerformed(ActionEvent event) {
 16:   JLabel siteLabel = new JLabel();
 17:
 18:   public LinkRotator() {
-19:     setDefaultCloseOperation(JFrame.EXIT_CLOSE);
+19:     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 20:     setSize(300, 100);
 21:     FlowLayout flo = new FlowLayout();
 22:     setLayout(flo);
@@ -3943,27 +3906,16 @@ public void actionPerformed(ActionEvent event) {
 96: }
 ```
 
+# 第 16 小时：使用内部类与闭包
 
+## 本小时的任务列表
 
-
-
-# 第 16 小时
-
-使用内部类与闭包
-
-### 本小时的任务列表：
-
-![Image](img/arrow.jpg) 为对象添加一个内部类。
-
-![Image](img/arrow.jpg) 探索为什么内部类很有用。
-
-![Image](img/arrow.jpg) 创建一个匿名内部类。
-
-![Image](img/arrow.jpg) 在接口上使用适配器类。
-
-![Image](img/arrow.jpg) 编写一个 lambda 表达式。
-
-![Image](img/arrow.jpg) 用 lambda 表达式替换匿名内部类。
+- ![Image](img/arrow.jpg) 为对象添加一个内部类。
+- ![Image](img/arrow.jpg) 探索为什么内部类很有用。
+- ![Image](img/arrow.jpg) 创建一个匿名内部类。
+- ![Image](img/arrow.jpg) 在接口上使用适配器类。
+- ![Image](img/arrow.jpg) 编写一个 lambda 表达式。
+- ![Image](img/arrow.jpg) 用 lambda 表达式替换匿名内部类。
 
 Java 编程语言在 1995 年发布时，其范围有限且易于掌握。当时 Java 类库中大约只有 250 个类。该语言的设计初衷主要是为了能够在浏览器内部运行一种称为 applet 的交互式程序。由于当时还没有其他技术可以实现这一功能，Java 引起了巨大的轰动，并迅速被成千上万的程序员所接受。
 
@@ -3975,14 +3927,11 @@ Java 编程语言在 1995 年发布时，其范围有限且易于掌握。当时
 
 在本小时中，你将在学习 lambda 表达式之前，先涵盖使用它们的前提的两个语言方面：内部类和匿名内部类。
 
-### 内部类
+## 内部类
 
 当你在 Java 中创建一个类时，你定义了该类的属性和行为。属性是存储数据的类变量和实例变量；行为是使用这些数据执行任务的方法。
 
 类还可以包含同时由属性和行为的内容：内部类。
-
-
-
 
 内部类是包含在外部类中的辅助类。你可能会奇怪为什么它们是必要的，因为根据需要创建任意数量的新类来编写程序是很容易的。如果你正在编写一个 `CheckBook` 程序，需要为一个人书写的每张支票创建一个对象，你就会创建一个 `Check` 类。如果程序支持每月的定期自动扣款，就添加一个 `Autopayment` 类。
 
@@ -4029,11 +3978,11 @@ Simple.InnerSimple inner = program.new InnerSimple();
 
 类名包含了外部类的名称、一个点（`.`）字符以及内部类的名称。在前面的语句中，`Simple.InnerSimple` 就是类名。
 
-本小时的项目是重写 第 14 小时 中的应用程序“程序中的错误处理”。该小时的 `PageCatalog` 应用程序需要一个名为 `HomePage` 的辅助类。列表 16.1 中的 `Catalog` 程序重写了该项目，用内部类替换了那个独立的类。
+本小时的项目是重写第 14 小时中的应用程序“程序中的错误处理”。该小时的 `PageCatalog` 应用程序需要一个名为 `HomePage` 的辅助类。列表 16.1 中的 `Catalog` 程序重写了该项目，用内部类替换了那个独立的类。
 
-在 `com.java24hours` 包中创建一个名为 `Catalog` 的新 Java 文件；然后用 列表 16.1 中的源代码填充它。
+在 `com.java24hours` 包中创建一个名为 `Catalog` 的新 Java 文件；然后用列表 16.1 中的源代码填充它。
 
-**列表 16.1 Catalog.java 的全文。**
+**列表 16.1 `Catalog.java` 的全文**
 
 点击此处查看代码图片
 
@@ -4100,10 +4049,9 @@ Simple.InnerSimple inner = program.new InnerSimple();
 
 **图 16.1**
 
-Catalog 的输出。
+`Catalog` 的输出。
 
-
-
+## 匿名内部类
 
 通过匿名内部类和 `java.awt.event` 包中的 `KeyAdapter` 类，有一种更好的方法来创建监听器并将其添加到图形用户界面中。
 
@@ -4154,9 +4102,11 @@ keyText.addKeyListener(new KeyAdapter() {
 
 在 NetBeans 中，在 `com.java24hours` 包中创建一个名为 `KeyViewer` 的新 Java 文件。将列表 16.2 中的文本输入文件中，并在完成后保存。
 
-**列表 16.2 KeyViewer.java 的**全文**
+**列表 16.2 `KeyViewer.java` 的全文**
 
 点击此处查看代码图像
+
+
 
 ```java
 1: package com.java24hours;
@@ -4200,7 +4150,7 @@ keyText.addKeyListener(new KeyAdapter() {
 
 **图 16.2**
 
-使用 KeyViewer 应用程序监控键盘输入。
+使用 `KeyViewer` 应用程序监控键盘输入。
 
 匿名内部类不能定义构造函数，因此它们比非匿名内部类局限。它们是语言的一项复杂特性，在检查程序源码时较难理解，但它们可以使程序更加简洁。丰富的 Java 程序员经常使用它们。
 
@@ -4282,12 +4232,9 @@ ActionListener listener = (act) -> {
 };
 ```
 
-
-
-
 在 NetBeans 中于 `com.java24hours` 包下创建一个名为 `ColorFrame` 的新程序。将列表 16.3 中的文本输入文件，并在完成后保存。
 
-### 列表 16.3：ColorFrame.java 的完整代码
+### 列表 16.3：`ColorFrame.java` 的完整代码
 
 点击此处查看代码图像
 
@@ -4352,7 +4299,7 @@ ActionListener listener = (act) -> {
 
 布局面板的 `setBackground(Color)` 方法会将框架的背景色更改为该颜色。三个按钮的颜色保持不变。现在我们来看列表 16.4 中的 `NewColorFrame` 应用程序。在 NetBeans 中于 `com.java24hours` 包下创建一个名为 `NewColorFrame` 的新程序。将文本 16.4 输入文件，并在完成后保存。
 
-### 列表 16.4：NewColorFrame.java 的完整代码
+### 列表 16.4：`NewColorFrame.java` 的完整代码
 
 点击此处查看代码图像
 
@@ -4423,37 +4370,41 @@ Lambda 表达式的外表非常简单，只需要一个箭头运算符 `->` 即�
 
 #### 问答
 
-**Q:** 匿名内部类很很难理解。我必须在程序中使用它们吗？
+**Q：** 匿名内部类很很难理解。我必须在程序中使用它们吗？
 
-**A:** 不需要。和 Java 的其他复杂功能一样，如果你可以通过其他方式完成任务，就不需要使用它们。但你仍然应该学习它们，因为你会在 Java 代码中遇到它们。当你查看经验丰富的程序员编写的 Java 程序时，经常发现内部类和匿名内部类。所以，即使你还没有准备好自己创建它们，了解它们以及如何运作也是有意义的。
+**A：** 不需要。和 Java 的其他复杂功能一样，如果你可以通过其他方式完成任务，就不需要使用它们。但你仍然应该学习它们，因为你会在 Java 代码中遇到它们。当你查看经验丰富的程序员编写的 Java 程序时，经常发现内部类和匿名内部类。所以，即使你还没有准备好自己创建它们，了解它们以及如何运作也是有意义的。
 
-**Q:** 哈菲尔和麦科伊家族还在斗争吗？
+**Q：** 哈菲尔和麦科伊家族还在斗争吗？
 
-**A:** 在这场著名的 35 年冲突最后一次伤亡发生 126 年后，西弗吉尼亚州和肯基州的这两个家族的关系良好。1979 年，哈菲尔和麦科伊一起参加了电视游戏节目《家庭对抗》（Family Feud），并持续了一周。一只猪被留在舞台上并颁给了获胜的家庭。2003 年，这两个家族在肯塔基州的派克签署了一份正式的和平协议。
+**A：** 在这场著名的 35 年冲突最后一次伤亡发生 126 年后，西弗吉尼亚州和肯基州的这两个家族的关系良好。1979 年，哈菲尔和麦科伊一起参加了电视游戏节目《家庭对抗》（Family Feud），并持续了一周。一只猪被留在舞台上并颁给了获胜的家庭。2003 年，这两个家族在肯塔基州的派克签署了一份正式的和平协议。
 
 ### 测验
-
-
 
 为了判断你是否已经掌握了本小时的知识并可以上台回答，请回答以下关于内部类、匿名内部类和 lambda 表达式的问题。
 
 1. **什么使得某些内部类是匿的？**
 
-A. 它们实现了一个接口。
-B. 它们没有被命名。
-C. 两者都是。
+   A. 它们实现了一个接口。
+
+   B. 它们没有被命名。
+
+   C. 两者都是。
 
 2. **仅包含一个方法的接口另一个名称是什么？**
 
-A. 抽象接口
-B. 类
-C. 函数式接口
+   A. 抽象接口
+
+   B. 类
+
+   C. 函数式接口
 
 3. **lambda 表达式猜测方法参数的类称作为什么？**
 
-A. 目标类型推 (Target typing)
-B. 类型转换
-C. 类推断
+   A. 目标类型推（Target typing）
+
+   B. 类型转换
+
+   C. 类推断
 
 #### 答案
 
@@ -4466,6 +4417,8 @@ C. 类推断
 #### 活动
 
 为了体面地完成本小时的学习，请通过以下活动来运用这些知识：
+
+
 
 ![Image](img/arrow.jpg) 重写第 15 小时“创建线程程序”中的 `LinkRotator` 类，使用 lambda 表达式作为事件监听器。
 
@@ -4482,10 +4435,15 @@ C. 类推断
 ### 本小时的任务列表：
 
 ![Image](img/arrow.jpg) 创建按钮等用户界面组件。
+
 ![Image](img/arrow.jpg) 创建标签、文本字段和其他组件。
+
 ![Image](img/arrow.jpg) 将组件组合在一起。
+
 ![Image](img/arrow.jpg) 将组件放入其他组件内部。
+
 ![Image](img/arrow.jpg) 水平和和垂直滚动组件。
+
 ![Image](img/arrow.jpg) 打开和关闭窗口。
 
 在本小时内容会变得非常复杂。你将用 Java 创建第一个图形用户界面 (GUI)，这会搞出一个大乱子。
@@ -4505,8 +4463,11 @@ Java 通过 `Swing` 支持这种软件，`Swing` 是 Java 类的集合，代表�
 `Swing` 包含了编写使用 GUI 程序所需的所有内容。通过 Java 的用户界面类，你可以创建一个包含以下所有及更多内容的 GUI：
 
 ![Image](img/arrow.jpg) 按钮、复选框、标签和其他简单组件
+
 ![Image](img/arrow.jpg) 文本字段、滑块和其他更复杂的组件
+
 ![Image](img/arrow.jpg) 下拉菜单和弹出菜单
+
 ![Image](img/arrow.jpg) 窗口、帧、对话框、面板和 applet 窗口
 
 注意
@@ -4552,9 +4513,13 @@ public class MainFrame extends JFrame {
 该类创建了一个帧，但还没有完全设置它。在帧的构造函数中，创建帧时你必须做几件事：
 
 ![Image](img/arrow.jpg) 调用父类 `JFrame` 的构造函数。
+
 ![Image](img/arrow.jpg) 设置帧的标题。
+
 ![Image](img/arrow.jpg) 设置帧的大小。
+
 ![Image](img/arrow.jpg) 设置帧的外视图和感觉。
+
 ![Image](img/arrow.jpg) 定义用户关闭帧时发生什么。
 
 你还必须使帧可见，除非由于某些原因它在应用程序运行时不应显示。
@@ -4573,10 +4538,6 @@ super("Main Frame");
 
 这会将帧的标题（显示在顶部边缘标题栏中）设置为指定的字符串。在这个示例中，出现了文本“Main Frame”。
 
-
-
-
-
 如果你没有以这种方式设置标题，可以调用框架的 `setTitle(String)` 方法，并将标题作为参数：
 
 ```java
@@ -4801,9 +4762,11 @@ setSize(350, 125);
 pack();
 ```
 
-`pack()` 方法将框架设置得足够大，以容纳框架内每个组件的优选大小（但不会更大）。每个界面组件都有一个优选大小，尽管根据组件在界面中的排列方式，这种大小有时会被会被忽略。在调用 `pack()` 之前，你不需要显式地设置框架的大小——该方法会在框架显示之前将其设置为合适的大小。
 
-每个框架在显示时，标题栏上都有一个按钮，可用于关闭框架。在 Windows 系统上，该按钮显示为框架右上角的 X。要定义点击此按钮时发生什么，请调用框架的 `setDefaultCloseOperation(int)` 方法，并将四个 `JFrame` 类变量之一作为参数：
+
+`pack()` 方法将框架设置得足够大，以容纳框架内每个组件的优选大小（但不会更大）。每个界面组件都有一个优选大小，尽管根据组件在界面中的排列方式，这种大小有时会被忽略。在调用 `pack()` 之前，你不需要显式地设置框架的大小——该方法会在框架显示之前将其设置为合适的大小。
+
+每个框架在显示时，标题栏上都有一个按钮，可用于关闭框架。在 Windows 系统上，该按钮显示为框架右上角的 X。要定义点击此按钮时发生什么，请调用框架的 `setDefaultCloseOperation(int)` 方法，并将四个 `JFrame` 类变量之一作为参数。
 
 ### 按钮
 
@@ -4819,7 +4782,7 @@ JButton okButton = new JButton("OK");
 add(okButton);
 ```
 
-当你将组件添加到容器时，你不需要指定组件应该所在的位置。组件的排列由*布局管理器*（layout manager）决定。这些管理器中最简单的是 `FlowLayout` 类，它是 `java.awt` 的一部分。要让容器使用特定的布局管理器，你必须先创建该布局管理器的对象。
+当你将组件添加到容器时，你不需要指定组件应该所在的位置。组件的排列由布局管理器（layout manager）决定。这些管理器中最简单的是 `FlowLayout` 类，它是 `java.awt` 的一部分。要让容器使用特定的布局管理器，你必须先创建该布局管理器的对象：
 
 ```java
 FlowLayout flo = new FlowLayout();
@@ -4831,9 +4794,9 @@ FlowLayout flo = new FlowLayout();
 setLayout(flo);
 ```
 
-此语句将 `flo` 对象指定为布局管理器。你创建的下一个应用程序（`com.java24hours` 包中名为 `Playback` 的类）是一个带有三个按钮的的 Java 应用程序。将列表 17.2 中的文本输入新的 Java 文件并保存该文件。
+此语句将 `flo` 对象指定为布局管理器。你创建的下一个应用程序（`com.java24hours` 包中名为 `Playback` 的类）是一个带有三个按钮的 Java 应用程序。将列表 17.2 中的文本输入新的 Java 文件并保存该文件。
 
-**列表 17.2 Playback.java 的全文**
+**列表 17.2 `Playback.java` 的全文**
 
 点击此处查看代码图片
 
@@ -4853,10 +4816,6 @@ setLayout(flo);
 13:     }
 14: }
 ```
-
-
-
-
 
 ```java
 JButton stop = new JButton("Stop");
@@ -4896,7 +4855,7 @@ public static void main(String[] arguments) {
 
 **注意**
 
-由于在本节节中引入了许多不同的用户界面组件，这里没有列出用于创建每个图例的完整源代码。你可以在书籍网站 [www.java24hours.com](http://www.java24hours.com) 上的第 17 小节 页面找到每个程序的完整版本。
+由于在本节中引入了许多不同的用户界面组件，这里没有列出用于创建每个图例的完整源代码。你可以在书籍网站 [www.java24hours.com](http://www.java24hours.com) 上的第 17 小节页面找到每个程序的完整版本。
 
 ### 标签和文本字段（Labels and Text Fields）
 
@@ -4974,9 +4933,7 @@ add(jumboSize);
 JCheckBox jumboSize = new JCheckBox("Jumbo Size", true);
 ```
 
-你可以单独展示 `JCheckBox`，也可以将其作为一组的一部分。在复选复选框组中，一次只能有一个被勾选。要使一个 `JCheckBox` 对象成为组的一部分，你必须创建一个 `ButtonGroup` 对象。考虑以下内容：
-
-点击此处查看代码图像
+你可以单独展示 `JCheckBox`，也可以将其作为一组的一部分。在复选框组中，一次只能有一个被勾选。要使一个 `JCheckBox` 对象成为组的一部分，你必须创建一个 `ButtonGroup` 对象。考虑以下内容：
 
 ```java
 JCheckBox frogLegs = new JCheckBox("Frog Leg", true);
@@ -5007,8 +4964,6 @@ add(emuNuggets);
 
 要创建一个 `JComboBox` 对象，你必须在创建对象后添加每个选项，如下所示：
 
-点击此处查看代码图像
-
 ```java
 JComboBox profession = new JComboBox();
 FlowLayout flo = new FlowLayout();
@@ -5032,8 +4987,6 @@ add(profession);
 
 要启用 `JComboBox` 组件接收文本输入，你必须调用其 `setEditable(boolean)` 方法并传入参数 `true`：
 
-点击此处查看代码图像
-
 ```java
 profession.setEditable(true);
 ```
@@ -5044,8 +4997,6 @@ profession.setEditable(true);
 
 `JTextArea` 组件是一个允许用户输入多行文本的文本字段。你可以指定组件的宽度和高度。以下语句创建一个宽度为 40 个字符、高度为 8 行的 `JTextArea` 组件并将其添加到容器中：
 
-点击此处查看代码图像
-
 ```java
 JTextArea comments = new JTextArea(8, 40);
 FlowLayout flo = new FlowLayout();
@@ -5055,28 +5006,22 @@ add(comments);
 
 图 17.6 在框架中显示了此示例。
 
-
-
-
-
 你可以在 `JTextArea()` 构造函数中指定一个字符串显示在文本区域中，使用换行符 `\n` 将文本发送到下一行，如下所示：
 
-点击此处查看代码图像
-
-```
+```java
 JTextArea comments = new JTextArea("I should have been a pair\n"
 + "of ragged claws.", 10, 25);
 ```
 
-![Image](img/17fig06.jpg) 
+![Image](img/17fig06.jpg)
 
 **图 17.6**
 
 显示文本区域组件。
 
-文本区域有两个可以调的方法，用于指定用户在输入的文本超过行右侧边缘时组件的行为。调用 `setLineWrap(boolean)` 方法并传入参数 `true`，可以使文本换行到下一行：
+文本区域有两个可以调用的方法，用于指定用户在输入的文本超过行右侧边缘时组件的行为。调用 `setLineWrap(boolean)` 方法并传入参数 `true`，可以使文本换行到下一行：
 
-```
+```java
 comments.setLineWrap(true);
 ```
 
@@ -5092,29 +5037,22 @@ GUI 中的组件通常比显示它们的区域大。要让组件从组件的一�
 
 你可以使用以下构造函数创建滚动面板：
 
-![Image](img/arrow.jpg) `JScrollPane()`——创建一个在需要时显示水平和垂直滚动条的滚动面板。
-
-![Image](img/arrow.jpg) `JScrollPane(int, int)`——创建一个具有指定垂直滚动条和水平滚动条的滚动面板。
-
-![Image](img/arrow.jpg) `JScrollPane(Component)`——创建一个包含指定用户界面组件的滚动面板。
-
-![Image](img/arrow.jpg) `JScrollPane(Component, int, int)`——创建一个具有指定组件、垂直滚动条和水平滚动条的滚动面板。
+- `JScrollPane()`——创建一个在需要时显示水平和垂直滚动条的滚动面板。
+- `JScrollPane(int, int)`——创建一个具有指定垂直滚动条和水平滚动条的滚动面板。
+- `JScrollPane(Component)`——创建一个包含指定用户界面组件的滚动面板。
+- `JScrollPane(Component, int, int)`——创建一个具有指定组件、垂直滚动条和水平滚动条的滚动面板。
 
 这些构造函数的整数参数决定了滚动条在面板中的用法。使用以下类变量作为这些参数：
 
-![Image](img/arrow.jpg) `JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED` 或 `JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED`
-
-![Image](img/arrow.jpg) `JScrollPane.VERTICAL_SCROLLBAR_NEVER` 或 `JScrollPane.HORIZONTAL_SCROLLBAR_NEVER`
-
-![Image](img/arrow.jpg) `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS` 或 `JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS`
+- `JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED` 或 `JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED`
+- `JScrollPane.VERTICAL_SCROLLBAR_NEVER` 或 `JScrollPane.HORIZONTAL_SCROLLBAR_NEVER`
+- `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS` 或 `JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS`
 
 如果你创建了一个不包含组件的滚动面板，可以使用面板的 `add(Component)` 方法添加组件。在设置好滚动面板后，应该将它添加到容器中以替换原来的组件。
 
 以下是重写之前的示例，将文本区域放置在滚动面板中：
 
-点击此处查看代码图像
-
-```
+```java
 FlowLayout flo = new FlowLayout();
 setLayout(flo);
 JTextArea comments = new JTextArea(8, 40);
@@ -5140,16 +5078,14 @@ add(scroll);
 
 以下语句创建了一个 `JPanel` 对象并为它分配了一个布局管理器：
 
-点击此处查看代码图像
-
-```
+```java
 JPanel topRow = new JPanel();
 FlowLayout flo = new FlowLayout();
 topRow.setLayout(flo);
 add(topRow);
 ```
 
-在安排界面组件时经常会用到面板，正如你在第 18 节“布局用户界面”中所所示。
+在安排界面组件时经常会用到面板，正如你在第 18 节“布局用户界面”中所示。
 
 你通过调用它的 `add()` 方法向面板添加组件。你可以通过调用 `setLayout()` 方法直接为面板分配布局管理器。
 
@@ -5159,13 +5095,15 @@ add(topRow);
 
 ### 创建你自己的组件
 
+
+
 面向对象编程的一个优势是可以在不同项目之间重用类。对于下一个项目，你将创建一个特殊的面板组件，该组件可以在其他 Java 程序中重用。该组件 `FreeSpacePanel` 报告运行应用程序程序的计算机上的可用磁盘空间。该面板显示可用空间量、总空间以及空闲百分比。
 
 创建你自己的用户界面组件的第一步是决定从哪个现有组件进行继承。你的新组件将拥有其所有现有的属性和行为，除非你对其进行了修改或添加了新内容。
 
 `FreeSpacePanel` 组件是位于列表 17.3 中的 `JPanel` 的子类。将列表 17.3 中的文本输入到新的空 Java 文件并保存该文件。
 
-**列表 17.3** `FreeSpacePanel.java` 的完整文本
+## 列表 17.3 `FreeSpacePanel.java` 的完整文本
 
 点击此处查看代码图像
 
@@ -5222,9 +5160,6 @@ private final void setValue() {
 ```
 
 在方法声明中包含 `final` 关键字可以防止该方法在子类中重写。这对于 `FreeSpacePanel` 作为一个 GUI 组件是必要的。
-
-
-
 
 该面板在第 11–20 行的构造函数中创建。此处执行了以下操作：
 
@@ -5306,86 +5241,6 @@ percent = (int)(percent * 100) / (double)100;
 space.setText(freeSpace + " out of " + totalSpace + " (" + percent + "%)");
 ```
 
-面板在第 11–20 行的构造函数中创建。此处执行了以下操作：
-
-![Image](img/arrow.jpg) 第 12 行——`super()` 方法调用了 `JPanel` 类的构造函数，确保其被正确初始化。
-
-![Image](img/arrow.jpg) 第 13 行——创建新标签 `spaceLabel`（其文本为“Disk space: ”，且在第 8 行作为实例变量创建），通过调用 `add(Component)` 方法并将标签作为参数将其添加到面板中。
-
-![Image](img/arrow.jpg) 第 14 行——`space` 标签（在第 9 行创建的没有文本的实例变量）也被添加到面板中。
-
-![Image](img/arrow.jpg) 第 16 行——调用了 `setValue()` 方法，该方法设置了 `space` 标签的文本。
-
-第 16 行对 `setValue()` 的调用被封装在另一个 `try-catch` 块中，这与设置外观外观（look and feel）时使用的块类似。你将在第 18 小节中学习更多关于如何处理错误的知识，但这里是简明版（TLDR）：`try-catch` 使得处理 Java 程序部分可能发生的一个或多个错误成为可能。
-
-这是必要的，因为调用 `setValue()` 时，访问计算机文件系统以查看其包含剩余空间可能会发生错误。该错误在 Java 中有一个专门的类 `IOException`，代表输入/输出错误。
-
-`try` 块封装了可能导致错误的代码。`catch` 块在括号中标识错误类型，并指定了发生该错误时要执行的代码。
-
-如果在应用程序运行期间遇到此类错误，第 18 行会将 `space` 标签的文本设置为“Error”，以告知用户发生了问题。
-
-### 注意
-
-缩写“TLDR”是“too long; didn’t read”（太长了，没读）的含义。当某人在互联网上为不想阅读整篇文章的人对长篇文章提供极简短的摘要时，这个词就会出现。
-
-我希望这本书对你来说不是 TLDR。我们试图让它成为 JRLRWTANIRJP（长度恰好；读完全文后现在我是富裕的 Java 程序员了）。
-
-要让自定义组件执行一些有趣的操作，需要快速上手一下 Java 文件处理，该主题将在第 20 小节“读取和写入文件”中进行详细介绍。
-
-要确定计算机上剩余了多少磁盘空间，你需要 `java.nio.file` 包中的四个类，该包被用于访问计算机的文件系统。
-
-一个 `Path` 对象表示文件或文件夹的位置。`Paths` 类有一个 `get(String)` 方法，它可以将字符串转换为匹配该字符串的路径。当使用 `""`（空字符串）调用它时，它会返回运行 Java 应用程序的当前文件夹的路径：
-
-点击此处查看代码图片
-
-```
-Path current = Paths.get("");
-```
-
-磁盘的存储信息在 Java 中由 `FileStore` 对象表示，它是一个文件存储池。一旦你有了路径，就可以通过 `Files` 类中的一个方法获取该路径所在的文件存储。调用 `Files` 的 `getFileStore(Path)` 方法来检索该文件存储池：
-
-点击此处查看代码图片
-
-```
-FileStore store = Files.getFileStore(current);
-```
-
-有了这个池，你现在可以调用它的 `getTotalSpace()` 和 `getUsableSpace()` 方法来查找当前磁盘上有可用磁盘空间：
-
-点击此处查看代码图片
-
-```
-long totalSpace = store.getTotalSpace();
-long freeSpace = store.getUsableSpace();
-double percent = (double)freeSpace / (double)totalSpace * 100;
-```
-
-### 注意
-
-计算百分比的表达式包含许多对 `double` 的引用，这看起来可能很奇怪。第二次和第三次强制转换在表达式中使用之前将 `freeSpace` 和 `totalSpace` 变量转换为 `double` 值。这是为了防止表达式产生整数值而不是浮点数，这是必要的。Java 通过表达式中的类型来确定表达式结果的数据类型。一个 `long` 除以一个 `long` 再乘以整数 100 将产生一个 `long`，而不是预期的百分比。
-
-在最后语句中计算出的百分比可能是小数点后带有非常长数字数字，例如 64.8675309。
-
-以下表达式将 `double` 类型的百分比转换为最多两位小数：
-
-点击此处查看代码图片
-
-```
-percent = (int)(percent * 100) / (double)100;
-```
-
-表达式的前半部分将百分比乘以 100——将小数点向右移动两位——然后将其转换为整数，因此 64.8675309 变成了 6487。
-
-后半部分将此结果结果除以 100——将小数点向左移动两位——以恢复百分比的近似值。这使得 6486 变成 64.86。
-
-将百分比限制在两位小数后，标签的内容可以这样设置：
-
-点击此处查看代码图片
-
-```
-space.setText(freeSpace + " out of " + totalSpace + " (" + percent + "%)");
-```
-
 该应用程序在第 14 行创建一个 `FreeSpacePanel` 组件并在第 15 行将其添加到框架中。
 
 当你运行应用程序时，它应该类似于图 17.8，带有你自己计算机的值。
@@ -5396,7 +5251,7 @@ space.setText(freeSpace + " out of " + totalSpace + " (" + percent + "%)");
 
 显示自定义磁盘空间组件。
 
-### 总结
+## 总结
 
 用户已经习惯于为运行的程序提供点击式的视觉化环境。这种期望使得开发软件更具挑战性，但 Java 通过 Swing 将这些能力交给你，无论你使用什么种设置来运行 Java。
 
@@ -5404,29 +5259,25 @@ space.setText(freeSpace + " out of " + totalSpace + " (" + percent + "%)");
 
 在下一小时中，你将通过使用新的布局管理器学习更多关于 GUI 设计的知识，这些管理器可以比 `FlowLayout` 更有效地指定组件在容器内的布局。
 
-### 工作坊
+## 工作坊
 
-#### 问答
+### 问答
 
 **问：如果我不为容器分配布局管理器，组件将如何排列？**
 
+**答：** 在像面板（panel）这样的简单容器中，组件默认使用 `FlowLayout` 进行布局。每个组件的添加方式与英文页面上的单词显示方式相同：从左到右，当空间不足时换到下一行。框架（Frames）、窗口和应用程序（applets）使用了你在下一个小时学习的 `BorderLayout` 默认布局样式。
 
+**问：为什么有许多图形用户界面类的名称前面都带有一个“J”字，例如 `JFrame` 和 `JLabel`？**
 
-
-
-# A. 在像面板（panel）这样的简单容器中，组件默认使用 `FlowLayout` 进行布局。每个组件的添加方式与英文页面上的单词显示方式相同：从左到右，当空间不足时换到下一行。框架（Frames）、窗口和应用程序（applets）使用了你在下一个小时学习的 `BorderLayout` 默认布局样式。
-
-## Q. 为什么有许多图形用户界面类的名称前面都带有一个“J”字，例如 `JFrame` 和 `JLabel`？
-
-### A. 这些类是 `Swing` 框架的一部分，它是 Java 类库中对图形用户界面类的第二次尝试。抽象窗口工具包（AWT）是第一次尝试，它的类名较简单，例如 `Frame` 和 `Label`。
+**答：** 这些类是 `Swing` 框架的一部分，它是 Java 类库中对图形用户界面类的第二次尝试。抽象窗口工具包（AWT）是第一次尝试，它的类名较简单，例如 `Frame` 和 `Label`。
 
 `AWT` 类属于 `java.awt` 包及相关包，而 `Swing` 类属于 `javax.swing` 等包，因此它们可以具有相同的类名。使用以“J”开头的命名可以防止类之间发生混淆。
 
 `Swing` 类也称为 Java 基础类（JFC）。
 
-## Q. 我可以在哪里买到未裁剪的 1 美元钞票？
+**问：我可以在哪里买到未裁剪的 1 美元钞票？**
 
-### A. 美国印币发行局（Bureau of Engraving and Printing）在网站 [www.moneyfactorystore.gov](http://www.moneyfactorystore.gov) 销售真实的 1 美元、10 美元、20 美元和 50 美元钞票张。
+**答：** 美国印币发行局（Bureau of Engraving and Printing）在网站 [www.moneyfactorystore.gov](http://www.moneyfactorystore.gov) 销售真实的 1 美元、10 美元、20 美元和 50 美元钞票张。
 
 一张包含 25 张 1 美元的钞票售价 50.50 美元，16 张 10 美元售价 249 美元，16 张 20 美元售价 409 美元，16 张 50 美元售价 920 美元。由于这些是实际货币，如果考虑到钞票的面值，这些购买更便宜。你为 1 美元的额外付了 25.50 美元，10 美元的 89 美元，20 美元的 89 美元，以及 50 美元的 100 美元。
 
@@ -5441,19 +5292,27 @@ space.setText(freeSpace + " out of " + totalSpace + " (" + percent + "%)");
 **[1].** 哪个用户组件被用作容器来存放其他组件？
 
 A. TupperWare
+
 B. `JPanel`
+
 C. Choice
 
 **[2].** 在容器内必须首先执行哪项操作？
 
 A. 建立布局管理器
+
 B. 添加组件
+
+
+
 C. 无所谓
 
 **[3].** 哪个方法决定了组件在容器内的排列方式？
 
 A. `setLayout()`
+
 B. `setLayoutManager()`
+
 C. `setVisible()`
 
 ## Answers
@@ -5469,6 +5328,7 @@ C. `setVisible()`
 为了进一步接触 GUI 设计这一主题，请完成以下活动：
 
 - 修改 `SalutonFrame` 应用，使其在框架的主区域显示“Saluton!”而不是标题栏。
+
 - 增强 `FreePanel` 组件，每三个位置显示一个逗号。一种方法是使用 `StringBuilder` 对象、`String` 类的方法 `charAt()` 以及一个 `for` 循环来遍历字符串。
 
 要查看实现这些活动的 Java 程序，请访问书籍的网站 [www.java4hours.com](http://www.java4hours.com)。
@@ -5478,9 +5338,13 @@ C. `setVisible()`
 ### 本小时的任务：
 
 - 创建一个布局管理器。
+
 - 为容器分配布局管理器。
+
 - 使用面板来组织界面中的组件。
+
 - 处理不寻常的布局。
+
 - 为 Java 应用程序创建一个原型。
 
 当你开始为你的 Java 程序设计用户界面（GUIs）时，你面临的一个障碍是组件是可以移动的。每当容器尺寸发生变化（例如当用户调整框架大小时），它所包含的组件可能会重新排列以适应新的尺寸。
@@ -5494,7 +5358,9 @@ C. `setVisible()`
 在 Java 中，组件在容器内的位置取决于组件的大小、其他组件的大小以及容器的高度和宽度。按钮、文本字段和其他组件的布局可能会受到以下因素的影响：
 
 - 容器的大小
+
 - 其他组件的大小
+
 - 布局管理器
 
 有几种布局管理器可以使用来影响组件的显示方式。面板的默认管理器是 `java.awt` 包中的 `FlowLayout` 类，在上一个小时中使用过它。
@@ -5561,10 +5427,6 @@ public class Crisis extends JFrame {
 }
 ```
 
-
-
-
-
 `FlowLayout` 类使用容器的尺寸作为布局组件的唯一依据。调整应用程序窗口的大小，可以看到组件如何根据响应即时进行重新排列。将窗口宽度增加一倍，所有的 `JButton` 组件将显示在同一行上。将窗口缩窄到足够程度，它们将全部垂直堆叠。
 
 ### `GridLayout` 布局管理器
@@ -5574,8 +5436,6 @@ public class Crisis extends JFrame {
 `GridLayout` 在添加所有组件时，会将它们放置在网格的某个位置。组件从左到右添加，直到某一行填满，然后填充下一个网格最左侧的列。
 
 以下语句创建了一个容器并将其设置为使用两行三列的网格布局：
-
-点击此处查看代码图片
 
 ```
 GridLayout grid = new GridLayout(2, 3);
@@ -5599,8 +5459,6 @@ setLayout(grid);
 与 `GridLayout` 类类似，`BorderLayout` 将所有可用空间都分配给组件。放置在中间的组件将获得四个边界组件所需的所有空间，因此它通常是最大的。
 
 以下语句创建了一个使用边界布局的容器：
-
-点击此处查看代码图片
 
 ```
 BorderLayout crisisLayout = new BorderLayout();
@@ -5626,13 +5484,11 @@ add(saveButton, BorderLayout.CENTER);
 
 要使用此布局，请创建一个面板来存放组件，然后创建一个带有两个参数的布局管理器：
 
-![Image](img/arrow.jpg) 要在框框布局中组织的组件
+- 要在框框布局中组织的组件
 
-![Image](img/arrow.jpg) 用于垂直对齐的 `BoxLayout.Y_AXIS` 值和用于水平对齐的 `BoxLayout.X_AXIS` 值
+- 用于垂直对齐的 `BoxLayout.Y_AXIS` 值和用于水平对齐的 `BoxLayout.X_AXIS` 值
 
 这里是堆叠 `Crisis` 组件的代码：
-
-点击此处查看代码图片
 
 ```
 JPanel pane = new JPanel();
@@ -5662,8 +5518,6 @@ add(pane);
 
 以下语句创建了一个 `Insets` 对象：
 
-点击此处查看代码图片
-
 ```
 Insets around = new Insets(10, 6, 10, 3);
 ```
@@ -5671,8 +5525,6 @@ Insets around = new Insets(10, 6, 10, 3);
 `around` 对象表示一个容器边界，其顶部内部 10 像素，左侧内部 6 像素，底部内部 10 像素以及右侧内部 3 像素。
 
 要在容器中使用 `Insets` 对象，你必须重写容器的 `getInsets()` 方法。该方法没有参数并返回一个 `Insets` 对象，如下例所示：
-
-点击此处查看代码图片
 
 ```
 public Insets getInsets() {
@@ -5706,7 +5558,6 @@ public Insets getInsets() {
 **图 18.6**
 
 显示 `LottoMadness` 应用程序的 GUI。
-
 
 
 
@@ -5819,7 +5670,7 @@ public static void main(String[] arguments) {
 
 在行内部，使用了不同的布局管理器来确定组件的显示。第 1 行和第 3 行使用 `FlowLayout` 对象。程序的第 47–48 行展示了如何创建它们：
 
-```
+```java
 FlowLayout layout1 = new FlowLayout(FlowLayout.CENTER, 10, 10);
 ```
 
@@ -5848,15 +5699,11 @@ row1.add(personal);
 add(row1);
 ```
 
+## A. 在灰色字段上已使用 `setEditable()` 方法，使其无法被编辑。文本字段的默认行为是允许用户通过点击其边界内部并输入任何更改来改变文本字段的值。然而，某些字段的目的是显示信息，而不是接收用户的输入。`setEditable()` 方法可以防止用户更改他们不应该修改的字段。
 
+## Q. 在电影*《查理和巧克力工厂》*中，是否真的存在过一个名叫威利·旺卡的金奖票获得者，其结局由于惨烈到不适合在电影中呈现而消失了？
 
-
-
-# A. 在灰色字段上已使用 `setEditable()` 方法，使其无法被编辑。文本字段的默认行为是允许用户通过点击其边界内部并输入任何更改来改变文本字段的值。然而，某些字段的目的是显示信息，而不是接收用户的输入。`setEditable()` 方法可以防止用户更改他们不应该修改的字段。
-
-# Q. 在电影*《查理和巧克力工厂》*中，是否真的存在过一个名叫威利·旺卡的金奖票获得者，其结局由于惨烈到不适合在电影中呈现而消失了？
-
-# A. 米兰达·派克（Miranda Piker）的命运非常凄惨，以至于她从罗尔德·达尔的书《查理和巧克力工厂》的初稿中被删除了，这本书启发了 1971 年的电影及其 2005 年的重拍版。派克是一个自大的孩子，她认为孩子永远不应该玩，这样他们就可以一直上学。她的父亲是一位校长。
+## A. 米兰达·派克（Miranda Piker）的命运非常凄惨，以至于她从罗尔德·达尔的书《查理和巧克力工厂》的初稿中被删除了，这本书启发了 1971 年的电影及其 2005 年的重拍版。派克是一个自大的孩子，她认为孩子永远不应该玩，这样他们就可以一直上学。她的父亲是一位校长。
 
 派克和旺卡工厂的其它金奖票获得者被引向了“斑点粉”（Spotty Powder），这是一种糖制的调制剂，会导致食用者身上长出红斑，这样他们就可以假装生病旷课。派克和她的父亲非常愤怒，并决定摧毁制造这种粉的机器。
 
@@ -5865,27 +5712,35 @@ add(row1);
 奥姆帕人（Oompa-Loompas）用歌唱庆祝她的应得报应：“噢，米兰达·玛丽·派克，/谁会喜欢她呢，/一个如此古板又令人作呕的小鬼。/于是我们说，‘为什么不把她/放进斑点粉搅拌机里/那我们就一定比以前更喜欢她了。’/很快，这个如此恶毒的孩子/就会变得非常美味，/她的同学一定会明白/不再是说：‘米兰达！/噢，这个野兽！我们受不了她了！’/他们会说：‘噢，多好用，多棒！’”
 
 ### 测验
+
 要检查你的脑细胞布局是否正确，请通过回答以下问题来测试你的 Java 布局管理技能。
 
 **1.** 在将接口划分为不同的布局管理器时，通常使用哪种容器？
 
 **A.** `JWindow`
+
 **B.** `JPanel`
+
 **C.** `Container`
 
 **2.** 面板（panel）的默认布局管理器是什么？
 
 **A.** `FlowLayout`
+
 **B.** `GridLayout`
+
 **C.** 无默认值
 
 **3.** `BorderLayout` 命名源于哪里？
 
 **A.** 每个组件的边界
+
 **B.** 组件沿容器边界组织的方式
+
 **C.** Java 开发者纯粹的随性性
 
 #### 答案
+
 **1. B.** `JPanel`，它是最简单的容器。
 
 **2. A.** 面板使用流式布局（flow layout），但帧（frames）和窗口（windows）的默认布局管理器是边界布局（border layout）。
@@ -5893,6 +5748,7 @@ add(row1);
 **3. B.** 在将组件添加到容器时，你必须使用如 `BorderLayout.WEST` 和 `BorderLayout.EAST` 等方向变量来指定组件的边界位置。
 
 #### 活动
+
 如果你想继续下去（包括网格和边界），请尝试以下活动：
 
 ![Image](img/arrow.jpg) 创建 `Crisis` 应用程序的修改版本，将 `panic` 和 `dontPanic` 对象组织在一个布局管理器下，将其余三个按钮放在另一个下。
@@ -5901,14 +5757,20 @@ add(row1);
 
 要查看实现这些活动的 Java 程序，请访问书籍网站 [www.java24hours.com](http://www.java24hours.com)。
 
-## 第 19 小
+## 第 19 小时
+
 响应用户输入
 
 ### 本小时任务列表：
+
 - ![Image](img/arrow.jpg) 让你的程序感知事件。
+
 - ![Image](img/arrow.jpg) 设置一个组件使其能触发事件。
+
 - ![Image](img/arrow.jpg) 找出事件在程序流向何处。
+
 - ![Image](img/arrow.jpg) 在接口中存储信息。
+
 - ![Image](img/arrow.jpg) 存储在文本字段中的值。
 
 你在过去两个小时内开发的图形用户界面（GUI）可以独立运行。用户可以点击按钮、在文本字段中填充文本并调整窗口大小。迟早，即使是最不挑剔的用户也会想要更多功能。程序提供的 GUI 必须在发生鼠标点击或键盘输入时引发某些事情发生。
@@ -5916,6 +5778,7 @@ add(row1);
 当你的 Java 程序能够响应用户事件时，这些事情就变得可能。这被称为事件处理（event handling），是本小时的主要内容。
 
 ### 让你的程序学会监听
+
 Java 中的用户事件是用户使用鼠标、键盘或其他输入设备执行操作时发生的事情。
 
 在接收事件之前，你必须学习如何让对象进行监听。响应用户事件需要使用一个或多个 `EventListener` 接口。接口是 Java 面向编程的一种特性，允许类继承原本情况下无法的行为。
@@ -5924,13 +5787,11 @@ Java 中的用户事件是用户使用鼠标、键盘或其他输入设备执行
 
 添加 `EventListener` 接口需要两件事。首先，因为监听类属于 `java.event` 包，你必须通过以下语句使其可用：
 
-```
+```java
 import java.awt.event.*;
 ```
 
 其次，类必须使用 `implements` 关键字来声明它支持的接口。以下语句创建一个使用 `ActionListener` 的类，用于响应按钮点击：
-
-点击此处查看代码图片
 
 ```java
 public class Graph implements ActionListener {
@@ -5940,8 +5801,6 @@ public class Graph implements ActionListener {
 
 当你在同一个类中需要多个接口时，在 `implements` 关键字后用逗号分隔它们的名称，如下代码所示：
 
-点击此处查看代码图片
-
 ```java
 public class Graph3D implements ActionListener, MouseListener {
 
@@ -5950,11 +5809,10 @@ public class Graph3D implements ActionListener, MouseListener {
 ```
 
 ### 设置组件以便监听
+
 在你实现了特定组件所需的接口后，你必须让该组件产生用户事件。`ActionListener` 接口监听动作事件，例如按钮点击或按下回车键。
 
 要让 `JButton` 对象产生事件，请使用 `addActionListener()` 方法，如下所示：
-
-点击此处查看代码图片
 
 ```java
 JButton fireTorpedos = new JButton("Fire torpedos");
@@ -5965,19 +5823,14 @@ fireTorpedos.addActionListener(this);
 这段代码创建了 `fireTorpedos` 按钮并调用了按钮的 `addActionListener()` 方法。作为 `addActionListener()` 方法参数的 `this` 关键字表示当前对象接收事件并根据需要进行处理。
 
 注意
+
 `this` 关键字在首次引入时会让很多读者感到困惑。`this` 指向出现关键字的实例。因此，如果你在一个 `LottoMadness` 类中并在该类的语句中使用 `this`，它指的是执行该代码的 `LottoMadness` 对象。
-
-
-
-
 
 ## 处理用户事件
 
 当带有监听器的组件生成用户事件时，会自动调用一个方法。该方法必须在将监听器挂载到组件时所指定的类中找到。
 
 每个监听器都有不同的方法被调用以接收其事件。`ActionListener` 接口将事件发送到名为 `actionPerformed()` 的方法。以下是 `actionPerformed()` 方法的一个简短示例：
-
-点击此处查看代码图片
 
 ```java
 public void actionPerformed(ActionEvent event) {
@@ -5989,13 +5842,13 @@ public void actionPerformed(ActionEvent event) {
 
 `ActionEvent` 对象被发送到 `actionPerformed()` 方法。有几类对象表示程序中可以生成的用户事件。这些类具有的方法可以确定是哪个组件导致了事件的发生。在 `actionPerformed()` 方法中，如果 `ActionEvent` 对象的名为 `event`，你可以使用以下语句识别组件：
 
-点击此处查看代码图片
-
 ```java
 String cmd = event.getActionCommand();
 ```
 
 `getActionCommand()` 方法返回一个字符串。如果组件是按钮，该字符串就是按钮上的标签。如果它是文本字段，该字符串就是字段中输入的文本。`getSource()` 方法返回导致事件的对象。
+
+
 
 你可以使用以下 `actionPerformed()` 方法来接收来自三个组件的事件：一个名为 `start` 的 `JButton` 对象，一个名为 `speed` 的 `JTextField`，以及另一个名为 `viscosity` 的 `JTextField`：
 
@@ -6137,9 +5990,6 @@ public class KeyViewer extends JFrame implements KeyListener {
 
 你可能在程序中见过某个组件呈现阴影状态，而不是正常外观。
 
-
-
-
 阴影表示用户无法对该组件进行任何操作，因为其未启用。启用和禁用组件是通过组件的 `setEnabled()` 方法完成的。该方法接收一个布尔值作为参数，因此 `setEnabled(true)` 启用组件以便，而 `setEnabled(false)` 则禁用它。
 
 以下语句创建了标签为 Previous（上一个）、Next（下一个）和 Finish（完成）的按钮，并禁用了第一个按钮：
@@ -6157,7 +6007,7 @@ previousButton.setEnabled(false);
 
 ### 完成图形化应用程序
 
-为了查看 Swing 的事件处理类在 Java 程序中如何工作，你将完成在第 18 节 “布局用户界面”中开始的彩票模拟程序 `LottoMadness`。
+为了查看 Swing 的事件处理类在 Java 程序中如何工作，你将完成在第 18 节“布局用户界面”中开始的彩票模拟程序 `LottoMadness`。
 
 此时，`LottoMadness` 只是一个 GUI。你可以点击按钮并在文本框中输入文字，但不会有任何响应。在本次中，你将创建一个新类 `LottoEvent`，该类接收用户输入、进行彩票抽奖并跟踪中奖次数。当该类完成后，你将在 `LottoMadness` 中添加几行代码，使其使用 `LottoEvent`。以这种方式划分 Swing 项目通常很方便，将 GUI 放在一个类中，将事件处理方法放在另一个类中。
 
@@ -6175,7 +6025,7 @@ previousButton.setEnabled(false);
 
 三个按钮控制程序的活动：Stop（停止）、Play（播放）和 Reset（重置）。按下 Play 按钮时，程序启动一个名为 `playing` 的线程并生成彩票抽奖。
 
-按下 Stop 按钮停止线程，按下 Reset 则清除所有字段，以便用户可以重新开始。你将在第 15 节 “创建多线程程序”中学习线程知识。
+按下 Stop 按钮停止线程，按下 Reset 则清除所有字段，以便用户可以重新开始。你将在第 15 节“创建多线程程序”中学习线程知识。
 
 `LottoEvent` 类实现了三个接口：`ActionListener`、`ItemListener` 和 `Runnable`。`Runnable` 接口与线程有关，并在第 15 节介绍过。
 
@@ -6212,9 +6062,6 @@ String got3value = gui.got3.getText();
 **列表 19.2** `LottoEvent.java` 的完整文本
 
 点击此处查看代码图片
-
-
-
 
 ```java
 while (playing == thisThread) {
@@ -6276,16 +6123,22 @@ while (playing == thisThread) {
 要完成该项目，请在 NetBeans 中重新打开 `LottoMadness.java`。你只需要添加六行代码来处理 `LottoEvent` 类。
 
 1. 首先，添加一个新的实例变量来持有 `LottoEvent` 对象：
+
    ```java
    LottoEvent lotto = new LottoEvent(this);
    ```
+
 2. 接下来，在 `LottoMadness()` 构造函数中，为每个可以接收输入的界面组件调用 `addItemListener()` 和 `addActionListener()` 方法：
-   ```java
-   quickpick.addItemListener(lto);
-   personal.addItemListener(lto);
-   stop.addActionListener(lto);
-   play.addActionListener(lto);
-   ```
+
+
+
+```java
+quickpick.addItemListener(lto);
+personal.addItemListener(lto);
+stop.addActionListener(lto);
+play.addActionListener(lto);
+```
+
 3. 这些语句应该添加到构造函数中，紧随 `setLayout()` 调用之后，该调用将网格布局设置为应用程序框架的布局管理器。
 
 列表 19.3 包含了你做出更改后 `LottoMadness.java` 的全文。你添加的行被阴影标记——其余部分与之前保持不变。
@@ -6354,8 +6207,6 @@ public class LottoMadness extends JFrame {
     }
 }
 ```
-
-
 
 ```java
 60: row1.add(quickpick);
@@ -6437,9 +6288,6 @@ public class LottoMadness extends JFrame {
 ### 总结
 
 通过使用 Swing，你可以通过少量编程代码创建一个看起来专业的程序。尽管 `LottoMadness` 应用比你过去 19 小时处理过的许多示例都要长，但该程序有一半是由构建界面的语句组成的。
-
-
-
 
 要处理其他类型的数据（例如硬盘上的文件和网络服务器上的文档），你可以使用 `java.io` 包中的类。该名称中的“io”代表“输入/输出”（input/output），这些类用于访问数据源，例如硬盘、DVD 或计算机内存。
 
@@ -6559,21 +6407,20 @@ try (FileInputStream stream = new FileInputStream(cookie)) {
 scanData.skip(1024);
 ```
 
+
+
 如果你想一次读取多个字节，请执行以下操作：
 
 ![Image](img/arrow.jpg) 创建一个大小与你想要读取的字节数完全一致的字节数组。
 
 ![Image](img/arrow.jpg) 将该数组作为参数调用流的 `read()` 方法。数组将填充从流中读取的字节。
 
-
-
-
-
 第一个项目从 MP3 音频文件中读取 ID3 数据。由于 MP3 是一种非常流行的音乐文件格式，在 ID3 文件的末尾通常会添加 128 字节，用于存储歌曲信息，例如标题、艺术家和专辑。
 
 `ID3Reader` 应用程序使用文件输入流读取 MP3 文件，跳过最后 128 字节以外的所有内容。对剩余字节进行检查以确定是否包含 ID3 数据。如果是，前三个字节将是数字 84、65 和 71。
 
 ### 注意
+
 在 Java 支持的 Unicode 标准字符集包含的 ASCII 字符集中，这三个数字分别代表大写字母“T”、“A”和“G”。
 
 在 `com.java24hours` 包下创建一个名为 `ID3Reader` 的新空 Java 文件，并将来自列表 20.1 的文本填入其中。
@@ -6621,14 +6468,17 @@ public class ID3Reader {
 **图 20.1** 运行 `ID3Reader` 应用程序。
 
 ### 提示
+
 如果你电脑上没有 `Come On and Gettit.mp3`（在我看来这是一个巨大的错误），或其他任何 MP3，你可以通过 [`search.creativecommons.org`](http://search.creativecommons.org) 使用知识共享许可寻找可检查的 MP3 歌曲。
 
 知识共享是一组版权许可协议，规定了如歌曲之类的作品如何进行分发、编辑或重新发布。应用程序在列表 20.1 的第 11–12 行从 MP3 读取最后 128 字节，并将其存储在 `byte` 数组中。该数组在第 13 行被用于创建一个包含这些字节所代表的字符的 `String` 对象。如果字符串的前三个字符是“TAG”，则说明正在检查的 MP3 文件包含 ID3 信息。在第 16–19 行中，调用了字符串的 `substring()` 方法来显示字符串的部分。ID3 格式始终将艺术家、歌曲、标题和年份信息放在最后 128 字节的相同位置。某些 MP3 文件完全不包含 ID3 信息，或者以应用程序无法读取的另一种格式包含 ID3 信息。如果你是从购买的 `Eccentric Soul` 拷贝创建了 `Come On and Gettit.mp3`，那么它包含可读的 ID3 信息。从音频 CD 创建 MP3 文件的程序从音乐行业数据库读取歌曲信息。在从 MP3 文件读取完与 ID3 相关的信息后，流在第 24 行被关闭。在完成操作后，你应该始终关闭流以节省 JVM 资源。
 
 ### 注意
+
 你可能想通过文件共享服务寻找 `Come On and Gettit.mp3` 的副本。对于“Come On and Gettit”，我完全理解这种诱惑。然而，根据美国唱片协会，下载你不拥有的音乐 CD MP3 文件的人将立即被 Amazon、eBay、iTunes 以及任何地方点成火焰。
 
 ### 缓冲流
+
 提高输入程序性能的方法之一是对输入进行缓冲。缓冲是将数据保存在内存中，以便在程序需要时以后使用。当 Java 程序需要从缓冲流获取数据时，它会首先查找缓冲区，这比从文件等源读取要快。要使用缓冲流，你首先创建一个输入流（例如 `FileInputStream` 对象），然后使用该对象创建一个缓冲流。调用 `BufferedInputStream(InputStream)` 构造函数，并将输入流作为唯一参数。数据在从输入读取时会被缓冲。要从缓冲流中读取，调用其无参数的 `read()` 方法。将返回一个 0 到 255 之间的整数，代表流中的下一个字节数据。如果没有更多可用字节，则返回 −1。作为缓冲流的演示，你创建的下一个程序为 Java 增加了一个许多其他语言的程序员使用过的功能：控制台输入，即在运行应用程序时从控制台（也称为命令行）读取字符的能力。`System` 类包含了 `System.out.print()` 和 `System.out.println()` 语句中使用的 `out` 变量，它还有一个名为 `in` 的类代表一个 `InputStream` 对象。该对象接收来自键盘的输入并作为流可用。你可以像处理其他输入一样处理这种输入。以下语句创建一个与 `System.in` 输入关联的缓冲流：
 
 点击此处查看代码图像
@@ -6675,9 +6525,6 @@ public class Console {
     }
 }
 ```
-
-
-
 
 ```java
 30:          System.out.print("before a small brick building. Around you ");
@@ -6779,6 +6626,7 @@ public class ConfigWriter {
     }
 }
 ```
+
 （注：提供的文本代码块中包含一些乱码/交错行；我已根据提供的上下文逻辑 Java 结构进行了清理。）
 
 ### 读取和写入配置属性
@@ -6794,7 +6642,9 @@ public class ConfigWriter {
 属性文件有一组属性名，后面跟着等号 `=` 及其对应的值。这是一个示例：
 
 username=lepton
+
 lastCommand=open database
+
 windowSize=32
 
 每个属性各占一行，因此这设置了属性 `username`、`lastCommand` 和 `windowSize`，值分别为“lepton”、“open database” 和“32”。（`ConfigWriter` 应用程序使用了相同的格式。）
@@ -6803,6 +6653,8 @@ windowSize=32
 
 点击此处查看代码图片
 
+
+
 ```java
 File configFile = new File("config.dat");
 FileInputStream inStream = new FileInputStream(configFile);
@@ -6810,7 +6662,7 @@ Properties config = new Properties();
 config.load(inStream);
 ```
 
-配置设置（称为 `properties`）以字符串形式存储在 `Properties` 对象中。每个属性通过一个键（key）识别。`getProperty()` 方法使用其键检索属性，如下语句所示：
+配置设置（称为`properties`）以字符串形式存储在`Properties`对象中。每个属性通过一个键（key）识别。`getProperty()`方法使用其键检索属性，如下语句所示：
 
 ```java
 String username = config.getProperty("username");
@@ -6828,11 +6680,7 @@ try {
 }
 ```
 
-可以通过调用带有两个参数（键和值）的 `setProperty()` 方法来存储属性：
-
-
-
-
+可以通过调用带有两个参数（键和值）的`setProperty()`方法来存储属性：
 
 点击此处查看代码图像
 
@@ -6840,7 +6688,7 @@ try {
 config.setProperty("username", "max");
 ```
 
-你可以通过调用 `Properties` 对象的 `list(PrintStream)` 方法来显示所有属性。`PrintStream` 是你在书中一直在使用的类型：它是 `System` 类中 `out` 实例变量的类，你一直在使用它在 `System.out.println()` 和 `System.out.print()` 语句中输出。以下代码调用 `list()` 来显示所有属性：
+你可以通过调用`Properties`对象的`list(PrintStream)`方法来显示所有属性。`PrintStream`是你在书中一直在使用的类型：它是`System`类中`out`实例变量的类，你一直在使用它在`System.out.println()`和`System.out.print()`语句中输出。以下代码调用`list()`来显示所有属性：
 
 ```java
 config.list(System.out);
@@ -6848,17 +6696,17 @@ config.list(System.out);
 
 在修改属性后，可以将它们存回文件：
 
-![Image](img/arrow.jpg) 创建一个表示该文件的 `File` 对象。
+![Image](img/arrow.jpg) 创建一个表示该文件的`File`对象。
 
-![Image](img/arrow.jpg) 从该 `File` 对象创建一个 `FileOutputStream` 对象。
+![Image](img/arrow.jpg) 从该`File`对象创建一个`FileOutputStream`对象。
 
-![Image](img/arrow.jpg) 调用 `store(OutputStream, String)` 将属性保存到指定的输出流中，并使用字符串作为属性文件的描述。
+![Image](img/arrow.jpg) 调用`store(OutputStream, String)`将属性保存到指定的输出流中，并使用字符串作为属性文件的描述。
 
-在本小时的最后一个项目中，你将在 `ConfigWriter` 应用程序的基础上进行构建，该程序将几个程序设置写入文件。`Configurator` 应用程序将这些设置读取到 Java 属性文件中，添加一个名为 `runtime` 的新属性（包含当前日期时间），并保存修改后的文件。
+在本小时的最后一个项目中，你将在`ConfigWriter`应用程序的基础上进行构建，该程序将几个程序设置写入文件。`Configurator`应用程序将这些设置读取到 Java 属性文件中，添加一个名为`runtime`的新属性（包含当前日期时间），并保存修改后的文件。
 
-在 `com.java24hours` 包中创建一个新的 Java 文件来存放 `Configurator` 类，并输入列表 20.4 中的文本。
+在`com.java24hours`包中创建一个新的 Java 文件来存放`Configurator`类，并输入列表 20.4 中的文本。
 
-**列表 20.4 `Configurator.java` 的全文**
+**列表 20.4 `Configurator.java`的全文**
 
 点击此处查看代码图像
 
@@ -6896,77 +6744,103 @@ config.list(System.out);
 31: }
 ```
 
-在此应用程序中，第 11–12 行创建了用于 `program.properties` 的 `File` 对象并将其与文件输入流关联。第 13–14 行从流将文件内容加载到 `Properties` 对象中。第 16–17 行创建了当前日期时间的新属性。随后，在第 19 行将文件与输出流关联，并在第 20 行将整个属性文件写入该流中。
+在此应用程序中，第 11–12 行创建了用于`program.properties`的`File`对象并将其与文件输入流关联。第 13–14 行从流将文件内容加载到`Properties`对象中。第 16–17 行创建了当前日期时间的新属性。随后，在第 19 行将文件与输出流关联，并在第 20 行将整个属性文件写入该流中。
 
-`Configurator` 应用程序的输出所示图 20.4。
+`Configurator`应用程序的输出所示图 20.4。
 
 ![Image](img/20fig4.jpg)
-**图 20.4** 运行 `Configurator` 应用程序。现在 `program.properties` 文件包含以下文本：
+
+**图 20.4** 运行`Configurator`应用程序。现在`program.properties`文件包含以下文本：
 
 ![Image](img/arrow.jpg)
+
 点击此处查看代码图像
+
+```text
 -- 显示属性 --
+
 runtime=Tue Jun 06 43 EDT 2017
+
 username=max
+
 level=5
+```
 
 反斜杠字符的格式与应用程序的输出不同，这确保了属性文件能被正确存储。
 
 ### 总结
-在本小时中，你处理了写入字节的输入流和输出流，这是在流上表示数据最简单的方法。`java.io` 包中还有许多类可以以其他方式处理流。还有一个名为 `java.net` 的类包，它允许你在连接上读写流。字节流可以适应许多用途，因为你可以轻松将字节转换为其他类型（如整数和字符串）。本小时的第一个项目 `ID3Reader` 应用程序从流中读取字节并将其转换为字符串，以这种格式读取 ID3 数据：Marion Black 的“Come On and Gettit”。我提过你应该买下这首歌吗？
+
+在本小时中，你处理了写入字节的输入流和输出流，这是在流上表示数据最简单的方法。`java.io`包中还有许多类可以以其他方式处理流。还有一个名为`java.net`的类包，它允许你在连接上读写流。字节流可以适应许多用途，因为你可以轻松将字节转换为其他类型（如整数和字符串）。本小时的第一个项目`ID3Reader`应用程序从流中读取字节并将其转换为字符串，以这种格式读取 ID3 数据：Marion Black 的“Come On and Gettit”。我提过你应该买下这首歌吗？
 
 ### 工作坊
+
 #### 问答
+
 **问. 为什么本小时中的某些字节流方法使用整数作为参数？**
-**答.** 这是流中的字节与由 `byte` 类表示的字节之间的区别。Java 中的一个 `byte` 取值范围从 −128 到 127，而流中的一个字节的取值范围是从 0 到 255。由于这个原因，当你处理字节时，通常需要使用 `int`。
+
+**答.** 这是流中的字节与由`byte`类表示的字节之间的区别。Java 中的一个`byte`取值范围从 −128 到 127，而流中的一个字节的取值范围是从 0 到 255。由于这个原因，当你处理字节时，通常需要使用`int`。
 
 **问. 什么是 Mumblety-Peg（踢地子游戏）？**
+
 **答.** 这是一种孩子们玩的游戏，通过向地上扔地子，谁离地子近谁就赢。这种游戏源于 20 世纪初的流行，已经过时了。
 
 #### 测试
+
 为了检查你是否掌握了本小时的知识，请回答关于 Java 流的问题。
 
 1. 下列哪些技术可以可以将字节数组转换为字符串？
-A. 调用数组的 `toString()` 方法。
-B. 将每个字节转换为字符，然后赋值给字符串元素。
-C. 使用数组调用 `String()` 构造函数。
+
+   A. 调用数组的`toString()`方法。
+
+   B. 将每个字节转换为字符，然后赋值给字符串元素。
+
+   C. 使用数组调用`String()`构造函数。
 
 2. 在 Java 程序中，使用哪种流来读取文件？
-A. 输入流
-B. 输出流
-C. 均可
 
-3. `File` 类的哪种方法可以用于确定文件的大小？
-A. `getSize()`
-B. `read()`
-C. `length()`
+   A. 输入流
+
+   B. 输出流
+
+   C. 均可
+
+3. `File`类的哪种方法可以用于确定文件的大小？
+
+   A. `getSize()`
+
+   B. `read()`
+
+   C. `length()`
 
 #### 答案
+
 1. C. 你可以如答案 B 所示单独处理字节，但你也可以轻松从其他类型创建字符串。
-2. A. 输入流可以通过 `File` 对象创建，也可以通过向输入流构造函数提供文件名创建。
-3. C. 该方法返回 `long`，表示流中的字节数。
+
+2. A. 输入流可以通过`File`对象创建，也可以通过向输入流构造函数提供文件名创建。
+
+3. C. 该方法返回`long`，表示流中的字节数。
 
 #### 活动
+
 为了体验另一个流的清新感受，请尝试以下活动：
 
-![Image 编写一个应用程序，读取所有 MP3 文件的 ID3 标签，并根据艺术家、歌曲和专辑信息重命名文件（如果提供了这些信息）。![Image](img/arrow.jpg) 编写一个程序读取 Java 源文件并在不进行任何更改的情况下以新名称写回。
+![Image](img/arrow.jpg) 编写一个应用程序，读取所有 MP3 文件的 ID3 标签，并根据艺术家、歌曲和专辑信息重命名文件（如果提供了这些信息）。
+
+![Image](img/arrow.jpg) 编写一个程序读取 Java 源文件并在不进行任何更改的情况下以新名称写回。
+
 ![Image](img/arrow.jpg) 购买 Marion Black 的歌曲“Come On and Gettit”。
 
-要查看实现这些活动的 Java 程序，请访问书籍网站 [www.java24hours.com](http://www.java24hours.com)。
+要查看实现这些活动的 Java 程序，请访问书籍网站[www.java24hours.com](http://www.java24hours.com)。
 
 ## 21 小时 使用 Java 9 新 HTTP 客户端
 
-### **本小时的任务清单：**
+### 本小时的任务清单
 
 ![Image](img/arrow.jpg) 为 Java 项目添加模块。
 
 ![Image](img/arrow.jpg) 创建一个 HTTP 浏览器对象。
 
 ![Image](img/arrow.jpg) 向 Web 服务器发送 GET 请求。
-
-
-
-
 
 ![Image](img/arrow.jpg) 从网络请求中接收数据。
 
@@ -6984,23 +6858,23 @@ Java 9 引入了 HTTP Client 库，以便在网络上发送和接收数据变得
 
 ### Java 模块
 
-当 Java 程序发布时，它们会被封装成 Java 归档（JAR）文件，并包含程序使用的类库。该 JAR 文件以及项目所需的其他 JAR 文件都会放在 Java 虚拟机（`JVM`）运行程序时访问的 `Classpath` 上。
+当 Java 程序发布时，它们会被封装成 Java 归档（JAR）文件，并包含程序使用的类库。该 JAR 文件以及项目所需的其他 JAR 文件都会放在 Java 虚拟机（`JVM`）运行程序时访问的`Classpath`上。
 
-随着时间的推移，这个过程中的低效率变得变得明显。JAR 中可能包含数百甚至数千个 Java 类，且仅按包组织。同一个类可能存在于 `Classpath` 的两个不同位置，导致在程序执行期间对使用的是哪一个类产生困惑。
+随着时间的推移，这个过程中的低效率变得变得明显。JAR 中可能包含数百甚至数千个 Java 类，且仅按包组织。同一个类可能存在于`Classpath`的两个不同位置，导致在程序执行期间对使用的是哪一个类产生困惑。
 
 Java 9 通过使用模块，对程序部署的方式引入了更多控制。
 
-Java 9 包含的新型 HTTP Client 库必须包含在一个模块中，才能在你编写的程序中使用。该库是一个名为 `jdk.incubator.http` 的包。
+Java 9 包含的新型 HTTP Client 库必须包含在一个模块中，才能在你编写的程序中使用。该库是一个名为`jdk.incubator.http`的包。
 
-在 NetBeans 中按照以下步骤将此模块添加到 `Java24` 项目中：
+在 NetBeans 中按照以下步骤将此模块添加到`Java24`项目中：
 
 ![Image](img/arrow.jpg) 选择 File（文件）、New File（新建文件），然后在 Categories（类别）窗格中选择 Java。File Types（文件类型）面板出现了新内容：Java Module Info（Java 模块信息）。
 
 ![Image](img/arrow.jpg) 选择 Java Module Info，然后点击 Next（下一步）。
 
-![Image](img/arrow.jpg) 对话框显示类 `module-info`，不允许选择包名。点击 Finish（完成）。
+![Image](img/arrow.jpg) 对话框显示类`module-info`，不允许选择包名。点击 Finish（完成）。
 
-`module-info.java` 文件在源代码编辑器中打开进行编辑。它只需要这三行代码：
+`module-info.java`文件在源代码编辑器中打开进行编辑。它只需要这三行代码：
 
 点击此处查看代码图像
 
@@ -7010,7 +6884,7 @@ module Java24 {
 }
 ```
 
-保存文件后，`jdk.incubator.httpclient` 中的类就可以在该项目中的任何 Java 程序中使用了。
+保存文件后，`jdk.incubator.httpclient`中的类就可以在该项目中的任何 Java 程序中使用了。
 
 ### 发起 HTTP 请求
 
@@ -7022,17 +6896,13 @@ Web 服务器通过称为 HTTP 请求的消息与浏览器和其他类型的网�
 
 使用此库发起网络请求需要以下步骤：
 
-**1.** 创建一个 `HttpClient` 类的浏览器对象。
+1. 创建一个`HttpClient`类的浏览器对象。
+2. 创建一个请求构建器（内部类`HttpRequest.Builder`）。
+3. 将请求构建为`HttpRequest`对象。
+4. 使用浏览器将请求发送到 Web 服务器。
+5. 接收返回的`HttpResponse`对象。
 
-**2.** 创建一个请求构建器（内部类 `HttpRequest.Builder`）。
-
-**3.** 将请求构建为 `HttpRequest` 对象。
-
-**4.** 使用浏览器将请求发送到 Web 服务器。
-
-**5.** 接收返回的 `HttpResponse` 对象。
-
-浏览器是使用 `HttpClient` 类的工厂方法创建：
+浏览器是使用`HttpClient`类的工厂方法创建：
 
 点击此处查看代码图像
 
@@ -7042,7 +6912,7 @@ HttpClient browser = HttpClient.newHttpClient();
 
 正如你预期的那样，浏览器的工作是将请求发送到服务器。
 
-请求是通过构建器类创建的。构建器需要服务器的 Web 地址。`java.net` 包中的 `URI` 类表示地址（也称为 `URI` 或 `URL`），并可以这样创建：
+请求是通过构建器类创建的。构建器需要服务器的 Web 地址。`java.net`包中的`URI`类表示地址（也称为`URI`或`URL`），并可以这样创建：
 
 点击此处查看代码图像
 
@@ -7050,9 +6920,9 @@ HttpClient browser = HttpClient.newHttpClient();
 URI link = new URI("https://www.oracle.com/");
 ```
 
-如果作为唯一参数指定的 Web 地址不是格式正确的 Web 地址，则会抛出 `URISyntaxException`（来自 `java.net`）。
+如果作为唯一参数指定的 Web 地址不是格式正确的 Web 地址，则会抛出`URISyntaxException`（来自`java.net`）。
 
-通过 `URI` 对象，你可以调用工厂方法 `HttpRequest.newBuilder(URI)` 来创建构建器：
+通过`URI`对象，你可以调用工厂方法`HttpRequest.newBuilder(URI)`来创建构建器：
 
 点击此处查看代码图像
 
@@ -7060,7 +6930,7 @@ URI link = new URI("https://www.oracle.com/");
 HttpRequest.Builder bob = HttpRequest.newBuilder(uri);
 ```
 
-构建器的 `build()` 方法创建请求，该请求是 `HttpRequest` 类的一个对象：
+构建器的`build()`方法创建请求，该请求是`HttpRequest`类的一个对象：
 
 点击此处查看代码图像
 
@@ -7068,15 +6938,15 @@ HttpRequest.Builder bob = HttpRequest.newBuilder(uri);
 HttpRequest request = bob.build();
 ```
 
-现在你已经有了浏览器和请求，可以将其发送到 Web 服务器并获取响应。响应是一个 `HttpResponse` 对象，它使用了泛型，因为它可以接收多种格式的信息。
+现在你已经有了浏览器和请求，可以将其发送到 Web 服务器并获取响应。响应是一个`HttpResponse`对象，它使用了泛型，因为它可以接收多种格式的信息。
 
-浏览器的 `send()` 请求接受两个参数：
+浏览器的`send()`请求接受两个参数：
 
-![Image](img/arrow.jpg) 一个 `HttpRequest` 对象。
+![Image](img/arrow.jpg) 一个`HttpRequest`对象。
 
 ![Image](img/arrow.jpg) 一个设置响应格式的处理器。
 
-处理器是通过调用 `HttpResponse.BodyHandler` 内部类的类方法创建的，如下语句所示：
+处理器是通过调用`HttpResponse.BodyHandler`内部类的类方法创建的，如下语句所示：
 
 点击此处查看代码图像
 
@@ -7085,13 +6955,13 @@ HttpResponse<String> response = browser.send(request,
     HttpResponse.BodyHandler.asString());
 ```
 
-`HttpResponse<String>` 中的泛型定义响应为字符串。处理器的 `asString()` 方法让浏览器的 `send()` 方法返回字符串。
+`HttpResponse<String>`中的泛型定义响应为字符串。处理器的`asString()`方法让浏览器的`send()`方法返回字符串。
 
-该处理器还有 `asFile(Path)` 方法以文件返回响应，以及 `asByteArray()` 方法以 `byte[]` 格式返回。
+该处理器还有`asFile(Path)`方法以文件返回响应，以及`asByteArray()`方法以`byte[]`格式返回。
 
 每个 HTTP 请求都包含提供有关响应和发送它的更多信息的头部。这些头部中的一个 Server 包含了运行服务器的软件名称和版本号。某些服务器出于安全考虑省略了版本号。
 
-响应的 `headers()` 方法返回头部作为 `HttpHeaders` 对象。该对象的 `firstValue(String)` 方法根据名称返回第一个头部。实现此功能的代码如下：
+响应的`headers()`方法返回头部作为`HttpHeaders`对象。该对象的`firstValue(String)`方法根据名称返回第一个头部。实现此功能的代码如下：
 
 点击此处查看代码图像
 
@@ -7100,11 +6970,11 @@ HttpHeaders headers = response.headers();
 Optional<String> server = headers.firstValue("Server");
 ```
 
-`firstValue()` 返回的对象是 `java.util` 包中的数据结构，更容易处理空值。使用没有值的对象会导致 `NullPointerException`，这是 Java 中最常见的异常之一。
+`firstValue()`返回的对象是`java.util`包中的数据结构，更容易处理空值。使用没有值的对象会导致`NullPointerException`，这是 Java 中最常见的异常之一。
 
-`Optional` 类通过 `isPresent()` 方法防止这种情况，当存在有效值时返回 `true`，否则返回 `false`。
+`Optional`类通过`isPresent()`方法防止这种情况，当存在有效值时返回`true`，否则返回`false`。
 
-`server` 的值是字符串，如语句 `Optional<String>` 部分所示。可以通过以下方式在避免 `null` 问题的情况下显示此字符串：
+`server`的值是字符串，如语句`Optional<String>`部分所示。可以通过以下方式在避免`null`问题的情况下显示此字符串：
 
 点击此处查看代码图像
 
@@ -7114,15 +6984,13 @@ if (server.isPresent()) {
 }
 ```
 
-将这些技术付诸实践，`ServerCheck` 请求六家公司的首页并报告它们使用的服务器。
+将这些技术付诸实践，`ServerCheck`请求六家公司的首页并报告它们使用的服务器。
 
-在 NetBeans 中，在 `com.java24` 包中创建一个名为 `ServerCheck` 的空 Java 文件。将列表 21.1 输入源代码编辑器。
+在 NetBeans 中，在`com.java24`包中创建一个名为`ServerCheck`的空 Java 文件。将列表 21.1 输入源代码编辑器。
 
-**列表 21.1** `ServerCheck.java` 的全文
+**列表 21.1** `ServerCheck.java`的全文
 
 点击此处查看代码图像
-
-
 
 
 
@@ -7272,13 +7140,9 @@ public class ImageDownloader {
 
 ### 在网络上发布数据
 
-目前为止，本小时重点是使用 HTTP 从网络获取内容。现在是时候返回一些东西了。最后一个项目是 SalutonVerkisto，这是一个 Java 应用程序，使用 POST 请求向作者的 Web 服务器发送消息。
+目前为止，本小时重点是使用 HTTP 从网络获取内容。现在是时候返回一些东西了。最后一个项目是 `SalutonVerkisto`，这是一个 Java 应用程序，使用 POST 请求向作者的 Web 服务器发送消息。
 
 POST 请求可以编码大量数据供服务器接收，例如网络博客文章甚至是图像或视频文件。GET 请求也可以向服务器携带信息，但它受限于 URI 中可以包含的内容。
-
-
-
-
 
 点击此处查看代码
 
@@ -7328,8 +7192,11 @@ HttpRequest.Builder newBuilder = HttpRequest.newBuilder(uri)
 此方法调用将四个调用堆叠在一起。这之所以有效，是因为每个调用都是对 `HttpRequest.Builder` 的调用并返回构建器对象。以下是这些调用按顺序完成的任务：
 
 1. `newBuilder(URI)` 为该 Web 地址创建一个构建器。
+
 2. `header(String, String)` 将名为 `Content-Type` 的请求头设置为值“application/x-www-form-urlencoded”。这告诉服务器正在发送 Web 表单。
+
 3. 另一个 `header()` 调用将 `Accept` 设置为“text/plain”，即请求的 MIME 类型。
+
 4. `post(HttpRequest.BodyProcessor)` 将编码后的消息格式化为 HTTP POST 请求。
 
 现在构建器已就绪，可以构建请求了：
@@ -7358,6 +7225,8 @@ System.out.println(response.body());
 **列表 21.3 `SalutonVerkisto.java` 的全文**
 
 点击此处查看代码
+
+
 
 ```java
 package com.java24hours;
@@ -7405,11 +7274,7 @@ public class SalutonVerkisto {
 }
 ```
 
-
-
-
-
-第一个网页地址位于 `http://info.cern.ch/hypertext/WWW/TheProject.html`，随着 Web 吸引了用户、出版者和软件开发人员，它每天都会更新。
+第一个网页地址位于`http://info.cern.ch/hypertext/WWW/TheProject.html`，随着 Web 吸引了用户、出版者和软件开发人员，它每天都会更新。
 
 该网站将 Web 定义为“一种广域多媒体信息检索计划，旨在提供对庞大文档宇宙的访问”。
 
@@ -7419,11 +7284,11 @@ public class SalutonVerkisto {
 
 **1.** 哪种类型的请求可以向 Web 服务器发送信息？
 
-**A.** GET
+**A.** `GET`
 
-**B.** POST
+**B.** `POST`
 
-**C.** GET 和 POST 都可以
+**C.** `GET` 和 `POST` 都可以
 
 **2.** 哪个类持有从由请求产生的服务器接收到的信息？
 
@@ -7443,7 +7308,7 @@ public class SalutonVerkisto {
 
 #### 答案
 
-**1. C.** POST 发送大量数据；GET 在 Web 地址（URI）上发送数据。
+**1. C.** `POST` 发送大量数据；`GET` 在 Web 地址（URI）上发送数据。
 
 **2. B.** `HttpResponse` 对象是通过调用浏览器的 `send()` 方法返回的。
 
@@ -7453,43 +7318,36 @@ public class SalutonVerkisto {
 
 为了进一步加强对本小时 Web 编程主题的理解，请完成以下活动：
 
-![Image](img/arrow.jpg) 为 `ServerCheck` 程序添加另外五个科技公司首页。
+- ![Image](img/arrow.jpg) 为 `ServerCheck` 程序添加另外五个科技公司首页。
+- ![Image](img/arrow.jpg) 编写一个程序，使用 HTTP 响应的“Content-Type”和“Content-Encoding”头部来报告服务器采用的 MIME 类型和字符编码。
 
-![Image](img/arrow.jpg) 编写一个程序，使用 HTTP 响应的“Content-Type”和“Content-Encoding”头部来报告服务器采用的 MIME 类型和字符编码。
+要查看实现这些活动的 Java 程序，请访问书籍网站`www.java24hours.com`。
 
-要查看实现这些活动的 Java 程序，请访问书籍网站 `www.java24hours.com`。
+# 第 22 小时：创建 Java2D 图形
 
-# 第 22 小时
+### 本小时待办事项
 
-创建 Java2D 图形
-
-### 本小时待办事项：
-
-![Image](img/arrow.jpg) 设置文本的字体和颜色。
-
-![Image](img/arrow.jpg) 设置容器的背景颜色。
-
-![Image](img/arrow.jpg) 绘制线条、矩形和其他形状。
-
-![Image](img/arrow.jpg) 绘制 GIF 和 JPEG 图形。
-
-![Image](img/arrow.jpg) 绘制填充和未填充形状。
+- ![Image](img/arrow.jpg) 设置文本的字体和颜色。
+- ![Image](img/arrow.jpg) 设置容器的背景颜色。
+- ![Image](img/arrow.jpg) 绘制线条、矩形和其他形状。
+- ![Image](img/arrow.jpg) 绘制 GIF 和 JPEG 图形。
+- ![Image](img/arrow.jpg) 绘制填充和未填充形状。
 
 在本小时中，你将学习如何将容器——即存放图形用户界面（GUI）组件的普通灰色面板和框架——变成艺术画布，你可以在上面绘制字体、颜色、形状和图形。
 
 ### 使用 `Font` 类
 
-Java 中的颜色和字体通过 `java.awt` 包中的 `Color` 和 `Font` 类表示。通过这些类，你可以用不同的字体和大小显示文本，并更改文本和图形的颜色。字体通过 `Font(String, int, int)` 构造函数创建，它接受三个参数：
+Java 中的颜色和字体通过`java.awt`包中的`Color`和`Font`类表示。通过这些类，你可以用不同的字体和大小显示文本，并更改文本和图形的颜色。字体通过`Font(String, int, int)`构造函数创建，它接受三个参数：
 
-- ![Image](img/arrow.jpg) 字体的类型，可以是通用名称（“Dialog”、“DialogInput”、“Monospaced”、“SanSerif”或“Serif”）或实际字体名称（“Arial Black”、“Helvetica”或“Courier New”）
-- ![Image](img/arrow.jpg) 样式，取三个类变量之一：`Font.BOLD`、`Font.ITALIC`或`Font.PLAIN`
-- ![Image](img/arrow.jpg) 以磅为单位的字体大小
+- ![Image](img/arrow.jpg) 字体的类型，可以是通用名称（“Dialog”、“DialogInput”、“Monospaced”、“SanSerif”或“Serif”）或实际字体名称（“Arial Black”、“Helvetica”或“Courier New”）。
+- ![Image](img/arrow.jpg) 样式，取三个类变量之一：`Font.BOLD`、`Font.ITALIC`或`Font.PLAIN`。
+- ![Image](img/arrow.jpg) 以磅为单位的字体大小。
 
 以下语句创建了一个 12 磅斜体 Serif 字体：
 
 点击此处查看代码
 
-```
+```java
 Font current = new Font("Serif", Font.ITALIC, 12);
 ```
 
@@ -7499,15 +7357,15 @@ Font current = new Font("Serif", Font.ITALIC, 12);
 
 点击此处查看代码
 
-```
+```java
 Font headline = new Font("Courier New", Font.BOLD + Font.ITALIC, 72);
 ```
 
-当你拥有一个字体时，调用 `Graphics2D` 组件的 `setFont(Font)` 方法将其指定为当前字体。所有后续绘制操作都将使用该字体，直到设置另一个字体。以下代码创建了一个“Comic Sans”字体对象，并在绘制文本之前将其指定为当前字体：
+当你拥有一个字体时，调用`Graphics2D`组件的`setFont(Font)`方法将其指定为当前字体。所有后续绘制操作都将使用该字体，直到设置另一个字体。以下代码创建了一个“Comic Sans”字体对象，并在绘制文本之前将其指定为当前字体：
 
 点击此处查看代码
 
-```
+```java
 public void paintComponent(Graphics comp) {
     Graphics2D comp2D = (Graphics2D) comp;
     Font font = new Font("Comic Sans", Font.BOLD, 15);
@@ -7516,30 +7374,30 @@ public void paintComponent(Graphics comp) {
 }
 ```
 
-Java 支持抗锯齿，以使字体和图形更加光滑且不那么颗粒。要启用此功能，你必须设置渲染提示。`Graphics2D` 对象有一个 `setRenderingHint(int, int)` 方法，接受两个参数：
+Java 支持抗锯齿，以使字体和图形更加光滑且不那么颗粒。要启用此功能，你必须设置渲染提示。`Graphics2D`对象有一个`setRenderingHint(int, int)`方法，接受两个参数：
 
-- ![Image](img/arrow.jpg) 渲染提示的键
-- ![Image](img/arrow.jpg) 与该键关联的值
+- ![Image](img/arrow.jpg) 渲染提示的键。
+- ![Image](img/arrow.jpg) 与该键关联的值。
 
-这些值是 `java.awt` 中 `RenderingHints` 类的类变量。要激活抗锯齿，请调用：
+这些值是`java.awt`中`RenderingHints`类的类变量。要激活抗锯齿，请调用：
 
-```
+```java
 comp2D.setRenderingHint(RenderingHints.KEY_ANTIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 ```
 
 ### 使用 `Color` 类
 
-Java 中的颜色由 `Color` 类表示，该类包含以下常量：`black`、`blue`、`cyan`、`darkGray`、`gray`、`lightGray`、`magenta`、`orange`、`pink`、`red`、`white` 和 `yellow`。
+Java 中的颜色由`Color`类表示，该类包含以下常量：`black`、`blue`、`cyan`、`darkGray`、`gray`、`lightGray`、`magenta`、`orange`、`pink`、`red`、`white`和`yellow`。
 
-在容器中，你可以像这样调用 `setBackground(Color)` 方法，使用这些常量设置组件的背景：
+在容器中，你可以像这样调用`setBackground(Color)`方法，使用这些常量设置组件的背景：
 
-```
+```java
 setBackground(Color.orange);
 ```
 
-当前颜色像当前字体一样，必须在使用 `setColor(Color)` 方法绘制之前设置。以下代码包含一条将当前颜色设置为蓝色并用该颜色绘制文本的语句：
+当前颜色像当前字体一样，必须在使用`setColor(Color)`方法绘制之前设置。以下代码包含一条将当前颜色设置为蓝色并用该颜色绘制文本的语句：
 
-```
+```java
 public void paintComponent(Graphics comp) {
     Graphics2D comp2D = (Graphics2D) comp;
     comp2D.setColor(Color.blue);
@@ -7547,13 +7405,13 @@ public void paintComponent(Graphics comp) {
 }
 ```
 
-与直接在容器上调用的 `setBackground()` 方法不同，你必须在 `Graphics2D` 对象上调用 `setColor()` 方法。
+与直接在容器上调用的`setBackground()`方法不同，你必须在`Graphics2D`对象上调用`setColor()`方法。
 
 ### 创建自定义颜色
 
 你可以通过指定红绿蓝（RGB）值在 Java 中创建自定义颜色。RGB 通过颜色中存在的红、绿、蓝量来定义颜色。每个值的范围从 0（无该颜色）到 255（最大量）。
 
-`Color(int, int, int)` 构造函数接受红、绿、蓝值的参数。以下代码绘制了一个在青绿色背景（0 红、101 绿、118 蓝）上显示金色文本（159 红、121 绿、44 蓝）的面板：
+`Color(int, int, int)`构造函数接受红、绿、蓝值的参数。以下代码绘制了一个在青绿色背景（0 红、101 绿、118 蓝）上显示金色文本（159 红、121 绿、44 蓝）的面板：
 
 点击此处查看代码
 
@@ -7575,29 +7433,25 @@ public class Jacksonville extends JPanel {
 }
 ```
 
-此示例调用 `Graphics2D` 的 `fillRect()` 方法，使用当前颜色绘制填充矩形。
+此示例调用`Graphics2D`的`fillRect()`方法，使用当前颜色绘制填充矩形。
 
-注意
+**注意**
 
 RGB 值允许创建 1650 万种可能的组合，尽管大多数计算机显示器对其中大多数组合只能提供接近的近似。对于焦焦午夜蓝是否与中等淡婴儿绿相配的建议，请阅读《在书店排队时自学色彩感》。
 
 ### 绘制线条和形状
 
+在 Java 程序中，绘制线条和矩形等形状与显示文本一样简单。你只需要一个`Graphics2D`对象来定义绘制表面，以及代表要绘制内容的对象的对象。
 
-
-
-
-在 Java 程序中，绘制线条和矩形等形状与显示文本一样简单。你只需要一个 `Graphics2D` 对象来定义绘制表面，以及代表要绘制内容的对象的对象。
-
-`Graphics2D` 对象具有用于通过命令绘制文本的方法，如下：
+`Graphics2D`对象具有用于通过命令绘制文本的方法，如下：
 
 点击此处查看代码图像
 
-```
+```java
 comp2D.drawString("Draw, pardner!", 15, 40);
 ```
 
-此语句在坐标 (15, 40) 处绘制了文本“Draw, pardner!”。绘制方法使用与文本相同的 (x, y) 坐标系。(0, 0) 坐标点位于容器的左上角，`x` 值向右增加，`y` 值向下增加。你可以通过以下语句确定在帧或其他容器中可以使用的最大 `(x, y)` 值：
+此语句在坐标 (15, 40) 处绘制了文本“Draw, pardner!”。绘制方法使用与文本相同的 (x, y) 坐标系。(0, 0) 坐标点位于容器的左上角，`x`值向右增加，`y`值向下增加。你可以通过以下语句确定在帧或其他容器中可以使用的最大`(x, y)`值：
 
 点击此处查看代码图像
 
@@ -7612,9 +7466,9 @@ int maxYValue = getSize().height;
 
 对象的 2D 绘制被创建，并代表正在绘制的形状。
 
-定义形状的对象属于 `java.awt.geom` 包中的类集合。
+定义形状的对象属于`java.awt.geom`包中的类集合。
 
-`Line2D.Float` 类创建了一条连接起点 (x, y) 点和终点 (x, y) 点的线条。以下语句创建了一条从点 (40, 200) 到点 (70, 130) 的线条：
+`Line2D.Float`类创建了一条连接起点 (x, y) 点和终点 (x, y) 点的线条。以下语句创建了一条从点 (40, 200) 到点 (70, 130) 的线条：
 
 点击此处查看代码图像
 
@@ -7622,15 +7476,15 @@ int maxYValue = getSize().height;
 Line2D.Float line = new Line2D.Float(40F, 200F, 70F, 130F);
 ```
 
-参数后面紧跟着字母 `F`，用表示它们是浮点值。如果省略了该字母，Java 将把它们视为整数。
+参数后面紧跟着字母`F`，用表示它们是浮点值。如果省略了该字母，Java 将把它们视为整数。
 
-注意
+**注意**
 
-`Line2D.Float` 的类名中间有一个点，这与你之前接触过的多数类不同。这是因为 `Float` 是 `Line2D` 类的一个静态内部类，该主题在第 16 小“使用内部类和闭包”中介绍过。
+`Line2D.Float`的类名中间有一个点，这与你之前接触过的多数类不同。这是因为`Float`是`Line2D`类的一个静态内部类，该主题在第 16 小“使用内部类和闭包”中介绍过。
 
-线条以外的所有形状都是通过调用 `Graphics2D` 类的方法绘制的：`draw()` 用于轮廓，`fill()` 用于填充形状。
+线条以外的所有形状都是通过调用`Graphics2D`类的方法绘制的：`draw()`用于轮廓，`fill()`用于填充形状。
 
-以下语句绘制了在上一个示例中创建的 `line` 对象：
+以下语句绘制了在上一个示例中创建的`line`对象：
 
 ```java
 comp2D.draw(line);
@@ -7638,15 +7492,12 @@ comp2D.draw(line);
 
 ### 绘制矩形
 
-矩形可以是填充的或未填充的，并且具有圆角或直角。它们使用 `Rectangle2D.Float(int, int, int, int)` 构造函数创建，其参数如下：
+矩形可以是填充的或未填充的，并且具有圆角或直角。它们使用`Rectangle2D.Float(int, int, int, int)`构造函数创建，其参数如下：
 
-![Image](img/arrow.jpg) 矩形左上角的 `x` 坐标
-
-![Image](img/arrow.jpg) 左上角的 `y` 坐标
-
-![Image](img/arrow.jpg) 矩形的宽度
-
-![Image](img/arrow.jpg) 矩形的高度
+- ![Image](img/arrow.jpg) 矩形左上角的`x`坐标。
+- ![Image](img/arrow.jpg) 左上角的`y`坐标。
+- ![Image](img/arrow.jpg) 矩形的宽度。
+- ![Image](img/arrow.jpg) 矩形的高度。
 
 以下语句绘制了一个带有直角的未填充矩形：
 
@@ -7662,19 +7513,18 @@ Rectangle2D.Float box = new Rectangle2D.Float(245F, 65F, 20F, 10F);
 comp2D.draw(box);
 ```
 
-如果你想让矩形变为填充，请使用 `fill()` 方法：
+如果你想让矩形变为填充，请使用`fill()`方法：
 
 ```java
 comp.fill(box);
 ```
 
-你可以使用 `RoundRectangle2D.Float` 类创建圆角矩形而非直角矩形。
+你可以使用`RoundRectangle2D.Float`类创建圆角矩形而非直角矩形。
 
-该类的构造函数以 `Rectangle2D.Float` 类相同的四个参数开头，增加了以下两个参数：
+该类的构造函数以`Rectangle2D.Float`类相同的四个参数开头，增加了以下两个参数：
 
-![Image](img/arrow.jpg) 距离矩形角部 `x` 方向的像素数
-
-![Image](img/arrow.jpg) 距离角部 `y` 方向的像素数
+- ![Image](img/arrow.jpg) 距离矩形角部`x`方向的像素数。
+- ![Image](img/arrow.jpg) 距离角部`y`方向的像素数。
 
 这些距离用于确定矩形角的圆角处理应该从哪里开始。
 
@@ -7691,25 +7541,24 @@ RoundRectangle2D.Float ro = new RoundRectangle2D.Float(
 
 该矩形的左上角位于 (10, 10) 坐标。第三和第四参数指定了矩形的宽度和高度。在这种情况下，它的宽度应为 100 像素，高度为 80 像素。
 
-`drawRoundRect()` 的最后两个参数指定四个角都应该从距离 (10, 10) 处 15 像素的地方开始圆角化。
+`drawRoundRect()`的最后两个参数指定四个角都应该从距离 (10, 10) 处 15 像素的地方开始圆角化。
 
 ### 绘制椭圆和圆
 
 在 Java 中可以绘制的另一种圆形形状是椭圆。
 
-椭圆和圆可以使用 `Ellipse2D.Float` 类创建，它具有相同的四个参数：
+椭圆和圆可以使用`Ellipse2D.Float`类创建，它具有相同的四个参数：
 
-![Image](img/arrow.jpg) 椭形的 `x` 坐标
+- ![Image](img/arrow.jpg) 椭形的`x`坐标。
+- ![Image](img/arrow.jpg) 椭形的`y`坐标。
+- ![Image](img/arrow.jpg) 椭形的宽度。
+- ![Image](img/arrow.jpg) 椭形的高度。
 
-![Image](img/arrow.jpg) 椭形的 `y` 坐标
-
-![Image](img/arrow.jpg) 椭形的宽度
-
-![Image](img/arrow.jpg) 椭形的高度
-
-`(x, y)` 坐标并不指示椭形的中心。相反，`(x, y)` 坐标、宽度和高度描述了左上角。以下语句在 (245, 45) 处创建一个宽度和高度均为 5 的圆：
+`(x, y)`坐标并不指示椭形的中心。相反，`(x, y)`坐标、宽度和高度描述了左上角。以下语句在 (245, 45) 处创建一个宽度和高度均为 5 的圆：
 
 点击此处查看代码图像
+
+
 
 ```java
 Ellipse2D.Float cir = new Ellipse2D.Float(245F, 45F, 5F, 5F);
@@ -7717,7 +7566,7 @@ Ellipse2D.Float cir = new Ellipse2D.Float(245F, 45F, 5F, 5F);
 
 ### 绘制弧
 
-另一种圆形形状是弧。弧使用 `Arc2D.Float` 类创建，它具有许多相同的参数。通过指定椭圆、可见部分（以度为单位）以及弧的起点来绘制弧。
+另一种圆形形状是弧。弧使用`Arc2D.Float`类创建，它具有许多相同的参数。通过指定椭圆、可见部分（以度为单位）以及弧的起点来绘制弧。
 
 弧的起点大小从 0 到 359 度，按逆时针方向旋转，0 度处位于 3 点钟位置，如图 22.1 所示。
 
@@ -7727,7 +7576,7 @@ Ellipse2D.Float cir = new Ellipse2D.Float(245F, 45F, 5F, 5F);
 
 弧的定义。
 
-弧的类型使用类变量指定：`PIE` 用于饼图切片，`CLOSED` 如果端点用直线连接，`OPEN` 如果端点不应连接。
+弧的类型使用类变量指定：`PIE`用于饼图切片，`CLOSED`如果端点用直线连接，`OPEN`如果端点不应连接。
 
 以下语句在 (100, 50) 处绘制了一个开放弧，其长度为 120 度，从 30 度标记开始，宽度为 65，高度为 75：
 
@@ -7739,18 +7588,15 @@ Arc2D.Float smile = new Arc2D.Float(100F, 50F, 65F, 75F, 30F, 120F, Arc2D.Float.
 
 ### 制作饼图
 
-为了结束本节，你创建一个 `PiePanel`，这是一个显示饼图的 GUI 组件。该组件是 `JPanel` 的子类，`JPanel` 是一个作为绘制内容的简单容器。
+为了结束本节，你创建一个`PiePanel`，这是一个显示饼图的 GUI 组件。该组件是`JPanel`的子类，`JPanel`是一个作为绘制内容的简单容器。
 
-创建类的一种方法是定义创建该类对象的方法。使用 `PiePanel` 类的程序必须执行以下步骤：
+创建类的一种方法是定义创建该类对象的方法。使用`PiePanel`类的程序必须执行以下步骤：
 
-![Image](img/arrow.jpg) 使用构造函数方法 `PiePanel(int)` 创建 `PiePanel` 对象。指定的整数参数是饼图包含的切片数。
+![Image](img/arrow.jpg) 使用构造函数方法`PiePanel(int)`创建`PiePanel`对象。指定的整数参数是饼图包含的切片数。
 
-![Image](img/arrow.jpg) 调用对象的 `addSlice(Color, float)` 方法，为切片指定颜色和值。
+![Image](img/arrow.jpg) 调用对象的`addSlice(Color, float)`方法，为切片指定颜色和值。
 
-`PiePanel` 中每个切片的值代表其所代表的数量。
-
-
-
+`PiePanel`中每个切片的值代表其所代表的数量。
 
 例如，根据高等教育办公处的数据，表 22.1 显示了美国在该计划实施前 38 年学生贷款还款状态的数据。
 
@@ -7762,7 +7608,7 @@ Arc2D.Float smile = new Arc2D.Float(100F, 50F, 65F, 75F, 30F, 120F, Arc2D.Float.
 | 贷款给正在还款的学生的金额 | 910 亿美元 |
 | 贷款给违约学生的金额 | 250 亿美元 |
 
-你可以使用以下语句通过 `PiePanel` 在饼图图中表示这些数据：
+你可以使用以下语句通过`PiePanel`在饼图图中表示这些数据：
 
 点击此处查看代码图像
 
@@ -7774,20 +7620,23 @@ loans.addSlice(Color.blue, 91F);
 loans.addSlice(Color.red, 25F);
 ```
 
-图 22.2 显示了在应用程序框架中的结果，该框架包含一个组件：用学生贷款数据创建的 `PiePanel`。
+图 22.2 显示了在应用程序框架中的结果，该框架包含一个组件：用学生贷款数据创建的`PiePanel`。
 
 ![Image](img/22fig02.jpg)
 
 ### 图 22.2
+
 在饼图上显示学生贷款数据。
 
-当创建一个 `PiePanel` 对象时，扇区的数量是在构造函数中指定的。绘制每个扇区，你还需要知道另外三点：
+当创建一个`PiePanel`对象时，扇区的数量是在构造函数中指定的。绘制每个扇区，你还需要知道另外三点：
 
-![Image](img/arrow.jpg) 扇区的颜色，由一个 `Color` 对象表示
+![Image](img/arrow.jpg) 扇区的颜色，由一个`Color`对象表示
+
 ![Image](img/arrow.jpg) 每个扇区代表的值
+
 ![Image](img/arrow.jpg) 所有扇区代表的总值
 
-使用一个新的新的辅助类 `PieSlice` 来表示饼图中的每个扇区：
+使用一个新的新的辅助类`PieSlice`来表示饼图中的每个扇区：
 
 点击此处查看代码图像
 
@@ -7804,7 +7653,7 @@ class PieSlice {
 }
 ```
 
-每个扇区通过调用 `PieSlice(`Color`, `float`)` 构建。所有扇区的组合值被存储在 `PiePanel` 类的私有实例变量 `totalSize` 中。此外，还有面板背景颜色（`background`）和用于跟踪扇区的计数器（`current`）的实例变量：
+每个扇区通过调用`PieSlice(Color, float)`构建。所有扇区的组合值被存储在`PiePanel`类的私有实例变量`totalSize`中。此外，还有面板背景颜色（`background`）和用于跟踪扇区的计数器（`current`）的实例变量：
 
 ```java
 private int current = 0;
@@ -7812,13 +7661,13 @@ private float totalSize = 0;
 private Color background;
 ```
 
-现在你已经有一个 `PieSlice` 类可以工作，你可以通过另一个实例变量创建一个 `PieSlice` 对象数组：
+现在你已经有一个`PieSlice`类可以工作，你可以通过另一个实例变量创建一个`PieSlice`对象数组：
 
 ```java
 private PieSlice[] slice;
 ```
 
-当你创建一个 `PiePanel` 对象时，没有任何扇区被分配颜色或大小。在构造函数中你必须做的事情只有定义 `slice` 数组的大小并保存面板的背景颜色：
+当你创建一个`PiePanel`对象时，没有任何扇区被分配颜色或大小。在构造函数中你必须做的事情只有定义`slice`数组的大小并保存面板的背景颜色：
 
 点击此处查看代码图像
 
@@ -7829,7 +7678,7 @@ public PiePanel(int sliceCount) {
 }
 ```
 
-使用 `addSlice(`Color`, `float`)` 方法向面板添加一个饼图扇区：
+使用`addSlice(Color, float)`方法向面板添加一个饼图扇区：
 
 点击此处查看代码图像
 
@@ -7843,9 +7692,9 @@ public void addSlice(Color sColor, float sSize) {
 }
 ```
 
-`current` 实例变量用于将每个扇区放入 `slice` 数组的对应元素中。数组的 `length` 变量包含了该数组定义的容纳数量；只要 `current` 不大于 `slice.length`，你就可以继续向面板添加扇区。
+`current`实例变量用于将每个扇区放入`slice`数组的对应元素中。数组的`length`变量包含了该数组定义的容纳数量；只要`current`不大于`slice.length`，你就可以继续向面板添加扇区。
 
-正如你预期的那样，`PiePanel` 类在它的 `paintComponent()` 方法中处理所有的绘制操作。这项任务中最困难的部分是绘制代表饼图每个扇区的弧。这在以下语句中处理：
+正如你预期的那样，`PiePanel`类在它的`paintComponent()`方法中处理所有的绘制操作。这项任务中最困难的部分是绘制代表饼图每个扇区的弧。这在以下语句中处理：
 
 点击此处查看代码图像
 
@@ -7862,12 +7711,9 @@ for (int i = 0; i < slice.length; i++) {
 }
 ```
 
-`start` 变量记录绘制弧的起始位置，而 `extent` 记录弧的大小。如果你知道所有饼扇区的总大小以及特定扇区的大小，你可以通过将弧的大小乘以 360 再除以所有扇区的总和来计算出 `extent`。
+`start`变量记录绘制弧的起始位置，而`extent`记录弧的大小。如果你知道所有饼扇区的总大小以及特定扇区的大小，你可以通过将弧的大小乘以 360 再除以所有扇区的总和来计算出`extent`。
 
 所有的弧都是在一个循环中绘制的。
-
-
-
 
 ```java
 13:      Color inBetweenGreen = new Color(0x00, 0x99, 0x66);
@@ -7895,7 +7741,7 @@ for (int i = 0; i < slice.length; i++) {
 35:          pie.addSlice(freckle, 127);
 36:          add(pie);
 37:     }
-38:     
+38:
 39: private void setLookAndFeel() {
 40: try {
 41:              UIManager.setLookAndFeel(
@@ -7912,11 +7758,11 @@ for (int i = 0; i < slice.length; i++) {
 52: }
 ```
 
-`PieFrame` 类是一个简单的图形用户界面，它包含一个组件：在第 25 行创建的 `PiePanel` 对象。在第 26–35 行中，调用了 10 次对象的 `addSlice()` 方法来向饼图添加扇区。
+`PieFrame`类是一个简单的图形用户界面，它包含一个组件：在第 25 行创建的`PiePanel`对象。在第 26–35 行中，调用了 10 次对象的`addSlice()`方法来向饼图添加扇区。
 
-当你运行该应用程序时，`PieFrame` 会显示一个饼图，展示人口最多的 10 个国家的数据（单位：百万），数据来自 2017 年 6 月的美国人口普查国际数据库报告。按顺序排列为：中国（13.79 亿）、印度（12.82 亿）、美国（3.27 亿）、印度尼西亚（2.61 亿）、巴西（2.07 亿）、巴基斯坦（2.05 亿）、尼日利亚（1.91 亿）、孟加拉国（1.58 亿）、俄罗斯（1.42 亿）和日本（1.26 亿）。
+当你运行该应用程序时，`PieFrame`会显示一个饼图，展示人口最多的 10 个国家的数据（单位：百万），数据来自 2017 年 6 月的美国人口普查国际数据库报告。按顺序排列为：中国（13.79 亿）、印度（12.82 亿）、美国（3.27 亿）、印度尼西亚（2.61 亿）、巴西（2.07 亿）、巴基斯坦（2.05 亿）、尼日利亚（1.91 亿）、孟加拉国（1.58 亿）、俄罗斯（1.42 亿）和日本（1.26 亿）。
 
-由于 Java 的 `Color` 类中只定义了几颜色，在这里创建了 10 个新颜色供使用，并赋予了描述性名称。这些颜色以十六进制值表示——在 Java 中，十六进制字面量前面带有 `0x`——但也可以在每个 `Color()` 构造函数中指定十进制值。
+由于 Java 的`Color`类中只定义了几颜色，在这里创建了 10 个新颜色供使用，并赋予了描述性名称。这些颜色以十六进制值表示——在 Java 中，十六进制字面量前面带有`0x`——但也可以在每个`Color()`构造函数中指定十进制值。
 
 图 22.3 显示了该应用程序的运行情况。
 
@@ -7927,119 +7773,142 @@ for (int i = 0; i < slice.length; i++) {
 在饼图中显示人口数据。
 
 ### 注意
-你可以通过访问 `www.cadenhead.org/` 获取当前的美国人口普查数据，该网站会重定向到 `www.census.gov`。
+
+你可以通过访问`www.cadenhead.org/`获取当前的美国人口普查数据，该网站会重定向到`www.census.gov`。
 
 ### 总结
+
 通过使用字体、颜色和图形，你可以吸引用户对程序元素的注意力并使其更具吸引力。使用 Java 提供的形状进行绘制可能看起来麻烦。然而，使用多边形绘制的图形相比加载的图像有两个优势：
 
 ![Image](img/arrow.jpg) **速度**——即使是较小的图标，加载和显示也比一组多边形要慢。
 
-![Image](img/arrow.jpg) **缩放**——你可以通过更改值来改变整个图像的大小。例如，你可以在 `Sign` 类中添加一个函数，在创建每个形状之前乘以所有的 `(x, y)` 点，结果将翻倍。
+![Image](img/arrow.jpg) **缩放**——你可以通过更改值来改变整个图像的大小。例如，你可以在`Sign`类中添加一个函数，在创建每个形状之前乘以所有的`(x, y)`点，结果将翻倍。
 
 ### 工作坊
 
 #### 问答
-**Q. 如何绘制顺时针而不是逆时针的弧？**
-**A.** 你可以通过指定弧的大小为负数来实现。弧从相同的点开始但方向相反。例如，以下语句在 `(35, 20)` 处绘制了一个长度为 90 度、从 0 度开始、顺时针方向、高度为 20 宽度为 15 的开口弧：
 
-```
+**Q. 如何绘制顺时针而不是逆时针的弧？**
+
+**A.** 你可以通过指定弧的大小为负数来实现。弧从相同的点开始但方向相反。例如，以下语句在`(35, 20)`处绘制了一个长度为 90 度、从 0 度开始、顺时针方向、高度为 20 宽度为 15 的开口弧：
+
+```java
 Arc2D.Float smile = new Arc2D.Float(35F, 20F, 15F, 20F, 0F, -90F, OPEN);
 ```
 
-**Q. 椭圆没有角。`Ellipse.Float` 构造函数中指定的 `(x, y)` 坐标是什么？**
-**A.** `(x, y)` 坐标代表椭圆或圆的最小 x 值和最小 y 值。如果你周围画一个不可见的矩形，矩形的左上角将是方法的 x 和 y 坐标。
+**Q. 椭圆没有角。`Ellipse.Float`构造函数中指定的`(x, y)`坐标是什么？**
+
+**A.** `(x, y)`坐标代表椭圆或圆的最小 x 值和最小 y 值。如果你周围画一个不可见的矩形，矩形的左上角将是方法的 x 和 y 坐标。
 
 **Q. 为什么摄影师让你说“cheese”（微笑）？**
+
 **A.** “cheese”这个词会强制你的嘴部变成微笑，就像 whiskey、breeze 和 money 一样。以长 e 结尾的单词通常会导致你的嘴角上扬并露出牙齿。摄影师有时使用的另一个词是“grin”。虽然它不以 e 结尾，但它能让人微笑。西班牙摄影师让人说“patata”，法国人说“ouiti”，德国人说“käsekuchen”。
 
 #### 测试
+
 回答以下问题，测试你的字体和颜色技巧是否很棒。
 
-1. 下面哪个不是选择颜色的常量？**
-A. `Color.cyan`
-B. `Color.purple`
-C. `Color.magenta`
+1. 下面哪个不是选择颜色的常量？
 
-2. 当你更改某物的颜色并在容器上重绘时，必须做什么才能使其可见？**
-A. 使用 `drawColor()` 方法。
-B. 使用 `repaint()` 语句。
-C. 什么都不做。
+   A. `Color.cyan`
 
-3. RGB 首字母代表什么？**
-A. Roy G. Biv
-B. Red Green Blue
-C. Lucy in the Sky with Diamonds
+   B. `Color.purple`
+
+   C. `Color.magenta`
+
+2. 当你更改某物的颜色并在容器上重绘时，必须做什么才能使其可见？
+
+   A. 使用`drawColor()`方法。
+
+   B. 使用`repaint()`语句。
+
+   C. 什么都不做。
+
+3. RGB 首字母代表什么？
+
+   A. Roy G. Biv
+
+   B. Red Green Blue
+
+   C. Lucy in the Sky with Diamonds
 
 #### 答案
-1. B.** 奥兰多城 SC 的主颜色——自豪的紫色在 `Color` 类中缺失。
 
-2. B.** 对 `repaint()` 的调用会导致 `paintComponent()` 方法被调用。
+1. B. 奥兰多城 SC 的主颜色——自豪的紫色在`Color`类中缺失。
 
-3. B.** 如果 C 是正确答案，你可以使用多年后回忆中可见的颜色。
+2. B. 对`repaint()`的调用会导致`paintComponent()`方法被调用。
+
+3. B. 如果 C 是正确答案，你可以使用多年后回忆中可见的颜色。
 
 #### 活动
+
 为了进一步探索在程序中使用字体和颜色的可能性，请执行以下活动：
 
-![Image](img/arrow.jpg) 创建 `PieFrame` 类的版本，将颜色值和饼扇值作为命令行参数，而不是将它们包含在应用程序源代码中。
+![Image](img/arrow.jpg) 创建`PieFrame`类的版本，将颜色值和饼扇值作为命令行参数，而不是将它们包含在应用程序源代码中。
 
 ![Image](img/arrow.jpg) 创建一个在面板上使用颜色、形状和字体绘制停止标志的应用程序。
 
-要查看实现这些活动的 Java 程序，请访问书籍的网站 `www.java24hours.com`。
+要查看实现这些活动的 Java 程序，请访问书籍的网站`www.java24hours.com`。
 
-# 第 23 节
-使用 Java 创建 Minecraft Mod
+# 第 23 节：使用 Java 创建 Minecraft Mod
 
-### 本节的任务列表：
+### 本节的任务列表
+
 ![Image](img/arrow.jpg) 在你的电脑上安装 Minecraft 服务器。
+
 ![Image](img/arrow.jpg) 写一个启动服务器的脚本。
+
 ![Image](img/arrow.jpg) 为 Minecraft mod 编程设置 NetBeans。
+
 ![Image](img/arrow.jpg) 为 mod 创建框架。
+
 ![Image](img/arrow.jpg) 设计一个生成怪物的 mod。
+
 ![Image](img/arrow.jpg) 让一个怪物成为另一个的骑手。
+
 ![Image](img/arrow.jpg) 找到游戏中的每个怪物并攻击它。
+
 ![Image](img/arrow.jpg) 编写一个从世界上挖掘出巨大块的 mod。
 
 书的这一节涵盖了近年来成为现象的内容。
 
 我有两个青少年儿子，他们是热衷的游戏玩家，他们都玩多人建筑游戏 Minecraft。他们同年纪的大多数表兄弟兄弟也在玩这个游戏。当我告诉任何年轻人我写关于 Java 编程的书时，他们都会问我同一个问题：它会教我如何创建 Minecraft mod 吗？
 
+Mods（模组）是玩家设计并共享的游戏扩展程序。Minecraft 游戏是用`Java`编写的，因此 mods 必须使用相同的语言进行编程。
 
+学习`Java`是创建 Minecraft mods 的第一步。这一小时是第二步。
 
-
-
-Mods（模组）是玩家设计并共享的游戏扩展程序。Minecraft 游戏是用 `Java` 编写的，因此 mods 必须使用相同的语言进行编程。
-
-学习 `Java` 是创建 Minecraft mods 的第一步。这一小时是第二步。
-
-在本小时结束时，你将在你的电脑上下载、安装并运行一个属于你自己的 Minecraft 服务器。你还将能够使用 `Java` 语言创建 mods，将其部署到服务器上，并在玩游戏时使用它们。但要小心，苦力者（creepers）四处潜伏。
+在本小时结束时，你将在你的电脑上下载、安装并运行一个属于你自己的 Minecraft 服务器。你还将能够使用`Java`语言创建 mods，将其部署到服务器上，并在玩游戏时使用它们。但要小心，苦力者（creepers）四处潜伏。
 
 ### 设置 Minecraft 服务器
 
 开发 mods 需要访问 Minecraft 服务器。当你作为一个 mod 开发者刚起步时，实现此点的最佳方法是在自己的电脑上安装并运行一个服务器。由于目前还没有标准的方法向游戏中添加 mods，不同的服务器有不同的方法来实现这一目标。
 
-创建 mods 时最易用的是来自 Spigot Project 的工具，这是一个专门为此目的设计的 Minecraft 服务器和 `Java` 类库。Spigot 是免费的，可以从网站 [www.javaminecraft.com/spigot](http://www.javaminecraft.com/spigot) 下载。寻找文件 `spigotserver.jar`。
+创建 mods 时最易用的是来自 Spigot Project 的工具，这是一个专门为此目的设计的 Minecraft 服务器和`Java`类库。Spigot 是免费的，可以从网站[`www.javaminecraft.com/spigot`](http://www.javaminecraft.com/spigot)下载。寻找文件`spigotserver.jar`。
 
-该文件包含了封装为 `JAR` 文件的 Minecraft 服务器和类库。Spigot API 是一组在创建 mods 时将用到的 `Java` 包。
+该文件包含了封装为`JAR`文件的 Minecraft 服务器和类库。Spigot API 是一组在创建 mods 时将用到的`Java`包。
 
-下载完成后，在你的电脑上创建一个新文件夹并将文件存储在其中。在我的 Windows PC 上，我创建了 `c:\minecraft\server` 并 JAR 文件复制到其中。
 
-接下来，将 `spigotserver.jar` 复制到同一个文件夹。这是你启动 Minecraft 服务器的文件。
+
+下载完成后，在你的电脑上创建一个新文件夹并将文件存储在其中。在我的 Windows PC 上，我创建了`c:\minecraft\server`并将 JAR 文件复制到其中。
+
+接下来，将`spigotserver.jar`复制到同一个文件夹。这是你启动 Minecraft 服务器的文件。
 
 以下命令启动服务器：
 
-```
+```bash
 java -Xms1024M -Xmx1024M -jar spigotserver.jar
 ```
 
-此命令告诉 Java 虚拟机运行封装为 JAR 文件 `spigotserver.jar` 的应用程序，并为程序分配 1,024MB 的内存。
+此命令告诉 Java 虚拟机运行封装为 JAR 文件`spigotserver.jar`的应用程序，并为程序分配 1,024MB 的内存。
 
 为了避免每次运行服务器时都输入此命令，你可以创建一个包含该命令的批处理文件（batch file）或脚本文件，然后改为运行该文件。
 
-在 Windows 上，打开如记事本之类的文本编辑器，将 列表 23.1 的文本输入文件中，并将其保存为与 `spigotserver.jar` 相同文件夹下的 `start-server.bat`。
+在 Windows 上，打开如记事本之类的文本编辑器，将列表 23.1 的文本输入文件中，并将其保存为与`spigotserver.jar`相同文件夹下的`start-server.bat`。
 
-**列表 23.1** `start-server.bat` 的完整文本
+**列表 23.1** `start-server.bat`的完整文本
 
-```
+```text
 1: java -Xms1024M -Xmx1024M -jar spigotserver.jar
 2: pause
 ```
@@ -8049,150 +7918,56 @@ java -Xms1024M -Xmx1024M -jar spigotserver.jar
 你将看到一个错误信息“Failed to load eula.txt”，如图 23.1 所示。这是预期中的。
 
 ![Image](img/23fig01.jpg)
+
 **图 23.1** 服务器 EULA 检查失败。
 
 Minecraft 有一份最终用户许可协议（`EULA`），在运行服务器之前必须接受该协议。访问此网页以审阅该协议：[`account.mojang.com/documents/minecraft_eula`](https://account.mojang.com/documents/minecraft_eula)。
 
-现在与服务器相同的文件夹中有一个名为 `eula.txt` 的文件。该文件有一行包含以下文本：
+现在与服务器相同的文件夹中有一个名为`eula.txt`的文件。该文件有一行包含以下文本：
 
-```
+```text
 eula=false
 ```
 
-如果你同意 `EULA`，请用编辑器打开该文件，将此行改为 `eula=true`，保存文件并再次运行服务器。
+如果你同意`EULA`，请用编辑器打开该文件，将此行改为`eula=true`，保存文件并再次运行服务器。
 
-服务器第一次运行时，它会创建多个文件和子文件夹，并构建世界地图。如果成功，你将看到最后的消息“[Info] Done”以及 `>` 提示符旁闪烁的光标。
+服务器第一次运行时，它会创建多个文件和子文件夹，并构建世界地图。如果成功，你将看到最后的消息“[Info] Done”以及`>`提示符旁闪烁的光标。
 
-`help` 命令列出了你可以使用的、控制服务器和游戏世界的命令。`stop` 命令用于关闭服务器（现在先不要这样做！）。
+`help`命令列出了你可以使用的、控制服务器和游戏世界的命令。`stop`命令用于关闭服务器（现在先不要这样做！）。
 
 图 23.2 显示了一个正在运行的 Spigot 服务器。在服务器运行时，必须保持此窗口打开。如果你的服务器窗口看起来像这样，你可以跳过下一节直接进入“连接到服务器”。
 
 ![Image](img/23fig02.jpg)
+
 **图 23.2** 首次运行 Minecraft 服务器。
 
-#### 解决运行服务器时出现的问题
+### 解决运行服务器时出现的问题
 
 在下载并安装服务器后，有两个常见错误会导致服务器无法成功运行。
 
 第一个错误显示信息“Unable to access jar file spigotserver.jar”，如图 23.3 所示。
 
 ![Image](img/23fig03.jpg)
+
 **图 23.3** 找不到 Spigot JAR 文件。
 
-要解决此问题，请确保 `spigotserver.jar` 文件与你启动服务器的文件（`start-server.bat`）位于同一个文件夹。然后尝试重新启动服务器。
+要解决此问题，请确保`spigotserver.jar`文件与你启动服务器的文件（`start-server.bat`）位于同一个文件夹。然后尝试重新启动服务器。
 
 第二个错误显示信息“’java' is not recognized as an internal or external command”，如图 23.4 所示。
 
 ![Image](img/23fig04.jpg)
+
 **图 23.4** 找不到 Java 虚拟机 (JVM)。
 
-Java 虚拟机 (JVM) 无法找到。这意味着电脑不知道哪里有 `java`。
+Java 虚拟机 (JVM) 无法找到。这意味着电脑不知道哪里有`java`。
 
-要解决这个问题，请确保 `spigotserver.jar` 文件与你启动服务器的文件（`start-server.bat`）位于同一个文件夹。然后尝试重新启动服务器。
-
-为了避免每次运行服务器时都输入此命令，你可以创建一个包含该命令的批处理文件或脚本文件，然后改为运行该文件。
-
-在 Windows 上，打开如记事本之类的文本编辑器，将 列表 23.1 的文本输入文件中，并将其保存为与 `spigotserver.jar` 相同文件夹下的 `start-server.bat`。
-
-**列表 23.1** `start-server.bat` 的完整文本
-
-```
-1: java -Xms1024M -Xmx1024M -jar spigotserver.jar
-2: pause
-```
-
-双击此文件运行服务器。如果运行成功，将打开一个窗口显示服务器在启动时正在执行。
-
-你将看到一个错误信息“Failed to load eula.txt”，如图 23.1 所示。这是预期中的。
-
-![Image](img/23fig01.jpg)
-**图 23.1** 服务器 EULA 检查失败。
-
-Minecraft 有一份最终用户许可协议（`EULA`），在运行服务器之前必须接受该协议。访问此网页以审阅该协议：[`account.mojang.com/documents/minecraft_eula`](https://account.mojang.com/documents/minecraft_eula)。
-
-现在与服务器相同的文件夹中有一个名为 `eula.txt` 的文件。该文件有一行包含以下文本：
-
-```
-eula=false
-```
-
-如果你同意 `EULA`，请用编辑器打开该文件，将此行改为 `eula=true`，保存文件并再次运行服务器。
-
-服务器第一次运行时，它会创建多个文件和子文件夹，并构建世界地图。如果成功，你将看到最后的消息“[Info] Done”以及 `>` 提示符旁闪烁的光标。
-
-`help` 命令列出了你可以使用的、控制服务器和游戏世界的命令。`stop` 命令用于关闭服务器（现在先不要这样做！）。
-
-图 23.2 显示了一个正在运行的 Spigot 服务器。在服务器运行时，必须保持此窗口打开。如果你的服务器窗口看起来像这样，你可以跳过下一节直接进入“连接到服务器”。
-
-![Image](img/23fig02.jpg)
-**图 23.2** 首次运行 Minecraft 服务器。
-
-#### 解决运行服务器时出现的问题
-
-在下载并安装服务器后，有两个常见错误会导致服务器无法成功运行。
-
-第一个错误显示信息“Unable to access jar file spigotserver.jar”，如图 23.3 所示。
-
-![Image](img/23fig03.jpg)
-**图 23.3** 找不到 Spigot JAR 文件。
-
-要解决此问题，请确保 `spigotserver.jar` 文件与你启动服务器的文件（`start-server.bat`）位于同一个文件夹。然后尝试重新启动服务器。
-
-第二个错误显示信息“’java’ is not recognized as an internal or external command”，如图 23.4 所示。
-
-![Image](img/23fig04.jpg)
-**图 23.4** 找不到 Java 虚拟机 (JVM)。
-
-Java 虚拟机 (JVM) 无法找到。这意味着电脑不知道哪里有 `java`。
-
-要解决这个问题，请确保 `spigotserver.jar` 文件与你启动服务器的文件（`start-server.bat`）位于同一个文件夹。然后尝试重新启动服务器。
-
-为了避免每次运行服务器时都输入此命令，你可以创建一个包含该命令的批处理文件或脚本文件，然后改为运行该文件。
-
-在 Windows 上，打开如记事本之类的文本编辑器，将 列表 23.1 的文本输入文件中，并将其保存为与 `spigotserver.jar` 相同文件夹下的 `start-server.bat`。
-
-**列表 23.1** `start-server.bat` 的完整文本
-
-```
-1: java -Xms1024M -Xmx1024M -jar spigotserver.jar
-2: pause
-```
-
-双击此文件运行服务器。如果运行成功，将打开一个窗口显示服务器在启动时正在执行。
-
-你将看到一个错误信息“Failed to load eula.txt”，如图 23.1 所示。这是预期中的。
-
-![Image](img/23fig01.jpg)
-**图 23.1** 服务器 EULA 检查失败。
-
-Minecraft 有一份最终用户许可协议（`EULA`），在运行服务器之前必须接受该协议。访问此网页以审阅该协议：[`account.mojang.com/documents/minecraft_eula`](https://account.mojang.com/documents/minecraft_eula)。
-
-现在与服务器相同的文件夹中有一个名为 `eula.txt` 的文件。该文件有一行包含以下文本：
-
-```
-eula=false
-```
-
-如果你同意 `EULA`，请用编辑器打开该文件，将此行改为 `eula=true`，保存文件并再次运行服务器。
-
-服务器第一次运行时，它会创建多个文件和子文件夹，并构建世界地图。如果成功，你将看到最后的消息“[Info] Done”以及 `>` 提示符旁闪烁的光标。
-
-`help` 命令列出了你可以使用的、控制服务器和游戏世界的命令。`stop` 命令用于关闭服务器（现在先不要这样做！）。
-
-图 23.2 显示了一个正在运行的 Spigot 服务器。在服务器运行时，必须保持此窗口打开。如果你的服务器窗口看起来像这样，你可以跳过下一节直接进入“连接到服务器”。
-
-![Image](img/23fig02.jpg)
-**图 23.2** 首次运行 Minecraft 服务器。
+要解决这个问题，请确保`spigotserver.jar`文件与你启动服务器的文件（`start-server.bat`）位于同一个文件夹。然后尝试重新启动服务器。
 
 ### 连接到服务器
 
-因为你想制作 Minecraft mods，你显然电脑上可能已经有一个用于玩游戏的 Minecraft 客户端。如果没有，你可以从网站 [www.minecraft.net](http://www.minecraft.net) 购买并下载游戏。目前价格为 26.95 美元。游戏有适用于 Windows、Mac OS、游戏机和移动设备的版本，但 mod 编程需要 Windows 或 Mac 版本。
+因为你想制作 Minecraft mods，你显然电脑上可能已经有一个用于玩游戏的 Minecraft 客户端。如果没有，你可以从网站[www.minecraft.net](http://www.minecraft.net)购买并下载游戏。目前价格为 26.95 美元。游戏有适用于 Windows、Mac OS、游戏机和移动设备的版本，但 mod 编程需要 Windows 或 Mac 版本。
 
 启动 Minecraft 并选择多人游戏。你应该能看到你的新服务器是选项之一（如图 23.5 所示）。
-
-
-
-
 
 服务器被称为“Minecraft Server”（你以后可以将其改为更酷的名字）。客户端将向服务器发送一个 ping 消息并报告速度，该速度将显示为一组绿色的连接条（如图 23.5 所示）。
 
@@ -8223,10 +7998,14 @@ Minecraft 客户端通常运行最新版本。你可以编辑你的配置（prof
 再次运行客户端并按照以下步骤在配置中选择不同的版本：
 
 1. 在 Minecraft 启动器（Launcher）对话框中，点击“启动选项”（Launch Options）按钮，然后点击“添加新建”（Add New）。
-2. 在 `Version` 下拉菜单中，选择 `Release 1.8.7`。
+
+2. 在`Version`下拉菜单中，选择`Release 1.8.7`。
+
 3. 点击“保存”（Save）。
+
 4. 点击“设置”（Settings）。
-5. 点击绿色“播放”（Play）按钮上的箭头，然后选择 `Unnamed Configuration 1.8.7`。
+
+5. 点击绿色“播放”（Play）按钮上的箭头，然后选择`Unnamed Configuration 1.8.7`。
 
 点击“播放”，然后选择“多人游戏”（Multiplayer）。你应该看到带有绿色连接条的服务器。
 
@@ -8240,21 +8019,27 @@ Minecraft 客户端通常运行最新版本。你可以编辑你的配置（prof
 
 Mod 必须封装为 Java 归档文件，也称为 JAR 文件。NetBeans 是本书中使用的 Oracle 提供的免费集成开发环境，它在每当你构建项目时都会自动创建 JAR 文件。
 
-当你写完一个 Mod 后，将将其添加到服务器文件夹中一个名为 `plugins` 的子文件夹下。
+当你写完一个 Mod 后，将其添加到服务器文件夹中一个名为`plugins`的子文件夹下。
 
-本小时第一个 Mod 是一个简单的示例，它展示了你在为 Spigot 创建的每个 Mod 中都会使用的框架。该 Mod 为游戏添加了一个 `/siamesecat` 命令，可以创建一个暹猫猫实体，将其添加到世界中，并让你（玩家）成为它的主人。
+本小时第一个 Mod 是一个简单的示例，它展示了你在为 Spigot 创建的每个 Mod 中都会使用的框架。该 Mod 为游戏添加了一个`/siamesecat`命令，可以创建一个暹猫猫实体，将其添加到世界中，并让你（玩家）成为它的主人。
 
 每个 Mod 在 NetBeans 中都是独立的项目。要开始此项目，请按照以下步骤操作：
 
-1. 在 NetBeans 中，选择菜单命令 `File`（文件）、`New Project`（新建项目）。打开新建项目向导。
-2. 在 `Categories`（类别）面板中，选择 `Java`，在 `Projects`（项目）面板中，选择 `Java Application`。然后点击 `Next`下一步）。
-3. 在 `Project Name`（项目名称）字段中，输入 `SiameseCat`（无空格并按所示大写）。
-4. 点击 `Project Folder`（项目文件夹）字段旁的 `Browse`浏览）按钮。出现 `Select Project Location（选择项目位置）对话框。
-5. 找到你安装 Minecraft 服务器的文件夹。选择它并点击`Open（打开）。该文件夹出现在 `Project Location`字段中。
-6. 取消勾选 `Create Main Class（创建主类）复选框。
-7. 点击`Finish（完成）。
+1. 在 NetBeans 中，选择菜单命令`File`（文件）、`New Project`（新建项目）。打开新建项目向导。
 
-创建 `SiameseCat` 项目，项目面板中会出现两个文件夹：`Source Packages`（源包）和 `Libraries`（库），如图 23.7 所示。
+2. 在`Categories`（类别）面板中，选择`Java`，在`Projects`（项目）面板中，选择`Java Application`。然后点击`Next`（下一步）。
+
+3. 在`Project Name`（项目名称）字段中，输入`SiameseCat`（无空格并按所示大写）。
+
+4. 点击`Project Folder`（项目文件夹）字段旁的`Browse`（浏览）按钮。出现`Select Project Location`（选择项目位置）对话框。
+
+5. 找到你安装 Minecraft 服务器的文件夹。选择它并点击`Open`（打开）。该文件夹出现在`Project Location`字段中。
+
+6. 取消勾选`Create Main Class`（创建主类）复选框。
+
+7. 点击`Finish`（完成）。
+
+创建`SiameseCat`项目，项目面板中会出现两个文件夹：`Source Packages`（源包）和`Libraries`（库），如图 23.7 所示。
 
 ![Image](img/23fig07.jpg)
 
@@ -8262,44 +8047,55 @@ Mod 必须封装为 Java 归档文件，也称为 JAR 文件。NetBeans 是本�
 
 向 Java 项目添加库。
 
-1. 在每个 Mod 项目上，在你开始编写 Java 代码之前，必须添加 Java 类库：即你在安装时下载的 Spigot JAR 文件。在 `Projects` 面板中，右键点击 `Libraries` 文件夹并选择菜单命令 `Add Library（添加库）。出现 `Add Library` 对话框。
-2. 点击`Create（创建）按钮。出现 `Create New Library（新建库）对话框。
-3. 在 `Library Name（库名称）字段中，输入 `Spigot` 并点击`OK（确定）。出现 `Customize Library（自定义库）对话框。
-4. 点击`Add JAR/Folder（添加 JAR/文件夹）按钮。出现 `Browse JAR/Folder（浏览 JAR/文件夹）对话框。
-5. 使用该对话框找到并打开你安装服务器的文件夹。
-6. 点击 `spigotserver.jar` 以选择该文件。
-7. 点击`Add JAR/Folder（添加 JAR/文件夹）。
-8. 点击`OK（确定）。
-9. `Available Libraries（可用库）`面板现在有一个 `Spigot` 项目。选择它并点击`Add Library（添加库）。
+1. 在每个 Mod 项目上，在你开始编写 Java 代码之前，必须添加 Java 类库：即你在安装时下载的 Spigot JAR 文件。在`Projects`面板中，右键点击`Libraries`文件夹并选择菜单命令`Add Library`（添加库）。出现`Add Library`对话框。
 
-项目面板现在在 `Libraries` 文件夹中包含 Spigot 的 JAR 文件（点击 `Libraries` 旁边的 + 以查看）。你准备好开始编写 Mod 程序了。
+2. 点击`Create`（创建）按钮。出现`Create New Library`（新建库）对话框。
+
+3. 在`Library Name`（库名称）字段中，输入`Spigot`并点击`OK`（确定）。出现`Customize Library`（自定义库）对话框。
+
+4. 点击`Add JAR/Folder`（添加 JAR/文件夹）按钮。出现`Browse JAR/Folder`（浏览 JAR/文件夹）对话框。
+
+5. 使用该对话框找到并打开你安装服务器的文件夹。
+
+6. 点击`spigotserver.jar`以选择该文件。
+
+7. 点击`Add JAR/Folder`（添加 JAR/文件夹）。
+
+8. 点击`OK`（确定）。
+
+9. `Available Libraries`（可用库）面板现在有一个`Spigot`项目。选择它并点击`Add Library`（添加库）。
+
+项目面板现在在`Libraries`文件夹中包含 Spigot 的 JAR 文件（点击`Libraries`旁边的 + 以查看）。你准备好开始编写 Mod 程序了。
 
 按照以下步骤创建程序：
 
-1. 点击`File（文件）、`New File（新建文件）。出现 `New File` 对话框。
-2. 在 `Categories` 面板中，选择 `Java`。
-3. 在 `Projects` 面板中，选择 `Java Application`。点击`Next（下一步）。
-4. 在 `Class Name（类名）字段中，输入 `SiameseCat`。
-5. 在 `Package（包）字段中，输入 `org.caden`。
-6. 点击`Finish（完成）。
+1. 点击`File`（文件）、`New File`（新建文件）。出现`New File`对话框。
 
-`SiameseCat` 项目在 NetBeans 源编辑器中打开。你为 Spigot 创建的每个 Mod 都以这些语句开头：
+2. 在`Categories`面板中，选择`Java`。
 
+3. 在`Projects`面板中，选择`Java Application`。点击`Next`（下一步）。
 
+4. 在`Class Name`（类名）字段中，输入`SiameseCat`。
 
+5. 在`Package`（包）字段中，输入`org.caden`。
 
+6. 点击`Finish`（完成）。
 
-通过将 `sender` 对象强制转换为 `Player` 类，创建了一个名为 `me` 的对象。这个对象就是游戏玩家所控制的角色。
+`SiameseCat`项目在 NetBeans 源编辑器中打开。你为 Spigot 创建的每个 Mod 都以这些语句开头：
 
-通过这个 `Player` 对象，你可以调用它的 `getLocation()` 方法（无需参数）来获取玩家所处的精确位置。这个位置由 `Location` 类表示。关于位置，你可以获取到的三个信息是它在三维游戏地图上的 (x,y,z) 坐标。
+通过将`sender`对象强制转换为`Player`类，创建了一个名为`me`的对象。这个对象就是游戏玩家所控制的角色。
 
-`Player` 对象还有一个 `getWorld()` 对象，它会返回一个代表整个游戏世界的 `World` 对象。
+通过这个`Player`对象，你可以调用它的`getLocation()`方法（无需参数）来获取玩家所处的精确位置。这个位置由`Location`类表示。关于位置，你可以获取到的三个信息是它在三维游戏地图上的`(x, y, z)`坐标。
 
-你创建的大多数 mod 都会用到这些 `Player`、`Location` 和 `World` 对象。
+`Player`对象还有一个`getWorld()`对象，它会返回一个代表整个游戏世界的`World`对象。
 
-这个 mod 使用 `World` 类的 `spawn()` 方法创建了一个名为暹猫的新生生物：
+你创建的大多数 mod 都会用到这些`Player`、`Location`和`World`对象。
+
+这个 mod 使用`World`类的`spawn()`方法创建了一个名为暹猫的新生生物：
 
 点击此处查看代码图片
+
+
 
 ```java
 Ocelot cat = world.spawn(spot, Ocelot.class);
@@ -8373,7 +8169,7 @@ cat.setOwner(me);
 
 **注意**
 
-程序中使用了这些类：来自 `java.util.logging` 的 `Logger`，来自 `bukkit` 的 `Location` 和 `World`，来自 `bukkit.command` 的 `Command`，来自 `bukkit.entity` 的 `Ocelot` 和 `Player`以及来自 `bukkit.plugin.java` 的 `JavaPlugin`。
+程序中使用了这些类：来自 `java.util.logging` 的 `Logger`，来自 `bukkit` 的 `Location` 和 `World`，来自 `bukkit.command` 的 `Command`，来自 `bukkit.entity` 的 `Ocelot` 和 `Player` 以及来自 `bukkit.plugin.java` 的 `JavaPlugin`。
 
 第 31 行和 34 行的 `return` 语句是标准框架的一部分。当 mod 处理命令时，你的 mod 应该返回值 `true`，否则返回 `false`。
 
@@ -8411,19 +8207,21 @@ cat.setOwner(me);
 此文件必须位于项目中的正确位置。查看项目面板，它应该在 `<default package>` 下的 `Source Libraries` 文件夹内。
 
 ![Image](img/23fig08.jpg)
+
 **图 23.8** 检查 `plugin.yml` 的位置。
 
-如果文件位于错误的位置（例如在 `org.cadenhead.minecraft` 标题下），你可以使用拖放移动它。点击并按住文件，将其拖到 Source Libraries 图标处释放。现在你准备好构建你的 mod 了。选择菜单中的运行、清理并构建项目（Run, Clean, and Build Project）。如果成功，NetBeans 用户界面的左下角会出现“Finished SiameseCat (clean)”的消息。
+如果文件位于错误的位置（例如在 `org.cadenhead.minecraft` 标题下），你可以使用拖放移动它。点击并按住文件，将其拖到 `Source Libraries` 图标处释放。现在你准备好构建你的 mod 了。选择菜单中的运行、清理并构建项目（Run, Clean, and Build Project）。如果成功，NetBeans 用户界面的左下角会出现“Finished SiameseCat (clean)”的消息。
 
 mod 被封装为项目子文件夹中名为 `SiameseCat.jar` 的文件。要找到它，点击项目面板中的 Files 标签页，然后展开 `dist` 文件夹。Files 标签页列出了组成项目的所有文件，如图 23.9 所示。
 
 ![Image](img/23fig09.jpg)
+
 **图 23.9** 寻找 SiameseCat mod 的 JAR 文件。
 
-此 `SiameseCat.jar` 文件需要从项目文件夹到 Minecraft 服务器。按照以下步骤操作：
+此 `SiameseCat.jar` 文件需要从项目文件夹复制到 Minecraft 服务器。按照以下步骤操作：
 
 1. 如果 Minecraft 服务器正在运行，通过进入 NetBeans 之外的服务器窗口停止它。
-2. 打开安装 Minecraft 服务器的文件夹。打开 SiameseCat 子文件夹。
+2. 打开安装 Minecraft 服务器的文件夹。打开 `SiameseCat` 子文件夹。
 3. 返回 Minecraft 服务器文件夹。
 4. 打开 `plugins` 子文件夹。
 5. 按 Ctrl+v 将 `SiameseCat` 复制到其中。
@@ -8444,14 +8242,14 @@ mod 被封装为项目子文件夹中名为 `SiameseCat.jar` 的文件。要找�
 图 23.10 显示了我和 23 只猫。苦力者不想和我们有瓜。
 
 ![Image](img/23fig10.jpg)
+
 **图 23.10** 来我吧，暹猫朋友们！
 
 ### 教会僵尸骑马
 
-
 你创建的第一个 mod 需要花费大量工作，因为你是第一次经历这个过程。剩下的部分应该简单一些，因为你将重复许多相同的步骤。
 
-在这一小时内，你开发的每个 mod 都会比前一个复杂。在这个项目中，你将创建一个由僵尸骑乘的马兵部队。
+在这个小时内，你开发的每个 mod 都会比前一个复杂。在这个项目中，你将创建一个由僵尸骑乘的马兵部队。
 
 通过以下任务开始工作吧：
 
@@ -8557,10 +8355,6 @@ Java 中 `Math` 类的 `random()` 方法生成一个 0.0 到 1.0 之间的随机
 
 这个数字就是僵尸的数量。
 
-
-
-
-
 ### 列表 23.5 此项目 `plugin.yml` 的完整文本
 
 点击此处查看代码图片
@@ -8578,6 +8372,8 @@ Java 中 `Math` 类的 `random()` 方法生成一个 0.0 到 1.0 之间的随机
 10:
 11: version: 1.0
 ```
+
+
 
 完成后，选择运行（Run）、清理并构建项目（Clean and Build Project）来创建 mod 的 JAR 文件。
 
@@ -8631,10 +8427,12 @@ horse.addPotionEffect(potion2);
 开始之前：
 
 1. **选择 File（文件）、New Project（新建项目）** 在 Minecraft 服务器文件夹中创建新项目 `LightningStorm`。确保取消勾选 Create Main Class（创建主类）。
-2. 在 Projects 窗格中，右键点击 `Libraries（库），点击 **Add Library（添加库）** 并添加 Spigot 库。
+
+2. 在 Projects 窗格中，右键点击 `Libraries`（库），点击 **Add Library**（添加库）并添加 Spigot 库。
+
 3. **选择 File（文件）、New File（新建文件）** 并创建一个类名为 `LightningStorm`、包名为 `org.cadenhead.minecraft` 的空 Java 文件。
 
-将 列表 23.6 的文本输入 NetBeans 的源代码编辑器中，记得在完成后保存文件。
+将列表 23.6 的文本输入 NetBeans 的源代码编辑器中，记得在完成后保存文件。
 
 **列表 23.6 `LightningStorm.java` 的完整文本**
 
@@ -8696,7 +8494,7 @@ horse.addPotionEffect(potion2);
 
 LightningStorm mod 在 mod 框架上做了一些新尝试：它监控两个命令而不是一个。`/lightningstorm` 命令向生物降下大量的闪电。`/mobcount` 命令计算游戏中有多少活着的生物。
 
-用于 Spigot 的 Minecraft mod 可以实现任意数量的命令。`/lightningstorm` 命令实现在 列表 23.6 的第 22–42 行。`/mobcount` 命令实现在 45–50 行。
+用于 Spigot 的 Minecraft mod 可以实现任意数量的命令。`/lightningstorm` 命令实现在列表 23.6 的第 22–42 行。`/mobcount` 命令实现在 45–50 行。
 
 这些命令都需要玩家对象和世界对象。它们还需要一个所有活动生物的列表，这在第 19 行完成：
 
@@ -8708,7 +8506,7 @@ List<LivingEntity> mobs = world.getLivingEntities();
 
 该语句调用世界的 `getLivingEntities()` 方法，该方法返回一个包含每个生物的 `List` 对象。生物用实现 `LivingEntity` 接口的对象表示。
 
-`List`也是一个接口。它由数组列表（array lists）、栈（stacks）和其他数据结构实现。数组列表的方法和技术也适用于此列表。
+`List` 也是一个接口。它由数组列表（array lists）、栈（stacks）和其他数据结构实现。数组列表的方法和技术也适用于此列表。
 
 有了这个列表后，你可以通过一个语句实现 `/mobcount` 命令：
 
@@ -8752,16 +8550,11 @@ if (mob.getEntityId() == myId) {
 
 `continue` 语句会导致循环回到第 26 行并处理下一个生物。
 
-
-
-
-[content]
-
 现在玩家已经安全了，你可以通过调用其 `getLocation()` 方法来找到生物的位置：
 
 点击此处查看代码图片
 
-```
+```java
 Location spot = mob.getLocation();
 ```
 
@@ -8769,13 +8562,13 @@ Location spot = mob.getLocation();
 
 点击此处查看代码图片
 
-```
+```java
 world.strikeLightning(spot);
 ```
 
 用闪电击中生物并不总是致命的——有些生物是很强壮的小家伙——但这让这个效果显得没那么引人注目了。通过调用生物的 `setHealth()` 方法并传入 `0` 作为参数，可以将其生命值设置为该值并将其杀死：
 
-```
+```java
 mob.setHealth(0);
 ```
 
@@ -8785,7 +8578,7 @@ mob.setHealth(0);
 
 点击此处查看代码图片
 
-```
+```yaml
 1: name: LightningStorm
 2:
 3: author: Your Name Here
@@ -8819,17 +8612,19 @@ mob.setHealth(0);
 
 以下是开始构建该模组的方法：
 
-**1.** 在 Minecraft 服务器文件夹中创建新项目 `IceCreamScoop`，取消勾选“Create Main Class”。
+1. **在 Minecraft 服务器文件夹中创建新项目 `IceCreamScoop`，取消勾选“Create Main Class”。**
 
-**2.** 在 Projects 面格中，右键点击 `Libraries` 并添加 Spigot 库。
+2. **在 Projects 窗格中，右键点击 `Libraries` 并添加 Spigot 库。**
 
-**3.** 在 `org.cadenhead.minecraft` 包中创建一个名为 `IceCreamScoop` 类的空 Java 文件。
+3. **在 `org.cadenhead.minecraft` 包中创建一个名为 `IceCreamScoop` 类的空 Java 文件。**
 
 将列表 23.8 的文本内容作为 `IceCreamScoop` 类的代码。在你输入完成后将对其进行解释。
 
 **列表 23.8 `IceCreamScoop.java` 的完整内容**
 
 点击此处查看代码图片
+
+
 
 ```
 1: package org.cadenhead.minecraft;
@@ -8914,16 +8709,13 @@ mob.setHealth(0);
 /icecreamscoop 10
 ```
 
-模组可以像 Java 应用程序一样接收参数。这些参数存储在 `onCommand` 方法的第四个参数中，这是一个 `String` 数组。
+模组可以像 `Java` 应用程序一样接收参数。这些参数存储在 `onCommand` 方法的第四个参数中，这是一个 `String` 数组。
 
-名为 `radius` 的 double 类型在第 17 行创建并赋值 15 之后，以下语句将半径设置为第一个参数的值。
+名为 `radius` 的 `double` 类型在第 17 行创建并赋值 15 之后，以下语句将半径设置为第一个参数的值。
 
-`parseDouble()` 方法是 Java 标准类 `Double` 的，它可以将字符串转换为 double 值（如果这种转换是可能的）。
+`parseDouble()` 方法是 Java 标准类 `Double` 的，它可以将字符串转换为 `double` 值（如果这种转换是可能的）。
 
 为了防止输入错误，你将 `parseDouble()` 放在 `try`-`catch` 块中。当用户的值不是数字时，会抛出 `NumberFormatException`。
-
-
-
 
 利用勾股定理，你可以通过对 `xd`、`yd` 和 `zd` 进行平方并将它们相加，然后使用 `Math` 方法 `sqrt()` 获取该和的平方根来计算距离：
 
@@ -9036,10 +8828,6 @@ me.teleport(newSpot);
 
 在我编写 Java 程序和教人们如何使用这种语言的这些年里，我从未预想过我会把这些技能用在让一个僵尸骑上。
 
-
-
-
-
 ![Image](img/arrow.jpg) 使用 Spigot 的 Java 文档，创建一个 mod，生成一个在本小时内未提到过的生物（mob）。
 
 要查看实现这些活动的 Java 程序，请访问书籍的网站：[www.java24hours.com](http://www.java24hours.com)。
@@ -9049,9 +8837,13 @@ me.teleport(newSpot);
 ### 本小时的任务列表：
 
 * ![Image](img/arrow.jpg) 了解为什么创建了 Android。
+
 * ![Image](img/arrow.jpg) 创建一个 Android 应用程序。
+
 * ![Image](img/arrow.jpg) 学习 Android 应用程序的结构。
+
 * ![Image](img/arrow.jpg) 在模拟器上运行应用程序。
+
 * ![Image](img/arrow.jpg) 在 Android 手机上运行应用程序。
 
 Java 是一种通用编程语言，可以运行在各种平台之上。近年来，其中一个平台脱颖而出，并成为新 Java 开发领域极其成功的火花。
@@ -9103,17 +8895,25 @@ Android 应用程序是使用应用程序框架的普通 `Java` 程序，框架�
 要在项目中使用该 `IDE`：
 
 1. 运行 `Android Studio`。
+
 2. 在启动时出现的对话框中，选择 `Start a New Android Project`（启动新 Android 项目）。打开 `Create New Project` 向导，如图 24.1
 
 **图 24.1** 在 Android Studio 中创建新的 Android 项目。
 
 1. 在 Application Name（应用程序名称）字段中，输入 `SalutonMondo`。
+
 2. 在 Company Domain（公司域名）字段中，输入 `java24hours.com`。Package Name（包名）字段将更新为使用这些和应用程序名称，变为 `com.java24hours.salutonmondo`。
+
 3. 你可以接受默认的项目位置（用户文件夹下的 `StudioProjects` 子文件夹），或通过右侧的“...”按钮选择另一个位置。
+
 4. 点击 Next。
+
 5. 每个 Android 项目都需要一个目标平台。目标代表可以运行你的应用程序的最旧 Android 版本。选择 `Phone` 和 `Tablet` 作为目标，并将 `API 15` 作为 Minimum SDK（如果没有 API 15）。
+
 6. 点击 Next。向导询问要创建的活动。选择 `Fullscreen` 并点击 Next。
+
 7. 在 Activity Name（活动名称）字段中，输入 `SalutonActivity`。这更改了 Layout 和 Title 字段。保留这些更改。
+
 8. 点击 Finish。新应用程序被创建，包中出现了 `SalutonMondo` 项目。
 
 #### 探索新的 Android 项目
@@ -9126,6 +8926,8 @@ Android 应用程序是使用应用程序框架的普通 `Java` 程序，框架�
 
 **图 24.2** 查看 Android 项目的组成部分。
 
+
+
 你可以使用文件夹探索项目的文件和结构。新的 `SalutonMondo` 应用程序包含以下组件：
 
 ![Image](img/arrow.jpg) `/java`——应用程序 `Java` 源代码的根文件夹。
@@ -9135,10 +8937,6 @@ Android 应用程序是使用应用程序框架的普通 `Java` 程序，框架�
 ![Image](img/arrow.jpg) `/res`——应用程序资源的文件夹，如字符串、数字、布局文件、图形和动画。特定资源类型有子文件夹：`layout`、`values`、`drawable` 和 `mipmap`。
 
 ![Image](img/arrow.jpg) `AndroidManifest.xml`——应用程序的主要配置文件。
-
-
-
-
 
 这些文件和文件夹构成了应用程序框架。作为一名 Android 程序员，你着的首要任务是学习如何修改框架，以便能够发现每个组件可以实现什么功能。
 
@@ -9260,30 +9058,22 @@ Android 应用可以利用设备的所有功能，例如短信消息、位置服
 
 该应用利用 Android 的电话功能来拨打电话、访问网站并在 Google Maps 中加载位置。
 
-
-
-
-
-## 1. 选择启动一个新的 Android Studio 项目（如果你没有看到此项，请通过菜单命令 `File`、`Close Project` 关闭上一个项目。）
-
+1. 选择启动一个新的 Android Studio 项目（如果你没有看到此项，请通过菜单命令 `File`、`Close Project` 关闭上一个项目）。
 2. 在 `Application Name` 字段中，输入 `Leader`。这也会自动填充到 `Project Location` 字段。
-
 3. `Company Domain` 字段应该是 `java24hours.com`。确认无误后，点击 Next（下一步）。
-
 4. 选择 `Phone and Tablet`，选择 `Minimum SDK` 值为 `API 15`（如果不可用，则选择最低值），然后点击 Next（下一步）。
-
 5. 选择 `Fullscreen Activity`；然后点击 Next（下一步）。
-
 6. 在 `Activity Name` 字段中，输入 `LeaderActivity`。
-
 7. 点击 `Finish`（完成）。
 
 项目会出现在 Android Studio 的项目窗格中。
 
 ### 提示
+
 此项目涵盖了大量内容。在学习过程中，你会发现保持浏览器打开并在 Android 开发者网站的参考部分 [`developer.android.com/reference`](https://developer.android.com/reference) 会非常有帮助。你可以搜索 Android 类库中的 Java 类以及项目中的文件名以获取更多信息。
 
 ### 组织资源
+
 创建一个 Android 应用需要 Java 编程，但大部分工作是在 Android Studio 界面中完成的。当你完全熟悉 Android SDK 的功能后，无需编写单行 Java 代码即可完成大量工作。
 
 你不需要编程就能完成的一件事是创建应用程序使用的资源。每个新的 Android 项目从开始都包含几个放置资源的文件夹。要查看这些文件夹，请展开 Package Explorer 中的 `Leader` 文件夹，然后展开 `/res` 文件夹及其所有子文件夹。
@@ -9301,29 +9091,28 @@ Android 对多分辨率的支持非常方便，但这里并不是必须的。
 可以使用剪切粘贴将文件添加到资源中。打开包含这五个文件的临时文件夹，选择 `appicon.png` 并按 `Ctrl-C` 复制。在 Android Studio 中，在项目窗格中选择 `mipmap` 文件夹，右键点击并粘贴。
 
 ### 注意
+
 资源在应用程序中通过其 ID 进行标识。名称必须仅包含小写字母、数字、下划线和点。
 
 ### 配置应用程序的清单
+
 应用程序的主要配置是一个名为 `AndroidManifest.xml` 的文件。要开始编辑此文件，请双击 `res` 文件夹中的 `AndroidManifest.xml`。
 
 ### 设计用户界面
+
 应用程序的图形界面由布局组成，如文本字段、按钮等容器。应用程序的所有屏幕都保存在 `/res/layout` 文件夹中。此项目有一个 `activity_leader.xml` 文件被指定为屏幕。
-
-
-
 
 组件（Component）面板列出了屏幕上的小部件。选择 `imageButton1` 项。该按钮的属性将在属性（Properties）面板中打开。
 
-1.  向下滚动属性面板，直到看到 ID 属性。它的当前值设置为 `imageButton1`。将其更改为 `phoneButton`。
-2.  在 `On Click` 属性中，输入值 `processClicks`。（这将在下一节中解释。）
-3.  对 `imageButton2` 重复步骤 8–11，为其赋予 ID `webButton` 并将 On Click 属性设置为 `processClicks`。
-4.  对 `imageButton3` 重复步骤 8–11，为其赋予 ID `mapButton` 并将 On Click 属性设置为 `processClicks`。
-5.  点击组件树（Component Tree）中的 `LinearLayout` 项。该屏幕的属性将出现在属性面板中。
-6.  在属性面板中，点击查看所有属性链接。
-7.  点击 `Background` 的值；然后点击 `...` 按钮。资源（Resources）对话框将打开。
-
-8.  选择 `whitehouse`，并点击确定。白宫的图形将成为屏幕的背景。
-9.  点击保存按钮。
+1. 向下滚动属性面板，直到看到 ID 属性。它的当前值设置为 `imageButton1`。将其更改为 `phoneButton`。
+2. 在 `On Click` 属性中，输入值 `processClicks`。（这将在下一节中解释。）
+3. 对 `imageButton2` 重复步骤 8–11，为其赋予 ID `webButton` 并将 On Click 属性设置为 `processClicks`。
+4. 对 `imageButton3` 重复步骤 8–11，为其赋予 ID `mapButton` 并将 On Click 属性设置为 `processClicks`。
+5. 点击组件树（Component Tree）中的 `LinearLayout` 项。该屏幕的属性将出现在属性面板中。
+6. 在属性面板中，点击查看所有属性链接。
+7. 点击 `Background` 的值；然后点击 `...` 按钮。资源（Resources）对话框将打开。
+8. 选择 `whitehouse`，并点击确定。白宫的图形将成为屏幕的背景。
+9. 点击保存按钮。
 
 完成后的屏幕显示在图 24.8 中。
 
@@ -9410,9 +9199,11 @@ action = new Intent(Intent.ACTION_VIEW, Uri.parse("http://whitehouse.gov"));
 action = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=White House, Washington, DC"));
 ```
 
-`Intent()` 构造函数接受两个参数：由其中一个变量表示的动作，以及与动作关联的数据。这三个 Intent 告诉 Android 设备设置拨打白公公共线的拨号（202-456-1111）、访问 `http://whitehouse.gov` 以及加载带有“华盛顿特区白宫”地址的地图。
 
-将这三个 Intent 构造函数放在 `switch` 语句的每个 `case` 中——分别放在 `phoneButton` 块、`webButton` 块和 `mapButton` 块的注释位置。在你创建了 `Intent` 后，以下语句将执行它：
+
+`Intent()` 构造函数接受两个参数：由其中一个变量表示的动作，以及与动作关联的数据。这三个 `Intent` 告诉 Android 设备设置拨打白宫公共线的拨号（202-456-1111）、访问 `http://whitehouse.gov` 以及加载带有“华盛顿特区白宫”地址的地图。
+
+将这三个 `Intent` 构造函数放在 `switch` 语句的每个 `case` 中——分别放在 `phoneButton` 块、`webButton` 块和 `mapButton` 块的注释位置。在你创建了 `Intent` 后，以下语句将执行它：
 
 ```java
 startActivity(action);
@@ -9458,12 +9249,9 @@ void processClicks(View display) {
 }
 ```
 
-
-
-
 要运行应用，请选择 `Run`、`Run App`，并将 `SimpleAVD` 作为虚拟设备。模拟器将加载（这需要一些时间），然后会自动运行应用。
 
-模拟器并不能模拟 Android 设备可以执行的所有操作。Leader 应用中的 `Dialer`（拨号）和 `Browser`（浏览器）按钮应该正常工作，但在使用 `Maps`（地图）时可能会遇到问题。
+模拟器并不能模拟 Android 设备可以执行的所有操作。`Leader` 应用中的 `Dialer`（拨号）和 `Browser`（浏览器）按钮应该正常工作，但在使用 `Maps`（地图）时可能会遇到问题。
 
 如果你有一部适用于 `Android SDK` 的 Android 手机，并且手机已设置为调试模式，也可以在手机上运行该应用。
 
@@ -9477,17 +9265,17 @@ void processClicks(View display) {
 
 带我去见你的领袖！
 
-Leader 应用也被添加到了手机应用程序列表中，带有它自己的“带我去见你的领袖”图标。即使在你断开 USB 线后，它也会留在手机上。
+`Leader` 应用也被添加到了手机应用程序列表中，带有它自己的“带我去见你的领袖”图标。即使在你断开 USB 线后，它也会留在手机上。
 
 恭喜！世界上现在有十亿零一个 Android 应用了。
 
-**注意**
+### 注意
 
 正如你可能设想的，Android 编程的内容远比一个小时能涵盖的要多。Sams 提供了另一本书，将你在这里学到的 Java 编程并扩展为另外 24 小时的 Android 专项内容：*Sams Teach Yourself Android Application Development*（Android 应用开发），第四版，由 Carmen Delessio、Lauren Darcey 和 Shane Conder 著（ISBN 978-0-672-33739-0）。
 
 ### 总结
 
-*Sams Teach Yourself Java in 24 Hours* 的目标是帮助你熟悉编程概念，并对编写自己的程序的能力充满信心，无论这些程序是运行在桌面式电脑、Web 服务器还是手机上。Java 的一种方法有些难以掌握。（你可以随手划掉前句中的“*有些*”一词。）
+*Sams Teach Yourself Java in 24 Hours* 的目标是帮助你熟悉编程概念，并对编写自己的程序的能力充满信心，无论这些程序是运行在桌面式电脑、Web 服务器还是手机上。Java 的一种方法有些难以掌握。（你可以随手划掉前句中的“有些”一词。）
 
 随着你 Java 经验的积累，你建立的经验将变得越来越重要，因为像面向对象编程、虚拟机和安全环境等概念处于软件开发的最前沿。
 
@@ -9509,29 +9297,28 @@ Leader 应用也被添加到了手机应用程序列表中，带有它自己的�
 
 大多数 Android 编程书籍也采用 Android Studio。虽然从 NetBeans 切换到 Android Studio 需要学习曲线。
 
-
-
-
-
 从一个不完美的开始，NetBeans IDE 已经成长成为 Java 开发者领先的编程工具之一。Java 语言的创造者 James Gosling 在他的书 *NetBeans Field Guide* 中对它给予了终极信任：“我所有的 Java 开发都使用 NetBeans。”在多年来尝试了该语言可用的大多数 IDE 后，我也成了一个它的忠实支持者。
 
-NetBeans 支持 Java 语言三个版本的所有方面面，包括 Java 标准版 (JSE)、Java 企业版 (JEE) 和 Java 移动版 (JME)。它还支持 Web 应用程序开发、Web 服务和 JavaBeans。本书侧重于 JSE。
+NetBeans 支持 Java 语言三个版本的所有方面，包括 Java 标准版（JSE）、Java 企业版（JEE）和 Java 移动版（JME）。它还支持 Web 应用程序开发、Web 服务和 JavaBeans。本书侧重于 JSE。
 
 你可以从 [`netbeans.org`](https://netbeans.org) 下载适用于 Windows、Mac OS 和 Linux 的 NetBeans。该软件可以与 Java 开发工具包（JDK）捆绑下载，也可以单独下载。你必须在计算机上安装 NetBeans 和 JDK。NetBeans 提供多个版本的包，请选择支持 Java SE 的那一个。
 
 ### 注意
+
 在加载 NetBeans 网站时遇到困难？你可能正在尝试加载 [www.netbeans.org](http://www.netbeans.org)（该地址无法工作），而不是 [`netbeans.org`](https://netbeans.org)。
 
 如果你想确保下载的与本书准备时使用的 NetBeans 和 JDK 版本相同，请访问本书网站 [www.java24hours.com](http://www.java24hours.com)。点击本书的封面打开该版本的网站，然后寻找“Download JDK”和“Download NetBeans”链接。你将被引导至正确的站点。
 
 ### 创建新项目
-JDK 和 NetBeans 以以安装向导的形式下载，用于在你的系统中设置软件。你可以可以在任何喜欢的文件夹和菜单组中安装软件，但除非你有充分的理由这样做，否则最好坚持默认设置选项。
+
+JDK 和 NetBeans 以安装向导的形式下载，用于在你的系统中设置软件。你可以在任何喜欢的文件夹和菜单组中安装软件，但除非你有充分的理由这样做，否则最好坚持默认设置选项。
 
 在安装后首次运行 NetBeans 时，你会看到一个启动页，其中显示了指向演示和编程教程的链接（见图 A.1）。你可以使用 NetBeans 内置的网络浏览器在 IDE 中阅读这些内容。
 
 ![Image](img/afig01.jpg)
 
 **图 A.1**
+
 NetBeans 用户界面。
 
 一个 NetBeans 项目由一组相关的 Java 类、这些类使用的文件以及 Java 类库组成。每个项目都有自己的文件夹，你可以在 NetBeans 之外使用文本编辑器和其他编程工具对其进行探索和修改。
@@ -9541,9 +9328,10 @@ NetBeans 用户界面。
 ![Image](img/afig02.jpg)
 
 **图 A.2**
+
 新项目向导。
 
-NetBeans 可以创建多种类型的 Java 项目，但在本书中你可以专注于其中一种类型：Java Application（Java ）。
+NetBeans 可以创建多种类型的 Java 项目，但在本书中你可以专注于其中一种类型：Java Application（Java 应用程序）。
 
 对于你的第一个项目（以及书中的大部分项目），选择项目类型 Java Application 并点击 Next。向导要求你为项目选择名称和位置。
 
@@ -9552,16 +9340,18 @@ NetBeans 可以创建多种类型的 Java 项目，但在本书中你可以专�
 在 `Project Name` 文本字段中，输入 `Java24`。`Create Main Class` 复选框随输入发生变化，推荐 `java24.Java24` 为项目中的主 Java 类名。将其更改为 `Spartacus` 并点击 Finish，接受所有其他默认值。NetBeans 会创建项目及其第一个类。
 
 ### 创建新的 Java 类
+
 当 NetBeans 创建新项目时，它会设置所有必要的文件和文件夹并创建主类。图 A.3 显示了你项目中的第一个类 `Spartacus.java` 在源代码编辑器中打开。
 
 ![Image](img/afig03.jpg)
 
 **图 A.3**
+
 NetBeans 源代码编辑器。
 
 `Spartacus.java` 是一个精简的 Java 类，只包含一个 `main()` 方法。类中所有的浅灰色行都是解释该类目的和功能的注释。运行该类时，注释会被忽略。
 
-要让新类执行某些操作，请在注释 `// TODO code application logic here` 下方的的新行中添加以下代码行：
+要让新类执行某些操作，请在注释 `// TODO code application logic here` 下方的新行中添加以下代码行：
 
 ```
 System.out.println("I am Spartacus!");
@@ -9572,6 +9362,7 @@ System.out.println("I am Spartacus!");
 确保你输入的内容与显示完全一致。在你确认输入行正确并以分号结尾后，点击“Save All”工具栏按钮（或菜单命令 `File, Save All`）来保存该类。
 
 ### 注意
+
 当你输入内容时，源代码编辑器会识别你正在做什么，并弹出与 `System` 类、`out` 实例变量以及 `println()` 方法相关的有用信息。你以后会很喜欢这种帮助功能，但现在请尽力忽略它。
 
 Java 类在运行之前必须编译成一种称为字节码（bytecode）的可执行格式。NetBeans 会尝试自动编译类。你也可以通过两种方式手动编译此类：
@@ -9581,6 +9372,7 @@ Java 类在运行之前必须编译成一种称为字节码（bytecode）的可�
 ![Image](img/arrow.jpg) 在 Projects 格中右键点击 `Spartacus.java` 打开弹出菜单并选择 `Compile File`。如果 NetBeans 不允许你选择这两个选项之一，说明它已经编译了该类。
 
 ### 运行应用程序
+
 创建 Java 类 `Spartacus.java` 并成功编译后，你可以通过两种方式在 NetBeans 中运行它：
 
 ![Image](img/arrow.jpg) 从菜单选择 `Run, Run File`。
@@ -9592,13 +9384,10 @@ Java 类在运行之前必须编译成一种称为字节码（bytecode）的可�
 ![Image](img/afig04.jpg)
 
 **图 A.4**
+
 Spartacus 应用程序的输出。
 
 Java 类必须有一个 `main()` 方法才能运行。如果你尝试运行一个缺少该方法的类，NetBeans 会返回错误。
-
-
-
-
 
 当你完成对程序输出的审查后，点击窗格页签上的 X（标题为 Output – Java24 (run) 的地方）关闭输出（Output）面板。这将使源编辑器变得更大，从而显示更多行代码，这在你创建程序时非常有用。
 
@@ -9622,15 +9411,13 @@ NetBeans 源编辑器可以识别你在编写 Java 程序时遇到的大多数�
 
 将分号加回行末。警报图标会消失，你可以再次保存并运行该类。
 
-这些基础功能就是你创建和编译本书书中 Java 程序所需的所有内容。
+这些基础功能就是你创建和编译本书中 Java 程序所需的所有内容。
 
 NetBeans 的功能远不止于此，但在深入学习 IDE 之前，你应该专注于学习 Java。将 NetBeans 当作一个简单的编程项目管理器和文本编辑器来使用。编写类、标记错误，并确保能够成功编译并运行每个项目。
 
 当你准备好学习更多关于 NetBeans 的知识时，启动（Start）页提供了学习如何使用它的资源。Oracle 还在 [`netbeans.org/kb`](https://netbeans.org/kb) 提供了培训和文档资源。
 
-## 附录 B
-
-#### 接下来去向哪里：Java 资源
+## 附录 B：接下来去向哪里：Java 资源
 
 读完这本书后，你可能会想知道可以去哪里提升你的 Java 编程技能。本附录列了一些你可以用来扩展 Java 知识的书籍、网站、互联网讨论站点和其他资源。
 
@@ -9643,6 +9430,8 @@ Sams Publishing 和其他出版商提供了几本实用的 Java 编程书籍，�
 ![Image](img/arrow.jpg) *Java Phrasebook*，Timothy R. Fisher 著。ISBN 0-67232-907-7。这是一份包含 100 多个代码片段的集合，供你自己的 Java 项目使用，由专业程序员和 *Java Developer’s Journal* 贡献编写。
 
 ![Image](img/arrow.jpg) *Agile Java Development with Spring, Hibernate and Eclipse*，Anil Hemrajani 著。ISBN 0-672-3289-8。这是一本关于 Java 企业版的书籍，展示了如何使用 Spring 框架、Hibernate 库和 Eclipse IDE 来降低企业应用编程的复杂性。
+
+
 
 ![Image](img/arrow.jpg) *Android How to Program, 3rd Edition*，Paul and Harvey Deitel 著。ISBN 0-13-444430-2。关于手机和平板 Android 编程的广泛介绍，已针对 Android 6 版本和 Android Studio IDE 更新。读这本书的读者将学习如何创建八个应用。
 
@@ -9682,7 +9471,7 @@ Oracle 站点最实用的部分也许是 Java 类库中每个类、变量和方�
 
 ### Slashdot
 
-技术新闻站点 Slashdot 自 1997 年以来程序员和其他计算机行业专业人士的首选之地。该网站将用户提交的最佳故事放到首页，并允许用户对评论进行排名以过滤噪音。要查看最新的 Java 相关故事，请访问 [www.slashdot.org/tag/java](http://www.slashdot.org/tag/java)。
+技术新闻站点 `Slashdot` 自 1997 年以来是程序员和其他计算机行业专业人士的首选之地。该网站将用户提交的最佳故事放到首页，并允许用户对评论进行排名以过滤噪音。要查看最新的 Java 相关故事，请访问 [www.slashdot.org/tag/java](http://www.slashdot.org/tag/java)。
 
 ### 其他 Java 博客
 
@@ -9690,13 +9479,9 @@ Oracle 站点最实用的部分也许是 Java 类库中每个类、变量和方�
 
 WordPress.Com 作为数千个博客的托管平台，将这些网站最新的 Java 相关帖子分类在 [`en.wordpress.com/tag/java`](https://en.wordpress.com/tag/java)。
 
-在 Twitter 上，你可以通过搜索标签 #java 来定位 Java 博客和新闻，地址为 [`twitter.com/search?q=%23java`](https://twitter.com/search?q=%23java)。其中一些结果是关于咖啡或 Java 岛的，而不是编程语言。
+在 Twitter 上，你可以通过搜索标签 `#java` 来定位 Java 博客和新闻，地址为 [`twitter.com/search?q=%23java`](https://twitter.com/search?q=%23java)。其中一些结果是关于咖啡或 Java 岛的，而不是编程语言。
 
 ### InformIT
-
-
-
-
 
 技术参考网站 `InformIT` 可通过 [www.informit.com](http://www.informit.com) 访问，由本书出版商提供的综合资源库。该网站设有几十个与软件开发和互联网相关的主题板块。InformIT 的 `Java` 板块包含实操文章和初学者指南。您可以直接访问 [www.informit.com/topics/topic.aspx?st=66497](http://www.informit.com/topics/topic.aspx?st=66497) 进行访问。
 
@@ -9710,7 +9495,7 @@ WordPress.Com 作为数千个博客的托管平台，将这些网站最新的 Ja
 
 ### Developer.com 目录
 
-由于 `Java` 是一种面向对象的语言，因此很容易使用其他开发者创建的资源。在开始任何重要的 `Java` 项目之前，你应该在网络上搜索可能用资源。一个很好的起点是 `Developer.com` 的 `Java` 目录。该网站列出了 `Java` 程序、资源和其他信息，访问 [www.developer.com/java](http://www.developer.com/java)。
+由于 `Java` 是一种面向对象的语言，因此很容易使用其他开发者创建的资源。在开始任何重要的 `Java` 项目之前，你应该在网络上搜索可用资源。一个很好的起点是 `Developer.com` 的 `Java` 目录。该网站列出了 `Java` 程序、资源和其他信息，访问 [www.developer.com/java](http://www.developer.com/java)。
 
 ### Java 聚会
 
@@ -9718,7 +9503,7 @@ WordPress.Com 作为数千个博客的托管平台，将这些网站最新的 Ja
 
 ### 职业机会
 
-如果你是为了学习 `Java` 并成为行业精英计划，本书附录中的几个资源设有职业机会板块。你可以查看一些 `Java` 相关的职位空缺。招聘搜索引擎 `Indeed` 有一个关于 `Java` 工作的板块。访问 [www.indeed.com/q-Java-jobs.html](http://www.indeed.com/q-Java-jobs.html) 查看程序员的最新招聘广告。另一个良好的 `Java` 程序员招聘网站是 `Dice`，它在 [www.dice.com/jobs?q=java](http://www.dice.com/jobs?q=java) 列出招聘信息。虽然它不是专门的 `Java` 职业资源，但 `CareerBuilder` 网站允许你搜索超过两个两个数据库的招聘广告，包括报纸分类广告和许多其他来源。访问 [www.careerbuilder.com](http://www.careerbuilder.com)。
+如果你是为了学习 `Java` 并成为行业精英计划，本书附录中的几个资源设有职业机会板块。你可以查看一些 `Java` 相关的职位空缺。招聘搜索引擎 `Indeed` 有一个关于 `Java` 工作的板块。访问 [www.indeed.com/q-Java-jobs.html](http://www.indeed.com/q-Java-jobs.html) 查看程序员的最新招聘广告。另一个良好的 `Java` 程序员招聘网站是 `Dice`，它在 [www.dice.com/jobs?q=java](http://www.dice.com/jobs?q=java) 列出招聘信息。虽然它不是专门的 `Java` 职业资源，但 `CareerBuilder` 网站允许你搜索超过两个数据库的招聘广告，包括报纸分类广告和许多其他来源。访问 [www.careerbuilder.com](http://www.careerbuilder.com)。
 
 如果你在阅读本书后获得了一份 `Java` 编程工作，我很想听听你的。回到本书网站使用 `Feedback` 链接联系我，或者在 Twitter 上给 `@rcade` 发消息。
 
@@ -9754,11 +9539,13 @@ WordPress.Com 作为数千个博客的托管平台，将这些网站最新的 Ja
 
 ### 运行程序的问题
 
-当你在 `Android Studio` 中进行 Android 项目并想要运行程序时，可以选择菜单命令 `Run`。该命令会打开一个 `Choose Device` 对话框，要求选择执行程序的设备。如果设备通过 USB 线连接到你的电脑，它可以是真实的手机或平板电脑。设备也可以是 Android 模拟器。`Android Studio` 中的 Android 模拟器可以像运行移动操作系统的实际手机和平电脑。可以为多个 Android 设备设置虚拟设备。
+当你在 `Android Studio` 中进行 Android 项目并想要运行程序时，可以选择菜单命令 `Run`。该命令会打开一个 `Choose Device` 对话框，要求选择执行程序的设备。如果设备通过 USB 线连接到你的电脑，它可以是真实的手机或平板电脑。设备也可以是 Android 模拟器。`Android Studio` 中的 Android 模拟器可以像运行移动操作系统的实际手机和平板电脑。可以为多个 Android 设备设置虚拟设备。
 
 某些用户在首次用 `Android Studio` 中的模拟器运行 Android 应用时遇到问题。模拟器会带有这条不详的消息崩溃：
 
+```
 output ![Image](img/arrow1.jpg) 点击此处查看代码图像 ：x86 仿真目前需要硬件加速！请确保已正确安装并可以使用 Intel HAXM。CPU 加速状态：HAX 内核模块未安装！
+```
 
 此错误发生在 Windows 电脑上，表示它们需要一个来自 Intel 的名为硬件加速执行管理器（HAXM）的硬件加速程序才能工作。程序可以通过 `Android Studio` 下载，但你必须在 IDE 外安装它。
 
@@ -9768,17 +9555,13 @@ HAXM 只安装在带有 Intel 处理器的电脑上。此附录解决了 `Androi
 
 在你运行 `Android Studio` 时，可以下载 HAXM 并将其添加到 Android SDK。点击 `Android Studio` 工具栏中的 `SDK Manager` 按钮，如图 D.1 所示。
 
-
-
-
-
 ![Image](img/dfig01.jpg)
 
 **图 D.1**
 
 运行 Android SDK Manager。
 
-SDK Manager 用于通过其他版本的 Android 和实用的 SDK 工具来增强 SDK。点击 `SDK Tools` 选项卡将其置于顶层。
+`SDK Manager` 用于通过其他版本的 Android 和实用的 SDK 工具来增强 SDK。点击 `SDK Tools` 选项卡将其置于顶层。
 
 SDK 可用工具将列出来，你已安装的工具旁边会有一个勾选标记。寻找 `Intel x86 Emulator Accelerator (HAXM Installer)` 这一项。
 
@@ -9808,7 +9591,7 @@ Android Studio 将下载 `HAXM` 并报告其进度。如果安装正确，你就
 
 该文件夹包含一个名为 `intelhaxm-android.exe` 的程序。这就是 `HAXM` 安装程序。
 
-`HAXM` 需要配备 Intel 器的电脑、1G 磁盘空间以及 Windows 7 或更高版本，或者 64 位的 Mac OS X 10.8 到 10.11 版本。该文件夹中一个名为 `Release Notes.txt` 的文本文件包含了软件要求的详细信息。
+`HAXM` 需要配备 Intel 处理器的电脑、1G 磁盘空间以及 Windows 7 或更高版本，或者 64 位的 Mac OS X 10.8 到 10.11 版本。该文件夹中一个名为 `Release Notes.txt` 的文本文件包含了软件要求的详细信息。
 
 在查看发布说明文件后，如果你准备好安装 `HAXM`，请运行程序 `intelhaxm-android.exe`。安装程序将检查你的电脑是否可以运行 `HAXM`，如果不能运行将退出。
 
@@ -9822,7 +9605,7 @@ Android Studio 将下载 `HAXM` 并报告其进度。如果安装正确，你就
 
 完成后，加载 Android Studio 并通过选择 `Run`、`Run App` 再次尝试运行你的 Android 应用程序。
 
-该程序将在模拟器中运行。Android 模拟器看起来像手机手机，在加载时会显示“Android”启动屏幕，然后运行程序。图 D.3 显示了 `SalutonMondo` 应用程序成功运行时的样子。
+该程序将在模拟器中运行。Android 模拟器看起来像手机，在加载时会显示“Android”启动屏幕，然后运行程序。图 D.3 显示了 `SalutonMondo` 应用程序成功运行时的样子。
 
 ![Image](img/dfig03.jpg)
 
@@ -9830,7 +9613,7 @@ Android Studio 将下载 `HAXM` 并报告其进度。如果安装正确，你就
 
 成功！模拟器加载并运行了应用程序。
 
-如果运行成功，你就可以回到第 24 节 了。
+如果运行成功，你就可以回到第 24 节了。
 
 如果失败并出现相同的错误信息，要求你“确保 Intel HAXM 已正确安装并可用”，那么还有一点你可以检查。然而，这需要检查你电脑的 BIOS 设置并对其进行更改。
 
@@ -9860,15 +9643,17 @@ BIOS 是在你打开 Windows 电脑时控制电脑的软件，负责启动电脑
 
 如果你在 BIOS 中启用 `Intel Virtualization Technology` 并保存更改，你的电脑应该就能运行 `HAXM`，模拟器问题也应该得到解决。
 
-##附录 E：解决 NetBeans 中包不可可见的错误
+## 附录 E：解决 NetBeans 中包不可见的错误
 
 Java 9 引入的最有趣的功能之一是模块（modules），它们允许 Java 程序标明它们使用了 Java 类库的哪些部分。
 
 ### 添加模块信息
 
-Java 类库包含数百个包。其中一小部分只有在添加了相应的模块后才可用。如果你尝试 `import` 一个位于可用模块中的类或类组，`import` 语句将导致错误。
 
-模块是在名为 `module-info` 的 Java 类中设置的（也就是说，一个完全没有 `package` 语句的类）。
+
+Java 类库包含数百个包。其中一小部分只有在添加了相应的模块后才可用。如果你尝试`import`一个位于可用模块中的类或类组，`import`语句将导致错误。
+
+模块是在名为`module-info`的 Java 类中设置的（也就是说，一个完全没有`package`语句的类）。
 
 ```java
 module Java24 {
@@ -9876,15 +9661,11 @@ module Java24 {
 }
 ```
 
+在`{`和`}`波浪括号内的`module`块中，`requires`关键字后面跟着模块名`jdk.incubator.httpclient`。如果你的项目需要不同的模块，请编辑此语句以反映。
 
+一个项目可以有多个`requires`语句。
 
-
-
-在 `{` 和 `}` 波浪括号内的 `module` 块中，`requires` 关键字后面跟着模块名 `jdk.incubator.httpclient`。如果你的项目需要不同的模块，请编辑此语句以反映。
-
-一个项目可以有多个 `requires` 语句。
-
-当保存 `module-info.java` 文件后，模块（或多个模块）中的类就可以被项目中的任何 Java 程序使用。添加该模块中包的 `import` 语句不会报错，程序可以被编译和运行。
+当保存`module-info.java`文件后，模块（或多个模块）中的类就可以被项目中的任何 Java 程序使用。添加该模块中包的`import`语句不会报错，程序可以被编译和运行。
 
 ## 索引
 
@@ -9921,18 +9702,18 @@ module Java24 {
 ### 2D 图形
 
 - 颜色
-    - 自定义颜色，327
-    - 设置，326–327
-    - 字体，325–326
-    - 线条，328–329
+  - 自定义颜色，327
+  - 设置，326–327
+  - 字体，325–326
+  - 线条，328–329
 - 饼图
-    - `PieFrame` 类，336–338
-    - `PiePanel` 类，331–336
-    - `PieSlice` 类，333
+  - `PieFrame` 类，336–338
+  - `PiePanel` 类，331–336
+  - `PieSlice` 类，333
 - 形状
-    - 弧，330–331, 339
-    - 椭圆和圆，330
-    - 矩形，329–330
+  - 弧，330–331, 339
+  - 椭圆和圆，330
+  - 矩形，329–330
 
 ### A
 
@@ -9950,406 +9731,287 @@ module Java24 {
 - 《丁丁历险》，96
 - 分配内存，155
 - Android
-    - Android 应用，375
-    - AVD (Android 设备)，382–383
-    - 创建，377–378, 380
-    - 设计，385–386
-    - Java 代码，390–395
-    - Manifest 文件，387
-    - 项目组件，378–380
-    - 资源，386–387
-    - 运行，383–385
-    - 用户界面，388–390
-    - Android Studio，413
-    - 优势，396
-    - BIOS 设置，417–418
-    - HAX (硬件执行管理器)
+  - Android 应用，375
+  - AVD (Android 设备)，382–383
+  - 创建，377–378, 380
+  - 设计，385–386
+  - Java 代码，390–395
+  - Manifest 文件，387
+  - 项目组件，378–380
+  - 资源，386–387
+  - 运行，383–385
+  - 用户界面，388–390
+  - Android Studio，413
+  - 优势，396
+  - BIOS 设置，417–418
+  - HAX (硬件执行管理器)
     - 在 Android Studio 中安装，414–415
     - 在电脑上安装，415–417
-    - 运行应用程序，413–414
-    - AndroidManifest.xml 文件，380
-    - 注解，162
-    - 匿名内部类，234
-    - 往南极，24
-    - Apache 项目，45
-    - App stores，32
-    - `append()` 方法，208
-    - Applet，37
-    - 应用程序。参见 Minecraft mods
-    - 分配内存给，155
-    - Android 应用。参见 Android
-    - 战斗点，177–179
-    - 基准测试，107–108
-    - BlankFiller，43–45
-    - 计算器，189
-    - 目录，223–225
-    - 钟，91–94
-    - ColorFrame，230–232
-    - 商品，89
-    - 编译，20
-    - 组件的，6–7
-    - Configurator，303–305
-    - ConfigWriter，300–301
-    - Console，297–299
-    - 创建，41–43
-    - 鸣谢，78–80
-    - 危机，260–261
-    - 调试，8–9, 20–22
-    - 定义，17
-    - 骰子，47–48
-    - 教育类应用，30–31
-    - 厨房里的 Food Network，32–33
-    - FreeFrame，255–256
-    - FreePanel，251–254
-    - GremlinLab，152–154
-    - 它们的工作原理，7–8
-- ID33Reader，295–296
-- ImageDownloader，315–317
+  - 运行应用程序，413–414
+- `AndroidManifest.xml` 文件，380
+- 注解，162
+- 匿名内部类，234
+- 往南极，24
+- Apache 项目，45
+- App stores，32
+- `append()` 方法，208
+- Applet，37
+- 应用程序。参见 Minecraft mods
+- 分配内存给，155
+- Android 应用。参见 Android
+- 战斗点，177–179
+- 基准测试，107–108
+- BlankFiller，43–45
+- 计算器，189
+- 目录，223–225
+- 钟，91–94
+- ColorFrame，230–232
+- 商品，89
+- 编译，20
+- 组件的，6–7
+- Configurator，303–305
+- ConfigWriter，300–301
+- Console，297–299
+- 创建，41–43
+- 鸣谢，78–80
+- 危机，260–261
+- 调试，8–9, 20–22
+- 定义，17
+- 骰子，47–48
+- 教育类应用，30–31
+- 厨房里的 Food Network，32–33
+- FreeFrame，255–256
+- FreePanel，251–254
+- GremlinLab，152–154
+- 它们的工作原理，7–8
+- `ID33Reader`，295–296
+- `ImageDownloader`，315–317
 - ISS 探测器，33–34
 - JSoko，36
-
-
-
-
-
-`LottoMadness`, 265–270, 285–288
-
-`ModemTester`, 137–138
-
-`NameSorter`, 117–118
-
-`NewCalculator`, 191–192
-
-`NewColorFrame`, 232–233
-
-`NewRoot`, 134–135
-
-`Nines`, 101–102
-
-`NumberDivider`, 192–193
-
-`PageCatalog`, 198–200
-
-`PlanetWeight`, 65
-
-`Playback`, 243
-
-`PrimeFinder`, 205–208
-
-`Realtime Stock Quotes`, 34–35
-
-requirements for, 13–14
-
-`Root`, 41–43
-
-running, 22, 404
-
-in Android Studio, 413–414
-
-in NetBeans IDE, 404
-
-`Saluton application`, 22
-
-threaded applications, 212
-
-`Saluton`. *See* Salutor
-
-`SalutonFrame`, 241
-
-`SalutonVerkisto`, 319–321
-
-saving, 19–20
-
-sending arguments to, 43–45
-
-`ServerCheck`, 312–314
-
-slowing down, 204
-
-`StringLister`, 166–167
-
-`Variable`, 56
-
-`Wheel`, 119–121
-
-writing, 14
-
-blocks, 17–18
-
-class statement, 16
-
-comments, 17–18
-
-main statement, 17
-
-New File Wizard, 14–16
-
-variables, 18–19
-
-`Arc2D.Float class`, 330–331
-
-`Archimedes`, 171
-
-`arcs`, 330–331, 339
-
-arguments method, 146–147
-
-sending to applications, 43–45
-
-`arithmetic operators`, 60–61
-
-`array index out of bounds error`, 114
-
-`ArrayIndex class`, 188
-
-`ArrayList class`, 164–165, 174–179
-
-`arrays`, 111–113
-
-in applications, 113
-
-adding objects to, 174
-
-Battlepoint application, 177–179
-
-creating, 174
-
-finding objects in, 176
-
-looping through, 166–167
-
-removing objects from, 175
-
-storing objects in, 164–165, 174–179
-
-`declaring`, 112–113
-
-definition of, 112
-
-initial values, 113
-
-`multidimensional`, 115–116, 122
-
-sorting, 116–118
-
-`Wheel application example`, 119–121
-
-`asByteArray() method`, 312
-
-`ASCII character set`, 121
-
-`asFile() method`, 312, 315
-
-`assigning variable types`, 54
-
-`boolean`, 57–58
-
-`byte`, 56
-
-`char`, 55–56
-
-`float`, 54–55
-
-`int`, 54–55
-
-`long`, 56–57
-
-`short`, 56
-
-`string`, 55–56
-
-`asterisk (*)`, 61
-
-`ATP Word Tour tennis rankings`, 155–156
-
-`attributes`
-
-definition of, 126
-
-inheritance, 160–161
-
-`autoboxing`, 133
-
-`autodialers`, 127–128
-
-`AVD (Android Virtual Device)`, 382–383
-
-`AWT (Abstract Window Toolkit)`, 237–238, 256–257
-
-`backslash (\)`, 73, 293
-
-`Bailey, Tom`, 96
-
-`BASIC`, 4, 11
-
-`Battlepoint application`, 177–179
-
-`beans`, 164
-
-`behavior`. *See also* methods
-
-creating with methods, 144
-
-definition of, 126
-
-inheritance, 160–161
-
-`Belichick, Bill`, 122
-
-`Bell Laboratories`, 5
-
-`Benchmark application`, 107–108
-
-`Berners-Lee, Tim`, 322
-
-`binary values, integers`, 67
-
-`BIOS settings`, 417–418
-
-`blank spaces`, 23–24
-
-`BlankFiller application`, 43–45
-
-`blocks`
-
-definition of, 17–18, 53
-
-in if statements, 85–87
-
-`try-catch`, 189–192
-
-`try-catch-finally`, 194
-
-`blogs`
-
-`WordPress.com`, 409
-
-`Workbench`, 409
-
-`BodyHandler class`, 311
-
-`BodyProcessor class`, 318
-
-`book recommendations`, 407–408
-
-`Boole, George`, 58
-
-`boolean variables`, 57–58
-
-`BorderLayout class`, 261–262
-
-`BoxLayout class`, 263–264
-
-`braces ({ })`, 88, 95, 112–113, 148
-
-`brackets ([ ])`, 112
-
-`break statement`, 88, 95, 104–105
-
-`British monarchy, line of succession to`, 51
-
-`browse() method`, 213
-
-`buffered input streams`, 297–299
-
-`bugs`, 8. *See also* debugging
-
-`build() method`, 311
-
-`built-in methods`, 155
-
-`Burtt, Ben`, 396
-
-`buttons`, 242–245
-
-
-
-
-
-### `Byte class`, 305
-### `byte variable type`, 56
-### `bytecode`, 292
-### `bytes`, 305
+- `LottoMadness`，265–270, 285–288
+- `ModemTester`，137–138
+- `NameSorter`，117–118
+- `NewCalculator`，191–192
+- `NewColorFrame`，232–233
+- `NewRoot`，134–135
+- `Nines`，101–102
+- `NumberDivider`，192–193
+- `PageCatalog`，198–200
+- `PlanetWeight`，65
+- `Playback`，243
+- `PrimeFinder`，205–208
+- `Realtime Stock Quotes`，34–35
+- requirements for，13–14
+- `Root`，41–43
+- running，22, 404
+  - in Android Studio，413–414
+  - in NetBeans IDE，404
+- `Saluton application`，22
+- threaded applications，212
+- `Saluton`。*See* Salutor
+- `SalutonFrame`，241
+- `SalutonVerkisto`，319–321
+- saving，19–20
+- sending arguments to，43–45
+- `ServerCheck`，312–314
+- slowing down，204
+- `StringLister`，166–167
+- `Variable`，56
+- `Wheel`，119–121
+- writing，14
+- blocks，17–18
+- class statement，16
+- comments，17–18
+- main statement，17
+- New File Wizard，14–16
+- variables，18–19
+- `Arc2D.Float class`，330–331
+- `Archimedes`，171
+- `arcs`，330–331, 339
+- arguments method，146–147
+- sending to applications，43–45
+- `arithmetic operators`，60–61
+- `array index out of bounds error`，114
+- `ArrayIndex class`，188
+- `ArrayList class`，164–165, 174–179
+- `arrays`，111–113
+  - in applications，113
+  - adding objects to，174
+  - Battlepoint application，177–179
+  - creating，174
+  - finding objects in，176
+  - looping through，166–167
+  - removing objects from，175
+  - storing objects in，164–165, 174–179
+  - `declaring`，112–113
+  - definition of，112
+  - initial values，113
+  - `multidimensional`，115–116, 122
+  - sorting，116–118
+  - `Wheel application example`，119–121
+- `asByteArray() method`，312
+- `ASCII character set`，121
+- `asFile() method`，312, 315
+- `assigning variable types`，54
+  - `boolean`，57–58
+  - `byte`，56
+  - `char`，55–56
+  - `float`，54–55
+  - `int`，54–55
+  - `long`，56–57
+  - `short`，56
+  - `string`，55–56
+- `asterisk (*)`，61
+- `ATP Word Tour tennis rankings`，155–156
+- `attributes`
+  - definition of，126
+  - inheritance，160–161
+- `autoboxing`，133
+- `autodialers`，127–128
+- `AVD (Android Virtual Device)`，382–383
+- `AWT (Abstract Window Toolkit)`，237–238, 256–257
+- `backslash (\)`，73, 293
+- `Bailey, Tom`，96
+- `BASIC`，4, 11
+- `Battlepoint application`，177–179
+- `beans`，164
+- `behavior`。*See also* methods
+  - creating with methods，144
+  - definition of，126
+  - inheritance，160–161
+- `Belichick, Bill`，122
+- `Bell Laboratories`，5
+- `Benchmark application`，107–108
+- `Berners-Lee, Tim`，322
+- `binary values, integers`，67
+- `BIOS settings`，417–418
+- `blank spaces`，23–24
+- `BlankFiller application`，43–45
+- `blocks`
+  - definition of，17–18, 53
+  - in if statements，85–87
+  - `try-catch`，189–192
+  - `try-catch-finally`，194
+- `blogs`
+  - `WordPress.com`，409
+  - `Workbench`，409
+- `BodyHandler class`，311
+- `BodyProcessor class`，318
+- `book recommendations`，407–408
+- `Boole, George`，58
+- `boolean variables`，57–58
+- `BorderLayout class`，261–262
+- `BoxLayout class`，263–264
+- `braces ({ })`，88, 95, 112–113, 148
+- `brackets ([ ])`，112
+- `break statement`，88, 95, 104–105
+- `British monarchy, line of succession to`，51
+- `browse() method`，213
+- `buffered input streams`，297–299
+- `bugs`，8。*See also* debugging
+- `build() method`，311
+- `built-in methods`，155
+- `Burtt, Ben`，396
+- `buttons`，242–245
+
+### `Byte class`
+
+305
+
+### `byte variable type`
+
+56
+
+### `bytecode`
+
+292
+
+### `bytes`
+
+305
 
 ## C
 
 ### C++5
-- `CableModem class`, 136
-- `Calculator application`, 189
-- `CareerBuilder`, 410
-- `case sensitivity`, 58, 67
+
+- `CableModem class`，136
+- `Calculator application`，189
+- `CareerBuilder`，410
+- `case sensitivity`，58, 67
 - `casting`
-- objects, 131, 132–135
-- autoboxing, 133
-- source/destination, 131
-- unboxing, 133
-- variables, 131–132
-- `Catalog application`, 223–225
+  - objects，131, 132–135
+  - autoboxing，133
+  - source/destination，131
+  - unboxing，133
+  - variables，131–132
+- `Catalog application`，223–225
 - `catch statement`
-- `final keyword`, 196
-- try-catch blocks, 189–192
-- try-catch-finally blocks, 194
-- `catching exceptions. See exceptions`
-- `CERN (European Organization for Nuclear Research)`, 318, 322
-- `char variable type`, 55–56
-- `char variables`, 55–56
-- *Charlie and the Chocolate Factory* (Dahl), 271
+  - `final keyword`，196
+  - try-catch blocks，189–192
+  - try-catch-finally blocks，194
+- `catching exceptions`。See exceptions
+- `CERN (European Organization for Nuclear Research)`，318, 322
+- `char variable type`，55–56
+- `char variables`，55–56
+- *Charlie and the Chocolate Factory* (Dahl)，271
 - `check boxes`
-- creating, 246–247
-- event handling, 276
-- `checkCreator() method`, 151
-- *cheese, saying for photographs*, 339
-- `circles`, 330
-- `.class filename extension`, 24
-- `class hierarchy`, 130
-- `class methods. See methods`
-- `class statement`, 16
-- `classes. See also arrays; methods`
-- `Arc2D.Float`, 330–331
-- `ArrayIndexOutOfBounds Exception`, 188
-- `ArrayList`, 164–165, 174–179
-- beans, 164
-- `BodyHandler`, 311
-- `BodyProcessor`, 318
-- `BorderLayout`, 261–262
-- `BoxLayout`, 263–264
-- `Byte`, 305
-- `CableModem`, 136
-- class methods, 148
-- class variables, 141–144
-- `Color`, 326–327
-- creating, 128–129, 402–404
-- definition of, 126
-- documentation, 408
-- `dslem`, 137
-- `Ellipse2D.Float`, 330
-- encapsulation, 146
-- `ErrorCorrection`, 129–130
-- `File`, 292–293
-- `FileInputStream`, 293
-- `FileOutputStream`, 299
-- `FlowLayout`, 243, 256, 259–261
-- `Font`, 325–326
-- `Gremlin`, 141–144, 152–153
-- `GridLayout`, 261–262
-- `HashMap`, 180–183
-- helper classes, 149–151
-- `HomePage`, 197–198
-- `HttpClient`, 311
-- `HttpHeaders`, 312
-- `IndexOutOfBoundsException`, 197
-- attributes, 160–161
-- behavior, 160–161
-- establishing, 161–162
-- multiple inheritance, 139
-- power of, 159–160
-- inner classes, 149–151, 221–225
-- anonymous inner classes, 225–228, 234
-- `Catalog application example`, 223–225
-- declaring, 222
-- example of, 222–223
-- `InputStreamReader`, 159–160
-- `Insets`, 264–265
+  - creating，246–247
+  - event handling，276
+- `checkCreator() method`，151
+- *cheese, saying for photographs*，339
+- `circles`，330
+- `.class filename extension`，24
+- `class hierarchy`，130
+- `class methods`。See methods
+- `class statement`，16
+- `classes`。See also arrays; methods
+  - `Arc2D.Float`，330–331
+  - `ArrayIndexOutOfBounds Exception`，188
+  - `ArrayList`，164–165, 174–179
+  - beans，164
+  - `BodyHandler`，311
+  - `BodyProcessor`，318
+  - `BorderLayout`，261–262
+  - `BoxLayout`，263–264
+  - `Byte`，305
+  - `CableModem`，136
+  - class methods，148
+  - class variables，141–144
+  - `Color`，326–327
+  - creating，128–129, 402–404
+  - definition of，126
+  - documentation，408
+  - `dslem`，137
+  - encapsulation，146
+  - `ErrorCorrection`，129–130
+  - `File`，292–293
+  - `FileInputStream`，293
+  - `FileOutputStream`，299
+  - `FlowLayout`，243, 256, 259–261
+  - `Font`，325–326
+  - `Gremlin`，141–144, 152–153
+  - `GridLayout`，261–262
+  - `HashMap`，180–183
+  - helper classes，149–151
+  - `HomePage`，197–198
+  - `HttpClient`，311
+  - `HttpHeaders`，312
+  - `IndexOutOfBoundsException`，197
+  - attributes，160–161
+  - behavior，160–161
+  - establishing，161–162
+  - multiple inheritance，139
+  - power of，159–160
+  - inner classes，149–151, 221–225
+  - anonymous inner classes，225–228, 234
+  - `Catalog application example`，223–225
+  - declaring，222
+  - example of，222–223
+  - `InputStreamReader`，159–160
+  - `Insets`，264–265
+
+
+
 - `Java Class Library`, 45–49
 - `JButton`, 242–244
 - `JCheckBox`, 246–248
@@ -10395,20 +10057,18 @@ in if statements, 85–87
 - closures, 229–233
 - colon (:), 90, 106
 
-
-
-
-
 ### 设置, 326–327
 
 ### 组合框
+
 - 创建, 247–248
 - 事件处理, 276
 
 ## Come On and Gettit.mp3, 295–297
 
 ## 注释
-- // 注释符号, 17–18
+
+- `//` 注释符号, 17–18
 - 注解, 162
 
 ## 商品化应用, 89
@@ -10426,10 +10086,12 @@ in if statements, 85–87
 ## 组件。另请参见事件处理；布局管理器
 
 ## 复选框
+
 - 创建, 246–247
 - 事件处理, 276
 
 ### 组合框
+
 - 创建, 247–248
 - 事件处理, 276
 - 启用/禁用, 278–279
@@ -10446,21 +10108,23 @@ in if statements, 85–87
 ## 字符串拼接, 74
 
 ## 条件条件语句
+
 - 块, 85–87
 - 钟应用示例, 91–94
 - 定义, 83
 - 等于运算符 (`==`), 85
 - 大于运算符 (`>`), 84–85
 - 大于等于运算符 (`>=`), 84
-- if, 84, 95
-- if-else, 87
+- `if`, 84, 95
+- `if-else`, 87
 - 不等于运算符 (`!=`), 85
 - 小于运算符 (`<`), 84–85
 - 小于等于运算符 (`<=`), 84
-- switch, 87–89
+- `switch`, 87–89
 - 三元运算符 (`?`), 90
 
 ## 配置
+
 - BIOS 设置, 417–418
 - 配置属性，读取/写入, 302–305
 - Minecraft 服务器, 342–343
@@ -10475,6 +10139,7 @@ in if statements, 85–87
 - `continue` 语句, 104–105
 
 ## 转换
+
 - 对象, 131, 132
 - 自动装箱, 133
 - 源/目标, 131
@@ -10487,6 +10152,7 @@ in if statements, 85–87
 - `createTempFile()`, 315
 
 ## 创建
+
 - Android 应用, 377–378, 380–381
 - 数组列表, 174
 - 类, 128–129, 402–404
@@ -10514,6 +10180,7 @@ in if statements, 85–87
 ## Crete, Baptiste, 156
 
 ## Crisis 应用, 260–261
+
 - `currentThread()`, 212
 - `currentTimeMillis()`, 108
 
@@ -10522,11 +10189,15 @@ in if statements, 85–87
 ## 自定义颜色，创建, 327
 
 ## D
+
 ## Dahl, Roald, 271
+
 ## Dancing with the Stars, 1
+
 ## 数据，发布到网络, 317–321
 
 ### 数据结构
+
 - 数组列表, 174–179
 - 哈希映射, 180–183
 
@@ -10537,6 +10208,7 @@ in if statements, 85–87
 ## Saluton 应用, 20–22
 
 ## 声明。另请参见创建
+
 - 数组, 112–113
 - 类, 128–129
 - 匿名内部类, 225
@@ -10545,15 +10217,15 @@ in if statements, 85–87
 - 对象, 135–138
 - 变量, 54, 141–144
 - 布尔型, 57–58
-- byte, 56
-- char, 55–56
-- float, 54–55
-- int, 54–55
-- long, 56–57
-- short, 56
-- string, 55–56
+- `byte`, 56
+- `char`, 55–56
+- `float`, 54–55
+- `int`, 54–55
+- `long`, 56–57
+- `short`, 56
+- `string`, 55–56
 
-## 递减 (--) 运算符, 61–63
+## 递减 (`--`) 运算符, 61–63
 
 ## 递递变量, 61–62
 
@@ -10562,6 +10234,7 @@ in if statements, 85–87
 ### `delete()` 方法, 293
 
 ### 删除
+
 - Minecraft 世界, 372–373
 - 从数组列表中删除对象, 175
 
@@ -10569,13 +10242,10 @@ in if statements, 85–87
 
 ## 设计 Android 应用, 385–386
 
-
-
-
-
 # Developer.com, 410
 
 ## development
+
 - Android 开发, 375–376
 - Java 开发, 5, 29–30
 
@@ -10588,6 +10258,7 @@ in if statements, 85–87
 ## 除法运算符 (`/`), 60
 
 ## documentation
+
 - 内置方法, 155
 - 类, 408
 - Java 类库, 45
@@ -10597,20 +10268,23 @@ in if statements, 85–87
 ### do-while 循环, 103–104
 
 ### 下载
+
 - 从网络下载文件, 314–317
 - NetBeans IDE, 399
 
 ## `draw()` 方法, 328
 
 ### 绘制
+
 - 弧形, 330–331, 339
 - 椭圆和圆, 330
 - 线, 328–329
 
 ### 饼图
-- PieFrame 类, 336–338
-- PiePanel 类, 331–336
-- PieSlice 类, 333
+
+- `PieFrame` 类, 336–338
+- `PiePanel` 类, 331–336
+- `PieSlice` 类, 333
 - 形, 329–330
 
 ## `drawString()` 方法, 328
@@ -10618,6 +10292,7 @@ in if statements, 85–87
 ## `DslModem` 类, 137
 
 ### E
+
 - *Eccentric Soul*, 296
 - Eclipse, 9
 - 教育性应用, 30–31
@@ -10708,14 +10383,10 @@ in if statements, 85–87
 - 读取配置属性, 302–305
 - 从流读取, 293–297
 - 从网络保存, 314–317
-- SiameseCat.jar, 354
-- spigotserver.jar, 342
+- `SiameseCat.jar`, 354
+- `spigotserver.jar`, 342
 - 写入配置属性, 302–305
 - 写入流, 299–301
-
-
-
-
 
 # `fill()` 方法, 328, 329
 
@@ -10735,7 +10406,7 @@ in if statements, 85–87
 
 ### `Font` 类, 325–326
 
-# `FontMapper` , 182–183
+# `FontMapper`, 182–183
 
 ### 字体, 325–326
 
@@ -10747,7 +10418,7 @@ in if statements, 85–87
 
 ## 语法, 99–102
 
-# 正斜杠 (/), 60
+# 正斜杠 (`/`), 60
 
 # Fox, Michael J. 289
 
@@ -10839,7 +10510,7 @@ in if statements, 85–87
 
 ## `Graphics2D` 类, 328
 
-## 大于运算符 (>), 84–85
+## 大于运算符 (`>`), 84–85
 
 # 绿湾 Packers, 109
 
@@ -10873,727 +10544,486 @@ in if statements, 85–87
 
 ## 布局管理器. 见 布局管理器
 
-## 面板, 251
 
-## 文本区域, 248–250
 
-## 文本字段, 245–246
+## 面板，251
 
-## 窗口, 238–242
+## 文本区域，248–250
 
-# 事件处理. 见 事件处理
+## 文本字段，245–246
 
-## 事件处理. 见 事件处理
+## 窗口，238–242
 
-# 活跃管理器
+## 事件处理
 
-# 哈希值, 184
+见“事件处理”。
 
-# 哈希映射, 180–183
+## 活跃管理器
 
-# `HashMap` 类, 180–183
+## 哈希值，184
 
-# 费曼学习法, 费曼学习法的灵感源于诺贝尔奖获得者**理德·费曼**。
+## 哈希映射，180–183
 
-1.  运用费曼技巧，你只需花`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+## `HashMap` 类，180–183
 
-```
+## 费曼学习法
+
+费曼学习法的灵感源于诺贝尔奖获得者理德·费曼。
+
+1. 运用费曼技巧，你只需花`20 min`就能深入理解知识点，而且记忆深刻，难以遗忘。
+
+```java
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-# 费曼学习法, 235
+## 费曼学习法，235
 
-# 费曼学习法, 235
+## 包，47，289
 
-# 费曼学习法, 235
+## Inaba, Carrie Ann，11
 
-# 费曼学习法, 235
+## 自增运算符（`++`），61–63
 
-# 费曼学习法, 235
+## 变量的自增，61–62
 
-# 费曼学习法, 235
+## 孵化器，318
 
-# 费曼学习法, 235
+## `indexOf()` 方法，77–78，176
 
-# 费曼学习法, 235
+## `IndexOutOfBoundsException` 类，197
 
-# 费曼学习法, 235
+## 不等于运算符（`!=`），85
 
-# 费曼学习法, 235
+## 死循环，109
 
-# 费曼学习法, 235
+## `info()` 方法，370
 
-# 费曼学习法, 235
+## InformIT，409
 
-# 费曼学习法, 235
+## 继承，159
 
-# 费曼学习法, 235
+- 属性，160–161
+- 行为，160–161
+- 定义，129–130
+- 建立，161–162
+- 层级结构，130–131
+- 多重继承，139
+- 威力，159–160
 
-# 费曼学习法, 235
+## 初始化，109
 
-# 费曼学习法, 235
+## 内部类，149–151，221–225
 
-# 费曼学习法, 235
+- 匿名内部类，234
+- Catalog 应用程序示例，223–225
+- 声明，222
+- 示例，222–223
 
-# 费曼学习法, 235
+## 输入
 
-# 费曼学习法, 235
+响应。参见“事件处理”。
 
-# 费曼学习法, 235
+## 输入流，292
 
-# 费曼学习法, 235
+## `InputStreamReader` 类，159–160
 
-# 费曼学习法, 235
+## `Insets` 类，264–265
 
-# 费曼学习法, 235
+## 安装
 
-# 费曼学习法, 235
+- HAXM（硬件加速执行管理器）
+  - 在 Android Studio 中，414–415
+  - 在计算机上，415–417
+- Java 开发工具，10
+- NetBeans IDE，399–400
 
-# 费曼学习法, 235
+## `int` 变量类型
 
-# 费曼学习法, 235
+- 二进制值，67
+- 类型转换，131–132
+- 声明，54–55
 
-# 费曼学习法, 235
+## 整数
 
-# 费曼学习法, 235
+- 二进制值，67
+- 类型转换，131–132
+- 声明，54–55
 
-# 费曼学习法, 235
+## 集成开发环境（IDEs），9–10，146
 
-# 费曼学习法, 235
+## `intelhm-android.exe`，416
 
-# 费曼学习法, 235
+## IntelliJ IDEA，9
 
-# 费曼学习法, 235
+## `Intent()` 方法，392
 
-# 费曼学习法, 235
+## 接口
 
-# 费曼学习法, 235
+参见 GUI（图形用户界面）。
 
-# 费曼学习法, 235
+- `ActionListener`，229，274
+- Android 应用程序，388–390
+- `EventListener`，273–274
+- 函数式接口，229
+- `Runnable`，205
 
-# 费曼学习法, 235
+## 解释型语言，7，11
 
-# 费曼学习法, 235
+## `isPresent()` 方法，12
 
-# 费曼学习法, 235
+## ISS Detector，33–34
 
-# 费曼学习法, 235
+## `itemStateChanged()` 方法，284–285
 
-# 费曼学习法, 235
+## 迭代，101
 
-# 费曼学习法, 235
+## JAR（归档文件），309
 
-# 费曼学习法, 235
+## Java 类库，45–49
 
-# 费曼学习法, 235
+## Java 开发包（JDK），9
 
-# 费曼学习法, 235
+## Java 文档，23
 
-# 费曼学习法, 235
+## Java EE（企业版），38
 
-# 费曼学习法, 235
+## `.java` 扩展名，7
 
-# 费曼学习法, 235
+## Java 会议，410
 
-# 费曼学习法, 235
+## Java SE（标准版），38
 
-# 费曼学习法, 235
+## Java 虚拟机（JVM），8，31，309，345
 
-# 费曼学习法, 235
+## Java.com，408
 
-# 费曼学习法, 235
+## `java.exe` 文件，345
 
-# 费曼学习法, 235
+## `java.io` 包，46
 
-# 费曼学习法, 235
+## `/jar` 文件夹，379
 
-# 费曼学习法, 235
+## `java.time` 包，46
 
-# 费曼学习法, 235
+## `java.util` 包，46
 
-# 费曼学习法, 235
+## JavaWorld，409
 
-# 费曼学习法, 235
+## `JButton` 类，242–244
 
-# 费曼学习法, 235
+## `JCheckBox` 类，246–248
 
-# 费曼学习法, 235
+## JDK（Java 开发包），9
 
-# 费曼学习法, 235
+## `JFrame` 类，238–242
 
-# 费曼学习法, 235
+## `JLabel` 类，245–246
 
-# 费曼学习法, 235
+## 工作机会，410
 
-# 费曼学习法, 235
+## Joy, Bill，29
 
-# 费曼学习法, 235
+## `JPanel` 类，251
 
-# 费曼学习法, 235
+## `JScrollPane` 类，249
 
-# 费曼学习法, 235
+## JShell，8，49–50
 
-# 费曼学习法, 235
+## JSoko，36
 
-# 费曼学习法, 235
+## `JTextArea` 类，248–250
 
-# 费曼学习法, 235
+## `JTextField` 类，245–246
 
-# 费曼学习法, 235
+## JVM（Java 虚拟机），8，31，309，345
 
-# 费曼学习法, 235
+## `JWindow`，238–242
 
-#  曼学习法, 235
+## Katzen Kids，201
 
-# 费曼学习法, 235
+## `KeyAdapter`，229
 
-# 费曼学习法, 235
+## 键盘事件，276–278
 
-# 费曼学习法, 235
+## `keyPressed` 方法，226
 
-# 费曼学习法, 235
+## 键，180
 
-# 费曼学习法, 235
+## `keyReleased` 方法，226
 
-# 费曼学习法, 235
+## `keyTyped` 方法，226
 
-# 费曼学习法, 235
+## Key 应用程序，227–228
 
-# 费曼学习法, 235
+## `KeyListener`，227
 
-# 费曼学习法, 235
+## 关键字
 
-# 费曼学习法, 235
+- `final`，196
+- `implements`，205
+- `module`，420
+- `requires`，420
+- `super`，162–163
+- `this`，151–152，162–163
+- `throw`，194
+- `void`，45
 
-# 费曼学习法, 235
+## Klotz, “Red”，184
 
-# 费曼学习法, 235
+## Kooyman, Barbara，217–218
 
-# 费曼学习法, 235
+## `labels`，245–246
 
-# 费曼学习法, 235
+## `lambda expressions`，229–233
 
-# 费曼学习法, 235
+## `language selection`，4–5
 
-# 费曼学习法, 235
+## `language shells`，49
 
-# 费曼学习法, 235
+## Larvets，68
 
-# 费曼学习法, 235
+## 开始
 
-# 费曼学习法, 235
+参见“开始”。
 
-# 费曼学习法, 235
+## `layout managers`，259
 
-# 费曼学习法, 235
+- application layout，265–270
+- `BorderLayout`，261–262
+- `BoxLayout`，263–264
+- `FlowLayout`，259–261
+- `GridLayout`，261–262
+- `Insets`，264–265
 
-# 费曼学习法, 235
+## Leeway, Joe，96
 
-# 费曼学习法, 235
+## Legendary Sons of Crack Daniels，217
 
-# 费曼学习法, 235
+## `length()` 方法，77，293
 
-# 费曼学习法, 235
+## `length of strings, determining`，77
 
-# 费曼学习法, 235
+## 小于运算符（`<`），84–85
 
-# 费曼学习法, 235
+## 类库
 
-# 费曼学习法, 235
+Java 类库，45–49。
 
-# 费曼学习法, 235
+## 许可，知识性共享，296
 
-# 费曼学习法, 235
+## LightningStorm 项目，362–365
 
-# 费曼学习法, 235
+## `Line2D.Float` 类，328–329
 
-# 费曼学习法, 235
+## 线，绘制，328–329
 
-# 费曼学习法, 235
+## 代码行，67
 
-# 费曼学习法, 235
+## 字符串连接，74–75
 
-# 费曼学习法, 235
+## LinkRotator
 
-# 费曼学习法, 235
+- 源代码，213–216
+- 类声明，209
+- 构造函数，210
+- 异常捕获，211
+- 事件处理，213
+- 运行线程，211
+- 启动线程，211
+- 停止线程，216–217
+- 变量，209–210
 
-# 费曼学习法, 235
+## 链接，旋转，213–216
 
+## 监听器
 
+- `ActionListener` 接口，274
+- `EventListener` 接口，273–274
 
+## `listFiles()` 方法，293
 
+## 列出文件，293
 
-包, 47, 289
+## 列表
 
-Inaba, Carrie Ann, 11
+- 数组列表。参见数组、数组列表
+- 数组，循环遍历，166–167
 
-自增运算符 (++), 61–63
+## `loadURL()` 方法，197
 
-变量的自增, 61–62
+## `Location()` 方法，359
 
-孵化器, 318
+## `long` 变量类型，56–57
 
-indexOf() 方法, 77–78, 176
+## 循环，99
 
-IndexOutOfBoundsException 类, 197
+- 数组列表，166–167
+- Benchmark 应用程序示例，107–108
+- `do-while`，103–104
+- 退出，104–105
+- `for`
+  - 复杂 `for` 循环，106–107
+  - 语法，99–102
+  - 死循环，109
+  - 迭代，101
+  - 命名，105–106
+- `while`，102–103
 
-不等于运算符 (!=), 85
+## LottoEvent 应用程序，279–285
 
-死循环, 109
+## LottoMadness 应用程序，265–270，285–288
 
-info() 方法, 370
-
-InformIT, 409
-
-继承, 159
-
-属性, 160–161
-
-行为, 160–161
-
-定义, 129–130
-
-建立, 161–162
-
-层级结构, 130–131
-
-多重继承, 139
-
-威力, 159–160
-
-初始化, 109
-
-内部类, 149–151, 221–225
-
-匿名内部类, 234
-
-Catalog 应用程序示例, 223–225
-
-声明, 222
-
-示例, 222–223
-
-输入, 响应。*参见* 事件处理
-
-输入流, 292
-
-InputStreamReader 类, 159–160
-
-Insets 类, 264–265
-
-安装
-
-HAXM (硬件加速执行管理器)
-
-在 Android Studio 中, 414–415
-
-在计算机上, 415–417
-
-Java 开发工具, 10
-
-NetBeans IDE, 399–400
-
-int 变量类型
-
-二进制值, 67
-
-类型转换, 131–132
-
-声明, 54–55
-
-整数
-
-二进制值, 67
-
-类型转换, 131–132
-
-声明, 54–55
-
-集成开发环境 (IDEs), 9–10, 146
-
-intelhm-android.exe, 416
-
-IntelliJ IDEA, 9
-
-Intent() 方法, 392
-
-接口。*参见* GUI (图形用户界面)
-
-ActionListener, 229, 274
-
-Android 应用程序, 388–390
-
-EventListener, 273–274
-
-函数式接口, 229
-
-Runnable, 205
-
-解释型语言, 7, 11
-
-isPresent() 方法, 12
-
-ISS Detector, 33–34
-
-itemStateChanged() 方法, 284–285
-
-迭代, 101
-
-JAR (归档文件, 309
-
-Java 类库, 45–49
-
-Java 开发包 (JDK), 9
-
-Java 文档, 23
-
-Java EE (企业版), 38
-
-.java 扩展名, 7
-
-Java 会议, 410
-
-Java SE (标准版), 38
-
-Java 虚拟机 (JVM), 8, 31, 309, 345
-
-Java.com, 408
-
-java.exe 文件, 345
-
-java.io 包, 46
-
-/jar 文件夹, 379
-
-java.time 包, 46
-
-java.util 包, 46
-
-JavaWorld, 409
-
-JButton 类, 242–244
-
-JCheckBox 类, 246–248
-
-JDK (Java 开发包), 9
-
-JFrame 类, 238–242
-
-JLabel 类, 245–246
-
-工作机会, 410
-
-Joy, Bill, 29
-
-JPanel 类, 251
-
-JScrollPane 类, 249
-
-JShell, 8, 49–50
-
-JSoko, 36
-
-JTextArea 类, 248–250
-
-JTextField 类, 245–246
-
-JVM (Java 虚拟机), 8, 31, 309, 345
-
-JWindow, 238–242
-
-Katzen Kids, 201
-
-KeyAdapter, 229
-
-键盘事件, 276–278
-
-keyPressed 方法, 226
-
-keyReleased 方法, 226
-
-键, 180
-
-keyTyped 方法, 226
-
-Key 应用程序, 227–228
-
-KeyListener, 227
-
-final, 196
-
-implements, 205
-
-module, 420
-
-requires, 420
-
-super, 162–163
-
-this, 151–152, 162–163
-
-throw, 194
-
-void, 45
-
-Klotz, “Red”, 184
-
-Kooyman, Barbara, 217–218
-
-labels, 245–246
-
-lambda expressions, 229–233
-
-language selection, 4–5
-
-language shells, 49
-
-Larvets, 68
-
-launching。*参见* 开始
-
-layout managers, 259
-
-application layout, 265–270
-
-BorderLayout, 261–262
-
-BoxLayout, 263–264
-
-FlowLayout, 259–261
-
-GridLayout, 261–262
-
-Insets, 264–265
-
-Leeway, Joe, 96
-
-Legendary Sons of Crack Daniels, 217
-
-length() 方法, 77, 293
-
-length of strings, determining, 77
-
-less than operator (<), 84–85
-
-libraries, Java 类库, 45–49
-
-
-
-
-
-# 许可，知识性共享，296
-
-# LightningStorm 项目, 362–365
-
-# Line2D.Float 类, 328–329
-
-# 线，绘制, 328–329
-
-# 代码行, 67
-
-# 字符串连接, 74–75
-
-# LinkRotator 
-- 源代码, 213–216
-- 类声明, 209
-- 构造函数, 210
-- 异常捕获, 211
-- 事件处理, 213
-- 运行线程, 211
-- 启动线程, 211
-- 停止线程, 216–217
-- 变量, 209–210
-
-# 链接，旋转, 213–216
-
-# 监听器
-- ActionListener 接口, 274
-- EventListener 接口, 273–274
-
-# listFiles() 方法, 293
-
-# 列出文件, 293
-
-# 列表
-- 数组列表。*参见*数组，数组列表
-- 数组，循环遍历, 166–167
-
-# loadURL() 方法, 197
-
-# Location() 方法, 359
-
-# long 变量类型, 56–57
-
-# 循环, 99
-- 数组列表, 166–167
-- Benchmark 应用程序示例, 107–108
-- do-while, 103–104
-- 退出, 104–105
-- for
-    - 复杂 for 循环, 106–107
-    - 语法, 99–102
-    - 死循环, 109
-    - 迭代, 101
-    - 命名, 105–106
-- while, 102–103
-
-# LottoEvent 应用程序, 279–285
-
-# LottoMadness 应用程序, 265–270, 285–288
-
-# 小写，将字符串转换为, 77, 80–81
+## 小写，将字符串转换为，77，80–81
 
 ### M
-- MacDonald, Barbara, 217–218
-- MacDonald, Pat, 217
-- main() 方法, 17
-- MalformedURLException 类, 196
-- manifest 文件, 387
-- maps, hash, 180–183
-- mark() 方法, 161
-- Master P, 1
-- matchedOne() 方法, 284
-- Matulich, Chris, 38
-- Meetup.com, 410
-- meetups, 410
-- 内存分配, 155
-- 方法, 144
-- 访问方法, 146
-- actionPerformed(), 213, 230, 275, 284
-- add(), 165, 174, 243
-- addActionListener(), 285
-- addItemListener(), 285
-- addOneToField(), 284
-- append(), 208
-- 参数, 146–147
-- asByteArray(), 312
-- asFile(), 312, 315
-- browse(), 213
-- build(), 311
-- 内建方法, 155
-- checkCreator(), 151
-- 类方法, 148
-- clearAllFields(), 284
-- close(), 161, 300
-- Color(), 327
-- 构造函数, 147–148
-- contains(), 78, 165, 176
-- containsKey(), 181
-- containsValue(), 181
-- createNewFile(), 293
-- createTempFile(), 315
-- curThread(), 212
-- currentTimeMillis(), 108
-- , 145–146
-- 定义, 47
-- delete(), 293
-- draw(), 328
-- drawString(), 328
-- encode(), 318
-- entrySet(), 181
-- equals(), 76–77, 81, 160, 171
-- equalsIgnoreCase(), 351
-- exists(), 293
-- fill(), 328, 329
-- firstValue(), 312
-- fromString(), 318
-- get(), 165, 176, 181
-- getActionCommand(), 275, 284
-- getBytes(), 300
-- getEncoding(), 160
-- getEntityID(), 364
-- getGuid(), 146
-- getId(), 391
-- getItem(), 284–285
-- getKey(), 182
-- getLivingEntities(), 364
-- getLocation(), 351, 365
-- getName(), 293
-- getOrDefault(), 181
-- getText(), 246
-- getURI(), 211
-- getWorld(), 351
-- getX(), 359
-- getY(), 359
-- headers(), 312
-- indexOf(), 77–78, 176
-- info(), 370
-- Intent(), 392
-- isPresent(), 312
-- itemStateChanged(), 284–285
-- JPanel, 251
-- keyPressed(), 226
-- keyReleased(), 226
-- keyTyped(), 226
-- length(), 77, 293
-- listFiles(), 293
-- loadURL(), 197
-- Location(), 359
-- main(), 17
-- mark(), 161
-- matchedOne(), 284
-- move(), 168
-- newBuilder(), 311, 318
-- numberGone(), 284
-- overriding, 161–162
-- pack(), 240
-- paint(), 289
-- parseDouble(), 368
-- parseFloat(), 189
-- parseInt(), 135, 148
-- playSound(), 370
-- PotionEffect(), 360
-- println(), 66, 72–73, 144
-- private methods, 139
-- processClicks(), 391–393
-- put(), 181
-- random(), 358
+
+- MacDonald, Barbara，217–218
+- MacDonald, Pat，217
+- `main()` 方法，17
+- `MalformedURLException` 类，196
+- `manifest` 文件，387
+- 哈希映射，180–183
+- `mark()` 方法，161
+- Master P，1
+- `matchedOne()` 方法，284
+- Matulich, Chris，38
+- Meetup.com，410
+- meetups，410
+- 内存分配，155
+- 方法，144
+  - 访问方法，146
+  - `actionPerformed()`，213，230，275，284
+  - `add()`，165，174，243
+  - `addActionListener()`，285
+  - `addItemListener()`，285
+  - `addOneToField()`，284
+  - `append()`，208
+  - 参数，146–147
+  - `asByteArray()`，312
+  - `asFile()`，312，315
+  - `browse()`，213
+  - `build()`，311
+  - 内建方法，155
+  - `checkCreator()`，151
+  - 类方法，148
+  - `clearAllFields()`，284
+  - `close()`，161，300
+  - `Color()`，327
+  - 构造函数，147–148
+  - `contains()`，78，165，176
+  - `containsKey()`，181
+  - `containsValue()`，181
+  - `createNewFile()`，293
+  - `createTempFile()`，315
+  - `curThread()`，212
+  - `currentTimeMillis()`，108
+  - 定义，47
+  - `delete()`，293
+  - `draw()`，328
+  - `drawString()`，328
+  - `encode()`，318
+  - `entrySet()`，181
+  - `equals()`，76–77，81，160，171
+  - `equalsIgnoreCase()`，351
+  - `exists()`，293
+  - `fill()`，328，329
+  - `firstValue()`，312
+  - `fromString()`，318
+  - `get()`，165，176，181
+  - `getActionCommand()`，275，284
+  - `getBytes()`，300
+  - `getEncoding()`，160
+  - `getEntityID()`，364
+  - `getGuid()`，146
+  - `getId()`，391
+  - `getItem()`，284–285
+  - `getKey()`，182
+  - `getLivingEntities()`，364
+  - `getLocation()`，351，365
+  - `getName()`，293
+  - `getOrDefault()`，181
+  - `getText()`，246
+  - `getURI()`，211
+  - `getWorld()`，351
+  - `getX()`，359
+  - `getY()`，359
+  - `headers()`，312
+  - `indexOf()`，77–78，176
+  - `info()`，370
+  - `Intent()`，392
+  - `isPresent()`，312
+  - `itemStateChanged()`，284–285
+  - `JPanel`，251
+  - `keyPressed()`，226
+  - `keyReleased()`，226
+  - `keyTyped()`，226
+  - `length()`，77，293
+  - `listFiles()`，293
+  - `loadURL()`，197
+  - `Location()`，359
+  - `main()`，17
+  - `mark()`，161
+  - `matchedOne()`，284
+  - `move()`，168
+  - `newBuilder()`，311，318
+  - `numberGone()`，284
+  - 覆盖，161–162
+  - `pack()`，240
+  - `paint()`，289
+  - `parseDouble()`，368
+  - `parseFloat()`，189
+  - `parseInt()`，135，148
+  - `playSound()`，370
+  - `PotionEffect()`，360
+  - `println()`，66，72–73，144
+  - 私有方法，139
+  - `processClicks()`，391–393
+  - `put()`，181
+  - `random()`，358
+  - `readLine()`，299
+  - `remove()`，175
+  - `renameTo()`，293
+  - `repaint()`，289
+  - `reset()`，161
+  - `resume()`，209
+  - `run()`，205，212
+  - `scoopTerrain()`，369
+  - `send()`，311，319
+  - `sendMessage()`，364
+  - `setBackground()`，326–327
+  - `setCatType()`，352
+  - `setColor()`，326–327
+  - `setContentView()`，391
+  - `setDefaultCloseOperation()`，240
+  - `setEditable()`，248
+  - `setGuid()`，146
+  - `setHealth()`，365
+  - `setLayout()`，243
+  - `setLineWrap()`，249
+  - `setLookAndFeel()`，241
+  - `setOwner()`，352
+  - `setPassenger()`，359
+  - `setRenderingHint()`，326
+  - `setSize()`，240
+  - `setText()`，246
+  - `setTitle()`，240
+  - `setType()`，370
+  - `setVisible()`，241
+  - `setWrapStyleWord()`，249
+  - `showGremlinCount()`，148
+  - `size()`，175，181
+  - `skip()`，294
+  - `sort()`，117
+  - `spawn()`，351，359
+  - `sqrt()`，369
+  - `start()`，208，211
+  - `startPlaying()`，284
+  - `stop()`，209
+  - `stopPlaying()`，284
+  - `strikeLightning()`，365
 
 
 
-
-
-- `readLine()`, 299
-- `remove()`, 175
-- `renameTo()`, 293
-- `repaint()`, 289
-- `reset()`, 161
-- `resume()`, 209
-- `run()`, 205, 212
-- `scoopTerrain()`, 369
-- `send()`, 311, 319
-- `sendMessage()`, 364
-- `setBackground()`, 326–327
-- `setCatType()`, 352
-- `setColor()`, 326–327
-- `setContentView()`, 391
-- `setDefaultCloseOperation()`, 240
-- `setEditable()`, 248
-- `setGuid()`, 146
-- `setHealth()`, 365
-- `setLayout()`, 243
-- `setLineWrap()`, 249
-- `setLookAndFeel()`, 241
-- `setOwner()`, 352
-- `setPassenger()`, 359
-- `setRenderingHint()`, 326
-- `setSize()`, 240
-- `setText()`, 246
-- `setTitle()`, 240
-- `setType()`, 370
-- `setVisible()`, 241
-- `setWrapStyleWord()`, 249
-- `showGremlinCount()`, 148
-- `size()`, 175, 181
-- `skip()`, 294
-- `sort()`, 117
-- `spawn()`, 351, 359
-- `sqrt()`, 369
-- `start()`, 208, 211
-- `startPlaying()`, 284
-- `stop()`, 209
-- `stopPlaying()`, 284
-- `strikeLightning()`, 365
 - `suspect()`, 209
 - `tauntHuman()`, 146–147
 - `toCharArray()` method, 114
@@ -11603,12 +11033,16 @@ libraries, Java 类库, 45–49
 - `translate()`, 168
 - `variable scope within`, 148–149
 - `write()`, 300
+
 ### Minecraft mods, 341
+
 - CrazyHorse project, 356–362
 - IceCreamScoop project, 366–372
 - LightningStorm project, 362–365
 - SiameseCat project, 348–356
+
 ### Minecraft server
+
 - connecting to, 346
 - deleting worlds on, 372–373
 - EULA (end-user), 343
@@ -11616,8 +11050,8 @@ libraries, Java 类库, 45–49
 - troubleshooting, 344–346, 347
 - Model class, 128–129, 136
 - ModelTester application, 137–138
-- module keyword, 420
-- module-info class, 420
+- `module` keyword, 420
+- `module-info` class, 420
 - modules, 309–310, 419–420
 - Moreno (Wait, checking text) Moreno-Higueras, Rafael, 156
 - mouse clicks, handling, 213
@@ -11629,7 +11063,9 @@ libraries, Java 类库, 45–49
 - multitasking. *See threads*
 - multithreading, 203
 - Mumblety-Peg, 305–306
+
 ### N
+
 - NameSorter application, 117–118
 - naming conventions
 - Android resources, 387
@@ -11638,14 +11074,14 @@ libraries, Java 类库, 45–49
 - NASA, 33
 - NetBeans Field Guide (Gosling), 399
 - NetBeans IDE, 9, 164, 399
-- creating classes, 402–404
-- creating projects, 400–401
-- debugging, 404–405
-- documentation, 405
-- downloading, 399
-- installation, 399–400
-- package errors, 419–420
-- running, 404
+  - creating classes, 402–404
+  - creating projects, 400–401
+  - debugging, 404–405
+  - documentation, 405
+  - downloading, 399
+  - installation, 399–400
+  - package errors, 419–420
+  - running, 404
 - Empty Java, 15
 - England, 122
 - New File, 14, 43
@@ -11664,13 +11100,10 @@ libraries, Java 类库, 45–49
 - floating-point numbers, 54–55
 - integers, 54–55
 
-
-
-
-
 # 工作原理，125–127
 
 ## 继承
+
 - 属性, 160–161
 - 行为, 160–161
 - 定义, 129–130
@@ -11680,6 +11113,7 @@ libraries, Java 类库, 45–49
 - 威力, 159–160
 
 ## 对象
+
 - 强制转换, 131, 132–135
 - 创建, 135–138
 - 定义, 128–129
@@ -11687,6 +11121,7 @@ libraries, Java 类库, 45–49
 - 复用, 163–164
 
 ## 运算符
+
 - `->` 运算符, 229
 - 算术, 60–61
 - 复合赋值 (`+=`), 74–75
@@ -11711,21 +11146,24 @@ libraries, Java 类库, 45–49
 
 ## 输出流, 292
 
-## @Override 注解, 162
+## `@Override` 注解, 162
 
 ## 方法重写, 161–162
 
 ### P
+
 - `pack()` 方法, 240
 - 包不可见错误 (NetBeans), 419–420
 
 ## 包
+
 - 导入, 47, 289
-- `java.io`, 46
-- `java.time`, 46
-- `java.util`, 46
+- `java.io`
+- `java.time`
+- `java.util`
 
 ## PageCatalog 应用, 198–200
+
 - `paint()` 方法, 289
 - 面板, 251
 - `parseDouble()` 方法, 368
@@ -11738,6 +11176,7 @@ libraries, Java 类库, 45–49
 - 物理模拟器, 30–31
 
 ### 饼图
+
 - `PieFrame` 类, 336–338
 - `PiePanel` 类, 331–336
 - `PieSlice` 类, 333
@@ -11752,10 +11191,12 @@ libraries, Java 类库, 45–49
 - `playSound()` 方法, 370
 
 ## plugin.yml 文件
+
 - CrazyHorse 项目, 360
 - IceCreamScoop 项目, 370
 - LightningStorm 项目, 365
 - SiameseCat 项目, 353–354
+
 - 加号 (`+`), 60
 - `Point3D` 类, 168–169
 - `PointTester` 类, 169–170
@@ -11772,6 +11213,7 @@ libraries, Java 类库, 45–49
 - `processClicks()` 方法, 391–393
 
 ## 程序。见应用程序
+
 - 项目属性对话框, 57
 - 项目 (NetBeans), 创建, 400–401
 - 属性 写入, 302–305
@@ -11781,9 +11223,11 @@ libraries, Java 类库, 45–49
 - 公有变量, 142
 
 ## Q
+
 - 引号, 55
 
 ## R
+
 - `Random` 类, 47
 - `random()` 方法, 358
 - REPL (读取-评估-打印-循环), 50
@@ -11797,6 +11241,7 @@ libraries, Java 类库, 45–49
 - `remove()` 方法, 175
 
 ## 移除
+
 - 移除世界, 175
 - `renameTo()` 方法, 293
 - 渲染提示, 326
@@ -11809,29 +11254,28 @@ libraries, Java 类库, 45–49
 - `reset()` 方法, 161
 
 ## 资源
+
 - Android 应用, 386–387
 - 书籍, 407–408
 - 教育应用, 30–31
 - 网站, 408–409, 411
 - Oracle 的 Java 网站, 27–29, 408
 - SourceForge, 35–37
+
 - `resume()` 方法, 205
 - 返回语句, 145
 - 环形链接, 213–216
 - Root 应用, 41–43
 - `Root.java` 文件, 42
 
-
-
-
-
-# run() 方法, 205, 212
+# `run()` 方法, 205, 212
 
 # RunaR ISS 检测器, 33–34
 
 # Runnable 接口, 205
 
 ### 运行应用程序
+
 - Android 应用, 383–385
 - 在 Android Studio 中, 413–414
 - 在 NetBeans IDE 中, 404
@@ -11841,35 +11285,39 @@ libraries, Java 类库, 45–49
 # Ruth’s Chris Steak House, 38
 
 ## S
+
 ### Saluton 应用, 14
+
 - 编译, 20
 - 调试, 20–22
 - 运行, 22
 - 保存, 19–20
 
 ### 编写
+
 - 块, 17–18
 - 类语句, 16
 - 注释, 17–18
-- main 语句, 17
-- Saluton.java 文件创建, 14–16
+- `main` 语句, 17
+- `Saluton.java` 文件创建, 14–16
 - 变量, 18–19
 
 # SalutonFrame 应用, 241
 
-# Saluton.java 文件, 14–16
+# `Saluton.java` 文件, 14–16
 
 # SalutonVerkisto 应用, 319–321
 
 # Sams Teach Yourself Java in 24 Hours 网站, 411
 
 ## 保存
+
 - 从网络保存文件, 314–317
 - Saluton 应用, 19–20
 
 # 学校成绩分系统, 81
 
-# scoopTerrain() 方法, 369
+# `scoopTerrain()` 方法, 369
 
 # 变量范围, 148–149
 
@@ -11877,15 +11325,16 @@ libraries, Java 类库, 45–49
 
 # SDK Manager, 414
 
-# 分号 (;), 18, 24, 50
+# 分号 (`;`), 18, 24, 50
 
-# send() 方法, 311, 319
+# `send()` 方法, 311, 319
 
-# sendMessage() 方法, 364
+# `sendMessage()` 方法, 364
 
 # ServerCheck 应用, 312–314
 
 # 服务器
+
 - Minecraft 服务器
   - 连接到, 346
   - 在上面删除世界, 372–373
@@ -11893,77 +11342,79 @@ libraries, Java 类库, 45–49
   - 设置, 342–343
   - 故障排除, 344–346, 347
 
-# setBackground 方法, 326–327
+# `setBackground` 方法, 326–327
 
-# setCatType 方法, 352
+# `setCatType` 方法, 352
 
-# setColor 方法, 326–327
+# `setColor` 方法, 326–327
 
-# setContentView 方法, 391
+# `setContentView` 方法, 391
 
-# setCloseOperation 方法, 240
+# `setCloseOperation` 方法, 240
 
-# setEditable 方法, 248
+# `setEditable` 方法, 248
 
-# setGuid 方法, 146
+# `setGuid` 方法, 146
 
-# setHealth 方法, 365
+# `setHealth` 方法, 365
 
-# setLayout 方法, 243
+# `setLayout` 方法, 243
 
-# setWrap 方法, 249
+# `setWrap` 方法, 249
 
-# setLookAndFeel 方法, 241
+# `setLookAndFeel` 方法, 241
 
-# setOwner 方法, 352
+# `setOwner` 方法, 352
 
-# setPassenger 方法, 359
+# `setPassenger` 方法, 359
 
-# setRenderingHint 方法, 326
+# `setRenderingHint` 方法, 326
 
-# setSize 方法, 240
+# `setSize` 方法, 240
 
-# setText 方法, 246
+# `setText` 方法, 246
 
-# setTitle 方法, 240
+# `setTitle` 方法, 240
 
-# setType 方法, 370
+# `setType` 方法, 370
 
-# setVisible 方法, 241
+# `setVisible` 方法, 241
 
-# setWrapStyle 方法, 249
+# `setWrapStyle` 方法, 249
 
 # 形状
+
 - 弧, 330–331, 339
 - 椭圆和圆, 330
 - 形, 329–330
 
-# short 类型, 56
+# `short` 类型, 56
 
-# showGremlinCount 方法, 148
+# `showGremlinCount` 方法, 148
 
 # SiameseCat 项目, 348–356
 
-# SiameseCat.jar 文件, 354
+# `SiameseCat.jar` 文件, 354
 
-# size() 方法, 175, 181
+# `size()` 方法, 175, 181
 
-# skip() 方法, 294
+# `skip()` 方法, 294
 
 # Slashdot, 409
 
-# sleep() 方法, 204
+# `sleep()` 方法, 204
 
 # 减慢应用程序, 204
 
 # Smalltalk, 11
 
 # software. *参见*应用程序
+
 # 软件开发包 (SDK), 28, 375–376
 
 # Sophia of Hanover, 51
 
-# sort() 方法, 117
+# `sort()` 方法, 117
 
 # 数组排序, 116–118
 
@@ -11977,14 +11428,15 @@ libraries, Java 类库, 45–49
 
 # Spartacus 类, 402–404
 
-# spawn() 方法, 351, 359
+# `spawn()` 方法, 351, 359
 
 # 计算机速度, 测试, 107–108
 
 # Spigot, 342. *参见* Minecraft
-# spigot.jar 文件, 342
 
-# sqrt() 方法, 369
+# `spigot.jar` 文件, 342
+
+# `sqrt()` 方法, 369
 
 # 方括号 (112
 
@@ -11994,33 +11446,45 @@ libraries, Java 类库, 45–49
 
 # 标准版 (Java), 38
 
-# start() 方法, 208, 209
+# `start()` 方法, 208, 209
 
 # 启动线程, 208–209
 
-# startPlaying() 方法, 284
+# `startPlaying()` 方法, 284
 
 # 块, 17–18
+
 # 定义, 7
+
 # 表达式, 54
-# extends, 130, 161
-# if, 84, 95
-# if-else, 87
-# import, 209
-# private, 143
-# protected, 143
-# public, 142
-# return, 145
+
+# `extends`, 130, 161
+
+# `if`, 84, 95
+
+# `if-else`, 87
+
+# `import`, 209
+
+# `private`, 143
+
+# `protected`, 143
+
+# `public`, 142
+
+# `return`, 145
+
 # 在 JShell 中运行, 49–50
-# static, 143
-# switch, 87–89
-# 三元运算符 (?), 90
-# this, 151–152
-# try, 294
 
+# `static`, 143
 
+# `switch`, 87–89
 
+# 三元运算符 (`?`), 90
 
+# `this`, 151–152
+
+# `try`, 294
 
 - 数组列表，164–165, 174–179
 - 哈希映射，180–183
@@ -12031,11 +11495,13 @@ libraries, Java 类库, 45–49
 - 输出流，292
 - 从...读取数据，293–297
 - 向...写入数据，299–301
+
 - `strikeLightning()` 方法，365
 - `String` 变量类型，55–56
-- `StringLister` ，166–167
+- `StringLister`，166–167
 
 ### 字符串
+
 - 转换为大写/小写，77, 80–81
 - 比较，76–77
 - 拼接，74
@@ -12062,15 +11528,16 @@ libraries, Java 类库, 45–49
 - 类的同步，184
 
 ### T
+
 - Tabasco 辣椒酱，保质期，139
 - `tauntHuman()` 方法，146–147
 - 网球排名，155–156
 - 三元运算符 (`?`)，90
 - 计算机速度，107–108
 - 条件测试，83
-- if，84
-- if-else，87
-- switch，87–89
+- `if`，84
+- `if-else`，87
+- `switch`，87–89
 - 三元运算符 (`?`)，90 *另另* 字符串
 - 存储在字符串中，71–72
 - 文本区域，248–250
@@ -12086,15 +11553,15 @@ libraries, Java 类库, 45–49
 - 创建，204–208
 - 事件处理，213
 - LinkRotator 应用程序
-- 类声明，209
-- 构造函数，210
-- 异常捕获，211
-- 事件处理，213
-- 程序代码，213–216
-- `run()` 方法，212
-- `start()` 方法，211
-- 变量，209–210
-- 运行，212
+  - 类声明，209
+  - 构造函数，210
+  - 异常捕获，211
+  - 事件处理，213
+  - 程序代码，213–216
+  - `run()` 方法，212
+  - `start()` 方法，211
+  - 变量，209–210
+  - 运行，212
 - `sleep()` 方法，204
 - 启动，208–209, 211
 - 停止，208–209, 216–217
@@ -12104,24 +11571,33 @@ libraries, Java 类库, 45–49
 - `toCharArray()` 方法，114
 - `toLowerCase()` 方法，77
 - Tomcat，45
-- Tonioli, Bruno,11
+
+
+
+- Tonioli, Bruno，11
+
 - `toString()` 方法，171
-- `toUpperCase()` 方法，77, 80–81
+
+- `toUpperCase()` 方法，77、80–81
+
 - `translate()` 方法，168
 
 ### 故障排除
+
 - Android Studio
 - HAXM（硬件加速执行管理器），414–417
 - 运行应用程序，413–414
 - 数组索引越界，114
 - 定义，114
-- Minecraft 服务器，344–346, 347
+- Minecraft 服务器，344–346、347
 - NetBeans IDE，419–420
 - `try` 语句，294
 - `try-catch` 块，189–193
 - `try-catch-finally` 块，194
 - Twitter，409
-- 类型（变量）
+
+### 类型（变量）
+
 - 赋值，54
 - boolean，57–58
 - byte，56
@@ -12133,85 +11609,82 @@ libraries, Java 类库, 45–49
 - float，54–55
 - 递增/自减，61–62
 - int
-- 二进制值，67
-- 声明，54–55
+  - 二进制值，67
+  - 声明，54–55
 - LinkRotator 应用程序，209–210
 
 ### U
+
 - Realtime 股票报价，34–35
 - 装箱，133
 - 未检查的异常，197
-- 下划线 (_)，57
+- 下划线（`_`），57
 - Unicode，121
-- 转换为大写，77, 80–81
-- `URISyntaxException`,211, 311
-- 响应输入。*另另* 事件处理
-- 用户界面。*另另* GUI（图形用户界面）
+- 转换为大写，77、80–81
+- `URISyntaxException`，211、311
+- 响应输入。*另见*事件处理
+- 用户界面。*另见*GUI（图形用户界面）
 
 ### V
+
 - 哈希映射的值，180
-- Vance, D.235
+- Vance, D.，235
 - 变量应用程序，56
-- 变量。*另另* 数组
-- boolean，57–58
-- byte，56
-- 强制转换，131–132
-- char，55–56
-- 创建，141–144
-- 声明，54
-- 显示内容，18–19
-- 表达式，64–66
-- float，54–55
-- 递增/自减，61–62
-- int
-- 二进制值，67
-- 声明，54–55
-- LinkRotator 应用程序，209–210
-
-
-
-
-
-- `long`, 56–57
-- 命名规范，58–59, 67
+- 变量。*另见*数组
+  - boolean，57–58
+  - byte，56
+  - 强制转换，131–132
+  - char，55–56
+  - 创建，141–144
+  - 声明，54
+  - 显示内容，18–19
+  - 表达式，64–66
+  - float，54–55
+  - 递增/自减，61–62
+  - int
+    - 二进制值，67
+    - 声明，54–55
+  - LinkRotator 应用程序，209–210
+  - `long`，56–57
+  - 命名规范，58–59、67
 
 ## 运算符
+
 - 算术运算符，60–61
-- 减减 (`--`), 61–63
-- 增增 (`++`), 61–63
+- 减减（`--`），61–63
+- 增增（`++`），61–63
 - 优先级，63–64
-
-- `pathSeparator`, 293
-- `private`, 143
-- `protected`, 143
-- `public`, 142
+- `pathSeparator`，293
+- `private`，143
+- `protected`，143
+- `public`，142
 - 范围，148–149
-- `short`, 56
-- `static`, 143
-- 在其中存储信息，18, 59–60
+- `short`，56
+- `static`，143
+- 在其中存储信息，18、59–60
 - 字符串。*参见*字符串
-
-- VB (Visual Basic), 4
+- VB（Visual Basic），4
 - Java 版本，30
 - vi 编辑器，7
 - Visual Basic，4
 - Vitruvius，171
-- Vogel, Karin, 51
+- Vogel, Karin，51
 - `void` 关键字，145
 
 ### W-X-Y-Z
+
 - 华盛顿将军队，184
 
-### 网站
+## 网站
+
 - CERN（欧洲核研究组织），318
 - HTTP 请求，310–314
-- Java 资源，408–409, 411
-- Oracle Java 网站，27–29, 408
+- Java 资源，408–409、411
+- Oracle Java 网站，27–29、408
 - SourceForge，35–37
 - 在上面发布数据，317–321
 - 从其中保存文件，314–317
-
-- Wetzel, Dan, 122
+- Wetzel, Dan，122
 - Wheel 应用程序，119–121
 - *Wheel of Fortune*，119。*参见*Wheel 应用程序
 - `while` 循环，102–103
@@ -12220,10 +11693,10 @@ libraries, Java 类库, 45–49
 - 窗口，创建，238–242
 
 ## 向导
-- 新文件向导，14, 43
-- 新项目向导，401
 
-- Wooley, Sheb, 396
+- 新文件向导，14、43
+- 新项目向导，401
+- Wooley, Sheb，396
 - WordPress.com，409
 - Workbench 博客，409
 - world 子文件夹，删除，372–373
@@ -12233,129 +11706,346 @@ libraries, Java 类库, 45–49
 - 向流写入数据，299–301
 
 ## 代码片段
+
 ![Image](img/001pro01.jpg)(ch6.xhtml_page_01)
+
 ![Image](img/02liis01.jpg)(ch6.xhtml_page_01)
+
 ![Image](img/017pro01.jpg)(ch6.xhtml_page_02)
+
 ![Image](img/018pro01.jpg)(ch6.xhtml_page_03)
+
 ![Image](img/018pro02.jpg)(ch6.xhtml_page_04)
+
 ![Image](img/02lis02.jpg)(ch6.xhtml_page_05)
+
 ![Image](img/02lis04.jpg)(ch6.xhtml_page_06)
+
 ![Image](img/024pro01.jpg)(ch6.xhtml_page_07)
+
 ![Image](img/04lis01.jpg)(ch6.xhtml_page_01)
+
 ![Image](img/043pro01.jpg)(ch6.xhtml_page_02)
+
 ![Image](img/043pro02.jpg)(ch6.xhtml_page_03)
+
 ![Image](img/04lis02.jpg)(ch6.xhtml_page_04)
+
 ![Image](img/044pro01.jpg)(ch6.xhtml_page_05)
+
 ![Image](img/047pro01.jpg)(ch6.xhtml_page_06)
+
 ![Image](img/047pro02.jpg)(ch6.xhtml_page_07)
+
 ![Image](img/04lis03.jpg)(ch6.xhtml_page_08)
+
 ![Image](img/005pro01.jpg)(ch6.xhtml_page_01)
+
 ![Image](img/005pro02.jpg)(ch6.xhtml_page_02)
+
 ![Image](img/005pro03.jpg)(ch6.xhtml_page_03)
+
 ![Image](img/005lis01.jpg)(ch6.xhtml_page_04)
+
 ![Image](img/005pro04.jpg)(ch6.xhtml_page_05)
+
 ![Image](img/061pro01.jpg)(ch6.xhtml_page_06)
+
 ![Image](img/005pro05.jpg)(ch6.xhtml_page_07)
+
 ![Image](img/064pro01.jpg)(ch6.xhtml_page_08)
+
 ![Image](img/05lis02.jpg)(ch6.xhtml_page_09)
+
 ![Image](img/072pro01.jpg)(ch6.xhtml_page_01)
+
 ![Image](img/072pro02.jpg)(ch6.xhtml_page_02)
+
 ![Image](img/072pro03.jpg)(ch6.xhtml_page_03)
+
 ![Image](img/073pro01.jpg)(ch6.xhtml_page_04)
+
 ![Image](img/073pro01a.jpg)(ch6.xhtml_page_05)
+
 ![Image](img/073pro02.jpg)(ch6.xhtml_page_06)
+
 ![Image](img/074pro01.jpg)(ch6.xhtml_page_07)
+
 ![Image](img/074pro02.jpg)(ch6.xhtml_page_08)
+
 ![Image](img/074pro03.jpg)(ch6.xhtml_page_09)
+
 ![Image](img/075pro01.jpg)(ch6.xhtml_page_10)
+
 ![Image](img/076pro01.jpg)(ch6.xhtml_page_11)
+
 ![Image](img/076pro02.jpg)(ch6.xhtml_page_12)
+
 ![Image](img/076pro03.jpg)(ch6.xhtml_page_13)
+
 ![Image](img/076pro04.jpg)(ch6.xhtml_page_14)
+
 ![Image](img/077pro01.jpg)(ch6.xhtml_page_15)
+
 ![Image](img/077pro02.jpg)(ch6.xhtml_page_16)
+
 ![Image](img/078pro01.jpg)(ch6.xhtml_page_17)
+
 ![Image](img/078pro02.jpg)(ch6.xhtml_page_18)
+
 ![Image](img/05lis02.jpg)(ch6.xhtml_page_19)
+
 ![Image](img/00lis01.jpg)(ch6.xhtml_page_20)
+
 ![Image](img/056pro01.jpg)(ch7.xhtml_page_01)
+
 ![Image](img/056pro02.jpg)(ch7.xhtml_page_02)
+
 ![Image](img/057pro01.jpg)(ch7.xhtml_page_03)
+
 ![Image](img/057pro02.jpg)(ch7.xhtml_page_04)
+
 ![Image](img/058pro01.jpg)(ch7.xhtml_page_05)
+
 ![Image](img/058pro02.jpg)(ch7.xhtml_page_06)
+
 ![Image](img/059pro01.jpg)(ch7.xhtml_page_07)
+
 ![Image](img/059pro02.jpg)(ch7.xhtml_page_08)
+
 ![Image](img/060pro01.jpg)(ch7.xhtml_page_09)
+
 ![Image](img/06lis01.jpg)(ch7.xhtml_page_10)
+
 ![Image](img/061pro02.jpg)(ch7.xhtml_page_11)
+
 ![Image](img/062pro01.jpg)(ch7.xhtml_page_12)
+
 ![Image](img/063pro01.jpg)(ch7.xhtml_page_13)
+
 ![Image](img/063pro02.jpg)(ch7.xhtml_page_14)
+
 ![Image](img/064pro02.jpg)(ch7.xhtml_page_15)
+
 ![Image](img/067pro01.jpg)(ch7.xhtml_page_16)
+
 ![Image](img/067pro02.jpg)(ch7.xhtml_page_17)
 
+![Image](img/#ch9.xhtml_pch9ex01)
 
+![Image](img/#ch9.xhtml_pch9ex02)
 
+![Image](img/#ch9.xhtml_pch9ex03)
 
+![Image](img/#ch9.xhtml_pch9ex04)
 
-![Image](img/#ch9.xhtml_pch9ex01)![Image](img/#ch9.xhtml_pch9ex02)![Image](img/#ch9.xhtml_pch9ex03)![Image](img/#ch9.xhtml_pch9ex04)![Image](img/#ch9.xhtml_pch9ex04)![Image](img/#ch9.xhtml_pch9ex06)![Image](img/#ch9.xhtml_pch9ex07)![Image](img/#ch9.xhtml_pch9ex08)![Image](img/#ch9.xhtml_pch9ex09)![Image](img/#ch9.xhtml_pch9ex10)![Image](img/#ch9.xhtml_pch9ex11)![Image](img/#ch9.xhtml_pch9ex12)![Image](img/09lis03a.jpg)![Image](img/#ch9.xhtml_pch9ex13)
+![Image](img/#ch9.xhtml_pch9ex04)
+
+![Image](img/#ch9.xhtml_pch9ex06)
+
+![Image](img/#ch9.xhtml_pch9ex07)
+
+![Image](img/#ch9.xhtml_pch9ex08)
+
+![Image](img/#ch9.xhtml_pch9ex09)
+
+![Image](img/#ch9.xhtml_pch9ex10)
+
+![Image](img/#ch9.xhtml_pch9ex11)
+
+![Image](img/#ch9.xhtml_pch9ex12)
+
+![Image](img/09lis03a.jpg)
+
+![Image](img/#ch9.xhtml_pch9ex13)
 
 ## 代码片段
 
-![Image](img/#ch10.xhtml_pch10ex01)![Image](img/#ch10.xhtml_pch10ex02)![Image](img/#ch10.xhtml_pch10ex03)![Image](img/#ch10.xhtml_pch10ex04)![Image](img/#ch10.xhtml_pch10ex05)![Image](img/#ch10.xhtml_pch10ex06)![Image](img/#ch10.xhtml_pch10ex07)![Image](img/#ch10.xhtml_pch10ex08)![Image](img/#ch10.xhtml_pch10ex09)![Image](img/#ch10.xhtml_pch10ex10)![Image](img/#ch10.xhtml_pch10ex11)
+![Image](img/#ch10.xhtml_pch10ex01)
+
+![Image](img/#ch10.xhtml_pch10ex02)
+
+![Image](img/#ch10.xhtml_pch10ex03)
+
+![Image](img/#ch10.xhtml_pch10ex04)
+
+![Image](img/#ch10.xhtml_pch10ex05)
+
+![Image](img/#ch10.xhtml_pch10ex06)
+
+![Image](img/#ch10.xhtml_pch10ex07)
+
+![Image](img/#ch10.xhtml_pch10ex08)
+
+![Image](img/#ch10.xhtml_pch10ex09)
+
+![Image](img/#ch10.xhtml_pch10ex10)
+
+![Image](img/#ch10.xhtml_pch10ex11)
 
 ## 代码片段
 
-![Image](img/#ch11.xhtml_pch11ex01)![Image](img/#ch11.xhtml_pch11ex02)![Image](img/#ch11.xhtml_pch11ex03)![Image](img/#ch11.xhtml_pch11ex04)![Image](img/#ch11.xhtml_pch11ex05)![Image](img/#ch11.xhtml_pch11ex06)![Image](img/#ch11.xhtml_pch11ex07)![Image](img/#ch11.xhtml_pch11ex08)![Image](img/#ch11.xhtml_pch11ex09)![Image](img/#ch11.xhtml_pch11ex10)![Image](img/#ch11.xhtml_pch11ex11)![Image](img/#ch11.xhtml_pch11ex12)![Image](img/#ch11.xhtml_pch11ex13)![Image](img/#ch11.xhtml_pch11ex14)![Image](img/#ch11.xhtml_pch11ex15)![Image](img/#ch11.xhtml_pch11ex16)![Image](img/#ch11.xhtml_pch11ex17)![Image](img/#ch11.xhtml_pch11ex18)![Image](img/#ch11.xhtml_pch11ex19)![Image](img/#ch11.xhtml_pch11ex20)![Image](img/#ch11.xhtml_pch11ex21)![Image](img/#ch11.xhtml_pch11ex22)
+![Image](img/#ch11.xhtml_pch11ex01)
+
+![Image](img/#ch11.xhtml_pch11ex02)
+
+![Image](img/#ch11.xhtml_pch11ex03)
+
+![Image](img/#ch11.xhtml_pch11ex04)
+
+![Image](img/#ch11.xhtml_pch11ex05)
+
+![Image](img/#ch11.xhtml_pch11ex06)
+
+![Image](img/#ch11.xhtml_pch11ex07)
+
+![Image](img/#ch11.xhtml_pch11ex08)
+
+![Image](img/#ch11.xhtml_pch11ex09)
+
+![Image](img/#ch11.xhtml_pch11ex10)
+
+![Image](img/#ch11.xhtml_pch11ex11)
+
+![Image](img/#ch11.xhtml_pch11ex12)
+
+![Image](img/#ch11.xhtml_pch11ex13)
+
+![Image](img/#ch11.xhtml_pch11ex14)
+
+![Image](img/#ch11.xhtml_pch11ex15)
+
+![Image](img/#ch11.xhtml_pch11ex16)
+
+![Image](img/#ch11.xhtml_pch11ex17)
+
+![Image](img/#ch11.xhtml_pch11ex18)
+
+![Image](img/#ch11.xhtml_pch11ex19)
+
+![Image](img/#ch11.xhtml_pch11ex20)
+
+![Image](img/#ch11.xhtml_pch11ex21)
+
+![Image](img/#ch11.xhtml_pch11ex22)
 
 ## 代码片段
 
-![Image](img/#ch12.xhtml_pch12ex01)![Image](img/#ch12.xhtml_pch12ex02)![Image](img/#ch12.xhtml_pch12ex03)![Image](img/#ch12.xhtml_pch12ex04)![Image](img/#ch12.xhtml_pch12ex05)![Image](img/#ch12.xhtml_pch12ex06)![Image](img/#ch12.xhtml_pch12ex07)![Image](img/#ch12.xhtml_pch12ex08)![Image](img/#ch12.xhtml_pch12ex09)![Image](img/#ch12.xhtml_pch12ex10)![Image](img/#ch12.xhtml_pch12ex11)![Image](img/#ch12.xhtml_pch12ex12)![Image](img/#ch12.xhtml_pch12ex13)![Image](img/#ch12.xhtml_pch12ex14)![Image](img/12lis03a.jpg)
+![Image](img/#ch12.xhtml_pch12ex01)
+
+![Image](img/#ch12.xhtml_pch12ex02)
+
+![Image](img/#ch12.xhtml_pch12ex03)
+
+![Image](img/#ch12.xhtml_pch12ex04)
+
+![Image](img/#ch12.xhtml_pch12ex05)
+
+![Image](img/#ch12.xhtml_pch12ex06)
+
+![Image](img/#ch12.xhtml_pch12ex07)
+
+![Image](img/#ch12.xhtml_pch12ex08)
+
+![Image](img/#ch12.xhtml_pch12ex09)
+
+![Image](img/#ch12.xhtml_pch12ex10)
+
+![Image](img/#ch12.xhtml_pch12ex11)
+
+![Image](img/#ch12.xhtml_pch12ex12)
+
+![Image](img/#ch12.xhtml_pch12ex13)
+
+![Image](img/#ch12.xhtml_pch12ex14)
+
+![Image](img/12lis03a.jpg)
 
 ## 代码片段
 
-![Image](img/#ch13.xhtml_pch13ex01)![Image](img/#ch13.xhtml_pch13ex02)![Image](img/#ch13.xhtml_pch13ex03)![Image](img/#ch13.xhtml_pch13ex04)![Image](img/#ch13.xhtml_pch13ex05)![Image](img/#ch13.xhtml_pch13ex06)![Image](img/#ch13.xhtml_pch13ex07)![Image](img/#ch13.xhtml_pch13ex08)![Image](img/#ch13.xhtml_pch13ex09)![Image](img/#ch13.xhtml_pch13ex10)![Image](img/#ch13.xhtml_pch13ex11)![Image](img/#ch13.xhtml_pch13ex12)![Image![Image](img/13lis01b.jpg)![Image](img/#ch13.xhtml_pch13ex13)![Image](img/#ch13.xhtml_pch13ex14)![Image](img/#ch13.xhtml_pch13ex15)![Image](img/#ch13.xhtml_pch13ex16)![Image](img/#ch13.xhtml_pch13ex17)![Image](img/#ch13.xhtml_pch13ex18)![Image](img/#ch13.xhtml_pch13ex19)![Image](img/#ch13.xhtml_pch13ex20)![Image](img/#ch13.xhtml_pch13ex21)
+![Image](img/#ch13.xhtml_pch13ex01)
+
+![Image](img/#ch13.xhtml_pch13ex02)
+
+![Image](img/#ch13.xhtml_pch13ex03)
+
+![Image](img/#ch13.xhtml_pch13ex04)
+
+![Image](img/#ch13.xhtml_pch13ex05)
+
+![Image](img/#ch13.xhtml_pch13ex06)
+
+![Image](img/#ch13.xhtml_pch13ex07)
+
+![Image](img/#ch13.xhtml_pch13ex08)
+
+![Image](img/#ch13.xhtml_pch13ex09)
+
+![Image](img/#ch13.xhtml_pch13ex10)
+
+![Image](img/#ch13.xhtml_pch13ex11)
+
+![Image](img/#ch13.xhtml_pch13ex12)
+
+![Image](img/13lis01b.jpg)
+
+![Image](img/#ch13.xhtml_pch13ex13)
+
+![Image](img/#ch13.xhtml_pch13ex14)
+
+![Image](img/#ch13.xhtml_pch13ex15)
+
+![Image](img/#ch13.xhtml_pch13ex16)
+
+![Image](img/#ch13.xhtml_pch13ex17)
+
+![Image](img/#ch13.xhtml_pch13ex18)
+
+![Image](img/#ch13.xhtml_pch13ex19)
+
+![Image](img/#ch13.xhtml_pch13ex20)
+
+![Image](img/#ch13.xhtml_pch13ex21)
 
 ## 代码片段
+
+
 
 ![Image](img/#ch14.xhtml_pch14ex01)![Image](img/#ch14.xhtml_pch14ex02)![Image](img/#ch14.xhtml_pch14ex03)![Image](img/#ch14.xhtml_pch14ex04)![Image](img/#ch14.xhtml_pch14ex05)![Image](img/#ch14.xhtml_pch14ex06)![Image](img/#ch14.xhtml_pch14ex07)![Image](img/#ch14.xhtml_pch14ex08)![Image](img/#ch14.xhtml_pch14ex09)![Image](img/#ch14.xhtml_pch14ex10)![Image](img/#ch14.xhtml_pch14ex11)![Image](img/#ch14.xhtml_pch14ex12)![Image](img/#ch14.xhtml_pch14ex13)![Image](img/#ch14.xhtml_pch14ex14)![Image](img/#ch14.xhtml_pch14ex15)![Image](img/#ch14.xhtml_pch14ex16)![Image](img/#ch14.xhtml_pch14ex17)![Image](img/#ch14.xhtml_pch14ex18)![Image](img/#ch14.xhtml_pch14ex19)![Image](img/#ch14.xhtml_pch14ex20)![Image](img/#ch14.xhtml_pch14ex21)
 
 ## 代码片段
 
-![Image](img/#ch15.xhtml_pch15ex01)![Image](img/#ch15.xhtml_pch15ex02)![Image](img/#ch15.xhtml_pch15ex03)![Image![Image](img/13lis04b)![Image](img/#ch15.xhtml_pch15ex04)![Image](img/#ch15.xhtml_pch15ex05)![Image](img/#ch15.xhtml_pch15ex06)![Image](img/#ch15.xhtml_pch15ex07)![Image](img/#ch15.xhtml_pch15ex08)![Image](img/#ch15.xhtml_pch15ex09)![Image](img/#ch15.xhtml_pch15ex10)![Image](img/#ch15.xhtml_pch15ex11)![Image](img/#ch15.xhtml_pch15ex12)![Image](img/#ch15.xhtml_pch15ex13)![Image](img/#ch15.xhtml_pch15ex14)![Image](img/#ch15.xhtml_pch15ex15)![Image](img/#ch15.xhtml_pch15ex16)![Image](img/#ch15.xhtml_pch15ex17)![Image](img/#ch15.xhtml_pch15ex18)![Image](img/#ch15.xhtml_pch15ex19)![Image](img/#ch15.xhtml_pch15ex20)![Image](img/#ch15.xhtml_pch15ex21)![Image](img/13lis03a.jpg)
-
-
-
-
+![Image](img/#ch15.xhtml_pch15ex01)![Image](img/#ch15.xhtml_pch15ex02)![Image](img/#ch15.xhtml_pch15ex03)![Image](img/13lis04b)![Image](img/#ch15.xhtml_pch15ex04)![Image](img/#ch15.xhtml_pch15ex05)![Image](img/#ch15.xhtml_pch15ex06)![Image](img/#ch15.xhtml_pch15ex07)![Image](img/#ch15.xhtml_pch15ex08)![Image](img/#ch15.xhtml_pch15ex09)![Image](img/#ch15.xhtml_pch15ex10)![Image](img/#ch15.xhtml_pch15ex11)![Image](img/#ch15.xhtml_pch15ex12)![Image](img/#ch15.xhtml_pch15ex13)![Image](img/#ch15.xhtml_pch15ex14)![Image](img/#ch15.xhtml_pch15ex15)![Image](img/#ch15.xhtml_pch15ex16)![Image](img/#ch15.xhtml_pch15ex17)![Image](img/#ch15.xhtml_pch15ex18)![Image](img/#ch15.xhtml_pch15ex19)![Image](img/#ch15.xhtml_pch15ex20)![Image](img/#ch15.xhtml_pch15ex21)![Image](img/13lis03a.jpg)
 
 ![图片](img/#ch17.xhtml_pch17ex01)![图片](img/#ch17.xhtml_pch17ex02)![图片](img/#ch17.xhtml_pch17ex03)![图片](img/#ch17.xhtml_pch17ex04)![图片](img/#ch17.xhtml_pch17ex05)![图片](img/#ch17.xhtml_pch17ex06)![图片](img/#ch17.xhtml_pch17ex07)![图片](img/17lis02a.jpg)![图片](img/#ch17.xhtml_pch17ex08)![图片](img/#ch17.xhtml_pch17ex09)![图片](img/#ch17.xhtml_pch17ex10)![图片](img/#ch17.xhtml_pch17ex11)![图片](img/#ch17.xhtml_pch17ex12)![图片](img/#ch17.xhtml_pch17ex13)![图片](img/#ch17.xhtml_pch17ex14)![图片](img/#ch17.xhtml_pch17ex15)![图片](img/#ch17.xhtml_pch17ex16)![图片](img/#ch17.xhtml_pch17ex17)![图片](img/#ch17.xhtml_pch17ex18)![图片](img/#ch17.xhtml_pch17ex19)![图片](img/#ch17.xhtml_pch17ex20)![图片](img/#ch17.xhtml_pch17ex21)![图片](img/17lis03a.jpg)![图片](img/#ch17.xhtml_pch17ex22)![图片](img/#ch17.xhtml_pch17ex23)![图片](img/#ch17.xhtml_pch17ex24)![图片](img/#ch17.xhtml_pch17ex25)![图片](img/#ch17.xhtml_pch17ex26)![图片](img/#ch17.xhtml_pch17ex27)![图片](img/#ch17.xhtml_pch17ex28)
 
 ## 代码片段
+
 ![图片](img/#ch18.xhtml_pch18ex01)![图片](img/#ch18.xhtml_pch18ex02)![图片](img/18lis01a.jpg)![图片](img/#ch18.xhtml_pch18ex03)![图片](img/#ch18.xhtml_pch18ex04)![图片](img/#ch18.xhtml_pch18ex05)![图片](img/#ch18.xhtml_pch18ex06)![图片](img/#ch18.xhtml_pch18ex07)![图片](img/#ch18.xhtml_pch18ex08)![图片](img/18lis02a.jpg)![图片](img/18lis02b.jpg)![图片](img/18lis02c.jpg)![图片](img/18lis02d.jpg)![图片](img/#ch18.xhtml_pch18ex09)![图片](img/#ch18.xhtml_pch18ex10)![图片](img/#ch18.xhtml_pch18ex11)
 
 ## 代码片段
+
 ![图片](img/#ch19.xhtml_pch19ex01)![图片](img/#ch19.xhtml_pch19ex02)![图片](img/#ch19.xhtml_pch19ex03)![图片](img/#ch19.xhtml_pch19ex04)![图片](img/#ch19.xhtml_pch19ex05)![图片](img/#ch19.xhtml_pch19ex06)![图片](img/#ch19.xhtml_pch19ex07)![图片](img/#ch19.xhtml_pch19ex08)![图片](img/#ch19.xhtml_pch19ex09)![图片](img/#ch19.xhtml_pch19ex10)![图片](img/19lis01a.jpg)![图片](img/#ch19.xhtml_pch19ex11)![图片](img/#ch19.xhtml_pch19ex12)![图片](img/#ch19.xhtml_pch19ex13)![图片](img/#ch19.xhtml_pch19ex14)![图片](img/19lis02a.jpg)![图片](img/19lis02b.jpg)![图片](img/19lis02c.jpg)![图片](img/19lis02d.jpg)![图片](img/19lis02e.jpg)![图片](img/19lis02f.jpg)![图片](img/285pro01.jpg)](#ch19.xhtml_pch19ex15)![图片](img/#ch19.xhtml_pch19ex16)![图片](img/19lis03.jpg)](#ch19.xhtml_pch19ex17)![图片](img/19lis03a.jpg)![图片](img/19lis03b.jpg)![图片](img/19lis03c.jpg)![图片](img/19lis03d.jpg)
 
 ## 代码片段
+
 ![图片](img/#ch20.xhtml_pch20ex01)![图片](img/#ch20.xhtml_pch20ex02)![图片](img/#ch20.xhtml_pch20ex03)![图片](img/#ch20.xhtml_pch20ex04)![图片](img/#ch20.xhtml_pch20ex05)![图片](img/#ch20.xhtml_pch20ex06)![图片](img/20lis02a.jpg)![图片](img/300pro01.jpg)](#ch20.xhtml_pch20ex07)![图片](img/#ch20.xhtml_pch20ex08)![图片](img/20lis03.jpg)](#ch20.xhtml_pch20ex09)![图片](img/20lis03a.jpg)![图片](img/302pro01.jpg)](#ch20.xhtml_pch20ex10)![图片](img/#ch20.xhtml_pch20ex11)![图片](img/302pro03.jpg)](#ch20.xhtml_pch20ex12)![图片](img/303pro01.jpg)](#ch20.xhtml_pch20ex13)![图片](img/20lis04.jpg)](#ch20.xhtml_pch20ex14)![图片](img/20lis04a.jpg)![图片](img/305pro01.jpg)](#ch20.xhtml_pch20ex15)
 
 ## 代码片段
+
 ![图片](img/#ch21.xhtml_pch21ex01)![图片](img/#ch21.xhtml_pch21ex02)![图片](img/#ch21.xhtml_pch21ex03)![图片](img/#ch21.xhtml_pch21ex04)![图片](img/#ch21.xhtml_pch21ex05)![图片](img/#ch21.xhtml_pch21ex06)![图片](img/#ch21.xhtml_pch21ex07)![图片](img/#ch21.xhtml_pch21ex08)![图片](img/#ch21.xhtml_pch21ex09)![图片](img/21lis01a.jpg)![图片](img/21lis01.jpg)![图片](img/315pro01.jpg)](#ch21.xhtml_pch21ex10)![图片](img/315pro02.jpg)](#ch21.xhtml_pch21ex11)![图片](img/315pro03.jpg)](#ch21.xhtml_pch21ex12)![图片](img/21lis02.jpg)](#ch21.xhtml_pch21ex13)![图片](img/21lis02a.jpg)![图片](img/318pro01.jpg)](#ch21.xhtml_pch21ex14)![图片](img/318pro02.jpg)](#ch21.xhtml_pch21ex15)![图片](img/318pro03.jpg)](#ch21.xhtml_pch21ex16)![图片](img/318pro04.jpg)](#ch21.xhtml_pch21ex17)![图片](img/319pro01.jpg)](#ch21.xhtml_pch21ex18)![图片](img/319pro02.jpg)](#ch21.xhtml_pch21ex19)![图片](img/21lis03.jpg)](#ch21.xhtml_pch21ex20)![图片](img/21lis03a.jpg)![图片](img/21lis03b.jpg)
 
 ## 代码片段
+
 ![图片](img/#ch22.xhtml_pch22ex01)![图片](img/#ch22.xhtml_pch22ex02)![图片](img/#ch22.xhtml_pch22ex03)![图片](img/326pro03.jpg)](#ch22.xhtml_pch22ex04)![图片](img/326pro04.jpg)](#ch22.xhtml_pch22ex05)![图片](img/327pro01.jpg)](#ch22.xhtml_pch22ex06)![图片](img/327pro02.jpg)](#ch22.xhtml_pch22ex07)![图片](img/328pro01.jpg)](#ch22.xhtml_pch22ex08)![图片](img/328pro02.jpg)](#ch22.xhtml_pch22ex09)![图片](img/328pro03.jpg)](#ch22.xhtml_pch22ex10)![图片](img/329pro01.jpg)](#ch22.xhtml_pch22ex11)![图片](img/329pro02.jpg)](#ch22.xhtml_pch22ex12)![图片](img/330pro01.jpg)](#ch22.xhtml_pch22ex13)![图片](img/331pro01.jpg)](#ch22.xhtml_pch22ex14)![图片](img/332pro01.jpg)](#ch22.xhtml_pch22ex15)![图片](img/333pro01.jpg)](#ch22.xhtml_pch22ex16)![图片](img/333pro02.jpg)](#ch22.xhtml_pch22ex17)![图片](img/334pro01.jpg)](#ch22.xhtml_pch22ex18)![图片](img/334pro02.jpg)](#ch22.xhtml_pch22ex19)![图片](img/22lis01.jpg)](#ch22.xhtml_pch22ex20)![图片](img/22lis01a.jpg)![图片](img/22lis01b.jpg)![图片](img/22lis02.jpg)](#ch22.xhtml_pch22ex21)![图片](img/22lis02a.jpg)![图片](img/339pro01.jpg)](#ch22.xhtml_pch22ex22)
-
-
-
-
 
 ## 第 23 章节内容
 
 ![Image](img/#ch23.xhtml_pch23ex01)![Image](img/#ch23.xhtml_pch23ex02)![Image](img/#ch23.xhtml_pch23ex03)![Image](img/#ch23.xhtml_pch23ex04)![Image](img/#ch23.xhtml_pch23ex05)![Image](img/#ch23.xhtml_pch23ex06)![Image](img/#ch23.xhtml_pch23ex07)![Image](img/23lis02a.jpg)![Image](img/#ch23.xhtml_pch23ex08)![Image](img/#ch23.xhtml_pch23ex09)![Image](img/#ch23.xhtml_pch23ex10)![Image](img/23lis04a.jpg)![Image](img/23lis04b.jpg)![Image](img/#ch23.xhtml_pch23ex11)![Image](img/#ch23.xhtml_pch23ex12)![Image](img/#ch23.xhtml_pch23ex13)![Image](img/#ch23.xhtml_pch23ex14)![Image](img/#ch23.xhtml_pch23ex15)![Image](img/#ch23.xhtml_pch23ex16)![Image](img/#ch23.xhtml_pch23ex17)![Image](img/23lis06a.jpg)![Image](img/#ch23.xhtml_pch23ex18)![Image](img/#ch23.xhtml_pch23ex19)![Image](img/#ch23.xhtml_pch23ex20)![Image](img/#ch23.xhtml_pch23ex21)![Image](img/#ch23.xhtml_pch23ex22)![Image](img/#ch23.xhtml_pch23ex23)![Image](img/#ch23.xhtml_pch23ex24)![Image](img/#ch23.xhtml_pch23ex25)![Image](img/#ch23.xhtml_pch23ex26)![Image](img/23lis08a.jpg)![Image](img/23lis08b.jpg)![Image](img/#ch23.xhtml_pch23ex27)![Image](img/#ch23.xhtml_pch23ex28)![Image](img/#ch23.xhtml_pch23ex29)![Image](img/#ch23.xhtml_pch23ex30)![Image](img/#ch23.xhtml_pch23ex31)![Image](img/#ch23.xhtml_pch23ex32)![Image](img/#ch23.xhtml_pch23ex33)![Image](img/#ch23.xhtml_pch23ex34)![Image](img/#ch23.xhtml_pch23ex35)![Image](img/#ch23.xhtml_pch23ex36)
 
 ## 第 24 章节内容
+
+
 
 ![Image](img/#ch24.xhtml_pch24ex01)![Image](img/#ch24.xhtml_pch24ex02)![Image](img/#ch24.xhtml_pch24ex03)![Image](img/#ch24.xhtml_pch24ex04)![Image](img/#ch24.xhtml_pch24ex05)![Image](img/#ch24.xhtml_pch24ex06)![Image](img/#ch24.xhtml_pch24ex07)![Image](img/#ch24.xhtml_pch24ex08)![Image](img/#ch24.xhtml_pch24ex09)![Image](img/#ch24.xhtml_pch24ex10)
 
@@ -12370,4 +12060,3 @@ libraries, Java 类库, 45–49
 ## 代码示例 - C
 
 ![Image](img/#appe.xhtml_pappeex01)![Image](img/#appe.xhtml_pappeex02)
-

@@ -1,10 +1,11 @@
+
 # 亚马逊 100 天
 
 > 原文：<https://medium.com/javarevisited/100-days-to-amazon-day-1-b9e07228f079?source=collection_archive---------0----------------------->
 
 ## 第一天
 
-## 独特的三胞胎
+### 独特的三胞胎
 
 [![](img/c8b241cee87913d3412baa19ea5b83a3.png)](https://codeburst.io/100-coding-interview-questions-for-programmers-b1cf74885fb7?source=---------10------------------)
 

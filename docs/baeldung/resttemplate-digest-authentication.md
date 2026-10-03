@@ -1,8 +1,10 @@
-# 带有摘要式身份验证的 RestTemplate
+
+
+# 带有摘要式身份验证的 `RestTemplate`
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/resttemplate-digest-authentication>
 
- ![](img/9a8c1219885d9f39d3a5969197cc5c1f.png)
+![](img/9a8c1219885d9f39d3a5969197cc5c1f.png)
 
 It’s just plain hard to get true, **real-time visibility into a running auth flow.**
 
@@ -16,13 +18,13 @@ Knowing these types of challenges, we built Lightrun - a real-time production de
 
 [>> Debugging Authentication and Authorization Using Lightrun](/web/20220521224623/https://www.baeldung.com/lightrun-n-security)
 
-## 1。概述
+## 1. 概述
 
 本文将展示如何**配置 Spring `RestTemplate`来消费一个使用摘要认证**保护的服务。
 
-与基本认证类似，一旦在模板中设置了摘要认证，客户端将能够通过必要的安全步骤并获得`Authorization`报头所需的信息:
+与基本认证类似，一旦在模板中设置了摘要认证，客户端将能够通过必要的安全步骤并获得`Authorization`报头所需的信息：
 
-```java
+```http
 Authorization: Digest 
     username="user1",
     realm="Custom Realm Name",
@@ -33,9 +35,9 @@ Authorization: Digest
 
 有了这些数据，服务器可以正确地验证请求并返回 200 OK 响应。
 
-## 2。设置`RestTemplate`
+## 2. 设置 `RestTemplate`
 
-在 Spring 上下文中需要将`RestTemplate`声明为**一个 bean**——这在 XML 或普通 Java 中都很简单，使用`@Bean`注释:
+在 Spring 上下文中需要将 `RestTemplate` 声明为**一个 bean**——这在 XML 或普通 Java 中都很简单，使用 `@Bean` 注释：
 
 ```java
 import org.apache.http.HttpHost;
@@ -68,15 +70,15 @@ public class ClientConfig {
 }
 ```
 
-摘要访问机制的大部分配置是在注入模板的客户机 http 请求工厂的定制实现中完成的。
+摘要访问机制的大部分配置是在注入模板的客户机 HTTP 请求工厂的定制实现中完成的。
 
 请注意，我们现在使用可以访问安全 API 的凭证来预配置模板。
 
-## 3。配置摘要式认证
+## 3. 配置摘要式认证
 
-我们将通过扩展和配置来利用 Spring 3.1 中引入的对当前 HttpClient 4.x(即`HttpComponentsClientHttpRequestFactory`)的支持。
+我们将通过扩展和配置来利用 Spring 3.1 中引入的对当前 HttpClient 4.x（即 `HttpComponentsClientHttpRequestFactory`）的支持。
 
-我们主要是要配置`HttpContext`并为摘要式认证连接我们的定制逻辑:
+我们主要是要配置 `HttpContext` 并为摘要式认证连接我们的定制逻辑：
 
 ```java
 import java.net.URI;
@@ -122,7 +124,7 @@ public class HttpComponentsClientHttpRequestFactoryDigestAuth
 }
 ```
 
-现在，`RestTemplate`可以简单地注射并用于测试:
+现在，`RestTemplate` 可以简单地注入并用于测试：
 
 ```java
 @Test
@@ -133,13 +135,13 @@ public void whenSecuredRestApiIsConsumed_then200OK() {
 }
 ```
 
-为了说明完整的配置过程，这个测试还设置了用户凭证–`user1`和`user1Pass`。当然，这部分应该只做一次**，并且在测试本身之外**。
+为了说明完整的配置过程，这个测试还设置了用户凭证——`user1` 和 `user1Pass`。当然，这部分应该只做一次**，并且在测试本身之外**。
 
-## 4。Maven 依赖关系
+## 4. Maven 依赖关系
 
-`RestTemplate`和 HttpClient 库所需的 Maven 依赖关系是:
+`RestTemplate` 和 HttpClient 库所需的 Maven 依赖关系是：
 
-```java
+```xml
 <dependency>
    <groupId>org.springframework</groupId>
    <artifactId>spring-webmvc</artifactId>
@@ -153,8 +155,9 @@ public void whenSecuredRestApiIsConsumed_then200OK() {
 </dependency>
 ```
 
-## 5。结论
+## 5. 结论
 
 本教程展示了如何设置和**配置 Rest 模板，以便它可以使用使用摘要认证**保护的应用程序。REST API 本身需要用摘要安全机制进行[配置。](/web/20220521224623/https://www.baeldung.com/spring-security-digest-authentication "Spring Security Digest Authentication")
 
 这个实现可以在 GitHub 项目示例中找到——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。
+

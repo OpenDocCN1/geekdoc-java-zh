@@ -1,3 +1,4 @@
+
 # 关系数据库概述
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/overview/database.html`](https://docs.oracle.com/javase/tutorial/jdbc/overview/database.html)
@@ -25,52 +26,48 @@
 | 10099 | 肖恩 | 华盛顿 | 66 年 9 月 21 日 | null |
 | 10035 | 伊丽莎白 | 山口 | 59 年 12 月 24 日 | null |
 
-该表的主键通常会是员工编号，因为每个员工编号都保证是不同的。（数字比字符串更有效率用于比较。）也可以使用 `First_Name` 和 `Last_Name`，因为两者的组合在我们的示例数据库中也只标识一行。仅使用姓氏将不起作用，因为有两个姓氏为“Washington”的员工。在这种特殊情况下，名字都是不同的，因此可以想象使用该列作为主键，但最好避免使用可能出现重复的列。如果 Elizabeth Yamaguchi 在这家公司找到工作，而主键是 `First_Name`，则关系数据库管理系统将不允许添加她的名字（如果已经指定不允许重复）。因为表中已经有一个 Elizabeth，再添加一个将使主键无法作为标识一行的方法。请注意，虽然使用 `First_Name` 和 `Last_Name` 是这个示例的唯一复合键，但在更大的数据库中可能不是唯一的。还要注意，`Employees` 表假设每个员工只能有一辆车。
+该表的主键通常会是员工编号，因为每个员工编号都保证是不同的。（数字比字符串更有效率用于比较。）也可以使用`First_Name`和`Last_Name`，因为两者的组合在我们的示例数据库中也只标识一行。仅使用姓氏将不起作用，因为有两个姓氏为“Washington”的员工。在这种特殊情况下，名字都是不同的，因此可以想象使用该列作为主键，但最好避免使用可能出现重复的列。如果 Elizabeth Yamaguchi 在这家公司找到工作，而主键是`First_Name`，则关系数据库管理系统将不允许添加她的名字（如果已经指定不允许重复）。因为表中已经有一个 Elizabeth，再添加一个将使主键无法作为标识一行的方法。请注意，虽然使用`First_Name`和`Last_Name`是这个示例的唯一复合键，但在更大的数据库中可能不是唯一的。还要注意，`Employees`表假设每个员工只能有一辆车。
 
-## `SELECT` 语句
+## `SELECT`语句
 
-SQL 是一种设计用于与关系数据库一起使用的语言。有一组被认为是标准的基本 SQL 命令，被所有关系数据库管理系统使用。例如，所有关系数据库管理系统都使用 `SELECT` 语句。
+SQL 是一种设计用于与关系数据库一起使用的语言。有一组被认为是标准的基本 SQL 命令，被所有关系数据库管理系统使用。例如，所有关系数据库管理系统都使用`SELECT`语句。
 
-`SELECT` 语句，也称为查询，用于从表中获取信息。它指定一个或多个列标题，一个或多个要选择的表，以及一些选择条件。关系数据库管理系统返回满足所述要求的列条目的行。例如，以下 `SELECT` 语句将获取拥有公司车辆的员工的名字和姓氏：
+`SELECT`语句，也称为查询，用于从表中获取信息。它指定一个或多个列标题，一个或多个要选择的表，以及一些选择条件。关系数据库管理系统返回满足所述要求的列条目的行。例如，以下`SELECT`语句将获取拥有公司车辆的员工的名字和姓氏：
 
 ```java
 SELECT First_Name, Last_Name
 FROM Employees
 WHERE Car_Number IS NOT NULL
-
 ```
 
-符合要求（`Car_Number` 列中不为 null 的行集）的结果集如下。对于满足要求的每一行，都会打印出名字和姓氏，因为 `SELECT` 语句（第一行）指定了列 `First_Name` 和 `Last_Name`。`FROM` 子句（第二行）给出了将从中选择列的表。
+符合要求（`Car_Number`列中不为 null 的行集）的结果集如下。对于满足要求的每一行，都会打印出名字和姓氏，因为`SELECT`语句（第一行）指定了列`First_Name`和`Last_Name`。`FROM`子句（第二行）给出了将从中选择列的表。
 
 | `FIRST_NAME` | `LAST_NAME` |
 | --- | --- |
 | Axel | Washington |
 | Florence | Wojokowski |
 
-以下代码生成一个包含整个表的结果集，因为它要求表 Employees 中的所有列没有限制（没有 `WHERE` 子句）。请注意，`SELECT *` 意味着“`SELECT` 所有列”。
+以下代码生成一个包含整个表的结果集，因为它要求表 Employees 中的所有列没有限制（没有`WHERE`子句）。请注意，`SELECT *`意味着“`SELECT`所有列”。
 
 ```java
 SELECT *
 FROM Employees
-
 ```
 
-## `WHERE` 子句
+## `WHERE`子句
 
-`SELECT` 语句中的 `WHERE` 子句提供了选择值的条件。例如，在以下代码片段中，只有在列 `Last_Name` 以字符串 'Washington' 开头的行中才会选择值。
+`SELECT`语句中的`WHERE`子句提供了选择值的条件。例如，在以下代码片段中，只有在列`Last_Name`以字符串 'Washington' 开头的行中才会选择值。
 
 ```java
 SELECT First_Name, Last_Name
 FROM Employees
 WHERE Last_Name LIKE 'Washington%'
-
 ```
 
 关键字`LIKE`用于比较字符串，并提供了可以使用通配符的功能。例如，在上面的代码片段中，'Washington'末尾有一个百分号(`%`)，表示任何包含字符串'Washington'加零个或多个额外字符的值都将满足这个选择条件。因此，'Washington'或'Washingtonian'都会匹配，但'Washing'不会。`LIKE`子句中使用的另一个通配符是下划线(`_`)，代表任意一个字符。例如，
 
 ```java
 WHERE Last_Name LIKE 'Ba_man'
-
 ```
 
 会匹配'Barman'、'Badman'、'Balman'、'Bagman'、'Bamman'等等。
@@ -81,7 +78,6 @@ WHERE Last_Name LIKE 'Ba_man'
 SELECT First_Name, Last_Name
 FROM Employees
 WHERE Car_Number = 12
-
 ```
 
 下一个代码片段选择了员工编号大于 10005 的员工的名字和姓氏：
@@ -90,7 +86,6 @@ WHERE Car_Number = 12
 SELECT First_Name, Last_Name
 FROM Employees
 WHERE Employee_Number > 10005
-
 ```
 
 `WHERE`子句可能会变得相当复杂，包含多个条件，在一些数据库管理系统中还可能有嵌套条件。本概述不会涵盖复杂的`WHERE`子句，但以下代码片段有一个带有两个条件的`WHERE`子句；这个查询选择了员工编号小于 10100 且没有公司车的员工的名字和姓氏。
@@ -99,7 +94,6 @@ WHERE Employee_Number > 10005
 SELECT First_Name, Last_Name
 FROM Employees
 WHERE Employee_Number < 10100 and Car_Number IS NULL
-
 ```
 
 一种特殊类型的`WHERE`子句涉及连接，将在下一节中解释。
@@ -124,7 +118,6 @@ SELECT Employees.First_Name, Employees.Last_Name,
     Cars.Make, Cars.Model, Cars.Year
 FROM Employees, Cars
 WHERE Employees.Car_Number = Cars.Car_Number
-
 ```
 
 这将返回一个类似以下的结果集：
@@ -140,21 +133,16 @@ SQL 命令分为不同的类别，主要包括数据操作语言（DML）命令�
 
 以下是更常见的 DML 命令列表：
 
-+   `SELECT — ` 用于从数据库中查询和显示数据。`SELECT`语句指定要包含在结果集中的列。应用程序中使用的 SQL 命令中绝大多数是`SELECT`语句。
-
-+   `INSERT — ` 向表中添加新行。`INSERT`用于填充新创建的表或向已存在的表中添加新行（或多行）。
-
-+   `DELETE — ` 从表中删除指定的行或一组行
-
-+   `UPDATE — ` 改变表中某一列或一组列中的现有值
++   `SELECT` — 用于从数据库中查询和显示数据。`SELECT`语句指定要包含在结果集中的列。应用程序中使用的 SQL 命令中绝大多数是`SELECT`语句。
++   `INSERT` — 向表中添加新行。`INSERT`用于填充新创建的表或向已存在的表中添加新行（或多行）。
++   `DELETE` — 从表中删除指定的行或一组行
++   `UPDATE` — 改变表中某一列或一组列中的现有值
 
 更常见的 DDL 命令如下：
 
-+   `CREATE TABLE — ` 创建一个带有用户提供的列名的表。用户还需要为每个列中的数据指定一个类型。不同的关系型数据库管理系统具有不同的数据类型，因此用户可能需要使用元数据来确定特定数据库使用的数据类型。`CREATE TABLE`通常比数据操作命令使用频率低，因为表只创建一次，而添加或删除行或更改单个值通常更频繁发生。
-
-+   `DROP TABLE — ` 删除所有行并从数据库中删除表定义。根据 SQL92，过渡级别的规范，JDBC API 实现需要支持`DROP TABLE`命令。但是，对于`DROP TABLE`的`CASCADE`和`RESTRICT`选项的支持是可选的。此外，当存在引用正在被删除的表的视图或完整性约束时，`DROP TABLE`的行为是由实现定义的。
-
-+   `ALTER TABLE — ` 向表中添加或删除列。它还添加或删除表约束并更改列属性
++   `CREATE TABLE` — 创建一个带有用户提供的列名的表。用户还需要为每个列中的数据指定一个类型。不同的关系型数据库管理系统具有不同的数据类型，因此用户可能需要使用元数据来确定特定数据库使用的数据类型。`CREATE TABLE`通常比数据操作命令使用频率低，因为表只创建一次，而添加或删除行或更改单个值通常更频繁发生。
++   `DROP TABLE` — 删除所有行并从数据库中删除表定义。根据 SQL92，过渡级别的规范，JDBC API 实现需要支持`DROP TABLE`命令。但是，对于`DROP TABLE`的`CASCADE`和`RESTRICT`选项的支持是可选的。此外，当存在引用正在被删除的表的视图或完整性约束时，`DROP TABLE`的行为是由实现定义的。
++   `ALTER TABLE` — 向表中添加或删除列。它还添加或删除表约束并更改列属性
 
 ## 结果集和游标
 
@@ -180,4 +168,4 @@ SQL 命令分为不同的类别，主要包括数据操作语言（DML）命令�
 
 ## 元数据
 
-数据库存储用户数据，也存储关于数据库本身的信息。大多数数据库管理系统都有一组系统表，列出数据库中的表、每个表中的列名、主键、外键、存储过程等。每个数据库管理系统都有自己的函数来获取有关表布局和数据库功能的信息。JDBC 提供了 `DatabaseMetaData` 接口，驱动程序编写者必须实现该接口，以便其方法返回有关驱动程序和/或为其编写驱动程序的数据库管理系统的信息。例如，大量的方法返回驱动程序是否支持特定功能。这个接口为用户和工具提供了一种标准化的获取元数据的方式。一般来说，编写工具和驱动程序的开发人员最有可能关注元数据。
+数据库存储用户数据，也存储关于数据库本身的信息。大多数数据库管理系统都有一组系统表，列出数据库中的表、每个表中的列名、主键、外键、存储过程等。每个数据库管理系统都有自己的函数来获取有关表布局和数据库功能的信息。JDBC 提供了`DatabaseMetaData`接口，驱动程序编写者必须实现该接口，以便其方法返回有关驱动程序和/或为其编写驱动程序的数据库管理系统的信息。例如，大量的方法返回驱动程序是否支持特定功能。这个接口为用户和工具提供了一种标准化的获取元数据的方式。一般来说，编写工具和驱动程序的开发人员最有可能关注元数据。

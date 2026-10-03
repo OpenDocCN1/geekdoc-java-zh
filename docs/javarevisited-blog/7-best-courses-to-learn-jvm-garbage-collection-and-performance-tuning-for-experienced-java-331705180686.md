@@ -1,3 +1,4 @@
+
 # 2023 年学习 JVM、垃圾收集和性能调优的 7 门最佳课程
 
 > 原文：<https://medium.com/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686?source=collection_archive---------1----------------------->
@@ -8,7 +9,7 @@ image_credit — [了解 Java 虚拟机:内存管理](https://pluralsight.pxf.io
 
 大家好，对于一个高级 Java 开发人员来说，了解 JVM 如何工作以及如何解决内存问题是很重要的，最明显的是 Java 应用程序和 Tomcat 之类的服务器中的[内存泄漏](http://javarevisited.blogspot.sg/2013/01/threadlocal-memory-leak-in-java-web.html#axzz57W6MT09l)。您可能会想，Java 中的内存泄漏是怎么回事？
 
-内存不是由 JVM 和垃圾收集器管理的吗？嗯，这是真的，但是糟糕的编码或者一点点粗心都会导致 Java 中的内存泄漏。如果你不知道如何配置 JVM，在[堆](https://javarevisited.blogspot.com/2011/05/java-heap-space-memory-size-jvm.html#axzz5SDsAfcC8)，和[栈](http://www.java67.com/2016/10/difference-between-heap-and-stack-memory-in-java-JVM.html)上排查内存相关问题，你会在更高的层面上纠结。
+内存不是由 JVM 和垃圾收集器管理的吗？嗯，这是真的，但是糟糕的编码或者一点点粗心都会导致 Java 中的内存泄漏。如果你不知道如何配置 JVM，在[堆](https://javarevisited.blogspot.com/2011/05/java-heap-space-memory-size-jvm.html#axzz5SDsAfcC8)和[栈](http://www.java67.com/2016/10/difference-between-heap-and-stack-memory-in-java-JVM.html)上排查内存相关问题，你会在更高的层面上纠结。
 
 这就是为什么随着经验的增长，有经验的 Java 开发人员花一些时间学习这些高级技能是非常重要的。如果您有相同的想法，并且今年对学习 JVM 内部、内存管理、GC 和性能调优感兴趣，那么您来对地方了。
 
@@ -40,7 +41,7 @@ image_credit — [了解 Java 虚拟机:内存管理](https://pluralsight.pxf.io
 
 ## 2. [Java 多线程、并发&性能优化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)
 
-这是另一门优秀的课程，面向希望成为 Java 多线程、并发并行编程专家的有经验的 Java 开发人员，重点强调高性能
+这是另一门优秀的课程，面向希望成为 Java 多线程、并发并行编程专家的有经验的 Java 开发人员，重点强调高性能。
 
 在这门课程中，您将学习到排除性能和内存相关问题、线程相关问题以及 JVM 特定问题所需的所有[基本工具](https://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)。
 
@@ -66,7 +67,7 @@ image_credit — [了解 Java 虚拟机:内存管理](https://pluralsight.pxf.io
 
 简而言之，这是一门学习 JVM 内存、垃圾收集、调优 VM 和避免 Java 内存泄漏的伟大课程，并向所有 Java 程序员强烈推荐它。
 
-## 4.[Java 虚拟机(JVM)全面介绍](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fa-comprehensive-introduction-to-java-virtual-machine-jvm%2F)
+## 4. [Java 虚拟机(JVM)全面介绍](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fa-comprehensive-introduction-to-java-virtual-machine-jvm%2F)
 
 这是学习 JVM 内部的另一门极好的课程，比如类加载、反射、垃圾收集、堆、栈和字节码指令集。
 
@@ -78,7 +79,7 @@ image_credit — [了解 Java 虚拟机:内存管理](https://pluralsight.pxf.io
 
 [![](img/79a660f209972cc37dd07cf2ca3315e6.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fa-comprehensive-introduction-to-java-virtual-machine-jvm%2F)
 
-## 5.[了解 Java 虚拟机:内存管理](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-memory-management)
+## 5. [了解 Java 虚拟机:内存管理](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-memory-management)
 
 Pluralsight 有一个关于 JVM 的精彩系列，被凯文·琼斯称为“理解 Java 虚拟机”。这是一个由三部分组成的系列，每一部分都涵盖了关键的 JVM 概念，如内存管理、类加载和反射以及安全性。
 
@@ -90,7 +91,7 @@ Pluralsight 有一个关于 JVM 的精彩系列，被凯文·琼斯称为“理�
 
 [![](img/a3ff6c46134c722e7fe70bad5a5287aa.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-memory-management)
 
-## 6.[了解 Java 虚拟机:安全性](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-security)
+## 6. [了解 Java 虚拟机:安全性](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-security)
 
 这是 Pluralsight 上“理解 Java 虚拟机”系列的第三部分，它主要关注安全性。如果您还记得的话，Java 安全性是围绕权限和策略的思想构建的。Java 代码根据当前有效的策略被授予权限。
 
@@ -100,11 +101,13 @@ Pluralsight 有一个关于 JVM 的精彩系列，被凯文·琼斯称为“理�
 
 **这里是加入本课程的链接** — [了解 Java 虚拟机:安全性](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-security)
 
+
+
 [![](img/c83cf878ddec2952da013a9bf157b972.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-security)
 
 总的来说，这是一门深入学习 JVM 安全性的综合课程，是任何想要掌握 JVM 内部知识的高级 Java 开发人员的必修课。
 
-## 7.[了解 Java 虚拟机:类加载和反射](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-class-loading-reflection)
+## 7. [了解 Java 虚拟机：类加载和反射](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-class-loading-reflection)
 
 这是“理解 Java 虚拟机”系列的第二部分，重点是类加载和反射。
 
@@ -112,19 +115,19 @@ Pluralsight 有一个关于 JVM 的精彩系列，被凯文·琼斯称为“理�
 
 在这个课程中，你将学习如何使用类加载机制工作以及如何编写类加载器。一旦理解了这个概念，就可以理解 Java 应用程序中类的热部署以及类的并行加载是如何工作的。您还将了解 Java 中的[类加载器](https://javarevisited.blogspot.com/2012/12/how-classloader-works-in-java.html#axzz5Y4KhSOWu)是如何工作的。
 
-**这里是加入本课程的链接** — [了解 Java 虚拟机:类加载和反射](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-class-loading-reflection)
+**这里是加入本课程的链接** — [了解 Java 虚拟机：类加载和反射](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-class-loading-reflection)
 
 [![](img/9e1e0aff8d084621f18859bbc2f44676.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Funderstanding-java-vm-class-loading-reflection)
 
-本课程涉及的另一个主题是反射，这是另一个帮助您与 JVM 交互的工具。Java 有丰富的类型系统和元数据。反射是一种机制，通过这种机制，您可以在运行时检查元数据，并使用该信息构建丰富的应用程序，如[工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)，ide，如 [Eclipse](http://www.java67.com/2018/02/5-free-eclipse-and-junit-online-courses-java-developers.html) 和 [IntelliJIDEA](https://itnext.io/top-5-intellijidea-and-android-studio-courses-for-java-and-android-programmers-afcc27309b60) 等。
+本课程涉及的另一个主题是反射，这是另一个帮助您与 JVM 交互的工具。Java 有丰富的类型系统和元数据。反射是一种机制，通过这种机制，您可以在运行时检查元数据，并使用该信息构建丰富的应用程序，如[工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)，IDE，如 [Eclipse](http://www.java67.com/2018/02/5-free-eclipse-and-junit-online-courses-java-developers.html) 和 [IntelliJIDEA](https://itnext.io/top-5-intellijidea-and-android-studio-courses-for-java-and-android-programmers-afcc27309b60) 等。
 
-顺便说一句，你需要一个 Pluralsight 会员来访问这三个 JVM 在线课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。
+顺便说一句，你需要一个 Pluralsight 会员来访问这三个 JVM 在线课程，费用大约是每月 29 美元或每年 299 美元（14% 的折扣）。
 
 如果你还没有 [Pluralsight 会员资格](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing)，我鼓励你申请一个，因为它可以让你访问他们的 5000 多个在线课程，涉及所有最新的主题，如前端和后端开发、机器学习等。它还包括交互式测验、练习和最新的认证材料。
 
 他们还提供了 [**10 天的免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 而没有任何承诺，这不仅是免费访问这门课程的好方法，也是在加入 Pluralsight 之前检查课程质量的好方法。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 这就是学习 JVM 内部机制、垃圾收集和内存管理的一些最好的课程。您还将学习如何用 Java 在 Java 应用程序中寻找内存泄漏并修复它们。
 
@@ -132,25 +135,25 @@ Pluralsight 有一个关于 JVM 的精彩系列，被凯文·琼斯称为“理�
 
 其他**你可能喜欢的 Java 编程文章**
 
-*   [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-*   [10 门免费数据结构与算法课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
-*   [Spring MVC 在 Java 内部是如何工作的？](https://javarevisited.blogspot.com/2017/06/how-spring-mvc-framework-works-web-flow.html)
-*   [面向 Java 开发人员的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
-*   2023 年 Java 开发者应该学会的 10 件事？
-*   Java 和 Web 开发人员应该学习的 10 个框架
-*   【Java 开发人员必备的 10 个测试工具
-*   [面向初学者和有经验程序员的 10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
-*   [2023 年成为更好的 Java 程序员的 10 个技巧](http://javarevisited.blogspot.sg/2018/05/10-tips-to-become-better-java-developer.html)
-*   [在 Java 中使用 Spring 进行 REST API 开发的 7 个理由](http://javarevisited.blogspot.sg/2018/01/7-reasons-for-using-spring-to-develop-RESTful-web-service.html#axzz55a8rTeu7)
-*   [2023 年每个 Java 开发人员都应该阅读的 10 本书](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
-*   [深入学习 Java 并发的 5 门课程](https://javarevisited.blogspot.com/2018/06/top-5-java-multithreading-and-concurrency-courses-experienced-programmers.html#axzz5kEPsvqbp)
+* [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+* [10 门免费数据结构与算法课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
+* [Spring MVC 在 Java 内部是如何工作的？](https://javarevisited.blogspot.com/2017/06/how-spring-mvc-framework-works-web-flow.html)
+* [面向 Java 开发人员的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
+* 2023 年 Java 开发者应该学会的 10 件事？
+* Java 和 Web 开发人员应该学习的 10 个框架
+* 【Java 开发人员必备的 10 个测试工具
+* [面向初学者和有经验程序员的 10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
+* [2023 年成为更好的 Java 程序员的 10 个技巧](http://javarevisited.blogspot.sg/2018/05/10-tips-to-become-better-java-developer.html)
+* [在 Java 中使用 Spring 进行 REST API 开发的 7 个理由](http://javarevisited.blogspot.sg/2018/01/7-reasons-for-using-spring-to-develop-RESTful-web-service.html#axzz55a8rTeu7)
+* [2023 年每个 Java 开发人员都应该阅读的 10 本书](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
+* [深入学习 Java 并发的 5 门课程](https://javarevisited.blogspot.com/2018/06/top-5-java-multithreading-and-concurrency-courses-experienced-programmers.html#axzz5kEPsvqbp)
 
 感谢您阅读本文。如果你喜欢这些 JVM 内部*和 Java 中的内存管理课程*，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P.S.** —如果你喜欢看书，也可以看看这个 [**书籍列表，更好地学习 JVM 和垃圾收集**](https://javarevisited.blogspot.com/2018/07/top-5-java-performance-tuning-books-for.html) 。该文件包含一些关于 JVM 内部和性能调优主题的最佳书籍。
+**P.S.** — 如果你喜欢看书，也可以看看这个 [**书籍列表，更好地学习 JVM 和垃圾收集**](https://javarevisited.blogspot.com/2018/07/top-5-java-performance-tuning-books-for.html)。该文件包含一些关于 JVM 内部和性能调优主题的最佳书籍。
 
-<https://www.java67.com/2019/08/best-books-to-learn-java-virtual-machine-in-depth.html>  
+<https://www.java67.com/2019/08/best-books-to-learn-java-virtual-machine-in-depth.html>
 
-**P. S. S.** —如果你需要更多关于 Java 性能的课程，我还建议你去看看 Udemy 网站上 Michael Pogrebinsky 的 [**Java 多线程、并发和性能优化**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F) ，我非常喜欢这门课程，我强烈推荐任何想学习高性能 Java 应用程序的人。
+**P. S. S.** — 如果你需要更多关于 Java 性能的课程，我还建议你去看看 Udemy 网站上 Michael Pogrebinsky 的 [**Java 多线程、并发和性能优化**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)，我非常喜欢这门课程，我强烈推荐任何想学习高性能 Java 应用程序的人。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F>

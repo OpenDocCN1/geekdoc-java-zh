@@ -1,8 +1,9 @@
+
 # 解决 Leetcode 问题，获得你梦想中的公司的报价
 
 > 原文：<https://medium.com/javarevisited/solve-leetcode-problems-and-get-offers-from-your-dream-companies-b18a7d9a756?source=collection_archive---------2----------------------->
 
-309.买卖有冷却期的股票的最佳时间
+## 309. 买卖有冷却期的股票的最佳时间
 
 ![](img/53865545bd0b8ec265f4bad9dc4f7796.png)
 

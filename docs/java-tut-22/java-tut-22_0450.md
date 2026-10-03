@@ -1,3 +1,4 @@
+
 # Synth 示例
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/lookandfeel/synthExample.html`](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/synthExample.html)
@@ -6,7 +7,7 @@
 
 ![Find.](img/db1be508be14afcae7ce7be90da36315.png)
 
-这节课使用 Synth 创建了相同的对话框，使用了外部 XML 文件。这是 ``SynthDialog.java`` 文件的清单。
+这节课使用 Synth 创建了相同的对话框，使用了外部 XML 文件。这是 `SynthDialog.java` 文件的清单。
 
 `SynthDialog.java` 与 `Find.java` 完全相同，只是 `initLookAndFeel()` 方法已经更改为使用 Synth 外观和一个名为 `synthDemo.xml` 的外部文件。这是新的 `initLookAndFeel()` 方法：
 
@@ -30,7 +31,6 @@ private static void initLookAndFeel() {
       e.printStackTrace();
    }
 }
-
 ```
 
 ## XML 文件
@@ -49,16 +49,15 @@ XML 文件 `synthDemo.xml` 以一个绑定到所有区域的样式开始。这�
     </state>
   </style>
   <bind style="backingStyle" type="region" key=".*"/>
-
 ```
 
 * * *
 
 **注意：**
 
-1\. 颜色定义必须在 `<state>` 元素内部。这样可以根据状态改变颜色。`backingStyle` 中的 `<state>` 元素没有属性，因此适用于所有区域，无论它们的状态如何。如果一个区域有其他状态，这些状态将合并，优先考虑文件中后面出现的状态定义。
+1. 颜色定义必须在 `<state>` 元素内部。这样可以根据状态改变颜色。`backingStyle` 中的 `<state>` 元素没有属性，因此适用于所有区域，无论它们的状态如何。如果一个区域有其他状态，这些状态将合并，优先考虑文件中后面出现的状态定义。
 
-2\. 字体定义不在 `<state>` 元素内部，因为当状态改变时字体 *不应该* 改变（许多组件的大小取决于它们的字体，字体的改变可能会导致组件意外地改变大小）。
+2. 字体定义不在 `<state>` 元素内部，因为当状态改变时字体 *不应该* 改变（许多组件的大小取决于它们的字体，字体的改变可能会导致组件意外地改变大小）。
 
 * * *
 
@@ -76,20 +75,19 @@ XML 文件 `synthDemo.xml` 以一个绑定到所有区域的样式开始。这�
                   sourceInsets="4 6 4 6" paintCenter="false"/>
   </style>
   <bind style="textfield" type="region" key="TextField"/>
-
 ```
 
 * * *
 
 **注意：**
 
-1\. 字体和颜色定义覆盖了 `backingStyle` 中的定义。
+1. 字体和颜色定义覆盖了 `backingStyle` 中的定义。
 
-2\. `insets` 和 `sourceInsets` 被赋予相同的值，这只是一个巧合，因为它们彼此无关。
+2. `insets` 和 `sourceInsets` 被赋予相同的值，这只是一个巧合，因为它们彼此无关。
 
-3\. 背景颜色，#D2DFF2，是一种淡蓝色，与图像 `textfield.png` 中的背景颜色相同。
+3. 背景颜色，`#D2DFF2`，是一种淡蓝色，与图像 `textfield.png` 中的背景颜色相同。
 
-4\. `paintCenter` 设置为 `false`，这样你就可以看到背景颜色。
+4. `paintCenter` 设置为 `false`，这样你就可以看到背景颜色。
 
 * * *
 
@@ -121,22 +119,21 @@ XML 文件 `synthDemo.xml` 以一个绑定到所有区域的样式开始。这�
     </state>
   </style>
   <bind style="button" type="region" key="Button"/>
-
 ```
 
 * * *
 
 **注意：**
 
-1\. 在没有属性的 `<state>` 元素内部的字体和颜色定义适用于所有按钮状态。这是因为适用的所有状态的定义（而 `<state>` 元素没有属性是其中之一）将合并，没有其他可能优先的字体和颜色定义。
+1. 在没有属性的 `<state>` 元素内部的字体和颜色定义适用于所有按钮状态。这是因为适用的所有状态的定义（而 `<state>` 元素没有属性是其中之一）将合并，没有其他可能优先的字体和颜色定义。
 
-2\. `sourceInsets` 的值足够大，使按钮图像的曲线角不会被拉伸。
+2. `sourceInsets` 的值足够大，使按钮图像的曲线角不会被拉伸。
 
-3\. `PRESSED` 和 `MOUSE_OVER` 状态的顺序很重要。由于鼠标在按下按钮时始终位于按钮上方，因此这两种状态都将应用于按下的按钮，并且将应用第一个定义的状态（`PRESSED`）。当鼠标悬停在按钮上但未按下时，只有 `MOUSE_OVER` 状态适用。如果 `PRESSED` 和 `MOUSE_OVER` 状态的顺序颠倒，那么 `PRESSED` 状态的图像将永远不会被使用。
+3. `PRESSED` 和 `MOUSE_OVER` 状态的顺序很重要。由于鼠标在按下按钮时始终位于按钮上方，因此这两种状态都将应用于按下的按钮，并且将应用第一个定义的状态（`PRESSED`）。当鼠标悬停在按钮上但未按下时，只有 `MOUSE_OVER` 状态适用。如果 `PRESSED` 和 `MOUSE_OVER` 状态的顺序颠倒，那么 `PRESSED` 状态的图像将永远不会被使用。
 
 * * *
 
-下一个 <style> 元素用于根据复选框状态绘制不同图标的复选框。
+下一个 `<style>` 元素用于根据复选框状态绘制不同图标的复选框。
 
 ```java
   <style id="checkbox">
@@ -148,22 +145,21 @@ XML 文件 `synthDemo.xml` 以一个绑定到所有区域的样式开始。这�
     </state>
   </style>
   <bind style="checkbox" type="region" key="Checkbox"/>    
-
 ```
 
 * * *
 
 **注：**
 
-1\. 必须使用 <imageIcon> 元素来定义要使用的任何图标。
+1. 必须使用 `<imageIcon>` 元素来定义要使用的任何图标。
 
-2\. <insets> 元素和 `sourceInsets` 属性不适用于图标，因为它们以固定大小呈现，不会被拉伸。
+2. `<insets>` 元素和 `sourceInsets` 属性不适用于图标，因为它们以固定大小呈现，不会被拉伸。
 
-3\. 用于渲染复选框的图标是在 `CheckBox.icon` 属性中命名的图标（参见 [`javax/swing/plaf/synth/doc-files/componentProperties.html`](https://docs.oracle.com/javase/8/docs/api/javax/swing/plaf/synth/doc-files/componentProperties.html)），这是具有 id="check_off" 的图标，除非复选框状态为 `SELECTED`。
+3. 用于渲染复选框的图标是在 `CheckBox.icon` 属性中命名的图标（参见 [`javax/swing/plaf/synth/doc-files/componentProperties.html`](https://docs.oracle.com/javase/8/docs/api/javax/swing/plaf/synth/doc-files/componentProperties.html)），这是具有 `id="check_off"` 的图标，除非复选框状态为 `SELECTED`。
 
 * * *
 
-`synthDemo.xml` 文件由上述样式构成，包裹在 <synth></synth> 标签中。您可以通过点击 ``synthDemo.xml`` 打开完成的文件。
+`synthDemo.xml` 文件由上述样式构成，包裹在 `<synth></synth>` 标签中。您可以通过点击 `synthDemo.xml` 打开完成的文件。
 
 * * *
 

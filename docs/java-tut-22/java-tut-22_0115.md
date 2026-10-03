@@ -1,3 +1,4 @@
+
 # Lesson: 泛型（更新）
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/generics/index.html`](https://docs.oracle.com/javase/tutorial/java/generics/index.html)

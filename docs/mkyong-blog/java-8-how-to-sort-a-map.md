@@ -1,4 +1,5 @@
-# Java 8–如何对地图进行排序
+
+# Java 8 – 如何对地图进行排序
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-how-to-sort-a-map/>
 
@@ -6,29 +7,29 @@
 
 Java 8 `Stream`示例按照键或值对一个`Map`进行排序。
 
-## 1.快速解释
+## 1. 快速解释
 
-Java 8 中对地图进行排序的步骤。
+Java 8 中对地图进行排序的步骤：
 
-1.  将地图转换成河流
-2.  分类吧
-3.  收集并返回新的`LinkedHashMap`(保持顺序)
+1. 将地图转换成河流
+2. 分类吧
+3. 收集并返回新的`LinkedHashMap`（保持顺序）
 
 ```java
- Map result = map.entrySet().stream()
-	.sorted(Map.Entry.comparingByKey()) 			
-	.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
-	(oldValue, newValue) -> oldValue, LinkedHashMap::new)); 
+Map result = map.entrySet().stream()
+    .sorted(Map.Entry.comparingByKey())
+    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 ```
 
 *P.S 默认情况下，`Collectors.toMap`会返回一个`HashMap`*
 
-## 2.按关键字排序
+## 2. 按关键字排序
 
-SortByKeyExample.java
+`SortByKeyExample.java`
 
 ```java
- package com.mkyong.test;
+package com.mkyong.test;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -75,26 +76,26 @@ public class SortByKeyExample {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Original...
+Original...
 {a=6, b=5, c=20, d=1, e=7, f=9, g=50, y=8, z=10, m=2, n=99}
 
 Sorted...
 {a=6, b=5, c=20, d=1, e=7, f=9, g=50, m=2, n=99, y=8, z=10}
-{a=6, b=5, c=20, d=1, e=7, f=9, g=50, m=2, n=99, y=8, z=10} 
+{a=6, b=5, c=20, d=1, e=7, f=9, g=50, m=2, n=99, y=8, z=10}
 ```
 
-## 3.按值排序
+## 3. 按值排序
 
-SortByValueExample.java
+`SortByValueExample.java`
 
 ```java
- package com.mkyong.test;
+package com.mkyong.test;
 
 package com.mkyong;
 
@@ -141,27 +142,30 @@ public class SortByValueExample {
         System.out.println(result2);
 
     }
-} 
+}
 ```
 
 输出
 
 ```java
- Original...
+Original...
 {a=6, b=5, c=20, d=1, e=7, f=9, g=50, y=8, z=10, m=2, n=99}
 
 Sorted...
 {n=99, g=50, c=20, z=10, f=9, y=8, e=7, a=6, b=5, m=2, d=1}
-{n=99, g=50, c=20, z=10, f=9, y=8, e=7, a=6, b=5, m=2, d=1} 
+{n=99, g=50, c=20, z=10, f=9, y=8, e=7, a=6, b=5, m=2, d=1}
 ```
 
-## 4.地图 <object>流不能直接对`Map<Object,Object>`排序。要解决它，把它转换成`Map<String,String>`，回顾下面的例子。
+## 4. 地图 `<Object,Object>` 流不能直接对 `Map<Object,Object>` 排序。要解决它，把它转换成 `Map<String,String>`，回顾下面的例子。
 
 **Note**
-If you have better idea to sort it, do let me know.DisplayApp.java
+
+If you have better idea to sort it, do let me know.
+
+`DisplayApp.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -190,19 +194,18 @@ public class DisplayApp {
 
     }
 
-} 
+}
 ```
 
 **Note**
+
 Not using Java 8? Try this classic way to [sort a Map in Java](http://web.archive.org/web/20220627140652/https://www.mkyong.com/java/how-to-sort-a-map-in-java/).
 
 ## 参考
 
-1.  [如何在 Java 中对地图进行排序](http://web.archive.org/web/20220627140652/https://www.mkyong.com/java/how-to-sort-a-map-in-java/)
-2.  [LinkedHashMap JavaDoc](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)
-3.  [collectors . tomap()JavaDoc](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#toMap-java.util.function.Function-java.util.function.Function-)
-4.  [通配符带来更多乐趣](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
-5.  [Collections.sort()签名](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/6/docs/api/java/util/Collections.html#sort%28java.util.List%29)
-6.  [Java 中超级 T >和扩展 T >的区别](http://web.archive.org/web/20220627140652/https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java)
-
-<input type="hidden" id="mkyong-current-postId" value="14038"></object>
+1. [如何在 Java 中对地图进行排序](http://web.archive.org/web/20220627140652/https://www.mkyong.com/java/how-to-sort-a-map-in-java/)
+2. [LinkedHashMap JavaDoc](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)
+3. [Collectors.toMap() JavaDoc](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#toMap-java.util.function.Function-java.util.function.Function-)
+4. [通配符带来更多乐趣](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
+5. [Collections.sort() 签名](http://web.archive.org/web/20220627140652/https://docs.oracle.com/javase/6/docs/api/java/util/Collections.html#sort%28java.util.List%29)
+6. [Java 中 `super T>` 和 `extends T>` 的区别](http://web.archive.org/web/20220627140652/https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java)

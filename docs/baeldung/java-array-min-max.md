@@ -1,18 +1,19 @@
+
 # 用 Java 查找数组中的最小值/最大值
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-array-min-max>
 
-## 1。简介
+## 1. 简介
 
 在这个简短的教程中，我们将看到如何使用 Java 8 的`Stream` API 找到数组中的最大值和最小值。
 
 我们将从寻找整数数组中的最小值开始，然后我们将寻找对象数组中的最大值。
 
-## 2。概述
+## 2. 概述
 
-有许多方法可以找到无序数组中的最小值或最大值，它们看起来都像:
+有许多方法可以找到无序数组中的最小值或最大值，它们看起来都像：
 
-```java
+```
 SET MAX to array[0]
 FOR i = 1 to array length - 1
   IF array[i] > MAX THEN
@@ -25,11 +26,11 @@ ENDFOR
 
 因为我们需要检查数组中的每个值，所以所有的实现都是`O(n)`。
 
-## 3。寻找最小值
+## 3. 寻找最小值
 
 **`java.util.stream.IntStream`接口提供了`min`方法**，它将很好地满足我们的目的。
 
-因为我们只处理整数，`min`不需要`Comparator`:
+因为我们只处理整数，`min`不需要`Comparator`：
 
 ```java
 @Test
@@ -44,13 +45,13 @@ public void whenArrayIsOfIntegerThenMinUsesIntegerComparator() {
 }
 ```
 
-注意我们是如何在`Arrays`中使用`stream` 静态方法创建`Integer`流对象的。每个原始数组类型都有等效的`stream`方法。
+注意我们是如何在`Arrays`中使用`stream`静态方法创建`Integer`流对象的。每个原始数组类型都有等效的`stream`方法。
 
-因为数组可能是空的，`min`返回一个`Optional,` ，所以为了将它转换成一个`int`，我们使用 *getAsInt* 。
+因为数组可能是空的，`min`返回一个`Optional`，所以为了将它转换成一个`int`，我们使用`getAsInt()`。
 
-## 4。寻找最大的自定义对象
+## 4. 寻找最大的自定义对象
 
-让我们创建一个简单的 POJO:
+让我们创建一个简单的 POJO：
 
 ```java
 public class Car {
@@ -61,7 +62,7 @@ public class Car {
 }
 ```
 
-然后我们可以再次使用`Stream` API 在一组`Car`中找到最快的汽车:
+然后我们可以再次使用`Stream` API 在一组`Car`中找到最快的汽车：
 
 ```java
 @Test
@@ -80,15 +81,15 @@ public void whenArrayIsOfCustomTypeThenMaxUsesCustomComparator() {
 }
 ```
 
-在这种情况下，`Arrays`的静态方法`stream`返回接口`java.util.stream.Stream<T>`的**实例，其中方法`max` 需要一个`Comparator`** 。
+在这种情况下，`Arrays`的静态方法`stream`返回接口`java.util.stream.Stream<T>`的**实例，其中方法`max`需要一个`Comparator`**。
 
-我们本可以构建自己的定制`Comparator`，但是 [`Comparator.comparing` 要简单得多。](/web/20221208143856/https://www.baeldung.com/java-8-comparator-comparing)
+我们本可以构建自己的定制`Comparator`，但是`Comparator.comparing()`要简单得多。
 
-再次注意，`max` 返回一个`Optional`实例，原因和前面一样。
+再次注意，`max`返回一个`Optional`实例，原因和前面一样。
 
-我们可以`get`这个值，或者我们可以用`Optional` s 做任何其他可能的事情，比如`orElseThrow`如果`max`没有返回值就会抛出异常。
+我们可以`get`这个值，或者我们可以用`Optional`做任何其他可能的事情，比如`orElseThrow()`如果`max`没有返回值就会抛出异常。
 
-## 5。结论
+## 5. 结论
 
 在这篇短文中，我们看到了使用 Java 8 的`Stream` API 在一个数组中找到 max 和 min 是多么简单和紧凑。
 

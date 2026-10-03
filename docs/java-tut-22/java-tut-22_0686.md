@@ -1,3 +1,4 @@
+
 # 传输和接收 MIDI 消息
 
 > 原文：[`docs.oracle.com/javase/tutorial/sound/MIDI-messages.html`](https://docs.oracle.com/javase/tutorial/sound/MIDI-messages.html)
@@ -23,14 +24,12 @@ Java Sound API 的消息系统中的基本模块是[`MidiDevice`](https://docs.o
 ```java
 void setMessage(int command, int channel, int data1,
          int data2) 
-
 ```
 
 一旦您准备好发送消息，您可以使用这个`Receiver`方法将其发送到一个`Receiver`对象：
 
 ```java
 void send(MidiMessage message, long timeStamp)
-
 ```
 
 时间戳参数将在稍后解释。现在，我们只会提到，如果您不关心指定精确时间，则其值可以设置为-1。在这种情况下，接收消息的设备将尽快响应消息。
@@ -40,14 +39,13 @@ void send(MidiMessage message, long timeStamp)
 作为一个发送消息而不使用发射器的具体简单示例，让我们向默认接收器发送一个 Note On 消息，通常与设备（如 MIDI 输出端口或合成器）相关联。我们通过创建一个合适的`ShortMessage`并将其作为参数传递给`Receiver`的`send`方法来实现这一点：
 
 ```java
-  ShortMessage myMsg = new ShortMessage();
-  // Start playing the note Middle C (60), 
-  // moderately loud (velocity = 93).
-  myMsg.setMessage(ShortMessage.NOTE_ON, 0, 60, 93);
-  long timeStamp = -1;
-  Receiver       rcvr = MidiSystem.getReceiver();
-  rcvr.send(myMsg, timeStamp);
-
+ShortMessage myMsg = new ShortMessage();
+// Start playing the note Middle C (60), 
+// moderately loud (velocity = 93).
+myMsg.setMessage(ShortMessage.NOTE_ON, 0, 60, 93);
+long timeStamp = -1;
+Receiver       rcvr = MidiSystem.getReceiver();
+rcvr.send(myMsg, timeStamp);
 ```
 
 此代码使用`ShortMessage`的静态整数字段，即`NOTE_ON`，用作 MIDI 消息的状态字节。 MIDI 消息的其他部分作为参数给出了`setMessage`方法的显式数值。零表示音符将使用 MIDI 通道号 1 播放；60 表示中央 C 音符；93 是一个任意的按键按下速度值，通常表示最终播放音符的合成器应该以相当大的音量播放它。（MIDI 规范将速度的确切解释留给合成器对其当前乐器的实现。）然后将此 MIDI 消息以时间戳 -1 发送到接收器。现在我们需要仔细研究时间戳参数的确切含义，这是下一节的主题。
@@ -73,8 +71,7 @@ Java Sound API 中在设备之间发送的消息上可选附带的时间戳与�
 要了解设备是否支持时间戳，请调用`MidiDevice`的以下方法：
 
 ```java
-    long getMicrosecondPosition()
-
+long getMicrosecondPosition()
 ```
 
 如果设备忽略时间戳，则此方法返回-1。否则，它将返回设备当前的时间概念，您作为发送方可以在确定随后发送的消息的时间戳时使用它作为偏移量。例如，如果您想发送一个时间戳为未来五毫秒的消息，您可以获取设备当前的微秒位置，加上 5000 微秒，并将其用作时间戳。请记住，`MidiDevice`对时间的概念总是将时间零放在设备打开时的时间。
@@ -83,7 +80,6 @@ Java Sound API 中在设备之间发送的消息上可选附带的时间戳与�
 
 ```java
 void send(MidiMessage message, long timeStamp)
-
 ```
 
 `timeStamp` 参数以微秒为单位表示，根据接收设备对时间的概念。如果设备不支持时间戳，它会简单地忽略 `timeStamp` 参数。您不需要为发送给接收器的消息加时间戳。您可以使用 `-1` 作为 `timeStamp` 参数，表示您不关心调整确切的时间；您只是让接收设备尽快处理消息。然而，不建议在发送给同一接收器的某些消息中使用 `-1`，而在其他消息中使用显式时间戳。这样做可能会导致结果时间的不规则性。
@@ -99,27 +95,25 @@ void send(MidiMessage message, long timeStamp)
 为简单起见，我们将使用默认的序列器和默认的合成器。
 
 ```java
-    Sequencer           seq;
-    Transmitter         seqTrans;
-    Synthesizer         synth;
-    Receiver         synthRcvr;
-    try {
-          seq     = MidiSystem.getSequencer();
-          seqTrans = seq.getTransmitter();
-          synth   = MidiSystem.getSynthesizer();
-          synthRcvr = synth.getReceiver(); 
-          seqTrans.setReceiver(synthRcvr);      
-    } catch (MidiUnavailableException e) {
-          // handle or throw exception
-    }
-
+Sequencer           seq;
+Transmitter         seqTrans;
+Synthesizer         synth;
+Receiver         synthRcvr;
+try {
+      seq     = MidiSystem.getSequencer();
+      seqTrans = seq.getTransmitter();
+      synth   = MidiSystem.getSynthesizer();
+      synthRcvr = synth.getReceiver(); 
+      seqTrans.setReceiver(synthRcvr);      
+} catch (MidiUnavailableException e) {
+      // handle or throw exception
+}
 ```
 
 一个实现实际上可能有一个既是默认序列器又是默认合成器的单个对象。换句话说，实现可能使用一个同时实现 `Sequencer` 接口和 `Synthesizer` 接口的类。在这种情况下，可能不需要像上面的代码中所做的显式连接。但出于可移植性考虑，最好不要假设这样的配置。如果需要，当然可以测试这种情况：
 
 ```java
 if (seq instanceof Synthesizer)
-
 ```
 
 尽管上面的显式连接应该在任何情况下都能工作。
@@ -129,24 +123,23 @@ if (seq instanceof Synthesizer)
 前面的代码示例说明了发射器和接收器之间的一对一连接。但是，如果您需要将相同的 MIDI 消息发送到多个接收器怎么办？例如，假设您希望从外部设备捕获 MIDI 数据以驱动内部合成器，同时将数据录制到序列中。这种连接形式有时被称为“分流”或“分配器”，很简单。以下语句显示了如何创建一个分流连接，通过该连接，到达 MIDI 输入端口的 MIDI 消息被发送到一个`Synthesizer`对象和一个`Sequencer`对象。我们假设您已经获取并打开了三个设备：输入端口、序列器和合成器。（要获取输入端口，您需要遍历`MidiSystem.getMidiDeviceInfo`返回的所有项目。）
 
 ```java
-    Synthesizer  synth;
-    Sequencer    seq;
-    MidiDevice   inputPort;
-    // [obtain and open the three devices...]
-    Transmitter   inPortTrans1, inPortTrans2;
-    Receiver            synthRcvr;
-    Receiver            seqRcvr;
-    try {
-          inPortTrans1 = inputPort.getTransmitter();
-          synthRcvr = synth.getReceiver(); 
-          inPortTrans1.setReceiver(synthRcvr);
-          inPortTrans2 = inputPort.getTransmitter();
-          seqRcvr = seq.getReceiver(); 
-          inPortTrans2.setReceiver(seqRcvr);
-    } catch (MidiUnavailableException e) {
-          // handle or throw exception
-    }
-
+Synthesizer  synth;
+Sequencer    seq;
+MidiDevice   inputPort;
+// [obtain and open the three devices...]
+Transmitter   inPortTrans1, inPortTrans2;
+Receiver            synthRcvr;
+Receiver            seqRcvr;
+try {
+      inPortTrans1 = inputPort.getTransmitter();
+      synthRcvr = synth.getReceiver(); 
+      inPortTrans1.setReceiver(synthRcvr);
+      inPortTrans2 = inputPort.getTransmitter();
+      seqRcvr = seq.getReceiver(); 
+      inPortTrans2.setReceiver(seqRcvr);
+} catch (MidiUnavailableException e) {
+      // handle or throw exception
+}
 ```
 
 此代码介绍了`MidiDevice.getTransmitter`方法的双重调用，将结果分配给`inPortTrans1`和`inPortTrans2`。如前所述，设备可以拥有多个发射器和接收器。每次为给定设备调用`MidiDevice.getTransmitter()`时，都会返回另一个发射器，直到没有更多可用为止，此时将抛出异常。
@@ -154,9 +147,8 @@ if (seq instanceof Synthesizer)
 要了解设备支持多少个发射器和接收器，您可以使用以下`MidiDevice`方法：
 
 ```java
-    int getMaxTransmitters()
-    int getMaxReceivers()
-
+int getMaxTransmitters()
+int getMaxReceivers()
 ```
 
 这些方法返回设备拥有的总数，而不是当前可用的数量。

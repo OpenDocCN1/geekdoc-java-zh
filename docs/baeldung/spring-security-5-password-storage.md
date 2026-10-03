@@ -1,8 +1,9 @@
+
 # Spring Security 5 中的新密码存储
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-5-password-storage>
 
-## 1。简介
+## 1. 简介
 
 随着最新的 Spring Security 发布，很多事情都变了。其中一个变化是我们如何在应用程序中处理密码编码。
 
@@ -10,13 +11,13 @@
 
 稍后，我们将看到如何配置新的委托机制，以及如何更新现有的密码编码，而不被用户识别。
 
-## 2。Spring Security 5.x 的相关变化
+## 2. Spring Security 5.x 的相关变化
 
-Spring 安全团队声明`org.springframework.security.authentication.encoding` 中的`PasswordEncoder`已被弃用。这是一个合乎逻辑的举动，因为旧的接口不是为随机生成的 salt 设计的。因此，版本 5 删除了这个接口。
+Spring 安全团队声明`org.springframework.security.authentication.encoding`中的`PasswordEncoder`已被弃用。这是一个合乎逻辑的举动，因为旧的接口不是为随机生成的 salt 设计的。因此，版本 5 删除了这个接口。
 
 此外，Spring Security 改变了它处理编码密码的方式。在以前的版本中，每个应用程序只采用一种密码编码算法。
 
-默认情况下，`StandardPasswordEncoder` 处理了那个。它使用 SHA-256 进行编码。通过改变密码编码器，我们可以切换到另一种算法。但是我们的应用程序必须严格遵循一种算法。
+默认情况下，`StandardPasswordEncoder`处理了那个。它使用 SHA-256 进行编码。通过改变密码编码器，我们可以切换到另一种算法。但是我们的应用程序必须严格遵循一种算法。
 
 **5.0 版本引入了密码编码委托的概念。**现在，我们可以对不同的密码使用不同的编码。Spring 通过在编码密码前添加一个标识符来识别算法。
 
@@ -26,17 +27,17 @@ Spring 安全团队声明`org.springframework.security.authentication.encoding` 
 {bcrypt}$2b$12$FaLabMRystU4MLAasNOKb.HUElBAabuQdX59RWHq5X.9Ghm692NEi
 ```
 
-注意 bcrypt 是如何在最开始用花括号指定的。
+注意 `bcrypt` 是如何在最开始用花括号指定的。
 
-## 3。委托配置
+## 3. 委托配置
 
-**如果密码哈希没有前缀，授权过程将使用默认编码器。**因此，默认情况下，我们得到了`StandardPasswordEncoder.`
+**如果密码哈希没有前缀，授权过程将使用默认编码器。**因此，默认情况下，我们得到了`StandardPasswordEncoder`。
 
 这使得它与以前的 Spring Security 版本的默认配置兼容。
 
-在版本 5 中，Spring Security 引入了`PasswordEncoderFactories.createDelegatingPasswordEncoder().`，这个工厂方法返回一个配置好的`DelegationPasswordEncoder`实例。
+在版本 5 中，Spring Security 引入了`PasswordEncoderFactories.createDelegatingPasswordEncoder()`。这个工厂方法返回一个配置好的`DelegationPasswordEncoder`实例。
 
-对于没有前缀的密码，该实例确保了刚才提到的默认行为。对于包含前缀的密码散列，相应地进行委托。
+对于没有前缀的密码，该实例确保了刚刚提到的默认行为。对于包含前缀的密码散列，相应地进行委托。
 
 Spring 安全团队列出了最新版本的[对应 JavaDoc](https://web.archive.org/web/20221222004958/https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/factory/PasswordEncoderFactories.html#createDelegatingPasswordEncoder--) 中支持的算法。
 
@@ -44,9 +45,11 @@ Spring 安全团队列出了最新版本的[对应 JavaDoc](https://web.archive.
 
 假设我们想要支持:
 
-*   `bcrypt`作为我们的新默认值
-*   作为一种选择
-*   SHA-256 作为当前使用的算法。
+* `bcrypt`作为我们的新默认值
+
+* `scrypt`作为一种选择
+
+* SHA-256 作为当前使用的算法。
 
 该设置的配置如下所示:
 
@@ -66,11 +69,11 @@ public PasswordEncoder delegatingPasswordEncoder() {
 }
 ```
 
-## 4。迁移密码编码算法
+## 4. 迁移密码编码算法
 
 在上一节中，我们探讨了如何根据需要配置密码编码。因此，现在我们将研究如何将已经编码的密码转换成新的算法。
 
-假设我们想将编码从`SHA-256` 更改为`bcrypt`，但是，我们不希望用户更改他们的密码。
+假设我们想将编码从 SHA-256 更改为 `bcrypt`，但是，我们不希望用户更改他们的密码。
 
 一个可能的解决方案是使用登录请求。此时，我们可以以纯文本方式访问凭证。此时，我们可以获取当前密码并重新编码。
 
@@ -101,9 +104,9 @@ public ApplicationListener<AuthenticationSuccessEvent>
 
 在前面的代码片段中:
 
-*   我们从提供的身份验证详细信息中以明文形式检索了用户密码
-*   使用新算法创建了新的密码哈希
-*   从身份验证令牌中删除了明文密码
+* 我们从提供的身份验证详细信息中以明文形式检索了用户密码
+* 使用新算法创建了新的密码哈希
+* 从身份验证令牌中删除了明文密码
 
 默认情况下，不可能以明文形式提取密码，因为 Spring Security 会尽快删除它。
 
@@ -129,7 +132,7 @@ public class PasswordStorageWebSecurityConfigurer {
 }
 ```
 
-## 5。结论
+## 5. 结论
 
 在这篇简短的文章中，我们讨论了 5.x 中一些新的密码编码特性。
 

@@ -1,3 +1,4 @@
+
 # 使用服务器发送的事件和 Redis 构建可伸缩的类似脸书的通知
 
 > 原文：<https://medium.com/javarevisited/building-scalable-facebook-like-notification-using-server-sent-event-and-redis-9d0944dee618?source=collection_archive---------0----------------------->

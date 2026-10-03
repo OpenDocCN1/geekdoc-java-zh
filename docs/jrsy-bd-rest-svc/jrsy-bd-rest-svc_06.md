@@ -1,131 +1,132 @@
+
 # 用 Jersey 构建 RESTful 服务 6--Jersey+SQLServer+Hibernate4.3
 
 ## 一、总体说明
 
-本例运行演示了用 Jersey 构建 RESTful 服务中，如何同过 Hibernate 将数据持久化进 SQLServer 的过程
+本例运行演示了用 Jersey 构建 RESTful 服务中，如何同过 Hibernate 将数据持久化进 SQLServer 的过程。
 
 ## 二、环境
 
-1.  上文的项目 RestDemo
-2.  SQLServer2005
-3.  jtds 数据库连接驱动：下载地址[最新版本](http://sourceforge.net/projects/jtds/files/latest/download?source=files),替换掉上文项目中的`mysql-connector`
+1. 上文的项目 `RestDemo`
+2. `SQLServer2005`
+3. `jtds` 数据库连接驱动：下载地址[最新版本](http://sourceforge.net/projects/jtds/files/latest/download?source=files)，替换掉上文项目中的`mysql-connector`
 
 ## 三、配置
 
-1.  与上文 mysql 的配置不同点主要在 hibernate.cfg.xml 文件； 配置如下：
+1. 与上文 mysql 的配置不同点主要在`hibernate.cfg.xml`文件；配置如下：
 
-    ```java
-    <?xml version='1.0' encoding='utf-8'?>  
-    <!DOCTYPE hibernate-configuration PUBLIC  
-            "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
-            "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">  
+```java
+<?xml version='1.0' encoding='utf-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">  
 
-    <hibernate-configuration>  
-       <session-factory>  
-       <!-- Database connection settings -->  
-            <property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>  
-            <property name="connection.url">jdbc:jtds:sqlserver://192.168.1.10:1433;RestDemo</property>  
-            <property name="connection.username">sa</property>  
-            <property name="connection.password">aA123456</property>  
-            <property name="hibernate.default_schema">RestDemo</property>
-            <!-- JDBC connection pool (use the built-in) -->  
-            <property name="connection.pool_size">1</property>  
-            <!-- SQL dialect -->  
-            <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>  
-            <!-- Enable Hibernate's automatic session context management -->  
-            <property name="current_session_context_class">thread</property>  
-            <!-- Disable the second-level cache  -->  
-            <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>  
-            <!-- Echo all executed SQL to stdout -->  
-            <property name="show_sql">true</property>  
-            <!-- Drop and re-create the database schema on startup -->  
-            <property name="hbm2ddl.auto">update</property>  
-            <mapping resource="com/waylau/rest/bean/User.hbm.xml"/>  
-          </session-factory>  
-    </hibernate-configuration> 
-    ```
+<hibernate-configuration>  
+   <session-factory>  
+   <!-- Database connection settings -->  
+        <property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>  
+        <property name="connection.url">jdbc:jtds:sqlserver://192.168.1.10:1433;RestDemo</property>  
+        <property name="connection.username">sa</property>  
+        <property name="connection.password">aA123456</property>  
+        <property name="hibernate.default_schema">RestDemo</property>
+        <!-- JDBC connection pool (use the built-in) -->  
+        <property name="connection.pool_size">1</property>  
+        <!-- SQL dialect -->  
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>  
+        <!-- Enable Hibernate's automatic session context management -->  
+        <property name="current_session_context_class">thread</property>  
+        <!-- Disable the second-level cache  -->  
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>  
+        <!-- Echo all executed SQL to stdout -->  
+        <property name="show_sql">true</property>  
+        <!-- Drop and re-create the database schema on startup -->  
+        <property name="hbm2ddl.auto">update</property>  
+        <mapping resource="com/waylau/rest/bean/User.hbm.xml"/>  
+      </session-factory>  
+</hibernate-configuration> 
+```
 
-2.  修改于 mysql 不兼容的 sql 语句`com.waylau.rest.dao.impl`中的`UserDaoImpl`:
+2. 修改于 mysql 不兼容的 sql 语句`com.waylau.rest.dao.impl`中的`UserDaoImpl`：
 
-    getUserById 修改成如下：
+`getUserById`修改成如下：
 
-    ```java
-    @Override
-    public User getUserById(String id) {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session s = null;
-        Transaction t = null;
-        User user = null;
-        try{
-         s = sessionFactory.openSession();
-         t = s.beginTransaction();
-         String hql = "from User where userId='"+id+"'";  
-         Query query = s.createQuery(hql);  
-         user = (User) query.uniqueResult();
-         t.commit();
-        }catch(Exception err){
-        t.rollback();
-        err.printStackTrace();
-        }finally{
-        s.close();
-        }
-        return user;
-    } 
-    ```
+```java
+@Override
+public User getUserById(String id) {
+    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    Session s = null;
+    Transaction t = null;
+    User user = null;
+    try{
+     s = sessionFactory.openSession();
+     t = s.beginTransaction();
+     String hql = "from User where userId='"+id+"'";  
+     Query query = s.createQuery(hql);  
+     user = (User) query.uniqueResult();
+     t.commit();
+    }catch(Exception err){
+    t.rollback();
+    err.printStackTrace();
+    }finally{
+    s.close();
+    }
+    return user;
+} 
+```
 
-    getAllUsers 给成如下：
+`getAllUsers`给成如下：
 
-    ```java
-    @Override
-    public List<User> getAllUsers() {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session s = null;
-        Transaction t = null;
-        List<User> uesrs = null;
-        try{
-         s = sessionFactory.openSession();
-         t = s.beginTransaction();
-         String hql = "select * from [RestDemo].dbo.t_user";  
-         Query query = s.createSQLQuery(hql).addEntity(User.class);  
-         //query.setCacheable(true); // 设置缓存
-         uesrs = query.list();  
-         t.commit();
-        }catch(Exception err){
-        t.rollback();
-        err.printStackTrace();
-        }finally{
-        s.close();
-        }
-        return uesrs;
-    } 
-    ```
+```java
+@Override
+public List<User> getAllUsers() {
+    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    Session s = null;
+    Transaction t = null;
+    List<User> uesrs = null;
+    try{
+     s = sessionFactory.openSession();
+     t = s.beginTransaction();
+     String hql = "select * from [RestDemo].dbo.t_user";  
+     Query query = s.createSQLQuery(hql).addEntity(User.class);  
+     //query.setCacheable(true); // 设置缓存
+     uesrs = query.list();  
+     t.commit();
+    }catch(Exception err){
+    t.rollback();
+    err.printStackTrace();
+    }finally{
+    s.close();
+    }
+    return uesrs;
+} 
+```
 
-    或者如下：
+或者如下：
 
-    ```java
-    @Override
-    public List<User> getAllUsers() {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session s = null;
-        Transaction t = null;
-        List<User> uesrs = null;
-        try{
-         s = sessionFactory.openSession();
-         t = s.beginTransaction();
-         String hql = " from User";  
-         Query query = s.createQuery(hql);  
-         //query.setCacheable(true); // 设置缓存
-         uesrs = query.list();  
-         t.commit();
-        }catch(Exception err){
-        t.rollback();
-        err.printStackTrace();
-        }finally{
-        s.close();
-        }
-        return uesrs;
-    } 
-    ```
+```java
+@Override
+public List<User> getAllUsers() {
+    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    Session s = null;
+    Transaction t = null;
+    List<User> uesrs = null;
+    try{
+     s = sessionFactory.openSession();
+     t = s.beginTransaction();
+     String hql = " from User";  
+     Query query = s.createQuery(hql);  
+     //query.setCacheable(true); // 设置缓存
+     uesrs = query.list();  
+     t.commit();
+    }catch(Exception err){
+    t.rollback();
+    err.printStackTrace();
+    }finally{
+    s.close();
+    }
+    return uesrs;
+} 
+```
 
 ## 四、问题
 
@@ -150,7 +151,7 @@ ERROR: 对象名 'RestDemo.T_USER' 无效。
 <property name="hibernate.default_schema">RestDemo.dbo</property> 
 ```
 
-或者去掉上面的配置，在“User.hbm.xml”修改如下
+或者去掉上面的配置，在`User.hbm.xml`修改如下：
 
 ```java
 <class name="User" table="T_USER" schema="RestDemo.dbo"> 

@@ -1,3 +1,4 @@
+
 # 探索 Spring MVC 架构
 
 > 原文：<https://medium.com/javarevisited/a-simple-site-made-with-spring-mvc-architecture-ac8e283cf7e4?source=collection_archive---------0----------------------->

@@ -1,14 +1,11 @@
+
 # Trail: RMI
 
 > 原文：[`docs.oracle.com/javase/tutorial/rmi/index.html`](https://docs.oracle.com/javase/tutorial/rmi/index.html)
 
 Java 远程方法调用（RMI）系统允许在一个 Java 虚拟机中运行的对象调用另一个 Java 虚拟机中运行的对象的方法。RMI 提供了 Java 编程语言编写的程序之间的远程通信。
 
-* * *
-
 **注意：** 如果你要连接到一个现有的 IDL 程序，应该使用 Java IDL 而不是 RMI。
-
-* * *
 
 本教程简要介绍了 RMI 系统，然后演示了一个完整的客户端/服务器示例，该示例利用了 RMI 的独特功能，在运行时加载和执行用户定义的任务。示例中的服务器实现了一个通用的计算引擎，客户端用它来计算 ![圆周率符号](img/18da0a76f9e973138bc9428740982fff.png) 的值。
 

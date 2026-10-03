@@ -1,3 +1,4 @@
+
 # 如何成为更好的 Java 代码评审员
 
 > 原文：<https://medium.com/javarevisited/how-to-become-better-java-code-reviewer-4bbf7e78391f?source=collection_archive---------0----------------------->

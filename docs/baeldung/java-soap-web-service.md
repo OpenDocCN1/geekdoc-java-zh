@@ -1,3 +1,4 @@
+
 # 用 Java 调用 SOAP Web 服务
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-soap-web-service>
@@ -228,6 +229,8 @@ public class Country {
 }
 ```
 
+
+
 正如我们看到的，生成的类用 [JAXB 注释](/web/20220628094602/https://www.baeldung.com/jaxb)修饰，用于将对象与 XML 进行编组和解组。
 
 此外，它还会生成一个`Currency`枚举:
@@ -246,7 +249,7 @@ public enum Currency {
 }
 ```
 
-### 3.4.`CountryService`
+### 3.4. `CountryService`
 
 第二个生成的工件是一个接口，它充当实际 web 服务的代理。
 
@@ -269,11 +272,11 @@ public interface CountryService {
 
 对方法`findByName`进行了注释，声明它是一个`javax.jws.WebMethod`，带有预期的输入和输出参数类型。
 
-### 3.5.`CountryServiceImplService`
+### 3.5. `CountryServiceImplService`
 
 我们下一个生成的类`CountryServiceImplService`，扩展了`javax.xml.ws.Service`。
 
-它的注释`[WebServiceClient](https://web.archive.org/web/20220628094602/https://docs.oracle.com/javase/7/docs/api/javax/xml/ws/WebServiceClient.html) `表示它是服务的客户端视图:
+它的注释 [`WebServiceClient`](https://web.archive.org/web/20220628094602/https://docs.oracle.com/javase/7/docs/api/javax/xml/ws/WebServiceClient.html) 表示它是服务的客户端视图:
 
 ```java
 @WebServiceClient(name = "CountryServiceImplService", 
@@ -326,7 +329,7 @@ public class CountryServiceImplService extends Service {
 
 使用代理使我们看起来好像是在本地调用服务，抽象掉了远程调用的复杂性。
 
-## 4.测试客户端
+## 4. 测试客户端
 
 接下来，我们将编写一个 JUnit 测试，使用生成的客户端代码连接到 web 服务。
 
@@ -358,15 +361,15 @@ public void givenCountryService_whenCountryFrance_thenPopulationCorrect() {
 @Test
 public void givenCountryService_whenCountryUSA_thenCurrencyUSD() {
     assertEquals(Currency.USD, countryService.findByName("USA").getCurrency());
-} 
+}
 ```
 
 正如我们所看到的，调用远程服务的方法变得和本地调用方法一样简单。代理的`findByName`方法返回了一个与我们提供的`name` 匹配的`Country`实例。然后我们使用 POJO 的各种 getters 来断言期望值。
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们看到了如何使用 JAX-WS RI 和用于 Java 8 和 11 的`wsimport`实用程序来**调用 Java 中的 SOAP web 服务。**
 
 或者，我们可以使用其他 JAX-WS 实现，比如 Apache CXF、Apache Axis2 和 Spring 来做同样的事情。
 
-和往常一样，GitHub 上有 JDK 8 和 T2 JDK 11 的源代码。
+和往常一样，GitHub 上有 JDK 8 和 JDK 11 的源代码。

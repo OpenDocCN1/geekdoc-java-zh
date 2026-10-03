@@ -1,28 +1,29 @@
+
 # Spring MVC 中的表单入门
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-mvc-form-tutorial>
 
-## 1。概述
+## 1. 概述
 
-在本文中，我们将讨论 Spring 表单和绑定到控制器的数据。另外，我们还会看到 **Spring MVC** 中的一个主要注释，即 **`@ModelAttribute`** 。
+在本文中，我们将讨论 Spring 表单和绑定到控制器的数据。另外，我们还会看到 **Spring MVC** 中的一个主要注释，即 **`@ModelAttribute`**。
 
 当然，Spring MVC 是一个复杂的主题，你需要理解很多东西来充分发挥它的潜力，所以[一定要在这里](/web/20221109182850/https://www.baeldung.com/category/spring-mvc/)更深入地挖掘这个框架。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [探索 SpringMVC 的表单标签库](/web/20221109182850/https://www.baeldung.com/spring-mvc-form-tags)
+### [探索 SpringMVC 的表单标签库](/web/20221109182850/https://www.baeldung.com/spring-mvc-form-tags)
 
 A quick and to the point tutorial about the various tags that Spring MVC provides to help us create and validate forms.[Read more](/web/20221109182850/https://www.baeldung.com/spring-mvc-form-tags) →
 
-## [Spring MVC 中使用 FreeMarker 的介绍](/web/20221109182850/https://www.baeldung.com/freemarker-in-spring-mvc-tutorial)
+### [Spring MVC 中使用 FreeMarker 的介绍](/web/20221109182850/https://www.baeldung.com/freemarker-in-spring-mvc-tutorial)
 
 FreeMarker is a Java based template engine from the Apache Software Foundation. This tutorial illustrates how to configure FreeMarker for use in Spring MVC.[Read more](/web/20221109182850/https://www.baeldung.com/freemarker-in-spring-mvc-tutorial) →
 
-## [春季使用百里香叶简介](/web/20221109182850/https://www.baeldung.com/thymeleaf-in-spring-mvc)
+### [春季使用百里香叶简介](/web/20221109182850/https://www.baeldung.com/thymeleaf-in-spring-mvc)
 
 Thymeleaf is a templating language with excellent integration with Spring. This article provides an introduction to using Thymeleaf in a Spring MVC application.[Read more](/web/20221109182850/https://www.baeldung.com/thymeleaf-in-spring-mvc) →
 
-## 2。的型号
+## 2. 的型号
 
 首先——让我们定义一个简单的实体**,我们将显示它并将其绑定到表单上:**
 
@@ -38,9 +39,9 @@ public class Employee {
 
 这将是我们的表单支持对象。
 
-## 3。的景色
+## 3. 的景色
 
-接下来——让我们定义**实际的表单**，当然，还有包含它的 HTML 文件。我们将使用一个创建/注册新员工的页面: 
+接下来——让我们定义**实际的表单**，当然，还有包含它的 HTML 文件。我们将使用一个创建/注册新员工的页面:
 
 ```java
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -91,7 +92,7 @@ public class Employee {
 
 [![Basic Forms with Spring MVC](img/8825959062e621008df6570ca4f00d55.png)](/web/20221109182850/https://www.baeldung.com/wp-content/uploads/2014/08/Basic-Forms-with-Spring-MVC.jpg)
 
-## 4。控制器
+## 4. 控制器
 
 现在，让我们看看**控制器**，它将处理后端:
 
@@ -131,11 +132,11 @@ java.lang.IllegalStateException:
 
 为了访问我们的表单支持对象，我们需要通过`@ModelAttribute`注释注入它。
 
-方法参数上的`<em>@ModelAttribute </em>`表示该参数将从模型中检索。如果模型中不存在，参数将首先被实例化，然后添加到模型中。
+方法参数上的`@ModelAttribute` 表示该参数将从模型中检索。如果模型中不存在，参数将首先被实例化，然后添加到模型中。
 
-## 5。处理绑定错误
+## 5. 处理绑定错误
 
-默认情况下，当请求绑定过程中出现错误时，Spring MVC 会抛出异常。这通常不是我们想要的，相反，我们应该向用户呈现这些错误。我们将使用一个`BindingResult`作为我们的控制器方法的参数: 
+默认情况下，当请求绑定过程中出现错误时，Spring MVC 会抛出异常。这通常不是我们想要的，相反，我们应该向用户呈现这些错误。我们将使用一个`BindingResult`作为我们的控制器方法的参数:
 
 ```java
 public String submit(
@@ -152,7 +153,7 @@ java.lang.IllegalStateException:
     Check your handler method signature!
 ```
 
-现在——不再抛出异常；相反，错误将被记录在传递给`submit`方法的`BindingResult`上。此时，我们可以用多种方式处理这些错误——例如，可以取消操作: 
+现在——不再抛出异常；相反，错误将被记录在传递给`submit`方法的`BindingResult`上。此时，我们可以用多种方式处理这些错误——例如，可以取消操作:
 
 ```java
 @RequestMapping(value = "/addEmployee", method = RequestMethod.POST)
@@ -186,7 +187,7 @@ public String submit(@Valid @ModelAttribute("employee")Employee employee,
 </html>
 ```
 
-## 6。显示员工T3
+## 6. 显示员工
 
 最后，除了创建新员工之外，我们还可以简单地显示一个员工，下面是快速查看代码:
 
@@ -212,13 +213,13 @@ public String submit(@Valid @ModelAttribute("employee")Employee employee,
 
 JSP 页面只是使用 EL 表达式来显示模型中 Employee 对象的属性值。
 
-## 7。测试应用
+## 7. 测试应用
 
 这个简单的应用程序可以在本地部署和访问:
 
-T2`http://localhost:8080/spring-mvc-xml/employee`
+`http://localhost:8080/spring-mvc-xml/employee`
 
-这是包含主表单的视图–在提交操作之前: 
+这是包含主表单的视图–在提交操作之前:
 
 [![Spring MVC Form example - Submit](img/9be7332dbf945d3929d11dddd1f8e447.png)](/web/20221109182850/https://www.baeldung.com/wp-content/uploads/2014/08/spring-mvc-form-create.png)
 
@@ -230,8 +231,8 @@ Spring MVC 表单示例–提交
 
 Spring MVC 表单示例–视图
 
-就是这样——**一个使用 Spring MVC 的简单表单的工作示例，带有验证**。 
+就是这样——**一个使用 Spring MVC 的简单表单的工作示例，带有验证**。
 
 这个 Spring MVC 教程的实现可以在[GitHub 项目](https://web.archive.org/web/20221109182850/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-forms-jsp "The Example Project covered in this article on github")中找到——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。
 
-最后，正如我在文章开头所说的，你应该[深入挖掘 Spring MVC](/web/20221109182850/https://www.baeldung.com/category/spring-mvc/) 。
+最后，正如我在文章开头所说的，你应该[深入挖掘 Spring MVC](/web/20221109182850/https://www.baeldung.com/category/spring-mvc/)。

@@ -1,3 +1,4 @@
+
 # 2023 年有经验的 IT 专业人士最好读的 7 本书
 
 > 原文：<https://medium.com/javarevisited/7-best-tech-books-for-experienced-it-professionals-e7be535d54ff?source=collection_archive---------0----------------------->
@@ -6,13 +7,13 @@
 
 [![](img/8f55d96be2790ee5671bbf139d8d6e84.png)](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/?tag=javamysqlanta-20)
 
-你好，伙计们，如果你正在寻找一些有趣的小说风格的科技书籍来阅读，那么你来对地方了。早些时候，我已经分享了 [**最好的软件架构书籍**](/javarevisited/5-best-software-architecture-books-for-experienced-java-developers-1267d05a6b1d) ，在这篇文章中，我将分享最好的技术书籍，让有经验的开发人员不仅可以学习*的技术技能*，还可以以一种有趣而简单的方式学习*的操作和管理技能*。
+你好，伙计们，如果你正在寻找一些有趣的小说风格的科技书籍来阅读，那么你来对地方了。早些时候，我已经分享了[**最好的软件架构书籍**](/javarevisited/5-best-software-architecture-books-for-experienced-java-developers-1267d05a6b1d)，在这篇文章中，我将分享最好的技术书籍，让有经验的开发人员不仅可以学习*的技术技能*，还可以以一种有趣而简单的方式学习*的操作和管理技能*。
 
 *免责声明——如果你使用本文中的链接购买任何一本书，我可能会得到一点补偿。*
 
 我总是喜欢先看有趣的书，然后再看内容丰富的书，因为很难读完一本内容丰富但不有趣的书，这就是为什么当我发现一本充满生活经验的有趣的科技书籍时，我会买下它，一遍又一遍地阅读，这个书单就是这些书的集合。
 
-很久以前有人告诉我
+很久以前有人告诉我：
 
 > 如果我们从自己的错误中学习，那么我们只能学到一些东西，但如果我们从别人的错误中学习，那么就没有限制，还有什么比读书更好的从别人的错误中学习的方法呢？
 
@@ -40,7 +41,7 @@
 
 这就像一本小说，读起来很有趣。你不会觉得无聊，我其实是在一次漫长的火车旅行中读完了整本书。如果你今年只能读一本书，我会推荐这本书。它将改变你的心态，把你塑造成一个更好的程序员、开发者和个人。
 
-而且，如果你想学习 DevOps 并成为一名 DevOps 工程师，那么我也推荐你参加 Udemy 的 [**Azure DevOps 初学者基础**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fazure-devops-for-beginners%2F) 课程。学习 DevOps 和 Azure Cloud 是很棒的课程。
+而且，如果你想学习 DevOps 并成为一名 DevOps 工程师，那么我也推荐你参加 Udemy 的[**Azure DevOps 初学者基础**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fazure-devops-for-beginners%2F)课程。学习 DevOps 和 Azure Cloud 是很棒的课程。
 
 [![](img/31ba09a30ffa24fc174a3b8faf9ae692.png)](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/?tag=javamysqlanta-20)
 
@@ -52,7 +53,7 @@
 
 它不仅读起来有趣，同时也很有启发性，并提供了一些有用的见解来改善你的技术业务。
 
-而且，如果你渴望成为一名软件架构师，我也建议你去看看 Udemy 上的 [**开发者到架构师:掌握软件架构**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeveloper-to-architect%2F) 课程。对于有抱负的软件架构师来说，这是一个很好的资源。
+而且，如果你渴望成为一名软件架构师，我也建议你去看看 Udemy 上的[**开发者到架构师:掌握软件架构**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeveloper-to-architect%2F)课程。对于有抱负的软件架构师来说，这是一个很好的资源。
 
 [![](img/419c26d2c04d089af7fa1cfe6c5444a6.png)](https://www.amazon.com/Unicorn-Project-Developers-Disruption-Thriving-ebook/dp/B07QT9QR41/?tag=javamysqlanta-20)
 
@@ -62,13 +63,13 @@
 
 我学到了在大规模下，或者我应该说在谷歌规模下，事情是如何真正完成的，以及没有人是完美的这一事实，但通过适当的组织、技能和培训，他们可以处理任何事情。
 
-这本书的 Kindle 版本也被称为《网站可靠性工程:谷歌如何运行生产系统》,售价仅为 27.99 美元
+这本书的 Kindle 版本也被称为《网站可靠性工程:谷歌如何运行生产系统》，售价仅为 27.99 美元。
 
 [![](img/09205cf7c549458be2ec9af92a317ced.png)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6?tag=javamysqlanta-20)
 
-对了，如果你有兴趣学习 DevOps，我也推荐你准备 [**Google Cloud 认证:Coursera 上 Google Cloud 的 Cloud DevOps 工程师职业证书专精**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fsre-devops-engineer-google-cloud) 。对于任何想以 DevOps 工程师或 SRE 开始职业生涯的人来说，这是一个很好的资源。
+对了，如果你有兴趣学习 DevOps，我也推荐你准备[**Google Cloud 认证:Coursera 上 Google Cloud 的 Cloud DevOps 工程师职业证书专精**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fsre-devops-engineer-google-cloud)。对于任何想以 DevOps 工程师或 SRE 开始职业生涯的人来说，这是一个很好的资源。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fsre-devops-engineer-google-cloud>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fsre-devops-engineer-google-cloud>
 
 ## 4.[加速:建立和扩展高绩效的技术组织](https://javarevisited.blogspot.com/2020/04/top-5-books-to-learn-devops-for-developers.html#axzz6toWVHFSH)
 
@@ -78,7 +79,7 @@
 
 这本书既展示了发现，也展示了研究背后的科学。您将发现如何衡量他们团队的绩效，以及他们应该投资哪些能力来提高绩效。
 
-简而言之，这是技术领导者和首席信息官想要建立和扩展高性能技术组织的最佳书籍之一。而且，如果您热衷于提高 Java 应用程序的性能， [**Java 多线程、并发性&性能优化**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F) 是另一个很好的资源。
+简而言之，这是技术领导者和首席信息官想要建立和扩展高性能技术组织的最佳书籍之一。而且，如果您热衷于提高 Java 应用程序的性能，[**Java 多线程、并发性&性能优化**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)是另一个很好的资源。
 
 [![](img/b99d7df28d8e21ac086cb44bede6b3bf.png)](https://www.java67.com/2019/09/top-5-courses-to-learn-system-design.html)
 
@@ -90,7 +91,7 @@
 
 之后，他们引入了“部署管道”，这是一个管理所有变更的自动化过程，从签入到发布。最后，他们讨论了支持持续交付所需的“生态系统”，从基础设施、数据和配置管理到治理。
 
-如果你需要 CI/CD 的课程推荐，那么 Udemy 上的 [**DevOps，CI/CD(初学者持续集成/交付**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fci-cd-devops%2F) 课程是另一个很好的资源。
+如果你需要 CI/CD 的课程推荐，那么 Udemy 上的[**DevOps，CI/CD(初学者持续集成/交付**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fci-cd-devops%2F)课程是另一个很好的资源。
 
 [![](img/d5974bead92fa9ae3859a78f1c10d6f1.png)](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html#axzz6cRYpiwdu)
 
@@ -106,7 +107,7 @@
 
 这是学习微服务的最佳书籍之一，我向负责制定技术相关决策的高级 Java 开发人员、程序员、技术主管和解决方案架构师强烈推荐这本书。
 
-并且，如果你需要 Java 和 Spring 框架的微服务开发的课程，我推荐 Udemy 上 Ranga Karnam 的[**Spring Boot 主微服务和 Spring Cloud**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 。用 Java 构建微服务是一门很棒的课程。
+并且，如果你需要 Java 和 Spring 框架的微服务开发的课程，我推荐 Udemy 上 Ranga Karnam 的[**Spring Boot 主微服务和 Spring Cloud**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicroservices-with-spring-boot-and-spring-cloud%2F)。用 Java 构建微服务是一门很棒的课程。
 
 [![](img/5d1a25d3cb8fe552dc8644f4d6a76df7.png)](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
 
@@ -118,7 +119,7 @@
 
 它为组织高性能的开发团队提供了许多深刻的见解。我强烈推荐这本书给每一个团队领导和项目经理阅读，特别是如果你正在管理一个远程开发或支持团队。
 
-如果你需要更多关于团队建设的资源，那么 [**建立你的团队:如何在 Udemy 上建立完美的团队**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fbuilding-your-team-how-to-put-together-the-perfect-team%2F) 课程是另一个很棒的资源。
+如果你需要更多关于团队建设的资源，那么[**建立你的团队:如何在 Udemy 上建立完美的团队**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fbuilding-your-team-how-to-put-together-the-perfect-team%2F)课程是另一个很棒的资源。
 
 [![](img/159a1a022abfca82eddb0ae973d862b3.png)](https://javarevisited.blogspot.com/2020/08/top-5-courses-to-learn-jira-for.html#axzz6nwXUSoGH)
 
@@ -127,6 +128,9 @@
 其他**程序员和软件开发人员推荐书籍**
 
 *   [开发者学习 DevOps 的 5 本最佳书籍](https://javarevisited.blogspot.com/2020/04/top-5-books-to-learn-devops-for-developers.html#axzz6cRYpiwdu)
+
+
+
 *   [程序员 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
 *   [每个程序员都应该读的 10 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
 *   [学习 Java 8 和函数式编程的 5 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
@@ -147,4 +151,4 @@
 
 **P. S. —** 如果你这时想的只是一件事，我会建议，就去读读“[**《Phoneix Project》**。你肯定不仅会学到而且会喜欢这个故事。](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/?tag=javamysqlanta-20)
 
-<https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/?tag=javamysqlanta-20> 
+<https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/?tag=javamysqlanta-20>

@@ -1,3 +1,4 @@
+
 # 5 门最佳 Tableau 桌面助理认证课程和实践测试将于 2022 年完成
 
 > 原文：<https://medium.com/javarevisited/5-best-tableau-desktop-associate-certification-courses-and-practice-tests-to-crack-in-2021-86312b60c1f3?source=collection_archive---------0----------------------->
@@ -19,6 +20,7 @@ Tableau desktop 是一款大型软件，可以将原始数据转换为美丽的�
 这也是 tableau 公司创立 [Tableau 桌面认证助理认证](https://www.tableau.com/learn/certification/desktop-certified-associate)的原因。业内对认证 Tableau 专业人员的需求很大。通过 Tableau 认证也有无形的好处，因为它鼓励你学习更多和更深入。
 
 如果您正在准备 Tableau 桌面助理认证并寻找最好的在线课程和练习测试，那么您来对地方了。在这篇文章中，我将分享 5 门最好的在线课程，包括一些通过 2022 年 [Tableau 桌面认证助理](https://www.java67.com/2020/07/top-5-courses-to-pass-tableau-desktop-specialist-certification-exam.html)考试的模拟测试。
+
 **Tableau 桌面认证助理**是继桌面专家认证之后由 [Tableau](https://javarevisited.blogspot.com/2019/07/top-5-tableau-online-courses-and-certifications-for-data-science-engineers.html) 提供的第二级认证，面向拥有至少五个月 Tableau 使用经验的人，换句话说，面向中级至专业用户。考试本身包含 36 道选择题，时间限制为两小时，费用约为 250 美元，及格分数为 75%，这意味着你需要通过至少 27 道题才能获得认证。
 
 在本文中，您将看到一些学习 tableau 桌面认证助理的在线课程，如果您至少有一些 tableau 或数据可视化方面的经验，这些课程将帮助您通过正式考试。
@@ -59,7 +61,7 @@ Tableau desktop 是一款大型软件，可以将原始数据转换为美丽的�
 
 [![](img/e1f4e16549cf82a9c6cc440623f462b1.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftableau-certified-associate-exam-guide%2F)
 
-## 3.[带表格的数据分析基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdata-analysis-fundamentals-tableau)【plural sight】
+## 3. [带表格的数据分析基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdata-analysis-fundamentals-tableau)【plural sight】
 
 学习 data analyst 和 data visualization 可能有点困难，但您可以通过参加本课程来学习这两项内容，本课程将向您传授 tableau 的基础知识，并为您参加桌面认证助理认证做好准备。
 
@@ -79,7 +81,7 @@ Tableau desktop 是一款大型软件，可以将原始数据转换为美丽的�
 
 或者，你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 4. [Tableau 桌面合格助理考试—备考](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftableau-desktop-qualified-associate-exam-prep-n%2F)【Udemy】
 
@@ -126,16 +128,19 @@ Tableau desktop 是一款大型软件，可以将原始数据转换为美丽的�
 *   [2022 年学习 Python 的 10 个理由](https://hackernoon.com/10-reasons-to-learn-python-in-2018-f473dc35e2ee)
 *   [初学者学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
 *   [2022 年学习电力 BI 的前 5 门课程](https://www.java67.com/2020/06/top-5-courses-to-learn-microsoft-power-BI.html)
-*   [初学者学习数据科学的 10 门课程](https://hackernoon.com/10-machine-learning-data-science-and-deep-learning-courses-for-programmers-7edc56078cde)
-*   [2022 年学习 Python 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   [学习数据科学 Python 的 5 本书](https://javarevisited.blogspot.com/2019/08/top-5-python-books-for-data-science-and-machine-learning.html)
-*   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
-*   [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
-*   [初学者学习 TensorFlow 的 5 大课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
-*   [学习 QlikView 和 Qlik Sense 的前 5 门课程](https://javarevisited.blogspot.com/2020/07/top-5-courses-to-learn-qlikview-and-qlik-sense.html)
+
+
+
+* [初学者学习数据科学的 10 门课程](https://hackernoon.com/10-machine-learning-data-science-and-deep-learning-courses-for-programmers-7edc56078cde)
+* [2022 年学习 Python 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+* [学习数据科学 Python 的 5 本书](https://javarevisited.blogspot.com/2019/08/top-5-python-books-for-data-science-and-machine-learning.html)
+* [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+* [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
+* [初学者学习 TensorFlow 的 5 大课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
+* [学习 QlikView 和 Qlik Sense 的前 5 门课程](https://javarevisited.blogspot.com/2020/07/top-5-courses-to-learn-qlikview-and-qlik-sense.html)
 
 感谢您阅读本文。如果您觉得这些*最佳 Tableau 桌面助理认证课程*有用，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **P. S. —** 如果你有兴趣了解更多关于 Tableau 的信息并寻找免费的在线课程，那么你也可以在 Udemy 上查看这个 [**Tableau 2022 A-Z:数据科学 Tableau 实践培训**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftableau10%2F) 课程。这是深入学习 Tableau 最全面的课程之一。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftableau10%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftableau10%2F>

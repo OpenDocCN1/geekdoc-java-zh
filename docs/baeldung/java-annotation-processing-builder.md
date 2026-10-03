@@ -1,12 +1,13 @@
+
 # Java 注释处理和创建构建器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-annotation-processing-builder>
 
-## 1。简介
+## 1. 简介
 
 本文是对 Java 源代码级注释处理的介绍，并提供了在编译期间使用这种技术生成额外源文件的例子。
 
-## 2。注释处理的应用
+## 2. 注释处理的应用
 
 源代码级的注释处理最早出现在 Java 5 中。对于在编译阶段生成额外的源文件来说，这是一种方便的技术。
 
@@ -18,17 +19,15 @@
 
 值得注意的例外是 [Lombok](https://web.archive.org/web/20221005021228/https://projectlombok.org/) 库，它使用注释处理作为引导机制，将自己包含到编译过程中，并通过一些内部编译器 API 修改 AST。这种技巧与注释处理的预期目的无关，因此不在本文中讨论。
 
-## 3。注释处理 API
+## 3. 注释处理 API
 
 注释处理在多轮中完成。每一轮都从编译器在源文件中搜索注释并选择适合这些注释的注释处理器开始。每个注释处理器依次在相应的源上被调用。
 
 如果在此过程中生成了任何文件，则以生成的文件作为输入开始另一轮。这个过程一直持续到在处理阶段没有新文件生成。
 
-每个注释处理器依次在相应的源上被调用。如果在此过程中生成了任何文件，则以生成的文件作为输入开始另一轮。这个过程一直持续到在处理阶段没有新文件生成。
-
 注释处理 API 位于`javax.annotation.processing`包中。您必须实现的主接口是`Processor`接口，它有一个以`AbstractProcessor`类形式的部分实现。这个类是我们将要扩展来创建我们自己的注释处理器的类。
 
-## 4。设置项目
+## 4. 设置项目
 
 为了演示注释处理的可能性，我们将开发一个简单的处理器来为带注释的类生成流畅的对象构建器。
 
@@ -36,7 +35,7 @@
 
 `annotation-processor`模块的设置如下。我们将使用谷歌的[自动服务](https://web.archive.org/web/20221005021228/https://github.com/google/auto/tree/master/service)库来生成处理器元数据文件，这将在后面讨论，而`maven-compiler-plugin`针对 Java 8 源代码进行了调整。这些依赖项的版本被提取到属性部分。
 
-最新版本的[自动服务](https://web.archive.org/web/20221005021228/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.google.auto.service%22%20AND%20a%3A%22auto-service%22)库和 [maven-compiler-plugin](https://web.archive.org/web/20221005021228/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.apache.maven.plugins%22%20AND%20a%3A%22maven-compiler-plugin%22) 可以在 Maven Central repository 中找到:
+最新版本的[自动服务](https://web.archive.org/web/20221005021228/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.google.auto.service%22%20AND%20a%3A%22auto-service%22)库和 [maven-compiler-plugin](https://web.archive.org/web/20221005021228/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.apache.maven.plugins%22%20AND%20a%3A%22maven-compiler-plugin%22) 可以在 Maven Central repository 中找到：
 
 ```java
 <properties>
@@ -74,7 +73,7 @@
 </build>
 ```
 
-带有注释源代码的`annotation-user` Maven 模块不需要任何特殊的调优，除了在 dependencies 部分添加对注释处理器模块的依赖:
+带有注释源代码的`annotation-user` Maven 模块不需要任何特殊的调优，除了在 dependencies 部分添加对注释处理器模块的依赖：
 
 ```java
 <dependency>
@@ -84,9 +83,9 @@
 </dependency>
 ```
 
-## 5。定义注释
+## 5. 定义注释
 
-假设在我们的`annotation-user`模块中有一个简单的 POJO 类，它有几个字段:
+假设在我们的`annotation-user`模块中有一个简单的 POJO 类，它有几个字段：
 
 ```java
 public class Person {
@@ -100,7 +99,7 @@ public class Person {
 }
 ```
 
-我们想创建一个生成器助手类来更流畅地实例化`Person`类:
+我们想创建一个生成器助手类来更流畅地实例化`Person`类：
 
 ```java
 Person person = new PersonBuilder()
@@ -111,7 +110,7 @@ Person person = new PersonBuilder()
 
 这个`PersonBuilder`类显然是一代的选择，因为它的结构完全由`Person` setter 方法定义。
 
-让我们在`annotation-processor`模块中为 setter 方法创建一个`@BuilderProperty`注释。它将允许我们为每个带有 setter 方法注释的类生成`Builder`类:
+让我们在`annotation-processor`模块中为 setter 方法创建一个`@BuilderProperty`注释。它将允许我们为每个带有 setter 方法注释的类生成`Builder`类：
 
 ```java
 @Target(ElementType.METHOD)
@@ -124,7 +123,7 @@ public @interface BuilderProperty {
 
 `SOURCE`保留策略意味着该注释仅在源代码处理期间可用，在运行时不可用。
 
-带有用`@BuilderProperty`注释标注的属性的`Person`类将如下所示:
+带有用`@BuilderProperty`注释标注的属性的`Person`类将如下所示：
 
 ```java
 public class Person {
@@ -148,9 +147,9 @@ public class Person {
 }
 ```
 
-## 6。实施一个`Processor`
+## 6. 实施一个`Processor`
 
-### 6.1。创建一个`AbstractProcessor`子类
+### 6.1. 创建一个`AbstractProcessor`子类
 
 我们将从扩展`annotation-processor` Maven 模块中的`AbstractProcessor`类开始。
 
@@ -173,7 +172,7 @@ public class BuilderProcessor extends AbstractProcessor {
 }
 ```
 
-您不仅可以指定具体的注释类名，还可以指定通配符，比如用`“com.baeldung.annotation.*”`来处理`com.baeldung.annotation`包及其所有子包中的注释，甚至用`“*”`来处理所有注释。
+您不仅可以指定具体的注释类名，还可以指定通配符，比如用`"com.baeldung.annotation.*"`来处理`com.baeldung.annotation`包及其所有子包中的注释，甚至用`"*"`来处理所有注释。
 
 我们必须实现的唯一一个方法是自己进行处理的`process`方法。编译器为每个包含匹配注释的源文件调用它。
 
@@ -181,13 +180,13 @@ public class BuilderProcessor extends AbstractProcessor {
 
 如果您的注释处理器已经处理了所有传递的注释，并且您不希望将它们传递给列表中的其他注释处理器，那么返回值应该是。
 
-### 6.2。收集数据
+### 6.2. 收集数据
 
 我们的处理器还没有真正做任何有用的事情，所以让我们用代码填充它。
 
 首先，我们需要遍历在类中找到的所有注释类型——在我们的例子中，`annotations`集合将有一个对应于`@BuilderProperty`注释的元素，即使这个注释在源文件中出现多次。
 
-尽管如此，出于完整性考虑，最好将`process`方法实现为一个迭代周期:
+尽管如此，出于完整性考虑，最好将`process`方法实现为一个迭代周期：
 
 ```java
 @Override
@@ -209,7 +208,7 @@ public boolean process(Set<? extends TypeElement> annotations,
 
 注释的用户可能会错误地注释不是真正设置者的方法。setter 方法名应该以`set`开头，该方法应该接收一个参数。所以让我们把小麦和谷壳分开。
 
-在下面的代码中，我们使用`Collectors.partitioningBy()`收集器将带注释的方法分成两个集合:带正确注释的 setters 和其他带错误注释的方法:
+在下面的代码中，我们使用`Collectors.partitioningBy()`收集器将带注释的方法分成两个集合：带正确注释的 setters 和其他带错误注释的方法：
 
 ```java
 Map<Boolean, List<Element>> annotatedMethods = annotatedElements.stream().collect(
@@ -223,7 +222,7 @@ List<Element> otherMethods = annotatedMethods.get(false);
 
 这里我们使用了`Element.asType()`方法来接收`TypeMirror`类的一个实例，这给了我们一些自省类型的能力，即使我们只是在源代码处理阶段。
 
-我们应该警告用户不正确的注释方法，所以让我们使用可从`AbstractProcessor.processingEnv`受保护字段访问的`Messager`实例。在源处理阶段，以下行将为每个错误注释的元素输出一个错误:
+我们应该警告用户不正确的注释方法，所以让我们使用可从`AbstractProcessor.processingEnv`受保护字段访问的`Messager`实例。在源处理阶段，以下行将为每个错误注释的元素输出一个错误：
 
 ```java
 otherMethods.forEach(element ->
@@ -232,7 +231,7 @@ otherMethods.forEach(element ->
       + "with a single argument", element));
 ```
 
-当然，如果正确的 setters 集合为空，那么继续当前的类型元素集合迭代就没有意义了:
+当然，如果正确的 setters 集合为空，那么继续当前的类型元素集合迭代就没有意义了：
 
 ```java
 if (setters.isEmpty()) {
@@ -240,14 +239,14 @@ if (setters.isEmpty()) {
 }
 ```
 
-如果 setters 集合至少有一个元素，我们将使用它从封闭元素中获得完全限定的类名，在 setter 方法的情况下，它看起来是源类本身:
+如果 setters 集合至少有一个元素，我们将使用它从封闭元素中获得完全限定的类名，在 setter 方法的情况下，它看起来是源类本身：
 
 ```java
 String className = ((TypeElement) setters.get(0)
   .getEnclosingElement()).getQualifiedName().toString();
 ```
 
-生成构建器类所需的最后一点信息是设置器名称和它们的参数类型名称之间的映射:
+生成构建器类所需的最后一点信息是设置器名称和它们的参数类型名称之间的映射：
 
 ```java
 Map<String, String> setterMap = setters.stream().collect(Collectors.toMap(
@@ -257,11 +256,11 @@ Map<String, String> setterMap = setters.stream().collect(Collectors.toMap(
 ));
 ```
 
-### 6.3。生成输出文件
+### 6.3. 生成输出文件
 
-现在我们有了生成一个构建器类所需的所有信息:源类的名称、它的所有 setter 名称以及它们的参数类型。
+现在我们有了生成一个构建器类所需的所有信息：源类的名称、它的所有 setter 名称以及它们的参数类型。
 
-为了生成输出文件，我们将使用由`AbstractProcessor.processingEnv`受保护属性中的对象再次提供的`Filer`实例:
+为了生成输出文件，我们将使用由`AbstractProcessor.processingEnv`受保护属性中的对象再次提供的`Filer`实例：
 
 ```java
 JavaFileObject builderFile = processingEnv.getFiler()
@@ -272,6 +271,8 @@ try (PrintWriter out = new PrintWriter(builderFile.openWriter())) {
 ```
 
 下面提供了`writeBuilderFile`方法的完整代码。我们只需要计算包名、完全合格的构建器类名以及源类和构建器类的简单类名。代码的其余部分非常简单。
+
+
 
 ```java
 private void writeBuilderFile(
@@ -350,7 +351,7 @@ private void writeBuilderFile(
 
 要查看代码生成的效果，您应该从共同的父根编译这两个模块，或者先编译`annotation-processor`模块，然后再编译`annotation-user`模块。
 
-生成的 `PersonBuilder`类可以在`annotation-user/target/generated-sources/annotations/com/baeldung/annotation/PersonBuilder.java`文件中找到，应该如下所示:
+生成的`PersonBuilder`类可以在`annotation-user/target/generated-sources/annotations/com/baeldung/annotation/PersonBuilder.java`文件中找到，应该如下所示：
 
 ```java
 package com.baeldung.annotation;
@@ -387,20 +388,20 @@ public class PersonBuilder {
 
 `-processor`编译器密钥是一个标准的 JDK 工具，可以用您自己的注释处理器来扩充编译器的源代码处理阶段。
 
-请注意，处理器本身和注释必须已经在单独的编译中编译为类，并且存在于类路径中，因此您应该做的第一件事是:
+请注意，处理器本身和注释必须已经在单独的编译中编译为类，并且存在于类路径中，因此您应该做的第一件事是：
 
 ```java
 javac com/baeldung/annotation/processor/BuilderProcessor
 javac com/baeldung/annotation/processor/BuilderProperty
 ```
 
-然后，用`-processor`键指定刚刚编译的注释处理器类，对源代码进行实际编译:
+然后，用`-processor`键指定刚刚编译的注释处理器类，对源代码进行实际编译：
 
 ```java
 javac -processor com.baeldung.annotation.processor.MyProcessor Person.java
 ```
 
-要一次指定多个注释处理器，可以用逗号分隔它们的类名，如下所示:
+要一次指定多个注释处理器，可以用逗号分隔它们的类名，如下所示：
 
 ```java
 javac -processor package1.Processor1,package2.Processor2 SourceFile.java
@@ -412,7 +413,7 @@ javac -processor package1.Processor1,package2.Processor2 SourceFile.java
 
 下面是一个为编译器插件添加注释处理器的例子。您还可以使用`generatedSourcesDirectory`配置参数指定将生成的源代码放入的目录。
 
-请注意，`BuilderProcessor`类应该已经编译好了，例如，从构建依赖关系中的另一个 jar 导入:
+请注意，`BuilderProcessor`类应该已经编译好了，例如，从构建依赖关系中的另一个 jar 导入：
 
 ```java
 <build>
@@ -444,13 +445,13 @@ javac -processor package1.Processor1,package2.Processor2 SourceFile.java
 
 不需要在编译器选项中指定注释处理器，您可以简单地将带有处理器类的特殊结构的 jar 添加到编译器的类路径中。
 
-为了自动获取它，编译器必须知道处理器类的名称。因此，您必须在`META-INF/services/javax.annotation.processing.Processor`文件中将其指定为处理器的完全限定类名:
+为了自动获取它，编译器必须知道处理器类的名称。因此，您必须在`META-INF/services/javax.annotation.processing.Processor`文件中将其指定为处理器的完全限定类名：
 
 ```java
 com.baeldung.annotation.processor.BuilderProcessor
 ```
 
-您还可以从这个 jar 中指定几个要自动选取的处理器，方法是用一个新行将它们分开:
+您还可以从这个 jar 中指定几个要自动选取的处理器，方法是用一个新行将它们分开：
 
 ```java
 package1.Processor1
@@ -458,7 +459,7 @@ package2.Processor2
 package3.Processor3
 ```
 
-如果您使用 Maven 构建这个 jar 并尝试将这个文件直接放入`src/main/resources/META-INF/services`目录，您将会遇到以下错误:
+如果您使用 Maven 构建这个 jar 并尝试将这个文件直接放入`src/main/resources/META-INF/services`目录，您将会遇到以下错误：
 
 ```java
 [ERROR] Bad service configuration file, or exception thrown while 
@@ -466,13 +467,13 @@ constructing Processor object: javax.annotation.processing.Processor:
 Provider com.baeldung.annotation.processor.BuilderProcessor not found
 ```
 
-这是因为当`BuilderProcessor`文件尚未编译时，编译器试图在模块本身的`source-processing`阶段使用这个文件。在 Maven 构建的资源复制阶段，必须将文件放在另一个资源目录中，并复制到`META-INF/services`目录，或者(更好)在构建期间生成。
+这是因为当`BuilderProcessor`文件尚未编译时，编译器试图在模块本身的`source-processing`阶段使用这个文件。在 Maven 构建的资源复制阶段，必须将文件放在另一个资源目录中，并复制到`META-INF/services`目录，或者（更好）在构建期间生成。
 
-Google `auto-service`库(将在下一节讨论)允许使用一个简单的注释来生成这个文件。
+Google `auto-service`库（将在下一节讨论）允许使用一个简单的注释来生成这个文件。
 
 ### 8.5。使用谷歌图书馆
 
-要自动生成注册文件，您可以使用 Google 的`auto-service`库中的`@AutoService`注释，如下所示:
+要自动生成注册文件，您可以使用 Google 的`auto-service`库中的`@AutoService`注释，如下所示：
 
 ```java
 @AutoService(Processor.class)
@@ -487,4 +488,4 @@ public BuilderProcessor extends AbstractProcessor {
 
 在本文中，我们用一个为 POJO 生成构建器类的例子演示了源代码级的注释处理。我们还提供了几种在您的项目中注册注释处理器的替代方法。
 
-这篇文章的源代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20221005021228/https://github.com/eugenp/tutorials/tree/master/annotations)
+这篇文章的源代码可以在 GitHub 的[上找到](https://web.archive.org/web/20221005021228/https://github.com/eugenp/tutorials/tree/master/annotations)。

@@ -1,29 +1,30 @@
+
 # 用 JDBC 驱动程序连接到 MySQL
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/jdbc/how-to-connect-to-mysql-with-jdbc-driver-java/>
 
 一个 JDBC 的例子，展示了如何用 JDBC 驱动程序连接到 MySQL 数据库。
 
-*测试者:*
+**测试者：**
 
-*   Java 8
-*   MySQL 5.7
-*   MySQL JDBC 驱动`mysql-connector-java:8.0.16`
+- Java 8
+- MySQL 5.7
+- MySQL JDBC 驱动 `mysql-connector-java:8.0.16`
 
-## 1.下载 MySQL JDBC 驱动程序
+## 1. 下载 MySQL JDBC 驱动程序
 
-访问 https://dev.mysql.com/downloads/connector/j/下载最新的 MySQL JDBC 驱动程序。
+访问 <https://dev.mysql.com/downloads/connector/j/> 下载最新的 MySQL JDBC 驱动程序。
 
 ![mysql-connector-j](img/eab35b88ba0a965ea6eb017a849c269c.png)
 
-## 2.JDBC 连接
+## 2. JDBC 连接
 
-2.1 建立到 MySQL 数据库的连接。
+### 2.1 建立到 MySQL 数据库的连接
 
-JDBCExample.java
+`JDBCExample.java`
 
 ```java
- import java.sql.Connection;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -58,51 +59,53 @@ public class JDBCExample {
         }
 
     }
-} 
+}
 ```
 
-测试:
+测试：
 
-```java
- # compile
+```bash
+# compile
 > javac JDBCExample.java
 
 # run
 > java JDBCExample
 
 SQL State: 08001
-No suitable driver found for jdbc:mysql://127.0.0.1:3306/test 
+No suitable driver found for jdbc:mysql://127.0.0.1:3306/test
 ```
 
-要用`java`命令运行它，我们需要手动加载 MySQL JDBC 驱动程序。假设所有东西都存储在`c:\test`文件夹中，用这个`-cp`选项再次运行它。
+要用 `java` 命令运行它，我们需要手动加载 MySQL JDBC 驱动程序。假设所有东西都存储在 `c:\test` 文件夹中，用这个 `-cp` 选项再次运行它。
 
 ![project layout](img/647d7177f8487f01aa0d9a29fe9162a0.png)
 
-```java
- > java -cp "c:\test\mysql-connector-java-8.0.16.jar;c:\test" JDBCExample
-Connected to the database! 
+```bash
+> java -cp "c:\test\mysql-connector-java-8.0.16.jar;c:\test" JDBCExample
+Connected to the database!
 ```
 
-## 3.Maven 项目
+## 3. Maven 项目
 
-3.1 MySQL JDBC 驱动程序可以在 Maven 中央存储库中获得。
+### 3.1 添加 MySQL JDBC 驱动程序
 
-pom.xml
+MySQL JDBC 驱动程序可以在 Maven 中央存储库中获得。
 
-```java
- <dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-		<version>8.0.16</version>
-    </dependency> 
+`pom.xml`
+
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.16</version>
+</dependency>
 ```
 
-3.2 一个简单的 JDBC 选择示例。
+### 3.2 一个简单的 JDBC 选择示例
 
-JDBCExample2.java
+`JDBCExample2.java`
 
 ```java
- import com.mkyong.jdbc.model.Employee;
+import com.mkyong.jdbc.model.Employee;
 
 import java.math.BigDecimal;
 import java.sql.*;
@@ -152,13 +155,13 @@ public class JDBCExample2 {
 
     }
 
-} 
+}
 ```
 
-Employee.java
+`Employee.java`
 
 ```java
- import java.math.BigDecimal;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Employee {
@@ -169,30 +172,31 @@ public class Employee {
     private LocalDateTime createdDate;
 
     //...
-} 
+}
 ```
 
-表定义。
+表定义：
 
-```java
- CREATE TABLE EMPLOYEE
+```sql
+CREATE TABLE EMPLOYEE
 (
     ID INT NOT NULL AUTO_INCREMENT,
     NAME VARCHAR(100) NOT NULL,
     SALARY DECIMAL(15, 2) NOT NULL,
     CREATED_DATE DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (ID)
-); 
+);
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/java-jdbc.git](http://web.archive.org/web/20210502132239/https://github.com/mkyong/java-jdbc.git)
+`$ git clone` [https://github.com/mkyong/java-jdbc.git](http://web.archive.org/web/20210502132239/https://github.com/mkyong/java-jdbc.git)
 
 ## 参考
 
-*   [MySQL 数据库](http://web.archive.org/web/20210502132239/https://dev.mysql.com/downloads/mysql/)
-*   [MySQL GUI–工作台](http://web.archive.org/web/20210502132239/https://dev.mysql.com/downloads/workbench/)
-*   [Java JDBC 教程](/web/20210502132239/https://mkyong.com/tutorials/jdbc-tutorials/)
+- [MySQL 数据库](http://web.archive.org/web/20210502132239/https://dev.mysql.com/downloads/mysql/)
+- [MySQL GUI–工作台](http://web.archive.org/web/20210502132239/https://dev.mysql.com/downloads/workbench/)
+- [Java JDBC 教程](/web/20210502132239/https://mkyong.com/tutorials/jdbc-tutorials/)
 
-Tags : [jdbc](http://web.archive.org/web/20210502132239/https://mkyong.com/tag/jdbc/) [mysql](http://web.archive.org/web/20210502132239/https://mkyong.com/tag/mysql/)<input type="hidden" id="mkyong-current-postId" value="1634">
+标签：[jdbc](http://web.archive.org/web/20210502132239/https://mkyong.com/tag/jdbc/) [mysql](http://web.archive.org/web/20210502132239/https://mkyong.com/tag/mysql/)
+

@@ -1,13 +1,14 @@
-# Java 8 流–将`List<List<String>>`转换为`List<String>`
+
+# Java 8 流——将`List<List<String>>`转换为`List<String>`
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-8-stream-convert-listliststring-to-liststring/>
 
 如题，我们可以用`flatMap`来转换。
 
-Java9Example1.java
+`Java9Example1.java`
 
 ```java
- package com.mkyong.test;
+package com.mkyong.test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,25 +32,25 @@ public class Java9Example1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- []
+[]
 []
 [A]
 [B]
-[C, D, E] 
+[C, D, E]
 ```
 
 ## 解决办法
 
-Java9Example2.java
+`Java9Example2.java`
 
 ```java
- package com.mkyong.test;
+package com.mkyong.test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -74,22 +75,22 @@ public class Java9Example2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- A
+A
 B
 C
 D
-E 
+E
 ```
 
 ## 参考
 
-*   [Java 正则表达式示例](/web/20221205230300/https://mkyong.com/java/java-regular-expression-examples/)
-*   [Scanner.findAll JavaDocs](http://web.archive.org/web/20221205230300/https://docs.oracle.com/javase/9/docs/api/java/util/Scanner.html#findAll-java.lang.String-)
+* [Java 正则表达式示例](/web/20221205230300/https://mkyong.com/java/java-regular-expression-examples/)
+* [Scanner.findAll JavaDocs](http://web.archive.org/web/20221205230300/https://docs.oracle.com/javase/9/docs/api/java/util/Scanner.html#findAll-java.lang.String-)
 
 <input type="hidden" id="mkyong-current-postId" value="15146">

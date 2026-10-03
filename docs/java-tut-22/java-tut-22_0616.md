@@ -1,8 +1,9 @@
+
 # 示例用法
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/usage.html`](https://docs.oracle.com/javase/tutorial/i18n/text/usage.html)
 
-本页面包含一些代码片段，展示了几种常见场景。 
+本页面包含一些代码片段，展示了几种常见场景。
 
 ## 从代码点创建 `String`
 
@@ -10,7 +11,6 @@
 String newString(int codePoint) {
     return new String(Character.toChars(codePoint));
 }
-
 ```
 
 ## 从代码点创建 `String` - 为 BMP 字符进行优化
@@ -25,7 +25,6 @@ String newString(int codePoint) {
         return new String(Character.toChars(codePoint));
     }
 }
-
 ```
 
 ## 批量创建 `String` 对象
@@ -42,7 +41,6 @@ String[] newStrings(int[] codePoints) {
     }
     return result;
 }
-
 ```
 
 ## 生成消息
@@ -52,7 +50,6 @@ String[] newStrings(int[] codePoints) {
 ```java
 // recommended
 System.out.printf("Character %c is invalid.%n", codePoint);
-
 ```
 
 以下方法简单且避免了连接，这使得文本更难本地化，因为并非所有语言都按照英语的顺序将数字值插入字符串中。
@@ -60,5 +57,4 @@ System.out.printf("Character %c is invalid.%n", codePoint);
 ```java
 // not recommended
 System.out.println("Character " + String.valueOf(char) + " is invalid.");
-
 ```

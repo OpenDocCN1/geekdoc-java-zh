@@ -1,11 +1,10 @@
+
 # Java 速查表，语法快速参考手册，表格与图表：语法快速学习指南
-
-
 
 ![](img/image_rsrc6P6.jpg)
 
-
 ## 关于本书
+
 本书涵盖了所有基础 Java 语法，几乎每个语法条目都列出了程序示例和结果输出。我们可以快速参考最有帮助的编程语法，例如常用命令语法、字符串函数语法、集合函数语法、类与对象语法……；这些语法对于编程都非常有用。
 
 我们可以将这本书视为基础语法手册，因为它的条目按字母顺序排列，因此我们可以方便地参考重要的语法。
@@ -13,10 +12,10 @@
 无论现在还是未来，Java 语法书都能为我们学习和工作中的编码提供巨大的帮助。
 
 ## 免责声明
+
 本书仅作为基础语法手册；它不能包含该主题的所有条目。其目的是作为速查表书籍的补充，而不是完整的 Java 字典。
 
-
-# 索引
+## 索引
 
 - `LocalTime` 语法](#part0004.xhtml_a6FU)
 - `local variable` 语法](#part0004.xhtml_a6FV)
@@ -149,7 +148,7 @@
 - `File` 语法](#part0004.xhtml_a6KX)
 - `Paper` 语法](#part0004.xhtml_a6KY)
 
-## & 语法
+## `&` 语法
 
 `&` 作为关系运算符使用：
 
@@ -164,15 +163,17 @@ public class Main {
     }
 }
 ```
-输出：The value of x is 100
 
-- 2. 按位与
+输出：`The value of x is 100`
+
+### 按位与
 
 `&` 用于按位与：
 
 如果对应的位都为 1，则返回 1，否则返回 0。
 
 示例：
+
 ```java
 public class Main {
     public static void main(String[] args){
@@ -183,15 +184,17 @@ public class Main {
     }
 }
 ```
-输出：4 & 6 = 4
 
-## | 语法
+输出：`4 & 6 = 4`
+
+## `|` 语法
 
 `|` 用于按位或：
 
 如果其中一个位为 1，返回 1，所有位都为 0 时返回 0。
 
 示例：
+
 ```java
 public class Main {
     public static void main(String[] args){
@@ -202,15 +205,17 @@ public class Main {
     }
 }
 ```
-输出：4 | 6 = 6
 
-## ^ 语法
+输出：`4 | 6 = 6`
+
+## `^` 语法
 
 `^` 用于按位异异：
 
 如果对应的位不同，则返回 1，相同则返回 0。
 
 示例：
+
 ```java
 public class Main {
     public static void main(String[] args){
@@ -221,14 +226,17 @@ public class Main {
     }
 }
 ```
-输出：4 ^ 6 = 2
 
-## << 语法
+输出：`4 ^ 6 = 2`
+
+## `<<` 语法
 
 `operand << bits`
+
 根据给定的位数位数左移所有位。
 
 示例：
+
 ```java
 public class Main {
     public static void main (String[] args) {
@@ -239,21 +247,19 @@ public class Main {
     }
 }
 ```
-输出：8
 
-## >> 语法
+输出：`8`
+
+## `>>` 语法
 
 `operand >> bits`
 
-
-
-
-
-# 右移运算符 (>>)
+### 右移运算符 (`>>`)
 
 根据给定的位数右移所有位。
 
 例如：
+
 ```java
 public class Main {
     public static void main (String[] args) {
@@ -264,29 +270,37 @@ public class Main {
     }
 }
 ```
+
+```
 // 输出: 2
+```
 
-## 无符号右移 (>>>)
+## 无符号右移 (`>>>`)
 
-语法：`operand` >>> `bits`
+语法：`operand >>> bits`
 
 根据给定的位数右移所有位。
+
 最左侧的空缺将用 0 填充。
+
 无符号右移。
 
 例如：假设 `-2 = 11111110`
+
 `-2 >>> 1` // 返回 `01111111`
 
-# 注释
+## 注释
 
-## `//` 和 `/* */`
+### `//` 和 `/* */`
 
 语法：
 
 单行注释以两个正斜杠 `//` 开始。
+
 多行注释以 `/*` 开始，并以 `*/` 结束。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -298,58 +312,73 @@ public class Main {
     }
 }
 ```
-// 输出: Hello World
 
-# 三元运算符 (:)
+```
+// 输出: Hello World
+```
+
+## 三元运算符 (`:`)
 
 语法：
+
 `(bool-expression) ? (if-true-do-this) : (if-false-do-this);`
 
 根据布尔表达式的结果执行语句中的某一个。
 
 例如(1)：
+
+
+
 ```java
 int a=100; int b=300;
 String result1 = (a<b) ? "orange" : "pineapple";
 System.out.print ( result1);
 ```
+
 // 输出: orange
 
 例如(2)：
+
 ```java
 int a=100; int b=300;
 String result2 = (a>b) ? "orange" : "pineapple";
 System.out.print ( result2 );
 ```
+
 // 输出: pineapple
 
-## 字符串拼接
+# 字符串拼接
 
-## + 连接符号语法：
+## `+` 连接符号语法
 
 `str = str1 + str2;`
+
 `str = str1.concat(str2);`
 
 `+` 可以连接两个字符串。
+
 `concat()` 可以连接两个字符串。
 
 例如：
+
 ```java
 String s1 = "Hello"; String s2 = "Friends";
 System.out.print( s1 + s2);  // 连接两个字符串
 System.out.print( s1.concat (s2));  // 连接两个字符串
 ```
+
 // 输出: Hello Friends
 
 # Math 方法
 
-## abs() 语法：
+## `abs()` 语法
 
 `Math.abs(number)`
 
 返回数字的绝对值。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -358,23 +387,31 @@ public class Main {
     }
 }
 ```
+
 // 输出:
+
 168.88
+
 168.88
 
 # 抽象类与方法
 
-## abstract 语法：
+## `abstract` 语法
 
 `abstract class/method`
 
 `abstract` 用于类或方法。
+
 抽象类作为父类工作，会被其子类扩展。子类的方法将重写抽象类的抽象方法。
+
 `abstract class` 不能创建任何对象。
+
 `abstract method` 仅用于抽象类。
+
 `abstract method` 是一个没有方法体的空方法。
 
 例如：
+
 ```java
 abstract class Book{ // 创建一个抽象类
     abstract void reading(); // 创建一个抽象方法
@@ -391,15 +428,17 @@ public class AbstractDemo {
     }
 }
 ```
+
 // 输出: I override that abstract method.
 
-## acos() 语法：
+## `acos()` 语法
 
 `Math.acos(number)`
 
 返回数字的反余弦值。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -409,21 +448,27 @@ public class Main {
     }
 }
 ```
+
 // 输出:
+
 0.4949341263408955
+
 2.646658527248898
+
 1.5707963267948966
 
 # 集合 (Collections)
 
-## add() 语法：
+## `add()` 语法
 
 `collection.add(element);`
 
 向集合中添加元素。
+
 `Collection` 指 `LinkedList`, `ArrayList`, `HashSet` 和 `List`。
 
 例如：
+
 ```java
 import java.util.HashSet;
 import java.util.Set;
@@ -439,16 +484,19 @@ public class MyClass {
     }
 }
 ```
+
 // 输出: Collection elements : [10, 20, 30]
 
-## addAll() 语法：
+## `addAll()` 语法
 
 `collection.addAll(element);`
 
 向集合中添加所有元素。
+
 `Collection` 指 `LinkedList`, `ArrayList`, `HashSet` 和 `List`。
 
 例如：
+
 ```java
 import java.util.HashSet;
 import java.util.Set;
@@ -464,17 +512,19 @@ public class MyClass {
     }
 }
 ```
+
 // 输出: Collection elements : [10, 20, 30]
 
 # Math 方法
 
-## addExact() 语法：
+## `addExact()` 语法
 
 `addExact(num1, num2)`
 
 返回两个数字的和。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -484,17 +534,19 @@ public class Main {
     }
 }
 ```
+
 // 输出: 30
 
 # 匿名函数
 
-## 匿名函数语法：
+## 匿名函数语法
 
 `(parameter) -> { body }`
 
 匿名函数是没有没有函数。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -505,23 +557,31 @@ public class Main {
     }
 }
 ```
+
 // 输出: Anonymous function
 
 # 算术运算符
 
-## 算术运算符语法：
+## 算术运算符语法
 
 `+`, `-`, `*`, `/`, `%`, `++`, `--`
 
 `+` 加法。
+
 `-` 减法。
+
 `*` 乘法。
+
 `/` 除法。
+
 `%` 取模。
+
 `++` 增一。
+
 `--` 减一。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -539,36 +599,46 @@ public class Main {
     }
 }
 ```
+
 // 输出: 13
+
 7
+
 30
+
 3
+
 1
+
 11
+
 10
 
 # 数组
 
-## 语法：
+## 语法
 
 `int arrayName[] = {"value0", "value1", "value2", ...};`
 
 数组是一个存储值的容器对象。
 
 例如：
+
 ```java
 int[] arr = { 10, 11, 12, 13 };
 System.out.println(arr[0]);
 ```
+
 // 输出: 10
 
-## 数组初始化：
+## 数组初始化
 
 `int arrayName[] = new int[number of elements];`
 
 带有固定大小数组。
 
 例如：
+
 ```java
 int[] arr = new int[3];
 arr[0] = 10;
@@ -576,15 +646,11 @@ arr[1] = 20;
 arr[2] = 30;
 ```
 
-## 数组元素语法：
+## 数组元素语法
 
 `value = arrayName[index];`
 
 使用索引访问或分配数组元素。
-
-
-
-
 
 ### 数组操作
 
@@ -596,6 +662,7 @@ int array[index] = value;
 // 给元素赋值。
 
 e.g.
+
 ```java
 int myArr[] = {10, 20, 300, 40, 50};
 int val = myArr[2];  // 从元素中获取值
@@ -604,6 +671,7 @@ System.out.println(val);
 ```
 
 e.g.
+
 ```java
 int myNum[] = new int [5];
 myNum[2] = 80;     // 给元素赋值
@@ -616,9 +684,11 @@ System.out.println(myNum[2]);
 ```java
 arrayName.length;
 ```
+
 // 返回数组的元素总数。
 
 e.g.
+
 ```java
 public class ArrLenClass{
     public static void main (String [] args){
@@ -635,10 +705,13 @@ public class ArrLenClass{
 ```java
 Arrays.sort(array_name);
 ```
+
 // 对数组元素排序并顺序显示结果。
+
 // 在使用 `Arrays.sort()` 之前，必须 `import java.util.Arrays;`。
 
 e.g.
+
 ```java
 package tryPackage;
 import java.util.Arrays;
@@ -654,16 +727,20 @@ public class SortArrClass{
 // 输出: App Bay Cod Dot
 ```
 
-# ArrayList 语法
+# `ArrayList` 语法
 
 ```java
 ArrayList myList = new ArrayList();
 ```
+
 // 创建一个 `ArrayList` 对象。
+
 // `ArrayList` 类是一个可调整大小的数组，可以修改 `ArrayList` 的大小。
+
 // `ArrayList` 是一个动态数据结构，它可以在列表中快速地迭代或搜索指定的元素。
 
 e.g.
+
 ```java
 import java.util.*;
 public class MyArrayList{
@@ -679,11 +756,13 @@ public class MyArrayList{
 ```
 
 **注意：**
+
 `LinkedList` 和 `ArrayList` 的区别：
+
 - `LinkedList` 在添加、插入和删除元素时运行快。
 - `ArrayList` 在迭代和搜索元素时运行快。
 
-## ArrayList 函数
+## `ArrayList` 函数
 
 - `obj.add()`: 添加元素
 - `obj.get()`: 获取元素值
@@ -693,6 +772,7 @@ public class MyArrayList{
 - `obj.clear()`: 清除所有元素
 
 e.g.
+
 ```java
 import java.util.ArrayList;
 public class Main {
@@ -721,14 +801,16 @@ public class Main {
 // []
 ```
 
-### asin 语法
+### `asin` 语法
 
 ```java
 Math.asin(number)
 ```
+
 // 返回数字的反正弦值。
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -738,16 +820,20 @@ public class Main {
 // 输出: 1.0758622045401
 ```
 
-# assertion 断言语法
+# `assertion` 断言语法
 
 ```java
 assert condition: "message";
 ```
+
 // 断言通过检查我们假设为真的代码来帮助检测任何问题。
+
 // 如果条件返回假，JVM 将抛出消息并停止。
+
 // 在运行带断言的文件时，我们需要在命令中使用 `java -ea` 来启用断言。
 
 e.g.
+
 ```java
 import java.util.Scanner;
 public class Assertion{
@@ -765,6 +851,9 @@ public class Assertion{
 赋值运算符意味着 `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `>>=`, `<<=`。
 
 e.g.
+
+
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -782,14 +871,16 @@ public class Main {
 }
 ```
 
-### atan 语法
+## `atan` 语法
 
 ```java
 Math.atan(number)
 ```
-// 返回 -PI/2 到 PI/2 之间的反正切值。
 
-e.g.
+返回 `-PI/2` 到 `PI/2` 之间的反正切值。
+
+例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -799,14 +890,16 @@ public class Main {
 // 输出: 0.721654850864761
 ```
 
-### atan2 语法
+## `atan2` 语法
 
 ```java
 Math.atan2(y, x)
 ```
-// 返回 y / x 的反正切值（弧度）。
 
-e.g.
+返回 `y / x` 的反正切值（弧度）。
+
+例如：
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -822,14 +915,16 @@ class Main {
 // 54.55428967240176
 ```
 
-# boolean 语法
+# `boolean` 语法
 
 ```java
 boolean variable
 ```
-//  true 或 false 属性的数据类型。
 
-e.g.
+`true` 或 `false` 属性的数据类型。
+
+例如：
+
 ```java
 boolean good = true;
 boolean bad = false;
@@ -838,17 +933,20 @@ System.out.println(bad);
 // 输出: true, false
 ```
 
-## BorderJFrame & BorderLayout 语法
+## `BorderJFrame` & `BorderLayout` 语法
 
 ```java
 BorderJFrame myFrame=new BorderJFrame() // 创建 BorderJFrame
 setLayout(new BorderLayout()) // 设置为 BorderLayout
 add(new JButton(), BorderLayout.LOCATION) // 添加按钮
 ```
-// 向 `BorderJFrame` 添加按钮。`LOCATION` 意味着五个位置：“东”、“南”、“西”、“北”和“中心”。
-// `BorderLayout` 意味着所有组件都放在指定的五个位置。
 
-e.g.
+向 `BorderJFrame` 添加按钮。`LOCATION` 意味着五个位置：“东”、“南”、“西”、“北”和“中心”。
+
+`BorderLayout` 意味着所有组件都放在指定的五个位置。
+
+例如：
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -870,21 +968,17 @@ public class BorderJFrame extends JFrame{
 }
 ```
 
-
-
-
-
 ![](img/image_rsrc6P7.jpg)
 
-## break 语法
+## `break` 语法
 
 ```java
 break;
 ```
 
-// 终止循环或 switch 块
+终止循环或 `switch` 块
 
-e.g.
+例如：
 
 ```java
 for (int n = 1; n < 8; n++) {
@@ -894,7 +988,8 @@ for (int n = 1; n < 8; n++) {
     System.out.print(n);
 }
 ```
-// 输出: 12345
+
+输出: `12345`
 
 ## 按钮事件语法
 
@@ -906,7 +1001,7 @@ actionPerformed(ActionEvent e){…}     // 如果发生事件则执行
 
 通过实现 `ActionListener`，可以创建一个监听器接口并监听事件。
 
-e.g.
+例如：
 
 ```java
 import javax.swing.*;
@@ -934,33 +1029,35 @@ public class ButtonFrame extends JFrame implements ActionListener{     // 为监
     }
 }
 ```
-输出: Click Me      Button Event Occurs!
 
-## byte 语法
+输出: `Click Me      Button Event Occurs!`
+
+## `byte` 语法
 
 ```java
 byte variable
 ```
 
-// 范围从 -128 到 127 的数字类型
+范围从 `-128` 到 `127` 的数字类型
 
-e.g.
+例如：
 
 ```java
 byte myNum = 88;
 System.out.println(myNum);
 ```
-// 输出: 88
 
-## canRead() 语法
+输出: `88`
+
+## `canRead()` 语法
 
 ```java
 file.canRead()
 ```
 
-// 如果文件可读则返回 true。
+如果文件可读则返回 `true`。
 
-e.g.
+例如：
 
 ```java
 File f = new File ( aFile.txt );    // 创建文件对象
@@ -971,21 +1068,25 @@ if (f.exists()) {
     System.out.println("Is a file?"+ f.isFile()); 
 }
 ```
-// 输出:
+
+输出:
+
+```
 Is existing? true
 Can read? true
 Can write? false
 Is a file? true
+```
 
-## canWrite() 语法
+## `canWrite()` 语法
 
 ```java
 file.canWrite()
 ```
 
-// 如果文件可写则返回 true。
+如果文件可写则返回 `true`。
 
-e.g.
+例如：
 
 ```java
 File f = new File ( aFile.txt );    // 创建文件对象
@@ -996,13 +1097,17 @@ if (f.exists()) {
     System.out.println("Is a file?"+ f.isFile()); 
 }
 ```
-// 输出:
+
+输出:
+
+```
 Is existing? true
 Can read? true
 Can write? false
 Is a file? true
+```
 
-## CardLayout 事件语法
+## `CardLayout` 事件语法
 
 ```java
 implements ActionListener    // 为监听器创建一个接口
@@ -1012,7 +1117,7 @@ actionPerformed(ActionEvent e){…}     // 如果发生事件则执行
 
 通过实现 `ItemListener`，可以创建一个监听器接口并监听事件。
 
-e.g.
+例如：
 
 ```java
 import java.awt.*;
@@ -1065,9 +1170,10 @@ class CardLayoutClass extends Frame implements ActionListener{
     }
 }
 ```
-// 输出:      I am the Number 1 Card
 
-## CardJFrame & CardLayout 语法
+输出: `I am the Number 1 Card`
+
+## `CardJFrame` & `CardLayout` 语法
 
 ```java
 CardJFrame myFrame=new CardJFrame(); // 创建一个 CardJFrame
@@ -1077,7 +1183,7 @@ add(new JButton())     //为 CardJFrame 添加一个按钮
 
 `CardLayout` 意味着组件一次显示一个。`CardLayout` 需要一个监听器来显示所有。
 
-e.g.
+例如：
 
 ```java
 import java.awt.*;
@@ -1098,17 +1204,18 @@ public class CardJFrame extends JFrame{
     }
 }
 ```
-// 输出: (image_rsrc6P7.jpg)
 
-## case 语法
+输出: `(image_rsrc6P7.jpg)`
+
+## `case` 语法
 
 ```java
 case:
 ```
 
-// switch 中的标记
+`switch` 中的标记
 
-e.g.
+例如：
 
 ```java
 int number = 2;
@@ -1119,17 +1226,18 @@ switch (number) {
         System.out.println("Number 2");
 }
 ```
-// 输出: Number 2
 
-## cbrt() 语法
+输出: `Number 2`
+
+## `cbrt()` 语法
 
 ```java
 Math.cbrt(number)
 ```
 
-// 返回数字的立方根
+返回数字的立方根
 
-e.g.
+例如：
 
 ```java
 class Main {
@@ -1143,20 +1251,26 @@ class Main {
     }
 }
 ```
-// 输出:
+
+输出:
+
+```
 5.0
 -3.0
 0.0
+```
 
-## ceil() 语法
+## `ceil()` 语法
 
 ```java
 Math.ceil(number)
 ```
 
-// 返回大于等于参数的最近整数。
+返回大于等于参数的最近整数。
 
-e.g.
+例如：
+
+
 
 ```java
 class Main {
@@ -1166,6 +1280,7 @@ class Main {
     }
 }
 ```
+
 // 输出: 4
 
 # char 语法
@@ -1182,6 +1297,7 @@ e.g.
 char ch = 'C';
 System.out.println(ch);
 ```
+
 // 输出: C
 
 ## charAt() 语法
@@ -1203,6 +1319,7 @@ class Main{
     }
 }
 ```
+
 // 输出: n
 
 ## Check Box 事件
@@ -1213,7 +1330,7 @@ addItemListener(this)      // 为组件添加监听器
 itemStateChanged(ItemEvent e){…}     // 如果发生事件则执行
 ```
 
-通过实现 `ItemListener`，可以创建一个监听器接口并监听事件。
+通过实现`ItemListener`，可以创建一个监听器接口并监听事件。
 
 e.g.
 
@@ -1243,16 +1360,13 @@ public class CheckBoxFrame extends JFrame implements ItemListener{
 }
 ```
 
-
-
-
-
 ```java
 public void itemStateChanged(ItemEvent e){
     // itemStateChanged() runs when an event occurs
     System.out.println("Check Box Event Occurs!");
 }
 ```
+
 Output: □　Check Me　　Check Box Event Occurs!
 
 ---
@@ -1269,10 +1383,12 @@ Output: □　Check Me　　Check Box Event Occurs!
 }
 ```
 
-`class` 是对象的模板，用于创建对象。
-`class 类名` 定义了一个类。
+`class`是对象的模板，用于创建对象。
+
+`class 类名`定义了一个类。
 
 例如：
+
 ```java
 public class MyClass {  // 定义一个类
     int num = 100;
@@ -1282,6 +1398,7 @@ public class MyClass {  // 定义一个类
     }
 }
 ```
+
 Output: 100
 
 ---
@@ -1296,6 +1413,7 @@ ClassName obj = new ClassName( );   // 创建一个对象
 ```
 
 例如：
+
 ```java
 public class Flower {     // 定义一个类
     String co1, co2;      // 定义两个变量
@@ -1310,8 +1428,11 @@ public class Flower {     // 定义一个类
     }
 }
 ```
+
 Output:
+
 This flower is red.
+
 That flower is blue.
 
 ---
@@ -1324,9 +1445,11 @@ public class MyClass {
     int variable2 = value2;
 }
 ```
-创建一个名为 `MyClass` 的类，包含两个属性：`variable1` 和 `variable2`。
+
+创建一个名为`MyClass`的类，包含两个属性：`variable1`和`variable2`。
 
 例如：
+
 ```java
 public class Main {
     int num = 10; // 定义一个类属性
@@ -1336,6 +1459,7 @@ public class Main {
     }
 }
 ```
+
 Output: 10
 
 ---
@@ -1346,20 +1470,24 @@ Output: 10
 public void close() throws Exception{
 }
 ```
-`close()` 用于清理资源，它会在对象关闭或块退出时被自动调用。
+
+`close()`用于清理资源，它会在对象关闭或块退出时被自动调用。
 
 ```java
 public class ClassName implements AutoCloseable{
 }
 ```
 
-`AutoCloseable` 接口提供了 `close()` 方法。
+`AutoCloseable`接口提供了`close()`方法。
 
 `System.gc()`
+
 `gc()`建议 JVM 进行垃圾回收。
-注意：不建议显式调用 `System.gc()`。
+
+注意：不建议显式调用`System.gc()`。
 
 例如：
+
 ```java
 public class MyClass implements AutoCloseable {
     public static void main(String[] args) {
@@ -1374,6 +1502,7 @@ public class MyClass implements AutoCloseable {
     }
 }
 ```
+
 Output: The object is no longer used!  close() is executed!
 
 ---
@@ -1383,9 +1512,11 @@ Output: The object is no longer used!  close() is executed!
 ```java
 string.codePointAt(index)
 ```
+
 返回指定索引处字符的 Unicode 码。
 
 例如：
+
 ```java
 public class Main{
     public static void main(String []args){
@@ -1395,6 +1526,7 @@ public class Main{
     }
 }
 ```
+
 Output: 110
 
 ---
@@ -1404,9 +1536,11 @@ Output: 110
 ```java
 string.codePointBefore(index)
 ```
+
 返回指定索引之前字符的 Unicode 码。
 
 例如：
+
 ```java
 public class Main{
     public static void main(String []args){
@@ -1416,6 +1550,7 @@ public class Main{
     }
 }
 ```
+
 Output: 105
 
 ---
@@ -1425,9 +1560,11 @@ Output: 105
 ```java
 string.codePointCount(beginIndex, endIndex)
 ```
+
 返回字符串中指定范围内 Unicode 值的数量。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -1437,6 +1574,7 @@ public class Main {
     }
 }
 ```
+
 Output: 8
 
 ---
@@ -1446,12 +1584,17 @@ Output: 8
 ```java
 Color myColor = new Color(r, g, b);     // 创建一种颜色
 ```
-`RGB` 意味着“红、绿、蓝”，其值范围从 0 到 255。
-`0,0,0` 表示黑色，`255,255,255` 表示白色。
-`myButton.setBackground(myColor);     // 设置背景颜色
-`myButton.setForeground(Color.color);   // 设置前景颜色
+
+`RGB`意味着“红、绿、蓝”，其值范围从 0 到 255。
+
+`0,0,0`表示黑色，`255,255,255`表示白色。
+
+`myButton.setBackground(myColor);     // 设置背景颜色`
+
+`myButton.setForeground(Color.color);   // 设置前景颜色`
 
 例如：
+
 ```java
 import java.awt.* ;     
 import javax.swing.* ;
@@ -1473,17 +1616,15 @@ public class MyFrame extends JFrame {
     }
 }
 ```
+
 *(注：原文示例中代码片段不完整，此处根据逻辑补全了可运行的结构以展示)*
-
-
-
-
 
 ```java
 String str1 = "JQuery in 8 Hours";
 String str2 = "jQuery in 8 hours";
 System.out.println(str1.compareToIgnoreCase(str2));
 ```
+
 // 输出: 0
 
 ---
@@ -1491,9 +1632,11 @@ System.out.println(str1.compareToIgnoreCase(str2));
 ### concat() 语法:
 
 `str1.concat(str2)`
+
 // 拼接两个字符串
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -1503,6 +1646,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: Python Syntax Book
 
 ---
@@ -1510,22 +1654,27 @@ public class Main {
 ### 三元运算符语法:
 
 `(bool-expression) ? (if-true-do-this) : (if-false-do-this);`
+
 // 根据布尔表达式的结果执行其中一条语句
 
 e.g.(1)
+
 ```java
 int a=100; int b=300;
 String result1 = (a<b) ? "orange" : "pineapple";
 System.out.print ( result1);
 ```
+
 // 输出: orange
 
 e.g.(2)
+
 ```java
 int a=100; int b=300;
 String result2 = (a>b) ? "orange" : "pineapple";
 System.out.print ( result2 );
 ```
+
 // 输出: pineapple
 
 ---
@@ -1537,10 +1686,13 @@ modifier class ClassName{
     ClassName(){…} // 定义构造函数
 }
 ```
+
 // 构造函数用于初始化变量。构造函数与与类相同。
+
 // 在创建对象时，会自动调用构造函数
 
 e.g.
+
 ```java
 public class Flower{ // 定义一个类
     String co1, co2;
@@ -1555,8 +1707,11 @@ public class Flower{ // 定义一个类
     }
 }
 ```
+
 // 输出:
+
 This flower is red.
+
 That flower is blue.
 
 ---
@@ -1564,9 +1719,11 @@ That flower is blue.
 ### contains() 语法:
 
 `str1.contains(str2)`
+
 // 如果字符串包含指定的字符或字符序列，则返回 true；否则返回 false。
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -1578,6 +1735,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: true, true, true, false
 
 ---
@@ -1585,9 +1743,13 @@ public class Main {
 ### containsAll() 语法:
 
 `collection1.containAll(collection2);`
-// 如果 collection1 包含 collection2 的所有元素，则返回 true；如果 collection1 不包含 collection2 的所有元素，则返回 false。
+
+// 如果`collection1`包含`collection2`的所有元素，则返回 true；如果`collection1`不包含`collection2`的所有元素，则返回 false。
 
 e.g.
+
+
+
 ```java
 import java.util.ArrayList;
 public class MyClass {
@@ -1610,20 +1772,27 @@ public class MyClass {
     }
 }
 ```
+
 // 输出:
-List1: [A, B, C]
-List2: [A, B]
-List1 contains all elements of List2? true
-List2 contains all elements of List1? false
+
+`List1: [A, B, C]`
+
+`List2: [A, B]`
+
+`List1 contains all elements of List2? true`
+
+`List2 contains all elements of List1? false`
 
 ---
 
-### contentEquals() 语法:
+### `contentEquals()` 语法
 
 `str1.contentEquals(str2)`
-// 如果字符串完全等于另一个字符串，则返回 true；否则返回 false。
+
+// 如果字符串完全等于另一个字符串，则返回`true`；否则返回`false`。
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -1634,16 +1803,19 @@ public class Main {
     }
 }
 ```
-// 输出: true, false, false
+
+// 输出: `true`, `false`, `false`
 
 ---
 
-### continue 语法:
+### `continue` 语法
 
 `continue;`
+
 // 继续循环的下次迭代
 
 e.g.
+
 ```java
 for (int n = 1; n < 8; n++) {
     if (n == 6) {
@@ -1652,16 +1824,19 @@ for (int n = 1; n < 8; n++) {
     System.out.print(n);
 }
 ```
-// 输出: 123457
+
+// 输出: `123457`
 
 ---
 
-### copySign() 语法:
+### `copySign()` 语法
 
 `Math.copySign(x, y)`
+
 // 复制第二个参数的符号并将该符号赋值给第一个参数。
 
 e.g.
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -1671,17 +1846,21 @@ class Main {
     }
 }
 ```
+
 // 输出:
--1.68
+
+`-1.68`
 
 ---
 
-### copyValueOf() 语法:
+### `copyValueOf()` 语法
 
 `str1.copyValueOf(str2, beginIndex, endIndex)`
+
 // 通过复制数组的元素返回一个字符串。
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -1691,16 +1870,19 @@ public class Main {
     }
 }
 ```
-// 输出: RayYao
+
+// 输出: `RayYao`
 
 ---
 
-### cos() 语法:
+### `cos()` 语法
 
 `Math.cos(radians)`
+
 // 返回弧度值的余弦值
 
 e.g.
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -1710,16 +1892,19 @@ class Main {
     }
 }
 ```
-// 输出: 0.8660254037844386
+
+// 输出: `0.8660254037844386`
 
 ---
 
-### cosh() 语法:
+### `cosh()` 语法
 
 `Math.cosh(radians)`
+
 // 返回弧度的双曲余弦值
 
 e.g.
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -1729,20 +1914,27 @@ class Main {
     }
 }
 ```
-// 输出: 1.5430806348152437
+
+// 输出: `1.5430806348152437`
 
 ---
 
-### 自定义布局语法:
+### 自定义布局语法
 
-`JPanel myPanel = new JPanel();` // 创建一个 JPanel
+`JPanel myPanel = new JPanel();` // 创建一个`JPanel`
+
 `myPanel.setLayout(null);` // 使用自定义布局
-`add(myPanel);` // 将 JPanel 添加到框架中
-`myPanel.add(myButton);` // 将按钮添加到 JPanel 中
-`myPanel.setBounds(x, y, width, height);` // 根据 x, y 坐标设置边界
-// 自定义布局意味着我们可以通过将布局设为 null 来使用自定义布局，而不是 Java 内置布局。
+
+`add(myPanel);` // 将`JPanel`添加到框架中
+
+`myPanel.add(myButton);` // 将按钮添加到`JPanel`中
+
+`myPanel.setBounds(x, y, width, height);` // 根据`x`, `y`坐标设置边界
+
+// 自定义布局意味着我们可以通过将布局设为`null`来使用自定义布局，而不是 Java 内置布局。
 
 e.g.
+
 ```java
 import javax.swing.*;
 import java.awt.*;
@@ -1767,17 +1959,21 @@ public class CustomizedLayout{
     }
 }
 ```
+
 // 输出:
-(image_rsrc6PA.jpg)
+
+`(image_rsrc6PA.jpg)`
 
 ---
 
-### 日期对象语法:
+### 日期对象语法
 
 `LocalDate obj = LocalDate.now()`
+
 // 创建日期对象
 
 e.g.
+
 ```java
 import java.time.LocalDate; // 导入 LocalDate 类
 public class Main { 
@@ -1787,18 +1983,16 @@ public class Main {
     }
 }
 ```
-// 输出: 2022-03-15
+
+// 输出: `2022-03-15`
 
 ---
 
-### 日期与时间语法:
+### 日期与时间语法
 
-`import java.time.LocalDateTime;` // 导入 LocalDateTime 类
+`import java.time.LocalDateTime;` // 导入`LocalDateTime`类
+
 `LocalDateTime obj = LocalDateTime.now();` // 创建本地日期和时间对象
-
-
-
-
 
 ```java
 public static void main(String[] args) {
@@ -1806,15 +2000,19 @@ public static void main(String[] args) {
     System.out.println(obj);
 }
 ```
-// 输出: 2022-03-15T10:38:06.933
 
-## `decrementExact()` 语法
+// 输出: `2022-03-15T10:38:06.933`
+
+---
+
+### `decrementExact()` 语法
 
 `Math.decrementExact(num)`
 
-// 返回 `num` 减 1 后的值
+// 返回`num`减 1 后的值
 
 e.g.
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -1825,17 +2023,23 @@ class Main {
     }
 }
 ```
-// 输出:
-99
-99999
 
-## `default` 语法
+// 输出:
+
+`99`
+
+`99999`
+
+---
+
+### `default` 语法
 
 `default:`
 
-// 在 switch 语句中标记默认代码块
+// 在`switch`语句中标记默认代码块
 
 e.g.
+
 ```java
 int number = 100;
 
@@ -1850,16 +2054,21 @@ switch (number) {
         System.out.println("Another Number");
 }
 ```
-// 输出: Another Number
 
-## `default` 修饰符语法
+// 输出: `Another Number`
+
+---
+
+### `default` 修饰符语法
 
 `class MyClass`
 
 // 默认类没有任何修饰符
+
 // 默认类仅在同一个包内可访问
 
 e.g.
+
 ```java
 class Member { // 默认类
     String firstName = "Ray";
@@ -1871,15 +2080,19 @@ class Member { // 默认类
     }
 }
 ```
-// 输出: Name: Ray Yao
 
-## `delete()` 语法
+// 输出: `Name: Ray Yao`
+
+---
+
+### `delete()` 语法
 
 `fileObj.delete()`
 
 // 删除文件
 
 e.g.
+
 ```java
 import java.io.File;
 
@@ -1894,18 +2107,23 @@ public class DeleteFile {
     }
 }
 ```
-// 输出: The file deleted is myFile.txt
 
-## `do / while` 语法
+// 输出: `The file deleted is myFile.txt`
+
+---
+
+### `do / while` 语法
 
 ```java
 do {
     ……
 } while(condition)
 ```
-// "do" 与 "while" 组合构成一个 do/while 循环
+
+// `do`与`while`组合构成一个`do/while`循环
 
 e.g.
+
 ```java
 int n = 1;
 do {
@@ -1913,28 +2131,36 @@ do {
     n++;
 } while(n <= 5);
 ```
-// 输出: 12345
 
-## `double` 语法
+// 输出: `12345`
+
+---
+
+### `double` 语法
 
 `double`
 
 // 范围从 1.7e−308 到 1.7e+308 的数字数据类型
 
 e.g.
+
 ```java
 double num = 166.88d;
 System.out.println(num);
 ```
-// 输出: 166.88
 
-## `else` 语法
+// 输出: `166.88`
+
+---
+
+### `else` 语法
 
 `else{ }`
 
-// 当条件为假时用于条件语句 if
+// 当条件为假时用于条件语句`if`
 
 e.g.
+
 ```java
 int score = 60;
 if (score < 60) {
@@ -1943,9 +2169,12 @@ if (score < 60) {
     System.out.println("Passed!");
 }
 ```
-// 输出: Passed!
 
-## `encapsulation` 语法
+// 输出: `Passed!`
+
+---
+
+### `encapsulation` 语法
 
 ```java
 public class Encapsulation {
@@ -1958,11 +2187,15 @@ public class Encapsulation {
     }
 }
 ```
+
 // 封装的意义向用户隐藏敏感数据
-// 将类变量/属性声明为 `private`
-// 提供公共的 getter 和 setter 方法进行访问
+
+// 将类变量/属性声明为`private`
+
+// 提供公共的`getter`和`setter`方法进行访问
 
 e.g.
+
 ```java
 class Encap {
     private String name;
@@ -1982,15 +2215,19 @@ public class Main {
     }
 }
 ```
-// 输出: My name is Ray Yao
 
-## `endswith()` 语法
+// 输出: `My name is Ray Yao`
+
+---
+
+### `endswith()` 语法
 
 `str1.endswith(str2)`
 
-// 如果字符串以某些指定的字符结束则返回 true，否则返回 false
+// 如果字符串以某些指定的字符结束则返回`true`，否则返回`false`
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -2001,29 +2238,39 @@ public class Main {
     }
 }
 ```
-// 输出: false, true, true
 
-## `enum` 语法
+// 输出: `false`, `true`, `true`
+
+---
+
+### `enum` 语法
 
 `enum EnumName{CONSTANTS}`
 
 // 声明带有多个常量的枚举类型类
+
 // 枚举类包含一组常量
+
 `EnumName.CONSTANT` // 枚举引用一个常量
 
 e.g.
+
 ```java
 enum Flower { RED, YELLOW, GREEN }
 ```
-（注：enum 的示例文本是碎片化的，根据提供的上下文进行了重构）
 
-## `equals()` 语法
+（注：`enum`的示例文本是碎片化的，根据提供的上下文进行了重构）
+
+---
+
+### `equals()` 语法
 
 `str1.equals(str2)`
 
-// 比较两个字符串，如果相等则返回 true，否则返回 false
+// 比较两个字符串，如果相等则返回`true`，否则返回`false`
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -2035,6 +2282,8 @@ public class Main {
 }
 ```
 
+
+
 ## `equalsIgnoreCase()` 语法
 
 `str1.equalsIgnoreCase(str2)`
@@ -2042,6 +2291,7 @@ public class Main {
 // 忽略大小写比较两个字符串，如果相等则返回 true，否则返回 false
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -2059,6 +2309,7 @@ public class Main {
 // 如果文件存在则返回 true
 
 e.g.
+
 ```java
 File f = new File("myFile.txt");
 if (f.exists()) {
@@ -2073,6 +2324,7 @@ if (f.exists()) {
 // 返回 e 的 num 次幂
 
 e.g.
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -2089,6 +2341,7 @@ class Main {
 // 返回 e(num) - 1
 
 e.g.
+
 ```java
 class Main {
     public static void main(String[] args) {
@@ -2105,6 +2358,7 @@ module a.module {
     exports a.package to b.module;
 }
 ```
+
 // 将包导出到一个或多个特定的模块，以便该包可以被指定的模块访问
 
 ## `extends` 语法
@@ -2112,9 +2366,11 @@ module a.module {
 `class ChildClass extends ParentClass`
 
 // 子类继承父类
+
 // 子类继承父类的所有特征
 
 e.g.
+
 ```java
 class Book {
     protected String title = "R";
@@ -2132,6 +2388,7 @@ class Ebook extends Book {
     }
 }
 ```
+
 // 输出: Recommended Book: R in 8 Hours
 
 ## `file` 类语法
@@ -2139,10 +2396,6 @@ class Ebook extends Book {
 `File myFile = new File(fileName);`
 
 // 创建文件对象
-
-
-
-
 
 ```java
 File f = new File ( aFile.txt );   // 创建一个文件对象
@@ -2190,6 +2443,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: The file created is myFile.txt
 
 ### 文件删除语法
@@ -2214,6 +2468,7 @@ public class DeleteFile {
     }
 }
 ```
+
 // 输出: The file deleted is myFile.txt
 
 ### 文件读取语法
@@ -2251,6 +2506,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: Java in 8 Hours
 
 ### 文件读取语法 (FileReader)
@@ -2283,6 +2539,7 @@ public class MyClass{
     }
 }
 ```
+
 // 输出: Hello World!
 
 ### 文件写入语法
@@ -2314,6 +2571,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: Write file successfully!
 
 ### FileInputStream 语法
@@ -2324,10 +2582,13 @@ obj.read();      // 读取文件内容
 ```
 
 // `FileInputStream` 类用于处理输入流。
+
 // `"new FileInputStream (fileName)"` 创建一个输入流。
+
 // `"obj.read();"` 读取文件内容。
 
 e.g.
+
 (假设 `D:` 盘上的 myFile.txt 内容为 "PHP in 8 Hours!")
 
 ```java
@@ -2350,9 +2611,13 @@ public class InputFile {
     }
 }
 ```
+
 // 输出: PHP in 8 Hours
+
 // `obj` 是一个输入流对象。
+
 // `obj.read()` 读取 `myFile.txt` 的内容
+
 // `-1` 表示文件末尾。
 
 ### FileOutputStream 语法
@@ -2364,11 +2629,15 @@ obj.write();      // 将数据写入文件
 ```
 
 // `FileOutputStream` 类用于处理输出流。
+
 // `"new FileOutputStream (fileName)"` 创建一个输出流。
+
 // `"System.in.read();"` 从键盘读取输入的数据。
+
 // `"obj.write();"` 将数据写入文件。
 
 e.g.
+
 (假设我们向 `D:` 盘写入文件 "myFile.txt")
 
 ```java
@@ -2393,8 +2662,11 @@ public class OutputFile {
     }
 }
 ```
+
 // 输出: Please type a sentence, finish by Enter:
+
 // 请通过键盘输入 "PHP in 8 Hours!"
+
 // 请检查 `D:` 盘中的 myFile.txt，你会发现内容是 "PHP in 8 Hours!".
 
 ### FileReader 语法
@@ -2427,6 +2699,7 @@ public class MyClass{
     }
 }
 ```
+
 // 输出: Hello World!
 
 ### FileWriter 语法
@@ -2440,6 +2713,8 @@ obj.write("contents");
 ```
 
 e.g.
+
+
 
 ```java
 import java.io.FileWriter;
@@ -2458,7 +2733,10 @@ public class Main {
     }
 }
 ```
+
+```
 // 输出: Write file successfully!
+```
 
 ## Final 语法
 
@@ -2466,7 +2744,7 @@ public class Main {
 
 // 修饰符使类/变量/方法不可更改、不可继承和不可重写。
 
-e.g.
+例如：
 
 ```java
 public class Main {
@@ -2478,16 +2756,20 @@ public class Main {
     }
 }
 ```
+
+```
 // 输出: (错误信息…)
+```
 
 ## Final 类语法
 
 `final class`
 
 // `final` 是一个关键字。
-// `"final class` 表示该类不能被扩展。
 
-e.g.
+// `final class` 表示该类不能被扩展。
+
+例如：
 
 ```java
 final class FnlClass {  // 声明一个 final 类
@@ -2499,17 +2781,11 @@ class SubClass extends FnlClass {  // 错误！无法继承
 }
 ```
 
-
-
-
-
-```java
+```
 // 输出: 错误消息
 ```
 
 ## final 方法语法
-
-`final method`
 
 `final method`
 
@@ -2533,13 +2809,11 @@ class Tiger extends Animal {
 }
 ```
 
-```java
+```
 // 输出: 错误消息
 ```
 
-## final 变量语法()
-
-`final variable`
+## final 变量语法
 
 `final variable`
 
@@ -2559,7 +2833,7 @@ public class FnlClass{
 }
 ```
 
-```java
+```
 // 输出: 错误消息
 ```
 
@@ -2586,15 +2860,13 @@ public class Main {
 }
 ```
 
-```java
+```
 // 输出:
 // Error! Out of range!
 // Why?再次在 8 小时内学习 Java!
 ```
 
 ## float 语法
-
-`float variable`
 
 `float variable`
 
@@ -2607,13 +2879,11 @@ float num = 1.68f;
 System.out.println(num);
 ```
 
-```java
+```
 // 输出: 1.68
 ```
 
 ## floor() 语法
-
-`Math.floor(number)`
 
 `Math.floor(number)`
 
@@ -2630,7 +2900,7 @@ public class Main {
 }
 ```
 
-```java
+```
 // 输出: 3.0
 ```
 
@@ -2644,7 +2914,7 @@ public class Main {
 
 // `fontStyle` 表示样式，如 "BOLD", "ITAIC", "PLAIN"…
 
-`myLabel.setFont(myFont);` // 设置 myLabel 的字体
+`myLabel.setFont(myFont);` // 设置 `myLabel` 的字体
 
 例如：
 
@@ -2669,18 +2939,18 @@ public class FlowJFrame extends JFrame{
 }
 ```
 
-```text
+```
 // 输出:
 R in 8 Hours
 ```
 
 ## FlowJFrame & FlowLayout 语法
 
-`FlowJFrame myFrame=new FlowJFrame();` // 创建一个 FlowJFrame
+`FlowJFrame myFrame=new FlowJFrame();` // 创建一个 `FlowJFrame`
 
-`setLayout(new FlowLayout());` // 设置使用 FlowLayout
+`setLayout(new FlowLayout());` // 设置使用 `FlowLayout`
 
-`add(new JButton())` // 将按钮添加到 FlowJFrame
+`add(new JButton())` // 将按钮添加到 `FlowJFrame`
 
 // `FlowLayout` 意味着所有组件都从左到右排列，然后换下一行。
 
@@ -2707,7 +2977,7 @@ public class FlowJFrame extends JFrame{
 }
 ```
 
-```text
+```
 // 输出:
 ![](img/image_rsrc6PB.jpg)
 ```
@@ -2716,7 +2986,7 @@ public class FlowJFrame extends JFrame{
 
 `for (initialization; condition; increment)`
 
-// 创建一个 for 循环
+// 创建一个 `for` 循环
 
 例如：
 
@@ -2726,7 +2996,7 @@ for (int n = 1; n < 6; n++) {
 }
 ```
 
-```text
+```
 // 输出: 12345
 ```
 
@@ -2734,9 +3004,8 @@ for (int n = 1; n < 6; n++) {
 
 `format("string", arg)`
 
-`format("string", arg)`
-
 // 使用指定的参数返回格式化字符串。
+
 // `d` 指定数字，`s` 指定字符串，`f` 指定浮点数，`x` 指定十六进制值，`c` 指定字符。
 
 例如：
@@ -2758,7 +3027,7 @@ public class Main {
 }
 ```
 
-```text
+```
 // 输出:
 100
 R in 8 Hours
@@ -2772,13 +3041,12 @@ W
 `gc()` & `finalize()`
 
 // `gc()` 建议 JVM 进行垃圾回收。但不保证垃圾回收器会运行。
+
 // `finalize()` 已废弃。
 
 ## getbytes() 语法
 
-`str.getBytes(charset))`
-
-`str.getBytes(charset))`
+`str.getBytes(charset)`
 
 // 使用指定的字符集编码字符串，返回字节数组。
 
@@ -2800,7 +3068,7 @@ public class Main {
 }
 ```
 
-```text
+```
 // 输出:
 [71, 111, 111, 100]
 [71, 0, 111, 0, 111, 0, 100, 0]
@@ -2810,12 +3078,14 @@ public class Main {
 
 `str.getChars(srcBeginIndex, srcEndIndex, dest, destBeginIndex)`
 
-`str.getChars(srcBeginIndex, srcEndIndex, dest, destBeginIndex)`
-
 // 将字符从字符串复制到字符数组。
+
 // `srcBeginIndex`: 字符串中起始字符的索引。
+
 // `srcEndIndex`: 字符串中结束字符的索引。
+
 // `dest`: 目标字符数组。
+
 // `destBeginIndex`: 从数组中开始复制的索引。
 
 例如：
@@ -2835,7 +3105,7 @@ public class StringCharsExample{
 }
 ```
 
-```text
+```
 // 输出:
 Scripting
 ```
@@ -2844,9 +3114,8 @@ Scripting
 
 `myContainer=myFrame.getContentPane()`
 
-`myContainer=myFrame.getContentPane()`
+// 创建一个容器，要向新的 `JFrame` 添加组件，必须先创建一个容器。
 
-// 创建一个容器，要向新的 JFrame 添加组件，必须先创建一个容器。
 `myContainer.add(myButton);` // 将按钮添加到容器中
 
 例如：
@@ -2867,10 +3136,6 @@ public class MyClass{
 }
 ```
 
-
-
-
-
 ```java
 Container myContainer = myFrame.getContentPane();
 myContainer.add(myButton);
@@ -2884,9 +3149,7 @@ add(myButton);      // 向 JFrame 添加一个按钮
 
 ## getExponent() 语法
 
-```java
-getExponent(number)
-```
+`getExponent(number)`
 
 // 从数字中返回无偏指数
 
@@ -2903,21 +3166,21 @@ public class Main {
 }
 ```
 
-// 输出：
 ```
+// 输出：
 5
 6
 ```
 
 ## getName() 语法
 
-```java
-file.getName()
-```
+`file.getName()`
 
 // 获取文件名
 
 例如：
+
+
 
 ```java
 import java.io.*;
@@ -2951,8 +3214,10 @@ public class Encapsulation {
 ```
 
 // `封装`（封装）的目的是向用户隐藏敏感数据。
-// 将类变量/属性声明为 `private`
-// 提供 `public` 的 getter 和 setter 方法进行访问
+
+// 将类变量/属性声明为`private`
+
+// 提供`public`的 getter 和 setter 方法进行访问
 
 例如：
 
@@ -2998,7 +3263,7 @@ class MyClass {
 }
 ```
 
-// `"int m= 1000, n = 2000;"` 在方法外定义了两个全局变量。
+// `"int m= 1000, n = 2000;"`在方法外定义了两个全局变量。
 
 ## GridBagJFrame & GridBagLayout 语法
 
@@ -3008,11 +3273,13 @@ setLayout(new GridBagLayout())     // 设置使用 GridBagLayout
 GridBagConstraints location = new GridBagConstraints();
 ```
 
-// `"location.gridx = row"` 将组件按行放在指定的单元格中。
-// `"location.gridy = col"` 将组件按列放在指定的单元格中。
+// `"location.gridx = row"`将组件按行放在指定的单元格中。
+
+// `"location.gridy = col"`将组件按列放在指定的单元格中。
+
 `add(new JButton(button), location)`     // 向 GridBagJFrame 添加按钮
 
-// `GridBagLayout` 意味着所有组件都根据行和列放置在指定的位置。
+// `GridBagLayout`意味着所有组件都根据行和列放置在指定的位置。
 
 例如：
 
@@ -3039,6 +3306,7 @@ public class GridBagJFrame extends JFrame{
 ```
 
 // 输出：
+
 ![](img/image_rsrc6PD.jpg)
 
 ## GridJFrame & GridLayout 语法
@@ -3049,7 +3317,7 @@ setLayout(new GridLayout(row, col))     // 设置使用 GridLayout
 add(new JButton())     // 向 GridJFrame 添加按钮
 ```
 
-// `GridLayout` 意味着所有组件都按照行和列的布局排列。
+// `GridLayout`意味着所有组件都按照行和列的布局排列。
 
 例如：
 
@@ -3073,10 +3341,10 @@ public class GridJFrame extends JFrame{
 ```
 
 // 输出：
+
 ```image_rsrc..)
 
 ```  
-
 
 ```
 
@@ -3139,29 +3407,31 @@ public class GridJFrame extends JFrame{
 ```
 
 // 输出：
-```
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```
 
-## hasNext() 语法
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## `hasNext()`语法
 
 ```java
 obj.hasNext()
 ```
 
 // 检查集合中是否有下一个元素
+
 // 如果对象有下一个元素，则返回 true
 
 例如：
@@ -3185,6 +3455,7 @@ public class Main {
 ```
 
 // 输出：
+
 ```
 [Red, Yellow, Green]
 Red
@@ -3199,7 +3470,8 @@ HashSet<String> colors = new HashSet<String>();
 ```
 
 // 创建 HashSet 对象
-// `HashSet` 中的元素是唯一的
+
+// `HashSet`中的元素是唯一的
 
 例如：
 
@@ -3213,10 +3485,6 @@ public class Main {
     }
 }
 ```
-
-
-
-
 
 ```java
 colors.add("Green");
@@ -3241,13 +3509,21 @@ System.out.println(colors);
 ```
 
 Output:
+
 [Red, Yellow, Green]
+
 Red
+
 Yellow
+
 Green
+
 3
+
 true
+
 [Red, Yellow]
+
 [ ]
 
 ```java
@@ -3272,20 +3548,24 @@ public class MyHashSet{
     }
 }
 ```
+
 Output: [ Book, Very, Perfect ]
 
 Note:
-- `TreeSet` 输出排序且唯一的值。
-- `HashSet` 输出无序且唯一的值。
+
+- `TreeSet`输出排序且唯一的值。
+
+- `HashSet`输出无序且唯一的值。
 
 ------------------------------------------------------------------------------
 
-### `hypot()` 语法
+### `hypot()`语法
 
 ```java
 Math.hypot(x, y)
 ```
-// 返回不溢出的 `sqrt(x2 +y2)` 的值。
+
+// 返回不溢出的`sqrt(x2 +y2)`的值。
 
 e.g.
 
@@ -3298,15 +3578,17 @@ public class Main {
     }
 }
 ```
+
 Output: 5.0
 
 ------------------------------------------------------------------------------
 
-### `IEEEremainder()` 语法
+### `IEEEremainder()`语法
 
 ```java
 Math.IEEEremainder(x,y)
 ```
+
 // 根据 IEEE 754 标准返回余数。
 
 e.g.
@@ -3320,15 +3602,17 @@ public class Main {
     }
 }
 ```
+
 Output: 1.0
 
 ------------------------------------------------------------------------------
 
-### `if` 语法
+### `if`语法
 
 ```java
 if (condition)
 ```
+
 // 创建条件语句
 
 e.g.
@@ -3338,16 +3622,18 @@ if (100 < 200) {
     System.out.println("100 is less than 200");
 }
 ```
+
 Output: 100 is less than 200
 
 ------------------------------------------------------------------------------
 
-### `if-else` 语法
+### `if-else`语法
 
 ```java
 if ( bool-expression) { // 如果为真则执行此 }
 else {  // 如果为假则执行此 }
 ```
+
 // "if...else 语句" 在条件为真时执行某些代码，在条件为假时执行另一部分代码
 
 e.g.
@@ -3365,17 +3651,21 @@ public class IfElseClass{
     }
 }
 ```
+
 Output: x is less than y.
 
 ------------------------------------------------------------------------------
 
-### `implement` 语法
+### `implement`语法
 
 ```java
 class MyClass implement Interface
 ```
+
 // "implement" 用于 "interface"
+
 // 接口是一个特殊的类，它会被类实现。
+
 // 接口包含一个或多个空方法，这些方法将由类的方法实现。
 
 e.g.
@@ -3396,42 +3686,27 @@ public class InterfaceExmp {
     }
 }
 ```
+
 Output: Implement an empty method.
 
 ------------------------------------------------------------------------------
 
-### `import` 语法
+### `import`语法
 
 ```java
 import Package/Class/Interface
 ```
+
 // 用于将包、类、接口导入到当前文件
 
-e.g.
 
-```java
-import java.util.Scanner;   // 导入 Scanner 类
-public class Main {
-    public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        // "System.in" 用于读取用户输入
-        System.out.println("Please enter your name:");
-        String name = obj.nextLine();      
-        System.out.println("My name is: " + name);      
-    }
-}
-```
-Output:
-Please enter your name:
-My name is: Ray Yao
-
-------------------------------------------------------------------------------
 
 ### `incrementExact()` 语法
 
 ```java
 Math.incrementExact(num)
 ```
+
 // 返回 `num` 加 1 后的值
 
 e.g.
@@ -3441,15 +3716,15 @@ int num = 10;
 Math.incrementExact(num);
 System.out.println(num);
 ```
-Output: 11
 
-------------------------------------------------------------------------------
+Output: 11
 
 ### `indexOf()` 语法
 
 ```java
 str.indexOf(character)
 ```
+
 // 返回字符串的索引
 
 e.g.
@@ -3458,15 +3733,15 @@ e.g.
 String str = "Hello";
 System.out.println(str.indexOf('e'));
 ```
-Output: 1
 
-------------------------------------------------------------------------------
+Output: 1
 
 ### `inheritance` 语法
 
 ```java
 class Child extends Parent
 ```
+
 // 子类继承父类的所有特征。
 
 e.g.
@@ -3483,16 +3758,17 @@ class Main {
     }
 }
 ```
-Output: Parent
 
-------------------------------------------------------------------------------
+Output: Parent
 
 ### `input by user` 语法
 
 ```java
 Scanner obj = new Scanner(System.in);
 ```
+
 // 创建 Scanner
+
 在创建 Scanner 之前，需要先导入 `java.util.Scanner` 类。
 
 e.g.
@@ -3511,13 +3787,12 @@ class Example{
 }
 ```
 
-------------------------------------------------------------------------------
-
 ### `instanceof` 语法
 
 ```java
 object class
 ```
+
 // 如果是特定类的实例，则返回 true
 
 e.g.
@@ -3530,15 +3805,15 @@ public class Main {
     }
 }
 ```
-Output: true
 
-------------------------------------------------------------------------------
+Output: true
 
 ### `int` 语法
 
 ```java
 int variable
 ```
+
 // 从 -2147483648 到 2147483647 的数字类型
 
 e.g.
@@ -3547,9 +3822,8 @@ e.g.
 int num = 168168;
 System.out.println(num);
 ```
-Output: 168168
 
-------------------------------------------------------------------------------
+Output: 168168
 
 ### `interface` 语法
 
@@ -3558,16 +3832,17 @@ interface MyInterface{
     emptyMethod();
 }
 ```
-// 接口是一个特殊的类，它会被类实现。
-// 接口包含一个或多个空方法，这些方法将由类的方法实现。
 
-------------------------------------------------------------------------------
+// 接口是一个特殊的类，它会被类实现。
+
+// 接口包含一个或多个空方法，这些方法将由类的方法实现。
 
 ### `intern()` 语法
 
 ```java
 str.intern()
 ```
+
 /* 用于从内存中获取字符串，确保所有相同的字符串共享相同的内存.*/
 
 ```java
@@ -3578,10 +3853,6 @@ public class InternExample2 {
 }
 ```
 
-
-
-
-
 ```java
 String s2 = s1.intern();
 String s3 = new String("RayYao");
@@ -3590,17 +3861,21 @@ System.out.println(s1==s2); // true
 System.out.println(s1==s3); // false
 System.out.println(s2==s3); // false
 ```
+
 // 输出: true, false, false
 
-### isEmpty() 语法
+### `isEmpty()` 语法
 
 syntax:
+
 ```java
 str.isEmpty()
 ```
+
 // 如果字符串为空则返回 true，否则返回 false。
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -3611,17 +3886,21 @@ public class Main {
     }
 }
 ```
+
 // 输出: true, false
 
-### isFile() 语法
+### `isFile()` 语法
 
 syntax:
+
 ```java
 file.isFile()
 ```
+
 // 如果该是一个文件则返回 true
 
 e.g.
+
 ```java
 File f = new File ( aFile.txt ); // 创建一个文件对象
 if (f.exists()) {
@@ -3631,22 +3910,31 @@ if (f.exists()) {
     System.out.println("Is a file?"+ f.isFile());
 }
 ```
+
 // 输出:
+
 Is existing? true
+
 Can read? true
+
 Can write? false
+
 Is a file? true
 
-### iterator 语法
+### `iterator` 语法
 
 syntax:
+
 ```java
 Iterator<type> it = collection.iterator();
 ```
+
 // 创建一个集合对象
+
 // Iterator 对象用于遍历集合
 
 e.g.
+
 ```java
 import java.util.LinkedList;
 import java.util.Iterator;
@@ -3665,21 +3953,29 @@ public class Main {
     }
 }
 ```
+
 // 输出:
+
 [Red, Yellow, Green]
+
 Red
+
 Yellow
+
 Green
 
-## JButton 语法
+## `JButton` 语法
 
 syntax:
+
 ```java
 JButton myButton=new JButton("name");
 ```
+
 // 创建一个 JButton
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3698,18 +3994,23 @@ public class FlowJFrame extends JFrame{
     }
 }
 ```
+
 // 输出:
+
 ![](img/image_rsrc6PF.jpg)
 
-## JCheckBox 语法
+## `JCheckBox` 语法
 
 syntax:
+
 ```java
 JCheckBox myCheckBox = new JCheckBox("text");
 ```
+
 // 创建一个指定文本的 JCheckBox
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3726,20 +4027,26 @@ public class FlowJFrame extends JFrame{
     }
 }
 ```
+
 // 输出:
+
 ![](img/image_rsrc6PG.jpg)
 
-## JComboBox 语法
+## `JComboBox` 语法
 
 syntax:
+
 ```java
 JComboBox myCombox = new JComboBox(); // 创建一个 JComboBox
 addItem("text") // addItem("text")
 ```
+
 // JComboBox 提供了一个用于选择的下拉列表。
+
 // 下拉列表包含多个选项。
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3760,18 +4067,23 @@ public class FlowJFrame extends JFrame{
     }
 }
 ```
+
 // 输出:
+
 ![](img/image_rsrc6PH.jpg)
 
-## JFrame 语法
+## `JFrame` 语法
 
 syntax:
+
 ```java
 JFrame myFrame=new JFrame("JFrameName") // 创建一个 JFrame
 ```
+
 // 为了构建图形用户界面，我们需要先创建一个 JFrame。
 
 e.g.
+
 ```java
 import javax.swing.*; // 导入 JFrame 的 Swing 类
 public class MyClass{
@@ -3783,18 +4095,23 @@ public class MyClass{
     }
 }
 ```
+
 // 输出:
+
 ![](img/image_rsrc6PF.jpg)
 
-## JLabel 语法
+## `JLabel` 语法
 
 syntax:
+
 ```java
 JLabel myLabel=new JLabel("Text");
 ```
+
 // 创建一个 JLabel
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3812,16 +4129,22 @@ public class FlowJFrame extends JFrame{
 }
 ```
 
-## JPanel 语法
+## `JPanel` 语法
 
 syntax:
+
 ```java
 JPanel myPanel = new JPanel(); // 创建一个 JPanel
 ```
+
 // 
+
 JPanel 是一个容器，它可以包含各种组件。
 
 e.g.
+
+
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3839,15 +4162,18 @@ public class FlowJFrame extends JFrame{
 }
 ```
 
-## JPasswordField 语法
+## `JPasswordField` 语法
 
 syntax:
+
 ```java
 JPasswordField myPassword=new JPasswordField(width);
 ```
-// 创建一个 JPasswordField，width 指定了长度。
+
+// 创建一个`JPasswordField`，`width`指定了长度。
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3865,15 +4191,18 @@ public class FlowJFrame extends JFrame{
 }
 ```
 
-## JRadioButton 语法
+## `JRadioButton` 语法
 
 syntax:
+
 ```java
 JRadioButton myRadio = new JRadioButton("text");
 ```
-// 创建一个指定文本的 JRadioButton
+
+// 创建一个指定文本的`JRadioButton`
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3891,16 +4220,20 @@ public class FlowJFrame extends JFrame{
 }
 ```
 
-## JTextArea 语法
+## `JTextArea` 语法
 
 syntax:
+
 ```java
 JTextArea myTextArea = new JTextArea("text");
 ```
-// 创建一个指定文本的 JTextArea
-// JTextArea 用于接受用户输入的多行数据。
+
+// 创建一个指定文本的`JTextArea`
+
+// `JTextArea`用于接受用户输入的多行数据。
 
 e.g.
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3910,10 +4243,6 @@ public class FlowJFrame extends JFrame{
     }
 }
 ```
-
-
-
-
 
 ```java
 add(new JTextArea("  I am a JTextArea!  "));
@@ -3928,17 +4257,20 @@ public static void main(String[] args){
 ```
 
 // 输出:
+
 | I am a JTextArea! |
 
 ------------------------------------------------------------------------------
 
-## JTextField 语法:
+## `JTextField` 语法:
 
 ```java
 JTextField myTextField = new JTextField("text");
 ```
-// 创建一个指定文本的 `JTextField`。
-// `JTextField` 用于接受用户输入的一行数据。
+
+// 创建一个指定文本的`JTextField`。
+
+// `JTextField`用于接受用户输入的一行数据。
 
 e.g.
 
@@ -3962,16 +4294,18 @@ public class FlowJFrame extends JFrame{
 ```
 
 // 输出:
+
 I am a TextField
 
 ------------------------------------------------------------------------------
 
-### keySet() 语法:
+### `keySet()` 语法:
 
 ```java
 obj.keySet()
 ```
-// 返回 `HashMap` 键的集合
+
+// 返回`HashMap`键的集合
 
 e.g.
 
@@ -3991,7 +4325,9 @@ public class MyClass {
 ```
 
 // 输出:
+
 HashMap: {A=100, B=60, C=0}
+
 HashMap Keys: [A, B, C]
 
 ------------------------------------------------------------------------------
@@ -4001,6 +4337,7 @@ HashMap Keys: [A, B, C]
 ```java
 (parameter1, parameter2) -> expression
 ```
+
 /* Lambda 表达式是一个匿名函数；实际上它是一个可以返回值的短代码块。 */
 
 e.g.
@@ -4024,11 +4361,12 @@ public class Main {
 
 ------------------------------------------------------------------------------
 
-### lastIndexOf() 语法:
+### `lastIndexOf()` 语法:
 
 ```java
 str.lastIndexOf('string') or str.lastIndexOf('character')
 ```
+
 // 返回指定字符串或字符在字符串中最后一次出现的索引
 
 e.g.
@@ -4046,11 +4384,12 @@ public class Main {
 
 ------------------------------------------------------------------------------
 
-### length() 语法:
+### `length()` 语法:
 
 ```java
 str.length()
 ```
+
 // 返回字符串的长度
 
 e.g.
@@ -4068,14 +4407,17 @@ public class Main {
 
 ------------------------------------------------------------------------------
 
-### LinkedList 语法:
+### `LinkedList` 语法:
 
 ```java
 LinkedList myList = new LinkedList();
 ```
-// 创建一个 `LinkedList` 对象
-// `LinkedList` 类是一个可调整大小的数组，可以修改 `LinkedList` 的大小。
-// `LinkedList` 列表中的每个元素都引用列表中的下一个元素。也就是说，`LinkedList` 按索引位置排序；并允许添加或删除元素。
+
+// 创建一个`LinkedList`对象
+
+// `LinkedList`类是一个可调整大小的数组，可以修改`LinkedList`的大小。
+
+// `LinkedList`列表中的每个元素都引用列表中的下一个元素。也就是说，`LinkedList`按索引位置排序；并允许添加或删除元素。
 
 e.g.
 
@@ -4101,14 +4443,18 @@ public class MyLinkedList{
 ```
 
 // 输出: Hello! My Friend.
+
 // 注意:
-`LinkedList` 和 `ArrayList` 的区别：
-`LinkedList` 在添加、插入和删除元素时运行快。
-`ArrayList` 在迭代和搜索元素时运行快。
+
+`LinkedList`和`ArrayList`的区别：
+
+`LinkedList`在添加、插入和删除元素时运行快。
+
+`ArrayList`在迭代和搜索元素时运行快。
 
 ------------------------------------------------------------------------------
 
-### LinkedList 函数语法:
+### `LinkedList` 函数语法:
 
 ```java
 obj.addFirst("value"); // 添加第一个项
@@ -4121,21 +4467,37 @@ obj.removeLast(); // 删除最后一个项
 e.g.
 
 ```java
+
 import java.util.*;
+
 public class Main {
+
     public static void main(String[] args) {
+
         LinkedList<String> colors = new LinkedList<>();
+
         colors.add("Red");
+
         colors.add("Blue");
+
         colors.addFirst("Yellow");
+
         colors.addLast("Green");
+
         System.out.println(colors.getFirst());
+
         System.out.println(colors.getLast());
+
         colors.removeFirst();
+
         colors.removeLast();
+
         System.out.println(colors);
+
     }
+
 }
+
 ```
 
 // 输出:
@@ -4145,55 +4507,73 @@ Green
 
 ------------------------------------------------------------------------------
 
-### LocalDateTime 语法:
+### `LocalDateTime` 语法:
 
 ```java
+
 LocalDateTime obj = LocalDateTime.now();
+
 ```
 // 创建一个对象
 
 e.g.
 
 ```java
+
 import java.time.LocalDateTime;
+
 LocalDateTime obj = LocalDateTime.now();
+
 System.out.println(obj);
+
 ```
 // 输出: 2022-03-15T10:38:06.933
 
 ------------------------------------------------------------------------------
 
-### LocalDate 语法:
+### `LocalDate` 语法:
 
 ```java
+
 LocalDate obj = LocalDate.now()
+
 ```
 // 创建一个日期对象
 
 e.g.
 
 ```java
+
 import java.time.LocalDate;
+
 LocalDate myObj = LocalDate.now();
+
 System.out.println(myObj);
+
 ```
 // 输出: 2022-03-15
 
 ------------------------------------------------------------------------------
 
-### LocalTime 语法:
+### `LocalTime` 语法:
 
 ```java
+
 LocalTime obj = LocalTime.now();
+
 ```
 // 创建一个时间对象
 
 e.g.
 
 ```java
+
 import java.time.LocalTime;
+
 LocalTime obj = LocalTime.now();
+
 System.out.println(obj);
+
 ```
 // 输出: 13:56:28.939
 
@@ -4202,75 +4582,95 @@ System.out.println(obj);
 ### 局部变量语法:
 
 ```java
+
 myMethod(){
+
     type localVariable = value;
+
 }
+
 ```
 // 局部变量定义在方法内部。它在当前方法内有效。
 
 e.g.
 
 ```java
+
 class MyClass {
+
     int m=1000, n = 2000; // 全局变量
 
     void meth(){
+
         int m = 10, n = 20; // 局部变量
+
     }
+
 }
-```
+
+
+
+```java
 // `int m = 10, n = 20;` 在方法内部定义两个局部变量
+```
 
-------------------------------------------------------------------------------
+---
 
-### LocalDate 语法:
+### `LocalDate` 语法:
 
 ```java
 LocalDate obj = LocalDate.now()
 ```
+
 // 创建一个日期对象
 
 e.g.
 
 ```java
 import java.time.LocalDate;
+
 LocalDate myObj = LocalDate.now();
+
 System.out.println(myObj);
 ```
+
 // 输出: 2022-03-15
 
-------------------------------------------------------------------------------
+---
 
-### log() 语法:
+### `log()` 语法:
 
 ```java
 Math.log(number)
 ```
-// 返回数字的对数（底为 e）
+
+// 返回数字的对数（底为 `e`）
 
 e.g.
 
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         // 计算 8.0 的 log()
+
         System.out.println(Math.log(8.0));
+
     }
+
 }
 ```
+
 // 输出: 2.0794415416798357
 
-------------------------------------------------------------------------------
+---
 
-### log10() 语法:
+### `log10()` 语法:
 
 ```java
 Math.log10(number)
 ```
-
-
-
-
 
 // 返回数字的以 10 为底的对数
 
@@ -4278,100 +4678,142 @@ Math.log10(number)
 
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         // 计算 double 类型的 log10()
+
         System.out.println(Math.log10(8.0));
+
         // 计算零值的 log10()
+
         System.out.println(Math.log10(0.0));
+
     }
+
 }
 ```
 
 // 输出:
-```0.9030899869919435
+
+```
+0.9030899869919435
+
 -Infinity
 ```
 
 ---
 
-### log1p() 语法:
+### `log1p()` 语法:
 
 `Math.log1p(number)`
 
-// 返回数字与 1 之和的自然对数（以 e 为底）
+// 返回数字与 1 之和的自然对数（以 `e` 为底）
 
 例如
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         // 计算 double 类型的 log1p()
+
         System.out.println(Math.log1p(8.0));
+
         // 计算零值的 log1p()
+
         System.out.println(Math.log1p(0.0));
+
     }
+
 }
 ```
+
 // 输出:
+
 ```
 2.1972245773362196
+
 0.0
 ```
 
 ---
 
-### long 语法:
+### `long` 语法:
 
 `long variable`
 
 // 数字从 -9223372036854775808 到 9223372036854775808 的数据类型
 
 例如
+
 ```java
 long num = 16816800000L;
+
 System.out.println(num);
 ```
+
 // 输出: `16816800000`
 
 ---
 
-### matches() 语法:
+### `matches()` 语法:
 
 `str.matches('带有正则表达式的字符串')`
 
-// 检查字符串是否匹配指定的正则表达式。如果匹配则返回 true，如果不匹配则返回 false。
+// 检查字符串是否匹配指定的正则表达式。如果匹配则返回 `true`，如果不匹配则返回 `false`。
 
 例如
+
 ```java
 import java.io.*;
+
 public class Main {
+
     public static void main(String args[]) {
+
         String str = new String("Shell Scripting in 8 Hours");
+
         System.out.println(str.matches("(.*)Scripting(.*)"));
+
         System.out.println(str.matches("Scripting"));
+
         System.out.println(str.matches("Shell(.*)"));
+
         System.out.println(str.matches("(.*)Hours"));
+
     } // (.*) 表示所有字符和空格
+
 }
 ```
+
 // 输出: `true, false, true, false`
 
 ---
 
-## max() 语法:
+## `max()` 语法:
 
 `Math.max(num1, num2)`
 
 // 返回两个数字之间的最大值
 
 例如
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         System.out.println(Math.max(102, 168));
+
         // 返回 102 和 168 之间的最大值
+
     }
+
 }
 ```
+
 // 输出: `168`
 
 ---
@@ -4385,16 +4827,25 @@ public class Main {
 // 方法是一个可以重复使用的代码块。
 
 例如
+
 ```java
 public class MethClass{
+
     public static void main(String args[ ]){
+
         meth(); } // 调用 "meth"
+
     }
+
     static void meth(){ // 定义一个方法
+
         System.out.print( "Here is a method" );
+
     }
+
 }
 ```
+
 // 输出: `Here is a method`
 
 ---
@@ -4408,35 +4859,51 @@ public class MethClass{
 // 在调用方法时，可以同时将 `arg` 传递给方法。
 
 例如
+
 ```java
 public class MethArg{
+
     public static void main ( String [ ] args ) {
+
         meth( "with param" ); // 调用 meth 并传递参数
+
     }
+
     static void meth(String argument){ // 定义方法
+
         System.out.print( "Here is a method " + argument );
+
     }
+
 }
 ```
+
 // 输出: `Here is a method with param`
 
 ---
 
-## min() 语法:
+## `min()` 语法:
 
 `Math.min(num1, num2)`
 
 // 返回两个数字之间的最小值
 
 例如
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         System.out.println(Math.min(102, 168));
+
         // 返回 102 和 168 之间的最小值
+
     }
+
 }
 ```
+
 // 输出: `102`
 
 ---
@@ -4449,241 +4916,252 @@ public class Main {
 // Java 模块是 Java 或 Java API 的包
 
 例如(1)
+
 ```java
 module myModule{
+
     exports myPackage;
+
 }
 ```
+
 // 导出 `myPackage` 以便可以在 `myModule` 外部使用
 
 例如(2)
+
 ```java
 module java.base{ // 模块 'java.base'
+
     exports jdk.internal to jdk.jfr
+
 }
 ```
+
+
+
+```
 // 向模块 `jdk.jfr` 导出包 `jdk.internal`
+```
 
----
+### 多重继承语法
 
-### 多重继承语法:
+```
+class Parent{ } // 父类
+class Child1 extends Parent{ } // 子类 1
+class Child2 extends Parent{ } // 子类 2
+class Child3 extends Parent{ } // 子类 3
+class Child4 extends Parent{ } // 子类 4
+class Child5 extends Parent{, Child4 extends Parent{ } // 子类 5
+class Child6 extends Parent{ } // 子类 6
+class Child7 extends Parent{ } // 子类 7
+class Child8 extends Parent{ } // 子类 8
+class Child9 extends Parent{ } // 子类 9
+class Child10 extends Parent{ } // 子类 10
+class Child11 extends Parent{ } // 子类 11
+class Child12 extends Parent{ } // 子类 12
+class Child13 extends Parent{ } // 子类 13
+class Child14 extends Parent{ } // 子类 14
+class Child15 extends Parent{ } // 子类 15
+class Child16 extends Parent{ } // 子类 16
+class Child17 extends Parent{ } // 子类 17
+class Child18 extends Parent{ } // 子类 18
+class Child19 extends Parent{ } // 子类 19
+class Child20 extends Parent{ } // 子类 20
+class Child21 extends Parent{ } // 子类 21
+class Child22 extends Parent{ } // 子类 22
+class Child23 extends Parent{ } // 子类 23
+class Child24 extends Parent{ } // 子类 24
+class Child25 extends Parent{ } // 子类 25
+class Child26 extends Parent{ } // 子类 26
+class Child27 extends Parent{ } // 子类 27
+class Child28 extends Parent{ } // 子类 28
+class Child29 extends Parent{ } // 子类 29
+class Child30 extends Parent{ } // 子类 30
+class Child31 extends Parent{ } // 子类 31
+class Child32 extends Parent{ } // 子类 32
+class Child33 extends Parent{ } // 子类 33
+class Child34 extends Parent{ } // 子类 34
+class Child35 extends Parent{ } // 子类 35
+class Child36 extends Parent{ } // 子类 36
+class Child37 extends Parent{ } // 子类 37
+class Child38 extends Parent{ } // 子类 38
+class Child39 extends Parent{ } // 子类 39
+class Child40 extends Parent{ } // 子类 40
+class Child41 extends Parent{ } // 子类 41
+class Child42 extends Parent{ } // 子类 42
+class Child43 extends Parent{ } // 子类 43
+class Child44 extends Parent{ } // 子类 44
+class Child45 extends Parent{ } // 子类 45
+class Child46 extends Parent{ } // 子类 46
+class Child47 extends Parent{ } // 子类 47
+class Child48 extends Parent{ } // 子类 48
+class Child49 extends Parent{ } // 子类 49
+class Child50 extends Parent{ } // 子类 50
+class Child51 extends Parent{ } // 子类 51
+class Child52 extends Parent{ } // 子类 52
+class Child53 extends Parent{ } // 子类 53
+class Child54 extends Parent{ } // 子类 54
+class Child55 extends Parent{ } // 子类 55
+class Child56 extends Parent{ } // 子类 56
+class Child57 extends Parent{ } // 子类 57
+class Child58 extends Parent{ } // 子类 58
+class Child59 extends Parent{ } // 子类 59
+class Child60 extends Parent{ } // 子类 60
+class Child61 extends Parent{ } // 子类 61
+class Child62 extends Parent{ } // 子类 62
+class Child63 extends Parent{ } // 子类 63
+class Child64 extends Parent{ } // 子类 64
+class Child65 extends Parent{ } // 子类 65
+class Child66 extends Parent{ } // 子类 66
+class Child67 extends Parent{ } // 子类 67
+class Child68 extends Parent{ } // 子类 68
+class Child69 extends Parent{ } // 子类 69
+class Child70 extends Parent{ } // 子类 70
+class Child71 extends Parent{ } // 子类 71
+class Child72 extends Parent{ } // 子类 72
+class Child73 extends Parent{ } // 子类 73
+class Child74 extends Parent{ } // 子类 74
+class Child75 extends Parent{ } // 子类 75
+class Child76 extends Parent{ } // 子类 76
+class Child77 extends Parent{ } // 子类 77
+class Child78 extends Parent{ } // 子类 78
+class Child79 extends Parent{ } // 子类 79
+class Child80 extends Parent{ } // 子类 80
+class Child81 extends Parent{ } // 子类 81
+class Child82 extends Parent{ } // 子类 82
+class Child83 extends Parent{ } // 子类 83
+class Child84 extends Parent{ } // 子类 84
+class Child85 extends Parent{ } // 子类 85
+class Child86 extends Parent{ } // 子类 86
+class Child87 extends Parent{ } // 子类 87
+class Child88 extends Parent{ } // 子类 88
+class Child89 extends Parent{ } // 子类 89
+class Child90 extends Parent{ } // 子类 90
+class Child91 extends Parent{ } // 子类 91
+class Child92 extends Parent{ } // 子类 92
+class Child93 extends Parent{ } // 子类 93
+class Child94 extends Parent{ } // 子类 94
+class Child95 extends Parent{ } // 子类 95
+class Child96 extends Parent{ } // 子类 96
+class Child97 extends Parent{ } // 子类 97
+class Child98 extends Parent{ } // 子类 98
+class Child99 extends Parent{ } // 子类 99
+class Child100 extends Parent{ } // 子类 100
+class Child101 extends Parent{ } // 子类 101
+class Child102 extends Parent{ } // 子类 102
+class Child103 extends Parent{ } // 子类 103
+class Child104 extends Parent{ } // 子类 104
+class Child105 extends Parent{ } // 子类 105
+class Child106 extends Parent{ } // 子类 106
+class Child107 extends Parent{ } // 子类 107
+class Child108 extends Parent{ } // 子类 108
+class Child109 extends Parent{ } // 子类 109
+class Child110 extends Parent{ } // 子类 110
+class Child111 extends Parent{ } // 子类 111
+class Child112 extends Parent{ } // 子类 112
+class Child113 extends Parent{ } // 子类 113
+class Child114 extends Parent{ } // 子类 114
+class Child115 extends Parent{ } // 子类 115
+class Child116 extends Parent{ } // 子类 116
+class Child117 extends Parent{ } // 子类 117
+class Child118 extends Parent{ } // 子类 118
+class Child119 extends Parent{ } // 子类 119
+class Child120 extends Parent{ } // 子类 120
+class Child121 extends Parent{ } // 子类 121
+class Child122 extends Parent{ } // 子类 122
+class Child123 extends Parent{ } // 子类 123
+class Child124 extends Parent{ } // 子类 124
+class Child125 extends Parent{ } // 子类 125
+class Child126 extends Parent{ } // 子类 126
+class Child127 extends Parent{ } // 子类 127
+class Child128 extends Parent{ } // 子类 128
+class Child129 extends Parent{ } // 子类 129
+class Child130 extends Parent{ } // 子类 130
+class Child131 extends Parent{ } // 子类 131
+class Child132 extends Parent{ } // 子类 132
+class Child133 extends Parent{ } // 子类 133
+class Child134 extends Parent{ } // 子类 134
+class Child135 extends Parent{ } // 子类 135
+class Child136 extends Parent{ } // 子类 136
+class Child137 extends Parent{ } // 子类 137
+class Child138 extends Parent{ } // 子类 138
+class Child139 extends Parent{ } // 子类 139
+class Child140 extends Parent{ } // 子类 140
+class Child141 extends Parent{ } // 子类 141
+class Child142 extends Parent{ } // 子类 142
+class Child143 extends Parent{ } // 子类 143
+class Child144 extends Parent{ } // 子类 144
+class Child145 extends Parent{ } // 子类 145
+class Child146 extends Parent{ } // 子类 146
+class Child147 extends Parent{ } // 子类 147
+class Child148 extends Parent{ } // 子类 148
+class Child149 extends Parent{ } // 子类 149
+class Child150 extends Parent{ } // 子类 150
+class Child151 extends Parent{ } // 子类 151
+class Child152 extends Parent{ } // 子类 152
+class Child153 extends Parent{ } // 子类 153
+class Child154 extends Parent{ } // 子类 154
+class Child155 extends Parent{ } // 子类 155
+class Child156 extends Parent{ } // 子类 156
+class Child157 extends Parent{ } // 子类 157
+class Child158 extends Parent{ } // 子类 158
+class Child159 extends Parent{ } // 子类 159
+class Child160 extends Parent{ } // 子类 160
+class Child161 extends Parent{ } // 子类 161
+class Child162 extends Parent{ } // 子类 162
+class Child163 extends Parent{ } // 子类 163
+class Child164 extends Parent{ } // 子类 164
+class Child165 extends Parent{ } // 子类 165
+class Child166 extends Parent{ } // 子类 166
+class Child167 extends Parent{ } // 子类 167
+class Child168 extends Parent{ } // 子类 168
+class Child169 extends Parent{ } // 子类 169
+class Child170 extends Parent{ } // 子类 170
+class Child171 extends Parent{ } // 子类 171
+class Child172 extends Parent{ } // 子类 172
+class Child173 extends Parent{ } // 子类 173
+class Child174 extends Parent{ } // 子类 174
+class Child175 extends Parent{ } // 子类 175
+class Child176 extends Parent{ } // 子类 176
+class Child177 extends Parent{ } // 子类 177
+class Child178 extends Parent{ } // 子类 178
+class Child179 extends Parent{ } // 子类 179
+class Child180 extends Parent{ } // 子类 180
+class Child181 extends Parent{ } // 子类 181
+class Child182 extends Parent{ } // 子类 182
+class Child183 extends Parent{ } // 子类 183
+class Child184 extends Parent{ } // 子类 184
+class Child185 extends Parent{ } // 子类 185
+class Child186 extends Parent{ } // 子类 186
+class Child187 extends Parent{ } // 子类 187
+class Child188 extends Parent{ } // 子类 188
+class Child189 extends Parent{ } // 子类 189
+class Child190 extends Parent{ } // 子类 190
+class Child191 extends Parent{ } // 子类 191
+class Child192 extends Parent{ } // 子类 192
+class Child193 extends Parent{ } // 子类 193
+class Child194 extends Parent{ } // 子类 194
+class Child195 extends Parent{ } // 子类 195
+class Child196 extends Parent{ } // 子类 196
+class Child197 extends Parent{ } // 子类 197
+class Child198 extends Parent{ } // 子类 198
+class Child199 extends Parent{ } // 子类 199
+class Child200 extends Parent{ } // 子类 200
+```
 
-`class Parent{ }` // 父类
-`class Child1 extends Parent{ }` // 子类 1
-`class Child2 extends Parent{ }` // 子类 2
-`class Child3 extends Parent{ }` // 子类 3
-`class Child4 extends Parent{ }` // 子类 4
-`class Child5 extends Parent{, Child4 extends Parent{ }` // 子类 5
-`class Child6 extends Parent{ }` // 子类 6
-`class Child7 extends Parent{ }` // 子类 7
-`class Child8 extends Parent{ }` // 子类 8
-`class Child9 extends Parent{ }` // 子类 9
-`class Child10 extends Parent{ }` // 子类 10
-`class Child11 extends Parent{ }` // 子类 11
-`class Child12 extends Parent{ }` // 子类 12
-`class Child13 extends Parent{ }` // 子类 13
-`class Child14 extends Parent{ }` // 子类 14
-`class Child15 extends Parent{ }` // 子类 15
-`class Child16 extends Parent{ }` // 子类 16
-`class Child17 extends Parent{ }` // 子类 17
-`class Child18 extends Parent{ }` // 子类 18
-`class Child19 extends Parent{ }` // 子类 19
-`class Child20 extends Parent{ }` // 子类 20
-`class Child21 extends Parent{ }` // 子类 21
-`class Child22 extends Parent{ }` // 子类 22
-`class Child23 extends Parent{ }` // 子类 23
-`class Child24 extends Parent{ }` // 子类 24
-`class Child25 extends Parent{ }` // 子类 25
-`class Child26 extends Parent{ }` // 子类 26
-`class Child27 extends Parent{ }` // 子类 27
-`class Child28 extends Parent{ }` // 子类 28
-`class Child29 extends Parent{ }` // 子类 29
-`class Child30 extends Parent{ }` // 子类 30
-`class Child31 extends Parent{ }` // 子类 31
-`class Child32 extends Parent{ }` // 子类 32
-`class Child33 extends Parent{ }` // 子类 33
-`class Child34 extends Parent{ }` // 子类 34
-`class Child35 extends Parent{ }` // 子类 35
-`class Child36 extends Parent{ }` // 子类 36
-`class Child37 extends Parent{ }` // 子类 37
-`class Child38 extends Parent{ }` // 子类 38
-`class Child39 extends Parent{ }` // 子类 39
-`class Child40 extends Parent{ }` // 子类 40
-`class Child41 extends Parent{ }` // 子类 41
-`class Child42 extends Parent{ }` // 子类 42
-`class Child43 extends Parent{ }` // 子类 43
-`class Child44 extends Parent{ }` // 子类 44
-`class Child45 extends Parent{ }` // 子类 45
-`class Child46 extends Parent{ }` // 子类 46
-`class Child47 extends Parent{ }` // 子类 47
-`class Child48 extends Parent{ }` // 子类 48
-`class Child49 extends Parent{ }` // 子类 49
-`class Child50 extends Parent{ }` // 子类 50
-`class Child51 extends Parent{ }` // 子类 51
-`class Child52 extends Parent{ }` // 子类 52
-`class Child53 extends Parent{ }` // 子类 53
-`class Child54 extends Parent{ }` // 子类 54
-`class Child55 extends Parent{ }` // 子类 55
-`class Child56 extends Parent{ }` // 子类 56
-`class Child57 extends Parent{ }` // 子类 57
-`class Child58 extends Parent{ }` // 子类 58
-`class Child59 extends Parent{ }` // 子类 59
-`class Child60 extends Parent{ }` // 子类 60
-`class Child61 extends Parent{ }` // 子类 61
-`class Child62 extends Parent{ }` // 子类 62
-`class Child63 extends Parent{ }` // 子类 63
-`class Child64 extends Parent{ }` // 子类 64
-`class Child65 extends Parent{ }` // 子类 65
-`class Child66 extends Parent{ }` // 子类 66
-`class Child67 extends Parent{ }` // 子类 67
-`class Child68 extends Parent{ }` // 子类 68
-`class Child69 extends Parent{ }` // 子类 69
-`class Child70 extends Parent{ }` // 子类 70
-`class Child71 extends Parent{ }` // 子类 71
-`class Child72 extends Parent{ }` // 子类 72
-`class Child73 extends Parent{ }` // 子类 73
-`class Child74 extends Parent{ }` // 子类 74
-`class Child75 extends Parent{ }` // 子类 75
-`class Child76 extends Parent{ }` // 子类 76
-`class Child77 extends Parent{ }` // 子类 77
-`class Child78 extends Parent{ }` // 子类 78
-`class Child79 extends Parent{ }` // 子类 79
-`class Child80 extends Parent{ }` // 子类 80
-`class Child81 extends Parent{ }` // 子类 81
-`class Child82 extends Parent{ }` // 子类 82
-`class Child83 extends Parent{ }` // 子类 83
-`class Child84 extends Parent{ }` // 子类 84
-`class Child85 extends Parent{ }` // 子类 85
-`class Child86 extends Parent{ }` // 子类 86
-`class Child87 extends Parent{ }` // 子类 87
-`class Child88 extends Parent{ }` // 子类 88
-`class Child89 extends Parent{ }` // 子类 89
-`class Child90 extends Parent{ }` // 子类 90
-`class Child91 extends Parent{ }` // 子类 91
-`class Child92 extends Parent{ }` // 子类 92
-`class Child93 extends Parent{ }` // 子类 93
-`class Child94 extends Parent{ }` // 子类 94
-`class Child95 extends Parent{ }` // 子类 95
-`class Child96 extends Parent{ }` // 子类 96
-`class Child97 extends Parent{ }` // 子类 97
-`class Child98 extends Parent{ }` // 子类 98
-`class Child99 extends Parent{ }` // 子类 99
-`class Child100 extends Parent{ }` // 子类 100
-`class Child101 extends Parent{ }` // 子类 101
-`class Child102 extends Parent{ }` // 子类 102
-`class Child103 extends Parent{ }` // 子类 103
-`class Child104 extends Parent{ }` // 子类 104
-`class Child105 extends Parent{ }` // 子类 105
-`class Child106 extends Parent{ }` // 子类 106
-`class Child107 extends Parent{ }` // 子类 107
-`class Child108 extends Parent{ }` // 子类 108
-`class Child109 extends Parent{ }` // 子类 109
-`class Child110 extends Parent{ }` // 子类 110
-`class Child111 extends Parent{ }` // 子类 111
-`class Child112 extends Parent{ }` // 子类 112
-`class Child113 extends Parent{ }` // 子类 113
-`class Child114 extends Parent{ }` // 子类 114
-`class Child115 extends Parent{ }` // 子类 115
-`class Child116 extends Parent{ }` // 子类 116
-`class Child117 extends Parent{ }` // 子类 117
-`class Child118 extends Parent{ }` // 子类 118
-`class Child119 extends Parent{ }` // 子类 119
-`class Child120 extends Parent{ }` // 子类 120
-`class Child121 extends Parent{ }` // 子类 121
-`class Child122 extends Parent{ }` // 子类 122
-`class Child123 extends Parent{ }` // 子类 123
-`class Child124 extends Parent{ }` // 子类 124
-`class Child125 extends Parent{ }` // 子类 125
-`class Child126 extends Parent{ }` // 子类 126
-`class Child127 extends Parent{ }` // 子类 127
-`class Child128 extends Parent{ }` // 子类 128
-`class Child129 extends Parent{ }` // 子类 129
-`class Child130 extends Parent{ }` // 子类 130
-`class Child131 extends Parent{ }` // 子类 131
-`class Child132 extends Parent{ }` // 子类 132
-`class Child133 extends Parent{ }` // 子类 133
-`class Child134 extends Parent{ }` // 子类 134
-`class Child135 extends Parent{ }` // 子类 135
-`class Child136 extends Parent{ }` // 子类 136
-`class Child137 extends Parent{ }` // 子类 137
-`class Child138 extends Parent{ }` // 子类 138
-`class Child139 extends Parent{ }` // 子类 139
-`class Child140 extends Parent{ }` // 子类 140
-`class Child141 extends Parent{ }` // 子类 141
-`class Child142 extends Parent{ }` // 子类 142
-`class Child143 extends Parent{ }` // 子类 143
-`class Child144 extends Parent{ }` // 子类 144
-`class Child145 extends Parent{ }` // 子类 145
-`class Child146 extends Parent{ }` // 子类 146
-`class Child147 extends Parent{ }` // 子类 147
-`class Child148 extends Parent{ }` // 子类 148
-`class Child149 extends Parent{ }` // 子类 149
-`class Child150 extends Parent{ }` // 子类 150
-`class Child151 extends Parent{ }` // 子类 151
-`class Child152 extends Parent{ }` // 子类 152
-`class Child153 extends Parent{ }` // 子类 153
-`class Child154 extends Parent{ }` // 子类 154
-`class Child155 extends Parent{ }` // 子类 155
-`class Child156 extends Parent{ }` // 子类 156
-`class Child157 extends Parent{ }` // 子类 157
-`class Child158 extends Parent{ }` // 子类 158
-`class Child159 extends Parent{ }` // 子类 159
-`class Child160 extends Parent{ }` // 子类 160
-`class Child161 extends Parent{ }` // 子类 161
-`class Child162 extends Parent{ }` // 子类 162
-`class Child163 extends Parent{ }` // 子类 163
-`class Child164 extends Parent{ }` // 子类 164
-`class Child165 extends Parent{ }` // 子类 165
-`class Child166 extends Parent{ }` // 子类 166
-`class Child167 extends Parent{ }` // 子类 167
-`class Child168 extends Parent{ }` // 子类 168
-`class Child169 extends Parent{ }` // 子类 169
-`class Child170 extends Parent{ }` // 子类 170
-`class Child171 extends Parent{ }` // 子类 171
-`class Child172 extends Parent{ }` // 子类 172
-`class Child173 extends Parent{ }` // 子类 173
-`class Child174 extends Parent{ }` // 子类 174
-`class Child175 extends Parent{ }` // 子类 175
-`class Child176 extends Parent{ }` // 子类 176
-`class Child177 extends Parent{ }` // 子类 177
-`class Child178 extends Parent{ }` // 子类 178
-`class Child179 extends Parent{ }` // 子类 179
-`class Child180 extends Parent{ }` // 子类 180
-`class Child181 extends Parent{ }` // 子类 181
-`class Child182 extends Parent{ }` // 子类 182
-`class Child183 extends Parent{ }` // 子类 183
-`class Child184 extends Parent{ }` // 子类 184
-`class Child185 extends Parent{ }` // 子类 185
-`class Child186 extends Parent{ }` // 子类 186
-`class Child187 extends Parent{ }` // 子类 187
-`class Child188 extends Parent{ }` // 子类 188
-`class Child189 extends Parent{ }` // 子类 189
-`class Child190 extends Parent{ }` // 子类 190
-`class Child191 extends Parent{ }` // 子类 191
-`class Child192 extends Parent{ }` // 子类 192
-`class Child193 extends Parent{ }` // 子类 193
-`class Child194 extends Parent{ }` // 子类 194
-`class Child195 extends Parent{ }` // 子类 195
-`class Child196 extends Parent{ }` // 子类 196
-`class Child197 extends Parent{ }` // 子类 197
-`class Child198 extends Parent{ }` // 子类 198
-`class Child199 extends Parent{ }` // 子类 199
-`class Child200 extends Parent{ }` // 子类 200
-
-// 多重继承：Java 不支持多重继承。
 多重继承意味着一个类可以继承多个类。
 
 实际上，Java 不支持多重继承，一个类只能继承一个父类。
 
-```java
+
+
+```
 class Parent{ } // 父类
+
 class Child1 extends Parent{ } // 子类 1
+
 class Child2 extends Parent{ } // 子类 2
 ```
-
-
-
-
 
 ```java
 colors.add("Green");
@@ -4695,54 +5173,77 @@ Iterator<String> it = colors.iterator();
 // 创建一个 LinkedList 对象
 
 while(it.hasNext()) {   // 如果有下一个元素，则继续运行
+
     System.out.println(it.next());   // 访问下一个元素
+
 }
 
 // 输出:
+
 [Red, Yellow, Green]
+
 Red
+
 Yellow
+
 Green
 ```
 
-## nextAfter() 语法:
+## `nextAfter()` 语法
 
 `Math.nextAfter(x, y)`
 // 返回在 `y` 方向上相邻 `x` 的数字
 
 例如：
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         double x = 6.5f;
+
         double y = 9.8f;
+
         System.out.println(Math.nextAfter(x, y));
+
     }
+
 }
 ```
+
 // 输出: 6.500000000000001
 
-## nextDown() 语法:
+## `nextDown()` 语法
 
 `Math.nextDown(num)`
 // 返回在负无穷大方向上相邻 `num` 的数字
 
 例如：
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         float num1 = 6.8f;
+
         System.out.println(Math.nextDown(num1));
+
         double num2 = 6.8d;
+
         System.out.println(Math.nextDown(num2));
+
     }
+
 }
 ```
+
 // 输出:
 6.7999997
 6.799999999999999
 
-## nextLine() 语法:
+## `nextLine()` 语法
 
 `Scanner obj = new Scanner(fileObj);`
 // 创建文件读取对象
@@ -4751,93 +5252,142 @@ public class Main {
 
 例如：
 // 假设 `myFile.txt` 中的内容为 "Java in 8 Hours"。
+
 ```java
 import java.io.File;
+
 import java.io.FileNotFoundException;
+
 import java.util.Scanner;
 
 public class Main { 
+
     public static void main(String[] args) { 
+
         try {     
+
             File fileObj = new File("myFile.txt");
+
             Scanner obj = new Scanner(fileObj);
+
             while (obj.hasNextLine()) {
+
                 String content = obj.nextLine();     // 文件读取
+
                 System.out.println(content);
+
             }
+
             obj.close();
+
         } catch (FileNotFoundException e) {
+
             System.out.println("发生错误.");
+
             e.printStackTrace();
+
         }
+
     }
+
 }
 ```
+
 // 输出: Java in 8 Hours
 
-## nextUp() 语法:
+## `nextUp()` 语法
 
 `Math.nextUp(num)`
 // 返回在正无穷大方向上相邻 `num` 的数字
 
 例如：
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         float num1 = 6.8f;
+
         System.out.println(Math.nextUp(num1));
+
         double num2 = 6.8d;
+
         System.out.println(Math.nextUp(num2));
+
     }
+
 }
 ```
+
 // 输出:
 6.8000007
 6.800000000000001
 
-## now() 语法:
+## `now()` 语法
 
 `LocalDate obj = LocalDate.now()`
 // 创建日期对象
 
 例如：
+
 ```java
 import java.time.LocalDate;   // l LocalDate 类
+
 public class Main { 
+
     public static void main(String[] args) { 
+
         LocalDate dateObj = LocalDate.now();   // 创建一个日期对象
+
         System.out.println(dateObj);     // 显示当前日期
+
     }
+
 }
 ```
+
 // 输出: 2022-03-15
 
-## object 语法:
+## `object` 语法
 
 `obj = new ClassName();` // 创建一个对象，类的类的实例。
 `obj.variable`     // `obj` 引用一个变量
 `obj.method()`     // `obj` 引用一个方法()
 
 例如：
+
 ```java
 public class Flower {      // 定义一个类
+
     String co1, co2;      // 定义两个变量
+
     void beautify() {      // 定义一个方法
+
         System.out.println("This flower is " + co1);
+
         System.out.println("That flower is " + co2);
+
     }
+
     public static void main(String[] args) {
+
         Flower obj = new Flower( );      // 创建一个对象 "obj"
+
         obj.co1= "red.";   obj.co2="blue.";     // obj 引用 co1, co2
+
         obj.beautify();      // obj 引用一个方法 beautify()
+
     }
+
 }
 ```
+
 // 输出:
 This flower is red.
 That flower is blue.
 
-## offsetByCodePoints() 语法:
+## `offsetByCodePoints()` 语法
 
 `str.offsetByCodePoints(int index, int codePointOffset)`
 // 返回 `String` 中的一个索引，该索引是相对于给定索引的偏移量
@@ -4846,125 +5396,182 @@ That flower is blue.
 // `codePointOffset`: 代码点中的偏移量。
 
 例如：
+
 ```java
 import java.lang.*;
+
 public class Main {
+
     public static void main(String[] args) {
+
         String str = "JavaScript";
+
         System.out.println("The String is " + str); // 注意：原文此处有方法调用
+
         int offset = str.offsetByCodePoints(3, 5);
+
         System.out.println("The index is " + offset);
+
     }
+
 }
 ```
+
 // 输出:
 The String is JavaScript
 The index is 8
 
-## 重载 语法:
+## 重载 语法
 
 `public methodName(arg1){ }`
 `public methodName(arg2){ }`
 // 重载意味着类中存在两个或多个同名方法，它们的参数不同。
 
 例如：
+
 ```java
 public class Flower{ 
+
     String x, y;  // 声明一个类
+
     Flower (String a, String b) { x=a; y=b; }  // 重载
+
     Flower () { x="red "; y="blue "; } // 重载
+
     public static void main (String args[ ]) {
+
         Flower obj1=new Flower("pink ", "white "); 
+
         Flower obj2=new Flower(); 
+
         System.out.println(obj1.x + obj1.y);
+
         System.out.println(obj2.x + obj2.y);
+
     }
+
 }
 ```
+
 // 输出:
 pink  white 
 red  blue
 
-## 重写 语法:
+## 重写 语法
 
 `public methodName(arg1){ }` // 父类方法
 `public methodName(arg2){ }` // 子类方法
 // 重写意味着子类重写了父类的方法。
 
 例如：
+
 ```java
 class Parent { // 父类
+
     void display() {
+
         System.out.println("Parent class's method");
+
     }
+
 }
+
 class Child extends Parent { // 子类
+
     @Override
+
     void display() // 重写
+
         System.out.println("Child class's method");
+
     }
+
 }
+
 public class Test {
+
     public static void main(String[] args) {
+
         Parent obj = new Child(); // 创建子类对象
+
         obj.display(); // 调用重写后的方法
+
     }
+
 }
 ```
+
 // 输出:
 Child class's method
 
-## 包 语法:
+## 包 语法
 
 `packageName`
 // 创建一个包
 
 例如：
+
 ```java
 package packageName;
+
 public class MyClass {
+
     public static void main(String[] args) {
+
         System.out.println("This is a package!");
+
     }
+
 }
 ```
+
 // 输出: This is a package!
 
-## pi 语法:
+## `pi` 语法
 
 `Math.PI`
 // 存储 pi 的常量
 
 例如：
+
 ```java
 public class PIRandom{
+
     public static void main (String[] args){
+
         double p = Math.PI;
+
         System.out.println("The PI value is" + p);
+
     }
+
 }
 ```
+
 // 输出: The PI value is3.14159265358979
 
-## pow() 语法:
+## `pow()` 语法
 
 `Math.pow(x,y)`
 // 返回 `x` 的 `y` 次方的值。
 
 例如：
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         // 计算 2 的 3 次方
+
         System.out.println(Math.pow(2, 3));
+
     }
+
 }
 ```
+
 // 输出: 8.0
-
-
-
-
 
 # `print()` 语法
 
@@ -4972,20 +5579,30 @@ public class Main {
 `System.out.println();` // 在不同行打印结果。
 
 #### 示例
+
 ```java
 System.out.print( "A " );
+
 System.out.print( "B " );
+
 System.out.print( "C"  );
+
 // 输出: A B C
 ```
 
 ```java
 System.out.println( "A " );
+
 System.out.println( "B " );
+
 System.out.println( "C"  );
+
 // 输出:
+
 A
+
 B
+
 C
 ```
 
@@ -4995,16 +5612,24 @@ C
 // 一种访问修饰符。`private` 变量、`方法`或`构造函数` 只能在声明的类内部访问
 
 #### 示例
+
 ```java
 public class Student {
+
     private String name = "Andy";
+
     private String id = "007hero";
+
     private int phone = 12345678;
 
     public static void main(String[] args) {
+
         Student s = new Student();
+
         // System.out.println(s.name); // 编译错误，name 是私有的
+
     }
+
 }
 ```
 
@@ -5014,18 +5639,28 @@ public class Student {
 // 一种访问修饰符。`protected` 变量、`方法`或`构造函数` 只能在同包或子类中访问
 
 #### 示例
+
 ```java
 class Student {
+
     protected String name = "Andy";
+
     protected String id = "007hero";
+
     protected int phone = 12345678;
+
 }
 
 class Classmate extends Student {
+
     public static void main(String[] args) {
+
         Student s = new Student();
+
         System.out.println(s.name); // 可以访问
+
     }
+
 }
 ```
 
@@ -5035,18 +5670,28 @@ class Classmate extends Student {
 // 一种访问修饰符。`public` 变量、`方法`或`构造函数` 可以被任何类访问。
 
 #### 示例
+
 ```java
 class Student {
+
     public String name = "Andy";
+
     public String id = "007hero";
+
     public int phone = 12345678;
+
 }
 
 class Classmate {
+
     public static void main(String[] args) {
+
         Student s = new Student();
+
         System.out.println(s.name);
+
     }
+
 }
 ```
 
@@ -5058,28 +5703,44 @@ class Classmate {
 // 通过实现 `ItemListener`，可以创建事件监听器。
 
 #### 示例
+
 ```java
 import javax.swing.*;
+
 import java.awt.event.*;
 
 public class RadioFrame extends JFrame implements ItemListener{
+
     public RadioFrame(){
+
         JRadioButton myRadio = new JRadioButton("选择");
+
         myRadio.addItemListener(this); // 为单选框添加监听
+
         add(myRadio);
+
     }
 
     public static void main(String[] args){
+
         RadioFrame myFrame = new RadioFrame();
+
         myFrame.setSize(300, 200);
+
         myFrame.setVisible(true);
+
     }
 
     public void itemStateChanged(ItemEvent e){
+
         // 事件发生时运行
+
         System.out.println("单选框事件触发!");
+
     }
+
 }
+
 // 输出: 选择 单选框事件触发!
 ```
 
@@ -5089,12 +5750,17 @@ public class RadioFrame extends JFrame implements ItemListener{
 // 返回 0.0 到 1.0 之间的随机数
 
 #### 示例
+
 ```java
 public class Main {
-    public static void main(String[] args) {
-        // 生成一个 0.0 到 1.0 之间的随机数
-        System.out.println(Math.random());
-    }
+```
+
+
+
+```java
+public static void main(String[] args) {
+    // 生成一个 0.0 到 1.0 之间的随机数
+    System.out.println(Math.random());
 }
 // 输出: 0.5400266630143229
 ```
@@ -5105,6 +5771,7 @@ public class Main {
 `obj.read()` // 读取文件
 
 #### 示例
+
 ```java
 import java.io.FileReader;
 import java.io.IOException;
@@ -5129,11 +5796,12 @@ public class MyClass{
 
 ## `readObject()` 语法
 
-`ObjectInputStream obj = new ObjectInputStream(streamObj);` // 创建一个 ObjectInputStream `obj`
+`ObjectInputStream obj = new ObjectInputStream(streamObj);` // 创建一个 `ObjectInputStream` `obj`
 `obj.readObject()` // 从 `obj` 流读取数据
 // `readObject()` 用于从对象流中读取数据。
 
 #### 示例
+
 ```java
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -5148,7 +5816,6 @@ class MyClass {
             ObjectOutputStream obj1 = new ObjectOutputStream(file);
             obj1.writeObject(data);
             obj1.close();
-
             FileInputStream streamObj = new FileInputStream("file.txt");
             ObjectInputStream obj2 = new ObjectInputStream(streamObj);
             String result = (String) obj2.readObject();
@@ -5167,6 +5834,7 @@ class MyClass {
 // 递归意味着函数在内部调用自己。
 
 #### 示例
+
 ```java
 public class Factorial {
     static int fact(int n) {
@@ -5187,12 +5855,13 @@ public class Factorial {
 ## `regionMatches()` 语法
 
 `str1.regionMatches(int offset1, String str2, int offset2, int len)`
-// 检查两个字符串区域是否相等，如果相等返回 true，否则返回 false。
+// 检查两个字符串区域是否相等，如果相等返回 `true`，否则返回 `false`。
 // `offset1`: `str1` 的起始偏移量。
 // `offset2`: `str2` 的起始偏移量。
 // `len`: 比较的长度。
 
 #### 示例
+
 ```java
 public class Main {
     public static void main(String args[]) {
@@ -5209,9 +5878,10 @@ public class Main {
 
 `Pattern.compile("pattern", flags)` // 创建模式，指定 `CASE_SENSITIVE` 或 `CASE_INSENSITIVE`。
 `patt.matcher("string")` // 定义模式尝试匹配的字符串。
-`match.find()` // 如果字符串匹配模式则返回 true，否则返回 false。
+`match.find()` // 如果字符串匹配模式则返回 `true`，否则返回 `false`。
 
 #### 示例
+
 ```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -5229,10 +5899,7 @@ public class MyClass{
 }
 ```
 
-
-
-
-```
+```java
 System.out.println("Not found a match");
 ```
 
@@ -5245,6 +5912,7 @@ System.out.println("Not found a match");
 ```java
 collection.remove(index);
 ```
+
 移除集合中指定索引处的元素
 
 例如：
@@ -5264,6 +5932,7 @@ public class MyClass {
     }
 }
 ```
+
 // 输出:
 MyList: [10, 11, 12]
 Removed Element: 12
@@ -5275,6 +5944,7 @@ Removed Element: 12
 ```java
 collction.removeAll(collection);
 ```
+
 从集合中移除所有元素
 
 例如：
@@ -5295,6 +5965,7 @@ public class Main {
     }
 }
 ```
+
 // 输出:
 Original ArrayList: [A, B, C]
 ArrayList after removeAll(): []
@@ -5306,6 +5977,7 @@ ArrayList after removeAll(): []
 ```java
 str.replace('old', 'new')
 ```
+
 返回一个新字符串，其中一个字符被替换另一个字符
 
 例如：
@@ -5318,15 +5990,17 @@ public class Main {
     }
 }
 ```
+
 // 输出: JeveScript
 
 ---
 
 ## `replaceFirst()` 语法:
 
-```
+```java
 str.replaceFirst('regex', 'new')
 ```
+
 将匹配指定正则表达式的第一个出现的子字符串替换为新的子字符串
 
 例如：
@@ -5340,6 +6014,7 @@ public class Main{
     }
 }
 ```
+
 // 输出: This cook is brilliant!
 
 ---
@@ -5349,6 +6024,7 @@ public class Main{
 ```java
 str.replaceAll('regex', 'new')
 ```
+
 将字符串中每个匹配指定正则表达式的子字符串替换为新的子字符串。
 
 例如：
@@ -5362,6 +6038,7 @@ public class Main {
     }   // 将数字替换为空字符串
 }
 ```
+
 // 输出: He sings    songs every   days
 
 ---
@@ -5371,7 +6048,8 @@ public class Main {
 ```java
 requires module
 ```
-"requires" 关键字用于指定对其他模块的依赖。
+
+`requires` 关键字用于指定对其他模块的依赖。
 
 例如：
 
@@ -5380,7 +6058,8 @@ module myModule {
     requires javafx.graphics;
 }
 ```
-// 需要一个名为 javafx.graphics 的标准 Java 模块。
+
+// 需要一个名为 `javafx.graphics` 的标准 Java 模块。
 
 ---
 
@@ -5389,6 +6068,7 @@ module myModule {
 ```java
 collection1.retainAll(collection2);
 ```
+
 保留两个集合中的共同元素
 
 例如：
@@ -5413,6 +6093,7 @@ public class MyClass {
     }
 }
 ```
+
 // 输出:
 ArrayList1: [A, B, C]
 ArrayList2: [B, M, W]
@@ -5425,6 +6106,7 @@ Common Elements: [B]
 ```java
 return value;
 ```
+
 向函数调用者返回一个值
 
 例如：
@@ -5434,11 +6116,13 @@ public class Main {
     static int fun(int num) {
         return 10 + num;
     }
+
     public static void main(String[] args) {
         System.out.println(fun(20));    // fun(20) 是调用者
     }
 }
 ```
+
 // 输出: 30
 
 ---
@@ -5448,7 +6132,8 @@ public class Main {
 ```java
 Math.rint(num)
 ```
-返回一个接近 num 且等于数学整数的值
+
+返回一个接近 `num` 且等于数学整数的值
 
 例如：
 
@@ -5465,7 +6150,8 @@ class Main {
 ```java
 Math.rint(num)
 ```
-返回一个离 num 最近且等于数学整数的值
+
+返回一个离 `num` 最近且等于数学整数的值
 
 例如：
 
@@ -5475,25 +6161,23 @@ class Main {
         System.out.print(Math.rint(num))
 ```
 
-
-
-
-
 ```java
 public static void main(String[] args) {
     // 计算 9 的平方根
     System.out.println(Math.sqrt(9));
 }
 ```
+
 // 输出: 3.0
 
-### startsWith() 语法
+### `startsWith()` 语法
 
 `str.startsWith("characters")`
 
 // 检查字符串是否以指定的字符开头
 
 e.g.
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -5503,7 +6187,12 @@ public class Main {
     }
 }
 ```
+
+
+
+```
 // 输出: true     false
+```
 
 ### static 变量语法
 
@@ -5513,14 +6202,21 @@ public class Main {
 // "static variable" 被称为类变量，可以通过类或对象引用。
 
 e.g.
+
 ```java
 public class StaClass {
+
     static int num=10; // 声明一个静态变量
+
     public static void main (String args[ ]){
+
         System.out.print( StaClass.num ); /* StaClass 直接引用静态变量 "num" */
+
     }
+
 }
 ```
+
 // 输出: 10
 
 ### static 方法语法
@@ -5531,14 +6227,21 @@ public class StaClass {
 // "static method" 被称为类方法，可以通过类或对象进行调用。
 
 e.g.
+
 ```java
 public class StaClass {
+
     static int calculate() { return 10 ;} // 声明一个静态方法
+
     public static void main (String args[ ]){
+
         System.out.print( StaClass.calculate() ); /* StaClass 直接调用静态方法 "calculate()" */
+
     }
+
 }
 ```
+
 // 输出: 10
 
 ### strictfp 语法
@@ -5548,13 +6251,19 @@ public class StaClass {
 // "strictfp" 是一个修饰符，用于限制类或方法中的浮点数计算。它确保跨越不同 Java 平台的所有浮点操作都能提供一致且相同的结果。
 
 e.g.
+
 ```java
 public strictfp class Main {
+
     public static void main(String[] args){
+
         System.out.println(Double.MAX_VALUE);
+
     }
+
 }
 ```
+
 // 输出: 1.7976931348623157E308
 
 ### string 语法
@@ -5564,32 +6273,47 @@ public strictfp class Main {
 // 字符串值必须用双引号包含
 
 e.g.
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         String str = "Hello World";
+
         System.out.println(str);
+
     }
+
 }
 ```
+
 // 输出: Hello World
 
 ### string length 语法
 
 `int len = String.length();`
 
-// String.length() 可以获取字符串的长度。
+// `String.length()` 可以获取字符串的长度。
 
 e.g.
+
 ```java
 public class StrLen{
+
     public static void main (String [ ] args){
+
         String myStr = "Here is a string";
+
         int len = myStr.length(); // 获取字符串长度
+
         System.out.println( "The length of the string is " + len);
+
     }
+
 }
 ```
+
 // 输出: The length of the string is 16
 
 ### string connection 语法
@@ -5598,14 +6322,18 @@ public class StrLen{
 `str = str1.concat(str2);`
 
 // "+" 可以合并两个字符串。
-// concat() 可以连接两个字符串。
+// `concat()` 可以连接两个字符串。
 
 e.g.
+
 ```java
 String s1 = "Hello"; String s2 = "Friends";
+
 System.out.print(s1 + s2); // 连接两个字符串
+
 System.out.print(s1.concat (s2)); // 连接两个字符串
 ```
+
 // 输出: Hello Friends
 // 输出: Hello Friends
 
@@ -5613,17 +6341,22 @@ System.out.print(s1.concat (s2)); // 连接两个字符串
 
 `StringBuffer str = new StringBuffer();`
 
-// 创建一个 StringBuffer 对象。
-// StringBuffer 代表一个值可以动态改变的字符串。
+// 创建一个 `StringBuffer` 对象。
+// `StringBuffer` 代表一个值可以动态改变的字符串。
 
 e.g.
+
 ```java
 StringBuffer str = new StringBuffer ( "abcde" );
+
 str.insert( 2, "1234"); // 输出: abc1234de
+
 str.append( "5678"); // 输出: abc1234de5678
+
 str.reverse(); // 输出: 8765ed4321cba
 ```
-// "StringBuffer str = new StringBuffer ( "abcde" )" 创建了一个对象 "str", 其值为 "abcde"。
+
+// `StringBuffer str = new StringBuffer ( "abcde" )` 创建了一个对象 "str", 其值为 "abcde"。
 
 ### subSequence() 语法
 
@@ -5632,14 +6365,21 @@ str.reverse(); // 输出: 8765ed4321cba
 // 从字符串中返回一个字符序列
 
 e.g.
+
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         String str = "Shell Scripting in 8 Hours";
+
         System.out.println(str.subSequence(6, 15));
+
     }
+
 }
 ```
+
 // 输出: Scripting
 
 ### subString() 语法
@@ -5650,15 +6390,23 @@ public class Main {
 // 返回字符串的子字符串
 
 e.g.
+
 ```java
 public class Main{
+
     public static void main(String args[]){ 
+
         String str="Shell Scripting in 8 Hours"; 
+
         System.out.println(str.substring(6));
+
         System.out.println(str.substring(6, 15));
+
     }
+
 }
 ```
+
 // 输出:
 Scripting in 8 Hours
 Scripting
@@ -5670,15 +6418,23 @@ Scripting
 // 返回 num1 和 num2 的差值
 
 e.g.
+
 ```java
 class Main {
+
     public static void main(String args) {
+
         int x = 100;
+
         int y = 20;
+
         System.out.println(Math.subtractExact(x, y));
+
     }
+
 }
 ```
+
 // 输出: 80
 
 ### super 语法
@@ -5690,59 +6446,87 @@ class Main {
 // "super" 可以引用父类的变量或方法
 
 e.g.
+
 ```java
 class Book { // 父类
+
     String title = "Head Chao's Java";
+
     void title() {
+
         System.out.println(title);
+
     }
+
 }
 
 class Ebook extends Book { // 子类
+
     void title() {
+
         System.out.println(super.title); // 引用父类的变量
+
     }
+
 }
+
 public class Test {
+
     public static void main(String[] args) {
+
         Ebook ebook = new Ebook();
+
         ebook.title(); // 调用子类方法
+
     }
+
 }
 ```
+
 // 输出:
 Head Chao's Java
 
 ### switch / case 语法
 
-`switch (condition) {`
+```java
+switch (condition) {
 case value1: statement; break;
 case value2: statement; break;
 case value3: statement; break;
-}`
+}
+```
 
 // "switch" 语句根据条件执行相应的 "case" 语句
 
 e.g.
+
 ```java
 int weekday = 2;
+
 switch (weekday) {
+
     case 1:
+
         System.out.println("Monday");
+
         break;
+
     case 2:
+
         System.out.println("Tuesday");
+
         break;
+
     case 3:
+
         System.out.println("Wednesday");
+
         break;
+
 }
 ```
+
 // 输出: Tuesday
-
-
-
-
 
 ```java
 // "obj.write();" 将数据写入文件。
@@ -5754,47 +6538,76 @@ switch (weekday) {
 import java.io.*;
 
 public class OutputFile {
+
     public static void main(String[] args) {
+
         char ch;
+
         try {
+
             FileOutputStream obj = new FileOutputStream("D:\\myFile.txt");
+
             System.out.println("请输入一个句子，按 Enter 键结束:");
+
             // 假设我们通过键盘输入了 "PHP in 8 Hours!"
+
             while ((ch = (char)System.in.read()) != '\n') /*从键盘读取输入字符*/
+
                 obj.write(ch); // 将字符写入文件
+
             obj.close();
+
         } catch (FileNotFoundException e) {
+
             System.err.println(e);
+
         } catch (IOException e) {
+
             System.err.println(e);
+
         }
+
     }
+
 }
 ```
+
 // 输出: 请输入一个句子，按 Enter 键结束：
 // 请通过键盘输入 "PHP in 8 Hours!"。
-//检查 D:\盘下的 myFile.txt，你会发现内容是 "PHP in 8 Hours!"。
+//检查 `D:\` 盘下的 `myFile.txt`，你会发现内容是 "PHP in 8 Hours!"。
 
 ---
 
 ### tan() 语法：
 
 `Math.tan(radian)`
+
 // 返回弧角的正切值
 
 例如：
+
 ```java
 class Main {
+
     public static void main(String[] args) {
+
         double degree1 = 30;
+
         double degree2 = 45;
+
         double radian1 = Math.toRadians(degree1);
+
         double radian2 = Math.toRadians(degree2);
+
         System.out.println(Math.tan(radian1));
+
         System.out.println(Math.tan(radian2));
+
     }
+
 }
 ```
+
 // 输出:
 0.5773502691896257
 0.9999999999999999
@@ -5804,21 +6617,33 @@ class Main {
 ### tanh() 语法：
 
 `Math.tanh(radian)`
+
 // 返回弧角的双曲正切值
 
 例如：
+
 ```java
 class Main {
+
     public static void main(String[] args) {
+
         double degree1 = 60.0;   // 度
+
         double degree2 = 0.0;
+
         double radian1 = Math.toRadians(degree1);   // 弧度
+
         double radian2 = Math.toRadians(degree2);
+
         System.out.println(Math.tanh(radian1));
+
         System.out.println(Math.tanh(radian2));
+
     }
+
 }
 ```
+
 // 输出:
 0.7807144353592677
 0.0
@@ -5834,29 +6659,45 @@ class Main {
 通过实现 `ActionListener` 接口，可以为监听器创建一个接口并监听事件。
 
 例如：
+
 ```java
 import javax.swing.*;
+
 import java.awt.event.*;
 
 public class TextFieldFrame extends JFrame implements ActionListener { // 为监听器创建一个接口
+
     public TextFieldFrame() {
+
         JTextField myTextField = new JTextField("输入数据");
+
         myTextField.addActionListener(this); // 添加监听器
+
         add(myTextField);
+
     }
 
     public static void main(String[] args) {
+
         TextFieldFrame myFrame = new TextFieldFrame();
+
         myFrame.setSize(300, 200);
+
         myFrame.setVisible(true);
+
     }
 
     public void actionPerformed(ActionEvent e) {
+
         // 当发生事件时运行 actionPerformed() 
+
         System.out.println("文本字段事件发生!");
+
     }
+
 }
 ```
+
 // 输出: 输入数据      文本字段事件发生！
 
 ---
@@ -5864,21 +6705,33 @@ public class TextFieldFrame extends JFrame implements ActionListener { // 为监
 ### this 语法：
 
 `this.variable / this.method()`
+
 // "this" 代表该类的当前对象
 
 例如：
+
 ```java
 public class Main {
+
     int num;
+
     public Main(int num) { // 构造函数
+
         this.num = num; // "this" 代表 "obj"
+
     }
+
     public static void main(String[] args) {
+
         Main obj = new Main(100);
+
         System.out.println("The num is: " + obj.num);
+
     }
+
 }
 ```
+
 // 输出: The num is: 100
 
 ---
@@ -5886,45 +6739,65 @@ public class Main {
 ### thread isAlive() 语法：
 
 `thread.isAlive()`
+
 // 检查线程是否存活
 
 例如：
+
 ```java
 public class Main extends Thread {
+
     public void run() {
+
         try {
+
             Thread.sleep(1000); // 睡眠 1000 毫秒
+
             System.out.println("睡眠 1 秒后当前线程存活吗?" + Thread.currentThread().isAlive());
+
         } // 检查当前线程是否存活
+
         catch (InterruptedException ie) {
+
         }
+
     }
+
     public static void main(String[] args) {
+
         Main thr = new Main();
+
         System.out.println("启动前线程存活吗? " + thr.isAlive()); // 在 start() 前检查线程是否存活
+
         thr.start();
+
     }
+
 }
 ```
 
----
 
-### thread start 语法：
+
+### thread start 语法
 
 `thread.isAlive()`
-// 在 start() 前检查线程是否存活
+
+// 在`start()`前检查线程是否存活
+
 `thr.start()`
 
- 线程
+线程
 
 ---
 
-### thread extends 语法：
+### thread extends 语法
 
 `thread.isAlive()`
+
 // 检查线程是否存活
 
 例如：
+
 ```java
 public class Main extends Thread {
     public void run() {
@@ -5949,12 +6822,14 @@ public class Main extends Thread {
 
 ---
 
-### throw 语法：
+### throw 语法
 
 `throw new Exception("message")`
+
 // 生成一个错误和错误消息。
 
 例如：
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -5966,14 +6841,18 @@ public class Main {
 
 ---
 
-### throw 语法：
+### throw 语法
 
-`catch(ArithmeticException e){
+```java
+catch(ArithmeticException e){
     throw e; 
-}`
-// 捕获 "try" 块中的错误并抛出异常
+}
+```
+
+// 捕获`try`块中的错误并抛出异常
 
 例如：
+
 ```java
 public class Main {
     static void fun() {
@@ -5992,12 +6871,14 @@ public class Main {
 
 ---
 
-### throws 语法：
+### throws 语法
 
 `type method() throws exception{ }`
+
 // 方法可能会抛出异常
 
 例如：
+
 ```java
 public class Main {
     static void fun() throws ArithmeticException {
@@ -6009,11 +6890,10 @@ public class Main {
 }
 ```
 
-
-
-
+```
 at Main.fun(Main.java:3)
 at Main.main(Main.java:6)
+```
 
 ## 时间语法
 
@@ -6025,7 +6905,6 @@ at Main.main(Main.java:6)
 
 ```java
 import java.time.LocalTime; // 导入 LocalTime 类
-
 public class Main {
     public static void main(String[] args) {
         LocalTime obj = LocalTime.now(); // 创建一个时间对象
@@ -6033,6 +6912,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: 13:56:28.939
 
 ## toArray() 语法
@@ -6058,6 +6938,7 @@ public class MyClass{
     }
 }
 ```
+
 // 输出: 10 20 30
 
 ## toCharArray() 语法
@@ -6079,6 +6960,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: R a y Y a o
 
 ## toDegrees() 语法
@@ -6099,6 +6981,7 @@ class Main {
     }
 }
 ```
+
 // 输出:
 30.0
 60.0
@@ -6121,6 +7004,7 @@ class Main {
     }
 }
 ```
+
 // 输出:
 2000000
 -1000000
@@ -6141,6 +7025,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: shell scripting in 8 hours
 
 ## toRadians() 语法
@@ -6161,13 +7046,14 @@ class Main {
     }
 }
 ```
+
 // 输出:
 0.5235987755982988
 1.0471975511965976
 
 ## toString() 语法
 
-`num.toString()` 或 `Integer.toString(num)`
+`num.toString()`或`Integer.toString(num)`
 
 // 返回表示 Number 对象值值的字符串。
 
@@ -6182,6 +7068,7 @@ public class Main {
     }
 }
 ```
+
 // 输出: 10 20
 
 ## toUpperCase() 语法
@@ -6200,14 +7087,15 @@ public class Main {
     }
 }
 ```
+
 // 输出: SHELL SCRIPTING IN 8 HOURS
 
 ## transient 语法
 
 `transient variable`
 
-// transient 修饰符表示不被序列化的变量。
-// transient 变量不会被写入序列化流。
+//`transient`修饰符表示不被序列化的变量。
+//`transient`变量不会被写入序列化流。
 
 例如
 
@@ -6216,19 +7104,16 @@ import java.io.*;
 class Engineer implements Serializable {
     transient int id; // 不被序列化的
     String name; // 序列化的
-
     Engineer(int id, String name) {
         this.id = id;
         this.name = name;
     }
-
     public static void main(String[] args) throws Exception {
         Engineer eng = new Engineer(101, "Smith");
         FileOutputStream out = new FileOutputStream("eng.ser");
         ObjectOutputStream oos = new ObjectOutputStream(out);
         oos.writeObject(eng);
         oos.close();
-
         FileInputStream in = new FileInputStream("eng.ser");
         ObjectInputStream ois = new ObjectInputStream(in);
         Engineer eng2 = (Engineer) ois.readObject();
@@ -6237,17 +7122,13 @@ class Engineer implements Serializable {
     }
 }
 ```
+
 // 输出:
 0
 Smith
 
-
-
-
-
 ```java
 // "System.in" 用于读取用户输入
-
 // 在创建 `Scanner` 对象之前，你首先需要导入 `java.util.Scanner` 类。
 ```
 
@@ -6255,7 +7136,6 @@ e.g.
 
 ```java
 import java.util.Scanner;
-
 public class Example{
     public static void main(String args[]){
         String myStr;
@@ -6269,6 +7149,7 @@ public class Example{
 ```
 
 Output:
+
 ```
 Please input your name:
 My name is: Ray Yao
@@ -6276,7 +7157,7 @@ My name is: Ray Yao
 
 ---
 
-## valueOf() 语法:
+## valueOf() 语法
 
 `type.valueOf(value)`
 
@@ -6298,18 +7179,19 @@ public class Main {
 ```
 
 Output:
+
 ```
 10    20.0    30.0
 ```
 
 ---
 
-## var 语法:
+## var 语法
 
 `var variable = value;`
 
 // 定义任意数据类型的变量。
-// "var" 可以自动检测数据类型
+//`var`可以自动检测数据类型
 
 e.g.
 
@@ -6327,6 +7209,7 @@ System.out.println(v5);
 ```
 
 Output:
+
 ```
 10
 3.14
@@ -6337,7 +7220,7 @@ true
 
 ---
 
-## 变量语法:
+## 变量语法
 
 `type variableName = value;`
 
@@ -6351,13 +7234,14 @@ System.out.println(book);
 ```
 
 Output:
+
 ```
 Python Syntax Book
 ```
 
 ---
 
-## 变量语法:
+## 变量语法
 
 `type variableName;`
 `variable = value;`
@@ -6373,13 +7257,14 @@ System.out.println(num);
 ```
 
 Output:
+
 ```
 100
 ```
 
 ---
 
-## void 语法:
+## void 语法
 
 `void method(){…}`
 
@@ -6399,13 +7284,14 @@ public class Main {
 ```
 
 Output:
+
 ```
 Scala in 8 Hours
 ```
 
----
 
-## volatile 语法:
+
+## volatile 语法
 
 `volatile type variable = value;`
 
@@ -6417,35 +7303,55 @@ e.g.
 
 ```java
 public class VolatileClass extends Thread{
+
     volatile boolean isRunning = true; // 定义一个 volatile 变量
+
     public void run() {   // 线程
+
         long num=0;
+
         while (isRunning) {
+
             num++;
+
         }
+
         System.out.println("Thread is stopped." + num);
+
     }
+
     public static void main(String[] args) throws InterruptedException{
+
         VolatileClass th = new VolatileClass();
+
         th.start();   // 启动线程
+
         Thread.sleep(1800);
+
         th.isRunning = false;  
+
         // 变量 "isRunning" 可以被其他线程读写
+
         th.join();
+
         System.out.println("Because isRunning is " + th.isRunning);
+
     }
+
 }
 ```
 
 Output:
+
 ```
 Thread is stopped.1652909048
+
 Because isRunning is false
 ```
 
 ---
 
-## while 语法:
+## while 语法
 
 `while (condition){`
 `……`
@@ -6457,20 +7363,25 @@ e.g.
 
 ```java
 int n = 1;
+
 while(n < 6) {
+
     System.out.print(n);
+
     n++;
+
 }
 ```
 
 Output:
+
 ```
 12345
 ```
 
 ---
 
-## 包装类语法:
+## 包装类语法
 
 `WrapperClass variable = value;` // 创建一个包装对象
 
@@ -6481,25 +7392,35 @@ e.g.
 
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         Integer i = 100;       // Integer 是一个包装类
+
         Double d = 100.88;     // Double 是一个包装类
+
         String s = "good";     // String 是一个包装类
+
         System.out.println(i);
+
         System.out.println(d);
+
         System.out.println(s);
+
     }
+
 }
 ```
 
 Output:
+
 ```
 100   100.88   good
 ```
 
 ---
 
-## write() 语法:
+## write() 语法
 
 `FileWriter obj = new FileWriter("myFile.txt");`
 
@@ -6512,22 +7433,33 @@ e.g.
 
 ```java
 import java.io.FileWriter;
+
 import java.io.IOException;
+
 public class Main { 
+
     public static void main(String[] args) { 
+
         try {
+
             FileWriter obj = new FileWriter("myFile.txt");
+
             obj.write("Java");
+
         } catch (IOException e) {
+
             e.printStackTrace();
+
         }
+
     }
+
 }
 ```
 
 ---
 
-## writeObject() 语法:
+## writeObject() 语法
 
 `ObjectOutputStream obj = new ObjectOutputStream(fileOutputStream);`
 
@@ -6535,17 +7467,29 @@ public class Main {
 
 ```java
 import java.io.*;
+
 class MyClass {
+
     public static void main(String[] args) {
+
         try {
+
             FileOutputStream fileOutputStream = new FileOutputStream("file.txt");
+
             ObjectOutputStream obj = new ObjectOutputStream(fileOutputStream);
+
             obj.writeObject(data);
+
             obj.close();
+
         } catch (IOException e) {
+
             e.printStackTrace();
+
         }
+
     }
+
 }
 ```
 
@@ -6554,6 +7498,7 @@ class MyClass {
 # 录
 
 ### Java 关键字图表
+
 | abstract | boolean |
 | byte | case |
 | char | class |
@@ -6570,6 +7515,7 @@ class MyClass {
 | try | void |
 
 ### 数据类型图表
+
 | 数据类型 | 大小 | 描述 |
 | --- | --- | --- |
 | byte | 1 byte | 从 -128 到 127 |
@@ -6582,6 +7528,7 @@ class MyClass {
 | char | 2 bytes | 单字符/字母或 ASCII 码 |
 
 ### 算术运算符图表
+
 | 运算符 | 名称 | 示例 |
 | --- | --- | --- |
 | + | 加法 | x + y |
@@ -6593,6 +7540,7 @@ class MyClass {
 | -- | 递减 | --x 减少 1 |
 
 ### 赋值运算符图表
+
 | 运算符 | 示例 | 等于 |
 | --- | --- | --- |
 | = | x = 8 | x = 8 |
@@ -6608,11 +7556,8 @@ class MyClass {
 | <<= | x <<= 8 | x = x << 8 |
 
 ### 比较运算符图表
+
 |  |
-
-
-
-
 
 # 运算符
 
@@ -6721,15 +7666,23 @@ Java 有四种修饰符来定义成员。`public`、`protected`、`default`、`p
 
 ```java
 abstract class books {
+
     // 定义一个抽象类
+
     abstract int read();
+
     // 定义一个抽象方法
+
 }
 
 class eBooks extends books {
+
     // 扩展父类
+
     int read() { return …; }
+
     // 重写抽象方法
+
 }
 ```
 
@@ -6737,17 +7690,27 @@ class eBooks extends books {
 
 ```java
 interface books {
+
     // 定义一个接口
+
     int title();
+
     // 定义一个空方法
+
 }
 
 class eBooks implement books {
+
     // 实现接口
+
     public int title() {
+
         // 实现空方法
+
         return …,;
+
     }
+
 }
 ```
 
@@ -6813,4 +7776,3 @@ class eBooks implement books {
 | `length()` | 返回文件的字节大小 |
 | `list()` | 返回目录下的文件数组 |
 | `mkdir()` | 创建目录 |
-

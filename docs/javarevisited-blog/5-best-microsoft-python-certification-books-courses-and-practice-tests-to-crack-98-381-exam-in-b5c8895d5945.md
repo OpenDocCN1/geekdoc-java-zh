@@ -1,3 +1,4 @@
+
 # 2023 年 5 本最佳 Python 认证书籍、课程和实践测试
 
 > 原文：<https://medium.com/javarevisited/5-best-microsoft-python-certification-books-courses-and-practice-tests-to-crack-98-381-exam-in-b5c8895d5945?source=collection_archive---------1----------------------->
@@ -8,17 +9,17 @@
 
 大家好，如果你正在准备任何 Python 编程认证，并且正在寻找最好的资源，比如在线课程和教程，那么你来对地方了。
 
-之前我已经分享了 [**最好的 Python 书籍**](https://javinpaul.medium.com/best-python-books-a93d1a0d842d)[**网站**](/javarevisited/10-free-python-tutorials-and-courses-from-google-microsoft-and-coursera-for-beginners-96b9ad20b4e6) ， [**学习 Python 的最好的在线课程**](/javarevisited/10-best-python-3-courses-on-udemy-ddd4e3ec5dbf) 在他的文章中，我将分享最好的在线课程，为这次 Python 认证做准备。
+之前我已经分享了[**最好的 Python 书籍**](https://javinpaul.medium.com/best-python-books-a93d1a0d842d)、[**网站**](/javarevisited/10-free-python-tutorials-and-courses-from-google-microsoft-and-coursera-for-beginners-96b9ad20b4e6)、[**学习 Python 的最好的在线课程**](/javarevisited/10-best-python-3-courses-on-udemy-ddd4e3ec5dbf)。在他的文章中，我将分享最好的在线课程，为这次 Python 认证做准备。
 
 比方说，你想在 IT 领域获得职业生涯，你想知道在这种情况下你应该做什么，我强烈建议你需要有公认的认证，无论你想成为一名 web 开发人员还是任何语言的程序员，python 绝对是其中之一。
 
 [Python 在线认证](https://javarevisited.blogspot.com/2020/02/10-best-coursera-courses--for-python.html)不多。其中一些教你基础知识，另一些让你深入了解更高级的概念。我真心推荐你参加的最好的认证之一是 PCAP 认证的 Python 编程助理**考试，并在 2023 年成为认证的 Python 开发者。**
 
-这个 python 认证是由 PCAP 为真正的初学者用户提供的，教学大纲包含这种语言的基础知识，如数据类型和运算符以及输入输出和错误处理，它不会教你 [Python](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3) ，而是测试你对这种语言的技能和知识。
+这个 python 认证是由 PCAP 为真正的初学者用户提供的，教学大纲包含这种语言的基础知识，如数据类型和运算符以及输入输出和错误处理，它不会教你 [Python](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3)，而是测试你对这种语言的技能和知识。
 
-这篇文章将向您展示深入学习 python 的 [*最佳在线课程*](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) 这样您就可以自信地通过考试，如果您喜欢阅读而不是看视频，还可以阅读一些在线书籍。
+这篇文章将向您展示深入学习 python 的[*最佳在线课程*](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html)，这样您就可以自信地通过考试，如果您喜欢阅读而不是看视频，还可以阅读一些在线书籍。
 
-<https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html>  
+<https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html>
 
 # 为 Python 编程考试 PCAP 认证助理准备的 5 本最佳 Python 课程和书籍
 
@@ -42,17 +43,17 @@
 
 这本书教你计算机历史和从可变数据类型转移到 python，if 循环语句和更多的基础知识，然后转移到使用 python 与文件交互和创建一些项目，包括从 web 抓取数据以及与数据库交互等等。
 
-如果你想加入课程，这里有 Coursera 上为大家提供的 [**加入 Python 的链接。这是一门很好的课程，可以深入学习 Python，也可以为 Python 认证做准备。**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)
+如果你想加入课程，这里有 Coursera 上为大家提供的[**加入 Python 的链接。这是一门很好的课程，可以深入学习 Python，也可以为 Python 认证做准备。**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)
 
 [![](img/249a3eb1b395a5f79993a8fb3c51a5bb.png)](https://www.amazon.com/Python-Everybody-Exploring-Data/dp/1530051126?tag=javamysqlanta-20)
 
-顺便说一句，如果你计划参加多个 Coursera 课程或专业，那么考虑参加 [**Coursera Plus 订阅**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，它可以让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。它每月花费大约 59 美元，但很值得，因为你可以访问 7000 多门课程和项目，还可以获得无限的证书。
+顺便说一句，如果你计划参加多个 Coursera 课程或专业，那么考虑参加[**Coursera Plus 订阅**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)，它可以让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。它每月花费大约 59 美元，但很值得，因为你可以访问 7000 多门课程和项目，还可以获得无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 3.[Python MTA 98–381 考试](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpython-mta-98-381-exam-complete-preparation-course-practice-tests-tips%2F)
 
-不需要任何之前的 python 语言知识，你就可以参加这个 Udemy 课程，开始这种神话般的语言的职业生涯，你只需要两样东西:一台联网的计算机和学习 python 的热情。
+不需要任何之前的 python 语言知识，你就可以参加这个 Udemy 课程，开始这种神话般的语言的职业生涯，你只需要两样东西：一台联网的计算机和学习 python 的热情。
 
 通过首先向您介绍变量以及数据类型和循环来学习 python 的基础知识，因此这些知识将在整个课程中使用。
 
@@ -72,7 +73,7 @@
 
 [![](img/2a3e7a914322c407d6c322709bffe900.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-python-certification-exam-98-381-practice-tests%2F)
 
-## 5.[从 Python 开始](https://www.amazon.com/Starting-Out-Python-Tony-Gaddis/dp/0134444329/?tag=javamysqlanta-20)[图书]
+## 5.[从 Python 开始](https://www.amazon.com/Starting-Out-Python-Tony-Gaddis/dp/0134444329/?tag=javamysqlanta-20)【图书】
 
 转到最后一个建议，这是另一本学习 python 的好书，不需要任何入门经验，并且为您提供了这种编程语言的基础的学生友好的介绍等等。这本书首先向初学者介绍如何像任何 python 书籍或课程一样使用变量循环 if 和 else 语句编写 python 代码，然后转向一些高级主题，如类和函数、面向对象编程等等。
 
@@ -82,7 +83,7 @@
 
 这些课程和书籍是我推荐给那些想获得 PCAP 认证的 Python 编程助理证书并在该领域获得职业生涯的人的一些最佳资源，现在你已经向实现这一目标迈出了一步。
 
-您可能喜欢的其他 **Python 文章和教程**:
+您可能喜欢的其他 **Python 文章和教程**：
 
 *   [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
 *   [5 个免费学习 Python 编码的网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
@@ -101,8 +102,12 @@
 *   [深入学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
 *   [为什么 Python 是数据科学的最佳编程语言](https://javarevisited.blogspot.com/2020/05/why-python-is-best-programming-language.html)
 
-感谢您阅读本文。如果您发现这些 ***最佳 Python 认证课程*** 有用，那么请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-如果你是 Python 新手，想从头开始学习 Python 编程，但正在寻找免费课程，那么不要担心。Udemy 上有很多免费的 Python 课程，其中很多你可以在上面的文章中找到。如果你赶时间，我建议从[**Python 编程入门**](http://bit.ly/2D5vvnV) 课程开始，它完全免费，你需要做的就是创建一个 Udemy 账户来注册这门课程。
 
-</swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf> 
+感谢您阅读本文。如果您发现这些最佳 Python 认证课程有用，那么请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。
+
+如果你是 Python 新手，想从头开始学习 Python 编程，但正在寻找免费课程，那么不要担心。Udemy 上有很多免费的 Python 课程，其中很多你可以在上面的文章中找到。如果你赶时间，我建议从[Python 编程入门](http://bit.ly/2D5vvnV)课程开始，它完全免费，你需要做的就是创建一个 Udemy 账户来注册这门课程。
+
+```
+</swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf>
+```

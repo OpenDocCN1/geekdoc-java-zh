@@ -1,3 +1,4 @@
+
 # 从 JavaScript 代码调用 Applet 方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/invokingAppletMethodsFromJavaScript.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/invokingAppletMethodsFromJavaScript.html)
@@ -5,9 +6,7 @@
 网页上的 JavaScript 代码可以与嵌入在页面上的 Java applet 进行交互。JavaScript 代码可以执行以下操作：
 
 +   调用 Java 对象上的方法
-
 +   获取并设置 Java 对象中的字段
-
 +   获取和设置 Java 数组元素
 
 [LiveConnect 规范](http://www.oracle.com/technetwork/java/javase/plugin2-142482.html#LIVECONNECT)描述了 JavaScript 代码如何与 Java 代码通信的详细信息。
@@ -18,10 +17,9 @@
 
 ## Math Applet 和相关类
 
-这是``MathApplet``类的源代码。`getCalculator`方法返回`Calculator`辅助类的引用。
+这是`MathApplet`类的源代码。`getCalculator`方法返回`Calculator`辅助类的引用。
 
 ```java
-
 package jstojava;
 import java.applet.Applet;
 
@@ -45,13 +43,11 @@ public class MathApplet extends Applet{
         System.out.println(text);
     }
 }
-
 ```
 
-``Calculator``类中的方法允许用户设置两个值，相加数字，并在范围内检索数字。
+`Calculator`类中的方法允许用户设置两个值，相加数字，并在范围内检索数字。
 
 ```java
-
 package jstojava;
 
 public class Calculator {
@@ -78,13 +74,11 @@ public class Calculator {
         return range;
     }
 }
-
 ```
 
-``DateHelper``类的`getDate`方法返回当前日期。
+`DateHelper`类的`getDate`方法返回当前日期。
 
 ```java
-
 package jstojava;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -98,12 +92,11 @@ public class DateHelper {
     }
 
 }
-
 ```
 
 ## 部署 Applet
 
-在网页中部署 applet，``AppletPage.html``。部署 applet 时，请确保为 applet 指定一个 id。稍后将使用 applet id 获取对 applet 对象的引用。
+在网页中部署 applet，`AppletPage.html`。部署 applet 时，请确保为 applet 指定一个 id。稍后将使用 applet id 获取对 applet 对象的引用。
 
 ```java
 <script src=
@@ -116,10 +109,9 @@ public class DateHelper {
     var parameters = { jnlp_href: 'math_applet.jnlp'} ;
     deployJava.runApplet(attributes, parameters, '1.6');
 </script>
-
 ```
 
-接下来，在``AppletPage.html``网页中添加一些 JavaScript 代码。JavaScript 代码可以使用 applet id 作为对 applet 对象的引用，并调用 applet 的方法。在下面的示例中，JavaScript 代码设置了 applet 的公共成员变量，调用了公共方法，并检索了由 applet 引用的另一个对象（`Calculator`）的引用。JavaScript 代码能够处理基本类型、数组和对象返回类型。
+接下来，在`AppletPage.html`网页中添加一些 JavaScript 代码。JavaScript 代码可以使用 applet id 作为对 applet 对象的引用，并调用 applet 的方法。在下面的示例中，JavaScript 代码设置了 applet 的公共成员变量，调用了公共方法，并检索了由 applet 引用的另一个对象（`Calculator`）的引用。JavaScript 代码能够处理基本类型、数组和对象返回类型。
 
 ```java
 <script language="javascript">
@@ -153,7 +145,6 @@ public class DateHelper {
         var dateStr = dateHelper.getDate();
         <!-- ... -->
 </script>
-
 ```
 
 当数字 a = 0 和 b = 5 时，Math applet 在网页上显示以下结果：
@@ -170,22 +161,13 @@ Sum: 5
 Numbers in range array: [ 0, 1, 2, 3, 4, 5 ]
 
 Today's date is: 5/28/13 4:12 PM //*shows current date*
-
 ```
 
-在浏览器中打开``AppletPage.html``以查看数学小程序。
-
-* * *
+在浏览器中打开`AppletPage.html`以查看数学小程序。
 
 **注意：** 如果您看不到小程序运行，请至少安装[Java SE 开发工具包（JDK）6 更新 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
 
-* * *
-
-* * *
-
 **注意：** 如果您看不到示例运行，请确保在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
-
-* * *
 
 检查由 JavaScript 代码调用的小程序所受到的安全限制。
 

@@ -1,3 +1,4 @@
+
 # 异常的优点
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/advantages.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/advantages.html)
@@ -16,20 +17,15 @@ readFile {
     read the file into memory;
     close the file;*
 }
-
 ```
 
 乍一看，这个函数似乎足够简单，但它忽略了所有以下潜在的错误。
 
-+   如果文件无法打开会发生什么？
-
-+   如果无法确定文件的长度会发生什么？
-
-+   如果无法分配足够的内存会发生什么？
-
-+   如果读取失败会发生什么？
-
-+   如果文件无法关闭会发生什么？
++ 如果文件无法打开会发生什么？
++ 如果无法确定文件的长度会发生什么？
++ 如果无法分配足够的内存会发生什么？
++ 如果读取失败会发生什么？
++ 如果文件无法关闭会发生什么？
 
 要处理这种情况，`readFile` 函数必须有更多的代码来进行错误检测、报告和处理。以下是该函数可能的示例。
 
@@ -64,7 +60,6 @@ errorCodeType readFile {
     }
     return errorCode;
 }
-
 ```
 
 这里有太多的错误检测、报告和返回，原始的七行代码在混乱中丢失了。更糟糕的是，代码的逻辑流也丢失了，因此很难判断代码是否在做正确的事情：如果函数无法分配足够的内存，文件是否真的被关闭了？当您在编写三个月后修改方法时，确保代码继续执行正确的事情更加困难。许多程序员通过简单地忽略它来解决这个问题——当他们的程序崩溃时会报告错误。
@@ -91,14 +86,13 @@ errorCodeType readFile {
         *doSomething;*
     }
 }
-
 ```
 
 请注意，异常并不免除您进行错误检测、报告和处理的工作，但它们确实帮助您更有效地组织工作。
 
 ## 优点 2：将错误传播到调用堆栈上
 
-异常的第二个优点是能够将错误报告传播到方法的调用堆栈上。假设`readFile`方法是主程序进行的一系列嵌套方法调用中的第四个方法：`method1`调用`method2`，`method2`调用`method3`，最终调用`readFile`。 
+异常的第二个优点是能够将错误报告传播到方法的调用堆栈上。假设`readFile`方法是主程序进行的一系列嵌套方法调用中的第四个方法：`method1`调用`method2`，`method2`调用`method3`，最终调用`readFile`。
 
 ```java
 method1 {
@@ -112,7 +106,6 @@ method2 {
 method3 {
     *call readFile;*
 }
-
 ```
 
 假设`method1`是唯一对`readFile`中可能发生的错误感兴趣的方法。传统的错误通知技术会强制`method2`和`method3`将`readFile`返回的错误代码传播到调用堆栈上，直到错误代码最终到达`method1`——唯一对它们感兴趣的方法。
@@ -144,7 +137,6 @@ errorCodeType method3 {
     else
         *proceed;*
 }
-
 ```
 
 请记住，Java 运行时环境会逆向搜索调用堆栈，以找到任何对处理特定异常感兴趣的方法。一个方法可以规避其内部抛出的任何异常，从而允许调用堆栈中更高层的方法捕获它。因此，只有关心错误的方法才需要担心检测错误。
@@ -165,14 +157,13 @@ method2 throws *exception* {
 method3 throws exception {
     *call readFile;*
 }
-
 ```
 
 然而，正如伪代码所示，规避异常需要中间方法付出一些努力。在方法内部可能抛出的任何已检查异常必须在其`throws`子句中指定。
 
 ## 优势 3：分组和区分错误类型
 
-因为程序中抛出的所有异常都是对象，异常的分组或分类是类层次结构的自然结果。Java 平台中一组相关的异常类的示例是`java.io`中定义的那些  `IOException`及其后代。`IOException`是最一般的，表示在执行 I/O 时可能发生的任何类型的错误。其后代表示更具体的错误。例如，`FileNotFoundException`表示无法在磁盘上找到文件。
+因为程序中抛出的所有异常都是对象，异常的分组或分类是类层次结构的自然结果。Java 平台中一组相关的异常类的示例是`java.io`中定义的那些 — `IOException`及其后代。`IOException`是最一般的，表示在执行 I/O 时可能发生的任何类型的错误。其后代表示更具体的错误。例如，`FileNotFoundException`表示无法在磁盘上找到文件。
 
 一个方法可以编写特定的处理程序，可以处理非常具体的异常。`FileNotFoundException`类没有后代，因此以下处理程序只能处理一种类型的异常。
 
@@ -180,7 +171,6 @@ method3 throws exception {
 catch (FileNotFoundException e) {
     ...
 }
-
 ```
 
 一个方法可以通过在`catch`语句中指定任何异常的超类来基于其组或一般类型捕获异常。例如，为了捕获所有 I/O 异常，无论其具体类型如何，异常处理程序指定一个`IOException`参数。
@@ -189,7 +179,6 @@ catch (FileNotFoundException e) {
 catch (IOException e) {
     ...
 }
-
 ```
 
 这个处理程序将能够捕获所有 I/O 异常，包括`FileNotFoundException`、`EOFException`等。您可以通过查询传递给异常处理程序的参数来找到发生的详细信息。例如，使用以下内容打印堆栈跟踪。
@@ -201,7 +190,6 @@ catch (IOException e) {
     // Send trace to stdout.
     e.printStackTrace(System.out);
 }
-
 ```
 
 你甚至可以设置一个异常处理程序，用于处理这里的任何`Exception`。
@@ -211,7 +199,6 @@ catch (IOException e) {
 catch (Exception e) {
     ...
 }
-
 ```
 
 `Exception`类接近`Throwable`类层次结构的顶部。因此，此处理程序将捕获许多其他异常，除了处理程序打算捕获的异常之外。如果您只希望程序执行的操作是打印出用户的错误消息，然后退出，您可能希望以这种方式处理异常。

@@ -1,3 +1,4 @@
+
 # 绑定属性和状态方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/concurrency/bound.html`](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/bound.html)
@@ -10,7 +11,7 @@
 
 `progress`绑定变量是一个`int`值，范围从 0 到 100。它有一个预定义的设置方法（受保护的[`SwingWorker.setProgress`](https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html#setProgress--)）和一个预定义的获取方法（公共[`SwingWorker.getProgress`](https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html#getProgress-int-)）。
 
-``ProgressBarDemo``示例使用`progress`从后台任务更新`ProgressBar`控件。有关此示例的详细讨论，请参阅如何使用进度条中的使用 Swing 组件。
+`ProgressBarDemo`示例使用`progress`从后台任务更新`ProgressBar`控件。有关此示例的详细讨论，请参阅如何使用进度条中的使用 Swing 组件。
 
 ## `state`绑定变量
 
@@ -24,7 +25,7 @@
 
 从`doInBackground`调用之前的短暂时期到`done`调用之前的状态。
 
-DONE
+`DONE`
 
 对象存在期间的状态。
 

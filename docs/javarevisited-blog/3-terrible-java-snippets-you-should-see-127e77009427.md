@@ -1,3 +1,4 @@
+
 # 您应该看到的 3 个可怕的 Java 片段
 
 > 原文：<https://medium.com/javarevisited/3-terrible-java-snippets-you-should-see-127e77009427?source=collection_archive---------1----------------------->

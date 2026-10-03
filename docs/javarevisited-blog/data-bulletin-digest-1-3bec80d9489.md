@@ -1,3 +1,4 @@
+
 # 数据工程通报—文摘#1
 
 > 原文：<https://medium.com/javarevisited/data-bulletin-digest-1-3bec80d9489?source=collection_archive---------3----------------------->
@@ -8,4 +9,4 @@
 
 ## 介绍
 
-*   作为一名[数据工程师，](https://javarevisited.blogspot.com/2022/03/top-5-ibm-certifications-from-coursera.html)我总是很好奇别人在这个领域做什么。了解其他公司情况的最好方法是阅读他们的…
+作为一名[数据工程师](https://javarevisited.blogspot.com/2022/03/top-5-ibm-certifications-from-coursera.html)，我总是很好奇别人在这个领域做什么。了解其他公司情况的最好方法是阅读他们的…

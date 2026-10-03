@@ -1,16 +1,13 @@
+
 # 如何使用流式布局
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/layout/flow.html`](https://docs.oracle.com/javase/tutorial/uiswing/layout/flow.html)
 
-* * *
-
 **注意：** 本课程涵盖了手动编写布局代码，这可能具有挑战性。如果您不想学习布局管理的所有细节，您可能更喜欢使用`GroupLayout`布局管理器结合构建工具来布局您的 GUI。其中一个构建工具是 NetBeans IDE。否则，如果您想手动编码而不想使用`GroupLayout`，那么推荐使用`GridBagLayout`作为下一个最灵活和强大的布局管理器。
-
-* * *
 
 如果您有兴趣使用 JavaFX 创建 GUI，请参阅[JavaFX 中的布局](https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html)。
 
-[`FlowLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/FlowLayout.html)类提供了一个非常简单的布局管理器，默认情况下由`JPanel`对象使用。以下图表示使用流式布局的应用程序的快照：
+`FlowLayout`类提供了一个非常简单的布局管理器，默认情况下由`JPanel`对象使用。以下图表示使用流式布局的应用程序的快照：
 
 ![FlowLayoutDemo 的快照](img/73e94a575150a0b87ac77b5f9a9c0c76.png)
 
@@ -20,7 +17,7 @@
 
 此演示的完整代码位于`FlowLayoutDemo.java`文件中。
 
-`FlowLayout` 类将组件放在一行中，大小为它们的首选大小。如果容器中的水平空间太小，无法将所有组件放在一行中，`FlowLayout` 类将使用多行。如果容器比一行组件所需的宽度更宽，则默认情况下，该行在容器内水平居中。要指定行是左对齐还是右对齐，请使用带有对齐参数的`FlowLayout`构造函数。`FlowLayout`类的另一个构造函数指定在组件周围放置多少垂直或水平填充。
+`FlowLayout`类将组件放在一行中，大小为它们的首选大小。如果容器中的水平空间太小，无法将所有组件放在一行中，`FlowLayout`类将使用多行。如果容器比一行组件所需的宽度更宽，则默认情况下，该行在容器内水平居中。要指定行是左对齐还是右对齐，请使用带有对齐参数的`FlowLayout`构造函数。`FlowLayout`类的另一个构造函数指定在组件周围放置多少垂直或水平填充。
 
 下面的代码片段创建了一个`FlowLayout`对象和它管理的组件。
 
@@ -36,7 +33,6 @@ FlowLayout experimentLayout = new FlowLayout();
     compsToExperiment.add(new JButton("Button 3"));
     compsToExperiment.add(new JButton("Long-Named Button 4"));
     compsToExperiment.add(new JButton("5"));
-
 ```
 
 选择“从左到右”或“从右到左”选项，并单击“应用方向”按钮以设置组件的方向。以下代码片段将“从左到右”组件方向应用于`experimentLayout`。
@@ -44,7 +40,6 @@ FlowLayout experimentLayout = new FlowLayout();
 ```java
         compsToExperiment.setComponentOrientation(
                 ComponentOrientation.LEFT_TO_RIGHT);
-
 ```
 
 ## 流式布局 API

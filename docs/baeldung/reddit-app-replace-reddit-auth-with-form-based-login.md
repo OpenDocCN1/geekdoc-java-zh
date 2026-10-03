@@ -1,20 +1,21 @@
+
 # 在 Reddit 应用程序中将注册与登录分离
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-app-replace-reddit-auth-with-form-based-login>
+> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-app-replace-reddit-auth-with-form-based-login>  
 
-## 1。概述
+## 1. 概述
 
-在本教程中—**我们将用一个更简单的基于表单的登录**来取代 Reddit 支持的 OAuth2 认证过程。
+在本教程中，**我们将用一个更简单的基于表单的登录**来取代 Reddit 支持的 OAuth2 认证过程。
 
-在我们登录之后，我们仍然能够将 Reddit 连接到应用程序,我们只是不使用 Reddit 来驱动我们的主登录流程。
+在我们登录之后，我们仍然能够将 Reddit 连接到应用程序，我们只是不使用 Reddit 来驱动我们的主登录流程。
 
-## 2。基本用户注册
+## 2. 基本用户注册
 
 首先，让我们替换旧的认证流程。
 
-### 2.1。`User`实体
+### 2.1. `User`实体
 
-我们将对用户实体进行一些更改:使`username`唯一，添加一个`password`字段(临时) :
+我们将对用户实体进行一些更改：使`username`唯一，添加一个`password`字段（临时）：
 
 ```java
 @Entity
@@ -30,9 +31,9 @@ public class User {
 }
 ```
 
-### 2.2。注册新用户
+### 2.2. 注册新用户
 
-接下来，让我们看看如何在后端注册新用户:
+接下来，让我们看看如何在后端注册新用户：
 
 ```java
 @Controller
@@ -56,7 +57,7 @@ public class UserController {
 
 显然，这对于用户来说是一个基本的创建操作——没有多余的东西。
 
-下面是服务层中的**实际实现:**
+下面是服务层中的**实际实现**：
 
 ```java
 @Service
@@ -90,9 +91,9 @@ public class UserService {
 }
 ```
 
-### 2.3。异常处理
+### 2.3. 异常处理
 
-还有简单的`UserAlreadyExistsException`:
+还有简单的`UserAlreadyExistsException`：
 
 ```java
 public class UsernameAlreadyExistsException extends RuntimeException {
@@ -106,7 +107,7 @@ public class UsernameAlreadyExistsException extends RuntimeException {
 }
 ```
 
-该异常在应用程序的主异常处理程序**中处理:**
+该异常在应用程序的主异常处理程序中**处理**：
 
 ```java
 @ExceptionHandler({ UsernameAlreadyExistsException.class })
@@ -119,9 +120,9 @@ public ResponseEntity<Object>
 }
 ```
 
-### 2.4。一个简单的注册页面
+### 2.4. 一个简单的注册页面
 
-最后，一个简单的前端`signup.html`:
+最后，一个简单的前端`signup.html`：
 
 ```java
 <form>
@@ -146,9 +147,9 @@ function register(){
 
 值得一提的是，这并不是一个完全成熟的注册流程，只是一个非常快速的流程。要了解完整的注册流程，您可以在 Baeldung 查看主注册系列。
 
-## 3。新登录页面
+## 3. 新登录页面
 
-这是我们的**新的简单登录页面**:
+这是我们的**新的简单登录页面**：
 
 ```java
 <div th:if="${param.containsKey('error')}">
@@ -162,9 +163,9 @@ Invalid username or password
 <a href="signup">Sign up</a>
 ```
 
-## 4。安全配置
+## 4. 安全配置
 
-现在，让我们来看看**新的安全配置**:
+现在，让我们来看看**新的安全配置**：
 
 ```java
 @Configuration
@@ -203,7 +204,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 大多数事情都很简单，所以我们不会在这里详细讨论。
 
-这里有一个习俗:
+这里有一个习俗：
 
 ```java
 @Service
@@ -223,7 +224,7 @@ public class MyUserDetailsService implements UserDetailsService {
 }
 ```
 
-这是我们的习俗`Principal``UserPrincipal”`，它实现了`UserDetails`:
+这是我们的习俗`Principal`“`UserPrincipal`”，它实现了`UserDetails`：
 
 ```java
 public class UserPrincipal implements UserDetails {
@@ -272,13 +273,13 @@ public class UserPrincipal implements UserDetails {
 }
 ```
 
-注意:我们使用我们的自定义`Principal` " `UserPrincipal”`而不是 Spring 安全默认`User`。
+注意：我们使用我们的自定义`Principal`“`UserPrincipal`”而不是 Spring 安全默认`User`。
 
-## 5。认证 Reddit
+## 5. 认证 Reddit
 
-既然我们的认证流程不再依赖 Reddit，我们需要**让用户在登录后将他们的账户连接到 Reddit** 。
+既然我们的认证流程不再依赖 Reddit，我们需要**让用户在登录后将他们的账户连接到 Reddit**。
 
-首先，我们需要修改旧的 Reddit 登录逻辑:
+首先，我们需要修改旧的 Reddit 登录逻辑：
 
 ```java
 @RequestMapping("/redditLogin")
@@ -289,7 +290,7 @@ public String redditLogin() {
 }
 ```
 
-以及实际的实现——`connectReddit()`方法:
+以及实际的实现——`connectReddit()`方法：
 
 ```java
 @Override
@@ -307,7 +308,7 @@ public void connectReddit(boolean needsCaptcha, OAuth2AccessToken token) {
 
 注意现在如何使用`redditLogin()`逻辑通过获取用户的`AccessToken`将我们系统中的用户帐户与他的 Reddit 帐户连接起来。
 
-至于前端——这很简单:
+至于前端——这很简单：
 
 ```java
 <h1>Welcome, 
@@ -318,7 +319,7 @@ public void connectReddit(boolean needsCaptcha, OAuth2AccessToken token) {
 </a>
 ```
 
-我们还需要确保用户在尝试提交帖子之前确实将他们的帐户连接到 Reddit:
+我们还需要确保用户在尝试提交帖子之前确实将他们的帐户连接到 Reddit：
 
 ```java
 @RequestMapping("/post")
@@ -331,7 +332,7 @@ public String showSubmissionForm(Model model) {
 }
 ```
 
-## 6。结论
+## 6. 结论
 
 小小的 reddit 应用肯定是在前进的。
 

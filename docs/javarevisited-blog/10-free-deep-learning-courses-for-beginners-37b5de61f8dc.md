@@ -1,3 +1,4 @@
+
 # 2023 年面向初学者的 10 门免费深度学习课程
 
 > 原文：<https://medium.com/javarevisited/10-free-deep-learning-courses-for-beginners-37b5de61f8dc?source=collection_archive---------1----------------------->
@@ -8,9 +9,9 @@
 
 image_credit — udemy
 
-大家好，如果你对学习深度学习和如何构建人工智能感兴趣，并在寻找免费的在线资源，那么你来对地方了。早些时候，我已经分享了 [**免费的机器学习**](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816) 和 [**免费的数据科学课程**](/javarevisited/10-free-data-science-online-courses-for-beginners-a5fe78c2cb7b) 而在这篇文章中，我将为初学者分享免费的人工智能和深度学习课程。
+大家好，如果你对学习深度学习和如何构建人工智能感兴趣，并在寻找免费的在线资源，那么你来对地方了。早些时候，我已经分享了[免费的机器学习](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816)和[免费的数据科学课程](/javarevisited/10-free-data-science-online-courses-for-beginners-a5fe78c2cb7b)，而在这篇文章中，我将为初学者分享免费的人工智能和深度学习课程。
 
-这些免费课程由 [Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F) 、 [Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F) 、 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=) 和 [Pluralsight](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com) 创建。由专家创造，被成千上万想学习人工智能的人所信任。
+这些免费课程由[Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F)、[Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F)、[edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=)和[Pluralsight](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com)创建。由专家创造，被成千上万想学习人工智能的人所信任。
 
 点击这篇文章链接，说明你非常有兴趣了解和学习更多关于深度学习的知识，但是等等！学习[深度学习和神经网络](/javarevisited/top-5-advanced-deep-learning-and-neural-network-courses-to-learn-in-2020-a273f5eddca5?source=---------16----------------------------)不是那么容易，永远也不会。
 
@@ -20,13 +21,13 @@ image_credit — udemy
 
 最棒的是，有几十种人工智能和深度学习课程，但在本文中，我将帮助你找到最好的免费课程，以开始你在这个行业的职业生涯，并获得人工智能、深度学习和神经网络的良好背景。
 
-顺便说一下，如果你不介意花几块钱学习像深度学习和人工智能这样有价值的技能，那么我也推荐你在 Udemy 上看看基里尔·叶列缅科和他的团队的 [**深度学习 A-Z:动手操作人工神经网络**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeplearning%2F) 。这个 22.5 小时的课程是学习深度学习的最佳资源之一。
+顺便说一下，如果你不介意花几块钱学习像深度学习和人工智能这样有价值的技能，那么我也推荐你在 Udemy 上看看基里尔·叶列缅科和他的团队的[深度学习 A-Z:动手操作人工神经网络](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeplearning%2F)。这个 22.5 小时的课程是学习深度学习的最佳资源之一。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeplearning%2F>  
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeplearning%2F>
 
 # 初学者学习人工智能和深度学习的 10 门免费课程
 
-为了不浪费你更多的时间，这里是我为初学者提供的学习人工智能和深度学习的免费在线课程列表，这些课程来自热门的在线学习网站，如 [Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F) 、 [Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F) 、 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=) 和 [Pluralsight](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com) 。
+为了不浪费你更多的时间，这里是我为初学者提供的学习人工智能和深度学习的免费在线课程列表，这些课程来自热门的在线学习网站，如[Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F)、[Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F)、[edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=)和[Pluralsight](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com)。
 
 正如我所说的，这些免费课程是由专家创建的，成千上万的开发者已经加入了这些课程。他们也完全在线，你可以从家里或办公室加入他们。
 
@@ -44,11 +45,11 @@ image_credit — udemy
 
 [![](img/2a37f64099cc55df26234f617df6c6b5.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fbasics-of-deep-learning%2F)
 
-## 3.[神经网络和深度学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fneural-networks-deep-learning)吴恩达【课程教程】
+## 2.[神经网络和深度学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fneural-networks-deep-learning)吴恩达【课程教程】
 
 这可能是通过 Coursera 平台提供的最著名和最成功的学习深度学习的课程。这门课程有超过 900，000 名学生注册，这太疯狂了，32%的人说他们在完成这门课程后开始了新的职业生涯。
 
-这门课程是吴恩达和他的 DeepLearning.ai 公司在 Coursera 上打造的 [**深度学习专业化**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdeep-learning) 的一部分。它为您提供了一条获得知识和技能的途径，以将机器学习应用到您的工作中，提升您的技术职业生涯，并在人工智能的世界中迈出决定性的一步。
+这门课程是吴恩达和他的 DeepLearning.ai 公司在 Coursera 上打造的[深度学习专业化](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdeep-learning)的一部分。它为您提供了一条获得知识和技能的途径，以将机器学习应用到您的工作中，提升您的技术职业生涯，并在人工智能的世界中迈出决定性的一步。
 
 本课程从创建简单的神经网络以及理解这些神经网络中的关键参数开始。之后，您将尝试实现其他算法，如超参数调整，以优化神经网络性能，以及如何诊断机器学习系统中的错误。
 
@@ -58,9 +59,9 @@ image_credit — udemy
 
 [![](img/843f272862c2e3c02f04da8b71bc0901.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fneural-networks-deep-learning)
 
-但是为什么当参加审计专业的免费课程时，你将不会得到任何证书。如果你参加这个课程是为了获得 Coursera 证书，那么你需要注册专业化或者参加一个订阅计划，比如 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，它提供超过 7000 个 Coursera 课程、项目和专业证书的无限制访问。
+但是为什么当参加审计专业的免费课程时，你将不会得到任何证书。如果你参加这个课程是为了获得 Coursera 证书，那么你需要注册专业化或者参加一个订阅计划，比如[Coursera Plus](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)，它提供超过 7000 个 Coursera 课程、项目和专业证书的无限制访问。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 3.[人工智能标记语言【免费 Udemy 课程】](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-markup-language%2F)
 
@@ -100,9 +101,9 @@ image_credit — udemy
 
 [![](img/5b7176c024ce71eb5fe02906b186d11f.png)](https://www.pluralsight.com/courses/artificial-intelligence-big-picture)
 
-虽然这门课程并不完全免费，但你可以通过使用 Pluralsight 的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看，它允许你观看 200 分钟的任何课程。Pluralsight 本月还免费提供他们所有的 7000 多门课程。
+虽然这门课程并不完全免费，但你可以通过使用 Pluralsight 的[10 天免费试用](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)免费观看，它允许你观看 200 分钟的任何课程。Pluralsight 本月还免费提供他们所有的 7000 多门课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 6.[应用深度学习:构建聊天机器人——理论，应用](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fapplied-deep-learning-build-a-chatbot-theory-application%2F)
 
@@ -110,24 +111,26 @@ image_credit — udemy
 
 在这个免费的深度学习课程中，您将学到以下内容:
 
-1.  了解序列建模背后的理论
-2.  了解聊天机器人的工作原理
-3.  了解 rnn 和 LSTMs 的工作原理
-4.  从头开始学习 PyTorch
-5.  如何在 [PyTorch](/javarevisited/5-best-pytorch-and-keras-courses-for-deep-learning-in-2021-c9ba377b1170) 中实现聊天机器人
-6.  学习不同序列建模应用的理论
+1. 了解序列建模背后的理论
+2. 了解聊天机器人的工作原理
+3. 了解 rnn 和 LSTMs 的工作原理
+4. 从头开始学习 PyTorch
+5. 如何在 [PyTorch](/javarevisited/5-best-pytorch-and-keras-courses-for-deep-learning-in-2021-c9ba377b1170) 中实现聊天机器人
+6. 学习不同序列建模应用的理论
 
-本课程将教你如何应用深度学习。这是一门中级课程，所以我需要深度学习和神经网络的基础知识。如果你已经熟悉了，那么你就准备好开始这段旅程吧！
+本课程将教你如何应用深度学习。这是一门中级课程，所以我需要深度学习和神经网络的基础知识。如果你已经熟悉了，那么你就准备好开始这段旅程了吧！
 
-**这是加入本课程的链接** — [应用深度学习:构建聊天机器人](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fapplied-deep-learning-build-a-chatbot-theory-application%2F)
+
+
+**这是加入本课程的链接** — [应用深度学习：构建聊天机器人](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fapplied-deep-learning-build-a-chatbot-theory-application%2F)
 
 [![](img/3f4666591eec62b85b44d0c85ced5bbe.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fapplied-deep-learning-build-a-chatbot-theory-application%2F)
 
-## 7. [Tensorflow 2.0 |递归神经网络，LSTMs，GRUs](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftensorflow-20-recurrent-neural-networks-lstms-grus%2F)
+## 7. [Tensorflow 2.0 | 递归神经网络，LSTMs，GRUs](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftensorflow-20-recurrent-neural-networks-lstms-grus%2F)
 
 这是在 Udemy 上学习 Tensorflow 2.0 的另一个非常棒的免费在线课程。你可以用这个 1 小时的免费课程来学习 RNN、LSTM、GRU、NLP、Seq2Seq、注意力和时间序列预测。
 
-要求:
+要求：
 
 *   [Python](/javarevisited/10-free-python-tutorials-and-courses-from-google-microsoft-and-coursera-for-beginners-96b9ad20b4e6)
 *   Numpy
@@ -137,17 +140,17 @@ image_credit — udemy
 
 递归网络是一种令人兴奋的神经网络，它处理以序列形式出现的数据。序列就在我们身边，比如句子、音乐、视频和股市图表。
 
-**以下是加入本课程的链接** — [Tensorflow 2.0 |递归神经网络、LSTMs、GRUs](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftensorflow-20-recurrent-neural-networks-lstms-grus%2F)
+**以下是加入本课程的链接** — [Tensorflow 2.0 | 递归神经网络、LSTMs、GRUs](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftensorflow-20-recurrent-neural-networks-lstms-grus%2F)
 
 [![](img/1f24c00ed55f8f2c34c2b44ac1e2f3b8.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftensorflow-20-recurrent-neural-networks-lstms-grus%2F)
 
-## 8.FreeCodeCamp 为初学者提供的深度学习速成课程
+## 8. FreeCodeCamp 为初学者提供的深度学习速成课程
 
 这是 FreeCodeCamp 的 Youtube 频道上一个关于深度学习的很好的小型免费速成班。如果你是深度学习领域的完全初学者，那么你可以参加这个课程，了解什么是深度学习，以及如何使用它来解决现实世界的问题。
 
 本课程由 Jason Dsouza 开发，在本课程中，您将在没有任何代码的情况下学习深度学习背后的关键思想。这门课程是为没有编程经验的绝对初学者设计的，你将学习深度学习的基本概念和术语，深度学习是机器学习的一个分支。
 
-以下是这个深度学习速成班涵盖的主题:
+以下是这个深度学习速成班涵盖的主题：
 
 1.  什么是深度学习
 2.  神经网络导论
@@ -157,15 +160,15 @@ image_credit — udemy
 6.  监督、非监督和强化学习
 7.  全连接前馈神经网络、递归神经网络和卷积神经网络。
 
-简而言之，这是一个非常棒的免费深度学习课程，可以学习神经网络、机器学习结构(如监督、非监督和强化学习)、各种类型的神经网络架构等等。
+简而言之，这是一个非常棒的免费深度学习课程，可以学习神经网络、机器学习结构（如监督、非监督和强化学习）、各种类型的神经网络架构等等。
 
 你可以在这里或者 Youtube 上免费观看这个课程。
 
-## 9.[数据科学:2023 年用 Python 介绍深度学习](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-deep-learning-course-with-python%2F)
+## 9. [数据科学：2023 年用 Python 介绍深度学习](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-deep-learning-course-with-python%2F)
 
 这是一门用 Python 创建深度学习算法的初级课程。这个 2 小时长的课程非常适合初学者学习 [Python 编程语言](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3)的深度学习。
 
-以下是您将在本课程中学到的内容:
+以下是您将在本课程中学到的内容：
 
 1.  理解人工神经网络背后的直觉
 2.  用 Tensorflow 构建人工神经网络
@@ -174,15 +177,15 @@ image_credit — udemy
 
 2023 年已经有超过 2500 名学生加入了这门课程，学习用 Python 进行深度学习。
 
-**这里是加入本课程** — [数据科学:Python 深度学习简介](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-deep-learning-course-with-python%2F)的链接
+**这里是加入本课程** — [数据科学：Python 深度学习简介](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-deep-learning-course-with-python%2F)的链接
 
 [![](img/c976cbcfe4dfd89a857d3a5c66250303.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-deep-learning-course-with-python%2F)
 
-## 10.[令人惊叹的 AI:深度学习的音乐编辑](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fai-music-editing%2F)
+## 10. [令人惊叹的 AI：深度学习的音乐编辑](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fai-music-editing%2F)
 
 这是另一个在 Udemy 上学习人工智能和深度学习的伟大课程。这是一个只有 30 分钟内容的简短课程，但是非常有趣和有用。
 
-以下是您将在本课程中学到的内容:
+以下是您将在本课程中学到的内容：
 
 1.  如何使用 Spleeter 库将任何歌曲分割成不同的部分
 2.  如何利用深度学习进行音乐编辑
@@ -190,7 +193,7 @@ image_credit — udemy
 
 已经有 6000 多名学生加入了这门课程，它的平均评分为 4.7 分，非常好。
 
-**这里是加入本课程的链接**——[神奇的人工智能:深度学习的音乐编辑](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fai-music-editing%2F)
+**这里是加入本课程的链接**——[神奇的人工智能：深度学习的音乐编辑](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fai-music-editing%2F)
 
 [![](img/f4b7361c96d4f6ad8d9209b19e77d31a.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fai-music-editing%2F)
 
@@ -211,6 +214,6 @@ image_credit — udemy
 
 感谢您阅读本文。如果你喜欢这些最好的*免费深度学习课程*，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P. S. —** 如果你正在寻找最好的机器学习课程，并且不介意支付一些钱，那么 [**人工智能 A-Z:学习如何构建一个 AI**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-az%2F) 是 Udemy 上最好的在线课程。这将是 2023 年从零开始学习人工智能的正确选择。
+**P. S. —** 如果你正在寻找最好的机器学习课程，并且不介意支付一些钱，那么 [**人工智能 A-Z：学习如何构建一个 AI**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-az%2F) 是 Udemy 上最好的在线课程。这将是 2023 年从零开始学习人工智能的正确选择。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-az%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-az%2F>

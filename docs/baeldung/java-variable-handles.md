@@ -1,3 +1,4 @@
+
 # 去神秘化的 Java 9 变量句柄
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-variable-handles>
@@ -19,6 +20,7 @@ Java 9 为开发人员带来了许多有用的新特性。
 每个`VarHandle`都有:
 
 *   通用类型`T`，它是由这个`VarHandle`表示的每个变量的类型
+
 *   坐标类型列表`CT`，是坐标表达式的类型，允许定位该`VarHandle`引用的变量
 
 坐标类型列表可能为空。
@@ -46,9 +48,9 @@ public class VariableHandlesUnitTest {
 
 ### 3.1.指导方针和惯例
 
-**按照惯例，我们应该将`VarHandle` s 声明为`[static final](https://web.archive.org/web/20220823220128/http://gee.cs.oswego.edu/dl/html/j9mm.html)`字段，并在静态块中显式初始化它们。另外，我们通常使用相应字段名的大写版本作为它们的名称。**
+**按照惯例，我们应该将`VarHandle` s 声明为`static final`字段，并在静态块中显式初始化它们。另外，我们通常使用相应字段名的大写版本作为它们的名称。**
 
-例如，下面是 Java 本身如何在内部使用`VarHandle`来实现 [`AtomicReference`](https://web.archive.org/web/20220823220128/https://github.com/openjdk/jdk14u/blob/d6d8d4d931b06d919e7688c6106f489a173d8608/src/java.base/share/classes/java/util/concurrent/atomic/AtomicReference.java#L51) :
+例如，下面是 Java 本身如何在内部使用`VarHandle`来实现`AtomicReference`:
 
 ```java
 private volatile V value;
@@ -98,7 +100,7 @@ assertEquals(VariableHandlesUnitTest.class, PRIVATE_TEST_VARIABLE.coordinateType
 
 这里，我们选择了`privateLookupIn()`方法，它比普通的`lookup()`具有更广泛的访问权限。这允许我们访问`private`、`public`或`protected`变量。
 
-在 Java 9 之前，这个操作的等价 API 是来自`Reflection` API 的`Unsafe`类和 *setAccessible()* 方法。
+在 Java 9 之前，这个操作的等价 API 是来自`Reflection` API 的`Unsafe`类和`setAccessible()`方法。
 
 然而，这种方法有其缺点。例如，它只对变量的特定实例有效。
 
@@ -117,11 +119,11 @@ assertEquals(2, arrayVarHandle.coordinateTypes().size());
 assertEquals(int[].class, arrayVarHandle.coordinateTypes().get(0));
 ```
 
-我们现在可以看到，这样的`VarHandle`有两种坐标类型`int`和 `[]`，它们代表了一组`int`图元。
+我们现在可以看到，这样的`VarHandle`有两种坐标类型`int`和`[]`，它们代表了一组`int`图元。
 
 ## 4。调用`VarHandle`方法
 
-**大多数`VarHandle`方法期望类型为** `**Object.**` 的可变数量的参数，使用`Object…`作为参数会禁用静态参数检查。
+**大多数`VarHandle`方法期望类型为`Object`的可变数量的参数**，使用`Object…`作为参数会禁用静态参数检查。
 
 所有的参数检查都在运行时完成。此外，不同的方法期望有不同数量的不同类型的参数。
 
@@ -177,7 +179,7 @@ assertEquals(100, (int) VARIABLE_TO_COMPARE_AND_SET.get(this));
 
 ### 5.4。数字原子更新访问
 
-这些方法允许在特定的存储器排序效果下执行诸如`getAndAdd`()的数字操作。
+这些方法允许在特定的存储器排序效果下执行诸如`getAndAdd()`的数字操作。
 
 让我们看看如何使用`VarHandle`来执行原子操作:
 
@@ -205,7 +207,7 @@ assertEquals(127, (byte) VARIABLE_TO_BITWISE_OR.get(this));
 
 这个方法将获得我们的变量的值，并对它执行按位 OR 运算。
 
-**如果方法调用无法将方法要求的访问模式与变量允许的访问模式匹配，方法调用将抛出一个 `IllegalAccessException`。**
+**如果方法调用无法将方法要求的访问模式与变量允许的访问模式匹配，方法调用将抛出一个`IllegalAccessException`。**
 
 例如，如果我们试图对一个`final`变量使用一个`set()`方法，就会发生这种情况。
 
@@ -216,15 +218,18 @@ assertEquals(127, (byte) VARIABLE_TO_BITWISE_OR.get(this));
 对于大多数方法，有 4 种记忆排序效应:
 
 *   对于 32 位以下的引用和原语，读写保证了按位原子性。此外，它们没有对其他特征施加排序约束。
+
 *   `Opaque`操作是逐位原子的，并且相对于对同一变量的访问是连贯有序的。
+
 *   `Acquire`和`Release`操作服从`Opaque`属性。此外，`Acquire`读取将仅在匹配`Release`模式写入后排序。
+
 *   `Volatile`操作彼此之间是完全有序的。
 
 记住**访问模式将覆盖之前的内存排序效果**非常重要。这意味着，例如，如果我们使用`get()`，这将是一个普通的读操作，即使我们将变量声明为`volatile`。
 
 因此，开发人员在使用`VarHandle`操作时必须非常小心。
 
-## 7 .**。结论**
+## 7。结论
 
 在本教程中，我们介绍了变量句柄以及如何使用它们。
 

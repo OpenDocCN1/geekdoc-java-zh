@@ -1,26 +1,29 @@
+
 # JSF 2 值更改监听程序示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-valuechangelistener-example/>
 
-当用户对输入组件进行更改时，如 *h:inputText* 或 *h:selectOneMenu* ，将触发 JSF“**值更改事件**。
+当用户对输入组件进行更改时，如`h:inputText`或`h:selectOneMenu`，将触发 JSF“值更改事件”。
 
-实现它的两种方法:
+实现它的两种方法：
 
-**1。方法绑定**–在输入组件中，直接在“ **valueChangeListener** ”属性中指定了 bean 的方法。
+**1. 方法绑定** – 在输入组件中，直接在“`valueChangeListener`”属性中指定了 bean 的方法。
+
 JSF……
 
 ```java
- <h:selectOneMenu value="#{bean.value}" onchange="submit()"
+<h:selectOneMenu value="#{bean.value}" onchange="submit()"
 	valueChangeListener="#{bean.valueChangeMethod}">
    	<f:selectItems value="#{bean.values}" />
 </h:selectOneMenu> 
 ```
 
 *Java…*
-与值变化事件交互的方法应该接受一个 **ValueChangeEvent** 参数。
+
+与值变化事件交互的方法应该接受一个`ValueChangeEvent`参数。
 
 ```java
- @ManagedBean(name="bean")
+@ManagedBean(name="bean")
 @SessionScoped
 public class BeanBean{
 
@@ -31,21 +34,23 @@ public class BeanBean{
 } 
 ```
 
-**2。valueChangeListener 接口**——在输入组件中，内部添加了一个“ **f:valueChangeListener** 标签，并指定了 ValueChangeListener 接口的一个实现类。
+**2. `valueChangeListener`接口** – 在输入组件中，内部添加了一个“`f:valueChangeListener`”标签，并指定了`ValueChangeListener`接口的一个实现类。
+
 JSF……
 
 ```java
- <h:selectOneMenu value="#{bean.value}" onchange="submit()">
+<h:selectOneMenu value="#{bean.value}" onchange="submit()">
     <f:valueChangeListener type="ValueListenerXXX" />
    	<f:selectItems value="#{bean.values}" />
 </h:selectOneMenu> 
 ```
 
 *Java…*
-实现 **ValueChangeListener** 接口并覆盖 **processValueChange()** 方法。
+
+实现`ValueChangeListener`接口并覆盖`processValueChange()`方法。
 
 ```java
- public class ValueListenerXXX implements ValueChangeListener{
+public class ValueListenerXXX implements ValueChangeListener{
 
 	@Override
 	public void processValueChange(ValueChangeEvent event)
@@ -57,25 +62,24 @@ JSF……
 } 
 ```
 
-**Note**
-To make it work, you have to attach a **onchange=”submit()”** JavaScript to the input component; Otherwise, no event will be fired.
+**注意**
 
-## 完整的 valueChangeListener 示例
+要使其工作，您必须在输入组件上附加一个`onchange="submit()"`JavaScript；否则，不会触发任何事件。
 
-这是一个 JSF 2.0 应用程序，有一个下拉框( *h:selectOneMenu* )和一个文本框( *h:inputText* )，当用户在下拉框中进行更改时，它会触发“值更改事件”并用新选择的下拉框值更新文本框。
+## 完整的 `valueChangeListener` 示例
 
-这个例子以“**方法绑定**和“ **ValueChangeListener** ”两种方式进行了演示。
+这是一个 JSF 2.0 应用程序，有一个下拉框（`h:selectOneMenu`）和一个文本框（`h:inputText`），当用户在下拉框中进行更改时，它会触发“值更改事件”并用新选择的下拉框值更新文本框。
 
-freestar.config.enabled_slots.push({ placementName: "mkyong_incontent_1", slotId: "mkyong_incontent_1" });
+这个例子以“**方法绑定**”和“**ValueChangeListener**”两种方式进行了演示。
 
-## 1.方法绑定
+## 1. 方法绑定
 
-一个 country bean，为演示提供国家和地区代码列表。您可以通过输入组件中的" **valueChangeListener** "属性绑定 bean 的方法。见下文:
+一个 country bean，为演示提供国家和地区代码列表。您可以通过输入组件中的“`valueChangeListener`”属性绑定 bean 的方法。见下文：
 
-*CountryBean.java* 的缩写形式
+`CountryBean.java` 的缩写形式
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
@@ -126,7 +130,7 @@ public class CountryBean implements Serializable{
 *JSF 页面*
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -159,14 +163,14 @@ public class CountryBean implements Serializable{
 </html> 
 ```
 
-## 2.ValueChangeListener 接口
+## 2. `ValueChangeListener` 接口
 
-重用 above country bean 来提供国家和地区代码的列表。实现 **ValueChangeListener** 接口，并通过“ **f:valueChangeListener** 标签绑定。见下文:
+重用 above country bean 来提供国家和地区代码的列表。实现`ValueChangeListener`接口，并通过“`f:valueChangeListener`”标签绑定。见下文：
 
-*CountryValueListener.java*
+`CountryValueListener.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import javax.faces.context.FacesContext;
 import javax.faces.event.AbortProcessingException;
@@ -193,7 +197,7 @@ public class CountryValueListener implements ValueChangeListener{
 *JSF 页面*
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -232,16 +236,16 @@ public class CountryValueListener implements ValueChangeListener{
 
 ![jsf2-ValueChangeListener-example-1](img/a5da4a2f8fe0bc40f7af429fbe026e88.png "jsf2-ValueChangeListener-example-1")
 
-如果国家/地区下拉框值被更改，则触发 **valueChangeListener** ，并用新选择的 dropdrow 框值更新 textbox 值。
+如果国家/地区下拉框值被更改，则触发`valueChangeListener`，并用新选择的下拉框值更新文本框值。
 
 ![jsf2-ValueChangeListener-example-2](img/fbc407910b8cb70b943a12e65df69f19.png "jsf2-ValueChangeListener-example-2")
 
 ## 下载源代码
 
-Download It – [JSF-2-ValueChangeListener-Example.zip](http://web.archive.org/web/20210319060351/http://www.mkyong.com/wp-content/uploads/2010/11/JSF-2-ValueChangeListener-Example.zip) (10KB)
+下载链接 – [JSF-2-ValueChangeListener-Example.zip](http://web.archive.org/web/20210319060351/http://www.mkyong.com/wp-content/uploads/2010/11/JSF-2-ValueChangeListener-Example.zip) (10KB)
 
 ## 参考
 
-1.  [JSF 2 下拉框示例](http://web.archive.org/web/20210319060351/http://www.mkyong.com/jsf2/jsf-2-dropdown-box-example/)
+1. [JSF 2 下拉框示例](http://web.archive.org/web/20210319060351/http://www.mkyong.com/jsf2/jsf-2-dropdown-box-example/)
 
-Tags : [jsf2](http://web.archive.org/web/20210319060351/https://mkyong.com/tag/jsf2/)freestar.config.enabled_slots.push({ placementName: "mkyong_leaderboard_btf", slotId: "mkyong_leaderboard_btf" });<input type="hidden" id="mkyong-current-postId" value="7584">
+标签： [jsf2](http://web.archive.org/web/20210319060351/https://mkyong.com/tag/jsf2/)

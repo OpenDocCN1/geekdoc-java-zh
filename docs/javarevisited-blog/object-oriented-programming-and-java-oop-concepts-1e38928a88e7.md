@@ -1,3 +1,4 @@
+
 # 面向对象编程和 Java OOP 概念
 
 > 原文：<https://medium.com/javarevisited/object-oriented-programming-and-java-oop-concepts-1e38928a88e7?source=collection_archive---------1----------------------->
@@ -26,7 +27,7 @@ OOP 的概念是一个在我们的日常生活中可以看到的概念，但是�
 
 方法代表类的行为。他们可以执行操作，甚至更新各自类的对象。
 
-如果我要通过一个现实生活中的例子来解释类和对象的概念，我们可以以宠物为例，更准确地说，我们可以以狗为例，狗有所有狗共有的属性，如品种、年龄、大小、颜色，以及一些共同的功能，如吠、跑、坐、吃。因此，为了在一个软件实体中表示这个真实的模型，我们可以使用 dog 作为类，它充当可以从中创建 dog 对象的蓝图。
+如果我要通过一个现实生活中的例子来解释类和对象的概念，我们可以以宠物为例，更准确地说，我们可以以狗为例，狗有所有狗共有的属性，如品种、年龄、大小、颜色，以及一些共同的功能，如吠、跑、坐、吃。因此，为了在一个软件实体中表示这个真实的模型，我们可以使用 `dog` 作为类，它充当可以从中创建 `dog` 对象的蓝图。
 
 作为类的属性，我们可以指定上面提到的狗的属性，我们也可以通过为类的方法指定我们前面讨论过的狗的功能来做同样的事情。
 
@@ -36,21 +37,18 @@ OOP 的概念是一个在我们的日常生活中可以看到的概念，但是�
 
 谈到面向对象编程，有 3 个主要的面向对象概念。这些可以简单地列举为，
 
-1.[抽象](https://javarevisited.blogspot.com/2010/10/abstraction-in-java.html#axzz6oOeSmpNw)
-
-2.[封装](https://javarevisited.blogspot.com/2012/03/what-is-encapsulation-in-java-and-oops.html)
-
-3.[传承](https://javarevisited.blogspot.com/2012/10/what-is-inheritance-in-java-and-oops-programming.html)
-
-4.[多态性](https://www.java67.com/2012/10/difference-between-polymorphism-overloading-overriding-java.html)
+1. [抽象](https://javarevisited.blogspot.com/2010/10/abstraction-in-java.html#axzz6oOeSmpNw)
+2. [封装](https://javarevisited.blogspot.com/2012/03/what-is-encapsulation-in-java-and-oops.html)
+3. [传承](https://javarevisited.blogspot.com/2012/10/what-is-inheritance-in-java-and-oops-programming.html)
+4. [多态性](https://www.java67.com/2012/10/difference-between-polymorphism-overloading-overriding-java.html)
 
 ## 抽象
 
 抽象可以简单地解释为隐藏所有不必要数据的形式，只显示对象的必要数据。类是对象抽象表示的完美例子，因为它只展示了类的相关字段和方法，而忽略了对象不需要的细节。
 
-示例:
+示例：
 
-在上面的例子中，创建的狗类包含了所有狗的特征和功能。在这里，类 Dog 作为狗的概念的抽象模型。
+在上面的例子中，创建的狗类包含了所有狗的特征和功能。在这里，类 `Dog` 作为狗的概念的抽象模型。
 
 ## 包装
 
@@ -58,7 +56,7 @@ OOP 的概念是一个在我们的日常生活中可以看到的概念，但是�
 
 [![](img/84c14016fa3841eb6237bb5784107a8e.png)](https://www.java67.com/2019/02/can-you-add-non-abstract-method-on-interface-in-java.html)
 
-在上面的代码片段中，我们可以看到该类的所有属性都是私有的，因此这些属性不能在该类之外直接访问。来访问这些 getter 和 setter 方法。setter 方法初始化或更改属性值，getter 方法返回属性值。
+在上面的代码片段中，我们可以看到该类的所有属性都是私有的，因此这些属性不能在该类之外直接访问。来访问这些 `getter` 和 `setter` 方法。`setter` 方法初始化或更改属性值，`getter` 方法返回属性值。
 
 ## 访问修饰符
 
@@ -72,17 +70,15 @@ Java 支持 4 种类型的访问修饰符，我们可以用它们来定义类、
 
 有 3 种类型的继承
 
-1.单一遗传
-
-2.分层继承
-
-3.多重遗传
+1. 单一遗传
+2. 分层继承
+3. 多重遗传
 
 然而[由于钻石问题，多重继承不能在 Java](https://javarevisited.blogspot.com/2011/07/why-multiple-inheritances-are-not.html) 中实现。
 
 [![](img/d5753ac1f8fb254533d7a710663379b6.png)](https://www.java67.com/2016/03/top-21-java-inheritance-interview-Questions-Answer-Programming.html)
 
-在上面的代码片段中，我们可以看到`GermanShepherd` 类是通过扩展 Dog 类创建的，通过这样做，子类 GermanShepherd 类继承了父类(在本例中是 Dog 类)的所有属性和方法。这里父类的构造函数在子类中被称为“超级”。传递给 super 的参数的数量/类型必须与超类的一个构造函数的参数相匹配。如果存在，必须是第一个语句。
+在上面的代码片段中，我们可以看到`GermanShepherd` 类是通过扩展 `Dog` 类创建的，通过这样做，子类 `GermanShepherd` 类继承了父类（在本例中是 `Dog` 类）的所有属性和方法。这里父类的构造函数在子类中被称为“超级”。传递给 `super` 的参数的数量/类型必须与超类的一个构造函数的参数相匹配。如果存在，必须是第一个语句。
 
 ## 多态性
 
@@ -104,7 +100,7 @@ Java 支持 4 种类型的访问修饰符，我们可以用它们来定义类、
 
 ![](img/a340b55413c990a7324d4a2f2275813d.png)
 
-在上面的代码片段中，我们可以看到 Bark()方法在 GermanShepherd 中被覆盖。在方法调用时，调用并执行子类中定义的方法，而不是超类中的方法。
+在上面的代码片段中，我们可以看到 `Bark()` 方法在 `GermanShepherd` 中被覆盖。在方法调用时，调用并执行子类中定义的方法，而不是超类中的方法。
 
 我希望这篇文章能帮助你更好地理解所有的基础知识和概念。请随时提供以上反馈。非常感谢。
 

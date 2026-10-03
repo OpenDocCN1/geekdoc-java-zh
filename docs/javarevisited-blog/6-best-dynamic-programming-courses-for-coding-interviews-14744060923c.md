@@ -1,3 +1,4 @@
+
 # 2023 年编码面试的 6 门最佳动态编程课程
 
 > 原文：<https://medium.com/javarevisited/6-best-dynamic-programming-courses-for-coding-interviews-14744060923c?source=collection_archive---------0----------------------->
@@ -24,13 +25,13 @@ image_credit —教育性
 
 作为我研究的一部分，我偶然发现了一些有用的资源来学习和*掌握动态编程*，我今天将与你们分享这些资源，以及一些解决动态编程问题的有用技巧，但在此之前，让我们了解一下**什么是动态编程？**看看一些可以使用动态编程解决的编码问题。
 
-<https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224>  
+<https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224>
 
 ## 什么是动态编程(DP)？
 
 动态规划(DP)是一种算法技术，通过将其分解为更简单的子问题，并利用较大问题的最优解取决于其较小子问题的最优解的事实，来解决较大且困难的问题。
 
-动态规划问题的一个最简单的例子是[斐波那契数列](https://www.java67.com/2019/03/nth-fibonacci-number-in-java-coding.html)，因为它可以通过解决两个更小的子问题(即`Fib(n-1) and Fib(n-2)`)来解决问题(即 `Fib(n)`)。
+动态规划问题的一个最简单的例子是[斐波那契数列](https://www.java67.com/2019/03/nth-fibonacci-number-in-java-coding.html)，因为它可以通过解决两个更小的子问题(即`Fib(n-1)`和`Fib(n-2)`)来解决问题(即`Fib(n)`)。
 
 动态规划问题的另一个流行例子是[背包问题](https://en.wikipedia.org/wiki/Knapsack_problem)，它测试你在给定约束条件下找到最优解的能力。
 
@@ -38,7 +39,7 @@ image_credit —教育性
 
 现在我们知道了什么是动态编程，并且知道了使用动态编程可以解决什么类型的问题，让我们来看看一些](https://javarevisited.blogspot.com/2020/04/5-essential-skills-to-crack-coding-interviews.html)[在线课程](https://javarevisited.blogspot.com/2019/12/top-5-courses-to-learn-dynamic-programming-for-interivews.html)，它们将训练你如何使用动态编程。
 
-<https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224>  
+<https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224>
 
 # 2023 年学习动态编程的 6 门课程
 
@@ -66,7 +67,7 @@ image_credit —教育性
 
 这是一门非常好的课程，不仅可以学习动态编程，还可以学习破解编码面试所需的所有主题。在本课程中，您不仅将学习如何当场解决编码挑战，还将学习如何处理面试官提出的关于复杂性和改进的棘手问题。
 
-该课程还包括一个针对计算机科学问题的快速入门营，这些问题涉及数据结构、T2 算法、位操作和并发性。总的来说，准备软件工作面试的一个完整的包。
+该课程还包括一个针对计算机科学问题的快速入门营，这些问题涉及数据结构、`T2`算法、位操作和并发性。总的来说，准备软件工作面试的一个完整的包。
 
 这是你的终极编码面试训练营。获得更多的工作机会，协商加薪:获得你想要的工作所需要的一切你都将在本课程中学到。不仅仅是技术和编码技能，还有谈判，这可以很容易地使 10K 在你的最终报价 3 万英镑。
 
@@ -80,7 +81,7 @@ image_credit —教育性
 
 **这里是参加零起点大师学院**——[编程大师面试](https://academy.zerotomastery.io/p/master-the-coding-interview-data-structures-algorithms?affcode=441520_zytgk2dn)课程的链接
 
-<https://academy.zerotomastery.io/p/master-the-coding-interview-data-structures-algorithms?affcode=441520_zytgk2dn>  
+<https://academy.zerotomastery.io/p/master-the-coding-interview-data-structures-algorithms?affcode=441520_zytgk2dn>
 
 ## 3.[贪婪算法和动态规划](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Falgorithms-greedy)
 
@@ -94,7 +95,7 @@ image_credit —教育性
 
 而且，如果你觉得 Coursera 的专业化和认证有用，特别是来自 Google、AWS 和 IBM 的认证，那么我建议你加入 Coursera Plus 的<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>**，这是 Coursera 的一个很好的订阅计划，让你可以无限制地访问他们最受欢迎的课程、专业化、专业证书和指导项目。它每年花费大约 399 美元，但是它完全值得你的钱，因为你得到了无限的证书。**
 
-**<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus> ** 
+**<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>**
 
 ## **4.[动态编程简介](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdynamic-programming%2F)**
 
@@ -104,41 +105,43 @@ image_credit —教育性
 
 也是为数不多的几门课程，解决了几乎所有著名的动态规划问题，如爬楼梯、切路、入室抢劫、买卖股票的最佳时间、0/1 背包问题、最长公共子序列问题、最长公共子串问题。如果你正在寻找解决这些问题的方法，那么这个课程就是为你准备的。
 
-我也建议你*看几个这门课的预习，*其实爬楼梯问题在预习本身就解决了，如果你觉得法鲁克的授课风格很棒，可以加入这门课。***
+我也建议你*看几个这门课的预习，*其实爬楼梯问题在预习本身就解决了，如果你觉得法鲁克的授课风格很棒，可以加入这门课。
 
-*****这里是加入本课程的链接** — [动态编程简介](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdynamic-programming%2F)***
+**这里是加入本课程的链接** — [动态编程简介](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdynamic-programming%2F)**
 
-***[![](img/8f94693c8c3eef37ff6cf19c75094d43.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdynamic-programming%2F)***
 
-## ***5.掌握动态编程的艺术***
 
-***如果你像我一样喜欢 Udemy 课程，这是另一个学习动态编程技术的好课程。它涵盖了诸如编辑距离、正则表达式匹配、创建一个[字符串回文](http://www.java67.com/2015/06/how-to-check-is-string-is-palindrome-in.html)的最小删除以及最长递增子序列等问题。这门课程还会教你递归和回溯，这是解决编码问题的两种重要技术。最棒的是他深入讲解了解决方案。本课程还涵盖了 CLRS 书籍 中的示例，您可以参考这些示例来了解更多概念。***
+![img](img/8f94693c8c3eef37ff6cf19c75094d43.png)
 
-***最重要的是，Ajay 解释如何从识别到公式化处理动态编程问题的方式非常棒。***
+## 5. 掌握动态编程的艺术
 
-***他还将问题分为两类:一维动态规划问题和二维动态规划问题。***
+如果你像我一样喜欢 Udemy 课程，这是另一个学习动态编程技术的好课程。它涵盖了诸如编辑距离、正则表达式匹配、创建一个[字符串回文](http://www.java67.com/2015/06/how-to-check-is-string-is-palindrome-in.html)的最小删除以及最长递增子序列等问题。这门课程还会教你递归和回溯，这是解决编码问题的两种重要技术。最棒的是他深入讲解了解决方案。本课程还涵盖了 CLRS 书籍中的示例，您可以参考这些示例来了解更多概念。
 
-*****这里是加入本课程的链接**——[掌握动态编程的艺术](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-the-art-of-dynamic-programming%2F)***
+最重要的是，Ajay 解释如何从识别到公式化处理动态编程问题的方式非常棒。
 
-***[![](img/a7902a2106151407070e6a59eef368fa.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-the-art-of-dynamic-programming%2F)***
+他还将问题分为两类：一维动态规划问题和二维动态规划问题。
 
-## ***6.[探索编码面试的动态编程模式](https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224)***
+**这里是加入本课程的链接**——[掌握动态编程的艺术](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-the-art-of-dynamic-programming%2F)
 
-***这是我最喜欢的学习动态编程的课程，它来自一个叫做 Educative 的新的在线学习平台。***
+![img](img/a7902a2106151407070e6a59eef368fa.png)
 
-***你可能还不知道，但是教育性的，一个新的互动在线学习平台有一些最好的编程面试准备课程。我已经讲过他们最好的课程之一——[钻研系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)，这是另一个瑰宝。这门课程是从零开始的，心中只有一个目标——如何解决动态编程问题。它将为您提供一套易于理解的技术来处理任何基于 DP 的编码问题。
+## 6. 探索编码面试的动态编程模式
 
-不仅仅是让你试着记忆解决方案，你还将经历五种潜在的 DP 模式，然后应用它们来解决 *35+动态编程问题*。在每个模式中，你将首先学习一个递归的强力解决方案，这实际上是开始解决一个 DP 问题的最好方法。一旦你理解了递归解，你将学习如何应用记忆和制表(使用网格)的高级动态编程技术。***
+这是我最喜欢的学习动态编程的课程，它来自一个叫做 Educative 的新的在线学习平台。
 
-*****这里是加入本课程的链接** — [探索编码面试的动态编程模式](https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224)***
+你可能还不知道，但是教育性的，一个新的互动在线学习平台有一些最好的编程面试准备课程。我已经讲过他们最好的课程之一——[钻研系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)，这是另一个瑰宝。这门课程是从零开始的，心中只有一个目标——如何解决动态编程问题。它将为您提供一套易于理解的技术来处理任何基于 DP 的编码问题。
 
-***[![](img/96057233b94bc14a75f47314fc4eef98.png)](https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224)***
+不仅仅是让你试着记忆解决方案，你还将经历五种潜在的 DP 模式，然后应用它们来解决 *35+动态编程问题*。在每个模式中，你将首先学习一个递归的强力解决方案，这实际上是开始解决一个 DP 问题的最好方法。一旦你理解了递归解，你将学习如何应用记忆和制表（使用网格）的高级动态编程技术。
 
-***和前面的课程一样，本课程也涵盖了你将在编码面试中看到的大多数常见的动态编程问题。练习题也给你机会应用你在课程中学到的模式。如果你喜欢交互式阅读，这是学习动态编程的最佳课程。***
+**这里是加入本课程的链接** — [探索编码面试的动态编程模式](https://www.educative.io/collection/5668639101419520/5633779737559040?affiliate_id=5073518643380224)
 
-***顺便说一句，如果你正在准备编码面试，我强烈推荐参加 [**教育性订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，它将不仅为你提供这门课程，还提供许多其他有用的课程来破解你的编码面试，比如[探索编码面试模式](https://www.educative.io/collection/5668639101419520/5671464854355968?affiliate_id=5073518643380224)。每月只需 18 美元，非常值得。***
+![img](img/96057233b94bc14a75f47314fc4eef98.png)
 
-***<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+和前面的课程一样，本课程也涵盖了你将在编码面试中看到的大多数常见的动态编程问题。练习题也给你机会应用你在课程中学到的模式。如果你喜欢交互式阅读，这是学习动态编程的最佳课程。
+
+顺便说一句，如果你正在准备编码面试，我强烈推荐参加 [**教育性订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，它将不仅为你提供这门课程，还提供许多其他有用的课程来破解你的编码面试，比如[探索编码面试模式](https://www.educative.io/collection/5668639101419520/5671464854355968?affiliate_id=5073518643380224)。每月只需 18 美元，非常值得。
+
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
 这就是学习动态编程的一些最好的课程。我说过，DP 是编码面试的题目，大部分棘手的问题都来自动态编程。忽视动态编程是不明智的，尤其是如果你真的想得到你一直想要的工作。
 
@@ -146,22 +149,22 @@ image_credit —教育性
 
 其他**编程资源**您可能想查看
 
-*   [10 数据结构与编程课程面试](/hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927?source=user_profile---------8-----------------------)
-*   [2023 年 React 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-*   [2023 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   [面向 Java 和 DevOps 工程师的 5 门免费 Docker 课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
-*   [101 个编码问题和一些面试技巧](https://dev.to/javinpaul/101-coding-problems-and-few-tips-to-crack-your-next-programming-interviews-402a)
-*   [学习 Java 编程的 5 门免费课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
-*   [破解编程面试的 10 门课程](https://javarevisited.blogspot.com/2018/02/10-courses-to-prepare-for-programming-job-interviews.html#axzz5oeVu3CYQ)
-*   [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
-*   [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
-*   [50+数据结构与算法面试题](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
-*   [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
-*   [2023 年学习 JavaScript 的 15 门最佳课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
-*   [我最喜欢的学习网页开发的课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
+* [10 数据结构与编程课程面试](/hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927?source=user_profile---------8-----------------------)
+* [2023 年 React 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+* [2023 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+* [面向 Java 和 DevOps 工程师的 5 门免费 Docker 课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
+* [101 个编码问题和一些面试技巧](https://dev.to/javinpaul/101-coding-problems-and-few-tips-to-crack-your-next-programming-interviews-402a)
+* [学习 Java 编程的 5 门免费课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
+* [破解编程面试的 10 门课程](https://javarevisited.blogspot.com/2018/02/10-courses-to-prepare-for-programming-job-interviews.html#axzz5oeVu3CYQ)
+* [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
+* [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
+* [50+数据结构与算法面试题](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
+* [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
+* [2023 年学习 JavaScript 的 15 门最佳课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
+* [我最喜欢的学习网页开发的课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
 
 感谢到目前为止阅读这篇文章；如果你喜欢这些动态编程课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
 **p . s .——**如果你喜欢书，我也建议你看看 Aditya Bhargava 的[**Grokking Algorithms**](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/?tag=javamysqlanta-20)。到目前为止，他对背包问题的解释是我所见过的最好和最详细的。
 
-<https://buff.ly/3obss22> ***
+<https://buff.ly/3obss22>

@@ -1,3 +1,4 @@
+
 # 如何使用键绑定
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/misc/keybinding.html`](https://docs.oracle.com/javase/tutorial/uiswing/misc/keybinding.html)
@@ -46,7 +47,7 @@
 
 `JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT`
 
-该组件包含（或是）具有焦点的组件。这个输入映射通常用于复合组件  一个其实现依赖于子组件的组件。例如，`JTable`使用`WHEN_ANCESTOR_OF_FOCUSED_COMPONENT`制作所有绑定，以便如果用户正在编辑，上箭头键（例如）仍然会更改所选单元格。
+该组件包含（或是）具有焦点的组件。这个输入映射通常用于复合组件 — 一个其实现依赖于子组件的组件。例如，`JTable`使用`WHEN_ANCESTOR_OF_FOCUSED_COMPONENT`制作所有绑定，以便如果用户正在编辑，上箭头键（例如）仍然会更改所选单元格。
 
 `JComponent.WHEN_IN_FOCUSED_WINDOW`
 
@@ -79,8 +80,7 @@ component.getInputMap().put(KeyStroke.getKeyStroke("F2"),
                             "doSomething");
 component.getActionMap().put("doSomething",
                              anAction);
-*//where anAction is a javax.swing.Action*
-
+//where anAction is a javax.swing.Action
 ```
 
 如前面的代码所示，要获取组件的动作映射，您可以使用`getActionMap`方法（从`JComponent`继承而来）。要获取输入映射，您可以使用`getInputMap(int)`方法，其中整数是前面列表中显示的`JComponent.WHEN_*FOCUSED*`常量之一。或者，在通常情况下，常量为`JComponent.WHEN_FOCUSED`，您可以直接使用不带参数的`getInputMap`。
@@ -98,8 +98,7 @@ component.getActionMap().put("pressed",
                              pressedAction);
 component.getActionMap().put("released",
                              releasedAction);
-*//where pressedAction and releasedAction are javax.swing.Action objects*
-
+//where pressedAction and releasedAction are javax.swing.Action objects
 ```
 
 要使组件忽略其通常会响应的按键，您可以使用特殊的动作名称"none"。例如，以下代码使组件忽略 F2 键。
@@ -107,10 +106,7 @@ component.getActionMap().put("released",
 ```java
 component.getInputMap().put(KeyStroke.getKeyStroke("F2"),
                             "none");
-
 ```
-
-* * *
 
 **注意：**
 
@@ -126,10 +122,7 @@ component.getInputMap().put(KeyStroke.getKeyStroke("F2"),
                             "doNothing");
 component.getActionMap().put("doNothing",
                              doNothing);
-
 ```
-
-* * *
 
 ## 键绑定 API
 
@@ -142,6 +135,7 @@ component.getActionMap().put("doNothing",
 获取和使用 InputMaps
 
 | 方法 | 目的 |
+
 | --- | --- |
 
 | [获取输入映射](https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html#getInputMap--) [获取输入映射（int）](https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html#getInputMap-int-) |
@@ -149,14 +143,19 @@ component.getActionMap().put("doNothing",
 *(在 `JComponent` 中)* | 获取组件的一个输入映射。参数可以是这些 `JComponent` 常量之一：`WHEN_FOCUSED`、`WHEN_IN_FOCUSED_WINDOW` 或 `WHEN_ANCESTOR_OF_FOCUSED_COMPONENT`。无参数方法获取 `WHEN_FOCUSED` 输入映射。 |
 
 | [设置（KeyStroke，Object）](https://docs.oracle.com/javase/8/docs/api/javax/swing/InputMap.html#put-javax.swing.KeyStroke-java.lang.Object-) *(在 `InputMap` 中)* | 设置与指定键盘按键关联的操作名称。如果第二个参数为 `null`，此方法将移除键盘按键的绑定。要忽略键盘按键，请使用 `"none"` 作为第二个参数。 |
+
 | --- | --- |
+
 | [获取指定用户键盘活动的对象](https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html#getKeyStroke-java.lang.String-) *(在 `KeyStroke` 中)* | 获取指定用户键盘活动的对象。典型参数为 "alt shift X"、"INSERT" 和 "typed a"。查看[`KeyStroke` API 文档](https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html)获取完整详情和`getKeyStroke`方法的其他形式。 |
 
 获取和使用 ActionMaps
 
 | 方法 | 目的 |
+
 | --- | --- |
+
 | [获取操作映射](https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html#getActionMap--) *(在 `JComponent` 中)* | 获取将名称映射到组件操作的对象。 |
+
 | [设置（Object，Action）](https://docs.oracle.com/javase/8/docs/api/javax/swing/ActionMap.html#put-java.lang.Object-javax.swing.Action-) *(在 `ActionMap` 中)* | 设置与指定名称关联的操作。如果第二个参数为 `null`，此方法将移除名称的绑定。 |
 
 ## 使用键绑定的示例
@@ -164,6 +163,9 @@ component.getActionMap().put("doNothing",
 以下表格列出了使用键绑定的示例：
 
 | 示例 | 描述位置 | 注释 |
+
 | --- | --- | --- |
+
 | TableFTFEditDemo | 如何使用表格 | IntegerEditor 类在格式化文本字段上注册一个键绑定，以在用户按下 Enter 键时验证输入。 |
+
 | 文本组件演示 | 文本组件特性 | 在文本窗格上注册了按键绑定，用户按下 Control-B、Control-F、Control-P 和 Control-N 键时可以在文本中导航。 |

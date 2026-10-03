@@ -1,3 +1,4 @@
+
 # 运行示例程序
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/intro/run.html`](https://docs.oracle.com/javase/tutorial/i18n/intro/run.html)
@@ -9,7 +10,6 @@
 Bonjour.
 Comment allez-vous?
 Au revoir.
-
 ```
 
 在下一个示例中，语言代码是`en`（英语），国家代码是`US`（美国），因此程序会以英语显示消息：
@@ -19,5 +19,4 @@ Au revoir.
 Hello.
 How are you?
 Goodbye.
-
 ```

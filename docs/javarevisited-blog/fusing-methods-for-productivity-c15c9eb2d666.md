@@ -1,3 +1,4 @@
+
 # 提高生产率的融合方法
 
 > 原文：<https://medium.com/javarevisited/fusing-methods-for-productivity-c15c9eb2d666?source=collection_archive---------3----------------------->
@@ -8,83 +9,83 @@
 
 欢迎来到天空湾，这里的海湾与天空融合在一起，用码头做拉链
 
-# 当任何满足都不满足时
+## 当任何满足都不满足时
 
 有时，您希望查看集合中是否包含与某个属性值相匹配的元素。在下面的例子中，我使用来自 [Eclipse 集合](https://github.com/eclipse/eclipse-collections)的方法`anySatisfy`来查看是否有任何对在`getTwo`属性中具有“2”或“3”。
 
-```
+```java
 @Test
 public void anySatisfyContains()
 {
     MutableList<Pair<Integer, String>> list =
-            Lists.***mutable***.with(
-                    Tuples.*pair*(1, **"1"**), 
-                    Tuples.*pair*(2, **"2"**));
+            Lists.mutable.with(
+                    Tuples.pair(1, "1"), 
+                    Tuples.pair(2, "2"));
 
-    Assert.*assertTrue*(
-            list.anySatisfy(pair -> pair.getTwo().equals(**"2"**)));
-    Assert.*assertFalse*(
-            list.anySatisfy(pair -> pair.getTwo().equals(**"3"**)));
+    Assert.assertTrue(
+            list.anySatisfy(pair -> pair.getTwo().equals("2")));
+    Assert.assertFalse(
+            list.anySatisfy(pair -> pair.getTwo().equals("3")));
 }
 ```
 
 我们可以使用将`Function`指定为方法引用的`collect`方法来提取`pair.getTwo()`的值。
 
-```
+```java
 @Test
 public void eagerCollectAnySatisfy()
 {
     MutableList<Pair<Integer, String>> list =
-            Lists.***mutable***.with(
-                    Tuples.*pair*(1, **"1"**),
-                    Tuples.*pair*(2, **"2"**));
+            Lists.mutable.with(
+                    Tuples.pair(1, "1"),
+                    Tuples.pair(2, "2"));
 
-    Assert.*assertTrue*(
+    Assert.assertTrue(
             list.collect(Pair::getTwo)
-                    .anySatisfy(each -> each.equals(**"2"**)));
-    Assert.*assertFalse*(
+                    .anySatisfy(each -> each.equals("2")));
+    Assert.assertFalse(
             list.collect(Pair::getTwo)
-                    .anySatisfy(each -> each.equals(**"3"**)));
+                    .anySatisfy(each -> each.equals("3")));
 }
 ```
 
 不幸的是，这是更多的代码，并且在调用`collect`之后创建了一个临时的`List`。方法`anySatisfy`用于等式测试时，可简化为`contains`。我就用`contains`代替`anySatisfy`。
 
-```
+```java
 @Test
 public void eagerCollectContains()
 {
     MutableList<Pair<Integer, String>> list =
-            Lists.***mutable***.with(
-                    Tuples.*pair*(1, **"1"**),
-                    Tuples.*pair*(2, **"2"**));
+            Lists.mutable.with(
+                    Tuples.pair(1, "1"),
+                    Tuples.pair(2, "2"));
 
-    Assert.*assertTrue*(
-            list.collect(Pair::getTwo).contains(**"2"**));
-    Assert.*assertFalse*(
-            list.collect(Pair::getTwo).contains(**"3"**));
+    Assert.assertTrue(
+            list.collect(Pair::getTwo).contains("2"));
+    Assert.assertFalse(
+            list.collect(Pair::getTwo).contains("3"));
 }
 ```
 
 现在代码更加简洁易读，但是我们仍然有额外的临时`List`创建要删除。这可以通过添加对`asLazy`的调用来解决。
 
-```
+```java
 @Test
 public void lazyCollectContains()
 {
     MutableList<Pair<Integer, String>> list =
-            Lists.***mutable***.with(
-                    Tuples.*pair*(1, **"1"**),
-                    Tuples.*pair*(2, **"2"**));
+            Lists.mutable.with(
+                    Tuples.pair(1, "1"),
+                    Tuples.pair(2, "2"));
 
-    Assert.*assertTrue*(
+    Assert.assertTrue(
             list.asLazy()
                     .collect(Pair::getTwo)
-                    .contains(**"2"**));
-    Assert.*assertFalse*(
+                    .contains("2"));
+    Assert.assertFalse(
             list.asLazy()
                     .collect(Pair::getTwo)
-                    .contains(**"3"**));
+                    .contains("3"));
 }
 ```
 
@@ -92,38 +93,38 @@ public void lazyCollectContains()
 
 我们可以做得更好。
 
-# 融合方法
+## 融合方法
 
-让我们给`[RichIterable](https://www.eclipse.org/collections/javadoc/10.2.0/org/eclipse/collections/api/RichIterable.html)`添加一个默认方法来提供这个功能。
+让我们给`RichIterable`添加一个默认方法来提供这个功能。
 
 但是首先，让我们写一个测试。
 
-```
+```java
 @Test
 public void collectContains()
 {
     MutableList<Pair<Integer, String>> list =
-            Lists.***mutable***.with(
-                    Tuples.*pair*(1, **"1"**),
-                    Tuples.*pair*(2, **"2"**),
-                    Tuples.*pair*(3, null));
+            Lists.mutable.with(
+                    Tuples.pair(1, "1"),
+                    Tuples.pair(2, "2"),
+                    Tuples.pair(3, null));
 
-    Assert.*assertTrue*(
-            list.collectContains(Pair::getTwo, **"2"**));
-    Assert.*assertFalse*(
-            list.collectContains(Pair::getTwo, **"3"**));
-    Assert.*assertTrue*(
+    Assert.assertTrue(
+            list.collectContains(Pair::getTwo, "2"));
+    Assert.assertFalse(
+            list.collectContains(Pair::getTwo, "3"));
+    Assert.assertTrue(
             list.collectContains(Pair::getTwo, null));
-    Assert.*assertFalse*(
+    Assert.assertFalse(
             list.collectContains(Pair::getOne, null));
 }
 ```
 
 我们想要融合`collect`和`contains`方法，所以我一开始就称之为`collectContains`。我还添加了一些测试，以确保我们可以与`null`进行比较。
 
-`RichIterable`上的方法`collectConains`将是急切的，因为它返回一个`boolean`。我将使用`anySatisfy`实现该方法，这也是一个返回`boolean`的方法。
+`RichIterable`上的方法`collectContains`将是急切的，因为它返回一个`boolean`。我将使用`anySatisfy`实现该方法，这也是一个返回`boolean`的方法。
 
-```
+```java
 default <V> boolean collectContains(
         Function<? super T, ? extends V> function,
         V value)
@@ -131,10 +132,10 @@ default <V> boolean collectContains(
     if (null == value)
     {
         return this.anySatisfy(
-                each -> null == *function*.valueOf(each));
+                each -> null == function.valueOf(each));
     }
     return this.anySatisfy(
-            each -> *value*.equals(*function*.valueOf(each)));
+            each -> value.equals(function.valueOf(each)));
 }
 ```
 
@@ -142,14 +143,14 @@ default <V> boolean collectContains(
 
 让我看看使用三元运算符是什么样子的。
 
-```
+```java
 default <V> boolean collectContains(
         Function<? super T, ? extends V> function,
         V value)
 {
         return this.anySatisfy(null == value ?
-                each -> null == *function*.valueOf(each) :
-                each -> *value*.equals(*function*.valueOf(each)));
+                each -> null == function.valueOf(each) :
+                each -> value.equals(function.valueOf(each)));
 }
 ```
 
@@ -161,36 +162,36 @@ default <V> boolean collectContains(
 
 **2020 年 7 月 23 日更新**:我今天想到了一个更简单的解决方案，更新如下。
 
-```
+```java
 default <V> boolean containsBy(
         Function<? super T, ? extends V> function,
         V value)
 {
-    Objects.*requireNonNull*(function);
+    Objects.requireNonNull(function);
     return this.anySatisfy(
-            each -> Objects.*equals*(*value*, *function*.valueOf(each)));
+            each -> Objects.equals(value, function.valueOf(each)));
 }
 ```
 
 这将导致测试中的代码如下所示。
 
-```
+```java
 @Test
 public void containsBy()
 {
     MutableList<Pair<Integer, String>> list =
-            Lists.***mutable***.with(
-                    Tuples.*pair*(1, **"1"**),
-                    Tuples.*pair*(2, **"2"**),
-                    Tuples.*pair*(3, null));
+            Lists.mutable.with(
+                    Tuples.pair(1, "1"),
+                    Tuples.pair(2, "2"),
+                    Tuples.pair(3, null));
 
-    Assert.*assertTrue*(
-            list.containsBy(Pair::getTwo, **"2"**));
-    Assert.*assertFalse*(
-            list.containsBy(Pair::getTwo, **"3"**));
-    Assert.*assertTrue*(
+    Assert.assertTrue(
+            list.containsBy(Pair::getTwo, "2"));
+    Assert.assertFalse(
+            list.containsBy(Pair::getTwo, "3"));
+    Assert.assertTrue(
             list.containsBy(Pair::getTwo, null));
-    Assert.*assertFalse*(
+    Assert.assertFalse(
             list.containsBy(Pair::getOne, null));
 }
 ```
@@ -201,22 +202,22 @@ public void containsBy()
 
 </javarevisited/by-yourself-some-time-e16c0f488847>  
 
-# 那么该不该加这个方法呢？
+## 那么该不该加这个方法呢？
 
-我认为我们应该将`containsBy`添加到 [Eclipse 集合](https://github.com/eclipse/eclipse-collections) `[RichIterable](https://www.eclipse.org/collections/javadoc/10.2.0/org/eclipse/collections/api/RichIterable.html)`类型中。这是一种常见的模式，其好处将大大超过实施和支持成本。除了添加一些额外的测试之外，没有什么需要做的，所以我可能很快就会提交一个 pull 请求。
+我认为我们应该将`containsBy`添加到 [Eclipse 集合](https://github.com/eclipse/eclipse-collections) `RichIterable`类型中。这是一种常见的模式，其好处将大大超过实施和支持成本。除了添加一些额外的测试之外，没有什么需要做的，所以我可能很快就会提交一个 pull 请求。
 
-# 我们能把这个加入 Java 流吗？
+## 我们能把这个加入 Java 流吗？
 
 答案既是“当然”，也是“看情况”。我不认为我们今天可以在`Stream`上调用`contains`，因为它不存在。你自己看看吧。您当然可以使用`anyMatch`实现相同的代码。最大的问题是，这种方法是否被认为有足够高的价值来增加 JDK。方法名可以是`mapContains`或`containsBy`，也可以简单到将这个默认方法添加到流中。
 
-```
+```java
 default <V> boolean containsBy(
         Function<? super T, ? extends V> function,
         V value)
 {
-    Objects.*requireNonNull*(function);
+    Objects.requireNonNull(function);
     return this.anyMatch(
-            each -> Objects.*equals*(*value*, *function*.apply(each)));
+            each -> Objects.equals(value, function.apply(each)));
 }
 ```
 

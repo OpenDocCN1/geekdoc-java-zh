@@ -1,24 +1,11 @@
+
 # Java 10：Java2D，窗口绘图
-
-
-
-
-
-
-
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_0_0.png)
 
-
-
-
-
 由 Ove Thomsen, EA Dania 审阅
 
-在 bookboon.com 免费免费电子书
-
-
-
+在 bookboon.com 免费电子书
 
 - 序言 7
 
@@ -32,26 +19,19 @@
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_3_1.png)
 
-在 bookboon.com 免费免费电子书
-
-
+在 bookboon.com 免费电子书
 
 - 练习 7 48
 - 练习 8 49
 - 练习 9 58
-
-
-
 - 12.2 测试程序 177
 - 12.3 缺失与可以改进的地方 178
 
-
 # 序言
 
-本书是软件开发系列书籍中的第本。编程语言是 Java，该语言及其语法和语义显然涵盖了大量内容，但这些书很大程度上也关注开发过程以及如何开发良好且健壮的应用程序。在之前的书中，我相对详细地介绍了 Swing，而本书的主题是 Java2D，它是 Java 开发具有图形用户界面（GUI）应用程序的另一部分。人们也可以将 Java2D 视为 Swing 在窗口中绘制组件的图形工具。本书内容相对详尽，解决了一些在日常编程中并不经常使用的问题，但当然，示例以及问题对于理解 GUI 是如何工作的。这与该系列中的其他几本书相似，重点在于 Java 语言而非开发过程，只有最后一个示例关注于使用 Java 类库进行系统开发。本书假设读者已具备与 Java 3 和 4 书相应的 Java 知识，并且在某种程度上具备与 Java 2 书相应的 Swing 知识。
+本书是软件开发系列书籍中的一本。编程语言是 Java，该语言及其语法和语义显然涵盖了大量内容，但这些书很大程度上也关注开发过程以及如何开发良好且健壮的应用程序。在之前的书中，我相对详细地介绍了 Swing，而本书的主题是 Java2D，它是 Java 开发具有图形用户界面（GUI）应用程序的另一部分。人们也可以将 Java2D 视为 Swing 在窗口中绘制组件的图形工具。本书内容相对详尽，解决了一些在日常编程中并不经常使用的问题，但当然，示例以及问题对于理解 GUI 是如何工作的。这与该系列中的其他几本书相似，重点在于 Java 语言而非开发过程，只有最后一个示例关注于使用 Java 类库进行系统开发。本书假设读者已具备与 Java 3 和 4 书相应的 Java 知识，并且在某种程度上具备与 Java 2 书相应的 Swing 知识。
 
-正如标题所示，该系列书籍涉及软件开发，目标是教读者如何在 Java 中开发应用程序。可以通过阅读相关主题和学习示例程序来学习，但最重要的是亲自动实践并从头编写自己的程序。因此，书中一个重要部分是，系列中的所有书籍都围绕同一个骨架构建，并由自然嵌入的文本和示例组成。练习与问题之间的区别主要在于对文中介绍内容的重复。问题则更为困难，且很少有明确的解决方案。这些书应该从头到尾读完，但许多示例也很重要，读者应该预测代码。所有书籍都以一个或多个示例程序结束，这些程序主要关注开发过程，并展示了不同领域的程序开发。
-
+正如标题所示，该系列书籍涉及软件开发，目标是教读者如何在 Java 中开发应用程序。可以通过阅读相关主题和学习示例程序来学习，但最重要的是亲自动手实践并从头编写自己的程序。因此，书中一个重要部分是，系列中的所有书籍都围绕同一个骨架构建，并由自然嵌入的文本和示例组成。练习与问题之间的区别主要在于对文中介绍内容的重复。问题则更为困难，且很少有明确的解决方案。这些书应该从头到尾读完，但许多示例也很重要，读者应该预测代码。所有书籍都以一个或多个示例程序结束，这些程序主要关注开发过程，并展示了不同领域的程序开发。
 
 大多数书籍末尾还带有一个附录，处理书中未涉及的主题。它是关于其他主题，这些主题对于具备入门级知识是必要的。如果读者已经熟悉该主题，可以跳过当前的附录。如提到的，编程语言以及书籍还使用了以下工具：
 
@@ -59,30 +39,24 @@
 - MySQL 作为数据库服务器（从 Java 6 开始）
 - GlassFish 作为 Web 服务器和应用服务器（从 Java 6 开始）
 
-
 # 引言
 
 当你编写具有图形界面的程序时，AWT 及其子包最初包含了类，这些类可以被视为两层：界面工具包和绘图工具包。第一层由组件的类组成，后来（从 Java 2 开始）AWT 被拆分为两个 API，即 Swing 和 Java2D。本书涉及 Java2D 以及如何在 Java 中处理二维图形和图像。与其他 Java API 包含了大量的类，但总体这些类用于：
 
-- 1. 形状：你可以组合直线、曲线、矩形、椭圆和弧创建任意几何形状。
-- 2. 描边：定义线条如何以宽度、虚线或实线方式绘制。此外，你还可以指定转角的绘制方式。
-- 3. 填充：指定形状如何被填充。你可以指定颜色、图案或渐变填充，事实上你还可以使用图像。
-- 4. 变换：所有绘制的内容（形状、图像、文本）都可以进行拉伸、缩放和旋转。
-- 5. Alpha 合成是将绘制与背景结合以创建部分透明或全透明的图形。
-- 6. 裁剪是限制绘制形状的部分，以便不在窗口不需要的区域进行绘制。
-- 7. 抗锯齿是一种避免锯齿线条的技术，在这种情况下你可以看到单个像素。
-- 8. 文本：你可以以与其他几何形状相同的方式处理文本。
-- 9. 颜色包含了表示颜色的类和方法，使其与硬件无关。
-- 10. 图像提供了以与其他几何形状相同的方式处理图像的能力。它还包括从文件读取图像和将图像保存到文件的类。
-- 11. 图像处理：包含了处理图像中单个像素的类。
-- 12. 动画：提供了可用服务的类，让你对几何形状、文本和图像进行动画处理。
+1. 形状：你可以组合直线、曲线、矩形、椭圆和弧创建任意几何形状。
+2. 描边：定义线条如何以宽度、虚线或实线方式绘制。此外，你还可以指定转角的绘制方式。
+3. 填充：指定形状如何被填充。你可以指定颜色、图案或渐变填充，事实上你还可以使用图像。
+4. 变换：所有绘制的内容（形状、图像、文本）都可以进行拉伸、缩放和旋转。
+5. Alpha 合成是将绘制与背景结合以创建部分透明或全透明的图形。
+6. 裁剪是限制绘制形状的部分，以便不在窗口不需要的区域进行绘制。
+7. 抗锯齿是一种避免锯齿线条的技术，在这种情况下你可以看到单个像素。
+8. 文本：你可以以与其他几何形状相同的方式处理文本。
+9. 颜色包含了表示颜色的类和方法，使其与硬件无关。
+10. 图像提供了以与其他几何形状相同的方式处理图像的能力。它还包括从文件读取图像和将图像保存到文件的类。
+11. 图像处理：包含了处理图像中单个像素的类。
+12. 动画：提供了可用服务的类，让你对几何形状、文本和图像进行动画处理。
 
-
-
-
-
-
-本书的其余部分将通过大量的示例处理上述 12 个项目，但首先我想向你们展示一个程序。该程序名为 HelloJava2D，如果你运行该程序，它会打开一个如下所示的窗口。该窗口绘制了线条直线、一个矩形和一个大字母 A。窗口的代码如下：
+本书的其余部分将通过大量的示例处理上述 12 个项目，但首先我想向你们展示一个程序。该程序名为 `HelloJava2D`，如果你运行该程序，它会打开一个如下所示的窗口。该窗口绘制了线条直线、一个矩形和一个大字母 A。窗口的代码如下：
 
 ```java
 package hellojava2d;
@@ -106,10 +80,9 @@ public class MainWindow extends JFrame {
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_9_0.png)
 
-
 # 引言
 
-代码中唯一发生的事情是添加了一个类型为 `Drawing()` 的组件。由于 `JFrame` 有默认的边界布局器（BorderLayout），该组件会自动填充整个窗口。该组件的定义如下：
+代码中唯一发生的事情是添加了一个类型为 `Drawing()` 的组件。由于 `JFrame` 有默认的边界布局器（`BorderLayout`），该组件会自动填充整个窗口。该组件的定义如下：
 
 ```java
 class Drawing extends JComponent
@@ -144,7 +117,6 @@ g2d.setColor(Color.gray);
 g2d.draw(new Line2D.Double(10, 400, 490, 400));
 ```
 
-
 接下来的两个语句定义了两个几何形状，分别为一条线和一个矩形：
 
 ```java
@@ -169,7 +141,6 @@ g2d.fill(rect);
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_11_0.png)
 
-
 # 引言
 
 最后三个语句说明了颜色应该是蓝色，使用 350 号加粗字体绘制，最后绘制了大字母 A：
@@ -182,31 +153,23 @@ g2d.drawString("A", 200, 400);
 
 当然，人们不知道语句应该这样写，但当你看到这些语句时，它们很容易理解。
 
-
 编写一个调用 Java2D 的程序。该程序打开一个如下所示的窗口：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_12_0.png)
 
 三角形可以用同样的方式绘制。尝试找到一个圆。
 
-
-
 在处理示例之前，我想简单谈谈 Java2D。窗口的渲染是基于像素的，你可以由此绘制一个精确的圆（可以看到）。渲染过程由几个步骤组成，顺序如下：
 
 - 合成
 
-
 # 引言
 
-当需要渲染给定的图形时（例如在屏幕上），这是一种近似，形状并不一定精确。屏幕使用点（像素）表示形状，你可以由此绘制一个精确的圆（可以看到）。为了确定必须属于特定形状的点，计算机采用两种方法之一。默认是锯齿（aliasing），即位于图形内的点会被染色。也就是说，单个像素要么是图形的一部分，要么不是。结果是边缘会出现锯齿现象。锯齿的优点是绘制形状既有效又快速，在大多数情况下结果都是完全令人。另一种方法称为抗锯齿（antialiasing），在这里计算机为每个像素确定图形与当前像素的交集。像素根据其作为图形部分的程度来决定着色饱和。结果是线条和弧形处不再以同样的程度出现锯齿。同样注意文本的差异。抗锯齿的缺点当然，它是一个全面的渲染过程，需要进行大量的计算。
+当需要渲染给定的图形时（例如在屏幕上），这是一种近似，形状并不一定精确。屏幕使用点（像素）表示形状，你可以由此绘制一个精确的圆（可以看到）。为了确定必须属于特定形状的点，计算机采用两种方法之一。默认是锯齿（aliasing），即位于图形内的点会被染色。也就是说，单个像素要么是图形的一部分，要么不是。结果是边缘会出现锯齿现象。锯齿的优点是绘制形状既有效又快速，在大多数情况下结果都是完全令人满意的。另一种方法称为抗锯齿（antialiasing），在这里计算机为每个像素确定图形与当前像素的交集。像素根据其作为图形部分的程度来决定着色饱和。结果是线条和弧形处不再以同样的程度出现锯齿。同样注意文本的差异。抗锯齿的缺点当然，它是一个全面的渲染过程，需要进行大量的计算。
 
 下面窗口的代码如下，你主要需要注意如何指定 `Graphics2D` 对象必须使用抗锯齿：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_15_0.png)
-
-
-
-
 
 # 引言
 
@@ -280,6 +243,8 @@ public class MainWindow extends JFrame {
 }
 ```
 
+
+
 ```java
 class Drawing extends JComponent {
     public void paintComponent(Graphics g) {
@@ -311,16 +276,15 @@ class Drawing extends JComponent {
 }
 ```
 
-如果你测试该程序，请注意线条和矩形都遵循窗口的大小。在处理 Java2D 以及通用的计算机图形时，你拥有一个坐标系。窗口的左上角是 (0,0)，x 轴向右延伸，而 y 轴向下。这是一个被称为*用户空间*（user space）的逻辑坐标系，当对象绘制在物理显示器或打印机上时，你有一个不同的坐标系，被称为*设备空间*（device space）。渲染需要从用户空间到设备的坐标转换，对于屏幕来说，这种转换通常是用户空间中的 1 个单位对应一个像素，但通常 72 个单位（用户空间中）转换为 1 英寸。
-
+如果你测试该程序，请注意线条和矩形都遵循窗口的大小。在处理 Java2D 以及通用的计算机图形时，你拥有一个坐标系。窗口的左上角是 `(0,0)`，`x` 轴向右延伸，而 `y` 轴向下。这是一个被称为“用户空间”（user space）的逻辑坐标系。当对象绘制在物理显示器或打印机上时，你有一个不同的坐标系，被称为“设备空间”（device space）。渲染需要从用户空间到设备空间的坐标转换。对于屏幕来说，这种转换通常是用户空间中的 1 个单位对应一个像素，但通常 72 个单位（用户空间中）转换为 1 英寸。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_19_0.png)
 
-你必须编写一个程序（我的解决方案称为 *AlphaValue*），打开如所示的窗口，其中绘制了一个正方形和一个圆形。顶部有一个滑块，如果你移动滑块，图形应该被一个绿色矩形覆盖，最终覆盖整个图形：
+你必须编写一个程序（我的解决方案称为 `AlphaValue`），打开如所示的窗口，其中绘制了一个正方形和一个圆形。顶部有一个滑块，如果你移动滑块，图形应该被一个绿色矩形覆盖，最终覆盖整个图形：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_20_0.png)
 
-你必须为滑块关联一个事件处理程序，当滑块移动时重绘组件。如果 Drawing 指向带有图形的组件，事件处理程序可以定义如下内部类：
+你必须为滑块关联一个事件处理程序，当滑块移动时重绘组件。如果 `Drawing` 指向带有图形的组件，事件处理程序可以定义如下内部类：
 
 ```java
 private class ChangeHandler implements ChangeListener {
@@ -330,42 +294,35 @@ private class ChangeHandler implements ChangeListener {
 }
 ```
 
+在本章中，我将展示如何定义和绘制几何图形，就像上面例子中的矩形。它的类型是 `Rectangle2D`，但它是一个抽象类，有两个具体的派生类，分别为 `Rectangle2D.Float` 和 `Rectangle2D.Double`。区别在于图形的属性，以及它们是用 `float` 还是 `double` 定义。这种模式适用于所有的 `Shape` 对象。
 
-在本章中，我将展示如何定义和绘制几何图形，就像上面例子中的矩形。它的类型是 Rectangle2D，但它是一个抽象类，有两个具体的派生类，分别为 Rectangle2D.Float 和 Rectangle2D.Double。区别在于图形的属性以及它们是用 float 还是 double 定义。这种模式适用于所有的 Shape 对象。
-
-有一个辅助类 Point2D（以及 Point2D.Float 和 Point2D.Double）表示一个点。Point2D 对象没有尺寸且无法渲染，仅用于定义其他对象的属性。基本几何类如图，它们都由一个名为 Shape 的通用接口定义。该接口定义了几个方法：
-
+有一个辅助类 `Point2D`（以及 `Point2D.Float` 和 `Point2D.Double`）表示一个点。`Point2D` 对象没有尺寸且无法渲染，仅用于定义其他对象的属性。基本几何类如图，它们都由一个名为 `Shape` 的通用接口定义。该接口定义了几个方法：
 
 > 加入 MITAS 是因为我想要真正的责任
 
-面向工程师和地质科学家的毕业生计划
+## 面向工程师和地质科学家的毕业生计划
+
 www.discovermitas.com
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_21_0.png)
 
-第16个月
+### 第16个月
+
 我在海上担任施工主管，指导并帮助工头解决问题。
 
-真实工作
-国际机会
-三次实习
+- 真实工作
+- 国际机会
+- 三次实习
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_21_1.png)
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_22_0.png)
 
-
-最后四个易于使用，主要区别在于创建对象时需要输入的参数。通常一个图形由矩形定义，即边界矩形，它指示了左上角坐标、宽度和高度。程序 Figures 打开如下窗口：
+最后四个易于使用，主要区别在于创建对象时需要输入的参数。通常一个图形由矩形定义，即边界矩形，它指示了左上角坐标、宽度和高度。程序 `Figures` 打开如下窗口：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_22_1.png)
 
-
-
-
-
-
 对于 `Rectangle2D` 和 `Ellipse2D` 类型，没有什么好说的，但对于 `RoundRectangle2D`，你必须指定外接矩形以及圆角的圆角方式——实际上是通过矩形的宽度和高度来实现。接着是绿色形状，它是 `Arc2D`。首先你必须定义外接矩形，除了矩形外，还必须指定形状所属的角度（以度为单位）、范围从哪里开始以及范围跨越多大。最后，你必须指定切片的显示方式，有以下选项：
-
 
 上述窗口的代码为：
 
@@ -381,16 +338,16 @@ import javax.swing.*;
 
 因为实现梦想是您最大的挑战，IE 商学院提供英语、西班牙语或双语教学的管理学硕士，通过一项创新且具有启发性的计划，培训处于职业生涯初期的高性能专业人士，帮助他们发挥全部潜力。
 
->>>> 选择您的专业领域。
->> 通过所提供的不同选项定制您的硕士学位。
->> 在伦敦、里斯本或上海等地点进行全球沉浸学习。
+- 选择您的专业领域。
+- 通过所提供的不同选项定制您的硕士学位。
+- 在伦敦、里斯本或上海等地点进行全球沉浸学习。
 
 由于您的改变，我们也随之而改变。
 
-www.ie.edu/master-management mim.admissions@ie.edu
+www.ie.edu/master-management  
+mim.admissions@ie.edu
 
 在 bookboom.com 下载免费电子书
-
 
 ```java
 public class MainWindow extends JFrame {
@@ -426,14 +383,11 @@ private void draw(Graphics2D g, Shape shape, Color color) {
 }
 ```
 
-
-复制上述项目，它会打开一个包含四个图形的窗口。你必须修改程序，使得当你点击形状时，会弹出一个下所示的消息框，告诉你点击了哪个图形。注意，你唯一需要的是添加一个鼠标点击事件处理器，用以判断是否点击了图形，如果是，点击的是什么。
+复制上述项目，它会打开一个包含四个图形的窗口。你必须修改程序，使得当你点击形状时，会弹出一个如下所示的消息框，告诉你点击了哪个图形。注意，你唯一需要的是添加一个鼠标点击事件处理器，用以判断是否点击了图形，如果是，点击的是什么。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_24_0.png)
 
 在 bookoon.com 下载免费电子书
-
-
 
 我们将查看 `Line2D`、`QuadCurveD` 和 `CubicCurveD` 三种类型，它们都代表一条线段。`Line2D` 表示两点之间的直线，没什么好解释的。要创建一个 `Line2D` 对象，必须指定端点。
 
@@ -443,8 +397,7 @@ private void draw(Graphics2D g, Shape shape, Color color) {
 
 如果你需要创建 `QuadCurveD`，则必须指定三个点。`CubicCurveD` 原则上相同，但这里对于两个端点有两个控制点：
 
-![](img/6c4faa569f96988b2c15c2a84619323_25_1.png)
-
+![](img/6c4faa569f96988b2c15c2a846193c23_25_1.png)
 
 必须指定四个点来创建 `CubicCurveD`。你可以看到这些曲线的结果。下面的程序打开了一个窗口，如下。蓝色的曲线是 `Cubic2D`，而红色的是 `Quad2D`。除了端点外，绘制还显示了控制点以及切线，程序的目的是让你通过鼠标拖动其中一个点，观察当改变端点或控制点时会发生什么。窗口的代码如下，主要展示了如何分别创建 `CubicCurveD` 和 `Quad2D`：
 
@@ -458,7 +411,6 @@ import javax.swing.*;
 ```
 
 ![](img/6c4faa569f96988b2c15c2a84619323_26_0.png)
-
 
 ```java
 public class MainWindow extends JFrame {
@@ -492,7 +444,7 @@ class Drawing extends JComponent {
     public void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
         g2d.setRenderingHint(
-            RenderingHints.KEY_ANTIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setColor(Color.gray);
         g2d.draw(new Line2D.Double(points[0], points[1]));
         g2d.draw(new Line2D.Double(points[2], points[3]));
@@ -543,7 +495,6 @@ class Drawing extends JComponent {
 }
 ```
 
-
 ![](img/6c4faa569f96988b2c15c2a846193c23_29_0.png)
 
 在以下地提供优秀的经济学和商学课程：
@@ -552,7 +503,7 @@ class Drawing extends JComponent {
 
 > “成功的国际职业的完美起点。”
 
-点击此处发现为什么格罗宁根大学在社交和学术上都是学生最理想的地方之一
+点击此处发现为什么格罗宁根大学在社交和学术上都是学生最理想的地方之一。
 
 www.rug.nl/feb/education
 
@@ -564,41 +515,36 @@ www.rug.nl/feb/education
 
 
 
-
-
-
-
-创建项目 `Curves` 的副本并修改程序，使得在拖动点时，窗口底部会显示鼠标坐标，并且这两条曲线必须用较粗的线条绘制。这意味着在绘制曲线时，你必须使用一个 `Stroke` 对象，例如：
+创建项目`Curves`的副本并修改程序，使得在拖动点时，窗口底部会显示鼠标坐标，并且这两条曲线必须用较粗的线条绘制。这意味着在绘制曲线时，你必须使用一个`Stroke`对象，例如：
 
 ```java
 private Stroke stroke3 = new BasicStroke(3);
 ```
 
-为了显示鼠标坐标，你可以在窗口底部添加一个 `JLabel` 组件，并在每次拖动其中一个点时更新它。
+为了显示鼠标坐标，你可以在窗口底部添加一个`JLabel`组件，并在每次拖动其中一个点时更新它。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_30_0.png)
 
-
-编写一个名为 `StraightLines` 的程序，运行后会打开下面所示的窗口。滑块应该代表从 0 到 100 的值，并从 25 开始。窗口必须绘制由滑块指示的直线数量，并在六种颜色之间交替。线条从左上角起始到窗口底部的一个点，底部被分为由滑块决定的数量个点。同样，线条从右下角起始到左边缘的一个点，左边缘划分的点数对应于滑块的值。
+编写一个名为`StraightLines`的程序，运行后会打开下面所示的窗口。滑块应该代表从 0 到 100 的值，并从 25 开始。窗口必须绘制由滑块指示的直线数量，并在六种颜色之间交替。线条从左上角起始到窗口底部的一个点，底部被分为由滑块决定的数量个点。同样，线条从右下角起始到左边缘的一个点，左边缘划分的点数对应于滑块的值。
 
 JAVA 10: JAVA2D，窗口绘图与图像处理形状
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_31_0.png)
 
-
-`GeneralPath` 类通过多个点来定义形状，其中每个点都可以是 `Line2D`、`QuadCurve2D` 或 `CubicCurve2D` 类型的线。`GeneralPath` 定义了一个任意形状，该形状不一定是封闭或连贯的。你可以这样理解这种形状：你用画笔绘制它，并且你可以做两件事：
+`GeneralPath`类通过多个点来定义形状，其中每个点都可以是`Line2D`、`QuadCurve2D`或`CubicCurve2D`类型的线。`GeneralPath`定义了一个任意形状，该形状不一定是封闭或连贯的。你可以这样理解这种形状：你用画笔绘制它，并且你可以做两件事：
 
 - 1. 你可以抬起笔并移动到某个点。
 - 2. 你可以从画笔所在的位置画一条线到另一个点。
 
-为此，你使用了这些方法：`moveTo()`、`lineTo()`、`quadTo()`、`cubicTo()` 和 `closePath()`。
+为此，你使用了这些方法：`moveTo()`、`lineTo()`、`quadTo()`、`cubicTo()`和`closePath()`。
 
-下面的窗口显示了三个 `GeneralPath` 类型的形状，其中红色部分由三个线段、一个二次贝曲线段和一个三次贝曲线段组成。另外两个形状完全由线段组成：
+下面的窗口显示了三个`GeneralPath`类型的形状，其中红色部分由三个线段、一个二次贝曲线段和一个三次贝曲线段组成。另外两个形状完全由线段组成：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_32_0.png)
 
 美国在线
-LIGS 大学正在招生在线 BBA、MBA、MSc、DBA 和博士 项目：
+
+LIGS 大学正在招生在线 BBA、MBA、MSc、DBA 和博士项目：
 
 - 在 2014 年 9 月 30 日前入学即可
 - 学费最高可节省 16%！
@@ -608,15 +554,13 @@ LIGS 大学正在招生在线 BBA、MBA、MSc、DBA 和博士 项目：
 
 LIGS 大学未获得美国教育部长列出的任何国家认可的认证机构的认证。更多信息见此处。
 
-
-通常，创建一个 `GeneralPath` 非常简单，只有一件事是很复杂的，那就是确定形状的内部。如果形状被简单的封闭曲线（如红色部分）围绕，那么没什么疑问的；但如果形状是由交叉的线条形成的，情况就会变得复杂，且它可以通过两种方式发生，你通过构造函数的参数来指定它。如果你考虑蓝色图形，它被定义为 `GeneralPath.WIND_EVEN_ODD`。直线将此形状分为若干个封闭区域（在本例中为五个）。如果你必须判断这些区域中哪些属于该图形，你可以画一条穿过图形区域的直线：
+通常，创建一个`GeneralPath`非常简单，只有一件事是很复杂的，那就是确定形状的内部。如果形状被简单的封闭曲线（如红色部分）围绕，那么没什么疑问的；但如果形状是由交叉的线条形成的，情况就会变得复杂，且它可以通过两种方式发生，你通过构造函数的参数来指定它。如果你考虑蓝色图形，它被定义为`GeneralPath.WIND_EVEN_ODD`。直线将此形状分为若干个封闭区域（在本例中为五个）。如果你必须判断这些区域中哪些属于该图形，你可以画一条穿过图形区域的直线：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_33_0.png)
 
-如果你从形状外部开始并沿着线条移动，每通过一个线段时计数器加 1，那么规则是：如果计数器为奇数，则该区域属于图形；如果计数器为偶数，则不属于。绿色图形被定义为 `GeneralPath.WIND_NON_ZERO`（顺便说这是默认值）。如果你要判断图形的一部分是否属于，可以类似地画一条交叉图形区域的线。当线交叉图形的一个线段时，规则是：如果线段是从左到右绘制的，计数器加 1；如果线段是从右到左绘制的，计数器减 1。属于图形的区域即计数器不为 0 的区域。
+如果你从形状外部开始并沿着线条移动，每通过一个线段时计数器加 1，那么规则是：如果计数器为奇数，则该区域属于图形；如果计数器为偶数，则不属于。绿色图形被定义为`GeneralPath.WIND_NON_ZERO`（顺便说这是默认值）。如果你要判断图形的一部分是否属于，可以类似地画一条交叉图形区域的线。当线交叉图形的一个线段时，规则是：如果线段是从左到右绘制的，计数器加 1；如果线段是从右到左绘制的，计数器减 1。属于图形的区域即计数器不为 0 的区域。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_33_1.png)
-
 
 程序的代码如下：
 
@@ -691,7 +635,7 @@ class Drawing extends JComponent {
 - 5-12岁儿童免费数字学习
 - 已覆盖1500万儿童
 
-除了使用线段创建 `GeneralPath`，你还可以由其他形状组合创建一个 `GeneralPath`。下面的窗口显示了一个绘制三角形的 `GeneralPath`，但它由另一个 `GeneralPath`（也代表三角形）和一个 `Rectangle2D` 组成。如果你点击三个形状中的任何一个，就会弹出一个对话框，目标是展示这三个都是同一个 `Shape` 对象的一部分。
+除了使用线段创建`GeneralPath`，你还可以由其他形状组合创建一个`GeneralPath`。下面的窗口显示了一个绘制三角形的`GeneralPath`，但它由另一个`GeneralPath`（也代表三角形）和一个`Rectangle2D`组成。如果你点击三个形状中的任何一个，就会弹出一个对话框，目标是展示这三个都是同一个`Shape`对象的一部分。
 
 ```java
 package triangles;
@@ -710,12 +654,8 @@ public class MainWindow extends JFrame {
     }
 }
 ```
-（注：此处 Drawing 类代码不完整，已根据原文结构进行翻译）
 
-
-
-
-
+（注：此处`Drawing`类代码不完整，已根据原文结构进行翻译）
 
 ```java
 class Drawing extends JComponent
@@ -764,16 +704,18 @@ class Drawing extends JComponent
 ```
 
 # 练习 6
-编写一个程序，你可以调用 `Polygons`，它必须打开一个所示的窗口（其中下方的形状不是多边形）。这三个形状都应该被定义为 `GeneralPath`，其中底部由两个二次线段（quad segments）定义。最后，如果你点击这三个图形中的一个，你应该会得到一个消息框，告诉你点击的是哪一个形状：
+
+编写一个程序，你可以调用`Polygons`，它必须打开一个所示的窗口（其中下方的形状不是多边形）。这三个形状都应该被定义为`GeneralPath`，其中底部由两个二次线段（quad segments）定义。最后，如果你点击这三个图形中的一个，你应该会得到一个消息框，告诉你点击的是哪一个形状：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_38_0.png)
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_38_1.png)
+
 ![](img/6c4faa569f96988b2c15c2a846193c23_39_0.png)
 
-几何形状的最后一个类是 `Area`。它是一种结合了一个或多个形状的类型，但你可以指定它们如何重叠。
+几何形状的最后一个类是`Area`。它是一种结合了一个或多个形状的类型，但你可以指定它们如何重叠。
 
-下面的窗口绘制了一个圆和一个正方形，它们重叠在一起。这些图形用于通过 `Area` 对象定义其他四个图形。在这里你应该注意这四个方法，它们通过平移图形对象来创建它们在窗口中的位置。这是通过变换实现的，变换将在后文中讨论，但在本中，图形是通过简单的平移放置的。
+下面的窗口绘制了一个圆和一个正方形，它们重叠在一起。这些图形用于通过`Area`对象定义其他四个图形。在这里你应该注意这四个方法，它们通过平移图形对象来创建它们在窗口中的位置。这是通过变换实现的，变换将在后文中讨论，但在本中，图形是通过简单的平移放置的。
 
 ```java
 package areaprogram;
@@ -792,8 +734,6 @@ public class MainWindow extends JFrame {
     }
 }
 ```
-
-
 
 ```java
 class Drawing extends JComponent
@@ -858,6 +798,8 @@ Shape shape2, int x, int y)
 }
 ```
 
+
+
 ```java
 private void exclusive(Graphics2D g, Shape shape,
 Shape shape2, int x, int y)
@@ -874,10 +816,6 @@ Shape shape2, int x, int y)
 ```
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_40_0.png)
-
-
-
-
 
 # JAVA 10: JAVA2D, 窗口绘制以及图像处理填充与描边
 
@@ -987,10 +925,6 @@ class Drawing extends JComponent {
 }
 ```
 
-
-
-
-
 # JAVA 10: JAVA2D，窗口绘制与图像处理
 
 除了演示如何从零开始创建一个 `BufferedImage` 之外，该示例还展示了图形本身的轮廓是一个 `Shape` 对象，可以使用 `Paint` 对象（通过 `draw()` 方法）进行填充。
@@ -1000,6 +934,7 @@ class Drawing extends JComponent {
 在上面的示例中，我展示了如何定义一个 `BasicStroke` 对象，并说明了绘制线条的厚度。默认值为 1。然而，关于描边，有两点是你必须掌握的：
 
 - 线段端点应该是什么样的
+
 - 线段是如何组合在一起的，从而决定了角必须如何处理的
 
 这些概念仅在你需要绘制粗线时才会有意义。最后，人们必须知道如何绘制虚线。下面的窗口显示了大多数可用选项：
@@ -1011,6 +946,7 @@ class Drawing extends JComponent {
 知识工程的力量
 
 接入知识工程的力量，
+
 访问我们的网站 www.skf.com/knowledge
 
 在 bookboom.com 下载免费电子书
@@ -1025,17 +961,21 @@ JAVA 10: JAVA2D，窗口绘制与图像处理
 
 关于线条描边（`Stroke`），端点有三种可能性：
 
-1. BasicStroke.CAP_SQUARE（默认值）
-2. BasicStroke.CAP_ROUND
-3. BasicStroke.CAP_BUTT
+1. `BasicStroke.CAP_SQUARE`（默认值）
+
+2. `BasicStroke.CAP_ROUND`
+
+3. `BasicStroke.CAP_BUTT`
 
 第一条线（黑色）使用默认值绘制，否则描边宽度为 19。此外，还绘制了一个该线条的外接矩形。关于端点，样式是 `CAP_SQUARE`，它通过一个长度为线条厚度一半的矩形来扩展线条。蓝线对应的端点是 `CAP_ROUND`，它通过一个半径为线条厚度一半的半圆来扩展线条。最后，绿线使用了 `CAP_BUT`，它简单地不扩展线条。
 
 右侧的三个图形都是 `GeneralPath` 类型，使用宽度为 19 的描边绘制，端点使用 `CAP_SQUARE` 选项，并且还定义了角如何绘制。同样，有三种选项：
 
-1. JOIN_MITER（默认值）
-2. JOIN_ROUND
-3. JOIN_BEVEL
+1. `JOIN_MITER`（默认值）
+
+2. `JOIN_ROUND`
+
+3. `JOIN_BEVEL`
 
 在 bookoon.com 下载免费电子书
 
@@ -1065,11 +1005,11 @@ new BasicStroke(3, BasicStroke.CAP_BUT, BasicStroke.JOIN_BEVEL, 0, new float[] {
 
 也就是说，先画一个长度为 5 的线段，然后是 10 的间隙，15 的线段，最后是 20 的间隙。然后重复该模式直到画完整条线。代码如下所示：
 
-```
+```java
 class Drawing extends JComponent {
   public void paintComponent(Graphics g) {
     Graphics2D g2d = (Graphics2D)g;
-    g2d.setRenderingHint(RenderingHints.VALUE_ANTIASING,
+    g2d.setRenderingHint(RenderingHints.VALUE_ANTIALIASING,
     draw(g2d, 20, 20, 120, 170, BasicStroke(19), Color.black, true);
     draw(g2d, 20, 120, 170, BasicStroke(19), BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL), Color.blue, true);
     draw(g2d, 20, 220, 170, BasicStroke(19), BasicStroke.CAP_BUT, BasicStroke.JOIN_BEVEL), Color.green, true);
@@ -1111,12 +1051,16 @@ class Drawing extends JComponent {
 无论你对未来职业有什么期望，一个业务广泛的雇主将是你的入场券。在沃尔沃集团工作意味着在全球80多个国家拥有15万名朋友和同事。我们提供极佳的职业机会——请访问我们的网站 www.volvogroup.com。期待您的加入！
 
 VOLVO (pub)
+
 AB Volvo (pub)
 
 VOLVO TRUCKS | HEMANT TRUCKS | MACH TRUCKS | VOLVO BUSES | VOLVO CONSTRUCTION EQUIPMENT | VOLVO PENS | VOLVO AERO | VOLVO IT
+
+
+
 VOLVO FREIGHT SOLUTIONS | VOLVO 3P | VOLVO PERFORMANCE | VOLVO PARTS | VOLVO TECHNOLOGY | VOLVOISTICS | BUSINESS AREA INDIA
 
-在 bookboom.com 下载免费电子书
+在 `bookboom.com` 下载免费电子书
 
 ## 练习 9
 
@@ -1124,7 +1068,7 @@ VOLVO FREIGHT SOLUTIONS | VOLVO 3P | VOLVO PERFORMANCE | VOLVO PARTS | VOLVO TEC
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_57_0.png)
 
-在 bookboom.com 下载免费电子书
+在 `bookboom.com` 下载免费电子书
 
 JAVA 10: JAVA2D，窗口绘制与图像处理
 
@@ -1164,10 +1108,6 @@ void transform(AffineTransform Tx)
 
 `TranslateDemo` 程序打开一个如下所示的窗口。另外三个是相同的矩形，但在绘制完第一个矩形后，对图形（绘制表面）进行了平行位移。这看起来很简单，但如果你进行了多次变换（如本所示），结果可能很难理解。组件的代码如下，它也展示了平行位移可以通过多种方式定义：
 
-
-
-
-
 # JAVA 10: JAVA2D, 窗口绘制与图像处理渲染
 
 ## 渲染
@@ -1206,7 +1146,7 @@ class Drawing extends JComponent
 g2d.translate(100, 50);
 ```
 
-并用红色绘制矩形。这是在 x 轴方向平移 100，在 y 轴方向平移 50 的平行移动。这意味着坐标系的起点（左上角）被移动到了 (100, 50)。你需要注意的是，在执行该方法后，Graphics2D 对象的 `AffineTransform` 发生了变化。由于下一步是对当前的 `AffineTransform` 进行 (100, 50) 的平行平移，这被用于修改 g2d 对象的变换，这次使用了蓝色。结果并不完全显而易见，因为这是一个复合变换。首先执行平行平移 (100, 50)，它将当前起点 (100, 50) 移动到 (200, 100)。接着执行第一次变换，它也是一次平行平移 (100, 50)，将起点 (200, 100) 移动到 (300, 150)。结果是蓝色矩形的左上角位于 (320, 170)。在绘制完蓝色矩形后，变换重置为默认值，并使用 `AffineTransform` 类中的静态方法定义了一个新的平行平移。结果是一个绿色矩形。
+并用红色绘制矩形。这是在 x 轴方向平移 100，在 y 轴方向平移 50 的平行移动。这意味着坐标系的起点（左上角）被移动到了 (100, 50)。你需要注意的是，在执行该方法后，`Graphics2D` 对象的 `AffineTransform` 发生了变化。由于下一步是对当前的 `AffineTransform` 进行 (100, 50) 的平行平移，这被用于修改 `g2d` 对象的变换，这次使用了蓝色。结果并不完全显而易见，因为这是一个复合变换。首先执行平行平移 (100, 50)，它将当前起点 (100, 50) 移动到 (200, 100)。接着执行第一次变换，它也是一次平行平移 (100, 50)，将起点 (200, 100) 移动到 (300, 150)。结果是蓝色矩形的左上角位于 (320, 170)。在绘制完蓝色矩形后，变换重置为默认值，并使用 `AffineTransform` 类中的静态方法定义了一个新的平行平移。结果是一个绿色矩形。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_60_0.png)
 
@@ -1241,43 +1181,6 @@ class Drawing extends JComponent
         g2d.draw(rect1);
         g2d.draw(rect2);
         AffineTransform start = g2d.getTransform();
-        g2d.rotate(Math.  / 6); // 注意：此处原文可能有误，此处保持原意逻辑
-        g2d.draw(rect1);
-        g2d.rotate(Math.PI / 6, 200, 100);
-        g2d.draw(rect1);
-        g2d.setTransform(start);
-        g2d.rotate(-Math.PI / 2, 420, 220);
-        g2d.draw(rect2);
-    }
-}
-```
-*(注：根据翻译要求，代码块不翻译，但注意到原文代码块中存在 g2d.draw(rect2) 的重复或逻辑缺失，此处已按要求保留代码结构。修正逻辑后的代码代码块呈现如下：)*
-
-```java
-        AffineTransform start = g2d.getTransform();
-        g2d.rotate(Math.PI / 6);
-        g2d.draw(rect1);
-        g2d.rotate(Math.PI / 6, 200, 100);
-        g2d.draw(rect1);
-        g2d.setTransform(start);
-        g2d.rotate(-Math.PI / 2, 420, 220);
-        g2d.draw(rect2);
-```
-*(更正：严格遵循指令不翻译代码块，直接保留原文代码：)*
-
-```java
-class Drawing extends JComponent
-{
-    public void paintComponent(Graphics g)
-    {
-        Graphics2D g2d = (Graphics2D)g;
-        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        Rectangle2D rect1 = new Rectangle2D.Double(0, 0, 200, 100);
-        Rectangle2D rect2 = new Rectangle2D.Double(220, 120, 200, 100);
-        g2d.setPaint(Color.darkGray);
-        g2d.draw(rect1);
-        g2d.draw(rect2);
-        AffineTransform start = g2d.getTransform();
         g2d.rotate(Math.PI / 6);
         g2d.draw(rect1);
         g2d.rotate(Math.PI / 6, 200, 100);
@@ -1288,11 +1191,12 @@ class Drawing extends JComponent
     }
 }
 ```
-*(注：由于原文提供的代码块中存在 `g2d.draw(rect2)` 重复且逻辑不完整，翻译员严格保留原文代码内容。)*
 
 ## 缩放
 
-缩放是一种在水平和垂直方向上调整图形的大小。以下示例缩放了一个矩形：img/6c4faa569f96988b2c15c2a846193c23_63_0.png
+缩放是一种在水平和垂直方向上调整图形的大小。以下示例缩放了一个矩形：
+
+![](img/6c4faa569f96988b2c15c2a846193c23_63_0.png)
 
 ```java
 class Drawing extends JComponent
@@ -1344,10 +1248,6 @@ g2d.shear(1, 0);
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_65_0.png)
 
-
-
-
-
 # JAVA 10: JAVA2D, 窗口绘制与图像处理
 
 ```java
@@ -1375,11 +1275,13 @@ g2d.draw(rect);
 
 ## 4.2 混合 (COMPOSITING)
 
-混合是指将两个图像组合在一起的过程，并且每次绘制形状或图像时都会出现。如前所述，Graphics2D 代表一个绘制表面，每当你在这个表面上绘制某些文本或图像时，都会为绘制表面添加一个新元素。这在原理上通过三个操作完成：
+混合是指将两个图像组合在一起的过程，并且每次绘制形状或图像时都会出现。如前所述，`Graphics2D` 代表一个绘制表面，每当你在这个表面上绘制某些文本或图像时，都会为绘制表面添加一个新元素。这在原理上通过三个操作完成：
 
-- 1. 栅格化（Rasterizing）从从当前图形产生 alpha 值，你可以将其想象为一个像素网格，每个像素都有一个 alpha 值。原则上，这个网格对应整个绘制表面，在下文中被称为源（source）。相比之下，绘制表面被称为目标（destination）。
-- 2. 对于源中的每个像素，确定其颜色是基于 Graphics2D 对象使用的当前 Paint 还是来自一张图像。
-- 3. 源和目标（颜色和 alpha 值）逐像素组合，形成绘制表面上的图像。源和目的的组合是根据混合规则完成的，该规则精确规定了如何使用颜色和 alpha 值。
+1. 栅格化（Rasterizing）从当前图形产生 alpha 值，你可以将其想象为一个像素网格，每个像素都有一个 alpha 值。原则上，这个网格对应整个绘制表面，在下文中被称为源（source）。相比之下，绘制表面被称为目标（destination）。
+
+2. 对于源中的每个像素，确定其颜色是基于 `Graphics2D` 对象使用的当前 `Paint` 还是来自一张图像。
+
+3. 源和目标（颜色和 alpha 值）逐像素组合，形成绘制表面上的图像。源和目的的组合是根据混合规则完成的，该规则精确规定了如何使用颜色和 alpha 值。
 
 例如，如果你观察在白色绘制表面上使用默认混合规则渲染一个黑色图形时会发生什么，可以将该过程描述如下：栅格化将图形转换为 alpha 值数组，完全超出形状的像素被赋予值 0.0（解释为透明），而目标中的相应像素将保持不变。同样，图形内部的像素将具有 alpha 值 1.0，目标中的相应像素将获得与源像素相同的颜色，在这种情况下结果将是黑色。
 
@@ -1389,11 +1291,13 @@ g2d.draw(rect);
 
 ## 4.3 裁剪 (CLIPPING)
 
+
+
 有时，人们并不希望你可以在整个绘制区域上绘制。当你构建复杂形状时，通常需要确保你不会在其他图形上进行绘制，这可以通过指定裁剪区域（clip area）来确保。考虑以下窗口，它取自之前的示例：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_68_0.png)
 
-区别仅在于窗口顶部添加了一个按钮。如果你点击按钮，窗口将重绘，结果如下所示，绘制了一个三角形。这是通过将裁剪区域定义为三角形来实现的，只有组件的该部分被重绘。再次点击按钮，结果是一个椭圆，因为现在定义的裁剪区域是一个椭圆。点击第三次，你将回到起点。如下面的代码所示，定义裁剪区域非常简单，你应该注意该区域可以是任何形状（Shape）：
+区别仅在于窗口顶部添加了一个按钮。如果你点击按钮，窗口将重绘，结果如下所示，绘制了一个三角形。这是通过将裁剪区域定义为三角形来实现的，只有组件的该部分被重绘。再次点击按钮，结果是一个椭圆，因为现在定义的裁剪区域是一个椭圆。点击第三次，你将回到起点。如下面的代码所示，定义裁剪区域非常简单，你应该注意该区域可以是任何形状（`Shape`）：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_68_1.png)
 
@@ -1401,13 +1305,13 @@ g2d.draw(rect);
 
 | 裁剪 | x |
 |---|---|
-| clip |
+| clip | |
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_69_0.png)
 
 | 裁剪 | x |
 |---|---|
-| clip |
+| clip | |
 
 ```java
 package clipdemo;
@@ -1480,18 +1384,18 @@ class Drawing extends JComponent {
 
 ## 4.4 渲染提示 (RENDERING HINTS)
 
-在本章最后我提到渲染提示，正如我在抗锯齿中提到的。Graphics2D 的渲染机制比以前任何任何时候，而渲染提示是程序员对质量的期望，但并不一定能满足你的要求。你可以以键/值对的形式定义渲染提示，可能性如下所示：
+在本章最后我提到渲染提示，正如我在抗锯齿中提到的。`Graphics2D` 的渲染机制比以前任何任何时候，而渲染提示是程序员对质量的期望，但并不一定能满足你的要求。你可以以键/值对的形式定义渲染提示，可能性如下所示：
 
 | 键 | 值 |
-| --- | --- |
-| KEY_ANTIASING | VALUE_ANTIALIAS_ON<br>VALUE_ANTIALIAS_OFF<br>VALUE_ANTIALIAS_DEFAULT |
-| KEY_RENDERING | VALUE_RENDER_QUALITY<br>VALUE_RENDER_SPEED<br>VALUE_RENDER_DEFAULT |
-| KEY_DITHERING | VALUE_DITHER_DISABLE<br>VALUE_DITHER_ENABLE<br>VALUE_DITHER_DEFAULT |
-| KEY_COLOR_RENDERING | VALUE_COLOR_RENDER_QUALITY<br>VALUE_COLOR_RENDER_SPEED<br>VALUE_COLOR_RENDER_DEFAULT |
-| KEY_FRACTIONALMETRICS | VALUE_FRACTIONALMETRICS_ON<br>VALUE_FRACTIONALMETRICS_OFF<br>VALUE_FRACTIONALMETRICS_DEFAULT |
-| KEY_TEXT_ANTIALIASING | VALUE_TEXT_ANTIALIAS_ON<br>VALUE_TEXT_ANTIALIAS_OFF<br>VALUE_TEXT_ANTIALIAS_DEFAULT |
-| KEY_INTERPOLATION | VALUE_INTERPOLATION_BICUBIC<br>VALUE_INTERPOLATION_BILINEAR<br>VALUE_INTERPOLATION_NEAREST_NEIGHBOR |
-| KEY_ALPHA_INTERPOLATION | VALUE_ALPHA_INTERPOLATION_QUALITY<br>VALUE_ALPHA_INTERPOLATION_SPEED<br>VALUE_ALPHA_INTERPOLATION_DEFAULT |
+|---|---|
+| `KEY_ANTIASING` | `VALUE_ANTIALIAS_ON`<br>`VALUE_ANTIALIAS_OFF`<br>`VALUE_ANTIALIAS_DEFAULT` |
+| `KEY_RENDERING` | `VALUE_RENDER_QUALITY`<br>`VALUE_RENDER_SPEED`<br>`VALUE_RENDER_DEFAULT` |
+| `KEY_DITHERING` | `VALUE_DITHER_DISABLE`<br>`VALUE_DITHER_ENABLE`<br>`VALUE_DITHER_DEFAULT` |
+| `KEY_COLOR_RENDERING` | `VALUE_COLOR_RENDER_QUALITY`<br>`VALUE_COLOR_RENDER_SPEED`<br>`VALUE_COLOR_RENDER_DEFAULT` |
+| `KEY_FRACTIONALMETRICS` | `VALUE_FRACTIONALMETRICS_ON`<br>`VALUE_FRACTIONALMETRICS_OFF`<br>`VALUE_FRACTIONALMETRICS_DEFAULT` |
+| `KEY_TEXT_ANTIALIASING` | `VALUE_TEXT_ANTIALIAS_ON`<br>`VALUE_TEXT_ANTIALIAS_OFF`<br>`VALUE_TEXT_ANTIALIAS_DEFAULT` |
+| `KEY_INTERPOLATION` | `VALUE_INTERPOLATION_BICUBIC`<br>`VALUE_INTERPOLATION_BILINEAR`<br>`VALUE_INTERPOLATION_NEAREST_NEIGHBOR` |
+| `KEY_ALPHA_INTERPOLATION` | `VALUE_ALPHA_INTERPOLATION_QUALITY`<br>`VALUE_ALPHA_INTERPOLATION_SPEED`<br>`VALUE_ALPHA_INTERPOLATION_DEFAULT` |
 
 到目前为止我只使用了
 
@@ -1500,10 +1404,6 @@ g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIA
 ```
 
 但我稍后会使用其他的。
-
-
-
-
 
 # JAVA 10: JAVA2D，窗口绘制与图像处理
 
@@ -1554,7 +1454,9 @@ g2d.fill(new Rectangle2D.Double(60, 90, 10, 10));
 > 在丹麦，你可以找到极好的工程工作并在专业领域发展自己。特别是在风电领域，你可以从行业内最优秀的人身上学习，并在稳定的工作中晋你的职业。
 
 > Mireia Mare,
+
 > 来自西班牙的高级工程师。
+
 > 自 2010 年起在丹麦的风能行业工作。
 
 事实上，人可以与文本进行交互，例如，你可以为文本关联一个迭代器，用于操作单个字符或字符串的局部。程序 `AttributedText` 会打开如下所示的窗口：
@@ -1578,9 +1480,10 @@ class Drawing extends JComponent
   }
 }
 ```
+
 （注意：OCR 在代码块存在一些不一致之处，如 `str` 与 `strG2d`，根据用法已修正为 `str`）。
 
-文本和所有形状一样都是图形对象，可以像其他 Shape 对象一样进行变换。一个将打开以下窗口的程序：
+文本和所有形状一样都是图形对象，可以像其他 `Shape` 对象一样进行变换。一个将打开以下窗口的程序：
 
 ```java
 public Image createImage() {
@@ -1592,7 +1495,7 @@ public Image createImage() {
 
 ## 练习 12
 
-文本和所有形状一样都是图形对象，可以像其他 Shape 对象一样进行变换。一个将打开以下窗口的程序：
+文本和所有形状一样都是图形对象，可以像其他 `Shape` 对象一样进行变换。一个将打开以下窗口的程序：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_77_0.png)
 
@@ -1608,10 +1511,6 @@ public Image createImage() {
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_77_2.png)
 
-
-
-
-
 # JAVA 10: JAVA2D，窗口绘制与图像处理
 
 # 练习 13
@@ -1623,6 +1522,14 @@ public Image createImage() {
 ## 5.1 字体
 
 Java2D 包含几个与字体相关的类，我已经提到过 `Font` 和 `FontMetrics` 类。在本节中，我将展示一个打开如下所示窗口的程序。该应用程序显示一个列表框，其中列出了所有可用的字体。如果你双击某一行，将弹出一个包含该字体信息的对话框。
+
+
+
+# JAVA 10: JAVA2D, 窗口绘制与图像处理
+
+## 字体列表
+
+以下列出了可用的字体及其样式：
 
 ```
 java.awt.Font(family=Abeysnica,name=Abeysnica,style=plain,size=size)
@@ -1645,9 +1552,12 @@ java.awt.Font(family=Calibri,name=Calibri Italic,style=italic,size=size)
 ```
 
 > Liberation Serif
+
 Liberation Serif Bold
-java.awt.geom.Rectangle2D$Float(x=0.0,y=-21.896484,w=49.0,h=27.597656)
-java.awt.geom.Rectangle2D$Float(x=0.0,y=-21.896484,w=168.0,h=27.597656)
+
+`java.awt.geom.Rectangle2D$Float(x=0.0,y=-21.896484,w=49.0,h=27.597656)`
+
+`java.awt.geom.Rectangle2D$Float(x=0.0,y=-21.896484,w=168.0,h=27.597656)`
 
 代码如下，没什么需要解释的，但你应该特别注意如何确定哪些字体是可用的。还要注意 `FontRenderContext` 类，它可能是为了测量在使用特定字体绘制时字符串的视觉效果：
 
@@ -1661,52 +1571,95 @@ import java.awt.geom.*;
 import java.awt.swing.*;
 ```
 
+```java
 public class MainWindow extends JFrame {
+
     private DefaultListModel model = new DefaultListModel();
 
     public MainWindow() {
+
         super("FontProgram");
+
         setSize(700, 400);
+
         setLocationRelativeTo(null);
+
         createWindow();
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         setVisible(true);
+
     }
 
     private void createWindow() {
-    Font[] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAllFonts();
-    for (Font font : fonts) model.addElement(font);
-    JList list = new JList(model);
-    add(new JScrollPane(list));
-    list.addMouseListener(new MouseHandler());
-    }
-}
 
-class MouseHandler extends MouseAdapter {
-    public void mouseClicked(MouseEvent e) {
-        if (e.getCount() == 2) {
-            try {
-                JList list = (JList)e.getSource();
-                int n = list.locationToIndex(e.getPoint());
-                Font font = (Font)model.get(n);
-                StringBuilder builder = new StringBuilder(font.getFamily());
-                builder.append("\n");
-                builder.append(font.getName());
-                Graphics2D g2d = (Graphics2D)list.getGraphics();
-                g2d.setFont(new Font(font.getFamily(), font.setStyle(), 24));
-                FontRenderContext frc = g2d.getFontRenderContext();
-                Rectangle2D rect1 = g2d.getFont().getStringBounds("ABC", frc);
-                g2d.setFont(font);
-                Rectangle2D rect2 = g2d.getFont().getStringBounds("Knud den Hellige", frc);
-                builder.append("\n");
-                builder.append(rect1);
-                builder.append("\n");
-                builder.append(rect2);
-                JOptionPane.showMessageDialog(MainWindow.this, builder.toString(), font.getName(), INFORMATION_MESSAGE);
-            } catch (Exception ex) {
-            }
-        }
+    Font[] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAllFonts();
+
+    for (Font font : fonts) model.addElement(font);
+
+    JList list = new JList(model);
+
+    add(new JScrollPane(list));
+
+    list.addMouseListener(new MouseHandler());
+
     }
+
+}
+```
+
+```java
+class MouseHandler extends MouseAdapter {
+
+    public void mouseClicked(MouseEvent e) {
+
+        if (e.getCount() == 2) {
+
+            try {
+
+                JList list = (JList)e.getSource();
+
+                int n = list.locationToIndex(e.getPoint());
+
+                Font font = (Font)model.get(n);
+
+                StringBuilder builder = new StringBuilder(font.getFamily());
+
+                builder.append("\n");
+
+                builder.append(font.getName());
+
+                Graphics2D g2d = (Graphics2D)list.getGraphics();
+
+                g2d.setFont(new Font(font.getFamily(), font.setStyle(), 24));
+
+                FontRenderContext frc = g2d.getFontRenderContext();
+
+                Rectangle2D rect1 = g2d.getFont().getStringBounds("ABC", frc);
+
+                g2d.setFont(font);
+
+                Rectangle2D rect2 = g2d.getFont().getStringBounds("Knud den Hellige", frc);
+
+                builder.append("\n");
+
+                builder.append(rect1);
+
+                builder.append("\n");
+
+                builder.append(rect2);
+
+                JOptionPane.showMessageDialog(MainWindow.this, builder.toString(), font.getName(), INFORMATION_MESSAGE);
+
+            } catch (Exception ex) {
+
+            }
+
+        }
+
+    }
+
 }
 ```
 
@@ -1714,11 +1667,11 @@ class MouseHandler extends MouseAdapter {
 
 编写一个程序，显示如下所示的窗口，当使用特定字体绘制时，背景使用由 4 个小正方形组成的图像绘制：
 
-- 1. 字体填充了正方形
-- 2. 字体位于基线之上
-- 3. 字体线条与基线对齐
-- 4. 正方形包围着每个字形
-- 5. 正方形之间的距离
+1. 字体填充了正方形
+2. 字体位于基线之上
+3. 字体线条与基线对齐
+4. 正方形包围着每个字形
+5. 正方形之间的距离
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_80_png)
 
@@ -1732,32 +1685,53 @@ class MouseHandler extends MouseAdapter {
 
 ```java
 class Drawing extends JComponent {
+
     private String str = "Knud den Hellige";
+
     private Font font = new Font("Liberation Serif", Font.BOLD, 36);
+
     private TextLayout text;
+
     private int xpos = 20;
+
     private int ypos = 50;
 
     public Drawing() {
+
         FontRendererContext context =
+
             new FontContext(new AffineTransform(), false, false);
+
         text = new TextLayout(str, font, context);
+
         addActionListener(new HitTester());
+
     }
 
     public void paintComponent(Graphics g) {
+
         Graphics2D g2d = (Graphics2D)g;
+
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIASING);
+
         g2d.draw(text, xpos, ypos);
+
         Shape shape = text.getOutline(AffineTransform.translateInstance(20, 100));
+
         g2d.setPaint(Color.yellow);
+
         g2d.fill(shape);
+
         g2d.setPaint(Color.red);
+
         g2d.draw(shape);
+
     }
+
 }
 ```
 
+```java
 class HitTester extends MouseAdapter
 {
     public void mouseClicked(MouseEvent e)
@@ -1771,12 +1745,6 @@ class HitTester extends MouseAdapter
     }
 }
 ```
-
-
-
-
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理
 
 如果你有一个 Layout，可以用以下方式绘制文本：
 
@@ -1794,7 +1762,7 @@ text.draw(g2d, xpos, ypos)
 
 程序将展示如何绘制光标（或光标/标记），以及如何使用方向键移动光标。这听起来很简单，但如果你仔细考虑，光标（通常）是绘制在两个字母之间的细线，计算这个字符串应该如何绘制并不简单。幸运的是，免费的 `Layout` 提供了必要的支持。组件的代码显示如下：
 
-```
+```java
 class Drawing extends JComponent {
     private String str = "Knud den Hellige";
     private Font font = new Font("Liberation Serif", Font.BOLD, 36);
@@ -1815,7 +1783,7 @@ new FontRenderContext(new AffineTransform(), false, false);
     public void paintComponent(Graphics g)
     {
         Graphics2D g2d = (Graphics2D)g;
-        g2d.setRenderingHint(RenderingHints.KEY_ANTIASING, RenderingHints.VALUE_ANTIASING_ON);
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIASING_ON);
         g2d.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
         text.draw(g2d, xpos, ypos);
         Shape[] carets = text.getCaretShapes(hit.getInsertionIndex());
@@ -1825,7 +1793,9 @@ new FontRenderContext(new AffineTransform(), false, false);
         g2d.draw(shape);
     }
 }
+```
 
+```java
 class KeyHandler extends KeyAdapter
 {
     public void keyPressed(KeyEvent e)
@@ -1852,6 +1822,8 @@ class KeyHandler extends KeyAdapter
 ```
 Shape[] carets = text.getCaretShapes(hit.getInsertionIndex());
 ```
+
+
 
 `Layout` 生时并不带有光标，但它有一个逻辑位置，附着在 `hit` 上，并且可以通过 `InsertionIndex()` 方法引用。`getCaretShapes()` 方法返回两个 `Shape` 对象。事实上，原因是 Java2D 支持双向文本，因此文本是从右向左写的。在任何必须绘制的地方，经过变换后它都会像任何其他图形一样被绘制。在这里你特别注意到了 `createTransformedShape()` 方法，它转换了当前的 `Graphics2D` 对象。
 
@@ -1928,13 +1900,9 @@ class KeyHandler extends KeyAdapter
 
 如果你选择某些文本，你会得到一个包含该文本的框。
 
-
-
-
-
 ## JAVA 10: JAVA2D, 窗口绘图与图像处理
 
-ILayout 基本上是单行文本，如果文本需要填充几行，你必须进行更好的处理，但幸运的是有可以使用的辅助类。考虑下面的窗口。程序所做的事情是在窗口中显示文本（当然，用 JTextArea 来做非常轻而易举，但在这种情况下，文本是用 Layout 绘制的）。
+`Layout` 基本上是单行文本，如果文本需要填充几行，你必须进行更好的处理，但幸运的是有可以使用的辅助类。考虑下面的窗口。程序所做的事情是在窗口中显示文本（当然，用 `JTextArea` 来做非常轻而易举，但在这种情况下，文本是用 `Layout` 绘制的）。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_90_0.png)
 
@@ -2029,31 +1997,54 @@ y += margin.bottom;
 
 ## 5.3 字形 (GLYPHS)
 
-字形以数组的形式出现在三个字符串，你可以将文本看作是一个段落。最重要的点是带有 Insets 对象绘制的文本，这些方法对于理解 GUI 如何工作至关重要。字形是数组中的三个字符串，你可以将它们看作是行。这些方法显示了文本，尽管你很少需要它，但你也可以进一步操作字形。以下程序显示了字形：
+字形以数组的形式出现在三个字符串，你可以将文本看作是一个段落。最重要的点是带有 `Insets` 对象绘制的文本，这些方法对于理解 GUI 如何工作至关重要。字形是数组中的三个字符串，你可以将它们看作是行。这些方法显示了文本，尽管你很少需要它，但你也可以进一步操作字形。以下程序显示了字形：
 
 ```java
+
 class Drawing extends JComponent
+
 {
+
     public void paintComponent(Graphics g)
+
     {
+
         Graphics2D g2d = (Graphics2D) g;
+
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+
                              RenderingHints.VALUE_ANTIALIAS_ON);
+
         String str = "Knud den Hel";
+
         Font font = new Font("Serif", Font.PLAIN, 36);
+
         FontRenderContext context = g2d.getRenderContext();
+
         g2d.translate(20, 50);
+
         GlyphVector glyphs = font.createGlyphVector(context, str);
+
         int length = glyphs.getphsCount();
+
         for (int i = 0; i < length; i++) {
+
             Point2D p = glyphs.getGlyphPosition(i);
+
             AffineTransform trans =
+
             AffineTransform.translate(p.getX(), p.getY());
+
             trans.rotate(i / (double) (length - 1) * Math.PI / 4);
+
             g2d.fill(trans.createTransformedShape(glyphs.getGlyphOutline(i)));
+
         }
+
     }
+
 }
+
 ```
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_94_0.png)
@@ -2067,15 +2058,11 @@ class Drawing extends JComponent
 | Alpha | 红 | 蓝 | 绿 |
 |---|---|---|---|
 
-表示颜色的基本类是 Color，它已经被使用很多次。回顾之前所有的示例，颜色的使用通常是简单的，但颜色与文本相同的情况实际上极其复杂，因此本节作为关于颜色问题的简要介绍。简而言之，这些问题可以解释为某些颜色在不同的屏幕上看起来不同（而且确实如此），如果打印在彩色打印机上甚至更糟糕。原因是计算机的颜色表示是相对的（颜色 40% 红到底意味着什么？）以及不同的硬件设备（屏幕和打印机）显示的相同颜色并不相同。我将在下面稍作解释，但在那之前来看示例。
+表示颜色的基本类是 `Color`，它已经被使用很多次。回顾之前所有的示例，颜色的使用通常是简单的，但颜色与文本相同的情况实际上极其复杂，因此本节作为关于颜色问题的简要介绍。简而言之，这些问题可以解释为某些颜色在不同的屏幕上看起来不同（而且确实如此），如果打印在彩色打印机上甚至更糟糕。原因是计算机的颜色表示是相对的（颜色 40% 红到底意味着什么？）以及不同的硬件设备（屏幕和打印机）显示的相同颜色并不相同。我将在下面稍作解释，但在那之前来看示例。
 
-ColorProgram 打开了如下：
+`ColorProgram` 打开了如下：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_95_0.png)
-
-
-
-
 
 ## JAVA 10: JAVA2D，窗口绘图与图像处理颜色
 
@@ -2088,102 +2075,184 @@ ColorProgram 打开了如下：
 完整的代码也在下方所示，它并没有包含多少新：
 
 ```java
+
 package colorprogram;
 
 import java.awt.*;
+
 import java.awt.event.*;
+
 import java.awt.geom.*;
+
 import javax.swing.*;
+
 ```
 
 ```java
+
 public class MainWindow extends JFrame
+
 {
+
     private Color leftColor = Color.green;
+
     private Color rightColor = Color.blue;
-    private JLabel lblLeft = new JLabel();
-    private JLabel lblRight = new JLabel();
-    private Drawing drawing;
 
-    public MainWindow()
-    {
-        super("ColorProgram");
-        setSize(700, 250);
-        setLocationRelativeTo(null);
-        add(createTop(), BorderLayout.NORTH);
-        add(drawing = new Drawing());
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setVisible(true);
-    }
 
-    private JPanel createTop()
-    {
-        JPanel panel = new JPanel(new GridLayout(1, 2));
-        JPanel left = new JPanel(new BorderLayout());
-        JPanel right = new JPanel(new BorderLayout());
-        JButton cmdLeft = new JButton("Color");
-        JButton cmdRight = new JButton("Color");
-        cmdLeft.addActionListener(this::updateLeft);
-        cmdRight.addActionListener(this::updateRight);
-        lblLeft.setOpaque(true);
-        lblLeft.setBackground(leftColor);
-        lblRight.setOpaque(true);
-        lblRight.setBackground(rightColor);
-        left.add(cmdLeft, BorderLayout.WEST);
-        left.add(lblLeft);
-        right.add(cmdRight, BorderLayout.EAST);
-        right.add(lblRight);
-        panel.add(left);
-        panel.add(right);
-        return panel;
-    }
+
+```java
+private JLabel lblLeft = new JLabel();
+
+private JLabel lblRight = new JLabel();
+
+private Drawing drawing;
+
+public MainWindow()
+
+{
+
+    super("ColorProgram");
+
+    setSize(700, 250);
+
+    setLocationRelativeTo(null);
+
+    add(createTop(), BorderLayout.NORTH);
+
+    add(drawing = new Drawing());
+
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    setVisible(true);
+
+}
+
+private JPanel createTop()
+
+{
+
+    JPanel panel = new JPanel(new GridLayout(1, 2));
+
+    JPanel left = new JPanel(new BorderLayout());
+
+    JPanel right = new JPanel(new BorderLayout());
+
+    JButton cmdLeft = new JButton("Color");
+
+    JButton cmdRight = new JButton("Color");
+
+    cmdLeft.addActionListener(this::updateLeft);
+
+    cmdRight.addActionListener(this::updateRight);
+
+    lblLeft.setOpaque(true);
+
+    lblLeft.setBackground(leftColor);
+
+    lblRight.setOpaque(true);
+
+    lblRight.setBackground(rightColor);
+
+    left.add(cmdLeft, BorderLayout.WEST);
+
+    left.add(lblLeft);
+
+    right.add(cmdRight, BorderLayout.EAST);
+
+    right.add(lblRight);
+
+    panel.add(left);
+
+    panel.add(right);
+
+    return panel;
+
+}
 
 class Drawing extends JComponent
+
 {
+
     private Color[] colors = { Color.white, Color.lightGray, Color.gray,
+
 Color.darkGray, Color.black, Color.red, Color.pink, Color.orange,
+
 Color.yellow, Color.green, Color.magenta, Color.cyan, Color.blue };
 
     public void paintComponent(Graphics gr)
+
     {
+
         Dimension d = getSize();
+
         Graphics2D g2d = (Graphics2D)gr;
+
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIASING_ON);
+
         float t = colors.length;
+
         float w = d.width / t;
+
         float h = d.height / t;
+
         for (int i = 0; i < t; i++)
+
         {
+
             g2d.setPaint(colors[i]);
+
             g2d.fill(new Rectangle2D.Float(i * w, 0, w, h));
+
         }
+
         for (int i = 0; i < t; i++)
+
         {
+
             float u = i / t;
+
             int r = (int)(rightColor.getRed() * u + leftColor.getRed() * (1 - u));
+
             int g = (int)(rightColor.getGreen() * u + leftColor.getGreen() * (1 - u));
+
             int b = (int)(rightColor.getBlue() * u + leftColor.getBlue() * (1 - u));
+
             g2d.setPaint(new Color(r, g, b));
+
             g2d.fill(new Rectangle2D.Float(i * w, h, w, h));
+
         }
 
         for (int i = 0; i < t; ++i) {
+
             int alpha = (int)(255 * i / t);
+
             g2d.paint(new Color(rightColor.getRed(), rightColor.getGreen(), rightColor.getBlue(), alpha));
+
             g2d.fill(new Rectangle2D.Float(i * w, 2 * h, w, h));
+
         }
+
     }
 
     public void updateLeft(ActionEvent e)
+
     {
+
         // Implementation details for brevity
+
     }
 
     public void updateRight(ActionEvent e)
+
     {
+
         // Implementation details for brevity
+
     }
+
 }
+
 ```
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_98_0.png)
@@ -2199,19 +2268,17 @@ Color.yellow, Color.green, Color.magenta, Color.cyan, Color.blue };
 - 全球第二：计量经济与运筹硕士
 - 全球第二：全球供应链管理与变革硕士
 
-来源：Kepler 排名 2013；Elsevier “最佳研究”排名 2012；Financial Times 全球商业排名 2012
+来源：Kepler 排名 2013；Elsevier “最佳研究”排名 2012；Financial Times 全球商业排名 2012。
 
-马斯里特大学是荷兰最好的专业大学（Bleewier）
+马斯里特大学是荷兰最好的专业大学（Bleewier）。
 
-# 欢迎临并发现我们为什么是最好的！硕士课程开放日：2014 年 2 月 22 日
+# 欢迎临并发现我们为什么是最好的！
 
-www.mastersopenday.nl
+## 硕士课程开放日：2014 年 2 月 22 日
 
+`www.mastersopenday.nl`
 
-
-
-
-## JAVA 10: JAVA2D, 窗口绘制与图像处理颜色
+## JAVA 10：JAVA2D、窗口绘制与图像处理颜色
 
 对于许多应用程序（大多数情况），涉及色彩空间和色彩配置的内容都是无趣的。如果一个程序必须绘制一个图形，那么该图形在另一个屏幕上显示的颜色略有不同通常并不重要，但当你需要显示照片时，这一点就非常重要。在这里，颜色应该是准确的，如果你正在编写成像软件，上述这一点就至关重要。尽管我不想深入探讨该主题，但 Java 2D 类型同时适用于色彩空间和色彩配置，这些类型提供了用于操作颜色细节的方法。
 
@@ -2219,13 +2286,13 @@ www.mastersopenday.nl
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_101_0.png)
 
-# JAVA 10: JAVA2D, 窗口绘制与图像处理
+# JAVA 10：JAVA2D、窗口绘制与图像处理
 
-### 颜色 (COLORS)
+## 颜色（COLORS）
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_102_0.png)
 
-与之前的示例（练习 8）相同，你可以使用窗口顶部和底部的 JSlider 组件更改两种颜色。
+与之前的示例（练习 8）相同，你可以使用窗口顶部和底部的 `JSlider` 组件更改两种颜色。
 
 Java 2D 没有提供为此目的设计的 `Paint` 对象，因此有必要自己编写一个类。该类应该实现 `Paint` 接口，该接口定义了两个方法。最重要的名为 `createContext()`，它返回一个 `PaintContext` 对象，该对象也是一个接口，其中最重要的方法是 `getRaster()`，它为要绘制的图形返回一个 `Raster` 对象。这是一个包含了所有已修改过的像素的对象。
 
@@ -2235,80 +2302,123 @@ Java 2D 没有提供为此目的设计的 `Paint` 对象，因此有必要自己
 package java.awt;
 
 import java.awt.geom.*;
+
 import java.awt.image.*;
 ```
 
 ```java
 // 定义一个 Paint 对象，它是一种从中心点开始沿半径
+
 // 混合两种颜色的渐变画。中心点的颜色为 color1，而
+
 // 所有距离中心大于或等于半径的点
+
 // 均为 color2。所有距离中心小于半径的点
+
 // 具有渐变颜色，因此所有到中心距离相同的点
+
 // 具有相同的颜色。
 ```
 
 ```java
 public class RoundGradient implements Paint {
+
     private Point2D point; // 中心
+
     private Point2D radius; // 半径
+
     private Color color1; // 中心点的颜色
+
     // 距离中心大于半径的点的颜色
+
     private Color color2;
 
     public RoundGradient(Point2D point, Color color1, Point2D radius, Color color2) {
+
         this.point = point;
+
         this.color1 = color1;
+
         this.radius = radius;
+
         this.color2 = color2;
+
     }
 ```
 
 ```java
 // 该方法由 Paint 接口定义。
+
 public PaintContext createContext(ColorModel cm, Rectangle deviceBounds, Rectangle2D userBounds, AffineTransform trans, RenderingHints hints) {
+
     return new RoundContext(trans.transform(point, null), color1,
+
         trans.deltaTransform(radius, null), color2);
+
 }
 ```
 
 ```java
 // 该方法由 Paint 接口定义。
+
 public int getTransparency() {
+
     int al1 = color1.getAlpha();
+
     int a2 = color2.getAlpha();
+
     return ((al1 & a2) == 0xff) ? OPAQUE : TRANSLUCENT;
+
 }
 ```
 
 ```java
 // PaintContext，定义了各个点如何着色
+
 class RoundContext implements Paint {
+
     private Point2D point; // 中心
+
     private Point2D radius; // 半径
+
     private Color color1; // 中心点的颜色
+
     // 距离中心大于半径的点的颜色
+
     private Color color2;
 
     public RoundContext(Point2D point, Color color1, Point2D radius, Color color2)
+
     {
+
         this.point = point;
+
         this.color1 = color1;
+
         this.radius = radius;
+
         this.color2 = color2;
+
     }
+
 }
 ```
 
 ```java
 // 该方法由 PaintContext 接口定义。
+
 public void dispose() {
+
 }
 ```
 
 ```java
 // 该方法由 ColorContext 接口定义
+
 public ColorModel getRGBdefault() {
+
     return ColorModel.getRGBdefault();
+
 }
 ```
 
@@ -2318,29 +2428,41 @@ public ColorModel getRGBdefault() {
 
 挪威商学院（BI Norwegian Business School）是欧洲最大的商学院之一，接收了 20,000 多名学生。我们的课程提供了一个激发性和多文化的学习环境，具有国际视野，最终为学生提供了满足……的专业技能——
 
-# JAVA 10: JAVA2D, 窗口绘制与图像处理
+# JAVA 10：JAVA2D、窗口绘图与图像处理
 
-### 颜色 (COLORS)
+## 颜色（COLORS）
 
 以下是绘制图形的组件：
 
 ```java
 class Drawing extends JComponent {
+
     public void paintComponent(Graphics g) {
+
         Dimension d = getSize();
+
         Color color1 = new Color(sldFg.getValue(), sldFgg.getValue(), slddBg.getValue());
+
         Color color2 = new Color(sldBgr.getValue(), sldBgg.getValue(), slddBg.getValue());
+
         Graphics2D g2d = (Graphics2D)g;
+
         g2d.setRenderingHint(RenderingHints.KEY_ANTIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
         Ellipse2D ellipse = new Ellipse2D.Double(20, 20, d.width - 40, d.height - 40);
+
         Point2D point = d.width ? new Point2D.Double(20, d.height / 2) : new Point2D.Double(d.width / 2, 20);
+
         g2d.setPaint(new RadialGradientPaint(new Point2D.Double(d.width / 2, d.height / 2), rad, color1, color2));
+
         g2d.fill(ellipse);
+
     }
+
 }
 ```
 
-## # 问题 1
+## 问题 1
 
 你必须编写一个创建一个圆形按钮的程序。例如，下方所示了一个带有四个按钮的窗口：
 
@@ -2348,25 +2470,24 @@ class Drawing extends JComponent {
 
 按钮应该被定义为自定义组件，并且它们必须支持文本换行。当点击按钮时还应该有一个效果，最后，组件在被点击时自然会触发一个动作事件（action event）。
 
+# JAVA 10：JAVA2D、窗口绘图与图像处理图像
 
-
-
-
-## JAVA 10: JAVA2D，窗口绘图与图像处理图像
-
-### 图像
+## 图像
 
 图像是颜色的二维数组，每个元素被称为像素。从原理上讲，它看起来与其他任何图形相似，但有两个重要的区别：
 
-1. 像素并不一定直接对应于绘图上的像素
-2. 图像具有以像素为单位的宽度和高度，以及一个独立于绘图区域的坐标系
+1. 像素并不一定直接对应于绘图上的像素。
+2. 图像具有以像素为单位的宽度和高度，以及一个独立于绘图区域的坐标系。
 
 基础类是 `Image`，还有其他类。第一步是展示如何加载图像以便在窗口中显示它。我实际上已经展示了如何操作，例如通过加载图标或将图片加载到扑牌等。作为一个示例，以下方法从文件中读取图像，参数是文件的文件名（完整路径）：
 
 ```java
 public static ImageIcon loadImageIcon(String filename)
+
 {
+
     return new ImageIcon(filename);
+
 }
 ```
 
@@ -2376,16 +2497,25 @@ public static ImageIcon loadImageIcon(String filename)
 
 ```java
 public static BufferedImage loadImage(String filename)
+
 {
+
     try {
+
         return ImageIO.read(new File(filename));
+
     } catch (IOException e) {
+
         return null;
+
     }
+
 }
 ```
 
-主要的区别在于，这次方法返回的是 `BufferedImage` 类型的图像，这样你可以直接操作图像。特别需要注意的是，`BufferedImage` 继承了 `Image` 类，可以用于任何可以使用 `Image` 的地方。相反，如果你想从程序的 jar 文件中读取图像（这在图标和较小的图像中很常见），可以使用以下方法：
+
+
+主要的区别在于，这次方法返回的是`BufferedImage`类型的图像，这样你可以直接操作图像。特别需要注意的是，`BufferedImage`继承了`Image`类，可以用于任何可以使用`Image`的地方。相反，如果你想从程序的 jar 文件中读取图像（这在图标和较小的图像中很常见），可以使用以下方法：
 
 ```java
 public static ImageIcon createIcon(String path)
@@ -2396,7 +2526,7 @@ public static ImageIcon createIcon(String path)
 }
 ```
 
-其中参数应该是相对于包含图像的包的图像名称。该方法的变体将图像缩放到到特定大小（这在加载图标时特别有用），如下：
+其中参数应该是相对于包含图像的包的图像名称。该方法的变体将图像缩放到特定大小（这在加载图标时特别有用），如下：
 
 ```java
 public static ImageIcon createIcon(String path, int width, int height)
@@ -2422,11 +2552,11 @@ class Drawing extends JComponent {
 }
 ```
 
-这没什么需要解释的。`Graphics2D` 有一个 `drawImage()` 方法可以显示图像。对象 `image` 是图像，而 `trans` 是在显示之前对图像进行变换的变换。在这种情况下，它恒等变换，没有任何影响，结果是图像未缩放的形式出现。这意味着如果图像大于组件，图像的一小小部分将出现，结果可能所示（当点击左按钮时）。
+这没什么需要解释的。`Graphics2D`有一个`drawImage()`方法可以显示图像。对象`image`是图像，而`trans`是在显示之前对图像进行变换的变换。在这种情况下，它恒等变换，没有任何影响，结果是图像未缩放的形式出现。这意味着如果图像大于组件，图像的一小部分将出现，结果可能如图所示（当点击左按钮时）。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_109_0.png)
 
-这是一张大图像（3306x1860像素），你只能看到图像的左上角。你可以使用 `trans` 参数来缩放图像，我想展示三种方法。同样，程序定义了以下类型：
+这是一张大图像（3306x1860像素），你只能看到图像的左上角。你可以使用`trans`参数来缩放图像，我想展示三种方法。同样，程序定义了以下类型：
 
 ```java
 package imageprogram;
@@ -2454,11 +2584,11 @@ public enum ImageScaling { UNSCALED, STRETCHED, SCALEDOFIT, SCALEDOFILL }
 
 # SKF
 
-`STRETCHED` 的问题是图像可能会变形，对于照片来说这是一个大问题。下面是选择了 `SCALEDOFIT` 的窗口：
+`STRETCHED`的问题是图像可能会变形，对于照片来说这是一个大问题。下面是选择了`SCALEDOFIT`的窗口：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_111_0.png)
 
-这是缩放后的图像，以便所有内容都在窗口内，然后显示整个图片。结果是窗口的一部分可能不会被使用。`paintComponent()` 方法被修改为：
+这是缩放后的图像，以便所有内容都在窗口内，然后显示整个图片。结果是窗口的一部分可能不会被使用。`paintComponent()`方法被修改为：
 
 ```java
 class Drawing extends JComponent {
@@ -2474,7 +2604,7 @@ class Drawing extends JComponent {
 }
 ```
 
-重要的是 `PaGUI.scale()` 方法，它改变了对象的值：
+重要的是`PaGUI.scale()`方法，它改变了对象的值：
 
 ```java
 public static void scale(AffineTransform trans, Dimension dim, ImageScaling action)
@@ -2490,7 +2620,7 @@ public static void scale(AffineTransform trans, Dimension dim, ImageScaling acti
 }
 ```
 
-`drawImage()` 方法绘制图像，在原理上可以像操作任何 `Shape` 对象一样处理它。考虑以下窗口，在图像上方写了文本：
+`drawImage()`方法绘制图像，在原理上可以像操作任何`Shape`对象一样处理它。考虑以下窗口，在图像上方写了文本：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_112_0.png)
 
@@ -2517,10 +2647,6 @@ class Drawing extends JPanel {
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_113_0.png)
 
-
-
-
-
 ## JAVA 10: JAVA2D，窗口绘制与图像处理图像
 
 作为另一个示例，以下程序绘制了相同的图像，但这次裁剪区域是使用文本定义的。结果是你只能看到水和少量的鸟：
@@ -2546,7 +2672,6 @@ class Drawing extends JComponent
         }
         else super.paintComponent(g);
     }
-
     private Shape getClipping(Graphics2D g2d)
     {
         Font font = new Font("Serif", Font.BOLD, 272);
@@ -2560,7 +2685,7 @@ class Drawing extends JComponent
 
 使用 GIMP 和 Photoshop 的图像编辑应用程序旨在处理数字照片，而 Java2D 实际上包含了图像处理功能，这些功能正是本文的主题。虽然现在没有竞争对手突然在为上述程序（它们是极其复杂的程序）开发出比 Java2D 直接提供的更多的功能，但至少以下内容可以解释 Photoshop 和 GIMP 等专业程序是如何工作的。
 
-图像处理描述了如何通过一个过程（通常是过滤）来处理数字图像。其思想是将图像源发送通过过滤器，结果是一个新图像，目标在 Java2D 中由 `BufferedImage` 表示。过滤器由一个名为 `BufferedImageOp` 的接口定义，该接口的主方法是 `filter()`。实现此接口的类通常被称为图像操作器。Java2D 定义了五种图像操作器：
+图像处理描述了如何通过一个过程（通常是过滤）来处理数字图像。其思想是将图像源发送通过过滤器，结果是一个新图像，目标在 Java2D 中由`BufferedImage`表示。过滤器由一个名为`BufferedImageOp`的接口定义，该接口的主方法是`filter()`。实现此接口的类通常被称为图像操作器。Java2D 定义了五种图像操作器：
 
 - 1. `ConvolveOp`，用于模糊、锐化和边缘标记
 - 2. `AffineTransformOp`，用于几何变换
@@ -2568,7 +2693,7 @@ class Drawing extends JComponent
 - 4. `RescaleOp`，用于使图片变亮或变暗
 - 5. `ColorConvertOp`，用于转换颜色空间
 
-你当然也可以定义自己的图像操作器，它只是一个实现了 `BufferedImageOp` 的类。
+你当然也可以定义自己的图像操作器，它只是一个实现了`BufferedImageOp`的类。
 
 ## ConvolveOp
 
@@ -2578,7 +2703,7 @@ class Drawing extends JComponent
 | 010 |
 | 000 |
 
-其中一个像素有 8 个邻居像素。矩阵的每个元素都有一个值，0 表示该像素对结果没有贡献，而 1 表示该像素被原封不动地移动到目标位置。因此，上述内核是一个标识符，定义了一个不影响目标的过滤器。如果你想保持光照条件，矩阵元素之和必须为 1。如果之和小于 1，图像会变暗；如果大于 1，图像会变亮。创建 `ConvolveOp` 对象的语法为
+其中一个像素有 8 个邻居像素。矩阵的每个元素都有一个值，0 表示该像素对结果没有贡献，而 1 表示该像素被原封不动地移动到目标位置。因此，上述内核是一个标识符，定义了一个不影响目标的过滤器。如果你想保持光照条件，矩阵元素之和必须为 1。如果之和小于 1，图像会变暗；如果大于 1，图像会变亮。创建`ConvolveOp`对象的语法为
 
 ```java
 public ConvolveOp(Kernel kernel, int edgeHint)
@@ -2610,7 +2735,7 @@ public ConvolveOp(Kernel kernel, int edgeHint)
 
 最后一个操作在这里没有演示，但它用于将颜色从一个空间转换为另一个空间。
 
-为了在实践中测试上述内容，你可以研究 `ImageEditor` 程序。如果你打开应用程序，可以打开图像，然后使用上述操作器对其进行编辑：
+为了在实践中测试上述内容，你可以研究`ImageEditor`程序。如果你打开应用程序，可以打开图像，然后使用上述操作器对其进行编辑：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_118_0.png)
 
@@ -2620,17 +2745,14 @@ public ConvolveOp(Kernel kernel, int edgeHint)
 class Drawing extends JComponent
 {
     private BufferedImage image = null;
-
     public BufferedImage getImage()
     {
         return image;
     }
-
     public void setImage(BufferedImage image)
     {
         this.image = image;
     }
-
     public void paintComponent(Graphics g)
     {
         if (image != null)
@@ -2648,10 +2770,6 @@ class Drawing extends JComponent
 }
 ```
 
-
-
-
-
 # JAVA 10: JAVA2D, 窗口绘制与图像处理
 
 ```java
@@ -2662,36 +2780,38 @@ setPreferredSize(new Dimension(d.width, d.height));
 }
 ```
 
-该类将图像表示为 `BufferedImage`。否则，最最重要的当然是 `paintComponent()` 方法，它负责绘制图像并计算组件的优选尺寸。
+该类将图像表示为`BufferedImage`。否则，最最重要的当然是`paintComponent()`方法，它负责绘制图像并计算组件的优选尺寸。
 
-左侧是一个列表框，每个元素（大约两个）的类型为 `ImageOperation`，该类定义如下：
+左侧是一个列表框，每个元素（大约两个）的类型为`ImageOperation`，该类定义如下：
 
 ```java
 private class ImageOperation implements Comparable<ImageOperation>
 {
     private String name;
     private BufferedImageOp operation;
-
     public ImageOperation(String name, BufferedImageOp operation)
     {
         this.name = name;
         this.operation = operation;
     }
-
     public BufferedImageOp getOperation()
     {
         return operation;
     }
-
     public String toString()
     {
         return name;
     }
+}
+```
 
-    public int compareTo(ImageOperation iop)
-    {
-        return name.compareTo(iop.toString());
-    }
+
+
+`public int compareTo(ImageOperation iop)`
+
+```
+{
+    return name.compareTo(iop.toString());
 }
 ```
 
@@ -2724,7 +2844,7 @@ class MouseHandler extends MouseAdapter
 }
 ```
 
-这同样是一个内部类。处理器决定点击了哪一项。如果索引是 3 或 4，会打开一个标准的对话框，用户必须输入一个值（旋转角度，或图像缩放的百分比）。在何种情况下，都会为该图像处理返回一个 `ImageOperation` 对象。如果索引不是 3 或 4，则对点击的项的字体类型执行 `ImageOperation` 对象操作。在获取对象后，将确定 `BufferedImage` 对象并执行相应的图像处理。在这里你会注意到两点：如何如何引用图像本身，以及图像处理是通过 `filter()` 方法执行的，但根据它是哪种操作，有两种实现方式。
+这同样是一个内部类。处理器决定点击了哪一项。如果索引是 3 或 4，会打开一个标准的对话框，用户必须输入一个值（旋转角度，或图像缩放的百分比）。在何种情况下，都会为该图像处理返回一个 `ImageOperation` 对象。如果索引不是 3 或 4，则对点击的项的字体类型执行 `ImageOperation` 对象操作。在获取对象后，将确定 `BufferedImage` 对象并执行相应的图像处理。在这里你会注意到两点：如何引用图像本身，以及图像处理是通过 `filter()` 方法执行的，但根据它是哪种操作，有两种实现方式。
 
 那时，必须创建所有单独的 `BufferedImage` 对象。例如，下面显示了创建使图像更锐的对象（即 `ConvolveOp` 对象）的方法：
 
@@ -2774,15 +2894,11 @@ new LookupOp(new ShortLookupTable(0, new short[][] { zero, one,
 
 *(注：由于提供的待翻译文本包含大量重复段落和破碎的占位符，译文在保持 Markdown 格式的基础上，对核心技术逻辑进行了整理和翻译)*
 
-
-
-
-
 # JAVA 10: JAVA2D, 窗口绘制与图像处理
 
-# 图像
+## 图像
 
-关于缓冲区（Buffered）有许多细节，并且为上述所有组件都提供了相应的类。通常不需要直接操作这些类，我只是想展示一个较小的示例，说明如何直接使用 `BufferedImage` 创建一张图片。完整代码如下：
+关于缓冲区（`Buffered`）有许多细节，并且为上述所有组件都提供了相应的类。通常不需要直接操作这些类，我只是想展示一个较小的示例，说明如何直接使用 `BufferedImage` 创建一张图片。完整代码如下：
 
 ```java
 package createpicture;
@@ -2813,7 +2929,7 @@ public class MainWindow extends JFrame
 
 # JAVA 10: JAVA2D, 窗口绘制与图像处理
 
-# 图像
+## 图像
 
 ```java
 public MainWindow()
@@ -2919,936 +3035,65 @@ private BufferedImage image =
 new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
 ```
 
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
 
-该类有更多构造函数，但在这种情况下使用构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色...,00000000000000000000..00000666999988882222228222332222820。
-
-.img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
 
 # JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
+
+该类有更多构造函数，但在这种情况下使用了一个构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色...,00000000000000000000..00000666999988882222228222332222820。
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
 
 该类有更多构造函数，但在这种情况下使用了一个构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色..00000000000000000000..00000666999988882222228222332222820。
-
-.img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa59f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-在img/644456999998882111222886119322311280..)
-
-
-
-   102222,22222220...
-
-imgimg/6c4faa56999698822c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-img//6644599999998882c11c28846193c23_128_0.0)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-imgimg/644faa569996988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
 
 该类有更多构造函数，但在这种情况下使用了一个构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色...,00000000000000000000..00000666999988882222228222332222820。
 
-.img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
 ![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
 
 该类有更多构造函数，但在这种情况下使用了一个构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色..00000000000000000000..00000666999988882222228222332222820。
-
-.img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-![](img/6c4faa569f96888b2c15c2a846193c23_128_0..)
-
-#  10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-
-
-img/6c45569999988b2c15c22846193323_128_0..)
-
-#  10::2D,, 窗口     
-
-
-
-//66645999999888221122288411932222118....)
-
-   111  22222220..
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-img/644459999998882211222288411932221118....
-
-#  10: JAVA2D, 窗口绘制与与   
-
-
-
-imgimg/6c45569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-imgimg/6444599999988822112228866113333222128....)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
 
 该类有更多构造函数，但在这种情况下使用了一个构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色...,00000000000000000000..00000666999988882222228222332222820。
 
-.img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
 ![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
 
 该类有更多构造函数，但在这种情况下使用了一个构造函数来描述图像的大小及其颜色模型。在这种情况下，`BufferedImage` 定义了图像的大小和颜色..00000000000000000000..00000666999988882222228222332222820。
 
-.img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
 ![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理  
-
- img/6c44559999988821111288811333   
-
-2img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理  
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 图像
-
-![](img/6c4faa569f96988b2c15c2a846193c23_128_0.png)
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理  
-
- img/644455999999882211112888113333222112   
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理 
-
-
-
-imgimg/6644599999988822112228811933222128...
-
-
-
-   1122222            222299999999992222212222222122122222222222 22 2  22222222222222222222222222 
 
 ## 7.3 屏幕
 
 在处理图形时，你可能需要确定屏幕的大小。这可以通过多种方法实现，但以下程序显示了：
 
 ```java
-package screensize;
+```
 
-import java.awt.*;
 
-public class ScreenSize {
-    public static void main(String[] args) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        double width = screenSize.getWidth();
-        double height = screenSize.getHeight();
-        System.out.println(width + "x" + height);
-    }
+
+`package screensize;`
+
+`import java.awt.*;`
+
+`public class ScreenSize {`
+
+```java
+public static void main(String[] args) {
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    double width = screenSize.getWidth();
+    double height = screenSize.getHeight();
+    System.out.println(width + "x" + height);
 }
 ```
+
+`}`
 
 ## 9. 动画
 
 由于最后一个主题涉及 Java2D，我将查看如何处理动画。事实上，Java2D 不支持动画，你所能做的只是稍后并在新位置绘制图形来模拟动画。这样做（每秒多次）会产生类似于动画的效果。如果你打开程序，你将获得以下窗口：
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_131_0.png)
-
-
-
-
 
 # JAVA 10: JAVA2D, 窗口绘图与图像处理动画
 
@@ -3926,7 +3171,7 @@ private void setTransform(Graphics2D g2)
 
 我加入 MITAS 是因为我想要真正的责任。
 
-工程师与地质科学家的研究生计划 www.discovermitas.com
+工程师与地质科学家的研究生计划 `www.discovermitas.com`
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_134_0.png)
 
@@ -3937,7 +3182,7 @@ private void setTransform(Graphics2D g2)
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_134_1.png)
 
-在 bookboom.com 下载免费电子书
+在 `bookboom.com` 下载免费电子书
 点击广告阅读更多信息
 
 # JAVA 10: JAVA2D, 窗口绘图与图像处理动画
@@ -3975,7 +3220,7 @@ class ResizeListener extends ComponentAdapter {
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_136_1.png)
 
-在 bookboom.com 下载免费电子书
+在 `bookboom.com` 下载免费电子书
 
 # JAVA 10: JAVA2D, 窗口绘图与图像处理
 
@@ -4014,153 +3259,7 @@ public class MainView extends JFrame implements Printable {
 
 由于你的改变，我们发生了改变。
 
-www.ie.edu
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
+`www.ie.edu`
 
 # JAVA 10: JAVA2D, 窗口绘图与图像处理（此处 处）
 
@@ -4218,41 +3317,10 @@ public int print(Graphics g, PageFormat pf, int page)
     int height = g.FontMetrics(font).getHeight();
     if (pages == null)
       pages = createPages(200, (int)pf.getImageableHeight() / height);
-    Graphics2D g2d = (Graphics2D)g;
-    g2d.translate(pf.getOriginX(), pf.getOriginY());
-    if (page < pages.size()) {
-        List<String> pageData = pages.get(page);
-        for (int i = 0; i < pageData.size(); i++) {
-            g2d.drawString(pageData.get(i), 100, 100 + i * height);
-        }
-        return PAGE_EXISTS;
-    }
-    return NO_SUCH_PAGE;
-}
 ```
 
-```java
-private ArrayList<ArrayList<String>> createPages(int lines, int size)
-{
-  ArrayList<ArrayList<String>> pages = new ArrayList<>();
-  ArrayList<String> page = new ArrayList<>();
-  for (int n = 1; n < lines; n++) {
-    page.add("This is line number " + n);
-    if (page.size() == size) {
-      pages.add(page);
-      page = new ArrayList<>();
-    }
-  }
-  if (page.size() > 0) pages.add(page);
-  return pages;
-}
-```
 
-等待，抱歉，之前的输出由于源的混乱产生了一些重复和错误。让我根据你的指令提供干净的版本。
 
-（自我纠正：我将根据提供的输入生成最终的干净的版本。）
-
-[content]
 # JAVA 10: JAVA2D, 窗口绘图与图像处理动画
 
 ```java
@@ -4347,6 +3415,7 @@ private void setTransform(Graphics2D g2)
 
 ```java
 class ResizeListener extends ComponentAdapter {
+
   @Override
   public void componentResized(ComponentEvent ce) {
     Dimension d = getSize();
@@ -4393,6 +3462,7 @@ import javax.swing.*;
 import java.awt.print.*;
 
 public class MainView extends JFrame implements Printable {
+
     public MainView() {
         super("Hello printer");
         setSize(200, 100);
@@ -4421,12 +3491,6 @@ www.ie.edu
 
 # JAVA 10: JAVA2D, 窗口绘图与图像处理
 
-（此处省略重复的标题和代码块，仅保留核心逻辑翻译部分）
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
-# JAVA 10: JAVA2D, 窗口绘图与图像处理
-
 ```java
 public void print(Graphics2D g)
 {
@@ -4444,15 +3508,11 @@ public void print(Graphics2D g)
 }
 ```
 
-（其余部分已按要求完成翻译并确保不重复）
-
-
-
-
 # JAVA 10: JAVA2D，窗口绘制与图像处理
 
-```
+```java
 if (page >= pages.size()) return NO_SUCH_PAGE;
+
 Graphics2D g2d = (Graphics2D)g;
 g2d.translate(pf.getImageX(), pf.getImageY());
 for (int y = 0, i = 0; i < pages.get(page).size(); ++i) {
@@ -4472,7 +3532,7 @@ return PAGE_EXISTS;
 
 另一个示例是 `PrintOptions`，它与第一个示例几乎相同，并打印文本 "Hello world"。唯一的区别是 Print 按钮的事件处理器，它显示你可以打开一个带有打印机设置的对话框进行打印，而无需通常的打印机选择对话框。
 
-```
+```java
 public void print(ActionEvent e)
 {
     PrinterJob job = PrinterJob.getPrinterJob();
@@ -4499,11 +3559,11 @@ public void print(ActionEvent e)
 public int print(Graphics g, PageFormat pf,
 int page) throws PrinterException
 {
-if (page > 0) return NO_SUCH_PAGE;
-Graphics2D g2d = (Graphics2D)g;
-g2d.translate(pf.getImageableX(), pf.getImageableY());
-drawing.paintAll(g);
-return PAGE_EXISTS;
+    if (page > 0) return NO_SUCH_PAGE;
+    Graphics2D g2d = (Graphics2D)g;
+    g2d.translate(pf.getImageableX(), pf.getImageableY());
+    drawing.paintAll(g);
+    return PAGE_EXISTS;
 }
 ```
 
@@ -4540,17 +3600,29 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.print.*;
 import javax.swing.*;
+```
+
+
+
+```java
 import javax.swing.border.*;
+
 import javax.swing.table.*;
 
 public class MainView extends JFrame {
+
     private JTable table = new JTable();
 
     public MainView() {
+
         super("A JTable");
+
         setSize(400, 300);
+
         createView();
+
     }
+
 }
 ```
 
@@ -4558,46 +3630,69 @@ public class MainView extends JFrame {
 
 ```java
 setLocationRelativeTo(null);
+
 setDefaultCloseOperation(EXIT_ON_CLOSE);
+
 setVisible(true);
 ```
 
 ```java
 private void createCanvas() {
+
     JPanel panel = new JPanel(new BorderLayout());
+
     panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+
     setColumnWidth(table.getColumnModel().getColumn(1), 100);
+
     setColumnWidth(table.getColumnModel().getColumn(2), 100);
+
     panel.add(new JScrollPane(table));
+
     JButton cmdPrint = new JButton("Print");
+
     cmdPrint.addActionListener(this::print);
+
     JPanel command = new JPanel(FlowLayout());
+
     command.add(cmdPrint);
+
     panel.add(command, BorderLayout.SOUTH);
+
 }
 ```
 
 ```java
 private void setColumnWidth(TableCell col, int width) {
+
     col.setPreferredSizeWidth(width);
+
     col.setMinWidth(width);
+
     col.setMaxWidth(width);
+
 }
 ```
 
 ```java
 public void print(ActionEvent e) {
+
     try {
+
         table.print();
+
     } catch (PrinterException ex) {
+
         JOptionPane.showMessageDialog(this, ex.toString());
+
     }
+
 }
 ```
 
 事实上，没什么需要解释的，设计非常简单。注意该类没有实现 `Printable`，并且按钮的事件处理器只执行以下语句：
 
-```
+```java
 table.print();
 ```
 
@@ -4615,55 +3710,78 @@ Java 的打印 API 在不断演进，Java 的早期版本不支持打印，因�
 
 打印任务的原理具有这些新可能性：
 
-- 1. 选择由 `PrintService` 对象表示的打印机
-- 2. 创建由 `DocPrintJob` 对象表示的任务
-- 3. 创建一个表示要打印数据的 `Doc`
-- 4. 通过调用 `DocPrintJob` 对象的 `print()` 方法来启动任务
+1. 选择由 `PrintService` 对象表示的打印机。
+2. 创建由 `DocPrintJob` 对象表示的任务。
+3. 创建一个表示要打印数据的 `Doc`。
+4. 通过调用 `DocPrintJob` 对象的 `print()` 方法来启动任务。
 
-要选择打印机，你get使用 `PrintServiceLookup` 类中的静态方法：
+要选择打印机，你 get 使用 `PrintServiceLookup` 类中的静态方法：
 
 ```java
 package printservicesprogram;
 
 import javax.print.*;
+
 import javax.print.attribute.*;
+
 import javax.print.attribute.standard.*;
 
 public class PrintServicesProgram {
+
     PrintService[] services = { PrintServiceLookup.lookupDefaultPrintService() };
+
     print(services);
+
     print(PrintServiceLookup.lookupPrintServices(null, null));
+
     print(
+
         AttributeSet attrs = new HashAttribute();
+
         attrs.add(ColorSupported.SUPPORTED);
+
         attrs.add(DocFlavor.URL.TEXT_HTML_UTF_8, null);
+
         attrs.add(OrientationRequested.LANDSCAPE);
+
         attrs.add(javax.print.attribute.standard.MediaSizeName.ISO_A3);
+
         print(PrintServiceLookup.lookupPrintServices(null, attrs));
+
         PrintRequestAttributeSet attr = new HashRequestAttributeSet();
+
     );
+
+}
 ```
-
-
-
-
 
 # JAVA 10: JAVA2D，窗口绘图与图像处理
 
 ```java
 PrintService service =
+
 PrintServiceUI.printDialog(null, 100, 100,
+
 PrintServiceLookup.lookupPrintServices(null, null),
+
 PrintServiceLookup.lookupDefaultPrintService(null, attr);
+
 if (service != null) print(new PrintService[] { service });
+
 Attribute[] arr = attr.toArray();
+
 for (Attribute a : arr) System.out.println(a.getName() + " ": " + a);
 
 private static void print(PrintService[] services)
+
 {
+
   for (int i = 0; i < services.length; ++i)
+
     System.out.println(services[i].getName());
+
     System.out.println();
+
 }
 ```
 
@@ -4691,130 +3809,214 @@ PrintServiceLookup.lookupPrintServices(null, attrs)
 package printimage;
 
 import java.io.*;
+
 import java.awt.*;
+
 import java.awt.print.*;
+
 import javax.swing.*;
+
 import javax.swing.filechooser.*;
+
 import javax.image.imageio.*;
+
 import javax.swing.print.*;
 
 public class PrintImage {
+
     private ImageIcon icon = null;
 
     public static void main(String[] args) {
+
         (new PrintImage()).printImage();
+
     }
 
     private void printImage() {
+
         JFileChooser chooser = new JFileChooser(new File(System.getProperty("user.home")));
+
         chooser.setFilter(new FileNameExtensionFilter("Picture", "jpg"));
+
         if (chooser.showDialog(null) == JFileChooser.APPROVE_OPTION) {
+
             icon = loadImage(chooser.getSelectedFile());
+
             if (icon != null) {
+
                 try {
+
                     PrintService service = PrintServiceLookup.lookupDefaultPrintService();
+
                     DocJob job = service.createPrintJob();
+
                     DocFlavor flavor = DocFlavor.SERVICE_FORMATTED_PRINTABLE;
+
                     SimpleDoc doc = new SimpleDoc(new Picture(), flavor, null);
+
                     job.print(doc, null);
+
                 } catch (Exception ex) {
+
                 }
+
             }
+
         }
+
     }
 
     private ImageIcon loadImage(File file) {
+
       try {
+
         return new ImageIcon(ImageIO.read(file));
+
       } catch (Exception ex) {
+
         return null;
+
       }
+
     }
+
 }
 
 class Picture implements Printable {
+
   public int print(Graphics g, PageFormat format, int page) {
+
     if (page > 0) return Printable.NO_SUCH_PAGE;
+
     Graphics2D g2d = (Graphics2D) g;
+
     g2d.translate((int)format.getImageableX(), (int)format.getImageableY());
+
     scaleGraphics(g2d, format);
+
     g2d.drawImage(icon.getImage(), 0, 0, null);
+
     return Printable.PAGE_EXISTS;
+
   }
 
   private void scaleGraphics(Graphics2D g2d, PageFormat format) {
+
     // Implementation for scaling
+
   }
+
 }
 ```
 
-![](img/6c4faa569f9698b2c5c2a846193c23_149_0.png)
+![](img/6c4faa569f96988b2c5c2a846193c23_149_0.png)
 
+# JAVA 10: JAVA2D，窗口绘制与图像处理
 
-
-
-
-# JAVA 10: JAVA2D, 窗口绘制与图像处理
-
-打印
+## 打印
 
 ```java
 class Page0 implements Printable
+
 {
+
     public int print(Graphics g, PageFormat format, int page) throws PrinterException
+
     {
+
         Graphics2D g2d = (Graphics2D) g;
+
         double width = format.getImageableWidth();
+
         double height = format.getImageableHeight();
+
         double xpos = format.getImageableX();
+
         double ypos = format.getImageableY();
+
         Ellipse2D ellipse = new Ellipse2D.Double(
+
             width / 2 - 50 + xpos, height / 2 - 50 + ypos, 100, 100);
+
         g2d.setColor(Color.red);
+
         g2d.fill(ellipse);
+
         return Printable.PAGE_EXISTS;
+
     }
+
 }
 ```
 
 ```java
 class Page1 implements Printable
+
 {
+
     public int print(Graphics g, PageFormat format, int page) throws PrinterException
+
     {
+
         Graphics2D g2d = (Graphics2D) g;
-        double width = format.getImageableWidth();
+
+double width = format.getImageableWidth();
+
 double height = format.getImageableHeight();
+
 double xpos = format.getImageableX();
+
 double ypos = format.getImageableY();
+
 Rectangle2D rect = new Rectangle2D.Double(xpos, ypos, width, height);
+
 Line2D line = new Line2D.Double(xpos, ypos, xpos + width, ypos + height);
+
 Line2D line2 = new Line2D.Double(xpos, ypos + height, xpos + width, ypos);
+
 g2d.setColor(Color.blue);
+
 g2d.draw(rect);
+
 g2d.draw(line1);
+
 g2d.draw(line2);
+
 return Printable.PAGE_EXISTS;
+
     }
+
 }
 ```
 
 ```java
 class Page2 implements Printable
+
 {
+
     public int print(Graphics g, PageFormat format, int page) throws PrinterException {
+
         Graphics2D g2d = (Graphics2D) g;
+
 g2d.translate((int)(format.getImageableWidth()), (int)(format.getImageableY()));
+
         double width = format.getImageableWidth();
+
         double height = format.getImageableHeight();
-        TextLayout text = new TextLayout("Hello", new Font("Serif", Font.BOLD, 144));
-g2d.getFontRenderer();
-        Rectangle2D rect = text.getBounds();
-        text.draw(g2d, (int)(width - rect.getWidth()) / 2, (int)(height + rect.getHeight()) / 2);
-        return Printable.PAGE_EXISTS;
-    }
-}
+
 ```
+
+
+
+`TextLayout text = new TextLayout("Hello", new Font("Serif", Font.BOLD, 144));`
+
+`g2d.getFontRenderer();`
+
+`Rectangle2D rect = text.getBounds();`
+
+`text.draw(g2d, (int)(width - rect.getWidth()) / 2, (int)(height + rect.getHeight()) / 2);`
+
+`return Printable.PAGE_EXISTS;`
 
 这三个页面被定义为内部类，并且都是 `Printable` 对象。第一页在页面中心绘制一个半径为 50 的圆。第二页在裁剪区域和两条对角线之间绘制一个框。最后，最后一页在页面中心绘制一段文本。
 
@@ -4824,11 +4026,7 @@ g2d.getFontRenderer();
 SimpleDoc doc = new SimpleDoc(book, flavor, null);
 ```
 
-这一次它的类型类型为
-
-`DocFlavor.SERVICE_FORMATTED.PAGEABLE`
-
-因此这是一个多页文档。
+这一次它的类型为 `DocFlavor.SERVICE_FORMATTED.PAGEABLE`，因此这是一个多页文档。
 
 ## 10.3 打印
 
@@ -4838,7 +4036,7 @@ SimpleDoc doc = new SimpleDoc(book, flavor, null);
 
 ```java
 PrinterJob job = PrinterJob.getPrinterJob();
-job.set((();
+job.set((());
 job.set(format);
 try {
     job.setPageable(doc);
@@ -4872,17 +4070,13 @@ as.addAttribute(TextAttribute.FONT, new Font("Serif", Font.BOLD, 14));
 as.draw(g2d, x, y);
 ```
 
-
-
-
-
 # 11 程序的维护
 
 大多数程序必须随着时间的推移进行维护。这就是为什么程序设计和质量起着重要作用的原因之一，因为设计和代码难以理解且难以阅读的程序充其量是糟糕的；维护一个设计糟糕的程序可能非常耗费时间。
 
 许多程序会运行多年，这需要定期对程序进行维护。其中一个可能是程序包含错误，这些错误理应应该被修正。这些通常不是最困难的维护任务，因为错误通常在程序启动后不久就会被发现，而且错误应该由开发程序的这些人以及对程序代码有概览和理解的人来修复。维护的其他理由是程序需要扩展新功能，或者现有功能需要以不同的方式工作；对于一个将使用多年或许多年的大型程序，随着时间的推移，避免地会有变更请求。在这里，原始设计对维护任务具有更大的意义，因为任务通常将由原始开发程序的开发者以外的其他人员执行，尽管他们本应该是同一批人，但完全无法保证他们能记得程序是如何写出来的。你会惊讶于自己忘记程序是如何写得竟然有多快。最后，维护程序的一个原因可能是你仅仅是想让程序现代化并将其作为新版本投放市场，这在办公软件等各种标准程序中非常常见。
 
-当因为程序需要扩展或必须开发程序的新版本而产生维护任务时，这通常是一个新的开发项目。原则上，这样的项目与其他软件开发项目相似，但如果是一个设计良好的高质量程序，且如果是要扩展程序或修改程序的一部分，那么项目可以局限于需要扩展或更改的部分，而程序的其他部分可以保持不变。另一方面，如果程序在开发时没有考虑到未来的维护，那么存在很大风险，可能会可能会影响代码大部分部分的副作用，在最坏的情况下，即使是微小的更改也意味着大部分代码必须重写。
+当因为程序需要扩展或必须开发程序的新版本而产生维护任务时，这通常是一个新的开发项目。原则上，这样的项目与其他软件开发项目相似，但如果是一个设计良好的高质量程序，且如果是要扩展程序或修改程序的一部分，那么项目可以局限于需要扩展或更改的部分，而程序的其他部分可以保持不变。另一方面，如果程序在开发时没有考虑到未来的维护，那么存在很大风险，可能会影响代码大部分部分的副作用，在最坏的情况下，即使是微小的更改也意味着大部分代码必须重写。
 
 幸运的是，有了良好的设计，通常不会糟糕，但总有理由意识到，程序中的变化很容易引起其他地方的意料之外的变化。因此，程序的维护必须经过计划，以确保你已经识别了相关更改的后果，随后，如果可能，需要提供文档，以便进行更改的开发者能够快速获取程序架构及其实现方式的概述。因此，任何维护任务的开始都是阅读程序文档，特别是设计文档，以获取整个代码的概述，让你知道每个文件的重要性。这一切的结果是我们可以清楚地强调设计和程序架构的重要性。否则，程序的维护将毫无价值。
 
@@ -4892,14 +4086,14 @@ as.draw(g2d, x, y);
 
 ### 问题 2
 
-首先从 Java 8 中创建一个 Calendar 项目的副本。花些时间测试程序，以便你确定程序是如何运行的。现在的任务是为程序添加三个功能：
+首先从 Java 8 中创建一个 `Calendar` 项目的副本。花些时间测试程序，以便你确定程序是如何运行的。现在的任务是为程序添加三个功能：
 
 - 工具栏必须有两个新图标，如果你点击其中一个，程序应该打印当前月的日历，而点击另一个，程序应该打印当前年份的日历。
 - 对话框必须有一个额外的按钮，点击它将允许你打印笔记。
 
 ### 问题 3
 
-首先从 Java 9 中创建一个 SlotMachine 项目的副本。花些时间测试程序，以便你确定程序是如何运行的。任务是修改程序：
+首先从 Java 9 中创建一个 `SlotMachine` 项目的副本。花些时间测试程序，以便你确定程序是如何运行的。任务是修改程序：
 
 - 在现有版本中，没有轮子的动画，但该动画通过在选择下一个图形之前短暂显示单个图形来模拟。你现在需要更改程序，不再像第 9 章那样通过相同的方式动画模拟轮轴的旋转。程序有一个管理员模式，特定用户具有管理员权限。如果该用户已登录，管理员工具的图标会自动显示，否则不显示。任务的一部分是确保始终有一个管理员，并且该管理员可以被删除。
 
@@ -4939,10 +4133,6 @@ www.bi.edu/master
 - 曲线图，图形被绘制成平滑的曲线
 - 散点图，图形以点绘制——每个类别（标签）一个点，这些点可以用细直线连接。
 
-
-
-
-
 # JAVA 10: JAVA2D, 窗口绘制与图像处理
 
 柱状图通过垂直条形绘制，但也有一种变体是将条形水平绘制，最后还存在垂直和水平柱状图的带有简单 3D 效果的变体。
@@ -4967,16 +4157,16 @@ public enum PlotType { CROSS, STAR, OPENCIRCLE, OPENSQUARE, OPENTANGLE,
 OPENRHOMBE, CLOSEDRHOMBE, CLOSEDCIRCLE, CLOSEDSQUARE, CLOSEDTRIANGLE )
 ```
 
-上述图表被称为简单的（或单值的）的，是因为它们在原则上是由两个数组定义的：
+上述图表被称为简单的（或单值的），是因为它们在原则上是由两个数组定义的：
 
-- 1. labels 是一个字符串数组，代表类别，因此代表自变量或 y 轴
-- 2. values 是一个数字数组，长度与 labels 相同，代表因变量或 y 轴
+- 1. `labels` 是一个字符串数组，代表类别，因此代表自变量或 y 轴
+- 2. `values` 是一个数字数组，长度与 `labels` 相同，代表因变量或 y 轴
 
 因此，简单图表是数学函数的图表，除了这两个数组外，图表还附带了其他参数，指示图表应如何被绘制。
 
-图表也可以是多值的，这意味着每个标签都有多个数字，区别在于数组值在原则上是一个二维数组。多值图表默认作为几个接一个接的简单图表进行绘制（即作为一系列图表进行绘制）。多值图表特别可以进行合并，这意味着各个图表被绘制在同一个坐标系中——在合理的范围内。这正是使后续库的开发既复杂又全面的部分。
+图表也可以是多值的，这意味着每个标签都有多个数字，区别在于数组 `values` 在原则上是一个二维数组。多值图表默认作为几个接一个接的简单图表进行绘制（即作为一系列图表进行绘制）。多值图表特别可以进行合并，这意味着各个图表被绘制在同一个坐标系中——在合理的范围内。这正是使后续库的开发既复杂又全面的部分。
 
-基本上，图表是使用两个数据结构定义的。第一个称为 SingleValues，代表单个图表的 y 值：
+基本上，图表是使用两个数据结构定义的。第一个称为 `SingleValues`，代表单个图表的 y 值：
 
 ```java
 package pagraphs.charts;
@@ -4994,56 +4184,56 @@ public class SingleValues
 ![](img/6c4faa569f96988b2c15c2a846193c23_163_0.png)
 
 ```java
-private double end;
-private int points;
-private int dec;
-private Paint color;
-private PlotType plot;
-private double param1;
-private double param2;
-private boolean onoff;
-private final double[] values;
+    private double end;
+    private int points;
+    private int dec;
+    private Paint color;
+    private PlotType plot;
+    private double param1;
+    private double param2;
+    private boolean onoff;
+    private final double[] values;
 }
 
 public SingleValues(GraphType type, String label, String header, double begin,
 double end, int points, int dec, Paint color,
 PlotType plot, double param2, boolean onoff, double ... values)
 {
-this.type = type;
-this.label = label;
-this.header = header;
-this.begin = begin;
-this.end = end;
-this.points = points;
-this.dec = dec;
-this.color = color;
-this.plot = plot;
-this.param1 = param1;
-this.param2 = param2;
-this.onoff = onoff;
-this.values = values;
+    this.type = type;
+    this.label = label;
+    this.header = header;
+    this.begin = begin;
+    this.end = end;
+    this.points = points;
+    this.dec = dec;
+    this.color = color;
+    this.plot = plot;
+    this.param1 = param1;
+    this.param2 = param2;
+    this.onoff = onoff;
+    this.values = values;
 }
 ```
 
 简而言之，变量的含义如下：
 
-- label 定义此函数的标签，通常用作 y 轴标签，默认为空
-- header 如果是该图表的名称或描述，默认为空 VBAR
-- type 是此图表的类型，默认为空
-- begin 定义 y 轴上的最小值，默认为 0
-- end 定义 y 轴上的最大值，默认为 0，如果 begin 和 end 均为 0，则库会自动计算该值
-- points 定义 y 轴上的间隔数量，默认为 0，然后库会自动计算该值
-- dec 定义 y 轴上使用的小数位数，默认为 0，且库会自动计算该值
-- color 定义图表的颜色——如果未定义了默认颜色，则使用默认颜色
-- plot 定义用于点图的图形形状（该值仅用于图表）
-- param1 是一个特殊参数，其应用取决于图表（用于 LINE、CURVE 和 SPEED），默认为 0
-- param2 是一个特殊参数，其应用取决于图表（用于 SPEED），默认为 0
-- onoff 是一个特殊参数，其应用取决于图表（用于 PIE 和 PLOT 图），默认为 false
-- values 是此图表的值
+- `label` 定义此函数的标签，通常用作 y 轴标签，默认为空
+- `header` 如果是该图表的名称或描述，默认为空 `VBAR`
+- `type` 是此图表的类型，默认为空
+- `begin` 定义 y 轴上的最小值，默认为 0
+- `end` 定义 y 轴上的最大值，默认为 0，如果 `begin` 和 `end` 均为 0，则库会自动计算该值
+- `points` 定义 y 轴上的间隔数量，默认为 0，然后库会自动计算该值
+- `dec` 定义 y 轴上使用的小数位数，默认为 0，且库会自动计算该值
+- `color` 定义图表的颜色——如果未定义了默认颜色，则使用默认颜色
+- `plot` 定义用于点图的图形形状（该值仅用于图表）
+- `param1` 是一个特殊参数，其应用取决于图表（用于 `LINE`、`CURVE` 和 `SPEED`），默认为 0
+- `param2` 是一个特殊参数，其应用取决于图表（用于 `SPEED`），默认为 0
+- `onoff` 是一个特殊参数，其应用取决于图表（用于 `PIE` 和 `PLOT` 图），默认为 `false`
+- `values` 是此图表的值
 
 该类拥有 get 和 set 方法，为了方便定义简单图表，该类的构造函数比上述更多。
 
-SimpleValues 类仅定义了一个单一因变量。一个可以是单值也可以是多值的图表定义为：
+`SimpleValues` 类仅定义了一个单一因变量。一个可以是单值也可以是多值的图表定义为：
 
 ```java
 package pagraphs.charts;
@@ -5073,44 +4263,42 @@ public class MultiValues // 定义多值图表
 public MultiValues(List<SingleValues> list, String label, boolean grid,
 boolean merge, boolean same, boolean stacked, double scaleX, double scaleY,
 String ... labels) {
-this.list = list;
-this.label = label;
-this.grid = grid;
-this.merge = merge;
-this.same = same;
-this.stacked = stacked;
-this.scaleX = scaleX;
-this.scaleY = scaleY;
-this.labels = labels;
+    this.list = list;
+    this.label = label;
+    this.grid = grid;
+    this.merge = merge;
+    this.same = same;
+    this.stacked = stacked;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
+    this.labels = labels;
 }
 ```
 
+
+
 最初定义了一个颜色数组，在没有定义颜色时使用它。否则，各个属性的含义如下：
 
-- list 是一个包含 SingleValues 对象的列表，定义此图表
-- labels 是 String 类型的数组，用于自变量（x轴或标签轴）的文本
-- label 是 x 轴的标签，默认为空
-- grid 指定是否绘制网格线（默认为 true）
-- merge 指示图表是否应该合并为一个图表（默认为 false）
-- same 指定合并图表是否必须使用相同的 y 轴（默认为 true）——该属性仅用于合并图表
-- stacked 指定合并图表是堆叠的（true）还是并排绘制（默认为 false）——该属性仅用于合并图表
-- scaleX 定义 x 轴（水平）方向的缩放（默认为 1，即无缩放）
-- scaleY 定义 y 轴（垂直）方向的缩放（默认为 1，即无缩放）
-- minimum 用于合并图表计算 y 轴的最小值
-- maximum 用于合并图表计算 y 轴的最大值
+- `list` 是一个包含 `SingleValues` 对象的列表，定义此图表
+- `labels` 是 `String` 类型的数组，用于自变量（x轴或标签轴）的文本
+- `label` 是 x 轴的标签，默认为空
+- `grid` 指定是否绘制网格线（默认为 `true`）
+- `merge` 指示图表是否应该合并为一个图表（默认为 `false`）
+- `same` 指定合并图表是否必须使用相同的 y 轴（默认为 `true`）——该属性仅用于合并图表
+- `stacked` 指定合并图表是堆叠的（`true`）还是并排绘制（默认为 `false`）——该属性仅用于合并图表
+- `scaleX` 定义 x 轴（水平）方向的缩放（默认为 1，即无缩放）
+- `scaleY` 定义 y 轴（垂直）方向的缩放（默认为 1，即无缩放）
+- `minimum` 用于合并图表计算 y 轴的最小值
+- `maximum` 用于合并图表计算 y 轴的最大值
 
 该类拥有必要的 get 和 set 方法，为了方便定义图表，该类的构造函数比显示的更多。
 
-如提到的有 9 种不同的图表，可以在同一个坐标系中合并多个图表。图表使用绘制 类进行绘制，这些类负责特定的图表并捕获鼠标点击。如果你用鼠标点击图表，它必须引发事件：
+如提到的有 9 种不同的图表，可以在同一个坐标系中合并多个图表。图表使用绘制类进行绘制，这些类负责特定的图表并捕获鼠标点击。如果你用鼠标点击图表，它必须引发事件：
 
-- 1. 如果点击标签（在 x 轴上），则名称与事件关联
-- 2. 如果点击图表本身，则事件将关联 x 轴标签上的名称和对应的函数值
+1. 如果点击标签（在 x 轴上），则名称与事件关联
+2. 如果点击图表本身，则事件将关联 x 轴标签上的名称和对应的函数值
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_166_0.png)
-
-
-
-
 
 # JAVA 10: JAVA2D，窗口绘制与图像处理
 
@@ -5160,28 +4348,29 @@ public class ChartComponent extends JComponent implements MouseListener
     private int gap;
     private java.util.List<Drawer> drawers;
 
-public ChartComponent(MultiValues data, Font font, int gap, Color borderColor)
-{
-    this.data = data;
-    this.gap = gap;
-    this.borderColor = borderColor;
-    setFont(font);
-    drawers = DrawerFactory.createDrawer(data, getFont());
-    addMouseListener(this);
-    setBackground(Color.white);
-}
-
-public Dimension getPreferredSize()
-{
-    double width = 0;
-    double height = 0;
-    for (int n = 0; n < drawers.size(); ++n)
+    public ChartComponent(MultiValues data, Font font, int gap, Color borderColor)
     {
-      width += drawers.get(n).getWidth() + gap;
-      double h = drawers.get(n).getHeight();
-      if (height < h) height = h;
+        this.data = data;
+        this.gap = gap;
+        this.borderColor = borderColor;
+        setFont(font);
+        drawers = DrawerFactory.createDrawer(data, getFont());
+        addMouseListener(this);
+        setBackground(Color.white);
     }
-    return new Dimension((int)width, (int)height);
+
+    public Dimension getPreferredSize()
+    {
+        double width = 0;
+        double height = 0;
+        for (int n = 0; n < drawers.size(); ++n)
+        {
+            width += drawers.get(n).getWidth() + gap;
+            double h = drawers.get(n).getHeight();
+            if (height < h) height = h;
+        }
+        return new Dimension((int)width, (int)height);
+    }
 }
 ```
 
@@ -5199,49 +4388,48 @@ AB Volvo (publ)
 ```java
 public void paintComponent(Graphics g)
 {
-  Graphics2D g2d = (Graphics2D)g;
-  Dimension size = getSize();
-  g2d.setPaint(getBackground());
-  g2d.fill(new Rectangle2D.Double(0, 0, size.width, size.height));
-  g2d.setFont(getFont());
-  DrawingTools.smoothGraphics(g2d);
-  double offset = 0;
-  if (data.isMerge(offset)) {
-    (MergeDrawer)drawers.get(0).draw(g2d, 0, 0, offset);
-  } else for (int n = 0; n < data.size(); ++n)
-    offset += ((SingleDrawer)drawers.get(n)).draw(g2d, n, 0, offset) + gap;
-  if (borderColor != null) {
-    g2d.setStroke(new BasicStroke(0.5f));
-    g2d.setPaint(borderColor);
-    Dimension dim = getPreferredSize();
-    g2d.setClip(new Rectangle2D.Double(0, 0, dim.width + 1, dim.height + 1));
-    g2d.draw(new Rectangle2D.Double(0, 0, dim.width, dim.height));
-  }
+    Graphics2D g2d = (Graphics2D)g;
+    Dimension size = getSize();
+    g2d.setPaint(getBackground());
+    g2d.fill(new Rectangle2D.Double(0, 0, size.width, size.height));
+    g2d.setFont(getFont());
+    DrawingTools.smoothGraphics(g2d);
+    double offset = 0;
+    if (data.isMerge(offset)) {
+        (MergeDrawer)drawers.get(0).draw(g2d, 0, 0, offset);
+    } else for (int n = 0; n < data.size(); ++n)
+        offset += ((SingleDrawer)drawers.get(n)).draw(g2d, n, 0, offset) + gap;
+    if (borderColor != null) {
+        g2d.setStroke(new BasicStroke(0.5f));
+        g2d.setPaint(borderColor);
+        Dimension dim = getPreferredSize();
+        g2d.setClip(new Rectangle2D.Double(0, 0, dim.width + 1, dim.height + 1));
+        g2d.draw(new Rectangle2D.Double(0, 0, dim.width, dim.height));
+    }
 }
 
-public void
-public addChartListener(ChartListener listener)
+public void addChartListener(ChartListener listener)
 {
-  listeners.add(listener);
+    listeners.add(listener);
 }
 
 public void removeChartListener(ChartListener listener)
 {
-  listeners.remove(listener);
+    listeners.remove(listener);
 }
 
 public void mouseClicked(MouseEvent e)
 {
-  for (int n = 0; n < drawers.size(); ++n)
-  {
-    FunctionValue functionValue =
-      drawers.get(n).get(e.getX(), e.getY());
-    if (functionValue != null) {
-      ChartEvent event = new ChartEvent(this, functionValue);
-      for (ChartListener listener : listeners) listener.chartClicked(event);
-      return;
+    for (int n = 0; n < drawers.size(); ++n)
+    {
+        FunctionValue functionValue =
+            drawers.get(n).get(e.getX(), e.getY());
+        if (functionValue != null) {
+            ChartEvent event = new ChartEvent(this, functionValue);
+            for (ChartListener listener : listeners) listener.chartClicked(event);
+            return;
+        }
     }
-  }
 }
 ```
 
@@ -5262,7 +4450,7 @@ public void mouseClicked(MouseEvent e)
 
 ![](img/6c4faa569f96988b2c15c2a846193c23_174_0.png)
 
-现在你不能通地合并图。例如，合并直方图（`VBAR` 图）和饼图是没有意义的，合并 `VBAR` 和 `HBAR` 图也没有意义。`MergeDrawer` 类首先将图分为若干类（类似于它们可以合并的方式），并为每种类型定义一个 `Drawer` 类。这导致了不少于 14 个新的 `Drawer` 类，所有这些类在原则上都与上述相似，但它们继承自抽象类 `MultiDrawer`，该类在此时作为单一绘制器绘制多值图。当有如此多的 `MultiDrawer` 类来满足：
+现在你不能通过合并图。例如，合并直方图（`VBAR` 图）和饼图是没有意义的，合并 `VBAR` 和 `HBAR` 图也没有意义。`MergeDrawer` 类首先将图分为若干类（类似于它们可以合并的方式），并为每种类型定义一个 `Drawer` 类。这导致了不少于 14 个新的 `Drawer` 类，所有这些类在原则上都与上述相似，但它们继承自抽象类 `MultiDrawer`，该类在此时作为单一绘制器绘制多值图。当有如此多的 `MultiDrawer` 类来满足：
 
 - 你可以指定合并后的图是使用相同的轴还是使用它们各自的轴
 - 你可以指定柱图是并排绘制还是堆叠绘制
@@ -5276,32 +4464,28 @@ public void mouseClicked(MouseEvent e)
 - `MSHBARDrawer`，将相同轴的 `HBAR` 图合并
 - `MDHBARDrawer`，将不同轴的 `HBAR` 图合并
 
-
-
-
-
 # JAVA 10: JAVA2D，窗口绘制与图像处理
 
 饼图 (PACHART)
 
--   7. MSHARDDraw，用于相同轴的 3D 图形
-- 8. MDHBARDDraw，用于不同轴的 3D 图形
-- 9. MSLCPDrawer，用于相同轴的曲线和散点图
-- 10. MSLCPDrawer，用于不同轴的曲线和散点图
--   11. SVBARDer，用于堆叠图形
--   12. SHBARDer，用于堆叠的3D 图形
--   13. SVBARDDraw，用于堆叠的 3D 图形
--   14. SHBARDDraw，用于堆叠的 3D 图形
+- 7. `MSHARDDraw`，用于相同轴的 3D 图形
+- 8. `MDHBARDDraw`，用于不同轴的 3D 图形
+- 9. `MSLCPDrawer`，用于相同轴的曲线和散点图
+- 10. `MSLCPDrawer`，用于不同轴的曲线和散点图
+- 11. `SVBARDer`，用于堆叠图形
+- 12. `SHBARDer`，用于堆叠的 3D 图形
+- 13. `SVBARDDraw`，用于堆叠的 3D 图形
+- 14. `SHBARDDraw`，用于堆叠的 3D 图形
 
-如果多值图形被合并，它将以 *Values* 的形式绘制。
+如果多值图形被合并，它将以 `Values` 的形式绘制。
 
-因此，这些图形的工作主要是编写相应的 Drawer 类，以获得良好的结果。
+因此，这些图形的工作主要是编写相应的 `Drawer` 类，以获得良好的结果。
 
 ![](img/64faa569688b2c152a8461932375.png)
 
-### 12.2 测试 (TEST)
+## 12.2 测试 (TEST)
 
-然后是带有按钮的测试程序。点击第一列可以指定数字。随后，测试程序会在表格内填充数字。在范围内，这通常意味着组件需要重绘，对于包含该组件的布局管理器也具有意义。如果你在表格中选择一个矩形区域（不包含）并点击按钮，会创建一个 MultiValues 对象，你可以对属性进行编辑：
+然后是带有按钮的测试程序。点击第一列可以指定数字。随后，测试程序会在表格内填充数字。在范围内，这通常意味着组件需要重绘，对于包含该组件的布局管理器也具有意义。如果你在表格中选择一个矩形区域（不包含）并点击按钮，会创建一个 `MultiValues` 对象，你可以对属性进行编辑：
 
 ![](img/64faa569688b2c152a8461932376.png)
 
@@ -5317,9 +4501,8 @@ public void mouseClicked(MouseEvent e)
 
 ## 12.3 不足与改进建议
 
-## 图形无法显示合理的数字，并且某些图形（特别是在合并图形时）是错误的。例如，如果数字为负数，堆叠柱图是没有意义的。结论是，多个图形具有先决条件，绘制函数在无法正确绘制时应验证并可能抛出异常。另一种方案是在无法良好绘制时让 Drawer 类返回 0，这种策略已经部分实现。
+图形无法显示合理的数字，并且某些图形（特别是在合并图形时）是错误的。例如，如果数字为负数，堆叠柱图是没有意义的。结论是，多个图形具有先决条件，绘制函数在无法正确绘制时应验证并可能抛出异常。另一种方案是在无法良好绘制时让 `Drawer` 类返回 0，这种策略已经部分实现。
 
-实际组件 ChartComponent 在用户点击图形时可以抛出一个单击事件。该组件在 MultiValues 类型的对象上绘制，当 Multi 数据结构中的属性发生变化时，组件可以扩展为触发 PropertyChangeEvent。在实践中，这通常意味着组件需要重绘。
+实际组件 `ChartComponent` 在用户点击图形时可以抛出一个单击事件。该组件在 `MultiValues` 类型的对象上绘制，当 `Multi` 数据结构中的属性发生变化时，组件可以扩展为触发 `PropertyChangeEvent`。在实践中，这通常意味着组件需要重绘。
 
-另一个问题是扩展库以新图形有多容易。如果是用于单值函数的全新图形，它是简单的。在这种情况下，工作主要是编写继承自 SingleDrawer 的新 Drawer，向 GraphType 中添加新的图形类型并扩展 DrawingFactory 类。此外，还可以扩展 MergeDrawer 类（`merge()` 方法）以感知新类型。如果新类型的图形可以合并，则还必须编写继承自 MultiDrawer 的 Drawer，并且 MergeDrawer 类需要感知该 Drawer。如果新图形类型可以与现有图形合并，任务将更加复杂，这既可能导致现有 Drawer 类型发生更改，也可能需要编写新的 Drawer 类。结论是，如果库扩展了可以与现有图形合并的新图形，工作可能会非常巨大。
-
+另一个问题是扩展库以新图形有多容易。如果是用于单值函数的全新图形，它是简单的。在这种情况下，工作主要是编写继承自 `SingleDrawer` 的新 `Drawer`，向 `GraphType` 中添加新的图形类型并扩展 `DrawingFactory` 类。此外，还可以扩展 `MergeDrawer` 类（`merge()` 方法）以感知新类型。如果新类型的图形可以合并，则还必须编写继承自 `MultiDrawer` 的 `Drawer`，并且 `MergeDrawer` 类需要感知该 `Drawer`。如果新图形类型可以与现有图形合并，任务将更加复杂，这既可能导致现有 `Drawer` 类型发生更改，也可能需要编写新的 `Drawer` 类。结论是，如果库扩展了可以与现有图形合并的新图形，工作可能会非常巨大。

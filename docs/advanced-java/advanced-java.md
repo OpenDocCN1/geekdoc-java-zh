@@ -1,43 +1,8 @@
+
+
 # Java 高级指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 10.1 引言 ........................................................ 78
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 前言
 
@@ -49,29 +14,29 @@
 
 Andriy 在乌克兰的日托米尔工程技术学院完成了计算机科学硕士学位。在过去的十五里，他一直担任顾问/软件开发人员/高级软件开发人员/团队负责人，参与了许多成功项目，包括来自北美和欧洲客户的大型软件系统。
 
-在职业生涯中，Andriy 在企业架构、Web 开发（ASP.NET, Java Server Faces, Play Framework）、软件开发实践（测试驱动开发、持续集成）、软件平台（Sun JEE, Microsoft .NET）、面向对象的分析与设计、用户界面开发（MFC, Swing, Windows Forms/WPF）、关系型数据库管理系统（MySQL, SQL Server, PostgreSQL, Oracle）、NoSQL 解决方案（MongoDB, Redis）以及操作系统（Linux/Windows）方面获得了丰富的经验。
+在职业生涯中，Andriy 在企业架构、Web 开发（`ASP.NET`、`Java Server Faces`、`Play Framework`）、软件开发实践（测试驱动开发、持续集成）、软件平台（`Sun JEE`、`Microsoft .NET`）、面向对象的分析与设计、用户界面开发（`MFC`、`Swing`、`Windows Forms/WPF`）、关系型数据库管理系统（`MySQL`、`SQL Server`、`PostgreSQL`、`Oracle`）、`NoSQL` 解决方案（`MongoDB`、`Redis`）以及操作系统（`Linux/Windows`）方面获得了丰富的经验。
 
-Andriy 在分布式（多层）软件系统、多线程应用程序、桌面应用程序、面向服务的架构和富互联网应用程序的开发方面拥有丰富经验。自2006年以来，他主要活跃于 JEE / JSP 平台。
+Andriy 在分布式（多层）软件系统、多线程应用程序、桌面应用程序、面向服务的架构和富互联网应用程序的开发方面拥有丰富经验。自 2006 年以来，他主要活跃于 `JEE` / `JSP` 平台。
 
 作为一名专业人士，他始终对持续学习和自我完善开放，以便在他热爱的工作中提高效率。
 
 # 第 1 章
 
-## 如何创建和销对象
+## 如何创建和销毁对象
 
-## 1.1 引言
+### 1.1 引言
 
-根据 TIOBE 编程语言指数，Java 编程语言起源太阳微系统公司并于 1995 年发布，是世界上使用最广泛的编程语言之一。Java 是一门通用编程语言。它对软件开发者具有吸引力，主要因为它拥有强大的库和运行时、简单的语法、丰富的支持平台（编写一次，随处运行 - WORA）以及出色的社区。
+根据 `TIOBE` 编程语言指数，Java 编程语言起源太阳微系统公司并于 1995 年发布，是世界上使用最广泛的编程语言之一。Java 是一门通用编程语言。它对软件开发者具有吸引力，主要因为它拥有强大的库和运行时、简单的语法、丰富的支持平台（编写一次，随处运行 - `WORA`）以及出色的社区。
 
 在本教程中，我们将涵盖 Java 概念，假设读者已经具备了该语言的一些基础知识。这绝不是一份完整的参考书，而是一份将你的 Java 技能提升到新水平的详细指南。
 
 课程过程中，会有很多代码片段供参考。在合理的情况下，同一个示例将分别使用 Java 7 语法和 Java 8 语法呈现。
 
-## 1.2 实例化构造
+### 1.2 实例化构造
 
 Java 是一门面向对象的语言，因此创建新的类实例（对象）可能是它最重要的概念。构造函数在类实例的初始化中起着核心作用，Java 为定义它们提供了一些便利。
 
-### 1.2.1 隐式（生成的）构造函数
+#### 1.2.1 隐式（生成的）构造函数
 
 Java 允许在不定义构造函数的情况下创建类。让我们考虑以下类：
 
@@ -88,12 +53,13 @@ public class NoConstructor {
 final NoConstructor instance = new NoConstructor();
 ```
 
-### 1.2.2 无参数构造函数
+#### 1.2.2 无参数构造函数
 
 没有参数的构造函数（无参构造函数）是最简单的方式。
 
 ```java
 package construction;
+
 public class NoArgConstructor {
     public NoArgConstructor() {
         // 构造体
@@ -107,7 +73,7 @@ public class NoArgConstructor {
 final NoArgConstructor noArg = new NoArgConstructor();
 ```
 
-### 1.2.3 带参数的构造函数
+#### 1.2.3 带参数的构造函数
 
 带参数的构造函数是参数化类的有趣方式。
 
@@ -135,7 +101,7 @@ public ConstructorWithArguments(String arg1) {
 }
 ```
 
-### 1.2.4 初始化块
+#### 1.2.4 初始化块
 
 Java 还有另一种使用初始化块来提供初始化逻辑的方法。这个功能很少使用，但最好了解。
 
@@ -151,13 +117,15 @@ public class InitializationBlock {
 
 ```java
 package construction;
+
 public class InitializationBlocks {
-  {
-    // 初始化代码
-  }
-  {
-    // 初始化代码
-  }
+    {
+        // 初始化代码
+    }
+
+    {
+        // 初始化代码
+    }
 }
 ```
 
@@ -165,13 +133,16 @@ public class InitializationBlocks {
 
 ```java
 package construction;
+
 public class InitializationBlockAndConstructor {
-  // 初始化代码
-  public InitializationBlockAndConstructor() {
+    // 初始化代码
+
+    public InitializationBlockAndConstructor() {
+    }
 }
 ```
 
-### 1.2.5 构造保证
+#### 1.2.5 构造保证
 
 Java 提供了开发者可以依赖的某些构造保证。未初始化的实例和类（静态）变量会自动初始化为它们的默认值。
 
@@ -179,36 +150,33 @@ Java 提供了开发者可以依赖的某些构造保证。未初始化的实例
 
 | 类型 | 默认值 |
 |---|---|
-| boolean | False |
-| byte | 0 |
-| short | 0 |
-| int | 0 |
-| long | 0 |
-| char | u0000 |
-| float | 0.0 |
-| double | 0.0d |
-| 对象引用 | null |
+| `boolean` | `False` |
+| `byte` | `0` |
+| `short` | `0` |
+| `int` | `0` |
+| `long` | `0` |
+| `char` | `u0000` |
+| `float` | `0.0` |
+| `double` | `0.0d` |
+| 对象引用 | `null` |
 
 让我们使用以下类作为简单示例进行验证：
 
 ```java
 package construction;
+
 public class InitializationWithDefaults {
-  private boolean booleanMember;
-  private byte byteMember;
-  private short shortMember;
-  private int intMember;
-  private long longMember;
-  private char charMember;
-  private float floatMember;
-  private double doubleMember;
-  private Object referenceMember;
+    private boolean booleanMember;
+    private byte byteMember;
+    private short shortMember;
+    private int intMember;
+    private long longMember;
+    private char charMember;
+    private float floatMember;
+    private double doubleMember;
+    private Object referenceMember;
 }
 ```
-
-
-
-
 
 ```java
 public void InitializationWithDefaults() {
@@ -233,7 +201,7 @@ final InitializationWithDefaults initializationWithDefaults = new Initialization
 
 控制台将会有以下输出：
 
-```
+```text
 booleanMember = false
 byteMember = 0
 shortMember = 0
@@ -245,39 +213,39 @@ doubleMember = 0.0
 referenceMember = null
 ```
 
-## 1.2. 可见性
+#### 1.2.6 可见性
 
 构造函数受 Java 可见性规则限制，并带有访问控制修饰符，这些修饰符决定了其他类是否可以调用特定的构造函数。
 
 表 1.2：数据
 
 | 修饰符 | 包 | 子类 | 其他所有 |
-| --- | --- | --- | --- |
-| public | 可访问 | 可访问 | 可访问 |
-| protected | 可访问 | 可访问 | 不可见 |
-| <无修饰符> | 可访问 | 不可见 | 不可见 |
-| private | 可访问 | 不可见 | 不可见 |
+|---|---|---|---|
+| `public` | 可访问 | 可访问 | 可访问 |
+| `protected` | 可访问 | 可访问 | 不可见 |
+| `<无修饰符>` | 可访问 | 不可见 | 不可见 |
+| `private` | 可访问 | 不可见 | 不可见 |
 
-### 1.2.7 垃圾回收
+#### 1.2.7 垃圾回收
 
-Java（以及 JVM）使用自动垃圾回收。简单来说，每创建一个新对象，会自动为它们分配内存。因此，每当对象不再被引用时，它们会被销毁并回收内存。
+Java（以及 `JVM`）使用自动垃圾回收。简单来说，每创建一个新对象，会自动为它们分配内存。因此，每当对象不再被引用时，它们会被销毁并回收内存。
 
-Java 垃圾回收是分代的，它基于这样一个假设：大多数对象都会死亡（在创建后不久后不再被引用，因此可以被销毁）。大多数开发者认为 Java 中对象的创建是很慢的，应该尽可能避免实例化新对象。事实上，事实并非如此：Java 中的对象创建是非常廉价且快速的。昂贵是不必要的创建长寿对象，这些对象最终会填满老年代并导致“停顿世界”（stop-the-world）垃圾回收。
+Java 垃圾回收是分代的，它基于这样一个假设：大多数对象都会死亡（在创建后不久后不再被引用，因此可以被销毁）。大多数开发者认为 Java 中对象的创建是很慢的，应该尽可能避免实例化新对象。事实上，事实并非如此：Java 中的对象创建是非常廉价且快速的。昂贵是不必要的创建长寿对象，这些对象最终会填满老年代并导致“停顿世界”（`stop-the-world`）垃圾回收。
 
-### 1.2.8 终结器 (Finalizers)
+#### 1.2.8 终结器（Finalizers）
 
 到目前为止我们讨论了对象和对象的初始化，但还没有真正提到它们的对立面：对象的销毁。这是因为 Java 使用垃圾回收来管理对象周期，销毁不需要的对象并回收内存是垃圾回收器的责任。
 
-然而，Java 中有一个名为 Finalizers 的特殊特性，它ن有点像析构函数，但用途不同，是用于执行资源清理。Finalizers 被认为是一项危险的功能（会导致许多副作用和性能问题）。通常情况下，它们是不必要的，并且应该被避免（与 AutoCloseable 相关的极少数情况除外）。Java 7 引入的语言结构 `try-with-resources` 是比 Finalizers 更好的替代方案，它可以编写出如下代码：
+然而，Java 中有一个名为 `Finalizers` 的特殊特性，它有点像析构函数，但用途不同，是用于执行资源清理。`Finalizers` 被认为是一项危险的功能（会导致许多副作用和性能问题）。通常情况下，它们是不必要的，并且应该被避免（与 `AutoCloseable` 相关的极少数情况除外）。Java 7 引入的语言结构 `try-with-resources` 是比 `Finalizers` 更好的替代方案，它可以编写出如下代码：
 
 ```java
-try { 
-    final InputStream in = Files.newInputStream(path); 
+try {
+    final InputStream in = Files.newInputStream(path);
     // 此处编写代码
-} 
+}
 ```
 
-## 1.3 静态初始化
+### 1.3 静态初始化
 
 到目前为止我们查看了类的初始化和构造。但 Java 还支持一种类层级的初始化结构，称为静态初始化器。它们与初始化块非常相似，只是多了一个 `static` 关键字。请注意，静态初始化是每个类加载器执行一次的。例如：
 
@@ -309,11 +277,11 @@ public class StaticInitializationBlocks {
 
 由于静态初始化可以从多个并行线程中触发（当第一次加载该类时），Java 运行时保证它只会被执行一次，并且以线程安全的方式执行。
 
-## 1.4 构造模式
+### 1.4 构造模式
 
 多年来，Java 社区中出现了一些广为人知且广泛应用的构造（或创建）模式。我们将涵盖其中最著名的：单例、工具类、工厂和依赖注入。
 
-### 1.4.1 单例 (Singleton)
+#### 1.4.1 单例（Singleton）
 
 单例是社区中历史悠久且充满争议的模式之一。基础上说，它的核心思想是确保在给定时间内只能创建一个类的唯一实例。以下是一个朴素的版本：
 
@@ -372,7 +340,7 @@ public class LazySingleton {
 }
 ```
 
-### 1.4.2 工具类 (Utility/Helper Class)
+#### 1.4.2 工具类（Utility/Helper Class）
 
 工具类或辅助类是许多 Java 开发者使用的模式。基本上，它代表一个不可实例化的类（构造函数声明为私有），可选声明为 `final`，并且仅包含静态方法。例如：
 
@@ -381,7 +349,7 @@ package com.javachegeeks.advanced.construction;
 
 public class HelperClass {
     private HelperClass() {
-}
+    }
 
     public static void helperMethod1() {
         // 此处编写代码
@@ -395,7 +363,7 @@ public class HelperClass {
 
 从资深软件开发者的角度来看，这种辅助类往往变成了各种不相关方法的容器，这些方法没有找到合适的地方，但应该被其他类共享和使用。在大多数情况下，可以避免这种设计决策：总是可以找到另一种使用功能的方法，从而保持代码的简洁。
 
-### 1.4.3 工厂 (Factory)
+#### 1.4.3 工厂（Factory）
 
 工厂模式已被证明是软件开发者手中的一项极其实用的技术。因此，在 Java 中有多种变体，从工厂方法到抽象工厂。工厂模式的最简单示例是返回特定类新实例的静态方法（工厂方法）。例如：
 
@@ -404,7 +372,8 @@ package com.javachegeeks.advanced.construction.patterns;
 
 public class Book {
     private Book(final String title) {
-}
+    }
+
     public static Book newBook(final String title) {
         return new Book(title);
     }
@@ -413,6 +382,9 @@ public class Book {
 
 有人可能会认为引入工厂方法并没有太大意义，但使用这种模式通常会让代码更具可读性。工厂模式的另一种变体涉及接口或抽象类（抽象工厂）。例如，让我们定义一个工厂接口：
 
+
+
+
 ```java
 public interface BookFactory {
     Book newBook();
@@ -420,9 +392,6 @@ public interface BookFactory {
 ```
 
 根据不同的库类型，带有几种不同的实现：
-
-
-
 
 ## 高级 Java
 
@@ -433,6 +402,7 @@ public class Library implements BookFactory {
         return new PaperBook();
     }
 }
+
 public class KindleLibrary implements BookFactory {
     @Override
     public Book newBook() {
@@ -445,9 +415,9 @@ public class KindleLibrary implements BookFactory {
 
 ### 1.4.4 依赖注入
 
-依赖注入（也称为控制反转）被认为是类设计者的良好实践：如果某个类实例依赖于其他类实例，那么这些依赖应该通过构造函数（或设置等）提供（注入）get，而不是由实例本身提供。让我们考虑以下示例：
+依赖注入（也称为控制反转）被认为是类设计者的良好实践：如果某个类实例依赖于其他类实例，那么这些依赖应该通过构造函数（或设置等）提供（注入）给，而不是由实例本身提供。让我们考虑以下示例：
 
-```
+```java
 package com.javagecode.advanced.construction.patterns;
 
 import java.text.DateFormat;
@@ -464,7 +434,7 @@ public class Dependent {
 
 该类需要其 `DateFormat`，它在构造时通过调用 `DateFormat.getInstance()` 创建了一个。最好的设计是使用构造函数参数来完成相同的操作：
 
-```
+```java
 package com.javagecode.advanced.construction.patterns;
 
 import java.text.DateFormat;
@@ -485,17 +455,13 @@ public class Dependent {
 
 在这种情况下，类的所有依赖项都从外部提供，更改日期格式并为其编写测试用例将非常容易。
 
-
-- 你可以在此处下载源代码：com.javacodegeeks.advanced.java
-
+- 你可以在此处下载源代码：`com.javacodegeeks.advanced.java`
 
 在教程的这部分中，我们查看了类和类实例的构造与初始化技术，在此期间涵盖了许多广泛使用的模式。在下一部分，我们将剖析 `Object` 类及其常用方法的用法：`equals`、`hashCode`、`toString` 和 `clone`。
 
-## 第2 章
+## 第 2 章：使用所有对象的通用方法
 
-## 使用所有对象的通用方法
-
-## 2.1 引言
+### 2.1 引言
 
 从教程的第一部分“如何创建和销毁对象”中，我们知道 Java 是一种面向对象的语言（尽管不是纯粹面向对象的语言）。在 Java 类层次结构上方是 `Object` 类，Java 中的每一个类都隐式继承自它。因此，所有类都继承了 `Object` 类中声明的方法集，最重要的如下：
 
@@ -503,18 +469,17 @@ public class Dependent {
 
 | 方法 | 说明 |
 | :--- | :--- |
-| protected Object clone() | 创建并返回此对象的副本。 |
-| protected void finalize() | 当垃圾回收器确定该对象不再有引用时，由垃圾回收器对对象调用此方法。我们在教程的第一部分“如何创建和销毁对象”中讨论过终结器。 |
-| boolean equals(Object obj) | 表示某个其他对象是否与此对象“相等”。 |
-| int hashCode() | 返回对象的哈希值。 |
-| String toString() | 返回对象的字符串表示。 |
-| void notify() | 唤醒一个等待在此对象监视器上的线程。我们将在教程的第九部分“货币最佳实践”中讨论此方法。 |
-| void notifyAll() | 唤醒所有等待在此对象监视器上的线程。我们将在教程的第九部分“货币最佳实践”中讨论此方法。 |
-| void wait() | 导致当前线程等待，直到另一个线程 |
-| void wait(long timeout) | 调用对象的 `notify()` 方法或 `notifyAll()` 方法。我们将在教程的第九部分“货币最佳实践”中讨论这些方法。 |
+| `protected Object clone()` | 创建并返回此对象的副本。 |
+| `protected void finalize()` | 当垃圾回收器确定该对象不再有引用时，由垃圾回收器对对象调用此方法。我们在教程的第一部分“如何创建和销毁对象”中讨论过终结器。 |
+| `boolean equals(Object obj)` | 表示某个其他对象是否与此对象“相等”。 |
+| `int hashCode()` | 返回对象的哈希值。 |
+| `String toString()` | 返回对象的字符串表示。 |
+| `void notify()` | 唤醒一个等待在此对象监视器上的线程。我们将在教程的第九部分“货币最佳实践”中讨论此方法。 |
+| `void notifyAll()` | 唤醒所有等待在此对象监视器上的线程。我们将在教程的第九部分“货币最佳实践”中讨论此方法。 |
+| `void wait()` | 导致当前线程等待，直到另一个线程 |
+| `void wait(long timeout)` | 调用对象的 `notify()` 方法或 `notifyAll()` 方法。我们将在教程的第九部分“货币最佳实践”中讨论这些方法。 |
 
 在教程的这部分中，我们将查看 `equals`、`hashCode` 和 `clone` 方法、它们的用法以及需要注意的重要约束。
-
 
 默认情况下，Java 中的任何两个对象引用（或类实例引用）仅当它们指向同一个内存位置时（引用相等）才是相等的。但 Java 允许类通过重写 `Object` 类的 `equals()` 方法来定义自己的相等规则。这听起来是一个强大的概念，但正确的 `equals()` 方法实现应该符合一组规则并满足以下约束：
 
@@ -524,10 +489,11 @@ public class Dependent {
 - **一致性**：多次调用 `equals(object)` 方法必须返回相同的值，除非用于比较的属性被修改了。
 - **与 null 相等**：`equals(null)` 的结果必须始终为 `false`。
 
-遗憾的是，Java 编译器无法在编译期间强制这些约束。然而，不遵守这些规则可能会导致非常奇怪且难以排排除的问题。一般的建议是：如果你打算重写 `equals()` 方法，请仔细考虑你是否真的需要它。有了所有这些规则，让我们为 `Person` 类编写一个简单的 `equals()` 方法实现。
+遗憾的是，Java 编译器无法在编译期间强制这些约束。然而，不遵守这些规则可能会导致非常奇怪且难以排除的问题。一般的建议是：如果你打算重写 `equals()` 方法，请仔细考虑你是否真的需要它。有了所有这些规则，让我们为 `Person` 类编写一个简单的 `equals()` 方法实现。
 
 ```java
 package com.javadegeeks.advanced.objects;
+
 public class Person {
     private final String firstName;
     private final String lastName;
@@ -596,18 +562,13 @@ public class Person {
 }
 ```
 
-
-
-
-
-
 这并非总是可能的。
 
 最后，确保在 `equals()` 和 `hashCode()` 方法的实现中使用相同的字段。这将保证在发生影响相关字段的更改时，这两个方法的行为保持一致。
 
-## 2.3 toString 方法
+## 2.3 `toString` 方法
 
-与其它方法相比，`toString()` 可能是最有趣的方法，而且被重写的频率也最高。它的目的是提供对象类的字符串表示形式。一个编写良好的 `toString()` 方法可以轻松地简化真实系统中问题的调试和故障故障排查。
+与其它方法相比，`toString()` 可能是最有趣的方法，而且被重写的频率也最高。它的目的是提供对象类的字符串表示形式。一个编写良好的 `toString()` 方法可以轻松地简化真实系统中问题的调试和故障排查。
 
 默认的 `toString()` 实现在大多数情况下并不好用，它返回完整的类名和对象的哈希码，并用 `@` 隔开：
 
@@ -636,7 +597,7 @@ System.out.println(person.toString());
 
 控制台将打印以下输出：
 
-```
+```text
 Person[john.smith@domain.com, first name=John, lastName=Smith]
 ```
 
@@ -666,15 +627,13 @@ public class Person {
 }
 ```
 
-
 控制台将打印以下输出（正如我们看到的，`Person` 类实例也被正确地转换成了字符串）：
 
-```
+```text
 Office(persons=Person[email=john.smith@domain.com, first name=John, last name=Smith])
 ```
 
 Java 社区开发了一些综合库，可以帮助 `toString()` 的实现变得轻松快捷。其中包括 Google Guava 的 `Objects.toStringHelper` 和 Apache Commons Lang 的 `Builder`。
-
 
 如果说 Java 中有一个名誉不佳的方法，那一定是 `clone()`。它的目的非常明确——调用类实例的精确拷贝，但这里有几个原因导致它并不听起来那么简单。
 
@@ -685,7 +644,7 @@ Java 社区开发了一些综合库，可以帮助 `toString()` 的实现变得�
 // 实现是更改默认实现。
 @Override
 public Person clone() throws CloneNotSupportedException {
-    return ( Person )super.clone();
+    return (Person) super.clone();
 }
 ```
 
@@ -699,13 +658,13 @@ import java.util.Arrays;
 public class Office implements Cloneable {
     private Person[] persons;
 
-    public Office(Person ... persons ) {
+    public Office(Person ... persons) {
         this.persons = Arrays.copyOf(persons, persons.length);
     }
 
     @Override
     public Person clone() throws CloneNotSupportedException {
-        return ( Person )super.clone();
+        return (Person) super.clone();
     }
 
     public Person[] getPersons() {
@@ -716,11 +675,10 @@ public class Office implements Cloneable {
 
 在此实现中，`Office` 类实例的所有拷贝将共享同一个 `persons` 数组，这可能正是想要的行为。需要做一些工作来让 `clone()` 实现执行正确的操作。
 
-
 ```java
 @Override
 public Office clone() throws CloneNotSupportedException {
-    final Office clone = ( Office ) super.clone();
+    final Office clone = (Office) super.clone();
     clone.persons = persons.clone();
     return clone;
 }
@@ -730,9 +688,9 @@ public Office clone() throws CloneNotSupportedException {
 
 总而言之，如果你想为类制作拷贝，最好实现 `clone()` 和 `Cloneable`，并使用许多相似的替代方案（例如拷贝、构造一个开发者熟悉的 C++ 方式的类型，或者通过工厂方法，这些很有用）。
 
-
-
 `==` 运算符和 `equals()` 方法之间存在有趣的关系，这会导致很多问题。在大多数情况下（基本类型除外），`==` 执行的是引用相等；如果两个引用指向同一个实例，它返回 `true`。我们来看一个简单的示例说明这一点：
+
+
 
 ```java
 String str = new String("bbb");
@@ -741,16 +699,16 @@ System.out.println("Using == " + (str=="bbb"));
 
 即使两个字符串看起来一样，它们也是不同的实例。
 
-
 自 Java 7 发布以来，标准库包含了一些非常有用的工具类。其中之一是 `Objects` 类。特别是这三个方法可以极大简化你的 `equals()` 和 `hashCode()` 实现。
 
 表 2.2：方法 | 描述 |
-|---|---|
-| static boolean equals(Object a, Object b) | 如果参数相等返回 true，否则返回 false。 |
-| static int hash(Object...values) | 为输入值生成哈希码。 |
-| static int hashCode(Object o) | 返回非空参数的哈希码，空参数返回 0。 |
 
-如果我们使用这些辅助方法重写 Person 类的 `equals()` 和 `hashCode()` 方法，代码量将显著减少，而且代码更具可读性。
+|---|---|
+| `static boolean equals(Object a, Object b)` | 如果参数相等返回 true，否则返回 false。 |
+| `static int hash(Object...values)` | 为输入值生成哈希码。 |
+| `static int hashCode(Object o)` | 返回非空参数的哈希码，空参数返回 0。 |
+
+如果我们使用这些辅助方法重写 `Person` 类的 `equals()` 和 `hashCode()` 方法，代码量将显著减少，而且代码更具可读性。
 
 ```java
 @Override
@@ -786,35 +744,32 @@ public int hashCode() {
     return Objects.hash(email, firstName, lastName);
 }
 ```
+
 ## 2.7 下载源码
 
--    你可以在此处下载源码：advanced-java-part-2
+- 你可以在此处下载源码：`advanced-java-part-2`
 
 ## 2.8 接下来是什么
 
 在这一节中，我们涵盖了 `Object` 类，它是 Java 面向对象编程的基础。我们看到每个类都可以重写继承自 `Object` 类的方法并制定自己的等值规则。在下一节中，我们将切换思路，开始讨论如何正确地设计你的类和接口。
 
+# 第 3 章 如何设计类和接口
 
-
-
-
-## 第3章
-## 如何设计类和接口
-
-### 3.1 引言
+## 3.1 引言
 
 无论你使用哪种编程语言（Java 也不例外），遵循良好的设计原则都是编写整洁、易懂、可测试的代码，并交付长久且易于维护的解决方案的关键。在教程的这部分，我们将讨论 Java 语言提供的基础构建模块，并介绍一些设计原则，旨在帮助你做出设计的设计。
 
-更具体地说，我们将讨论**接口**和**带有默认方法的接口**（Java 8 的新功能）、**抽象类**和**最终类（final classes）**、**不可变类**、**继承**、**组合**，并回顾我们在教程**第1部分**（如何创建和销毁对象）中简要提过的**可见性**（或可访问性）规则。
+更具体地说，我们将讨论接口和带有默认方法的接口（Java 8 的新功能）、抽象类和最终类（final classes）、不可变类、继承、组合，并回顾我们在教程第 1 部分（如何创建和销毁对象）中简要提过的可见性（或可访问性）规则。
 
-### 3.2 接口
+## 3.2 接口
 
 在面向对象的编程中，接口的概念构成了契约驱动（或基于契约）开发的基础。简单来说，接口定义了方法集（契约），任何声称支持此特定接口的类必须提供这些方法的实现：这是一个非常简单且强大的想法。
 
 许多编程语言以某种形式拥有接口，但 Java 特别地为此提供了语言支持。让我们看看 Java 中一个简单的接口定义。
 
-```
+```java
 package com.javacodgeeks.advanced.design;
+
 public interface SimpleInterface {
     void performAction();
 }
@@ -822,10 +777,11 @@ public interface SimpleInterface {
 
 在上面的代码段中，我们命名为 `SimpleInterface` 的接口只声明了一个名为 `performAction` 的方法。接口相对于类的主要区别在于，接口概述了契约是什么（声明），但没有提供它们的实现。
 
-然而，Java 中的接口可能比这更复杂：它们可以包含嵌套类、枚举、标记（注解），注解将在教程的**第5部分**——**何时以及如何使用枚举和注解**中详细介绍，例如：
+然而，Java 中的接口可能比这更复杂：它们可以包含嵌套类、枚举、标记（注解），注解将在教程的第 5 部分——何时以及如何使用枚举和注解中详细介绍，例如：
 
 ```java
 package com.javacodgeeks.advanced.design;
+
 public interface InterfaceWithDefinitions {
     String CONSTANT = "CONSTANT";
 
@@ -838,6 +794,7 @@ class InnerClass {
     interface InnerInterface {
         void performInnerAction();
     }
+
     void performAction();
 }
 ```
@@ -869,17 +826,20 @@ public static final String CONSTANT = "CONSTANT";
 ```java
 class InnerClass {
 }
+
 static class InnerClass {
+}
 ```
 
 选择哪一个取决于个人喜好，然而，了解接口的这些简单特性可以避免不必要的输入。
 
-### 3.3 标记接口 (Marker Interfaces)
+## 3.3 标记接口（Marker Interfaces）
 
-标记接口是一种特殊的接口，它们没有定义方法或其他嵌套结构。我们已经在教程的第2部分（使用所有对象的通用方法）中见过一个标记接口的示例：`Cloneable` 接口。它在 Java 库中的定义如下：
+标记接口是一种特殊的接口，它们没有定义方法或其他嵌套结构。我们已经在教程的第 2 部分（使用所有对象的通用方法）中见过一个标记接口的示例：`Cloneable` 接口。它在 Java 库中的定义如下：
 
 ```java
-public interface Cloneable { }
+public interface Cloneable {
+}
 ```
 
 标记接口不是契约，而是某种很有用的技术，用于向类“附带”或“绑定”某些特定特征。例如，对于 `Cloneable`，类被标记为可以进行克隆，但应该如何进行或如何执行克隆并不属于接口的一部分。另一个广为人知且广泛使用的标记接口示例是 `Serializable`：
@@ -893,7 +853,7 @@ public interface Serializable {
 
 标记接口在面向对象的设计中有一有一席之地，尽管它们没有满足接口作为契约的主要目的。
 
-### 3.4 泛型接口、默认方法和静态方法
+## 3.4 泛型接口、默认方法和静态方法
 
 随着 Java 8 的发布，接口获得了非常有趣的能力：静态方法、默认方法以及 lambda 的自动转换（函数式接口）。
 
@@ -925,12 +885,13 @@ public interface InterfaceWithDefaultMethods {
 
 有人说在接口中提供实现违背了基于契约开发的整个初衷，但有很多原因导致这些功能被引入 Java 语言，无论它们有多用或多令人困惑，它们都是供你使用的。
 
-### 3.5 抽象类 (Abstract classes)
+## 3.5 抽象类（Abstract Classes）
 
 Java 语言支持的另一个概念是抽象类。抽象类与 Java 7 中的接口某些相似，与 Java 8 中的方法非常接近。相比之下，抽象类不能实例化但可以被子类化（详情请参见“继承”章节）。更重要的是，抽象类可以包含抽象方法：没有实现的特殊方法，类似于接口。例如：
 
 ```java
 package com.javacodgeeks.advanced.design;
+
 public abstract class SimpleAbstractClass {
     public void performAction() {
         // 在处编写实现
@@ -944,7 +905,7 @@ public abstract class SimpleAbstractClass {
 
 需要提到，与接口只能包含公共声明不同，抽象类可以使用完整的访问性规则来控制抽象方法的可见性（更多信息请参见“可见性”和“继承”章节）。
 
-### 3.6 不可变类 (Immutable classes)
+## 3.6 不可变类（Immutable Classes）
 
 不可变性今天变得越来越重要。多核系统的出现引发了许多关于数据共享和并发的担忧（在第 9 部分。并发最佳实践中，我们将讨论这些主题）。但一个事实已显易见：可变状态越少，扩展性和推理越容易。
 
@@ -954,30 +915,30 @@ Java 语言没有为类的不可变性提供强支持。然而，通过组合技
 package com.javacodgeeks.advanced.design;
 
 import java.util.Collection;
+
 public class ImmutableClass {
     private final long id;
     private final String[] arrayOfStrings;
-    private final Collection< String > collectionOfString;
+    private final Collection<String> collectionOfString;
 }
 ```
 
-
-
-
-
-## 高级 Java
+# 高级 Java
 
 其次，遵循适当的初始化方法：如果字段是集合或数组的引用，不要直接从构造函数参数为这些字段赋值，而是在内部进行浅拷贝。这可以保证集合或数组的状态不会从外部被修改。
 
 ```java
-public ImmutableClass(final long id, final String[] arrayStrings, final Collection<String> collectionOfString) {
+public ImmutableClass(
+        final long id,
+        final String[] arrayStrings,
+        final Collection<String> collectionOfString) {
     this.id = id;
     this.arrayStrings = Arrays.copyOf(arrayStrings, arrayStrings.length);
     this.collectionOfString = new ArrayList<>(collectionOfString);
 }
 ```
 
-最后，遵循正确的 getter 方法get。对于集合，应该使用 `Collections.unmodifiableXxx` 包装器暴露不可变视图。
+最后，遵循正确的 getter 方法 `get`。对于集合，应该使用 `Collections.unmodifiableXxx` 包装器暴露不可变视图。
 
 ```java
 public Collection<String> getCollectionOfString() {
@@ -997,7 +958,7 @@ public String[] getArrays() {
 
 有几个像 FindBugs 和 PMD 这样的 Java 源码分析工具，可以帮助你检查代码并指出常见的 Java 编程问题。这些工具是任何 Java 开发者的好朋友。
 
-### 3.7 匿名类
+## 3.7 匿名类
 
 在 Java 8 之前的时代，匿名类是提供就地类定义和即时实例唯一方式。匿名类的目的是减少样板代码，并提供一种简洁方便的方式将类表示为表达式。让我们来看看 Java 中创建新线程的旧方法：
 
@@ -1019,7 +980,7 @@ public class AnonymousClass {
 }
 ```
 
-在这个示例中，Runnable 接口的实现是以匿名形式就地提供的。尽管匿名类有一些局限性，但它们使用的根本性缺点是 Java 作为语言强加的一种非常繁琐的结构。即使是一个什么都不做的简单匿名类，每次编写也需要至少 5 行代码。
+在这个示例中，`Runnable` 接口的实现是以匿名形式就地提供的。尽管匿名类有一些局限性，但它们使用的根本性缺点是 Java 作为语言强加的一种非常繁琐的结构。即使是一个什么都不做的简单匿名类，每次编写也需要至少 5 行代码。
 
 ```java
 new Runnable() {
@@ -1033,6 +994,7 @@ new Runnable() {
 
 ```java
 package com.javacodegeeks.advanced.design;
+
 public class AnonymousClass {
     public static void main(String[] args) {
         new Thread(() -> { /* 在处实现 */ }).start();
@@ -1040,36 +1002,34 @@ public class AnonymousClass {
 }
 ```
 
-### 3.8 可见性
+## 3.8 可见性
 
 在教程的第一部分“如何设计类和接口”中，我们已经讨论过关于 Java 可见性和可访问规则。在这一部分，我们将从子类化的角度再次回到这个主题。
 
 表 3.1：数据数据表
 
 | 修饰符 | 包 | 子类 | 其他所有人 |
-| --- | --- | --- | --- |
-| public | 可访问 | 可访问 | 可访问 |
-| protected | 可访问 | 可访问 | 不可访问 |
-| <无修饰符> | 可访问 | 不可访问 | 不可访问 |
-| private | 不可访问 | 不可访问 | 不可访问 |
+|---|---|---|---|
+| `public` | 可访问 | 可访问 | 可访问 |
+| `protected` | 可访问 | 可访问 | 不可访问 |
+| `<无修饰符>` | 可访问 | 不可访问 | 不可访问 |
+| `private` | 不可访问 | 不可访问 | 不可访问 |
 
 不同的可见性级别允许或禁止类查看其他类或接口（例如，如果它们在不同的包中或嵌套在另一个内部），或者允许子类查看和访问方法、构造函数。
 
-### 3.9 继承
+## 3.9 继承
 
 继承是面向对象编程中的核心概念，在下一节中，我们将看到它的用法。在 Java 中，继承通过 `extends` 关键字实现。由于 Java 的设计，子类可以继承父类的属性和方法。此外，即使这种简单的做法也提供了一个很好的例子，说明不可变性在 Java 中并不是原生公民。如果一个不可变类引用了其他类的实例，情况就会变得非常复杂。那些类也必须是不可变的，因为没有简单的方法可以避免这一点。
 
-为了实现代码的重用性和维护性，继承允许子类扩展父类的成员。在 Java 中，每个类都有有一个直接父类（Object 类位于层次结构的顶端）。然而，类可以实现多个接口，这是在 Java 中实现（或模拟）多继承的唯一方式。
+为了实现代码的重用性和维护性，继承允许子类扩展父类的成员。在 Java 中，每个类都有一个直接父类（`Object` 类位于层次结构的顶端）。然而，类可以实现多个接口，这是在 Java 中实现（或模拟）多继承的唯一方式。
 
-为了实现代码的重用性和维护性，继承允许子类扩展父类的成员。在 Java 中，每个类都有一个直接父类（Object 类位于层次结构的顶端）。然而，类可以实现多个接口，这是在 Java 中实现（或模拟）多继承的唯一方式。
+为了实现代码的重用性和维护性，继承允许子类扩展父类的成员。在 Java 中，每个类都有一个直接父类（`Object` 类位于层次结构的顶端）。然而，类可以实现多个接口，这是在 Java 中实现（或模拟）多继承的唯一方式。
 
-为了实现代码的重用性和维护性，继承允许子类扩展父类的成员。在 Java 中，每个类都有一个直接父类（Object 类位于层次结构的顶端）。然而，类可以实现多个接口，这是在 Java 中实现（或模拟）多继承的唯一方式。
-
-
-
-
+为了实现代码的重用性和维护性，继承允许子类扩展父类的成员。在 Java 中，每个类都有一个直接父类（`Object` 类位于层次结构的顶端）。然而，类可以实现多个接口，这是在 Java 中实现（或模拟）多继承的唯一方式。
 
 # 高级 Java
+
+
 
 ```java
 @Override
@@ -1132,8 +1092,6 @@ public class Vehicle {
 }
 ```
 
-# 高级 Java
-
 Vehicle 类由它的引擎和轮子组成（为了简单起见，省略了许多其他部分）。然而，人们可能会说 Vehicle 类也是一个引擎，因此可以使用继承来设计。
 
 ```java
@@ -1183,8 +1141,6 @@ public class Encapsulation {
 ```
 
 这个示例类似于 Java 语言中所谓的 JavaBeans：按照遵循一套约定的编写的普通 Java 类，其中一个约定允许仅通过 getter 和 setter 方法访问字段。
-
-# 高级 Java
 
 正如我们在“继承”部分中所强调的样，请始终尝试保持类的公开性最小化，遵循封装原则。任何不应该是公开的，都应该是私有的（protected / 包级私有），取决于你正在解决的问题。从长远来看，这将是有回报的，让你能够自由地演进设计而不引入更改（或至少将更改最小化）。
 
@@ -1266,12 +1222,6 @@ public class ClassImplementingGenericInterface
     }
 }
 ```
-
-
-
-
-
-# 高级 Java
 
 ```java
 // 在处实现
@@ -1470,13 +1420,17 @@ public void store(final Collection< ? extends Serializable > objects ) {
 
 `store` 方法不在乎调用什么类型参数，它唯一需要确保的是每个实现了 Serializable 接口。或者，如果这很重要，可以使用没有边界的通配符：
 
+
+
+# 高级 Java
+
+与 `extends` 相对，`super` 关键字限制类型为某些其他类的父类。例如：
+
 ```java
 public void store(final Collection< ? objects ) {
     // 在处实现
 }
 ```
-
-与 extends 相对，super 关键字限制类型为某些其他类的父类。例如：
 
 ```java
 public void iterate(final Collection< ? super Integer > objects ) {
@@ -1484,7 +1438,7 @@ public void iterate(final Collection< ? super Integer > objects ) {
 }
 ```
 
-通过使用上限和下限（使用 extends 和 super），泛型提供了一种微调类型参数要求的方法，在某些情况下完全省略它们，保留了泛型的类型导向语义。
+通过使用上限和下限（使用 `extends` 和 `super`），泛型提供了一种微调类型参数要求的方法，在某些情况下完全省略它们，保留了泛型的类型导向语义。
 
 ## 4.7 泛型与类型推断
 
@@ -1495,21 +1449,16 @@ final Map< String, Collection< String > > map =
     new HashMap< String, Collection< String > >();
 ```
 
-
-
-
-
-# 高级 Java
-
 ```java
 for ( final Map.Entry< String, Collection< String> > entry: map.entrySet() ) {
     // 此处某些实现
 }
 ```
 
-Java 7 的发布通过改进编译器并引入新的菱形操作符（diamond operator）解决了这个问题-。
+Java 7 的发布通过改进编译器并引入新的菱形操作符（diamond operator）解决了这个问题。
 
-```javafinal Map<String, Collection<String> > map = new HashMap<>();
+```java
+final Map<String, Collection<String> > map = new HashMap<>();
 ```
 
 编译器能够从左侧推断泛型类型，并在表达式的右侧省略它们。这是向更简洁的泛型语法迈出的重要进展，然而编译器推断泛型类型的能力是有限的。例如，以下代码在 Java 7 中无法编译：
@@ -1555,10 +1504,10 @@ final Collection<@Nonnull String> strings = new ArrayList<>();
 
 ## 4.9 访问泛型类型参数
 
-正如你从“泛型的局限性”章节所知，是不可能的获取泛型类型参数。规避这一问题的一个简单技巧是在需要知道类型参数 `T` 的类的地方，要求传递一个额外的参数 `Class< T >`。例如：
+正如你从“泛型的局限性”章节所知，是不可能的获取泛型类型参数。规避这一问题的一个简单技巧是在需要知道类型参数 `T` 的类的地方，要求传递一个额外的参数 `Class<T>`。例如：
 
 ```java
-public< T > void performAction( final T action, final Class< T > clazz ) {
+public <T> void performAction(final T action, final Class<T> clazz) {
     // 此处某些实现
 }
 ```
@@ -1569,7 +1518,7 @@ public< T > void performAction( final T action, final Class< T > clazz ) {
 
 ## 4.10 何时使用泛型
 
-尽管存在所有局限性，泛型为 Java 语言带来的好处也是数不胜的。如今，很难想象 Java 曾有过没有泛型的时代。泛型应该代替原始类型（用 `Collection<T>` 代替 `Collection`，用 `Callable<T>` 代替 `Callable`，……）或 `Object` 来保证类型安全，对合约和约定定义清晰的约束，并显著简化维护和重构。
+尽管存在所有局限性，泛型为 Java 语言带来的好处也是数不胜数的。如今，很难想象 Java 曾有过没有泛型的时代。泛型应该代替原始类型（用 `Collection<T>` 代替 `Collection`，用 `Callable<T>` 代替 `Callable`，……）或 `Object` 来保证类型安全，对合约和约定定义清晰的约束，并显著简化维护和重构。
 
 然而，由于 Java 泛型当前实现的局限性，存在类型擦除以及著名的使用原始类型进行隐式装箱。泛型并不是解决你可能遇到的所有问题的万灵妙药，没有任何东西可以取代仔细的设计和深思熟虑的。
 
@@ -1582,7 +1531,7 @@ class SomeClass implements Serializable {}
 如果没有使用泛型，解决方案可能看起来如下：
 
 ```java
-public Serializable performAction( final Serializable instance ) {
+public Serializable performAction(final Serializable instance) {
     // 在此处做些什么
     return instance;
 }
@@ -1591,13 +1540,13 @@ public Serializable performAction( final Serializable instance ) {
 ```java
 final SomeClass instance = new SomeClass();
 // 请注意需要进行强制类型转换
-final SomeClass modifiedInstance = ( SomeClass)performAction( instance );
+final SomeClass modifiedInstance = (SomeClass) performAction(instance);
 ```
 
 让我们看看泛型如何改进此点：
 
 ```java
-public< T extends Serializable > T performAction( final T instance ) {
+public <T extends Serializable> T performAction(final T instance) {
     // 在此处做些什么
     return instance;
 }
@@ -1605,7 +1554,7 @@ public< T extends Serializable > T performAction( final T instance ) {
 
 ```java
 final SomeClass instance = new SomeClass();
-final SomeClass modifiedInstance = performAction( instance );
+final SomeClass modifiedInstance = performAction(instance);
 ```
 
 丑的类型转换尽可能地消失，通过推断出正确的类型并证明这些类型被正确使用。
@@ -1635,7 +1584,7 @@ class SomeClass implements SerializableAndRunnable {
 ```
 
 ```java
-public void performAction( SerializableAndRunnable instance ) {
+public void performAction(SerializableAndRunnable instance) {
     // 某些实现
 }
 ```
@@ -1643,18 +1592,17 @@ public void performAction( SerializableAndRunnable instance ) {
 虽然这种方法是可行的，但随着接口数量的增加它会变得非常糟糕且难以管理。让我们看看泛型如何帮助我们：
 
 ```java
-public< T extends Serializable & Runnable > T performAction( final T instance ) {
+public <T extends Serializable & Runnable> T performAction(final T instance) {
     // 某些实现
 }
 ```
 
-
-
-
 从逻辑角度来看，`day` 参数应该具有 `DaysOfWeekConstants` 类中声明的值之一。
+
 然而，在没有编写额外文档（供之后的人阅读）的情况下，是不可能判断这一点的。Java 编译器的调用如 `isWeekend(100)` 看起来完全正确且不会引起任何问题。
 
 这时，枚举（enum）派上用场了。枚举允许用带类型的值替换常量，并在任何地方使用这些值。
+
 让我们使用枚举重写解决方案。
 
 ```java
@@ -1685,12 +1633,12 @@ public boolean isWeekend(DaysOfWeek day) {
 
 ```java
 public enum DaysOfWeekFields {
-    MONDAY (false),
-    TUESDAY (false),
-    WEDNESDAY (false),
-    THURSDAY (false),
-    FRIDAY (false),
-    SATURDAY (true)
+    MONDAY(false),
+    TUESDAY(false),
+    WEDNESDAY(false),
+    THURSDAY(false),
+    FRIDAY(false),
+    SATURDAY(true)
 }
 ```
 
@@ -1779,13 +1727,13 @@ public enum DayOfTheInterfaces implements DayOfWeek {
 
 ```java
 public enum DaysOfWeekFields implements DayOfWeek {
-    MONDAY (false),
-    TUESDAY (false),
-    WEDNESDAY (false),
-    THURSDAY (false),
-    FRIDAY (false),
-    SATURDAY (true),
-    SUNDAY (true);
+    MONDAY(false),
+    TUESDAY(false),
+    WEDNESDAY(false),
+    THURSDAY(false),
+    FRIDAY(false),
+    SATURDAY(true),
+    SUNDAY(true);
 
     private final boolean isWeekend;
 
@@ -1804,7 +1752,7 @@ public enum DaysOfWeekFields implements DayOfWeek {
 
 ## 5.5 枚举与泛型
 
-虽然一眼看不出来，但枚举与泛型之间存在着关系。Java 中的每一个枚举都自动继承自泛型类 `Enum<T>`，其中 `T` 是枚举类型本身。Java 编译器代表开发者执行此转换，将枚举声明扩展为类似下面的的内容：
+虽然一眼看不出来，但枚举与泛型之间存在着关系。Java 中的每一个枚举都自动继承自泛型类 `Enum<T>`，其中 `T` 是枚举类型本身。Java 编译器代表开发者执行此转换，将枚举声明扩展为类似下面的内容：
 
 ```java
 public enum DayOfTheWeek extends Enum<T> {
@@ -1824,21 +1772,21 @@ public <T extends Enum<?>> void performAction(T instance) {
 
 基类 `Enum<T>` 提供了一些有用的方法，每个枚举实例都会自动继承这些方法。
 
-### 表 5.1:（续）
+### 表 5.1：（续）
 
 | 方法 | 描述 |
 | :--- | :--- |
-| String name() | 返回此枚举常量的名称，与其在声明中的定义完全一致。 |
-| int ordinal() | 返回此枚举常量的序数（它在枚举声明中的位置，初始常量被分配序数为零）。 |
+| `String name()` | 返回此枚举常量的名称，与其在声明中的定义完全一致。 |
+| `int ordinal()` | 返回此枚举常量的序数（它在枚举声明中的位置，初始常量被分配序数为零）。 |
 
 此外，Java 编译器会自动为它遇到的每个枚举类型生成另外两个有用的 `static` 方法（我们称该枚举类型为 `T`）。
 
-### 表 5.2:
+### 表 5.2
 
 | 方法 | 描述 |
 | :--- | :--- |
-| T[] values() | 返回枚举 `T` 的所有声明常量。 |
-| T valueOf(String name) | 返回具有指定名称的枚举常量 `T`。 |
+| `T[] values()` | 返回枚举 `T` 的所有声明常量。 |
+| `T valueOf(String name)` | 返回具有指定名称的枚举常量 `T`。 |
 
 由于这些方法的存在，在代码中使用枚举还有另一个益处：它们可以用于 `switch/case` 语句。例如：
 
@@ -1856,13 +1804,15 @@ public void performAction(DaysOfWeek instance) {
 }
 ```
 
-## 5.7 专用的集合：EnumSet 和 EnumMap
+## 5.7 专用的集合：`EnumSet` 和 `EnumMap`
 
 实例字段是 Java 的一个非常有用的功能。它们经常被通过普通类声明与每个值关联某些额外细节。另一个有趣的特征（再次证实了枚举只是专门的类）是它们可以实现接口（然而，由于后文在“枚举与泛型”章节中解释的原因，枚举不能继承任何其他类）。例如，让我们引入 `DayOfWeek` 接口。
 
-...
+……
 
 让我们使用实例字段和构造函数为每周的每一天添加 `isWeekend` 属性。
+
+
 
 ```java
 public enum DaysOfWeekFields {
@@ -1889,7 +1839,7 @@ public boolean isWeekend() {
 }
 ```
 
-正如我们看到的，枚举的值只是构造函数的调用，区别之处是不需要 `new` 关键字。`isWeekend()` 属性可以用于检测该值代表的是周末还是工作日。例如：
+正如我们看到的，枚举的值只是构造函数的调用，区别之处是不需要`new`关键字。`isWeekend()`属性可以用于检测该值代表的是周末还是工作日。例如：
 
 ```java
 public boolean isWeekend(DaysOfWeek day) {
@@ -1907,7 +1857,7 @@ public boolean isWeekend(DaysOfWeek day) {
 
 ## 5.9 注解作为特殊接口
 
-如之前所述，注解是用于与 Java 语言元素关联元数据的语法糖。注解对它们所标记的代码没有直接影响。然而，取决于注解及其定义方式，它们可能会被 Java 编译器使用（一个很好的例子是 `@Override` 注解，我们在教程第三部分见过）、被注解处理器使用（详情将在“注解处理器”章节中）以及在运行时通过反射和其他检查技术使用（更多信息请参见教程第十一部分，“反射与动态语言支持”）。
+如之前所述，注解是用于与 Java 语言元素关联元数据的语法糖。注解对它们所标记的代码没有直接影响。然而，取决于注解及其定义方式，它们可能会被 Java 编译器使用（一个很好的例子是`@Override`注解，我们在教程第三部分见过）、被注解处理器使用（详情将在“注解处理器”章节中）以及在运行时通过反射和其他检查技术使用（更多信息请参见教程第十一部分，“反射与动态语言支持”）。
 
 让我们观察注解声明：
 
@@ -1916,7 +1866,7 @@ public interface SimpleAnnotation {
 }
 ```
 
-`@interface` 引入新的注解类型。这就是为什么注解可以被视为特殊的接口。注解声明带有或不带默认值的属性，例如：
+`@interface`引入新的注解类型。这就是为什么注解可以被视为特殊的接口。注解声明带有或不带默认值的属性，例如：
 
 ```java
 public interface SimpleAnnotationWithAttributes {
@@ -1937,9 +1887,6 @@ public interface SimpleAnnotationWithAttributes {
 @SimpleAnnotationWithAttributes("new annotation")
 ```
 
-
-
-
 # 高级 Java
 
 # 42 / 113
@@ -1949,15 +1896,18 @@ public @interface SimpleAnnotationValue {
     String value();
 }
 ```
+
 它可以像这样使用：
+
+```java
 @SimpleAnnotationValue("new annotation")
 ```
 
-注解的使用存在一些局限性，使得每种用例的操作都不非常方便。首先，注解不支持任何形式的继承：一个注解不能继承另一个注解。其次，无法使用 `new` 运算符程序地创建注解（我们将在教程的第 1 部分中查看某些解决此问题的解决方法，反射和动态语言支持）。此外，注解只能声明原始类型属性、`String` 或 `Class<?>` 类型以及这些类型的数组。注解中不允许声明方法或构造函数。
+注解的使用存在一些局限性，使得每种用例的操作都不非常方便。首先，注解不支持任何形式的继承：一个注解不能继承另一个注解。其次，无法使用`new`运算符程序地创建注解（我们将在教程的第 1 部分中查看某些解决此问题的解决方法，反射和动态语言支持）。此外，注解只能声明原始类型属性、`String`或`Class<?>`类型以及这些类型的数组。注解中不允许声明方法或构造函数。
 
 ## 5.10 注解与留存策略（Retention Policy）
 
-每个注解都有一个非常重要的特性——留存策略（retention policy），它是一个枚举（类型 `RetentionPolicy`），定义了如何保留注解的一系列策略。它可以设置为以下值之一。
+每个注解都有一个非常重要的特性——留存策略（retention policy），它是一个枚举（类型`RetentionPolicy`），定义了如何保留注解的一系列策略。它可以设置为以下值之一。
 
 表 5.3: 数据数据表
 
@@ -1967,18 +1917,21 @@ public @interface SimpleAnnotationValue {
 | RUNTIME | 注解由编译器记录在类文件中，并在运行时被虚拟机保留，因此可以通过反射读取它们 |
 | SOURCE | 注解会被编译器丢弃。 |
 
-留存策略对注解何时何变得可用于处理具有至关重要的影响。可以使用 `@Retention java.lang.annotation.Retention;` 设置留存策略。例如：
+留存策略对注解何时何变得可用于处理具有至关重要的影响。可以使用`@Retention`和`java.lang.annotation.Retention`设置留存策略。例如：
 
 ```java
 import java.lang.annotation.Retention;
+
 import java.lang.annotation.RetentionPolicy;
 
 @Retention( Retention.RUNTIME )
+
 @interface AnnotationWithRetention {
+
 }
 ```
 
-将注解策略设置为 `RUNTIME` 将保证其在编译过程和运行的程序中存在。
+将注解策略设置为`RUNTIME`将保证其在编译过程和运行的程序中存在。
 
 ## 5.11 注解与元素类型（Element Types）
 
@@ -2008,13 +1961,17 @@ import java.lang.annotation.RetentionPolicy;
 | TYPE_PARAMETER | 类型参数声明 |
 | TYPE_USE | 类型的使用 |
 
-与留存策略不同，注解可以通过 `@Target` 注解声明它可以关联的多个元素类型。例如：
+与留存策略不同，注解可以通过`@Target`注解声明它可以关联的多个元素类型。例如：
 
 ```java
 import java.lang.annotation.ElementType;
+
 import java.lang.annotation.Target;
+
 @Target( { ElementType.FIELD, ElementType.METHOD } )
+
 public @interface AnnotationWithWithTarget {
+
 }
 ```
 
@@ -2022,24 +1979,31 @@ public @interface AnnotationWithWithTarget {
 
 ## 5.12 注解与继承（Inheritance）
 
-在 Java 中，注解声明与继承之间存在重要的关系。默认情况下，子类不会继承在在类上的注解。但有一种方法可以使用 `@Inherited` 注解在整个类中传播注解。例如：
+在 Java 中，注解声明与继承之间存在重要的关系。默认情况下，子类不会继承在在类上的注解。但有一种方法可以使用`@Inherited`注解在整个类中传播注解。例如：
 
 ```java
 @Target( { ElementType.TYPE } )
+
 @Retention ( RetentionPolicy.RUNTIME )
+
 @Inherited
+
 @interface InheritableAnnotation {
+
 }
 
 @InheritableAnnotation
+
 public class Parent {
+
 }
 
 public class Child extends Parent {
+
 }
 ```
 
-在这个示例中，在 `Parent` 类上声明的 `@InheritableAnnotation` 注解也会被 `Child` 类继承。
+在这个示例中，在`Parent`类上声明的`@InheritableAnnotation`注解也会被`Child`类继承。
 
 ## 5.13 可重复注解（Repeatable annotations）
 
@@ -2047,22 +2011,35 @@ public class Child extends Parent {
 
 ```java
 @Target(ElementType.METHOD)
+
 @Retention(RetentionPolicy.RUNTIME)
+
 public @interface RepeatableAnnotations {
+
     RepeatableAnnotation value();
+
 }
 
 @Target(ElementType.METHOD)
+
 @Retention(RetentionPolicy.RUNTIME)
+
 @Repeatable(RepeatableAnnotations.class)
+
 public @interface RepeatableAnnotation {
+
     String value();
+
 }
 
 @RepeatableAnnotation("repetition 1")
+
 @RepeatableAnnotation("repetition 2")
+
 public void performAction() {
+
     // 此处有一些代码
+
 }
 ```
 
@@ -2070,7 +2047,7 @@ public void performAction() {
 
 ## 5.14 注解处理器（Annotation processors）
 
-Java 编译器支持一种特殊的插件，称为注解处理器（使用 `-processor` 命令行参数），它们可以在编译阶段处理注解。注解处理器可以分析注解的使用（执行静态分析）、创建额外的 Java 源文件或资源（这些资源随后可以被编译和处理），或修改被注解标记的代码。
+Java 编译器支持一种特殊的插件，称为注解处理器（使用`-processor`命令行参数），它们可以在编译阶段处理注解。注解处理器可以分析注解的使用（执行静态分析）、创建额外的 Java 源文件或资源（这些资源随后可以被编译和处理），或修改被注解标记的代码。
 
 留存策略（请参见“注解与留存策略”）起着关键作用，它指示编译器哪些注解应该是可供注解处理器处理的。
 
@@ -2080,9 +2057,9 @@ Java 编译器支持一种特殊的插件，称为注解处理器（使用 `-pro
 
 约定优于配置（Convention over configuration）是一种软件模式，旨在遵循一套规则时简化开发。例如，MVC（模型-视图-控制器）框架遵循这些约定。
 
-另一方面，注解为基于显式配置的设计开辟了道路。考虑到上述示例，@Entity 可以显式标记任何类。
+另一方面，注解为基于显式配置的设计开辟了道路。考虑到上述示例，`@Entity`可以显式标记任何类。
 
-5.16 何时使用注解
+## 5.16 何时使用注解
 
 注解无处不在：Java 标准库有很多注解，几乎每个 Java 规范都包含它们。当你需要与代码关联额外的元数据时，注解是非常直观且简单的。
 
@@ -2092,14 +2069,14 @@ Java 编译器支持一种特殊的插件，称为注解处理器（使用 `-pro
 
 | 注解 | 描述 |
 | --- | --- |
-| @Deprecated | 表示标记的元素已弃用，不应使用。当程序使用带有此注解的方法、类或字段时，编译器会生成警告。 |
-| @Override | 提示编译器该元素旨在覆盖子类中的元素。 |
-| @SuppressWarnings | 指令编译器抑制原本会生成的警告。 |
-| @Safevarargs | 应用于方法或构造函数时，断言代码对其变参数参数执行安全的操作。使用此注解类型时，将抑制与变参数相关的未检查警告。 |
-| @Retention | 指定标记的注解如何被保留。 |
-| @Target | 指定标记的注解可以应用于哪些 Java 元素。 |
-| @Documented | 表示指定的注解使用的元素应该使用 Javadoc 工具记录（默认情况下，注解不包含在 Javadoc 中）。 |
-| @Inherited | 表明注解类型可以从父类继承（更多细节请参考“注解与继承”章节）。 |
+| `@Deprecated` | 表示标记的元素已弃用，不应使用。当程序使用带有此注解的方法、类或字段时，编译器会生成警告。 |
+| `@Override` | 提示编译器该元素旨在覆盖子类中的元素。 |
+| `@SuppressWarnings` | 指令编译器抑制原本会生成的警告。 |
+| `@Safevarargs` | 应用于方法或构造函数时，断言代码对其变参数参数执行安全的操作。使用此注解类型时，将抑制与变参数相关的未检查警告。 |
+| `@Retention` | 指定标记的注解如何被保留。 |
+| `@Target` | 指定标记的注解可以应用于哪些 Java 元素。 |
+| `@Documented` | 表示指定的注解使用的元素应该使用 Javadoc 工具记录（默认情况下，注解不包含在 Javadoc 中）。 |
+| `@Inherited` | 表明注解类型可以从父类继承（更多细节请参考“注解与继承”章节）。 |
 
 Java 8 发布也增加了几个新注解。
 
@@ -2107,12 +2084,8 @@ Java 8 发布也增加了几个新注解。
 
 | 注解 | 描述 |
 | --- | --- |
-| @FunctionalInterface | 表示该类型声明旨在作为函数式接口，如 Java 语言规范定义（关于函数式接口的更多细节将在教程的第 3 部分如何设计类和接口中介绍）。 |
-| @Repeatable | 表示标记的注解可以在同一个声明或使用类型上应用多次（更多细节请参考“可重复注解”章节）。 |
-
-
-
-
+| `@FunctionalInterface` | 表示该类型声明旨在作为函数式接口，如 Java 语言规范定义（关于函数式接口的更多细节将在教程的第 3 部分如何设计类和接口中介绍）。 |
+| `@Repeatable` | 表示标记的注解可以在同一个声明或使用类型上应用多次（更多细节请参考“可重复注解”章节）。 |
 
 ## 5.17 下载源代码
 
@@ -2136,21 +2109,25 @@ Java 8 发布也增加了几个新注解。
 
 ```java
 public static void main(String[] args) {
+
     // 此处是实现
+
 }
 ```
 
-该方法接受一个字符串数组作为唯一参数且不返回任何内容。如果能保持所有方法都像 `main` 一样简单就好了。但实际上，方法签名可能会变得不可读。让我们来看：
+该方法接受一个字符串数组作为唯一参数且不返回任何内容。如果能保持所有方法都像`main`一样简单就好了。但实际上，方法签名可能会变得不可读。让我们来看：
 
 ```java
 public void setTitleVisible(int length, String title, boolean visible) {
+
     // 此处是实现
+
 }
 ```
 
-首先要到，根据约定，Java 中的方法名采用驼峰命名法（camel case），例如：setTitle。这个名字起得很好，描述了该方法应该做什么。
+首先要到，根据约定，Java 中的方法名采用驼峰命名法（camel case），例如：`setTitle`。这个名字起得很好，描述了该方法应该做什么。
 
-其次，每个参数的名称（至少）描述了它的用途。为方法找到合适的、具有解释性的名称很重要，而不是使用 `int i`、`String`、`boolean f`（尽管在某些情况下这样做是有意义的）。
+其次，每个参数的名称（至少）描述了它的用途。为方法找到合适的、具有解释性的名称很重要，而不是使用`int i`、`String`、`boolean f`（尽管在某些情况下这样做是有意义的）。
 
 第三，该方法只接受三个参数。虽然 Java 对参数数量限制非常高，但强烈建议将此数字保持在 6 以下。超过这个点，方法签名就会变得难以理解。
 
@@ -2158,7 +2135,9 @@ public void setTitleVisible(int length, String title, boolean visible) {
 
 ```java
 public void find(String... elements) {
+
     // 此处是实现
+
 }
 ```
 
@@ -2166,21 +2145,27 @@ public void find(String... elements) {
 
 在内部，Java 编译器会将变长参数转换为相应类型的数组，方法实现通过这种方式访问变长参数。
 
-有趣的是，Java 还允许使用泛型类型参数来声明变长参数。然而，由于参数的类型是未知的，编译器希望确保变长参数被被负责任地使用，并且该方法必须是 `final` 的并标记了 `@SafeVarargs` 注解（关于注解的更多细节见教程的第 5 部分，“何时以及如何使用枚举和注解”）。例如：
+有趣的是，Java 还允许使用泛型类型参数来声明变长参数。然而，由于参数的类型是未知的，编译器希望确保变长参数被被负责任地使用，并且该方法必须是`final`的并标记了`@SafeVarargs`注解（关于注解的更多细节见教程的第 5 部分，“何时以及如何使用枚举和注解”）。例如：
 
 ```java
 @SafeVarargs
+
 final public <T> void find(T ... elements) {
+
     // 此处是实现
+
 }
 ```
 
-另一种方法是使用 `@SuppressWarnings` 注解
+另一种方法是使用`@SuppressWarnings`注解
 
 ```java
 @SuppressWarnings("unchecked")
+
 public <T> void findSuppressed(T ... elements) {
+
     // 此处是实现
+
 }
 ```
 
@@ -2188,10 +2173,11 @@ public <T> void findSuppressed(T ... elements) {
 
 ```java
 public void write(File file) throws IOException
+
 // 此处是实现
 ```
 
-最后但同样重要的是，通常建议（尽管很少这样做）将参数标记为 `final`。这有助于消除在方法参数被赋予不同值时的糟糕代码习惯。此外，此类方法可以被匿名类使用（关于匿名类的更多细节见教程的第 3 部分，“如何设计类和接口”，尽管 Java 8 通过引入有效最终变量（effectively final variables）引入了这一限制）。
+最后但同样重要的是，通常建议（尽管很少这样做）将参数标记为`final`。这有助于消除在方法参数被赋予不同值时的糟糕代码习惯。此外，此类方法可以被匿名类使用（关于匿名类的更多细节见教程的第 3 部分，“如何设计类和接口”，尽管 Java 8 通过引入有效最终变量（effectively final variables）引入了这一限制）。
 
 ## 6.3 方法体
 
@@ -2199,7 +2185,7 @@ public void write(File file) throws IOException
 
 可能最重要的是单一职责原则（single responsibility principle）：以一种方式实现方法，使得每个方法只做一件事并把它做好。遵循这一原则可能会增加类的数量，因此保持正确的平衡至关重要。
 
-最后（但同样）建议与使用 `return` 语句有关。如果一个方法返回某些值，尽量减少调用 `return` 语句的地方（有些人可能更进一步，建议在所有情况下都使用 `return` 语句）。方法中的 `return` 语句越多，追踪其逻辑流和修改（或重构）实现就越困难。
+最后（但同样）建议与使用`return`语句有关。如果一个方法返回某些值，尽量减少调用`return`语句的地方（有些人可能更进一步，建议在所有情况下都使用`return`语句）。方法中的`return`语句越多，追踪其逻辑流和修改（或重构）实现就越困难。
 
 ## 6.4 方法重载
 
@@ -2208,24 +2194,34 @@ public void write(File file) throws IOException
 ## 高级 Java
 
 ```java
+
+
+
 public String numberToString( Long number ) {
+
     return Long.toString();
+
 }
 
 public String numberToString( BigDecimal number ) {
-    return number.toString();
-}
-```
 
-方法重载与泛型相似（关于泛型的更多细节见教程第 4 部分，“何时以及如何使用枚举和注解”），然而它用于泛型方法不起通的情况，且每个（大多数）泛型类型参数都需要自己的实现。尽管如此，泛型和重载结合非常强大，但在 Java 中是不可能的，这是因为类型擦除（type erasure）（更多细节请参阅教程第 4 部分）。让我们来看这个示例：
+    return number.toString();
+
+}
+
+方法重载与泛型相似（关于泛型的更多细节见教程第 4 部分，“何时以及如何使用枚举和注解”），然而它用于泛型方法不起作用的情况，且每个（大多数）泛型类型参数都需要自己的实现。尽管如此，泛型和重载结合非常强大，但在 Java 中是不可能的，这是因为类型擦除（type erasure）（更多细节请参阅教程第 4 部分）。让我们来看这个示例：
 
 ```java
 public <T extends Number> String numberToString( T number ) {
+
     return number.toString();
+
 }
 
 public String numberToString( BigDecimal number ) {
+
     return number.toString();
+
 }
 ```
 
@@ -2237,9 +2233,13 @@ public String numberToString( BigDecimal number ) {
 
 ```java
 public class Parent {
+
     public Object toobject( Number number ) {
+
         return number.toString();
+
     }
+
 }
 ```
 
@@ -2247,10 +2247,15 @@ public class Parent {
 
 ```java
 public class Child extends Parent {
+
     @Override
+
     public String toobject( Number number ) {
+
         return number.toString();
+
     }
+
 }
 ```
 
@@ -2258,15 +2263,15 @@ public class Child extends Parent {
 
 ```java
 public class Child extends Parent {
+
     public String toobject( Double number ) {
+
         return number.toString();
+
     }
+
 }
 ```
-
-
-
-
 
 ## 进阶 Java
 
@@ -2278,18 +2283,27 @@ public class Child extends Parent {
 
 ## 6.7 递归
 
-Java 中的递归是一种方法在执行计算时调用 way人的技术。例如，让我们来看这个：
+Java 中的递归是一种方法在执行计算时调用自身的技术。例如，让我们来看这个：
 
 ```java
 public int sum(int[] numbers ) {
+
     if (numbers.length == 0) {
+
         return 0;
+
     }
+
     if (numbers.length == 1) {
+
         return numbers[0];
+
     } else {
+
         return numbers[0] + Arrays.copyOfRange(numbers, 1, numbers.length );
+
     }
+
 }
 ```
 
@@ -2297,15 +2311,25 @@ public int sum(int[] numbers ) {
 
 ```java
 public int sum(int initial, int[] numbers ) {
+
     if (numbers.length == 0) {
+
         return initial;
+
     }
+
     if (numbers.length == 1) {
+
         return initial + numbers[0];
+
     } else {
+
         return sum(initial + numbers[ 0 ],
+
         Arrays.copyOfRange(numbers, 1, numbers.length ) );
+
     }
+
 }
 ```
 
@@ -2321,23 +2345,30 @@ Java 8 通过将函数式概念引入 Java 语言，向前迈出了巨大的一�
 
 | 引用类型 | 示例 |
 |---|---|
-| 对静态方法的引用 | SomeClass::staticMethodName |
-| 对特定对象实例方法的引用 | SomeInstance::instanceName |
-| 对特定类型任意对象的实例方法的引用 | SomeType::methodName |
-| 对构造函数的引用 | SomeClass::new |
+| 对静态方法的引用 | `SomeClass::staticMethodName` |
+| 对特定对象实例方法的引用 | `SomeInstance::instanceName` |
+| 对特定类型任意对象的实例方法的引用 | `SomeType::methodName` |
+| 对构造函数的引用 | `SomeClass::new` |
 
 让我们来看一个快速的示例，说明如何将方法作为参数传递给其他方法。
 
 ```java
 public class MethodReference {
+
     public static void println(String s) {
+
         System.out.println(s);
+
     }
 
     public static void main(String[] args) {
+
         final Collection<String> strings = Arrays.asList("s1", "s2", "s3");
+
         strings.stream().forEach(MethodReference::println);
+
     }
+
 }
 ```
 
@@ -2353,12 +2384,17 @@ public class MethodReference {
 
 ```java
 final LocalDateTime now = LocalDateTime.now();
+
 final LocalDateTime tomorrow = now.plusHours(24);
 
 final LocalDateTime midnight = now
+
     .withHour(0)
+
     .withMinute(0)
+
     .withSecond(0)
+
     .withNano(0);
 ```
 
@@ -2367,10 +2403,6 @@ final LocalDateTime midnight = now
 ## 6.10 方法文档
 
 在 Java 中，特别是当你正在开发某种库或框架时，所有公共方法都应该使用 Javadoc 工具（http://www.oracle.com/technnetwork/articles/java/index-jsp-135444.html）进行文档。严格来说，没有东西强制你这样做，但良好的文档有助于其他开发者理解特定方法在做什么，它需要什么。
-
-
-
-
 
 - 始终对参数进行验证和合理性检查。方法参数和返回值
 - 尽量避免将 `null` 作为方法的返回值（见“方法参数和返回值”章节）
@@ -2397,17 +2429,21 @@ final LocalDateTime midnight = now
 
 在教程的第 3 部分“如何设计类和接口”中，我们讨论了可见性和访问控制如何应用于类和接口成员，从而限制它们的范围。然而，我们还没有讨论过在实现方法内部使用的局部变量。
 
-在 Java 语言中，每个局部变量一旦声明就有其作用域。该变量从其声明处开始，直到其所在的方法（或代码块）结束都是可见的。因此，只有一条规则需要遵守：尽可能在变量使用的地方的地方声明局部变量。让我们来看一些典型的示例：
+在 Java 语言中，每个局部变量一旦声明就有其作用域。该变量从其声明处开始，直到其所在的方法（或代码块）结束都是可见的。因此，只有一条规则需要遵守：尽可能在变量使用的地方声明局部变量。让我们来看一些典型的示例：
 
 ```java
 for( final Locale locale: Locale.getAvailableLocales() ) {
+
     // 此处进行某些实现
+
 }
 ```
 
 ```java
 try( final InputStream inputStream = new FileInputStream("file.txt") ) {
+
     // 此处进行某些实现
+
 }
 ```
 
@@ -2415,7 +2451,9 @@ try( final InputStream inputStream = new FileInputStream("file.txt") ) {
 
 ```java
 Arrays.stream(Locale.getAvailableLocales()).forEach( locale ) -> {
+
     // 此处进行某些实现
+
 });
 ```
 
@@ -2431,16 +2469,21 @@ Java 编译器能够从作用域中选择正确的变量，尽管它可能不是
 
 ```java
 public class LocalVariableAndObjectClass {
+
     private long value;
 
     public long calculateValue(final long initial) {
+
         long value = initial;
 
         value += 10;
+
         value += value;
 
         return value;
+
     }
+
 }
 ```
 
@@ -2448,16 +2491,21 @@ public class LocalVariableAndObjectClass {
 
 ```java
 public class LocalVariableAndObjectClass {
+
     private long value;
 
     public long calculateValue(final long initial) {
+
         long value = initial;
 
         value += 10;
+
         value += this.value;
 
         return value;
+
     }
+
 }
 ```
 
@@ -2469,16 +2517,21 @@ public class LocalVariableAndObjectClass {
 
 ```java
 public String sanitize(String str ) {
+
     if (str.isEmpty()) {
+
         str = str.trim();
+
     }
 
     str = str.toLowerCase();
+
     return str;
+
 }
 ```
 
-这不是一段优美的代码，但它足以揭示问题：方法参数 `str` 被重新分配了另一个值（而且分配得很差）。方法参数 `str` 被重新分配了另一个值（而且分配得很差）。方法参数 `str` 被重新分配了另一个值（而且分配得很差）。方法参数 `str` 被重新分配了另一个值（而且分配得很差）。方法参数 `str` 被重新分配了另一个值（而且分配得很差）。方法参数 `str` 被重新分配了另一个值。
+这不是一段优美的代码，但它足以揭示问题：方法参数 `str` 被重新分配了另一个值（而且分配得很差）。
 
 ## 7.5 自动装箱与拆箱
 
@@ -2486,16 +2539,21 @@ Java 编译器能够从作用域中选择正确的变量，尽管它可能不是
 
 ```java
 public class LocalVariableAndObjectClass {
+
     private long value;
 
     public long calculateValue(final long initial) {
+
         long value = initial;
 
         value += 10;
+
         value += this.value;
 
         return value;
+
     }
+
 }
 ```
 
@@ -2505,8 +2563,6 @@ public class LocalVariableAndObjectClass {
 
 在教程的第 3 部分“如何设计类和接口”中，我们讨论了可见性和访问控制应用于类和接口成员，从而限制它们的范围。然而，我们还没有讨论过在实现方法内部使用的局部变量。
 
-（由于原文中存在大量重复段落和逻辑错乱，已根据“不要重复输出原文”的原则，在翻译中进行了去重和对齐，以下为核心逻辑段的翻译：）
-
 ## 7.7 字符串
 
 字符串是 Java 中最常用的类型之一，可以说在大多数编程语言中也是如此。Java 语言通过原生支持拼接和比较简化了字符串的常规操作。此外，Java 标准库提供了类来高效地处理字符串操作，我们将在本节中讨论。
@@ -2515,27 +2571,30 @@ public class LocalVariableAndObjectClass {
 
 但 Java 标准库提供了两个旨在方便字符串操作的有用类：`StringBuilder` 和 `StringBuffer`（它们之间的区别是 `StringBuffer` 是线程安全的，而 `StringBuilder` 不是）。
 
-
-
-
-
 # 高级 Java
 
 ```java
 final sb = new StringBuilder();
 
 for ( int i = 1; i <= 10; ++i ) {
-    sb.append(" ");
-    sb.append(i);
-}
 
-sb.deleteCharAt( 0);
-sb.insert(0, "[");
-sb.replace(sb.length() - 1, sb.length(), "]");
+    sb.append(" ");
+
+    sb.append(i);
+
+}
 ```
 
-使用 `StringBuilder/StringBuffer` 是操作字符串的推荐方法。在拼接两个字符串的简单场景下，这看起来可能过度设计，也可以使用普通的字符串，例如：
-`String userId = "user:" + new Random().nextInt(100 );`
+
+
+`sb.deleteCharAt(0);`
+
+`sb.insert(0, "[");`
+
+`sb.replace(sb.length() - 1, sb.length(), "]");`
+
+使用 `StringBuilder`/`StringBuffer` 是操作字符串的推荐方法。在拼接两个字符串的简单场景下，这看起来可能过度设计，也可以使用普通的字符串，例如：
+`String userId = "user:" + new Random().nextInt(100);`
 
 直接转换的更好替代方案是使用字符串格式化，Java 标准库通过提供静态辅助方法 `String.format` 在此提供帮助。它支持丰富的功能，包括数字、日期/时间等（如需完整参考，请访问官方文档）。让我们通过示例来探索格式化的威力：
 
@@ -2547,7 +2606,7 @@ String.format("%s", new Date())     -> 2014-11-11
 String.format("%8d", 12);          -> 12
 ```
 
-`String.format` 提供了一种从不同数据类型构造字符串的简洁易 way的方法。值得提到的是，某些现代 Java IDE 能够根据传递给 `String.format` 的参数对格式规范进行分析，并警告开发者任何潜在的不匹配之处。
+`String.format` 提供了一种从不同数据类型构造字符串的简洁易用的方法。值得提到的是，某些现代 Java IDE 能够根据传递给 `String.format` 的参数对格式规范进行分析，并警告开发者任何潜在的不匹配之处。
 
 ## 7.8 命名规范
 
@@ -2556,7 +2615,7 @@ Java 这种语言本身并没有强制开发者严格遵守任何命名规范，
 - 包名使用小写字母：`org.junit.com.fasterxml.jackson.json`
 - 类、枚举、接口或注解名称使用首字母大写：`StringBuilder`, `Runnable`, `@Override`
 - 方法和字段名（`static final` 除外）使用驼峰命名法：`isEmpty`, `addAll`
-- `static final` 或枚举常量使用大写字母，*用下划线分隔*：`LOG`, `MIN_RA_INDEX`
+- `static final` 或枚举常量使用大写字母，用下划线分隔：`LOG`, `MIN_RA_INDEX`
 - 局部变量和方法名使用驼峰命名法：`str`, `maxLength`, `minimumCapacity`
 - 泛型参数名称通常用一个大写字母表示：`T`, `U`, `E`
 
@@ -2566,9 +2625,9 @@ Java 这种语言本身并没有强制开发者严格遵守任何命名规范，
 
 无论你正在从事什么样的项目，Java 标准库都是你最好的朋友。不可否认，它们确实有一些粗糙的地方和奇怪的设计，但在 99% 的情况下，它们是专家编写的高质量代码。值得学习。
 
-每次发布都会为现有库带来新功能（并可能弃用某些旧功能），并添加许多新库。Java 5 在 `java.util.concurrent` 包下引入了新的并发库。Java 6 提供了一个较少为人知的脚本语言（`javax.script` 包）和 Java 编译器 API（通过 `java.tools` 包）。Java 7 对 `java.util.concurrent` 进行了大量改进，通过 `java.nio.file` 包引入了 I/O 库以及对动态语言的支持 `java.lang.invoke`。最后，Java 8 交付了期待已的时间 API 包。
+每次发布都会为现有库带来新功能（并可能弃用某些旧功能），并添加许多新库。Java 5 在 `java.util.concurrent` 包下引入了新的并发库。Java 6 提供了一个较少为人知的脚本语言（`javax.script` 包）和 Java 编译器 API（通过 `java.tools` 包）。Java 7 对 `java.util.concurrent` 进行了大量改进，通过 `java.nio.file` 包引入了 I/O 库以及对动态语言的支持 `java.lang.invoke`。最后，Java 8 交付了期待已久的时间 API 包。
 
-Java 作为一个平台正在演进，跟上这种演进极其重要。当你考虑在项目中引入第三方库或进行工作时，请确保所需的功能已经存在于 Java 标准库中（有许多专门且高性能的算法实现优于标准库的实现，但在大多数情况下你并不它们）。
+Java 作为一个平台正在演进，跟上这种演进极其重要。当你考虑在项目中引入第三方库或进行工作时，请确保所需的功能已经存在于 Java 标准库中（有许多专门且高性能的算法实现优于标准库的实现，但在大多数情况下你并不需要它们）。
 
 ## 7.10 不可变性
 
@@ -2588,7 +2647,9 @@ package com.javacodegeeks.advanced.generic;
 import org.junit.Assert.assertThat;
 import org.hamcrest.Matchers.equalTo;
 import org.junit.Test;
+
 public class StringFormatTestCase {
+
     @Test
     public void testNumberFormattingWithLeadingZeros() {
         final String formatted = String.format("%04d", 1);
@@ -2631,35 +2692,29 @@ Java 异常是一种重要的工具，用于信号异常（或特殊）条件，
 
 ## 8.3 检查异常和未检查异常
 
-
-
 ```java
 public class NullPointerException extends RuntimeException {
     public NullPointerException() {
         super();
     }
-
     public NullPointerException(String s) {
         super(s);
     }
 }
 ```
 
-因此，受检异常（checked exceptions）代表程序直接控制范围之外的无效条件。任何受检异常都是 Exception 的子类。与未检异常（unchecked exceptions）不同，受检异常必须由调用者捕获，或者作为方法签名的一部分（使用 `throws`）。`IOException` 可能是受检异常中最为人知的：
+因此，受检异常（checked exceptions）代表程序直接控制范围之外的无效条件。任何受检异常都是 `Exception` 的子类。与未检异常（unchecked exceptions）不同，受检异常必须由调用者捕获，或者作为方法签名的一部分（使用 `throws`）。`IOException` 可能是受检异常中最为人知的：
 
 ```java
 public class IOException extends Exception {
     public IOException() {
     }
-
     public IOException(String message) {
         super(message);
     }
-
     public IOException(String message, Throwable cause) {
         super(message, cause);
     }
-
     public IOException(Throwable cause) {
         super(cause);
     }
@@ -2669,7 +2724,7 @@ public class IOException extends Exception {
 将异常分为受检和未检异常在当时似乎是一个好主意，但多年来事实证明它引入了更多的样板代码和并不优美的代码，并没有解决实际问题。Java 生态系统中出现的典型（遗憾的是相当繁琐）模式是将受检异常隐藏（包装）在未检异常内部，例如：
 
 ```java
-// // 此处某些 I/O 操作
+// 此处某些 I/O 操作
 catch (final IOException ex) {
     throw new RuntimeException("I/O operation failed", ex);
 }
@@ -2677,7 +2732,7 @@ catch (final IOException ex) {
 
 这不是最佳选择，尽管通过对异常层次进行仔细设计，可能会减少开发者需要编写的样板代码量。
 
-值得提到的是 Java 中还有其他继承自 `Error` 的异常类（例如 `OutOfMemoryError` 或 `StackOverflow`）。这些异常通常表示致命的执行失败，会导致程序立即终止；无法从此类错误状态中中恢复。
+值得提到的是 Java 中还有其他继承自 `Error` 的异常类（例如 `OutOfMemoryError` 或 `StackOverflow`）。这些异常通常表示致命的执行失败，会导致程序立即终止；无法从此类错误状态中恢复。
 
 ## 8.4 使用 try-with-resources
 
@@ -2759,17 +2814,17 @@ public void readFile() {
 
 | Exception | 目的 |
 | :--- | :--- |
-| NullPointerException | 尝试使用 null。 |
-| IllegalArgumentException | 方法传递了非法参数。 |
-| IllegalStateException | 方法在不适当的时间被调用。 |
-| IndexOutOfBoundsException | 索引为负数或大于大小。 |
-| UnsupportedOperationException | 请求的操作不支持。 |
-| ArrayIndexOutOfBoundsException | 数组索引错误。 |
-| ClassCastException | 尝试转换对象。 |
-| EnumConstantNotFoundException | 尝试访问枚举常量。 |
-| FormatException | 尝试格式化。 |
-| StringIndexOutOfBoundsException | 字符串索引超出范围。 |
-| IOException | 发生 I/O错误。 |
+| `NullPointerException` | 尝试使用 `null`。 |
+| `IllegalArgumentException` | 方法传递了非法参数。 |
+| `IllegalStateException` | 方法在不适当的时间被调用。 |
+| `IndexOutOfBoundsException` | 索引为负数或大于大小。 |
+| `UnsupportedOperationException` | 请求的操作不支持。 |
+| `ArrayIndexOutOfBoundsException` | 数组索引错误。 |
+| `ClassCastException` | 尝试转换对象。 |
+| `EnumConstantNotFoundException` | 尝试访问枚举常量。 |
+| `FormatException` | 尝试格式化。 |
+| `StringIndexOutOfBoundsException` | 字符串索引超出范围。 |
+| `IOException` | 发生 I/O 错误。 |
 
 ## 8.7 定义你的异常
 
@@ -2814,14 +2869,21 @@ public void login(final String username, final String password) {
 ```java
 /**
  * 从文件系统读取。
- * @throws IOException 如果发生 I/O 。
+ * @throws IOException 如果发生 I/O 错误。
  */
+```
+
+
+
+```java
 public void readFile() throws IOException {
+
     // 某些实现
+
 }
 ```
 
-相比之下，正如我们在“受检和未检异常”章节中所知，未检异常通常不作为方法签名的一部分。然而，使用 `@throws` 标签进行记录仍然是一个非常好的主意，这样方法的调用者就能意识到可能的异常。例如：
+相比之下，正如我们在“受检和未检异常”章节中所知，未检异常通常不作为方法签名的一部分。然而，使用`@throws`标签进行记录仍然是一个非常好的主意，这样方法的调用者就能意识到可能的异常。例如：
 
 ```java
 /**
@@ -2832,15 +2894,13 @@ public void readFile() throws IOException {
  */
 ```
 
-
-
-
-
-## 高级 Java
+### 高级 Java
 
 ```java
-public void parse( final String str ) {
+public void parse(final String str) {
+
   // Some implementation here
+
 }
 ```
 
@@ -2848,19 +2908,17 @@ public void parse( final String str ) {
 
 ## 8.9 异常与日志
 
-日志记录（http://en.wikipedia.org/wiki/Logfile）是任何或复杂的 Java 应用程序、库或框架不可或缺的一部分。它是应用程序中发生的重要事件的日志，而异常是这一流程的关键部分。在随后的教程中，我们可能会稍微介绍 Java 标准库提供的日志子系统；但是，请记住，应该对异常进行适当记录和分析，以便发现应用程序的问题并解决关键故障。
+日志记录（`http://en.wikipedia.org/wiki/Logfile`）是任何或复杂的 Java 应用程序、库或框架不可或缺的一部分。它是应用程序中发生的重要事件的日志，而异常是这一流程的关键部分。在随后的教程中，我们可能会稍微介绍 Java 标准库提供的日志子系统；但是，请记住，应该对异常进行适当记录和分析，以便发现应用程序的问题并解决关键故障。
 
 ## 8.10 下载源代码
 
-这是一节关于如何以及何时使用异常的课程。你在这里下载源代码：advanced-java-part-8
+这是一节关于如何以及何时使用异常的课程。你在这里下载源代码：`advanced-java-part-8`
 
 ## 8.11 接下来
 
 在教程的这一部分，我们涵盖了 Java 语言中一个非常重要的特性——异常。我们看到异常是 Java 错误管理的基础。异常处理和信号错误状态变得非常简单，而且与错误代码、标志和状态相比，异常一旦发生就无法被忽略。在下一部分，我们将讨论一个非常热门且复杂的话题：Java 中的并发和多线程编程。
 
-## 第9 章
-
-## 并发最佳实践
+# 第 9 章 并发最佳实践
 
 ## 9.1 引言
 
@@ -2870,18 +2928,24 @@ public void parse( final String str ) {
 
 ## 9.2 线程与线程组
 
-线程是 Java并发应用程序的基础。线程有时被称为轻量级进程，它们允许多个执行流并发进行。Java 中的每个应用程序至少有一个称为主线程的线程。每个线程只存在于 JVM 中，并不反映任何操作系统的线程。
+线程是 Java 并发应用程序的基础。线程有时被称为轻量级进程，它们允许多个执行流并发进行。Java 中的每个应用程序至少有一个称为主线程的线程。每个线程只存在于 JVM 中，并不反映任何操作系统的线程。
 
-Java 中的线程是类的实例。通常，不建议使用 `Thread` 实例直接创建和管理线程（Futures 和 Executors 章节中涵盖了执行器和线程池，它们提供了更好的方法），但是这样做非常简单：
+Java 中的线程是类的实例。通常，不建议使用`Thread`实例直接创建和管理线程（`Futures`和`Executors`章节中涵盖了执行器和线程池，它们提供了更好的方法），但是这样做非常简单：
 
 ```java
 public static void main(String[] args) {
+
     new Thread(new Runnable() {
+
         @Override
         public void run() {
+
             // Some implementation here
+
         }
+
     }).start();
+
 }
 ```
 
@@ -2889,13 +2953,15 @@ public static void main(String[] args) {
 
 ```java
 public static void main(String[] args) {
+
     new Thread(() -> { /* Some implementation here */ }).start();
+
 }
 ```
 
 尽管在 Java 中创建新线程看起来非常简单，但线程具有复杂的生命周期，并可能处于以下状态之一（线程在任何给定时间点只能处于一种状态）。
 
-## 高级 Java
+### 高级 Java
 
 | 线程状态 | 描述 |
 |---|---|
@@ -2906,41 +2972,49 @@ public static void main(String[] args) {
 | TIMED_WAITING (超时等待) | 在限期等待另一个线程执行特定操作的线程处于此状态。 |
 | TERMINATED (终止) | 线程在此状态已退出。 |
 
-目前并不是所有线程都非常清晰，但在教程中我们将讨论大多数线程以及导致线程进入某一种状态或另一种状态的各种事件。线程可以被组成组。线程组代表一组线程，也可以包含其他组（形成树形结构）。线程组的设计初衷是作为一个很好的特性；但现在已不再推荐使用，因为执行器和线程池（请参阅 Futures）是更好的替代方案。
+目前并不是所有线程都非常清晰，但在教程中我们将讨论大多数线程以及导致线程进入某一种状态或另一种状态的各种事件。线程可以被组成组。线程组代表一组线程，也可以包含其他组（形成树形结构）。线程组的设计初衷是作为一个很好的特性；但现在已不再推荐使用，因为执行器和线程池（请参阅`Futures`）是更好的替代方案。
 
 ## 9.3 并发、同步与不可变性
 
 在每个 Java 应用程序中，多个运行中的线程需要相互通信并访问共享数据。读取这些数据并不是什么大问题，但无序的协调是通往灾难的捷径（所谓的竞态条件）。关键在于同步的介入。同步是一种机制，确保并发运行的线程不会同时执行指定的（同步）代码块。如果其中一个线程开始执行同步代码块，任何其他尝试执行该代码块的线程必须等待，直到该线程完成。
 
-Java 以 `synchronized` 线程的形式内置了同步机制。该关键字可以应用于实例方法、静态方法，或用于任意执行块周围，并保证同一时刻只有一个线程能够调用它。例如：
+Java 以`synchronized`线程的形式内置了同步机制。该关键字可以应用于实例方法、静态方法，或用于任意执行块周围，并保证同一时刻只有一个线程能够调用它。例如：
 
 ```java
 public void performAction() {
+
   // Some implementation here
+
 }
 ```
 
 ```java
 public static synchronized void performObjectClass() {
+
   // Some implementation here
+
 }
 ```
 
-或者，另一种我们在代码块中使用 `synchronized` 的示例示例：
+或者，另一种我们在代码块中使用`synchronized`的示例示例：
 
 ```java
 public void performActionBlock() {
+
   synchronized (this) {
+
     // Some implementation here
+
   }
+
 }
 ```
 
-`synchronized` 关键字还有一个非常重要的作用。
+`synchronized`关键字还有一个非常重要的作用。
 
-## 高级 Java
+### 高级 Java
 
-在 Java 中，同步是围绕一个名为**监视器**（http://en.wikipedia.org/wiki/Monitor）的实体构建的。监视器强制执行对象的排他访问。当方法返回时，它会释放。
+在 Java 中，同步是围绕一个名为**监视器**（`http://en.wikipedia.org/wiki/Monitor`）的实体构建的。监视器强制执行对象的排他访问。当方法返回时，它会释放。
 
 最后，同步是重入的：这意味着线程可以获取它已经拥有的锁。
 
@@ -2948,11 +3022,11 @@ public void performActionBlock() {
 
 ## 9.4 Futures、Executors 与线程池
 
-在 Java 中创建新线程很容易，但管理它们非常困难。Java 标准库提供了以执行器（Executors）和线程池形式存在的有用抽象，以简化线程管理。
+在 Java 中创建新线程很容易，但管理它们非常困难。Java 标准库提供了以执行器（`Executors`）和线程池形式存在的有用抽象，以简化线程管理。
 
 本质上，在最简单的实现中，线程池创建并管理一个就绪线程列表。应用程序不再每次都创建新线程，而是从池中借用一个（或多个）线程。一旦完成工作，它就会返回到池中，并可以处理下一个任务。
 
-可以直接使用线程池，Java 标准库提供了执行器，它有一组创建线程池的方法。例如，以下代码段创建了一个具有固定数量（10个）线程的线程池：
+可以直接使用线程池，Java 标准库提供了执行器，它有一组创建线程池的方法。例如，以下代码段创建了一个具有固定数量（10 个）线程的线程池：
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(10);
@@ -2964,55 +3038,67 @@ ExecutorService executor = Executors.newFixedThreadPool(10);
 
 ```java
 executor.execute(new Runnable() {
+
   @Override
   public void run() {
+
     // Some implementation here
+
   }
+
 });
 ```
 
 等效的 Java 8 示例要简洁得多：
 
-
-
-
-
-## 进阶 Java
+### 进阶 Java
 
 ```java
-executor.execute( () -> {
+executor.execute(() -> {
+
     // Some implementation here
+
 });
 ```
 
 但如果执行结果非常重要，且在指定的超时时间内未完成，Java 标准库提供了另一个抽象来表示在未来某个时间点将发生的计算，`Future<T>`。例如：
 
 ```java
-Future<Long > result = executor.submit(new Callable<Long>() {
+Future<Long> result = executor.submit(new Callable<Long>() {
+
     @Override
     public Long call() throws Exception {
+
         // Some implementation here
+
         return null;
+
     }
+
 });
 ```
 
-`Future<T>` 的结果可能不会立即可用，因此应用程序应该使用一组 `get` 方法来等待它。例如：
+`Future<T>`的结果可能不会立即可用，因此应用程序应该使用一组`get`方法来等待它。例如：
 
-```
+```java
 Long value = result.get(1, TimeUnit.SECONDS);
 ```
 
-如果计算没有在指定的超时时间内完成，将抛出 `TimeoutException`。`get()` 有一个重载版本，它会一直等待下去，但请优先使用带有超时限制的版本。
+如果计算没有在指定的超时时间内完成，将抛出`TimeoutException`。`get()`有一个重载版本，它会一直等待下去，但请优先使用带有超时限制的版本。
 
-自 Java 8 发布以来，开发者有了另一个 `Future<T>` 的版本——`CompletableFuture<T>`，它支持额外的函数和在完成时触发的动作。不仅如此，随着流（streams）的引入，Java 8 引入了一种简单且直接使用 `parallelStream()` 方法执行并行处理的方法，例如：
+自 Java 8 发布以来，开发者有了另一个`Future<T>`的版本——`CompletableFuture<T>`，它支持额外的函数和在完成时触发的动作。不仅如此，随着流（streams）的引入，Java 8 引入了一种简单且直接使用`parallelStream()`方法执行并行处理的方法，例如：
 
 ```java
 final Collection<String> strings = new ArrayList<>();
+
 // Some implementation here
+
 int sumOfLengths = strings.parallelStream()
+
     .filter(str -> !str.isEmpty())
+
     .mapToInt(str -> str.length())
+
     .sum();
 ```
 
@@ -3020,90 +3106,134 @@ int sumOfLengths = strings.parallelStream()
 
 ## 9.5 锁 (Locks)
 
-除了监器（monitors）之外，Java 还支持重入互斥锁（具有监器锁相同的行为和语义，但功能更强）。这些锁可以通过 `java.util.concurrent.locks` 中的 `ReentrantLock` 类可用。
+除了监器（monitors）之外，Java 还支持重入互斥锁（具有监器锁相同的行为和语义，但功能更强）。这些锁可以通过`java.util.concurrent.locks`中的`ReentrantLock`类可用。
 
 ```java
 private final ReentrantLock lock = new ReentrantLock();
 
 public void performAction() {
+
     try {
+
         // Some implementation here
+
     } finally {
+
         lock.unlock();
+
     }
+
 }
 ```
 
-## 进阶 Java
+### 进阶 Java
 
-请注意，任何锁必须通过调用 `unlock()` 方法显式释放（对于 `synchronized` 方法和执行块，Java 编译器在底层会发出释放监器的指令）。如果锁需要更多的代码，它们会比监器更好吗？嗯，出于最重要的几个原因，锁在等待获取锁时会花费时间并快速失败（而监器会无限等待，且没有指定所需超时时间的方法）。例如：
+请注意，任何锁必须通过调用`unlock()`方法显式释放（对于`synchronized`方法和执行块，Java 编译器在底层会发出释放监器的指令）。如果锁需要更多的代码，它们会比监器更好吗？嗯，出于最重要的几个原因，锁在等待获取锁时会花费时间并快速失败（而监器会无限等待，且没有指定所需超时时间的方法）。例如：
 
 ```java
 public void performActionWithTimeout() throws InterruptedException {
+
     if (lock.tryLock(1, TimeUnit.SECONDS)) {
+
         try {
+
             // Some implementation here
+
         } finally {
+
             lock.unlock();
+
         }
+
     }
+
 }
 ```
 
-现在，当我们使用 `lock()` 方法等待锁（由另一个线程获取）时，让我们讨论一下用法如何影响线程状态。
+现在，当我们使用`lock()`方法等待锁（由另一个线程获取）时，让我们讨论一下用法如何影响线程状态。
 
-当任何线程使用 `tryLock()` 方法调用等待锁（由另一个线程获取）时，它处于 `WAITING`（等待）状态。然而，当任何线程使用带有超时的 `tryLock()` 方法等待锁（由另一个线程获取）时，它处于 `TIMED_WAITING`（计时等待）状态。相比之下，当任何线程使用 `synchronized` 方法或执行块等待监器（由另一个线程获取）时，它处于 `BLOCKED`（阻塞）状态。
+当任何线程使用`tryLock()`方法调用等待锁（由另一个线程获取）时，它处于`WAITING`（等待）状态。然而，当任何线程使用带有超时的`tryLock()`方法等待锁（由另一个线程获取）时，它处于`TIMED_WAITING`（计时等待）状态。相比之下，当任何线程使用`synchronized`方法或执行块等待监器（由另一个线程获取）时，它处于`BLOCKED`（阻塞）状态。
 
 我们看到的示例远非简单的锁方法现实，而且充满了陷阱。其中最臭名昭著的是死锁：当两个或多个线程互相等待对方继续执行，导致两者都无法进行时。死锁通常发生在一个或多个锁被另一个线程获取时。JVM 随后可以检测到运行应用程序中的死锁并惊扰开发者（请参阅“并发问题排查”章节）。此类死锁的典型示例：
 
 ```java
 private final ReentrantLock lock1 = new ReentrantLock();
+
 private final ReentrantLock lock2 = new ReentrantLock();
 ```
 
 ```java
 public void performAction() {
+
     lock1.lock();
 
     try {
+
         // Some implementation here
+
         try {
+
             lock2.lock();
+
             // Some implementation here
+
         } finally {
+
             lock2.unlock();
+
         }
+
         // Some implementation here
+
     } finally {
+
         lock1.unlock();
+
     }
+
 }
 ```
 
 ```java
 public void performAnotherAction() {
+
     lock2.lock();
 
     try {
+
         // Some implementation here
+
         try {
+
             lock1.lock();
+
             // Some implementation here
+
         } finally {
+
             lock1.unlock();
+
         }
+
         // Some implementation here
+
     } finally {
+
         lock2.unlock();
+
     }
+
 }
 ```
 
-## 进阶 Java
+
+
+
+# 进阶 Java
 
 `performAction()` 方法尝试获取 `lock1` 然后是 `lock2`，而 `performAnotherAction()` 方法以相反顺序执行，即 `lock2` 然后是 `lock1`。如果程序执行流从同一个类的两个不同线程中调用这两个方法，可能会发生死锁：第一个线程将无限等待第二个线程获取的 `lock2`，而第二个线程将无限等待第一个线程获取的 `lock1`。
 
-## 9.6 线程调度器 (Thread Sulers)
+## 9.6 线程调度器（Thread Sulers）
 
 在 JVM 中，线程调度器决定哪个线程运行以及运行多久。Java 应用程序创建的所有线程都有优先级，这基本上影响了线程调度算法在决定何时调度线程及其时间切片时的决策。这一特性具有不可移植的声誉（因为任何依赖于线程调度器特定行为的技巧都是如此）。
 
@@ -3111,54 +3241,54 @@ public void performAnotherAction() {
 
 当任何线程使用 `tryLock()` 方法等待锁（由另一个线程获取）时，它处于 `WAITING` 状态。但当任何线程使用带有超时的 `tryLock()` 方法等待锁（由另一个线程获取）时，它处于 `TIMED_WAITING` 状态。相反，当任何线程使用 `synchronized` 方法或执行块等待监器（由另一个线程获取）时，它处于 `BLOCKED` 状态。
 
-## 9.7 原子操作 (Atomic Operations)
+## 9.7 原子操作（Atomic Operations）
 
 在多线程世界中，有一组被称为比较交换（CAS）的特定指令。Java 标准库提供了这些类，它们是无锁且高效的。这些类都位于 `java.util.atomic` 包中。
 
 | 类 | 描述 |
 |---|---|
-| AtomicBoolean | 一个布尔值 |
-| AtomicInteger | 一个整数 |
-| AtomicLongArray | 一个长整数数组 |
-| AtomicReference<V> | 一个对象引用 |
-| AtomicReferenceArray<E> | 一个引用数组 |
+| `AtomicBoolean` | 一个布尔值 |
+| `AtomicInteger` | 一个整数 |
+| `AtomicLongArray` | 一个长整数数组 |
+| `AtomicReference<V>` | 一个对象引用 |
+| `AtomicReferenceArray<E>` | 一个引用数组 |
 
-图 9.3: 原子类
+图 9.3：原子类
 
 Java 8 发布扩展了 `java.util.atomic` 以一组新的原子操作（累加器）。
 
 | 类 | 描述 |
 |---|---|
-| DoubleAccumulator | 一个或多个使用维护函数的 double 变量 |
-| DoubleAdder | 一个或多个共同维护的 double 变量 |
-| LongAccumulator | 一个或多个使用维护函数的 long 变量 |
-| LongAdder | 一个或多个共同维护的 long 变量 |
+| `DoubleAccumulator` | 一个或多个使用维护函数的 double 变量 |
+| `DoubleAdder` | 一个或多个共同维护的 double 变量 |
+| `LongAccumulator` | 一个或多个使用维护函数的 long 变量 |
+| `LongAdder` | 一个或多个共同维护的 long 变量 |
 
-## 9.8 并发集合 (Concurrent Collections)
+## 9.8 并发集合（Concurrent Collections）
 
 被多个线程访问和修改的共享集合在现实中是规则而非例外。Java 标准库在 `Collections` 中提供了一些有助于静态方法，可以将任何现有集合变为安全的。例如：
 
 ```java
 final Set<String> strings =
-Collections.synchronizedSet(new HashSet<String> );
+    Collections.synchronizedSet(new HashSet<String>());
 
 final Map<String, String> map =
-Collections.synchronizedMap(new HashMap<String, String> );
+    Collections.synchronizedMap(new HashMap<String, String>());
 ```
 
 然而，返回的通用集合封装器虽然并不是最佳选择，因为它们在实际应用中的性能平庸。这就是为什么 Java 库包含了并发集合类。下面是常用的类列表，它们都托管在 `java.util.concurrent` 包下。
 
 | 类 | 描述 |
 |---|---|
-| CountDownLatch | 一种同步辅助，允许一个或多个线程等待其他线程中执行的操作完成。 |
-| CyclicBarrier | 一种同步辅助，允许一组线程等待彼此到达共同的屏障点。 |
-| Exchanger<V> | 线程配对并交换元素的同步点。 |
-| Phaser | 可重用的同步屏障，功能类似于 CyclicBarrier 和 CountDownLatch 但支持更灵活的用法。 |
-| Semaphore | 计数信号量。 |
-| ThreadLocalRandom | 当前线程隔离的随机数生成器 |
-| ReentrantReadWriteLock | 读写锁实现 |
+| `CountDownLatch` | 一种同步辅助，允许一个或多个线程等待其他线程中执行的操作完成。 |
+| `CyclicBarrier` | 一种同步辅助，允许一组线程等待彼此到达共同的屏障点。 |
+| `Exchanger<V>` | 线程配对并交换元素的同步点。 |
+| `Phaser` | 可重用的同步屏障，功能类似于 `CyclicBarrier` 和 `CountDownLatch` 但支持更灵活的用法。 |
+| `Semaphore` | 计数信号量。 |
+| `ThreadLocalRandom` | 当前线程隔离的随机数生成器 |
+| `ReentrantReadWriteLock` | 读写锁实现 |
 
-图 9.4: 原子类
+图 9.4：原子类
 
 这些类是专门为多线程应用程序设计的。它们利用了许多技术来使并发访问尽可能高效，并且是同步集合封装器的推荐替代方案。
 
@@ -3166,26 +3296,25 @@ Collections.synchronizedMap(new HashMap<String, String> );
 
 `java.util.concurrent` 和 `java.util.concurrent.locks` 包对于编写并发应用程序的 Java 开发者来说是真正的宝石。由于类非常多，在本节中我们将涵盖最
 
-
-
 # 高级 Java
 
-...其中的它们，但请不要犹豫咨询 Java 官方文档并探索所有内容。
+……其中的它们，但请不要犹豫咨询 Java 官方文档并探索所有内容。
 
-| 类 |set |
-| --- | --- |
-| CountDownLatch | 一种同步辅助，允许一个或多个线程等待其他线程执行的一组操作完成。 |
-| CyclicBarrier | 一种同步辅助，允许一组线程等待彼此到达一个共同的屏障点。 |
-| Exchanger<V> | 一个同步点，线程可以在此处交换成对的元素。 |
-| Phaser | 一种可重用的同步屏障，功能类似于 Cyclicbarrier 和 CountDownLatch，但支持更灵活的用法。 |
-| Semaphore | 计数信号量。 |
-| ThreadLocalRandom | 限制当前线程的随机数生成器。 |
-| ReentrantReadWriteLock | 读/写锁的实现。 |
+| 类 | set |
+|---|---|
+| `CountDownLatch` | 一种同步辅助，允许一个或多个线程等待其他线程执行的一组操作完成。 |
+| `CyclicBarrier` | 一种同步辅助，允许一组线程等待彼此到达一个共同的屏障点。 |
+| `Exchanger<V>` | 一个同步点，线程可以在此处交换成对的元素。 |
+| `Phaser` | 一种可重用的同步屏障，功能类似于 `Cyclicbarrier` 和 `CountDownLatch`，但支持更灵活的用法。 |
+| `Semaphore` | 计数信号量。 |
+| `ThreadLocalRandom` | 限制当前线程的随机数生成器。 |
+| `ReentrantReadWriteLock` | 读/写锁的实现。 |
 
-图 9.6: Java 8 原子类
+图 9.6：Java 8 原子类
 
-遗憾的是，在 Java 8 中，ReentrantReadWriteLock 的 Java 实现并不完美，出现了一种新锁：
-StampedLock：一种基于能力的锁，具有三种模式用于控制读/写访问。
+遗憾的是，在 Java 8 中，`ReentrantReadWriteLock` 的 Java 实现并不完美，出现了一种新锁：
+
+`StampedLock`：一种基于能力的锁，具有三种模式用于控制读/写访问。
 
 ## 9.10 明智地使用同步
 
@@ -3193,17 +3322,17 @@ StampedLock：一种基于能力的锁，具有三种模式用于控制读/写�
 
 建议在确实需要的地方使用锁或/或 `synchronized`。在这样做时，确保尽快释放锁，并将需要锁定或同步的块块保持在最小范围内。这些技术至少应该有助于减少竞争，但不会消除竞争。
 
-近年来，无锁算法和数据结构的使用已经出现（例如，来自 Atomic Operations 的 Java 原子操作），与使用同步原语构建的等效实现相比，它们可能提供更好的性能。
+近年来，无锁算法和数据结构的使用已经出现（例如，来自原子操作的 Java 原子操作），与使用同步原语构建的等效实现相比，它们可能提供更好的性能。
 
-值得知道的是，JVM 有一些运行时优化以在不需要时消除锁定。最著名的是**偏向锁（biased locking）**：一种通过消除 Java 同步原语中的操作来提高无竞争同步性能的优化（更多细节，请参阅 http://www.oracle.com/-technology/java/6-performance-137236.html#2.1.1）。
+值得知道的是，JVM 有一些运行时优化以在不需要时消除锁定。最著名的是偏向锁（biased locking）：一种通过消除 Java 同步原语中的操作来提高无竞争同步性能的优化（更多细节，请参阅 `http://www.oracle.com/-technology/java/6-performance-137236.html#2.1.1`）。
 
 尽管如此，JVM 并没有消除应用程序中不必要的同步，消除不必要的同步好得多。过度使用同步会对应用程序性能产生负面影响，因为线程将浪费贵的 CPU 周期来竞争资源，而不是执行实际工作。
 
 ## 9.11 Wait/Notify
 
-在 Java 标准库（`java.util.concurrent`）引入并发工具之前，使用 Object 的 `wait()` / `notify()` / `notifyAll()` 方法是 Java 中线程通信的方法。如果线程在相关对象上监控，则必须调用所有这些方法。例如：
+在 Java 标准库（`java.util.concurrent`）引入并发工具之前，使用 `Object` 的 `wait()`、`notify()`、`notifyAll()` 方法是 Java 中线程通信的方法。如果线程在相关对象上监控，则必须调用所有这些方法。例如：
 
-```
+```java
 private Object lock = new Object();
 
 public void performAction() {
@@ -3219,9 +3348,9 @@ public void performAction() {
 }
 ```
 
-`wait()` 方法释放线程持有的锁视器，因为它等待的条件尚未满足（`wait()` 必须在循环中调用，绝不能在循环外调用）。因此，另一个等待同一监视器的线程可以获取锁。完成后，它应该调用一个 `notify()`/`notifyAll()` 方法来唤醒等待监视器的（线程）。例如：
+`wait()` 方法释放线程持有的锁视器，因为它等待的条件尚未满足（`wait()` 必须在循环中调用，绝不能在循环外调用）。因此，另一个等待同一监视器的线程可以获取锁。完成后，它应该调用一个 `notify()` 或 `notifyAll()` 方法来唤醒等待监视器的（线程）。例如：
 
-```
+```java
 public void performAction() {
     synchronized (lock) {
         // 此处进行某些实现
@@ -3234,19 +3363,19 @@ public void performAction() {
 
 `notify()` 和 `notifyAll()` 的区别在于，前者唤醒单个线程，而后者唤醒所有等待的线程（这些线程将留在竞争监视器）。
 
-现代 Java 应用中不建议使用 `wait()/notify()` 这种用例。它不仅复杂，而且还需要一套强制性规则。因此，它可能会导致运行中的程序出现 bug，这些 bug 将非常难以且耗时的调查。`java.util.concurrent` 有许多可以替代 `wait()/notify()` 的更简单的替代方案（这些方案在现实场景中可能会有更好的性能）。
+现代 Java 应用中不建议使用 `wait()`/`notify()` 这种用例。它不仅复杂，而且还需要一套强制性规则。因此，它可能会导致运行中的程序出现 bug，这些 bug 将非常难以且耗时的调查。`java.util.concurrent` 有许多可以替代 `wait()`/`notify()` 的更简单的替代方案（这些方案在现实场景中可能会有更好的性能）。
 
 ## 9.12 排除并发问题
 
 多线程应用程序中可能会发生很多问题。调试和排除故障可能花费数小时、几天或几周。Java 开发工具包（JDK）提供了几个工具，能够提供应用程序线程及其状态以及死锁条件的详细信息（参见 Threads 线程组和 Locks 章节）。这是一个很好的起点。这些工具包括（但不限于）：
 
-- VisualVM (http://docs.oracle.com/java/7/docs/techniques/tools/share/jvisualm.html)
-- Java Mission Control (http://docs.oracle.com/javacomponents/jmc.htm)
-- jstack (https://docs.oracle.com/java/7/docs/techniques/tools/share/jstack.html)
+- `VisualVM`（`http://docs.oracle.com/java/7/docs/techniques/tools/share/jvisualm.html`）
+- `Java Mission Control`（`http://docs.oracle.com/javacomponents/jmc.htm`）
+- `jstack`（`https://docs.oracle.com/java/7/docs/techniques/tools/share/jstack.html`）
 
 ## 9.13 下载
 
-你可以在此处下载本课程的源码：advanced-java-part-9
+你可以在此处下载本课程的源码：`advanced-java-part-9`
 
 ## 9.14 下一步
 
@@ -3256,17 +3385,17 @@ public void performAction() {
 
 ## 内置序列化技术
 
-## 10.1 言
+## 10.1 引言
 
-教程的这部分专门用于序列化：将 Java 对象转换为可以在以后在相同（或另一个）环境中用于存储和重新构造的格式的过程（http://en.wikipedia.org/wiki/Serialization）。序列化不仅允许将 Java 对象保存和加载到持久化存储中，还是现代分布式系统通信中非常重要的组件。
+教程的这部分专门用于序列化：将 Java 对象转换为可以在以后在相同（或另一个）环境中用于存储和重新构造的格式的过程（`http://en.wikipedia.org/wiki/Serialization`）。序列化不仅允许将 Java 对象保存和加载到持久化存储中，还是现代分布式系统通信中非常重要的组件。
 
-序列化并不容易，有效的序列化更难。除了 Java 标准库外，还有许多序列化技术和框架可用：一些使用紧凑的二进制表示，另一些将可读性放在第一位。尽管我们会提到许多替代方案，但我们的注意力将集中在 Java 标准库（最新规范）：Serializable、Externalizable、JSR222 和 Java JSON API（JSON-P JSR-353）。
+序列化并不容易，有效的序列化更难。除了 Java 标准库外，还有许多序列化技术和框架可用：一些使用紧凑的二进制表示，另一些将可读性放在第一位。尽管我们会提到许多替代方案，但我们的注意力将集中在 Java 标准库（最新规范）：`Serializable`、`Externalizable`、`JSR222` 和 Java JSON API（JSON-P JSR-353）。
 
 ## 10.2 序列化接口
 
 可以说，标记类为可序列化的最简单方法是实现 `java.io.Serializable` 接口。
 
-```
+```java
 public class SerializableExample implements Serializable {
 }
 ```
@@ -3275,7 +3404,7 @@ public class SerializableExample implements Serializable {
 
 序列化类可以通过声明一个名为 `serialVersionUID` 的字段来引入自己的 `serialVersionUID`，该字段必须是 `static`、`final` 且类型为 `long`：
 
-```
+```java
 public class SerializableExample implements Serializable {
     private static final long serialVersionUID = 8894f7554319602846L;
 }
@@ -3283,18 +3412,13 @@ public class SerializableExample implements Serializable {
 
 然而，如果类没有显式声明 `serialVersionUID` 字段，序列化运行时将为该类生成默认的 `serialVersionUID` 字段。应当知道所有实现 `Serializable` 的类都强烈建议显式声明 `serialVersionUID` 字段，因为默认的 `serialVersionUID` 生成高度依赖于类细节，并可能根据 Java 编译器实现及其版本而变化。因此，为了保证一致的行为，序列化类必须始终显式声明 `serialVersionUID`。
 
-一旦类变为可序列化（实现了 `Serializable` 并声明了 `serialVersionUID`），就可以进行存储和检索，例如使用 `ObjectOutputStream/ObjectInputStream`：
-
-
-
-
-## 高级 Java 
+一旦类变为可序列化（实现了 `Serializable` 并声明了 `serialVersionUID`），就可以进行存储和检索，例如使用 `ObjectOutputStream`/`ObjectInputStream`：
 
 ```java
 final Path storage = new File("object.ser").toPath();
 
-try(final ObjectOutputStream out = 
-    new ObjectOutputStream(Files.newOutputStream(storage)) ) { 
+try (final ObjectOutputStream out =
+    new ObjectOutputStream(Files.newOutputStream(storage))) {
     out.writeObject(new SerializableExample());
 }
 ```
@@ -3302,9 +3426,10 @@ try(final ObjectOutputStream out =
 存储后，可以通过类似的方式检索；例如：
 
 ```java
-try(final ObjectInputStream in = 
-    new ObjectInputStream(Files.newInputStream(storage)) ) { 
-    final SerializableExample instance = ( SerializableExample )in.readObject();
+try (final ObjectInputStream in =
+    new ObjectInputStream(Files.newInputStream(storage))) {
+    final SerializableExample instance =
+        (SerializableExample) in.readObject();
 } // 此处为某些实现
 ```
 
@@ -3312,12 +3437,15 @@ try(final ObjectInputStream in =
 
 ## 10.3 Externalizable 接口
 
-与 `Serializable` 相，`Externalizable` 将什么应该序列化和反序列化的责任委托给了类本身。它只有两个方法，这里是它在 Java 标准库中的声明：
+与 `Serializable` 相比，`Externalizable` 将什么应该序列化和反序列化的责任委托给了类本身。它只有两个方法，这里是它在 Java 标准库中的声明：
 
 ```java
 public interface Externalizable extends java.io.Serializable {
-    void writeExternal(ObjectOutput out) throws IOException;
-    void readExternal(ObjectInput in) throws IOException, ClassNotFoundException;
+    void writeExternal(ObjectOutput out)
+        throws IOException;
+
+    void readExternal(ObjectInput in)
+        throws IOException, ClassNotFoundException;
 }
 ```
 
@@ -3330,15 +3458,15 @@ public class SerializableExample implements Externalizable {
     private SerializableExample obj;
 
     @Override
-    public void readExternal(final ObjectInput in) 
+    public void readExternal(final ObjectInput in)
         throws IOException, ClassNotFoundException {
         setStr(in.readUTF());
         setNumber(in.readInt());
-        setObj((SerializableExample )in.readObject());
+        setObj((SerializableExample) in.readObject());
     }
 
     @Override
-    public void writeExternal(final ObjectOutput out) 
+    public void writeExternal(final ObjectOutput out)
         throws IOException {
         out.writeUTF(getStr());
         out.writeInt(getNumber());
@@ -3347,45 +3475,60 @@ public class SerializableExample implements Externalizable {
 }
 ```
 
-与实现 `Serializable` 的类类似，实现 `Externalizable` 的类也可以使用 `ObjectOutputStream / ObjectInputStream` 等进行存储和检索：
+与实现 `Serializable` 的类类似，实现 `Externalizable` 的类也可以使用 `ObjectOutputStream`/`ObjectInputStream` 等进行存储和检索：
 
 ```java
 final Path storage = new File("extobject.ser").toPath();
 
-final ExternalizableExample instance = new ExternalizableExample();
+final ExternalizableExample instance =
+    new ExternalizableExample();
+
 instance.setStr("Sample String");
 instance.setNumber(10);
 instance.setObj(new SerializableExample());
 
 try (final ObjectOutputStream out =
-    new ObjectOutputStream(Files.newOutputStream(storage) )) ) {
+    new ObjectOutputStream(Files.newOutputStream(storage))) {
+```
+
+
+
+
+```java
+new ObjectOutputStream(Files.newOutputStream(storage) )) ) {
+
     out.writeObject(instance);
+
 }
 
 try(final ObjectInputStream in=
+
     new ObjectInputStream(Files.newInputStream(storage) )) ) {
+
     final ExternalizableExample obj = ( ExternalizableExample ) in.readObject();
+
     // 此处为某些实现
+
 }
 ```
 
-当 `Serializable` 接口的简单方法不起作用时，`Externalizable` 接口允许进行细粒度的序列化/自定义。
+当`Serializable`接口的简单方法不起作用时，`Externalizable`接口允许进行细粒度的序列化/自定义。
 
 ## 10.4 关于 Serializable 接口更多
 
-在上一节中，我们提到 `Serializable` 接口没有提供对什么应该序列化的控制级别。事实上，它并不是完全没有（至少在使用 `ObjectOutputStream / ObjectInputStream` 的时候）。任何可序列化类都可以实现一些方法来控制默认的序列化和反序列化。
+在上一节中，我们提到`Serializable`接口没有提供对什么应该序列化的控制级别。事实上，它并不是完全没有（至少在使用`ObjectOutputStream`/`ObjectInputStream`的时候）。任何可序列化类都可以实现一些方法来控制默认的序列化和反序列化。
 
 ```java
 private void writeObject(ObjectOutputStream out) throws IOException;
 ```
 
-该方法负责写入特定类的对象状态，以便 `readObject` 方法可以恢复它（保存对象字段的默认机制可以通过调用 `out.defaultWriteObject` 来触发）
+该方法负责写入特定类的对象状态，以便`readObject`方法可以恢复它（保存对象字段的默认机制可以通过调用`out.defaultWriteObject`来触发）。
 
 ```java
 private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException;
 ```
 
-该方法负责从流中读取并恢复对象的状态（恢复对象字段的默认机制可以通过调用 `in.defaultReadObject` 来触发）
+该方法负责从流中读取并恢复对象的状态（恢复对象字段的默认机制可以通过调用`in.defaultReadObject`来触发）。
 
 ```java
 private void readNoData(Object in) throws ObjectStreamException;
@@ -3405,66 +3548,89 @@ Object readResolve(Object in) throws ObjectStreamException;
 
 这用于可序列化类在从流中读取其实例时，需要指定一个替换。
 
-一旦你了解了内在实现细节以及要使用的特殊方法，Java 中的默认序列化机制（使用 `Serializable` 接口）可能会变得非常繁琐。你写的支持序列化的代码越多，漏洞和风险就越容易出现。
+一旦你了解了内在实现细节以及要使用的特殊方法，Java 中的默认序列化机制（使用`Serializable`接口）可能会变得非常繁琐。你写的支持序列化的代码越多，漏洞和风险就越容易出现。
 
-然而，有一种方法可以通过使用名为**序列化代理（Serialization Proxy）**的简单模式来降低这些风险，该模式基于 `writeReplace` 和 `readResolve` 方法。该模式的基本思想是引入一个序列化的专用类（通常作为私静态内部类），即需要被序列化的类。让我们来看这个示例：
+然而，有一种方法可以通过使用名为序列化代理（Serialization Proxy）的简单模式来降低这些风险，该模式基于`writeReplace`和`readResolve`方法。该模式的基本思想是引入一个序列化的专用类（通常作为私有静态内部类），即需要被序列化的类。让我们来看这个示例：
 
 ```java
 public class SerializationProxyExample implements Serializable {
+
     private static final long serialVersionUID = 6163231482548364831L;
 
     private String str;
+
     private int number;
 
     public SerializationProxyExample(final String str, final int number) {
+
         this.setStr(str);
+
         this.setNumber(number);
+
     }
 
     private void readObject(ObjectInputStream stream) throws InvalidObjectException {
+
         throw new InvalidObjectException("使用了序列化代理");
+
     }
 
     private Object writeReplace() {
+
         return new SerializationProxy(str, number);
+
     }
 
     private Object readResolve() throws ObjectStreamException {
+
         return new SerializationProxyExample(str, number);
+
     }
 
     private static class SerializationProxy implements Serializable {
+
         private static final long serialVersionUID = 1L;
+
         private String str;
+
         private int number;
 
         SerializationProxy(String str, int number) {
+
             this.str = str;
+
             this.number = number;
+
         }
 
         private void readObject(ObjectInputStream in) throws InvalidObjectException {
+
             throw new InvalidObjectException("使用了序列化代理");
+
         }
 
         private Object readResolve() {
+
             return new SerializationProxyExample(str, number);
+
         }
+
     }
+
 }
 ```
-*(注：由于提供的 OCR 文本在最后部分非常破碎，我已根据逻辑进行了清理并修正了拼写错误。)*
-
-
-
 
 ```xml
 "<example> + +
+
   "<str>String</str>" + +
+
   "<number>12.33000000000</number>" + +
+
 </example>
 ```
 
+```java
 final Unmarshaller unmarshaller = context.createUnmarshaller();
 try (final StringReader reader = new StringReader(xml)) {
   final JaxbExample example = (JaxbExample)unmarshaller.unmarshal(reader);
@@ -3475,7 +3641,7 @@ try (final StringReader reader = new StringReader(xml)) {
 
 ## 10.7 JSON-P
 
-自 2013 年以来，Java 开发者能够使用 JSON 作为序列化格式，这得益于新引入的 JSON 处理 API（JSON-P）。现在 JSON-P 不再是标准库的一部分，尽管有许多讨论要在 Java 9 发布中向语言中引入 JSON 支持（http://openjdk.java.net/jeps/198）。尽管如此，它确实存在并作为 Java 处理参考实现可用（https://jsonp.java.net/）。与 JAXB 相比，不需要向类中添加任何内容即可适用于 JSON 序列化，例如：
+自 2013 年以来，Java 开发者能够使用 JSON 作为序列化格式，这得益于新引入的 JSON 处理 API（JSON-P）。现在 JSON-P 不再是标准库的一部分，尽管有许多讨论要在 Java 9 发布中向语言中引入 JSON 支持（`http://openjdk.java.net/jeps/198`）。尽管如此，它确实存在并作为 Java 处理参考实现可用（`https://jsonp.java.net/`）。与 JAXB 相比，不需要向类中添加任何内容即可适用于 JSON 序列化，例如：
 
 ```java
 public class JsonExample {
@@ -3500,7 +3666,7 @@ try (final StringWriter writer = new StringWriter()) {
 };
 ```
 
-这里是上述示例中 JsonExample 类的 JSON 表示：
+这里是上述示例中`JsonExample`类的 JSON 表示：
 
 ```json
 {"str":"Some string",
@@ -3531,13 +3697,13 @@ try (final StringReader reader = new StringReader(json)) {
 
 ## 10.9 超出 Java 标准库规范
 
-在本节中，我们将关注无且高效的 Java 序列化替代方案，从 Fast-serialization 项目（http://rudiegermo.github.io/fast-serialization/）这种快速插件开始。
+在本节中，我们将关注无且高效的 Java 序列化替代方案，从 Fast-serialization 项目（`http://rudiegermo.github.io/fast-serialization/`）这种快速插件开始。
 
-另一组框架解决了这个问题。它们基于结构化数据定义（或协议），并将数据序列化为紧凑的二进制表示。此外，这些框架远超 Java 平台，可以用于跨语言交互。该领域著名的 Java 库包括 Google Protocol Buffers（https://developers.google.com/protocol-buffers/）、Apache Avro（http://avro.apache.org/）和 Apache Thrift（https://thrift.apache.org/）。
+另一组框架解决了这个问题。它们基于结构化数据定义（或协议），并将数据序列化为紧凑的二进制表示。此外，这些框架远超 Java 平台，可以用于跨语言交互。该领域著名的 Java 库包括 Google Protocol Buffers（`https://developers.google.com/protocol-buffers/`）、Apache Avro（`http://avro.apache.org/`）和 Apache Thrift（`https://thrift.apache.org/`）。
 
 ## 10.10 下载源代码
 
-在此处下载课程的源代码：advanced-java-part-10
+在此处下载课程的源代码：`advanced-java-part-10`
 
 ## 10.11 接下来
 
@@ -3547,20 +3713,17 @@ try (final StringReader reader = new StringReader(json)) {
 
 ## 如何有效地使用反射
 
-## 11.1 简介
+### 11.1 简介
 
 在该部分中，我们将简要回顾一个非常有趣的话题：反射。反射是程序在运行时检查或内省自身的能力。反射是极其用的……
 
-## 11.2 反射 API
+### 11.2 反射 API
 
 反射是程序在运行时检查或内省自身的能力。反射是一个极其有用且强大的特性，扩展了 Java 的功能。反射最常用的场景是注解处理。注解本身（排除 Java 标准注解）对代码没有影响。然而，Java 程序可以使用反射来检查不同元素上的注解。
 
-## 11.3 泛型类型参数
+### 11.3 泛型类型参数
 
-自从泛型引入（泛型在教程第4部分如何以及何时使用泛型中涵盖），反射 API 已经扩展以支持对泛型的内省。在许多不同应用程序中出现的用例是确定类、方法或其他元素声明的泛型参数类型。
-
-
-
+自从泛型引入（泛型在教程第 4 部分如何以及何时使用泛型中涵盖），反射 API 已经扩展以支持对泛型的内省。在许多不同应用程序中出现的用例是确定类、方法或其他元素声明的泛型参数类型。
 
 ```java
 if (type instanceof ParameterizedType parameterizedType) {
@@ -3573,11 +3736,11 @@ if (type instanceof ParameterizedType parameterizedType) {
 
 泛型类型参数将打印在控制台上：
 
-```
+```text
 class java.lang.String
 ```
 
-## 11.4 反射 API 与可见性
+### 11.4 反射 API 与可见性
 
 在教程的第一部分“如何创建和销毁对象”中，我们第一次接触了 Java 语言支持的访问权限可见性规则。这可能会让你感到惊讶，但反射 API 能够在某种程度上修改给定类成员的可见性规则。
 
@@ -3593,7 +3756,7 @@ public static class PrivateFields {
 }
 ```
 
-显然，对于任何 Java 程序来说，显而易见的是 `name` 字段无法使用 Java 语法结构来设置，因为该类没有提供相应操作的方法。通过反射 API 操作资源，可以看到如何通过更改字段的可见性和访问范围来实现这一操作。
+显然，对于任何 Java 程序来说，显而易见的是`name`字段无法使用 Java 语法结构来设置，因为该类没有提供相应操作的方法。通过反射 API 操作资源，可以看到如何通过更改字段的可见性和访问范围来实现这一操作。
 
 ```java
 final PrivateFields instance = new PrivateFields();
@@ -3605,25 +3768,25 @@ System.out.println(instance.getName());
 
 控制台将打印出以下输出：
 
-```
+```text
 sample name
 ```
 
-请注意，如果没有调用 `field.setAccessible(true)`，运行时将抛出异常，说明修饰符为 `private` 的成员类无法被访问。
+请注意，如果没有调用`field.setAccessible(true)`，运行时将抛出异常，说明修饰符为`private`的成员类无法被访问。
 
 反射 API 的这一特性通常被测试脚手架或依赖注入框架使用，以便访问内部的（或不可的）实现细节。请在你的应用程序中尽量避免使用它，除非你别无其他选择。
 
-## 11.5 反射 API 的陷阱
+### 11.5 反射 API 的陷阱
 
 此外，请注意，尽管反射 API 非常强大，但它存在一些陷阱。首先，它涉及安全权限，在你的代码运行的所有环境中可能不可用。其次，它可能会对你的应用程序产生性能影响。调用反射 API 的开销相当大。
 
 ## 高级 Java
 
-最后，反射 API 未能提供足够的安全保证，导致开发者在大多数地方必须使用 `Object` 实例，并且在转换构造函数/方法参数或方法返回值方面非常有限。
+最后，反射 API 未能提供足够的安全保证，导致开发者在大多数地方必须使用`Object`实例，并且在转换构造函数/方法参数或方法返回值方面非常有限。
 
 自 Java 7 发布以来，出现了一些可以提供更快速替代的功能，用于访问某些只能通过反射调用实现的功能。下一节将向你介绍这些功能。
 
-## 11.6 方法句 (Method Handles)
+### 11.6 方法句 (Method Handles)
 
 Java 7 引入了一项新功能：方法句，这是一种使用反射更现代、更高效的方法。让我们来看代码片段：
 
@@ -3638,9 +3801,11 @@ final length = (int) methodHandle.invoke("sample");
 
 反射 API 的这一特性通常被测试脚手架或依赖注入框架使用，以便访问内部的（或不可的）实现细节。请在你的应用程序中尽量避免使用它，除非你别无其他选择。
 
-## 11.7 方法名称
+### 11.7 方法名称
 
-开发者多年来面临已知问题是参数名称在运行时不会被保留。然而，通过 `-parameters` 编译器选项，我们现在可以使用反射来提取它们：
+开发者多年来面临已知问题是参数名称在运行时不会被保留。然而，通过`-parameters`编译器选项，我们现在可以使用反射来提取它们：
+
+
 
 ```java
 Method method = MyClass.class.getMethod("myMethod");
@@ -3657,177 +3822,31 @@ for (Parameter parameter : method.getParameters()) {
 
 在教程的这部分中，我们涵盖了反射 API。在下一部分，我们将讨论脚本和动态语言。
 
-## 第 12 章：动态语言
+# 第 12 章：动态语言
 
-## 动态支持
+## 12.1 介绍
 
-### 12.1 介绍
-
-在教程的这部分中，我们的注意力将完全集中在脚本语言和动态语言上。从 Java 7 开始，JVM 已经直接支持现代（脚本）语言，而 Java 8 在这一领域提供了更多的增强。
+在教程的这部分中，我们的注意力将完全集中在脚本语言和动态语言上。从 Java 7 开始，`JVM` 已经直接支持现代（脚本）语言，而 Java 8 在这一领域提供了更多的增强。
 
 动态语言的优势之一是程序的行为是在运行时定义的，而不是在编译时。我们将查看 Java 脚本 API 如何集成这些语言。
 
-### 12.2 动态支持
+## 12.2 动态支持
 
-正如我们所知，Java 是一种静态类型语言。对于类，其成员和返回值在编译时是可用的。通过使用这些细节，Java 编译器确保了类型代码，这些代码可以被 JVM 高效解释。
+正如我们所知，Java 是一种静态类型语言。对于类，其成员和返回值在编译时是可用的。通过使用这些细节，Java 编译器确保了类型代码，这些代码可以被 `JVM` 高效解释。
 
 然而，动态语言在运行时进行类型检查，而不是编译时。处理动态语言的挑战在于如何实现一个运行时系统，在程序编译后选择最合适的方法进行调用。
 
-### 12.3 脚本 API
+## 12.3 脚本 API
 
-自 2006 年 Java 6 发布以来，新的脚本 API 通过 `javax.script` 包引入。这个可扩展的 API 设计用于接入任何脚本语言（提供脚本引擎实现）并运行在 JVM 平台上。
-
-
-
-
-
-# 高级 Java
-
-## 12.4 JVM 上的 JavaScript
-
-我们之所以从 JavaScript 语言开始这段旅程并非偶然，因为它是 Java 标准库脚本 API 支持的首的首批脚本语言之一。而且，在很大程度上，它是每个 Web 浏览器都能够理解的唯一编程语言。
-
-在最简单的形式下，`eval()` 函数执行作为普通 Java 字符串传递的脚本。该脚本与评估器（调用者）没有共享状态，并且是一段自包含的代块。然而，在实际应用中，这种情况非常罕见，通常情况下，脚本需要变量或属性来执行某些有意义的计算或操作。尽管如此，让我们来看使用简单变量评估 JavaScript 函数调用的代码示例：
-
-```
-final ScriptEngineManager factory = new ScriptEngineManager();
-final ScriptEngine engine = factory.getByName("JavaScript");
-
-Bindings bindings = engine.createBindings();
-bindings.put("str", "Calling JavaScript");
-bindings.put("engine", engine);
-```
-
-```
-engine.eval("print(str + ' from ' + engine.getClass().getSimpleName())", bindings);
-```
-
-一旦执行，输出将打印在控制台上：
-
-Calling JavaScript fromNashornScriptEngine
-
-一段时间内，Rhino 一一直是 JVM 上唯一的 JavaScript 脚本引擎。但 Java 8 的发布带来了一个全新的 [Nashorn-j2126511.html](http://www.oracle.com/technetwork/network/java/j14-nashorn-j2126511.html)。
-
-从 API 的角度来看并没有多少区别，但实现方式差异显著，承诺了更好的性能。以下是使用 Nashorn JavaScript 的重写示例：
-
-```
-final ScriptEngineManager factory = new ScriptEngineManager();
-final ScriptEngine engine = factory.getByName("Nashorn");
-
-Bindings bindings = engine.createBindings();
-bindings.put("engine", engine);
-```
-
-```
-engine.eval("print(str + ' from ' + engine.getClass().getSimpleName())", bindings);
-```
-
-接后的输出将打印在控制台上（请注意这次使用了不同的脚本引擎）：
-
-Calling JavaScript fromNashornScriptEngine
-
-尽管如此，我们看过的 JavaScript 代码段示例非常微不足道。你实际上可以使用重载的 `eval()` 函数评估 JavaScript 文件，并完全使用 JavaScript 实现相当复杂的算法。在接下来的章节中，我们将在探索其他语言的同时看到这些示例。
-
-## 12.5 JVM 上的 Groovy
-
-Groovy ([http://groovy.org]) 是 JVM 平台最动态的语言之一。与 Java 并列，它提供了 JavaScript API 引擎实现，并以类似于 JavaScript 的方式使用。
-
-让我们通过开发一个小型独立脚本让这个 Groovy 示例更有意义和趣味，该脚本将在控制台上打印与其调用的 Java 应用程序共享的集合详情。
-
-Book 类非常简单，只有两个属性：author 和 title：
-
-```java
-public class Book {
-    private final String author;
-    private final String title;
-
-    public Book(final String title) {
-        this.author = author;
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-}
-```
-
-Groovy 脚本（命名为 script.groovy）使用了一些巧妙的语言特性，如闭包和字符串插值，将书籍属性输出到：
-
-```
-books.each {
-    println("Book '${it.title}' is written by ${it.author}")
-}
-```
-
-```
-println("Executed by ${engine.simpleName}")
-println("Free memory (bytes): " + Runtime.getRuntime().freeMemory())
-```
-
-现在我们使用 Groovy API 和预定义的书籍集合使用 Groovy 脚本（无疑，全部由 Groovy 完成）：
-
-```
-final ScriptEngineManager manager = new ScriptEngineManager();
-final ScriptEngine engine = factory.getEngineByName("Groovy");
-
-final Collection<Book> books = Arrays.asList(
-    new Book("Venk Subramanian", "Programming Groovy 2"),
-    new Book("Ken Kousen", "Making Java Groovy")
-);
-
-Bindings bindings = engine.createBindings();
-bindings.put("books", books);
-bindings.put("engine", engine);
-
-try (final Reader reader = new InputStreamReader(
-    Book.class.getResource("/script.groovy")
-)) {
-    engine.eval(reader, bindings);
-}
-```
-
-注意，Groovy 脚本完全访问 Java 标准库，并且不需要对 bindings 添加任何额外内容。为了确认这一点，让我们从 Groovy 脚本调用 Runtime 的静态方法，并打印 JVM 可用的空堆内存（字节）。接下来的示例输出将出现在控制台上：
-
-Book 'Programming Groovy 2' is written by Venkat Subramanian
-Book 'Making Java Groovy' is written by Ken Kousen
-Executed by GroovyScriptEngineImpl
-Free memory (bytes): 15342758
-
-自从 Groovy 引入以来已经多年；它由于创新的语言特性、类似于 Java 的语法以及与现有代码的极佳互操作性而变得非常流行。看起来 Java 8 中引入 lambdas 和 Stream API 可能让 Groovy 不那么吸引人了，但它仍然被开发者广泛使用。
-
-## 12.6 JVM 上的 Ruby
-
-几年前，Ruby 是用于 Web 开发的最流行的动态语言。尽管现在它的热度有所消减，但 Ruby 及其生态系统为现代应用开发带来了许多创新，并影响了许多其他语言的演进。
-
-JRuby 是 Ruby 语言在 JVM 上的实现。与 Groovy 类似，它也提供了与 Java 良好的互操作性，保留了 Ruby 语言的美感。
-
-[/content] 
-
-：[content] 几年前，Ruby 是用于 Web 开发的最流行的动态语言。尽管现在它的热度有所消减，但 Ruby 及其生态系统为现代应用开发带来了许多创新，并影响了许多其他语言的演进。
-
-JRuby 是 Ruby 语言在 JVM 上的实现。与 Groovy 类似，它也提供了与 Java 良好的互操作性，保留了 Ruby 语言的美感。
-
-[/content]
-
-*(注：由于提供的文本在 12.6 标题后中断，我已翻译至此为止。如果你有后续文本，请提供。)* 
-
-**等等，我发现你提供的原始文本在 12.6 节之后似乎缺失了内容，但我重新检查了你的输入，原文确实在 `## 12.6 Ruby on JVM` 之后就结束了。以下是基于你提供的文本的完整翻译：**
-
-[content]
-# 高级 Java
+自 2006 年 Java 6 发布以来，新的脚本 API 通过`javax.script`包引入。这个可扩展的 API 设计用于接入任何脚本语言（提供脚本引擎实现）并运行在 `JVM` 平台上。
 
 ## 12.4 JVM 上的 JavaScript
 
 我们之所以从 JavaScript 语言开始这段旅程并非偶然，因为它是 Java 标准库脚本 API 支持的首批脚本语言之一。而且，在很大程度上，它是每个 Web 浏览器都能够理解的唯一编程语言。
 
-在最简单的形式下，`eval()` 函数执行作为普通 Java 字符串传递的脚本。该脚本与评估器（调用者）没有共享状态，并且是一段自包含的代块。然而，在实际应用中，这种情况非常罕见，通常情况下，脚本需要变量或属性来执行某些有意义的计算或操作。尽管如此，让我们来看使用简单变量评估 JavaScript 函数调用的代码示例：
+在最简单的形式下，`eval()`函数执行作为普通 Java 字符串传递的脚本。该脚本与评估器（调用者）没有共享状态，并且是一段自包含的代码块。然而，在实际应用中，这种情况非常罕见，通常情况下，脚本需要变量或属性来执行某些有意义的计算或操作。尽管如此，让我们来看使用简单变量评估 JavaScript 函数调用的代码示例：
 
-```
+```java
 final ScriptEngineManager factory = new ScriptEngineManager();
 final ScriptEngine engine = factory.getByName("JavaScript");
 
@@ -3836,19 +3855,21 @@ bindings.put("str", "Calling JavaScript");
 bindings.put("engine", engine);
 ```
 
-```
+```java
 engine.eval("print(str + ' from ' + engine.getClass().getSimpleName())", bindings);
 ```
 
 一旦执行，输出将打印在控制台上：
 
+```
 Calling JavaScript fromNashornScriptEngine
+```
 
-一段时间内，Rhino一直是 JVM 上唯一的 JavaScript 脚本引擎。但 Java 8 的发布带来了一个全新的 [Nashorn-j2126511.html](http://www.oracle.com/technetwork/network/java/j14-nashorn-j2126511.html)。
+一段时间内，Rhino 一直是 `JVM` 上唯一的 JavaScript 脚本引擎。但 Java 8 的发布带来了一个全新的 [Nashorn-j2126511.html](http://www.oracle.com/technetwork/network/java/j14-nashorn-j2126511.html)。
 
 从 API 的角度来看并没有多少区别，但实现方式差异显著，承诺了更好的性能。以下是使用 Nashorn JavaScript 的重写示例：
 
-```
+```java
 final ScriptEngineManager factory = new ScriptEngineManager();
 final ScriptEngine engine = factory.getByName("Nashorn");
 
@@ -3856,23 +3877,25 @@ Bindings bindings = engine.createBindings();
 bindings.put("engine", engine);
 ```
 
-```
+```java
 engine.eval("print(str + ' from ' + engine.getClass().getSimpleName())", bindings);
 ```
 
 接后的输出将打印在控制台上（请注意这次使用了不同的脚本引擎）：
 
+```
 Calling JavaScript fromNashornScriptEngine
+```
 
-尽管如此，我们看过的 JavaScript 代码段示例非常微不足道。你实际上可以使用重载的 `eval()` 函数评估 JavaScript 文件，并完全使用 JavaScript 实现相当复杂的算法。在接下来的章节中，我们将在探索其他语言的同时看到这些示例。
+尽管如此，我们看过的 JavaScript 代码段示例非常微不足道。你实际上可以使用重载的`eval()`函数评估 JavaScript 文件，并完全使用 JavaScript 实现相当复杂的算法。在接下来的章节中，我们将在探索其他语言的同时看到这些示例。
 
 ## 12.5 JVM 上的 Groovy
 
-Groovy ([http://groovy.org]) 是 JVM 平台最动态的语言之一。与 Java 并列，它提供了 JavaScript API 引擎实现，并以类似于 JavaScript 的方式使用。
+Groovy ([http://groovy.org](http://groovy.org)) 是 `JVM` 平台最动态的语言之一。与 Java 并列，它提供了 JavaScript API 引擎实现，并以类似于 JavaScript 的方式使用。
 
 让我们通过开发一个小型独立脚本让这个 Groovy 示例更有意义和趣味，该脚本将在控制台上打印与其调用的 Java 应用程序共享的集合详情。
 
-Book 类非常简单，只有两个属性：author 和 title：
+`Book` 类非常简单，只有两个属性：`author` 和 `title`：
 
 ```java
 public class Book {
@@ -3894,22 +3917,22 @@ public class Book {
 }
 ```
 
-Groovy 脚本（命名为 script.groovy）使用了一些巧妙的语言特性，如闭包和字符串插值，将书籍属性输出到：
+Groovy 脚本（命名为`script.groovy`）使用了一些巧妙的语言特性，如闭包和字符串插值，将书籍属性输出到：
 
-```
+```groovy
 books.each {
     println("Book '${it.title}' is written by ${it.author}")
 }
 ```
 
-```
+```groovy
 println("Executed by ${engine.simpleName}")
 println("Free memory (bytes): " + Runtime.getRuntime().freeMemory())
 ```
 
 现在我们使用 Groovy API 和预定义的书籍集合使用 Groovy 脚本（无疑，全部由 Groovy 完成）：
 
-```
+```java
 final ScriptEngineManager manager = new ScriptEngineManager();
 final ScriptEngine engine = factory.getEngineByName("Groovy");
 
@@ -3929,23 +3952,31 @@ try (final Reader reader = new InputStreamReader(
 }
 ```
 
-注意，Groovy 脚本完全访问 Java 标准库，并且不需要对 bindings 添加任何额外内容。为了确认这一点，让我们从 Groovy 脚本调用 Runtime 的静态方法，并打印 JVM 可用的空堆内存（字节）。接下来的示例输出将出现在控制台上：
+注意，Groovy 脚本完全访问 Java 标准库，并且不需要对 `bindings` 添加任何额外内容。为了确认这一点，让我们从 Groovy 脚本调用 `Runtime` 的静态方法，并打印 `JVM` 可用的空堆内存（字节）。接下来的示例输出将出现在控制台上：
 
+```
 Book 'Programming Groovy 2' is written by Venkat Subramanian
-Book 'Making Java Groovy' is written by Ken Kousen
-Executed by GroovyScriptEngineImpl
-Free memory (bytes): 15342758
 
-自从 Groovy 引入以来已经多年；它由于创新的语言特性、类似于 Java 的语法以及与现有代码的极佳互操作性而变得非常流行。看起来 Java 8 中引入 lambdas 和 Stream API 可能让 Groovy 不那么吸引人了，但它仍然被开发者广泛使用。
+Book 'Making Java Groovy' is written by Ken Kousen
+
+Executed by GroovyScriptEngineImpl
+
+Free memory (bytes): 15342758
+```
+
+自从 Groovy 引入以来已经多年；它由于创新的语言特性、类似于 Java 的语法以及与现有代码的极佳互操作性而变得非常流行。看起来 Java 8 中引入 `lambdas` 和 `Stream API` 可能让 Groovy 不那么吸引人了，但它仍然被开发者广泛使用。
 
 ## 12.6 JVM 上的 Ruby
 
 几年前，Ruby 是用于 Web 开发的最流行的动态语言。尽管现在它的热度有所消减，但 Ruby 及其生态系统为现代应用开发带来了许多创新，并影响了许多其他语言的演进。
 
-JRuby 是 Ruby 语言在 JVM 上的实现。与 Groovy 类似，它也提供了与 Java 良好的互操作性，保留了 Ruby 语言的美感。
+`JRuby` 是 Ruby 语言在 `JVM` 上的实现。与 Groovy 类似，它也提供了与 Java 良好的互操作性，保留了 Ruby 语言的美感。
 
 
 
+几年前，Ruby 是用于 Web 开发的最流行的动态语言。尽管现在它的热度有所消减，但 Ruby 及其生态系统为现代应用开发带来了许多创新，并影响了许多其他语言的演进。
+
+`JRuby` 是 Ruby 语言在 JVM 上的实现。与 `Groovy` 类似，它也提供了与 Java 良好的互操作性，保留了 Ruby 语言的美感。
 
 ## 12.10 展望
 
@@ -3963,9 +3994,11 @@ JRuby 是 Ruby 语言在 JVM 上的实现。与 Groovy 类似，它也提供了�
 
 Java 编译器还支持注解处理（更多细节请参阅教程的第 5 部分“如何以及何时使用枚举和注解”，更多内容见于教程的第 14 部分“注解处理器”），并被分为三个三个包，如下所示：
 
-- javax.annotation.processing : 注解处理。
-- java.lang.Model : 用于注解处理和 Compiler Tree API 的语言模型（包括 Java 语言元素、类型和工具类）。
-- java.tools.tools : Java Compiler API 本身。
+- `javax.annotation.processing` : 注解处理。
+
+- `java.lang.Model` : 用于注解处理和 Compiler Tree API 的语言模型（包括 Java 语言元素、类型和工具类）。
+
+- `java.tools.tools` : Java Compiler API 本身。
 
 另一方面，Java Compiler Tree API 由 `com.sun.source` 包托管，遵循 Java 标准库的命名规范，它被认为是非标准的（专有的或内部的）。通常，这些 API 的文档并不详尽，或者可能会随时更改。此外，它们绑定到特定的 JDK/JRE 版本，可能会限制使用它们的应用程序的移植性。
 
@@ -3990,7 +4023,7 @@ RELEASE_6
 RELEASE_7
 ```
 
-它们对应于常见的 Java 版本：**1.3, 1.4, 5, 6** 和 **7**。对于 **Java 8** 编译器，支持的版本列表稍长：
+它们对应于常见的 Java 版本：`1.3`, `1.4`, `5`, `6` 和 `7`。对于 Java 8 编译器，支持的版本列表稍长：
 
 ```
 RELEASE_3
@@ -4044,9 +4077,12 @@ java -cp target/classes SampleClass
 ```
 
 控制台将显示以下输出，确认文件已正确编译为字节码：
-SampleClass has been compiled!
 
-如果在编译过程中遇到任何错误，将通过诊断收集器获取（默认情况下，任何额外的收集器输出将打印到 System.err）。为了说明这一点，让我们尝试编译包含某些错误的示例源文件（SampleClassWithErrors.java）：
+```
+SampleClass has been compiled!
+```
+
+如果在编译过程中遇到任何错误，将通过诊断收集器获取（默认情况下，任何额外的收集器输出将打印到 `System.err`）。为了说明这一点，让我们尝试编译包含某些错误的示例源文件（`SampleClassWithErrors.java`）：
 
 ```java
 private class SampleClassWithErrors {
@@ -4066,10 +4102,6 @@ for (final Diagnostic<? extends FileObject> diagnostic : diagnostics.getDiagnost
         diagnostic.getMessage());
 }
 ```
-
-
-
-
 
 # 高级 Java
 
@@ -4121,7 +4153,9 @@ System.out.format("Classes %d, methods/constructors %d, fields %d",
 
 执行 `SampleClassToParse.java` 源文件的编译任务将在控制台中输出以下消息：
 
+```
 Classes 2, methods/constructors 4, fields 2
+```
 
 这是合理的；声明了两个类，`SampleClassToParse` 和 `InnerClass`。`SampleClassToParse` 类有默认构造函数（隐式定义）、方法 `main` 和字段 `str`。同样，`InnerClass` 类也有默认构造函数（隐式定义）、方法 `method` 和字段 `number`。
 
@@ -4226,7 +4260,9 @@ System.out.format("Empty try blocks: %d", scanner.getNumberOfEmptyTryBlocks());
 
 一旦针对多个源文件运行，上面的代码段将在控制台中输出：
 
+```
 Empty try blocks: 1
+```
 
 ## 13.6 下载
 
@@ -4244,24 +4280,22 @@ Empty try blocks: 1
 
 在教程在本部分，我们将揭开注解处理的魔力，它通常由注解驱动以检查、修改或生成代码。本质上，注解处理器是 Java 编译器的插件。合理使用注解处理器可以显著简化开发者的生活，这就是为什么它们通常被包含在许多库和框架中。
 
-
-
-
-
 ## 高级 Java
+
+
 
 本质上，任何 Java 类只要实现一个单一接口：`javax.annotation.processing.Processor`，就可以变成一个完整的注解处理器。然而，为了发挥作用，`javax.annotation.processing.Processor` 的每个实现都必须提供一个公共构造函数（更多细节请参阅本教程的第一部分，*如何创建和销毁对象*），该构造函数可用于实例化处理器。处理基础设施将遵循一套规则来与注解处理器交互，处理器必须遵守这些规则：
 
 - 注解处理器的实例是通过处理器类的无参构造函数创建的
-- 在调用 `init` 方法时，会 传入一个合适的 `javax.annotation.processing.ProcessingEnvironment` 实例
-- 调用 `getSupportedAnnotationTypes`、`getSupportedOptions` 和 `getSupportedSourceMethods`（这些方法在每次运行期间仅被调用一次，而不是每次都调用）
-- 最后，根据情况调用 `javax.annotation.processing.Processor` 上的 `process` 方法（请注意，每轮处理不会为创建一个新的注解处理器）
+- 在调用`init`方法时，会传入一个合适的`javax.annotation.processing.ProcessingEnvironment`实例
+- 调用`getSupportedAnnotationTypes`、`getSupportedOptions`和`getSupportedSourceMethods`（这些方法在每次运行期间仅被调用一次，而不是每次都调用）
+- 最后，根据情况调用`javax.annotation.processing.Processor`上的`process`方法（请注意，每轮处理不会为创建一个新的注解处理器）
 
 Java 文档强调，如果创建注解处理器且没有遵循上述协议，则处理器的行为将不受此接口规范定义。
 
 ## 14.4 编写自己的注解处理器
 
-我们将开发几种类型的注解处理器，从最简单的不可变性检查器开始。让我们定义一个简单的注解 `Immutable`，我们将用它来标记类，以确保其不允许修改状态。
+我们将开发几种类型的注解处理器，从最简单的不可变性检查器开始。让我们定义一个简单的注解`Immutable`，我们将用它来标记类，以确保其不允许修改状态。
 
 ```java
 @Target(ElementType.TYPE)
@@ -4269,9 +4303,9 @@ Java 文档强调，如果创建注解处理器且没有遵循上述协议，则
 public interface Immutable {
 ```
 
-按照策略，该注解将在 Java 编译器的编译阶段被保留，它在运行时将不可用（且不应该）可用）。
+按照策略，该注解将在 Java 编译器的编译阶段被保留，它在运行时将不可用（且不应该）可用。
 
-正如我们在教程第 3 部分 *如何设计类和接口* 中所知，在 Java 中实现不可变性是困难的。为了保持简单，我们的注解处理器将验证所有类是否都声明为 `final`。幸运的是，Java 库提供了一个抽象注解处理器 `AbstractProcessor`，它被设计为大多数具体注解处理器的基础。我们可以使用 `SimpleAnnotationProcessor`来实现
+正如我们在教程第 3 部分 *如何设计类和接口* 中所知，在 Java 中实现不可变性是困难的。为了保持简单，我们的注解处理器将验证所有类是否都声明为`final`。幸运的是，Java 库提供了一个抽象注解处理器`AbstractProcessor`，它被设计为大多数具体注解处理器的基础。我们可以使用`SimpleAnnotationProcessor`来实现
 
 ```java
 @SupportedAnnotationType("com.javgeeks.advanced.processor.Immutable")
@@ -4307,9 +4341,9 @@ typeElement.getSimpleName(), variableElement.getSimpleName()
 return true;
 ```
 
-`SupportedAnnotationTypes` 可能是定义注解处理的是哪种注解最重要的细节。在这里可以使用 `*` 来处理所有可用的注解。
+`SupportedAnnotationTypes` 可能是定义注解处理的是哪种注解最重要的细节。在这里可以使用`*`来处理所有可用的注解。
 
-由于提供的脚手架，我们的 `SimpleAnnotationProcessor` 必须实现一个单一的方法，其实现非常直观，基本上是验证是否有任何字段在没有 `final` 修饰符的情况下被声明。让我们来看一个违反原生不可变性约的类示例。
+由于提供的脚手架，我们的`SimpleAnnotationProcessor`必须实现一个单一的方法，其实现非常直观，基本上是验证是否有任何字段在没有`final`修饰符的情况下被声明。让我们来看一个违反原生不可变性约束的类示例。
 
 ```java
 @Immutable
@@ -4326,12 +4360,13 @@ public class MutableClass {
 }
 ```
 
-针对此类运行 `SimpleAnnotationProcessor` 将在控制台上输出以下错误：
+针对此类运行`SimpleAnnotationProcessor`将在控制台上输出以下错误：
+
 `'MutableClass' is annotated as @Immutable, but field 'name' is not declared as final`
 
-因此证实了注解处理器成功检测到了在可变类上误用 `Immutable` 注解的行为。
+因此证实了注解处理器成功检测到了在可变类上误用`Immutable`注解的行为。
 
-在很大程度上，某些内省（代码生成）是注解处理器使用最频繁的领域。我们可以稍微使用该类并从教程第 13 部分 *Java 编译器 API* 中了解一些 Java 编译器 API。我们这次要编写的注解处理器通过添加 `final` 字段来改变（或修改）生成的代码，以确保这一结果不会被遗漏。
+在很大程度上，某些内省（代码生成）是注解处理器使用最频繁的领域。我们可以稍微使用该类并从教程第 13 部分 *Java 编译器 API* 中了解一些 Java 编译器 API。我们这次要编写的注解处理器通过添加`final`字段来改变（或修改）生成的代码，以确保这一结果不会被遗漏。
 
 ```java
 @SupportedAnnotationTypes("com.javgeeks.advanced.processor.Immutable")
@@ -4380,7 +4415,7 @@ public class MutableProcessor extends AbstractProcessor {
 }
 ```
 
-实现变得更加复杂，但许多类（如 `TreePath`）应该已经就绪了。在同一个 `MutableClass` 上运行注解处理器将生成体代码（可以通过 `javac -p MutableClass.class` 进行验证）。
+实现变得更加复杂，但许多类（如`TreePath`）应该已经就绪了。在同一个`MutableClass`上运行注解处理器将生成体代码（可以通过`javac -p MutableClass.class`进行验证）。
 
 ```java
 public class com.javacodeeks.advanced.processor.examples.MutableClass {
@@ -4390,8 +4425,7 @@ public class com.javacodeeks.advanced.processor.examples.MutableClass {
 }
 ```
 
-确实，name 存在 final 字段，尽管它在原始文件中被省略了。我们的最后一个示例将展示注解处理器的代码生成能力（并讨论相关内容）。在这种情况下，我们实现了一个注解处理器，通过标记带有 `@Immutable` 的合适类来生成新的源文件（分别生成新的类）。
-
+确实，name 存在 final 字段，尽管它在原始文件中被省略了。我们的最后一个示例将展示注解处理器的代码生成能力（并讨论相关内容）。在这种情况下，我们实现了一个注解处理器，通过标记带有`@Immutable`的合适类来生成新的源文件（分别生成新的类）。
 
 ```java
 try {
@@ -4413,7 +4447,7 @@ try {
 return true;
 ```
 
-作为该注解处理器对 `MutableClass` 类处理的结果，将生成以下文件：
+作为该注解处理器对`MutableClass`类处理的结果，将生成以下文件：
 
 ```java
 package com.javacodegeeks.advanced.processor.examples;
@@ -4425,13 +4459,13 @@ public class MutableClassImmutable {
 
 ## 14.5 运行注解处理器
 
-编译器通过支持 `-processor` 命令行，轻松地将任意数量的注解处理器接入编译过程中。以下是在编译 `MutableClass.java` 源文件时，将 `MutatingAnnotationProcessor` 作为 `javac` 参数传递的一种方法：
+编译器通过支持`-processor`命令行，轻松地将任意数量的注解处理器接入编译过程中。以下是在编译`MutableClass.java`源文件时，将`MutatingAnnotationProcessor`作为`javac`参数传递的一种方法：
 
 ```bash
 javac -cp processors/advanced-java-part-14-java7.processors-0.0.1-SNAPSHOT.jar -processor com.javacodegeeks.advanced.processor.MutatingAnnotationProcessor -d targets/classes src/main/java/java/javacodegeeks/advanced/processor/examples/MutableClass.java
 ```
 
-编译一个文件看起来并不像包含数千个 java 文件的真实项目，而且从命令行使用 `javac` 似乎是大材小用。社区已经开发了许多优秀的工具，如 Apache Maven、Gradle、sbt、Ant 等……，它们负责调用 `javac` 编译器并完成许多其他工作，如今你使用的大多数项目至少使用了其中之一。例如，这里展示了如何在 Maven 构建文件 (pom.xml) 中调用 `MutatingAnnotationProcessor`。
+编译一个文件看起来并不像包含数千个 java 文件的真实项目，而且从命令行使用`javac`似乎是大材小用。社区已经开发了许多优秀的工具，如 Apache Maven、Gradle、sbt、Ant 等……，它们负责调用`javac`编译器并完成许多其他工作，如今你使用的大多数项目至少使用了其中之一。例如，这里展示了如何在 Maven 构建文件 (pom.xml) 中调用`MutatingAnnotationProcessor`。
 
 ```xml
 <plugin>
@@ -4468,22 +4502,24 @@ javac -cp processors/advanced-java-part-14-java7.processors-0.0.1-SNAPSHOT.jar -
 
 ## 15.2 Java Agent 基础
 
-本质上，Java Agent 是遵循一组严格规范的普通 Java 类。agent 类必须实现一个 `public static void premain(String agentArgs, Instrumentation inst)` 方法，该方法将成为 agent 的入口（类似于普通 Java 程序的 `main` 方法）。
 
-一旦 Java 虚拟机 (JVM) 初始化，每个 agent 的 `premain(String agentArgs, Instrumentation inst)` 方法就会被调用。
 
-Java 虚拟机 (JVM) 初始化，每个 agent 的 `premain(String agentArgs, Instrumentation inst)` 方法将按顺序被调用。
+本质上，Java Agent 是遵循一组严格规范的普通 Java 类。Agent 类必须实现一个 `public static void premain(String agentArgs, Instrumentation inst)` 方法，该方法将成为 Agent 的入口（类似于普通 Java 程序的 `main` 方法）。
+
+一旦 Java 虚拟机（JVM）初始化，每个 Agent 的 `premain(String agentArgs, Instrumentation inst)` 方法就会被调用。
+
+Java 虚拟机（JVM）初始化后，每个 Agent 的 `premain(String agentArgs, Instrumentation inst)` 方法将按顺序被调用。
 
 # 高级 Java
 
-| Manifest 属性 |  |
-|---|---|
-| Premain-Class | 当启动时指定 agent，此属性定义了包含 `premain` 方法的 agent 类。这是必须的，如果不存在则 JVM 将终止。 |
-| Agent-Class | 如果运行时指定 agent，此属性指定了包含 `agentmain` 方法的 agent 类。这是必须的。 |
-| Boot-Class-Path | 引导类加载器搜索的路径列表。 |
-| Redefine-Classes | 值为 `true`（不区分大小写），定义了此 agent 需要重定义类的能力。此属性可选的。 |
-| Can-Transform-Classes | 值为 `true`（不区分大小写），定义了此 agent 需要转换类的能力。此属性可选的。 |
-| Can-Set-Method-Prefix | 值为 `true`（不区分大小写），定义了此 agent 需要设置方法前缀的能力。此属性可选的。 |
+| Manifest 属性 | 说明 |
+| --- | --- |
+| `Premain-Class` | 当启动时指定 Agent，此属性定义了包含 `premain` 方法的 Agent 类。这是必须的，如果不存在则 JVM 将终止。 |
+| `Agent-Class` | 如果运行时指定 Agent，此属性指定了包含 `agentmain` 方法的 Agent 类。这是必须的。 |
+| `Boot-Class-Path` | 引导类加载器搜索的路径列表。 |
+| `Redefine-Classes` | 值为 `true`（不区分大小写），定义了此 Agent 需要重定义类的能力。此属性是可选的。 |
+| `Can-Transform-Classes` | 值为 `true`（不区分大小写），定义了此 Agent 需要转换类的能力。此属性是可选的。 |
+| `Can-Set-Method-Prefix` | 值为 `true`（不区分大小写），定义了此 Agent 需要设置方法前缀的能力。此属性是可选的。 |
 
 图 15.1：Java Agent 属性
 
@@ -4499,12 +4535,9 @@ Java Agent 的监测能力是真正无限的。最显著的能力包括：
 
 在本节中，我们将通过实现我们的类转换器来编写一个简单的 Java Agent。话虽如此，使用 Java Agent 的唯一缺点是，为了完成任何或较少有用的转换，都需要字节码操作技巧。而且遗憾的是，Java 标准库没有提供任何 API（至少是文档化的 API）来使这些字节码操作可行。
 
-为了填补这一空白，字节码操作出现了许多库，例如 Javassist 和 ASM 等（仅举例）。Javais 的那些使用起来要简单得多，这也是我们选择将其作为字节码操作库的原因。
+为了填补这一空白，字节码操作出现了许多库，例如 Javassist 和 ASM 等（仅举例）。Javassist 的那些使用起来要简单得多，这也是我们选择将其作为字节码操作库的原因。
 
-
-
-
-# 高级 Java
+### 示例类
 
 ```java
 public class SampleClass {
@@ -4531,7 +4564,7 @@ public class SampleClass {
 }
 ```
 
-Java agent 非常适合解决此类挑战。我们需要定义一个转换器（transformer），通过注入输出内容的代码来乐于修改 `sun.net.www.protocol.http.HttpURLConnection` 的构造函数。这可以通过 `ClassFileTransformer` 完成，而使用 Javassist 非常非常简单。让我们来看看这样的转换器实现：
+Java Agent 非常适合解决此类挑战。我们需要定义一个转换器（transformer），通过注入输出内容的代码来修改 `sun.net.www.protocol.http.HttpURLConnection` 的构造函数。这可以通过 `ClassFileTransformer` 完成，而使用 Javassist 非常简单。让我们来看看这样的转换器实现：
 
 ```java
 public class SimpleClassTransformer implements ClassFileTransformer {
@@ -4564,11 +4597,11 @@ public class SimpleClassTransformer implements ClassFileTransformer {
 }
 ```
 
-`ClassPool` 和 `CtXxx` 类（如 `CtClass`, `CtConstructor`）来自 Javassist 库。我们所做的转换非常浅显，但仅用于演示目的。首先，因为我们只对 HTTP 通信感兴趣，`sun.net.protocol.http.HttpConnection` 是标准库中负责该功能的类。
+`ClassPool` 和 `CtXxx` 类（如 `CtClass`、`CtConstructor`）来自 Javassist 库。我们所做的转换非常浅显，但仅用于演示目的。首先，因为我们只对 HTTP 通信感兴趣，`sun.net.protocol.http.HttpConnection` 是标准库中负责该功能的类。
 
-请注意，使用 `_` 分隔符时`className` 包含 `/`。其次，我们查找了 `HttpConnection` 类并通过在所有构造函数末尾注入 `System.out.println(this.getClass());` 语句来修改了它的构造函数。最后，我们重写了转换后类的字节码，因此它将由 JVM 代替原始类使用。
+请注意，使用 `_` 分隔符时，`className` 包含 `/`。其次，我们查找了 `HttpConnection` 类并通过在所有构造函数末尾注入 `System.out.println(this.getClass());` 语句来修改了它的构造函数。最后，我们重写了转换后类的字节码，因此它将由 JVM 代替原始类使用。
 
-如此，Java agent `premain` 的作用是向实例化上下文中添加 `SimpleClassTransformer` 类的实例：
+如此，Java Agent `premain` 的作用是向实例化上下文中添加 `SimpleClassTransformer` 类的实例：
 
 ```java
 public class SimpleAgent {
@@ -4579,52 +4612,51 @@ public class SimpleAgent {
 }
 ```
 
-这非常简单，同时又有些令人惊叹。为了完成 Java agent，我们必须提供正确的 `MANIFEST`，以便 JVM 能够找到正确的类。以下是所需属性的最小集合（请参考“Java Agent 基础”章节获取更多细节）：
+这非常简单，同时又有些令人惊叹。为了完成 Java Agent，我们必须提供正确的 `MANIFEST`，以便 JVM 能够找到正确的类。以下是所需属性的最小集合（请参考“Java Agent 基础”章节获取更多细节）：
 
-```
+```text
 Manifest-Version: 1.0
 Premain-Class: com.javacodegeek.advanced.agent.SimpleAgent
 ```
 
-完成后，我们的 Java agent 已经准备好实战了。在教程的下一部分，我们将介绍在 Java 应用程序中运行 agent 的方法之一。
+完成后，我们的 Java Agent 已经准备好实战了。在教程的下一部分，我们将介绍在 Java 应用程序中运行 Agent 的方法之一。
 
 ## 15.5 运行 Java Agents
 
-在运行命令行时，可以使用 `-javaagent` 参数将 Java agent 传递给 JVM 实例，其语义如下：
+在运行命令行时，可以使用 `-javaagent` 参数将 Java Agent 传递给 JVM 实例，其语义如下：
 
-```
+```text
 -javaagent:<path-to-jar>[options]
 ```
 
-其中 `<path-to-jar>` 是定位 agent JAR 归档的路径，选项 包含了可以传递给 java agent 的额外选项，更准确地说是通过 `agentArgs` 参数传递。在“编写你的第一个 Agent（使用 Java 7 版本）”章节中运行我们 java agent 的命令行看起来像这样（假设 agent 位于当前文件夹）：
+其中 `<path-to-jar>` 是定位 Agent JAR 归档的路径，选项包含了可以传递给 Java Agent 的额外选项，更准确地说是通过 `agentArgs` 参数传递。在“编写你的第一个 Agent（使用 Java 7 版本）”章节中运行我们 Java Agent 的命令行看起来像这样（假设 Agent 位于当前文件夹）：
 
-```
+```shell
 java -javaagent:advanced-java-part-15-java7.agents-0.0.1-SNAPSHOT.jar
 ```
 
-当运行 `SimpleClass` 类并带有 `advanced-java-part-15-java7.0.0.1-SNAPSHOT.jar` java agent 时，应用程序将在控制台上打印所有尝试通过 HTTP 协议访问的 URL（Google 和 Yahoo!），随后附带 Google 和 Yahoo! 搜索主页的内容大小：
+当运行 `SimpleClass` 类并带有 `advanced-java-part-15-java7.0.0.1-SNAPSHOT.jar` Java Agent 时，应用程序将在控制台上打印所有尝试通过 HTTP 协议访问的 URL（Google 和 Yahoo!），随后附带 Google 和 Yahoo! 搜索主页的内容大小：
 
-```
+```text
 http://www.google.com
 Content size: 20349
 http://www.yahoo.com
 Content size: 1387
 ```
 
-在不指定 Java agent 的情况下运行 `SimpleClass` 类将在控制台上仅输出内容大小，而不输出 URL（请注意内容大小可能会变化）：
+在不指定 Java Agent 的情况下运行 `SimpleClass` 类将在控制台上仅输出内容大小，而不输出 URL（请注意内容大小可能会变化）：
 
-```
+```text
 Content size: 20349
 Content size: 1387
 ```
 
-JVM 让运行 Java agents 变得简单。但请注意，任何错误或不准确的字节码生成都可能导致 JVM 崩溃，可能会丢失应用程序此时持的重要数据。
+JVM 让运行 Java Agents 变得简单。但请注意，任何错误或不准确的字节码生成都可能导致 JVM 崩溃，可能会丢失应用程序此时持有的重要数据。
 
 ## 15.6 下载源码
 
-你可以在此处下载本课程源码：advanced-java-part-15
+你可以在此处下载本课程源码：`advanced-java-part-15`
 
 ## 15.7 接下来是什么
 
 随着这部分的结束，高级 Java 教程也结束了。希望你发现它是实用的、实践且有趣的。其中还有许多未涵盖的话题，但非常欢迎你继续深入探索 Java 语言、平台、生态系统和精彩社区的世界。祝你好运！
-

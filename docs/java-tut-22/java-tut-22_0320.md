@@ -1,3 +1,4 @@
+
 # 转换现有应用程序
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/selfContainedApps/converting.html`](https://docs.oracle.com/javase/tutorial/deployment/selfContainedApps/converting.html)
@@ -30,7 +31,6 @@ Dynamic Tree Demo 只需要`DynamicTreeDemo.jar`文件，该文件位于项目�
          /windows
       /webstartComponentArch  <--- application source files
       ...
-
 ```
 
 ## 设置构建文件
@@ -77,7 +77,6 @@ Dynamic Tree Demo 只需要`DynamicTreeDemo.jar`文件，该文件位于项目�
         </fx:deploy>
     </target>
 </project>
-
 ```
 
 使用以下信息设置 Ant 任务：
@@ -121,8 +120,7 @@ Dynamic Tree Demo 只需要`DynamicTreeDemo.jar`文件，该文件位于项目�
 对于动态树演示，请从项目的根目录运行以下命令：
 
 ```java
-     ant package
-
+ant package
 ```
 
 当打包任务完成时，应用项目中的`build/packager/bundles`目录包含生成的本机二进制文件。
@@ -148,7 +146,6 @@ Dynamic Tree Demo 只需要`DynamicTreeDemo.jar`文件，该文件位于项目�
          /windows
       /webstartComponentArch  <--- application source files
       ...
-
 ```
 
 请注意，除了自包含捆绑包之外，打包工具始终会为应用程序生成 JAR、JNLP 和 HTML 文件。这些文件提供了分发应用程序的其他选项。
@@ -157,4 +154,4 @@ Dynamic Tree Demo 只需要`DynamicTreeDemo.jar`文件，该文件位于项目�
 
 欲了解更多关于自包含应用程序的信息，请参阅[自包含应用程序打包](https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html)。
 
-欲了解有关 Java 打包工具的 Ant 任务的更多信息，请参阅<macroinline>[JavaFX Ant Tasks](https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/javafx_ant_tasks.html)，这些任务用于 Java 和 JavaFX 应用程序。</macroinline>
+欲了解有关 Java 打包工具的 Ant 任务的更多信息，请参阅[JavaFX Ant Tasks](https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/javafx_ant_tasks.html)，这些任务用于 Java 和 JavaFX 应用程序。

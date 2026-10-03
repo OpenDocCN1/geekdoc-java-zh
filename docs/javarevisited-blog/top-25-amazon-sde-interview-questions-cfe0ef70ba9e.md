@@ -1,3 +1,4 @@
+
 # 亚马逊 SDE 25 大技术面试问题
 
 > 原文：<https://medium.com/javarevisited/top-25-amazon-sde-interview-questions-cfe0ef70ba9e?source=collection_archive---------0----------------------->

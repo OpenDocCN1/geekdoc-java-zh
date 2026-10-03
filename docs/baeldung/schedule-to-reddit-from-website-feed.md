@@ -1,16 +1,17 @@
+
 # 轻松安排到 Reddit
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/schedule-to-reddit-from-website-feed>
 
-## 1。概述
+## 1. 概述
 
-在这篇文章中，我们将[继续案例研究](/web/20220117081608/https://www.baeldung.com/case-study-a-reddit-app-with-spring)并且**为 Reddit 应用程序**添加一个新特性，目的是使文章调度变得更加简单。
+在这篇文章中，我们将继续案例研究，并且**为 Reddit 应用程序**添加一个新特性，目的是使文章调度变得更加简单。
 
-用户现在可以只从一些喜欢的网站向 Reddit 发布文章，而不是在 schedule UI 中手动缓慢地添加每篇文章。我们将使用 RSS 来做到这一点。
+用户现在可以只从一些喜欢的网站向 Reddit 发布文章，而不是在`scheduler` UI 中手动缓慢地添加每篇文章。我们将使用 RSS 来做到这一点。
 
-## 2。`Site`实体
+## 2. `Site` 实体
 
-首先，让我们创建一个实体来代表站点:
+首先，让我们创建一个实体来代表站点：
 
 ```java
 @Entity
@@ -31,11 +32,11 @@ public class Site {
 }
 ```
 
-请注意，`url`字段代表**的 URL，即**网站的 RSS 提要。
+请注意，`url`字段代表**网站的 URL，即** RSS 提要。
 
-## 3。存储库和服务
+## 3. 存储库和服务
 
-接下来–让我们创建存储库，以便与新的站点实体一起工作:
+接下来，让我们创建存储库，以便与新的`Site`实体一起工作：
 
 ```java
 public interface SiteRepository extends JpaRepository<Site, Long> {
@@ -43,7 +44,7 @@ public interface SiteRepository extends JpaRepository<Site, Long> {
 }
 ```
 
-以及服务:
+以及服务：
 
 ```java
 public interface ISiteService {
@@ -87,13 +88,13 @@ public class SiteService implements ISiteService {
 }
 ```
 
-## 4。从进给加载数据
+## 4. 从进给加载数据
 
 现在，让我们看看如何使用罗马图书馆从网站提要加载文章细节。
 
-我们首先需要将罗马加入我们的`pom.xml`:
+我们首先需要将罗马加入我们的`pom.xml`：
 
-```java
+```xml
 <dependency>
     <groupId>com.rometools</groupId>
     <artifactId>rome</artifactId>
@@ -101,7 +102,7 @@ public class SiteService implements ISiteService {
 </dependency>
 ```
 
-然后用它来解析网站的提要:
+然后用它来解析网站的提要：
 
 ```java
 public List<SiteArticle> getArticlesFromSite(Long siteId) {
@@ -136,7 +137,7 @@ private List<SiteArticle> parseFeed(List<SyndEntry> entries) {
 } 
 ```
 
-最后，这是我们将在回应中使用的简单 DTO:
+最后，这是我们将在回应中使用的简单 DTO：
 
 ```java
 public class SiteArticle {
@@ -146,11 +147,11 @@ public class SiteArticle {
 }
 ```
 
-## 5。异常处理
+## 5. 异常处理
 
-请注意，在解析提要时，我们是如何将整个解析逻辑包装到一个`try-catch`块中的——在出现异常(任何异常)的情况下——我们包装它并抛出它。
+请注意，在解析提要时，我们是如何将整个解析逻辑包装到一个`try-catch`块中的——在出现异常（任何异常）的情况下——我们包装它并抛出它。
 
-原因很简单—**我们需要控制解析过程**抛出的异常类型——这样我们就可以处理该异常并向 API 的客户端提供适当的响应:
+原因很简单——**我们需要控制解析过程**抛出的异常类型——这样我们就可以处理该异常并向 API 的客户端提供适当的响应：
 
 ```java
 @ExceptionHandler({ FeedServerException.class })
@@ -162,11 +163,11 @@ public ResponseEntity<Object> handleFeed(RuntimeException ex, WebRequest request
 }
 ```
 
-## 6。网站页面
+## 6. 网站页面
 
-### 6.1。显示站点
+### 6.1. 显示站点
 
-首先，我们将看到如何显示属于登录用户的站点列表:
+首先，我们将看到如何显示属于登录用户的站点列表：
 
 ```java
 @RequestMapping(value = "/sites")
@@ -176,9 +177,9 @@ public List<Site> getSitesList() {
 }
 ```
 
-这是非常简单的前端:
+这是非常简单的前端：
 
-```java
+```html
 <table>
 <thead>
 <tr><th>Site Name</th><th>Feed URL</th><th>Actions</th></tr>
@@ -186,7 +187,7 @@ public List<Site> getSitesList() {
 </table>
 <script>
 $(function(){
-	$.get("sites", function(data){
+    $.get("sites", function(data){
         $.each(data, function( index, site ) {
             $('.table').append('<tr><td>'+site.name+'</td><td>'+site.url+
               '</td><td><a href="#" onclick="deleteSite('+site.id+') ">Delete</a> </td></tr>');
@@ -203,9 +204,9 @@ function deleteSite(id){
 </script>
 ```
 
-### 6.2。添加新站点
+### 6.2. 添加新站点
 
-接下来，让我们看看用户如何创建新的收藏夹站点:
+接下来，让我们看看用户如何创建新的收藏夹站点：
 
 ```java
 @RequestMapping(value = "/sites", method = RequestMethod.POST)
@@ -219,9 +220,9 @@ public void addSite(Site site) {
 }
 ```
 
-这也是非常简单的客户端:
+这也是非常简单的客户端：
 
-```java
+```html
 <form>
     <input name="name" />
     <input id="url" name="url" />
@@ -239,9 +240,9 @@ function addSite(){
 </script>
 ```
 
-### 6.3。验证提要
+### 6.3. 验证提要
 
-新提要的验证是一个有点昂贵的操作——我们需要实际检索提要并解析它以完全验证它。下面是简单的服务方法:
+新提要的验证是一个有点昂贵的操作——我们需要实际检索提要并解析它以完全验证它。下面是简单的服务方法：
 
 ```java
 public boolean isValidFeedUrl(String feedUrl) {
@@ -253,9 +254,9 @@ public boolean isValidFeedUrl(String feedUrl) {
 }
 ```
 
-### 6.3。删除一个站点
+### 6.4. 删除一个站点
 
-现在，让我们看看用户如何从他们最喜欢的站点列表中删除一个站点:
+现在，让我们看看用户如何从他们最喜欢的站点列表中删除一个站点：
 
 ```java
 @RequestMapping(value = "/sites/{id}", method = RequestMethod.DELETE)
@@ -265,7 +266,7 @@ public void deleteSite(@PathVariable("id") Long id) {
 }
 ```
 
-这里是非常简单的服务级别方法:
+这里是非常简单的服务级别方法：
 
 ```java
 public void deleteSiteById(Long siteId) {
@@ -273,15 +274,15 @@ public void deleteSiteById(Long siteId) {
 }
 ```
 
-## 7。从一个站点安排一篇文章
+## 7. 从一个站点安排一篇文章
 
 现在，让我们实际上开始使用这些网站，并实现一个基本的方法，用户可以安排一个新的帖子发布到 Reddit，不是手动的，而是通过从现有网站加载一篇文章。
 
-### 7.1。修改排班表
+### 7.1. 修改排班表
 
-让我们从客户站点开始，修改现有的`schedulePostForm.html` ——我们将添加:
+让我们从客户站点开始，修改现有的`schedulePostForm.html`——我们将添加：
 
-```java
+```html
 <button data-target="#myModal">Load from My Sites</button>
 <div id="myModal">
     <button id="dropdownMenu1">Choose Site</button><ul id="siteList"></ul>
@@ -290,16 +291,16 @@ public void deleteSiteById(Long siteId) {
 </div>
 ```
 
-请注意，我们添加了:
+请注意，我们添加了：
 
-*   按钮—“`Load from my Sites`”—启动程序
-*   弹出窗口-显示网站及其文章的列表
+- 按钮——“`Load from my Sites`”——启动程序
+- 弹出窗口——显示网站及其文章的列表
 
-### 7.2。加载站点
+### 7.2. 加载站点
 
-使用一点 javascript，在弹出窗口中加载站点相对容易:
+使用一点 javascript，在弹出窗口中加载站点相对容易：
 
-```java
+```javascript
 $('#myModal').on('shown.bs.modal', function () {
     if($("#siteList").children().length > 0)
         return;
@@ -307,16 +308,16 @@ $('#myModal').on('shown.bs.modal', function () {
         $.each(data, function( index, site ) {
             $("#siteList").append('<li><a href="#" onclick="loadArticles('+
               site.id+',\''+site.name+'\')">'+site.name+'</a></li>')
-	});
+    });
     });
 });
 ```
 
-### 7.3。加载一个站点的帖子
+### 7.3. 加载一个站点的帖子
 
-当用户从列表中选择一个网站时，我们需要显示该网站的文章——同样使用一些基本的 js:
+当用户从列表中选择一个网站时，我们需要显示该网站的文章——同样使用一些基本的 js：
 
-```java
+```javascript
 function loadArticles(siteID,siteName){
     $("#dropdownMenu1").html(siteName);
     $.get("sites/articles?id="+siteID, function(data){
@@ -334,7 +335,7 @@ function loadArticles(siteID,siteName){
 }
 ```
 
-这当然与加载网站文章的简单服务器端操作挂钩:
+这当然与加载网站文章的简单服务器端操作挂钩：
 
 ```java
 @RequestMapping(value = "/sites/articles")
@@ -344,9 +345,9 @@ public List<SiteArticle> getSiteArticles(@RequestParam("id") Long siteId) {
 }
 ```
 
-最后，我们获取文章数据，填写表单并安排文章发送到 Reddit:
+最后，我们获取文章数据，填写表单并安排文章发送到 Reddit：
 
-```java
+```javascript
 var title = "";
 var link = "";
 function chooseArticle(selectedTitle,selectedLink){
@@ -360,9 +361,11 @@ function load(){
 }
 ```
 
-## 8。集成测试
+## 8. 集成测试
 
-最后，让我们在两种不同的提要格式上测试我们的`SiteService`:
+最后，让我们在两种不同的提要格式上测试我们的`SiteService`：
+
+
 
 ```java
 public class SiteIntegrationTest {
@@ -402,6 +405,6 @@ public class SiteIntegrationTest {
 
 这里显然有一点重复，但我们可以稍后再处理。
 
-## 9。结论
+## 9. 结论
 
 在这一期中，我们重点关注了一个新的小特性——让发布到 Reddit 的时间安排变得更简单。

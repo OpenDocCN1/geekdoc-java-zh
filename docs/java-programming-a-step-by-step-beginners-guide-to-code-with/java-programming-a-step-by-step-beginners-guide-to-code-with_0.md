@@ -1,15 +1,10 @@
+
 # Java 编程：面向对象程序编码初学者指南
-
-
 
 ![](img/cover.jpg)
 
-
-
-
-
-
 # 引言
+
 Java 是一种在 Web 和计算机应用程序中广泛使用的编程语言。它是一个免费下载的解决方案，允许用户访问最新版本并部署更新。这种语言存在于大多数现代 Web 应用和计算机技术中。Java 的可扩展性使其适用于广泛的应用程序，包括手机等小型电子设备的应用，以及数据中心等的大规模操作软件。对 Java 部署日益增长的偏归源于其健壮的功能和强大的安全凭证。
 
 Java 是由 Sun Micros 开发的一种编程语言，后来被 Oracle 公司收购。它被设计为在任何支持 Java 的操作系统上运行。这使得该语言非常流行，因为程序员只需要编写一次程序，程序就可以在无需更改代码的情况下运行在任何操作系统上。
@@ -19,6 +14,7 @@ Java 是由 Sun Micros 开发的一种编程语言，后来被 Oracle 公司收�
 在书中，你将学习编写像上面的程序，并学习帮助你开始编写应用程序的高级概念。
 
 Java 的一些设计目标列如下：
+
 - 该语言只需编写一次，并可以在任何操作系统上运行。
 - 该语言应支持许多软件工程原理。
 - 可移植性是一个重要因素。这就是为什么 Java 可以在 Windows、Linux 和 macOS 操作系统上运行。
@@ -28,14 +24,17 @@ Java 的一些设计目标列如下：
 下面讨论的其他设计目标：
 
 ## 强类型
+
 Java 是强类型的。每个定义的变量必须附加一个类型。你现在不需要理解整个程序，但让我们只看 2 行代码：
 
 ```java
 int i = 5;
 ```
+
 在这里，我们定义了一个用于存储值的变量。可以存储的值取决于其类型。在这个例子中，说 `i` 是 `int`（整数）类型的数值。
 
 ## 数组边界检查
+
 在运行时，Java 会检查数组是否具有定义的数量。如果有人尝试访问边界之外的值，将抛出异常。你现在不需要理解整个程序，但让我们来看这几行：
 
 ```java
@@ -44,6 +43,7 @@ array1[0] = 1;
 array1[1] = 2;
 array1[2] = 3;
 ```
+
 通过这段代码，我们可以看到我们正在为数组赋值 3 个值。运行此程序时会报错，因为数组超过了最大限制。你会得到下面的运行时错误：`java.lang.ArrayIndexOutOfBoundsException: 2 at HelloWorld.main(HelloWorld:8)`
 
 Java 的语法和函数与 C、C++ 等语言相似。如果你有编程经验，学习 Java 对你来说将非常容易。即使你是完全的新手，也可以放心，Java 的设计是于相对容易学习的。
@@ -53,13 +53,10 @@ Java 的语法和函数与 C、C++ 等语言相似。如果你有编程经验，
 Java 还被设计为平台无关。如之前所述，Java 代码首先编译成字节码，可以在任何带有 Java 虚拟机的机器上运行。通过 Java，你可以编写一次并到处运行。
 
 ## 为什么选择 Java？
+
 当然，使用 Java 的关键原因之一是关注面向对象编程。面向对象或 OOP 编程是一种编程语言模型，它允许你围绕数据组织程序代码，而不是围绕函数和逻辑（即过程化编程）。这些“数据簇”被组织成“对象”，因此被称为面向对象编程。
 
 这些对象由所谓的“类”组成，这里的类是指传统意义上的类：对象的类型，这允许程序员根据两个主要标准对它们进行分类：属性和方法。
-
-
-
-
 
 这些对象是通过所谓的“类”创建的。在这里，“类”在传统意义上被理解为对象的类型，这允许程序员根据两个主要标准对它们进行“分类”：属性和方法。
 
@@ -98,6 +95,7 @@ Java 标记比其他整数小的值。这些数字将于 -3268 到 32767 之间�
 ```
 if (b == true)
 ```
+
 像 `<` 这样的运算符显示的结果是一个逻辑值。这就是为什么表达式 `11 > 8` 返回 `true` 的原因之一。此外，`11 > 8` 外的第二个括号是重要的，因为 `+` 在 `>` 前面。
 
 ### 标识符 (Identifiers)
@@ -108,7 +106,8 @@ if (b == true)
 
 Java 拥有一份大量的运算符列表。如果你好奇运算符是什么，你可以将其看作是告诉编译器执行逻辑或算术操作特定消息的符号。在 Java 中，你将与四类运算符交互。这四类包括：
 
-- 逻辑运算符  own 位运算符
+- 逻辑运算符
+- 位运算符
 - 关系运算符
 - 算术运算符
 
@@ -131,15 +130,11 @@ Java 拥有一份大量的运算符列表。如果你好奇运算符是什么，
 
 当这种情况发生时，我们称之为灰色注释。在程序的目前的阶段，灰色注释是有争议的。
 
-
-
-
-
 这意味着你可以使用注释功能来指定或解释你的代码想要实现的目标。
 
 你可以通过输入两个斜杠后跟注释来实现这一点。这里是一个示例。
 
-```
+```java
 // 在此行处输入你的注释
 ```
 
@@ -155,7 +150,7 @@ Java 拥有一份大量的运算符列表。如果你好奇运算符是什么，
 ```java
 /*
 这个注释跨越了两个行
-* /
+*/
 ```
 
 如果你查看上上面的注释，你会发现它以 `/*` 开头，以 `*/` 结尾。
@@ -176,22 +171,22 @@ Java 要求开发者使用声明（用于声明变量的代码行），并通过
 
 ```java
 int number = 20;
-Boolean = true;
-Hello hello = "Hello world!"
+boolean flag = true;
+String hello = "Hello world!";
 ```
 
 声明语法在之前的示例中显示，其中变量类型在前，然后是变量名，最后是值。还要注意，声明语句可以在单行上包含多个声明，如下例所示：
 
 ```java
-Int number = 20, Boolean completed = true, string hello = "Hello World!";
+int number = 20, boolean completed = true, String hello = "Hello World!";
 ```
 
 Java 变量可以先不赋值进行声明；在这些情况下，Java 决定为这些变量分配特定的默认值，例如：
 
 ```java
-Byte a;
-Short number;
-logical answer;
+byte a;
+short number;
+boolean answer;
 ```
 
 这将导致值分别为 0、0 和 false。更完整的默认值列表如下：所有数据类型 `byte`、`short`、`int` 和 `long` 将默认为 0，而数据类型 `float` 和 `double` 将默认为 0.0，`char` 将返回 `'\0'`，string 或任何其他对象将为空，所有的布尔值将从 false 开始。
@@ -199,7 +194,7 @@ logical answer;
 在 Java 中，变量是静态声明的，这意味着开发者必须定义变量将包含的数据类型。为了说明这一点，如果我们想使用变量 `num` 来存储一个数字，必须先声明变量：`int num`，然后才能赋值如：
 
 ```java
-num = 10
+num = 10;
 ```
 
 这个过程通常被称为赋值语句，其中变量被赋予了程序员声明的值。然而，Java 和大多数编程语言的主要特征之一是在，像 `num = 10` 这样的赋值语句中，实际存储的值是等号右侧的值，即值 10，而 `num` 只是用于召回此存储值的标签。这就是为什么有些 Java 程序员倾向于使用“获取”（getting）值的术语而不是“赋值”（assigning），尽管大多数情况下它们可以互换，且在大多数情况下，它们的作用方式相同。
@@ -222,15 +217,15 @@ num = 10
 ......
 ```
 
-在命名你编写的方法时，请记住以下规则。方法名始终是动词，更具体说是动词短语（这意味着你可以使用多个单词来命名它们）。方法名的第一个单词应该是小写的，而其余单词应采用驼峰格式。这里有一个例子：`writeMethodNamesThisWay ()`。
+在命名你编写的方法时，请记住以下规则。方法名始终是动词，更具体说是动词短语（这意味着你可以使用多个单词来命名它们）。方法名的第一个单词应该是小写的，而其余单词应采用驼峰格式。这里有一个例子：`writeMethodNamesThisWay()`。
 
 现在你应该记住，动词用作方法名表示动作，而名词用作变量名表示特定属性。
 
 遵循此 Java 构造的方法语法和命名规范，这里有一个用于计算圆面积的示例代码：
 
 ```java
-public double calculation CircleArea () {
-return radius * radius * Math.PI;
+public double calculationCircleArea() {
+    return radius * radius * Math.PI;
 }
 ```
 
@@ -239,69 +234,74 @@ return radius * radius * Math.PI;
 我们只涵盖了与面向对象编程的一些额外细节。正如之前提到的，构造函数看起来像方法，你完全可以将其认为并视为 Java 编程中的一种特殊方法。然而，构造函数在许多方面仍然与方法不同。构造函数的名称与类名相同。使用关键字或运算符 `new` 创建新的构造函数实例并对其初始化。这里有一个使用 "Employee" 类以及在代码中不同初始化方法的示例：
 
 ```java
-Employee salary1 = new Employee ();
-Employee wage2 = New Employee(2.0);
+Employee salary1 = new Employee();
+Employee wage2 = new Employee(2.0);
 Employee wage3 = new Employee(3.0, "regular");
 ```
 
-
-
-
 构造函数也会隐式返回 `void` ——这意味着它没有返回类型。你不能在构造函数体内放置 `return` 语句，因为编译器将其标记为错误。调用构造函数的唯一方法是使用 `new` 语句。我们在上面的示例中已经涵盖了调用构造函数的几种方法。
 
-最后一个区别是构造函数不能被继承。让我们回到上面给示例——第一行包含 `Employee();` —— 这是默认构造函数。如你所见，它没有参数。默认构造函数的作用仅仅是将成员变量初始化为指定的默认值。在上面的示例中，成员变量 `pirate1` 被初始化为默认的 `wage rate` 和 `employee status`。
+最后一个区别是构造函数不能被继承。让我们回到上面给示例——第一行包含 `Employee()` —— 这是默认构造函数。如你所见，它没有参数。默认构造函数的作用仅仅是将成员变量初始化为指定的默认值。在上面的示例中，成员变量 `pirate1` 被初始化为默认的 `wage rate` 和 `employee status`。
 
 ### 构造函数也可以重载吗？
+
 可以的。构造函数的行为也像方法，这意味着你可以像重载方法一样来重载构造函数。这里是一些构造函数重载的示例。我们使用 `Employee` 类并用各种参数对其进行重载。
 
-```
+```java
 Employee()
-Employee (int internal)
-Employee (int r, String b)
+Employee(int internal)
+Employee(int r, String b)
 ```
 
 ### 如何初始化变量？
+
 现在我们已经知道了如何声明变量，并且知道了我们可以使用的不同变量类型，下一步要学习的是如何在所谓的“表达式”中使用这些变量。表达式是 Java 中最常用的构建模块，通常旨在产生一个新值，尽管在某些情况下，表达式用于为变量赋值一个新值。通常，表达式由值、变量、运算符和方法调用等内容组成。某些表达式不产生结果，但会影响另一个变量。
 
 一个例子是根据操作更改变量值的表达式：它没有新的输出值，也没有“赋值”新值，而是有一种所谓的“副作用”，导致变量的值发生变化。
 
-在“Hello World”打印程序中，我们将原始值输入到 `print` 函数中，这也称为对输出进行“硬编码”。然而，在此时我们应该尝试结合所学的关于变量的知识。变量的工作方式与原始值相同，它们仅仅是引用之前之前存储的值，因此程序员可以简单地使用变量名代替值。为了演示这一点，让我们回想一下之前的“Hello World”程序：`print ("Hello World"); input ("press return to close this.");` 现在，我们不再硬编码字符串 "Hello World"，而是简单地将其声明并让程序显示它。它看起来应该是这样的：
+在“Hello World”打印程序中，我们将原始值输入到 `print` 函数中，这也称为对输出进行“硬编码”。然而，在此时我们应该尝试结合所学的关于变量的知识。变量的工作方式与原始值相同，它们仅仅是引用之前之前存储的值，因此程序员可以简单地使用变量名代替值。为了演示这一点，让我们回想一下之前的“Hello World”程序：`print("Hello World"); input("press return to close this.");` 现在，我们不再硬编码字符串 "Hello World"，而是简单地将其声明并让程序显示它。它看起来应该是这样的：
 
+```java
+String str = "Hello World";
+print(str);
+input("press return to close this.");
 ```
-String = "Hello World";
-print (string);
-input ("press return to close this.");
-```
+
 这应该产生相同的结果。
 
 # 第 3 章：Java 基础
 
 ## Java 工具包
+
+
+
+# JDK 概述
+
 JDK 提供了构建、测试和监控 Java 所需的工具。它允许开发者在 Java 操作期间访问软件组件并编译应用程序。例如，开发者需要一个基于 JDK 的环境来编写应用和实现方法。由于 JDK 更多地执行开发工具包 (SDK) 操作，因此很容易混淆这两者的范围和功能。虽然 JDK 特定于 Java 语言，但 SDK 有更广泛的应用范围。但 JDK 在开发环境中仍然作为 SDK 组件发挥工作。这意味着开发者仍然需要 SDK 来提供某些 JDK 领域不具备的具有广泛属性的工具。开发者文档、调试工具以及应用程序服务器是 SDK 为 Java 环境提供的一些关键工具。
 
-JDK 的部署范围取决于所执行任务的性质、支持的版本以及所使用的 Java 版本。例如，Java 平台标准版 (Java SE) 开发工具包旨在用于 Java 标准版。Java 企业版 (Java EE) 和 Java 微型版 (Java ME) 平台是 JDK 的另外两个主要子集。这些 Java 版本的版本的细节将在接下来的子主题中详细介绍。自 2007 年上传到 OpenJDK 门户以来，JDK 一直是一个免费平台。其开源状态使其易于协作，并允许开发者社区克隆、修改或为改进和更新贡献想法。
+JDK 的部署范围取决于所执行任务的性质、支持的版本以及所使用的 Java 版本。例如，Java 平台标准版 (Java SE) 开发工具包旨在用于 Java 标准版。Java 企业版 (Java EE) 和 Java 微型版 (Java ME) 平台是 JDK 的另外两个主要子集。这些 Java 版本的细节将在接下来的子主题中详细介绍。自 2007 年上传到 OpenJDK 门户以来，JDK 一直是一个免费平台。其开源状态使其易于协作，并允许开发者社区克隆、修改或为改进和更新贡献想法。
 
-### Java SE
-Java SE 支持各种桌面和服务器应用程序。支持在这些应用程序的开发环境中对 Java 编程语言进行测试和部署。近期 Java SE 发布的相关文档包括高级管理控制台功能和一组更新的 Java 部署规则。Java SE 13.0.1 是编写此书时 Java SE 对应的最新 JDK 版本。Java SE SDK 包含基本能力以及一组设计用于桌面应用程序的工具、库和实现技术。这些工具的范围非常广，从用于实现 Java 程序的对象的类和类型，到适用于开发具有网络能力和安全性的应用程序的高级类一有。开发者在创建应用程序时也可以使用此特定的 JDK 来简化访问或 GUI。Java EE 平台是一个通过 Java 世界成员的共同努力开发的开源产品。Java EE 与 Java SE 紧密相关，因为前者构建在后者之上。此特定软件集成了设计用于企业级的功能转换，新版本中的特性和增强通常反映了 Java 社区的投入、需求和请求。Java EE 实际上提供了二十种与 Java 编程兼容的实现。Java EE SDK 旨在用于构建大型业务应用程序。该版本包含了由客户端 API 提供的增强 REST API 能力、JSON 绑定、servlet 和安全性。该版本于 2019 年 12 月由 Oracle 公司发布，还包含了日期和时间 API 以及流 (Streams)。
+## Java SE
 
-Java ME 平台利用简单性、可移植性和动态性，为小型配件和小设备提供了一个全面的应用程序开发环境。Java ME 以其交互式且用户友好的导航界面，以及实现网络概念的内置能力而闻名。它与物联网 (IoT) 密切相关，对于创建设计用于嵌入式技术或连接设备设备的应用程序非常有用，这些设备可用于发明或实现未来的概念。Java ME 运行环境的移植性和属性使其适用于可穿戴设备应用、手机手机、相机、传感器和打印机。
+Java SE 支持各种桌面和服务器应用程序。支持在这些应用程序的开发环境中对 Java 编程语言进行测试和部署。近期 Java SE 发布的相关文档包括高级管理控制台功能和一组更新的 Java 部署规则。Java SE 13.0.1 是编写此书时 Java SE 对应的最新 JDK 版本。Java SE SDK 包含基本能力以及一组设计用于桌面应用程序的工具、库和实现技术。这些工具的范围非常广，从用于实现 Java 程序的对象的类和类型，到适用于开发具有网络能力和安全性的应用程序的高级类一有。开发者在创建应用程序时也可以使用此特定的 JDK 来简化访问或 GUI。Java EE 平台是一个通过 Java 世界成员的共同努力开发的开源产品。Java EE 与 Java SE 紧密相关，因为前者构建在后者之上。此特定软件集成了设计用于企业级的功能转换，新版本中的特性和增强通常反映了 Java 社区的投入、需求和请求。Java EE 实际上提供了二十种与 Java 编程兼容的实现。Java EE SDK 旨在用于构建大型业务应用程序。该版本包含了由客户端 API 提供的增强 REST API 能力、JSON 绑定、servlet 和安全性。该版本于 2019 年 12 月由 Oracle 公司发布，还包含了日期和时间 API 以及流 (`Streams`)。
 
+## Java ME
 
-
+Java ME 平台利用简单性、可移植性和动态性，为小型配件和小设备提供了一个全面的应用程序开发环境。Java ME 以其交互式且用户友好的导航界面，以及实现网络概念的内置能力而闻名。它与物联网 (IoT) 密切相关，对于创建设计用于嵌入式技术或连接设备的应用程序非常有用，这些设备可用于发明或实现未来的概念。Java ME 运行时环境的移植性和属性使其适用于可穿戴设备应用、手机、相机、传感器和打印机。
 
 Java ME SDK 备有必要的工具，可在应用程序开发、功能测试和设备模拟实现期间在独立环境中使用。正如 Oracle 公司网站上公告的，截至 2019 年，此 JDK 非常适用于“连接受限设备配置 (CLDC)”和“连接设备配置 (CDC)”。这结果实现了一个单一且多功能的应用程序开发环境。
 
-还有其他几种 Java ME 解决方案支持在应用程序中实现 Java 编程语言。Java ME Embedded 提供了一个集成了设备 IoT 能力的运行时环境，而嵌入式 Java ME 客户端则有助于运行和优化嵌入式程序功能的软件开发。Java for Mobile 则使用 CLDC 和 Java ME 开发工具栈为移动设备创建创新功能。
+还有其他几种 Java ME 解决方案支持在应用程序中实现 Java 编程语言。`Java ME Embedded` 提供了一个集成了设备 IoT 能力的运行时环境，而嵌入式 `Java ME` 客户端则有助于运行和优化嵌入式程序功能的软件开发。`Java for Mobile` 则使用 CLDC 和 Java ME 开发工具栈为移动设备创建创新功能。
 
-Java 运行时
+## Java 运行时
 
 请记住，Java 应用程序要高效运行，必须满足某些条件。`JRE` 包含了创建这些必要条件的要素。这包括 `JVM` 及其相应的类文件和属性。虽然 `JRE` 作为 `JDK` 的一个组件运行，但它可以独立运行，特别是当任务仅限于运行而非创建应用程序指令时。
 
 `JRE` 为 Java 编程生态系统中的各种程序提供了重要的操作属性。例如，如果一个程序在其上运行独立的 `JRE`，则该程序被认为是自包含的。这意味着程序对 `JRE` 的访问不依赖于其他程序。这种独立性使得程序能够与不同的操作系统保持兼容。
 
-Java 虚拟机
+## Java 虚拟机
 
-`JVM` 充当计算机程序中 Java 实现的规范。它是 Java 平台无关特性背后的驱动力。`JVM` 作为由其他程序执行的程序的地位强调了这一点。编写用于与 `JVM` 交互并运行运行的程序将其视为一台机器。由于由于原因，使用了类似的汇编、库和接口来编写 Java 程序，允许每个 `JVM` 实现都能针对特定的操作系统进行定制。这有助于将 Java 程序翻译或解释为本地操作系统上的运行时指令，从而消除了 Java 开发中对平台依赖的性。
+`JVM` 充当计算机程序中 Java 实现的规范。它是 Java 平台无关特性背后的驱动力。`JVM` 作为由其他程序执行的程序的地位强调了这一点。编写用于与 `JVM` 交互并运行运行的程序将其视为一台机器。由于原因，使用了类似的汇编、库和接口来编写 Java 程序，允许每个 `JVM` 实现都能针对特定的操作系统进行定制。这有助于将 Java 程序翻译或解释为本地操作系统上的运行时指令，从而消除了 Java 开发中对平台依赖的性。
 
 作为一名开发者，你必须小心开发环境和应用程序对于网络攻击和其他威胁的脆弱性。`JVM` 提供了增强的安全功能来保护你免受此类威胁。坚固的安全基础源于字节码中内置的语法和结构。但这并不意味着 `JVM` 容的类数量受到限制。`JVM` 实际上接受不同的类，只要它们能够通过安全验证。因此，`JVM` 是软件开发的一种可行替代方案。
 
@@ -309,83 +309,63 @@ Java 虚拟机
 
 字节码基本上是包含在类文件中的 `JVM` 命令，连同其他包括符号表在内的信息。它们作为后台程序运行，负责促进 `JVM` 操作的解释和执行。字节码实际上是原生代码的替代品，因为 Java 不提供后者。`JVM` 寄存器的结构使得它包含反过来处理字节码流的方法——即 `JVM` 的指令集。换句话说，每个 Java 类都包含方法，而加载类的过程会为任何方法执行单条字节流。当程序开始运行时，激活方法会自动触发字节码。
 
-字节码的另一个重要特性是即时编译 (JIT) 编译器，它在运行时操作期间运行以编译执行代码。此功能实际上在 `JVM` 生态系统中以 HotSpot JIT 器的的形式存在。它与 Java 运行时操作并发执行代码，因为它具有在优化级别执行的能力以及调整指令增量流量的灵活性。以前，JIT 编译器需要频繁调优以消除冗余程序并刷新内存。调优是一个必要的程序，能为 JIT 编译器提供最佳性能。然而，较新版本 Java 的频繁更新了自动内存刷新机制，消除了定期调优的需求。
+字节码的另一个重要特性是即时编译 (JIT) 编译器，它在运行时操作期间运行以编译执行代码。此功能实际上在 `JVM` 生态系统中以 `HotSpot JIT` 编译器的形式存在。它与 Java 运行时操作并发执行代码，因为它具有在优化级别执行的能力以及调整指令增量流量的灵活性。以前，JIT 编译器需要频繁调优以消除冗余程序并刷新内存。调优是一个必要的程序，能为 JIT 编译器提供最佳性能。然而，较新版本 Java 的频繁更新了自动内存刷新机制，消除了定期调优的需求。
 
 字节码可以是原始的、灵活的或基于栈的。根据 Vickers (1996)，有七种原始类型包括 `byte`、`char`、`double`、`float`、`int`、`long` 和 `short`。布尔类型也被广泛使用。每种类型旨在帮助程序员实现字节码可以操作的变量。这会将更大、更强大的类型分配给层次结构中的较高级，而较小的类型占据较低级。Java 操作码（opcodes）同样是类型的成员，因为它们在分类操作数方面的作用。这种作用确保了操作数保留其状态，从而消除了 `JVM` 中对操作数的识别。`JVM` 能够加速过程，因为它能够在采用多个为堆提供驻留代码的同时实现多任务处理。根据 Vickers (1996)，它可以是一个隐式常量值，来自常量池的操作数值。
 
-# 第 4 章节：Java 环境
+# 第 4 章：Java 环境
 
-在编辑器中编写程序
+## 在编辑器中编写程序
 
 使用如记事本之类的简单编辑器来编写程序，或者你可以使用功能全集成开发环境 (IDE)。以下是适用于 Java 的一些流行的 IDE 列表，以及它们的一些基本功能。
 
-Eclipse
+### Eclipse
 
 此 IDE 已经存在很长时间，在 Java 开发者社区中非常流行并广泛使用。该 IDE 的一些基本功能包括：
 
-它是免费开源的。因此，有许多开发者仍在该 IDE 的开发做出贡献。
+- 它是免费开源的。因此，有许多开发者仍在该 IDE 的开发做出贡献。
+- 它可以开发 C++、Ruby、HTML5 和 PHP 等其他语言的应用程序。
+- 它具有丰富的客户端平台。
+- 提供重构代码的能力。
+- 它可以帮助完成代码。
+- 拥有大量的扩展和插件。
+- 它还支持大多数源码版本控制系统。
 
-它可以开发 C++、Ruby、HTML5 和 PHP 等其他语言的应用程序。
-
-它具有丰富的客户端平台。
-
-提供重构代码的能力。
-
-它可以帮助完成代码。
-
-拥有大量的扩展和插件。
-
-它还支持大多数源码版本控制系统。
-
-IntelliJ IDEA
+### IntelliJ IDEA
 
 这是另一个被 Java 开发者社区流行的 IDE。该 IDE 的一些核心功能包括：
 
-社区版是免费开源的。付费版本提供了更多的功能，并允许开发者使用 Java 企业版构建企业应用程序。
+- 社区版是免费开源的。付费版本提供了更多的功能，并允许开发者使用 Java 企业版构建企业应用程序。
+- 提供了重构代码的能力。
+- 它有助于完成代码。
+- 它拥有广泛的扩展和插件。
+- 它还支持大多数源代码版本控制系统。
 
+### NetBeans
 
-
-
-提供了重构代码的能力。
-它有助于完成代码。
-它拥有广泛的扩展和插件。
-它还支持大多数源代码版本控制系统。
-
-# NetBeans
-
-NetBeans 是一个非常推荐给 Java 初者的 IDE。它是一个强大且快速的 IDE，支持所有 Java 平台以及移动应用程序。它可以在 Windows、Linux、macOS X 和 Solaris 等多种平台上运行。它还提供对 HTML5、C/C++ 和 PHP 等语言的支持。
+`NetBeans` 是一个非常推荐给 Java 初学者的 IDE。它是一个强大且快速的 IDE，支持所有 Java 平台以及移动应用程序。它可以在 Windows、Linux、macOS X 和 Solaris 等多种平台上运行。它还提供对 HTML5、C/C++ 和 PHP 等语言的支持。
 
 ## Java 优点
 
-Java 以编程简单性著称，具有用户友好的界面，便于学习、编写、部署和运行。
-
-Java 核心架构旨在便于开发环境中的集成和易于用性。
-
-Java 是平台无关且易于移植的，适用于多任务处理和各种应用程序。
-
-面向对象的 Java 特性支持开发具有标准功能和可重新部署代码的程序。
-
-Java 的网络能力让程序员能够轻松为共享计算环境构建软件。
-
-Java、C++ 和 C 语言之间的紧密关系，使得任何了解另外两种语言的人都能轻松学习 Java。
-
-Java 的自动垃圾回收提供了持续的内存保护，因此开发者可以在编写代码时方便地关闭安全漏洞。
-
-Java 架构在实现多线程程序方面非常灵活性。
-
-得益于通过接口或继承重新部署类的能力，Java 易于复用。
+- Java 以编程简单性著称，具有用户友好的界面，便于学习、编写、部署和运行。
+- Java 核心架构旨在便于开发环境中的集成和易于用性。
+- Java 是平台无关且易于移植的，适用于多任务处理和各种应用程序。
+- 面向对象的 Java 特性支持开发具有标准功能和可重新部署代码的程序。
+- Java 的网络能力让程序员能够轻松为共享计算环境构建软件。
+- Java、C++ 和 C 语言之间的紧密关系，使得任何了解另外两种语言的人都能轻松学习 Java。
+- Java 的自动垃圾回收提供了持续的内存保护，因此开发者可以在编写代码时方便地关闭安全漏洞。
+- Java 架构在实现多线程程序方面非常灵活性。
+- 得益于通过接口或继承重新部署类的能力，Java 易于复用。
 
 ## Java 缺点
 
-由于 Java 不是原生应用程序，与其他编程语言相比，它的运行速度较慢。
-
-Java 在处理和显示图形方面可能缺乏一致性。例如，基于 Java 的应用程序中图形用户界面（GUI）的通常外观与原生应用程序的 GUI 输出相比完全不同，且标准较低。
-
-Java 垃圾回收是一项管理内存性能的功能，当作为后台程序运行时可能会干扰速度和性能。
+- 由于 Java 不是原生应用程序，与其他编程语言相比，它的运行速度较慢。
+- Java 在处理和显示图形方面可能缺乏一致性。例如，基于 Java 的应用程序中图形用户界面（GUI）的通常外观与原生应用程序的 GUI 输出相比完全不同，且标准较低。
+- Java 垃圾回收是一项管理内存性能的功能，当作为后台程序运行时可能会干扰速度和性能。
 
 # 第 5 章：项与类
 
-最后，我们将查看类和对象；Java 中的对象必须有存储在字段中的状态，以及由方法指示的行为。类就像一种地图，或者如果你愿意的话，可以看作是从从它创建对象的计划。下面是该类：
+最后，我们将查看类和对象；Java 中的对象必须有存储在字段中的状态，以及由方法指示的行为。类就像一种地图，或者如果你愿意的话，可以看作是从它创建对象的计划。下面是该类：
 
 ```java
 public class Dog {
@@ -399,6 +379,7 @@ public class Dog {
 ```
 
 类可以拥有以下任何类型的变量：
+
 - **局部（Local）**：定义在构造函数、块或方法中。变量被声明，然后初始化，并在方法完成时销毁。
 - **实例（Instance）**：定义在类中但方法之外。在类实例出现时初始化，并可以从任何构造函数、块或方法访问。
 - **类（Class）**：声明在类内部，使用 `static` 关键字且在方法之外。
@@ -429,10 +410,12 @@ public class Puppy {
         System.out.println("The given name is:" + name);
     }
     public static void main(String [] args) {
-        // 下一条语句将创建一个名为 myPuppy 的对象 Puppy PuppyPuppy = new Puppy("fluffy");
+        // 下一条语句将创建一个名为 myPuppy 的对象
+        Puppy myPuppy = new Puppy("fluffy");
     }
 }
 ```
+
 运行它并看看发生了什么。
 
 ## 访问实例变量和方法
@@ -466,7 +449,7 @@ public class Puppy {
     }
     public static void main(String [] args) {
         /* 创建对象 */
-        myPuppy = new Puppy("fluffy");
+        Puppy myPuppy = new Puppy("fluffy");
         /* 现在调用类方法设置狗狗的年龄 */
         myPuppy.setAge(2);
         /* 然后调用另一个类方法获取狗狗的年龄 */
@@ -481,7 +464,7 @@ public class Puppy {
 
 需要记住的一点是路径必须完全限定的，这包含了类名。否则，编译器将难以加载源代码和类。为了限定路径，我们需要使用 `import` 语句，在示例中我们可以看到将请求的类加载到我们选择的目录中：
 
-接下来，我们需要创建两个类，一个 Employee，一个 EmployeeTest。为了实现，我们使用以下代码——记住 Employee 是类名且它是一个公共类。这样做并将文件命名为 Employee.java。还要注意这里有四个实例变量——age、name、designation 和 salary，还有一个定义清晰并接收参数的构造函数：
+接下来，我们需要创建两个类，一个 `Employee`，一个 `EmployeeTest`。为了实现，我们使用以下代码——记住 `Employee` 是类名且它是一个公共类。这样做并将文件命名为 `Employee.java`。还要注意这里有四个实例变量——age、name、designation 和 salary，还有一个定义清晰并接收参数的构造函数：
 
 ```java
 public class Employee {
@@ -489,7 +472,8 @@ public class Employee {
     int age;
     string marking;
     double salary;
-    // 这是名为 Employee 的类的构造函数 public Employee(String name) {
+    // 这是名为 Employee 的类的构造函数
+    public Employee(String name) {
         this.name = name;
     }
     // 将 Employee 的年龄赋值给变量 age。
@@ -508,30 +492,28 @@ public class Employee {
     public void printEmployee() {
         System.out.println("Name:" + name);
         System.out.println("Age:" + age);
-        System.out.println("Tag:" + tag); System.out.println("Salary:" + salary);
+        System.out.println("Tag:" + tag);
+        System.out.println("Salary:" + salary);
     }
 }
 ```
 
 
 
-
-
 ```java
 /* Create two objects with constructor */
-Employee empOne = new Employee ("Bobby Bucket"); Employee empTwo = new Employee ("Shelley Mary");
+Employee empOne = new Employee("Bobby Bucket");
+Employee empTwo = new Employee("Shelley Mary");
 
 // Call methods for each of the created objects
 empOne.age(28);
-
-empOne.designation("Senior Developer"); empOne.salary(1500);
-
+empOne.designation("Senior Developer");
+empOne.salary(1500);
 empOne.printEmployee();
 
 empTwo.age(22);
-
-empTwo.designation("Developer"); empTwo.salary(850);
-
+empTwo.designation("Developer");
+empTwo.salary(850);
 empTwo.printEmployee();
 ```
 
@@ -539,7 +521,7 @@ empTwo.printEmployee();
 
 你应该看到如下：
 
-```text
+```
 Exit
 C: > javac Employee.java
 C: > javac EmployeeTest.java
@@ -562,7 +544,7 @@ Wage: 850.00
 
 这是一个由 Hello World 创建的窗口截图：
 
-## 第 1 Lesson - Java 项目与包
+## 第 1 课 - Java 项目与包
 
 程序首先通过 Java 项目组织，然后通过 Java 项目内部的包（packages）组织。你将为书中的每个程序创建一个 Java 项目。
 
@@ -577,26 +559,37 @@ Wage: 850.00
 1. 如果 Eclipse 尚未打开：
    a. 双击你在桌面上创建的 Eclipse 快捷方式。
    b. 点击 OK 使用 Java 工作文件夹作为工作空间。
+
 2. 在 Package Explorer（包管理器）面板中右键点击并选择 New / Java Project（新建 / Java 项目）。
+
 3. 将项目命名为 `Java Hello World`，如果版本是 1.7 或更高，则选择 Use default JRE，然后如下所示点击 Next。如果默认 JRE 低于 1.7，则选择 Use JRE 1.7 or later。
+
 ![图片](img/image-1.jpeg)
+
 4. 点击 Libraries（库），然后如下所示点击 Add External JARs ...（添加外部 JAR 文件）。
+
 ![图片](img/image-2.jpeg)
+
 5. 搜索并选择你在 Java 工作文件夹中安装的 `DIYJava.jar` 文件，然后点击 Open。
+
 6. 点击 Finish（完成）。
 
 Package Explorer 面板现在包含一个项目（Hello World），并已添加一个 JAR 文件（`DIYJava.jar`），如下所示：
+
 ![图片](img/image-3.jpeg)
 
 ### 在 Hello World 项目中为 Hello World 创建包：
 
 1. 右键点击 Hello World 项目并选择 New / Package（新建 / 包）。
+
 2. 将包命名为 `thispackage.helloworld`。使用你自己的名字作为包名的一部分，例如 `thispackage.myname.helloworld`。
+
 3. 点击 Finish。
 
 Package Explorer 面板现在显示在 Hello World 项目中创建的包。
 
 **关键点及更多：**
+
 * 在 Package Explorer 中右键点击以创建 Java 项目和包。
 * 为每个程序创建一个不同的 Java 项目。
 * Eclipse 会在电脑上创建一个名称与 Java 项目同名的文件夹。为你的项目指定你想要的文件夹名称。
@@ -610,6 +603,7 @@ Package Explorer 面板现在显示在 Hello World 项目中创建的包。
 * 由于你的程序很小，你的大多数程序将只有一个包。
 
 **包名命名策略：**
+
 * 确保你的包名与任何其他包名不同。
 * Java 程序员使用他们的姓氏或公司名作为包名的第一部分。
 * 使用全小写字母且不留空格。
@@ -618,7 +612,7 @@ Package Explorer 面板现在显示在 Hello World 项目中创建的包。
 * Java 项目针对 Eclipse；包是为了 Java 的。
 * 既然你正在使用 Eclipse，你将同时使用 Java 项目和包。如果你在没有 Eclipse 的情况下开发 Java 程序，可能只会使用包。
 
-## 第 2 Lesson - 类、子类与程序
+## 第 2 课 - 类、子类与程序
 
 Java 程序由一个或多个类组成。类包含执行所需任务的实际程序语句。每个类都必须有不同的名称。例如，设计在窗口中运行的程序必须是某种类型的类。
 
@@ -629,13 +623,18 @@ Java 程序由一个或多个类组成。类包含执行所需任务的实际程
 使用 `Window` 类创建你的第一个类：
 
 1. 在 Package Explorer 面板中右键点击你的包并选择 New / Class（新建 / 类）。
+
 2. 在如下所示的类名处输入 `HelloWorld`（提示："Hello" 和 "World" 之间没有空格）。
+
 3. 如下所示输入 `Window` 作为类型，并点击 OK。
+
 4. 你想要创建哪些方法？选择如下所示选项：
    a. `public static void main(String[] args)`
    b. Constructors（构造函数）。
    c. 无论是否选择第三选项抽象方法并不重要。
+
 ![图片](img/image-6.jpeg)
+
 5. 点击 Finish 创建类。
 
 Eclipse 将为 `HelloWorld` 类创建如下代码。如果你将阅读字体设置为较小，阅读这些代码可能会更容易。
@@ -703,48 +702,43 @@ public class HelloWorld extends Window {
 }
 ```
 
-
-
-
-
 ```java
 public class HelloWorld extends DIYWindow {
 
-    public HelloWorld () {
-        print ("Hello world");
+    public HelloWorld() {
+        print("Hello world");
     }
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         new HelloWorld();
     }
 }
 ```
 
 ![Image](img/image-7.jpeg)
+
 ![Image](img/image-8.jpeg)
 
 1. 按 `Ctrl-S` 保存程序。
+
 2. 点击如图所示的运行（Run）按钮来运行程序：
 
 发生了什么？
 
-应该会弹出一个窗口显示“Hello World”，如图片所示：1. 你需要对你的类进行什么修改来向你问好？
+应该会弹出一个窗口显示“Hello World”，如图片所示：
+1. 你需要对你的类进行什么修改来向你问好？
 
 列表 1-4，来自 `HelloWorld.java`：
 
-...
-
 ```java
-public HelloWorld () {
-    print ("Hello
+public HelloWorld() {
+    print("Hello
 
 ____________
 
 ");
 }
 ```
-
-...
 
 1. 保存程序并运行它。
 
@@ -754,10 +748,8 @@ ____________
 
 列表 1-5，来自 `HelloWorld.java`：
 
-...
-
 ```java
-public HelloWorld () {
+public HelloWorld() {
     print
 
     ttt
@@ -766,8 +758,6 @@ public HelloWorld () {
 }
 ```
 
-...
-
 发生了什么？
 
 我看到了很多错误指示，如图像所示：
@@ -775,7 +765,9 @@ public HelloWorld () {
 ![Image](img/image-9.jpeg)
 
 1. 双击 Eclipse Problems 面板中的错误数量，以显示找到的错误列表。
+
 2. 双击 Problems 面板中的错误描述，将光标移动到错误行。
+
 3. 将光标悬停在实际错误上（在上面的中显示 "Error here" 的地方）。Eclipse 将显示解决问题的方法列表，如下图所示。此 Eclipse 功能称为快速修复（Quick Fix）。
 
 ![Image](img/image-10.jpeg)
@@ -793,19 +785,17 @@ public HelloWorld () {
 1. 修改代码使你的程序输出以下内容：
 
 Hello dear.
+
 Take me to your leader.
 
 列表 1-6，来自 `HelloWorld.java`：
 
-...
-
 ```java
-public HelloWorld () {
-    print("________________________"); print("_______________________");
+public HelloWorld() {
+    print("________________________");
+    print("_______________________");
 }
 ```
-
-...
 
 在课程期间，除非遇到语法错误，否则请在每次更改代码后保存更改并运行程序。
 
@@ -814,17 +804,16 @@ public HelloWorld () {
 1. 你认为需要打印什么可以在两个句子之间插入一个空行，如下方截图所示。（提示：你不希望在这一行上打印任何内容。）
 
 Hello dear.
+
 Take me to your leader.
 
 列表 1-7，来自 `HelloWorld.java`：
 
-...
-
 ```java
-public HelloWorld () {
-    print ("Hello Earthling.");
+public HelloWorld() {
+    print("Hello Earthling.");
     print(___);
-    print ("Take me to your leader.");
+    print("Take me to your leader.");
 }
 ```
 
@@ -832,7 +821,7 @@ public HelloWorld () {
 
 Java 程序由类组成。每个程序都需要在其其中一个类中包含一个 `main()` 方法。
 
-`main()` 必须写成 `public static void main(String [] args)`。随后的课程将澄清这些单词的含义。
+`main()` 必须写成 `public static void main(String[] args)`。随后的课程将澄清这些单词的含义。
 
 多个类通常被一起使用来创建一个程序。然而，书中的大多数程序都只有一个类。
 
@@ -840,41 +829,49 @@ Java 程序由类组成。每个程序都需要在其其中一个类中包含一
 
 具有相同父类的类被认为是相同类型。例如，你为书中的每个程序创建的 `main` 类将使用 `DIYWindow` 作为其父类。因此，书中的每个程序都是某种 `DIYWindow`。要创建类，请在 Package Explorer 面板中右键点击。类名可以包含数字、字母、下划线 `$`。类名中不能使用空格和点。类名不能以数字开头。类名通常大写字母开头。如果类名包含多个单词，每个单词的首字母大写，其余字母小写。类可以有一个或多个构造函数。类的构造函数与类名相同，且必须声明为 public。构造函数将在以后解释。使用 `new` 后接构造函数名和括号来调用。例如，`main()` 方法中的 `new HelloWorld()` 调用了 `HelloWorld` 构造函数。代码块包含在大括号 `{}` 中，每行代码以分号结束；任何 Java 程序都会首先运行 `main()` 方法。书书中所有程序的 `main()` 方法都会调用类的构造函数。因此，`main()` 方法将首先运行，然后是类的构造函数。大括号中的每个语句按它们在代码中出现的顺序逐个执行。代码之间的空行对代码的运行没有影响。添加空行是为了使代码更容易读。`print()` 语句将括号内的文本打印到窗口。每个 `print()` 语句都会另行打印。要打印空行，请使用空括号的 `print()`。`print()` 方法是 `DIYWindow` 的一部分，它位于 `DIYjar` 中。因此，你向项目添加了外部 JAR 文件 `DIYjar`，并选择 `DIYWindow` 作为 `HelloWorld` 类的父类。注释是以 `//` 开头的行或以 `/*` 开头并以 `*/` 结束的一组行。
 
-# 第章：面向对象编程
+# 第 章：面向对象编程
 
 你之前学过 Java 是一种面向对象的编程语言。因此，它支持这种编程范式的基本原则。对象指的是真实的实体，如包、汽车、椅子或笔。面向对象的编程语言允许程序员设计使用对象和类的程序。它们提供并支持可以简化软件的功能。该范式中最重要的概念是：
 
 ### 对象
-类
-方法
-继承
-抽象
-多态
-封装
+
+### 类
+
+### 方法
+
+### 继承
+
+### 抽象
+
+### 多态
+
+### 封装
 
 在现实世界中，你会遇到如人、狗、汽车等对象。它们具有状态和行为。例如，当你想到猫时，它的状态可能包括颜色，行为可能包括跑步、跳跃。
 
 ### 类
-类是对象的蓝图或模板。类定义了该类型的对象将具有的状态和行为。例如， `Car` 类可能会定义状态如 `color` 和 `model`，以及行为 `drive()` 和 `brake()`。
+
+类是对象的蓝图或模板。类定义了该类型的对象将具有的状态和行为。例如，`Car` 类可能会定义状态如 `color` 和 `model`，以及行为 `drive()` 和 `brake()`。
 
 ### 方法
-方法是定义在类中的函数。它们定义了对象可以做的事情。例如， `Dog` 类可能有一个打印声音的方法 `bark()`。方法可以接受参数作为输入并返回值。
+
+方法是定义在类中的函数。它们定义了对象可以做的事情。例如，`Dog` 类可能有一个打印声音的方法 `bark()`。方法可以接受参数作为输入并返回值。
 
 ### 继承
+
 继承允许一个类（子类或子类）获取另一个类（父类或超类）的属性和方法。这促进了代码重用。例如，`SportsCar` 类可以继承自通用 `Vehicle` 类，获得它的状态和行为。
 
 ### 抽象
+
 抽象隐藏复杂的实现细节并显示对象必要特征的过程。它允许程序员关注对象能做什么，而不是它是如何实现的。
 
 ### 多态
+
 多态允许不同类的对象被视为公共父类的对象。例如，`Dog` 和 `Cat` 都可以是 `Animal` 的子类。当你对它们调用 `makeSound()` 方法时，每个都会以自己的方式做出反应。
 
 ### 封装
+
 封装是将数据（变量）和操作该数据的方法封装在单个单元（类）中的做法，并限制对对象某些组件的直接访问。这通常通过使用访问修饰符（如 `private` 和 `public`）来实现。
-
-
-
-
 
 带参数的构造函数带有参数的构造函数。它用于为特定对象提供值。
 
@@ -887,9 +884,10 @@ Java 程序由类组成。每个程序都需要在其其中一个类中包含一
 类为对象提供了模板。对象基本上是从类创建的。你将使用关键字 `new` 来创建新对象。
 
 要从类中创建一个新对象，请遵循以下步骤：
-- **声明 (Declaration)**：指的是变量声明，在其中你必须输入变量名及其对象类型。
-- **实例化 (Instance)**：要创建一个新对象，你将使用关键字 `new`。
-- **初始化 (Initialization)**：在关键字 `new` 之后调用构造函数并初始化新对象。
+
+* **声明 (Declaration)**：指的是变量声明，在其中你必须输入变量名及其对象类型。
+* **实例化 (Instance)**：要创建一个新对象，你将使用关键字 `new`。
+* **初始化 (Initialization)**：在关键字 `new` 之后调用构造函数并初始化新对象。
 
 以下示例展示了从类创建新对象所采取的不同步骤：
 
@@ -901,10 +899,12 @@ Java 程序由类组成。每个程序都需要在其其中一个类中包含一
 
 ## 如何访问实例方法和变量
 
+
+
 你创建的对象用于访问实例方法和变量。要访问实例变量，请遵循以下步骤：首先，你需要创建一个对象：
 
 ```
-ObjectName = New Constructor ();
+ObjectName = New Constructor();
 ```
 
 然后调用变量，例如：
@@ -916,13 +916,12 @@ ObjectName.VariableName;
 调用类方法：
 
 ```
-
-ObjectName.MethodName ();
+ObjectName.MethodName();
 ```
 
 ## Java 包
 
-包只是接口和类的一种分组方式。Java 包作为类的容器。分组的典型依据是功能性。使用包有助于代码重用。当接口和类被分类后，你可以轻松地访问它们 并在其他程序中使用。使用包有助于防止类和接口之间的命名冲突。
+包只是接口和类的一种分组方式。Java 包作为类的容器。分组的典型依据是功能性。使用包有助于代码重用。当接口和类被分类后，你可以轻松地访问它们并在其他程序中使用。使用包有助于防止类和接口之间的命名冲突。
 
 ![Image](img/image-15.jpeg)
 
@@ -930,7 +929,7 @@ ObjectName.MethodName ();
 
 要创建一个包，请在包名之前使用 `package` 语句作为第一条语句。这是一个示例：
 
-### 导入声明 (Import declaration)
+### 导入声明
 
 你可以使用 `import` 关键字将包导入到源文件中。`import` 语句帮助编译器找到类或源代码的位置。
 
@@ -942,13 +941,16 @@ ObjectName.MethodName ();
 
 修饰符是改变代码中定义含义的关键字。Java 提供了几种修饰符。
 
-### 访问修饰符 (Access modifiers)
+### 访问修饰符
 
 访问修饰符定义了方法、变量、类和构造函数的访问级别。
 
 - **Private (私有)**：仅类内部可用。当方法、变量、类或构造函数声明为 `private` 时，意味着它们只在类内部可用。然而，如果类有公共的 getter 方法，你可能在类外部访问私有变量。`private` 关键字表示最高限制。注意，你不能将接口和类声明为 `private`。
+
 - **Public (公共)**：对所有人可见。定义为 `public` 的方法、接口、类等可以从其他类访问。类似于在公共类中定义的方法或字段，你可以访问该 Java 类。前提是它们在同一个包中。如果你想从另一个包访问公共类，将需要导入该类。根据类继承的概念，子类继承所有的公共变量和方法。应用程序的 `main()` 方法必须声明为 `public`，Java 解释器才能调用它来运行该类。
+
 - **Protected (保护性)**：对所有子类和包可用。在父类中将方法、变量或构造函数声明为 `protected`，使其仅对同包中的类或另一个包中的子类可用。如果你允许子类使用辅助变量或方法并防止无关类使用它们，则使用这种访问方式。接口以及下面的字段不应声明为 `protected`，但接口外的字段和方法可以声明为 `protected`。类不应声明为 `protected`。
+
 - **Default (默认)**：当未给出修饰符时适用——对包可用。未声明修饰符的方法或变量对包内的其他类可用。
 
 下表总结了各种访问修饰符及其影响：
@@ -960,20 +962,24 @@ ObjectName.MethodName ();
 | Protected | Y | Y | Y | n |
 | Default | Y | Y | n | n |
 
-### 不可用的修饰符 (Modifiers not available)
+### 不可用的修饰符
 
 被拒绝的修饰符可以访问 Java 中的各种功能。
 
 ### Final - 用于确定变量、方法和活动的实现
 
 - **Final variables (final 变量)**：尾随变量只能显式初始化一次。一旦你将变量声明为 `final`，你将永远无法将其赋值给另一个对象。然而，请记住你仍然可以更改属性中存储的数据。这意味着虽然你可以更改对象的状态，但不能更改引用。`final` 修饰符通常与 `static` 结合使用，从常量创建一个类变量。
+
 - **Final methods (final 方法)**：`final` 关键字用于防止方法被子类修改。
+
 - **Final classes (final 类)**：`final` 修饰符用于防止其他类继承被声明为 `final` 的类的任何特性。
+
 - **Static (静态)**：用于创建方法或变量。你可以使用此关键字创建一个独立于类实例的唯一变量（静态变量或类变量）。静态方法仅在考虑从变量中获取数据时进行识别并执行操作。你可以通过在类名后输入变量或方法名和点 (`.`) 来访问类方法和变量。
 
 ### Abstract (抽象) - 用于创建抽象方法或类
 
 - **Abstract (抽象)**：当类被声明为 `abstract` 时，意味着你将无法实例化该类。类被声明为 `abstract` 的唯一理由是为了扩展它。你不能将类同时声明为 `final` 和 `abstract`，因为你不能扩展一个结束性的类。使用抽象方法的类必须声明为 `abstract` 类。这样做会导致编译错误。
+
 - **Abstract method (抽象方法)**：由于它在声明时没有实现，抽象方法从子类派生其方法的主体。抽象方法不能声明为严格或确定的。除非它本身也是抽象类，否则扩展抽象类的类必须采纳父类的抽象方法。包含一个或多个抽象方法的类必须声明为抽象类。另一方面，抽象类不需要抽象方法。
 
 示例：
@@ -996,11 +1002,9 @@ ObjectName.MethodName ();
 
 - **Transient (瞬态)**：`transient` 关键字用于告诉编译器在序列化包含标记变量的对象时跳过该实例变量。
 
+## 决策结构
 
-
-
-
-决策结构用于在条件为真时必须执行一组指令，而在条件被认为为假时必须执行另一组指令的情况。在 Java 中，有几种结构可以用于此类此类场景。这些结构包括：
+决策结构用于在条件为真时必须执行一组指令，而在条件被认为为假时必须执行另一组指令的情况。在 Java 中，有几种结构可以用于此类场景。这些结构包括：
 
 ### If 语句
 
@@ -1011,13 +1015,15 @@ if (condition) {
 //正体
 }
 ```
+
 下面是该结构的实现示例：
+
 ```java
 public class ifDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int i = 10;
         int j = 1;
-        if (i> j) {
+        if (i > j) {
             System.out.print(i);
         }
     }
@@ -1031,50 +1037,54 @@ public class ifDemo {
 ```
 if (condition) {
 //正体
-}else {
+} else {
 //正体
 }
 ```
+
 下面是该结构的实现示例：
+
 ```java
 public class ifElseDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int i = 1;
         int j = 0;
-        if (i> j) {
+        if (i > j) {
             System.out.print(i);
-        }else {
+        } else {
             System.out.print(j);
         }
     }
 }
 ```
 
-### 嵌套 if 语句
+### 嵌套 If 语句
 
 该语句用于必须测试条件的情况，如果满足了条件，则执行该语句之后的块，否则将测试下一个条件。如果发现此条件为真，则执行与该条件对应的 `if` 语句的语句块。如果两个条件都不满足，则执行 `else` 之后的代码块。使用嵌套 `if` 语句可以测试许多条件。该结构的语法如下：
 
 ```
 if (condition1) {
 //正体
-}else if (condition2) {
+} else if (condition2) {
 //正体
-}else {
+} else {
 //正体
 }
 ```
+
 下面是该结构的实现示例：
+
 ```java
 public class nestedIfDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int i = 0;
         int j = 0;
-        if (i> j) {
+        if (i > j) {
             System.out.print(i);
-        }else if (j> i) {
+        } else if (j > i) {
             System.out.print(j);
-        }else {
-            System.out.print ("Equal");
+        } else {
+            System.out.print("Equal");
         }
     }
 }
@@ -1100,10 +1110,12 @@ switch (variable) {
         break;
 }
 ```
+
 下面是该结构的实现示例：
+
 ```java
 public class switchDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int i = 5;
         switch (i) {
             case 0:
@@ -1125,9 +1137,9 @@ public class switchDemo {
 
 ### 三元运算符
 
-Java 还支持条件运算符，也称为 `?:` 运算符。该运算符用于替代 `if else` 结构。其语法如下：`expression1?expression2:expression3`，其中 `expression1` 是要测试的条件。如果条件为真，则执行 `expression2`，否则执行 `expression3`。
+Java 还支持条件运算符，也称为 `?:` 运算符。该运算符用于替代 `if else` 结构。其语法如下：`expression1 ? expression2 : expression3`，其中 `expression1` 是要测试的条件。如果条件为真，则执行 `expression2`，否则执行 `expression3`。
 
-### 循环
+## 循环
 
 有几种情况需要重复执行某组指令。例如，如果你想对一组数字进行排序，你必须多次扫描并重新排列该集合，以获得你想要的布局。这种执行流被称为循环。简单的循环是一种允许你多次执行某块代码的结构。Java 支持几种可以用于实现循环的结构。这些包括 `while` 循环、`for` 循环和 `do while` 循环。
 
@@ -1152,11 +1164,12 @@ Java 还支持条件运算符，也称为 `?:` 运算符。该运算符用于替
 为了帮助你理解循环是如何执行的，让我们使用三种循环类型来实现。
 
 #### For 循环实现
+
 ```java
 public class forDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int[] numArray = {100, 300, 500, 700, 900};
-        for (int i = 0; i < 5; i ++) {
+        for (int i = 0; i < 5; i++) {
             System.out.print(numArray[i]);
             System.out.print(",");
         }
@@ -1166,9 +1179,10 @@ public class forDemo {
 ```
 
 #### While 循环实现
+
 ```java
 public class whileDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int[] numArray = {100, 300, 500, 700, 900};
         int i = 0;
         while (i < 5) {
@@ -1181,10 +1195,11 @@ public class whileDemo {
 }
 ```
 
-#### Do while 循环实现
+#### Do While 循环实现
+
 ```java
 public class doWhileDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int[] numArray = {100, 300, 500, 700, 900};
         int i = 0;
         do {
@@ -1202,19 +1217,20 @@ public class doWhileDemo {
 Java 还支持用于数组元素的增强型循环。该循环的语法如下：
 
 ```
-for (declaration:expression) {
+for (declaration : expression) {
     //正体
 }
 ```
+
 增强型循环的 `declaration` 部分用于声明变量。该变量应该是 "for" 局部的，并且必须与数组元素的类型相同。变量的当前值始终等于循环正在遍历的数组元素。`expression` 是数组或对返回数组的方法调用。
 
 下面是增强型循环的实现示例：
 
 ```java
 public class arrayDemo {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         int[] numArray = {100, 300, 500, 700, 900};
-        for (int i: numArray) {
+        for (int i : numArray) {
             System.out.print(i);
             System.out.print(",");
         }
@@ -1223,74 +1239,79 @@ public class arrayDemo {
 }
 ```
 
-### 异常层次结构
+## 异常层次结构
 
 Java 有一个内置类名为 `java.lang.Exception`，所有异常都属于该类。所有的异常类都是该类的子类。
 
-此外，`Throwable` 类是 `Exception` 类的类。
-
-
-
+此外，`Throwable` 类是 `Exception` 类的父类。
 
 `Exception` 类有两个子类，分别是 `RuntimeException` 类和 `IOException` 类。以下是 Java 中作为 `Throwable` 类一部分已定义的方法列表。
 
 ```java
-public String getMessage ()
+public String getMessage()
 ```
+
 调用此方法时，该消息将返回对所遇异常的详细描述。
 
 ```java
-public throws getCause ()
+public Throwable getCause()
 ```
+
 此方法在被调用时，会返回一个包含异常原因的消息。
 
 ```java
-public String toString ()
+public String toString()
 ```
+
 此方法返回结合了类名的对异常的详细描述。
 
 ```java
-public void printStackTrace ()
+public void printStackTrace()
 ```
+
 通过调用此方法，可以将 `toString()` 方法的结果以及堆栈跟踪（stack trace）打印到标准 `System.err` 错误流。
 
 ```java
-public TraceElement [] getStackTrace ()
+public StackTraceElement[] getStackTrace()
 ```
+
 在某些场景下，你可能需要访问堆栈跟踪的不同元素。此方法返回一个数组，堆栈跟踪中的每个元素都被写入数组的不同元素中。数组的第一个元素包含堆栈跟踪的顶部元素，而堆栈跟踪的底部被写入数组的最后一个元素。
 
 ```java
-public Throwable fillInStackTrace ()
+public Throwable fillInStackTrace()
 ```
+
 将堆栈跟踪中的先前信息附加到当前堆栈跟踪的内容上，并返回与数组相同。
 
-### 捕获异常
+## 捕获异常
 
-捕获异常的标准方法是使用“try and catch”关键字以及它们的代码实现。这个 try and catch 块必须以这种方式实现：包含要抛出异常的代码。在这里也应该提到，旨在引发异常的代码被称为受保护代码（protected code）。实现 try and catch 块的语法如下：
+
+
+捕获异常的标准方法是使用 `try` 和 `catch` 关键字以及它们的代码实现。这个 `try-catch` 块必须以这种方式实现：包含要抛出异常的代码。在这里也应该提到，旨在引发异常的代码被称为受保护代码。实现 `try-catch` 块的语法如下：
 
 ```java
 try {
     /* 受保护代码 */
-} catch (exception name ex1) {
+} catch (ExceptionName ex1) {
     /* 捕获代码 */
 }
 ```
 
-抛出异常的代码放置在 try 块中。如果抛出异常，则在 catch 块中实现处理异常的适当操作。每个 try 块必须包含一个 catch 块或结束块（end block），这是至关重要的。
+抛出异常的代码放置在 `try` 块中。如果抛出异常，则在 `catch` 块中实现处理异常的适当操作。每个 `try` 块必须包含一个 `catch` 块或结束块，这是至关重要的。
 
-在 catch 语句中，你必须声明要抛出的异常。如果发生异常，执行流将转移到 catch 块。如果抛出的异常与 catch 块中定义的异常匹配，则执行 catch 块。
+在 `catch` 语句中，你必须声明要抛出的异常。如果发生异常，执行流将转移到 `catch` 块。如果抛出的异常与 `catch` 块中定义的异常匹配，则执行 `catch` 块。
 
-下面给出了 try and catch 块的示例实现。该代码实现了一个具有 2 个元素的数组。然而，代码尝试访问并不存在的第三个元素。结果是抛出了异常。
+下面给出了 `try-catch` 块的示例实现。该代码实现了一个具有 2 个元素的数组。然而，代码尝试访问并不存在的第三个元素。结果是抛出了异常。
 
 ```java
 import java.io.*;
 
 public class DemoException {
-    public static void main (String args []) {
+    public static void main(String args[]) {
         try {
-            int arr = new int [2];
+            int[] arr = new int[2];
             System.out.println("Access to third array element:" + arr[3]);
-        } catch (ArrayIndexException ex) {
+        } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("Catching exception:" + ex);
         }
         System.out.println("reached outside of block");
@@ -1298,7 +1319,7 @@ public class DemoException {
 }
 ```
 
-实现多个 catch 块可以处理许多异常。为了满足这一要求，允许使用多个 catch 块。此类实现的语法如下：
+实现多个 `catch` 块可以处理许多异常。为了满足这一要求，允许使用多个 `catch` 块。此类实现的语法如下：
 
 ```java
 try {
@@ -1312,109 +1333,117 @@ try {
 }
 ```
 
-上面的语法说明了多个 catch 块的实现。然而，你可以实现任意数量的 catch 块。当这段代码执行时，首先执行受保护代码。如果发生异常，将尝试匹配第一个 catch 块以外的异常类型。但是，如果异常类型不匹配，则忽略 catch1 并尝试匹配第二个 catch 块的异常类型。哪个 catch 块与抛出的异常类型相同，就执行适当的 catch 块。
+上面的语法说明了多个 `catch` 块的实现。然而，你可以实现任意数量的 `catch` 块。当这段代码执行时，首先执行受保护代码。如果发生异常，将尝试匹配第一个 `catch` 块以外的异常类型。但是，如果异常类型不匹配，则忽略 `catch1` 并尝试匹配第二个 `catch` 块的异常类型。哪个 `catch` 块与抛出的异常类型相同，就执行适当的 `catch` 块。
 
 ![Image](img/image-22.jpeg)
 
 # 第 9 章：ADT、数据结构和 Java 集合
 
-### 抽象数据类型 (ADT)
+## 抽象数据类型 (ADT)
 
 抽象数据类型（ADT）是对数据及其允许在其上进行的操作的逻辑描述。ADT 定义为用户视角下的数据。ADT 处理可能的值以及接口，而不关心数据结构的实际实现。例如，你想存储一些整数并找到它们的平均值。该数据结构的 ADT 支持两个函数：一个用于添加整数，另一个用于获取平均值。该数据结构的 ADT 并没有具体说明它将如何被实现。
 
-### 数据结构
+## 数据结构
 
 数据结构是数据的具体表示，被定义为数据程序员的视角。数据结构代表数据在内存中的存储方式。所有数据结构都有其优缺点。根据问题的类型，我们选择最适合它的数据结构。
 
 ![Image](img/image-23.jpeg)
 
-例如，我们可以数据存储在数组、链表、栈、队列、树等。
+例如，我们可以将数据存储在数组、链表、栈、队列、树等。
 
 **注意**：在本章中，我们将学习不同的数据结构及其 API，以便用户可以在不知道其内部实现的情况下使用它们。
 
-### Java 集合框架
+## Java 集合框架
 
 Java 语言提供了 Java 集合框架，这是一组高质量、高效且可重用的数据结构和算法。使用 Java 集合框架的优点如下：
+
 1. 开发者不需要重复实现基础数据结构和算法。这节省了精力。
 2. Java 集合框架经过良好测试，高质量，高性能。使用它们可以提高程序的质量。
 3. 由于 Collections 实现了底层数据结构和算法，开发成本降低了。
 4. 易于查看和理解使用集合框架的其他开发者编写的代码。集合框架文档齐全。
 
-数组
+## 数组
 
 数组表示相同类型元素的集合。
 
-#### ADT 操作
+### ADT 操作
 
 以下是数组 API：
+
 1. 在 `k` 位置添加元素。可以在常数时间 `O(1)` 将值存储在数组的 `k` 位置。我们只需要 `arr[k]`。
 2. 读取存储在 `k` 位置的值。访问数组中某个索引的值也是常数时间 `O(1)`。只需读取 `arr[k]` 中的值。
 3. 将写入 `k` 位置的值替换为新值。时间复杂度：常数时间 `O(1)`。
 
 示例：
+
 ```java
 public class ArrayDemo {
-    public static void main (String args []) {
-        int [] arr = new int [10];
-        for (int i = 0; i <10; i++) {
+    public static void main(String args[]) {
+        int[] arr = new int[10];
+        for (int i = 0; i < 10; i++) {
             arr[i] = i;
         }
     }
 }
 ```
-标准的 Java 表有固定长度。有时我们不知道需要多少内存，因此我们创建一个更大的数组。因此，浪费了空间。如果数组已满且我们想向其添加更多值，我们需要创建一个足够空间的新数组，并将旧数组复制到新数组中。为了避免这种手动重新分配和复制，我们可以使用 Java 集合框架中的 `ArrayList` 或链表进行存储。
 
-### ArrayList 在 Java 集合中的实现
+标准的 Java 数组有固定长度。有时我们不知道需要多少内存，因此我们创建一个更大的数组。因此，浪费了空间。如果数组已满且我们想向其添加更多值，我们需要创建一个足够空间的新数组，并将旧数组复制到新数组中。为了避免这种手动重新分配和复制，我们可以使用 Java 集合框架中的 `ArrayList` 或链表进行存储。
+
+## ArrayList 在 Java 集合中的实现
 
 Java 集合中的 `ArrayList<E>` 是实现 `List<E>` 接口的数据结构，这意味着它可以包含重复元素。`ArrayList` 实现为动态数组，可以根据需要增长或缩小。（当内部数组满时，会使用较大的数组并将旧数组值复制进去。）
 
 示例：
+
 ```java
 import java.util.ArrayList;
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(1); // add 1 to the end of the list
+        al.add(2); // add 2 to the end of the list
+        System.out.println("Array content:" + al);
+        System.out.println("Array Size:" + al.size());
+        System.out.println("Array IsEmpty:" + al.isEmpty());
+        al.remove(al.size() - 1); // the last element of the array is removed.
+        al.removeAll(al); // all array elements are removed.
+        System.out.println("Array IsEmpty:" + al.isEmpty());
+    }
+}
 ```
 
+输出：
 
-
-
-```java
-ArrayList<Integer> al = new ArrayList<Integer>();
-al.add(1); // add 1 to the end of the list
-al.add(2); // add 2 to the end of the list
-System.out.println("Array content:" + al);
-System.out.println("Array Size:" + al.size());
-System.out.println("Array IsEmpty:" + al.isEmpty());
-al.remove(al.size() -1); // the last element of the array is removed.
-al.removeAll(al); // all array elements are removed.
-System.out.println("Array IsEmpty:" + al.isEmpty());
 ```
-
-Exit:
 Array content: [1, 2]
-Board size: 2
+Array Size: 2
+Array IsEmpty: false
+Array IsEmpty: true
+```
+
 ![Image](img/image-24.jpeg)
-The array is empty: false
-The array is empty: true
 
-## 组合列表
+## 链表
 
-列表通过动态数据结构连接，内存会在运行时进行分配。链表的概念不是关于连续存储数据。链表的节点包含一个指向列表中下一个项的链接。
+链表通过动态数据结构连接，内存会在运行时进行分配。链表的概念不是关于连续存储数据。链表的节点包含一个指向列表中下一个项的链接。
 
 在性能方面，链表比数组慢，因为链表项无法直接访问。当你提前不知道需要保留的项数时，链表是一种非常有用的数据结构。
 
 链表有许多类型：线性、递归、双向、双向循环等。
 
-### 组合列表 ADT 操作
+### 链表 ADT 操作
 
 以下是链表 API。
 
-- `Insert(k)`：将 k 添加到列表开头。在列表开头插入一个项。只需创建一个新项并移动指针。使此新项成为列表的第一个项。此操作将耗费 O (1) 的固定时间。
-- `Delete()`：删除列表顶部的项。删除列表开头的项。你只需要移动一个指针。此操作也需要常数 O (1) 时间。
-- `PrintList()`：显示所有列表项。从第一个项开始，然后按照方向后续。此操作耗时 O (N) 时间。
-- `Find(k)`：查找值为 k 的元素的位置。从第一个项开始并顺着指针移动，直到找到你想要的值或到达列表末尾。此操作耗时 O (N) 时间。注意：链表上不支持二分查找。
-- `FindKth(k)`：查找位置为 k 的元素。从第一个元素开始，顺着链接移动直到你到达第 k 个元素。此操作耗时 O (N) 时间。
-- `IsEmpty()`：检查列表中的项数是否为零。只需检查列表根指针，如果为 null 则列表为空，否则不为空。此操作耗时 O (1) 时间。
+- `Insert(k)`：将 `k` 添加到列表开头。在列表开头插入一个项。只需创建一个新项并移动指针。使此新项成为列表的第一个项。此操作将耗费 `O(1)` 的固定时间。
+- `Delete()`：删除列表顶部的项。删除列表开头的项。你只需要移动一个指针。此操作也需要常数 `O(1)` 时间。
+- `PrintList()`：显示所有列表项。从第一个项开始，然后按照方向后续。此操作耗时 `O(N)` 时间。
+- `Find(k)`：查找值为 `k` 的元素的位置。从第一个项开始并顺着指针移动，直到找到你想要的值或到达列表末尾。此操作耗时 `O(N)` 时间。注意：链表上不支持二分查找。
+- `FindKth(k)`：查找位置为 `k` 的元素。从第一个元素开始，顺着链接移动直到你到达第 `k` 个元素。此操作耗时 `O(N)` 时间。
+- `IsEmpty()`：检查列表中的项数是否为零。只需检查列表根指针，如果为 `null` 则列表为空，否则不为空。此操作耗时 `O(1)` 时间。
 
-### JAVA collections 中 LinkedList 的实现
+### Java Collections 中 LinkedList 的实现
 
 Java Collections 中的 `LinkedList<E>` 是一种也实现了 `List<E>` 接口的数据结构。
 
@@ -1426,39 +1455,44 @@ import java.util.LinkedList;
 public class LinkedListDemo {
     public static void main(String[] args) {
         LinkedList<Integer> ll = new LinkedList<Integer>();
-        ll.addFirst(2); // 8 added to the list
-        ll.addLast(10); // 9 added to the end of the list.
-        ll.addFirst(1); // 7 added to the first list.
-        ll.addLast(11); // 20 added to the end of the list
+        ll.addFirst(2); // 2 added to the list
+        ll.addLast(10); // 10 added to the end of the list.
+        ll.addFirst(1); // 1 added to the first list.
+        ll.addLast(11); // 11 added to the end of the list
         System.out.println("LinkedList Contents:" + ll);
         ll.removeFirst();
         ll.removeLast();
+        System.out.println("LinkedList Contents:" + ll);
     }
 }
 ```
 
-Exit:
-LinkedList content: [1, 2, 10, 11]
+输出：
+
+```
+LinkedList Contents: [1, 2, 10, 11]
 LinkedList Contents: [2, 10]
+```
+
 ![Image](img/image-25.jpeg)
 
-## 栈 (Stack)
+## 栈
 
-栈是一种符合 LIFO（后进先出）策略的特殊数据结构。这意味着最后添加的将被将被删除。栈的不同用途包括：
+栈是一种符合 LIFO（后进先出）策略的特殊数据结构。这意味着最后添加的将被最先删除。栈的不同用途包括：
 
 1. 递归：递归调用是使用栈实现的。
 2. 表达式的后序求值。
-3. 回溯意味着。
+3. 回溯。
 4. 树和图的深度搜索。
 5. 十进制数转换为二进制等。
 
 ### 栈的 ADT 操作
 
-- `Push(k)`：将值 k 压到栈顶。
+- `Push(k)`：将值 `k` 压到栈顶。
 - `Pop()`：从栈顶移除项并返回其值。
 - `Top()`：返回栈顶元素的值。
 - `Size()`：返回栈中项的数量。
-- `IsEmpty()`：检查栈是否为空。如果栈为空则返回 true，否则返回 false。注意：所有栈操作均在 O (1) 时间内完成。
+- `IsEmpty()`：检查栈是否为空。如果栈为空则返回 `true`，否则返回 `false`。注意：所有栈操作均在 `O(1)` 时间内完成。
 
 ### Java Collection 中的栈实现
 
@@ -1467,6 +1501,8 @@ LinkedList Contents: [2, 10]
 示例：
 
 ```java
+import java.util.Stack;
+
 public class StackDemo {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<Integer>();
@@ -1482,19 +1518,21 @@ public class StackDemo {
 }
 ```
 
-Exit:
-![Image](img/image-26.jpeg)
+输出：
+
+```
 Stack: [1, 2, 3]
 Stack size: 3
 Stack Pop: 3
 Top of stack: 2
 The stack is empty: false
+```
 
-通过 `push` 和 `pop` 方法的 `Stack<T>` 类来实现。
+![Image](img/image-26.jpeg)
 
 ## 队列
 
-队列是 FIFO（先进先出）结构。先进入队列的项将被删除。队列有以下应用：
+队列是 FIFO（先进先出）结构。先进入队列的项将被最先删除。队列有以下应用：
 
 1. 共享资源（例如打印机）
 2. 多程序设计
@@ -1503,15 +1541,17 @@ The stack is empty: false
 
 ### 队列的操作
 
-- `add(k)`：将 k 添加到队列末尾。
+- `add(k)`：将 `k` 添加到队列末尾。
 - `remove()`：从队列头部移除项并返回其值。
 - `peek()`：返回队列头部元素的值。
 - `size()`：返回队列内部项的数量。
-- `isEmpty()`：队列是否为空。如果为空返回 true，否则 false。注意：所有队列操作均在 O (1) 时间内完成。
+- `isEmpty()`：队列是否为空。如果为空返回 `true`，否则 `false`。注意：所有队列操作均在 `O(1)` 时间内完成。
 
 ### Collection 中的队列实现
 
-`ArrayDeque<T>` 是双端队列的实现。如果我们使用 `add()`、`remove()` 和 `peek()` 它将表现像队列。（同样，如果我们使用 `push()`、`pop()` 和 `peek()`，它表现像栈。）示例：
+`ArrayDeque<T>` 是双端队列的实现。如果我们使用 `add()`、`remove()` 和 `peek()` 它将表现像队列。（同样，如果我们使用 `push()`、`pop()` 和 `peek()`，它表现像栈。）
+
+示例：
 
 ```java
 import java.util.ArrayDeque;
@@ -1531,48 +1571,47 @@ public class QueueDemo {
 }
 ```
 
-Exit:
+输出：
+
+```
 Queue: [1, 2, 3]
 Queue size: 3
 Queue peek: 1
 Removing queue: 1
-The queue is empty: false
+Queue is empty: false
+```
 
 # 第 10 章：文件处理
 
-本章涵盖了读取、写入、创建和打开文件的详细信息。你可以从多种文件 I /O 类和方法中选择。
+本章涵盖了读取、写入、创建和打开文件的详细信息。你可以从多种文件 I/O 类和方法中选择。
 
-### 读取文本文件
+## 读取文本文件
 
 这种技术从字符输入流读取文本。缓存字符、数组和行以便高效读取。你可以指定缓冲区类型或使用标准类型。
 
-
-
-
-因此，建议对任何它可以读取的读取器包装一个 `BufferedReader`（像 `FileReader` 和 `InputStream` 这样的事务开销可能很大）。
+因此，建议对任何它可以读取的读取器包装一个 `BufferedReader`（像 `FileReader` 和 `InputStreamReader` 这样的事务开销可能很大）。
 
 例如：
 
-```
-BufferedReader in = new BufferedReader (Reader w, int size)
+```java
+BufferedReader in = new BufferedReader(Reader in, int size)
 ```
 
 `FileReader`：用于读取字符文档的便利类。该类的构造函数假设默认字符格式和默认字节缓冲区大小是合适的。
 
-`Scanner`：
-一个简单的文本扫描器，使用正则表达式解析基本类型和字符串。扫描器使用分隔符模型将输入拆分为在定义上匹配空白符的标记（tokens）。通过后续的单独技术，可以将生成的标记转换为不同类型的值。
+`Scanner`：一个简单的文本扫描器，使用正则表达式解析基本类型和字符串。扫描器使用分隔符模型将输入拆分为在定义上匹配空白符的标记。通过后续的单独技术，可以将生成的标记转换为不同类型的值。
 
 ```java
 import java.io.*;
 import java.util.Scanner;
 
 public class ReadFromFileUsingScanner {
-    public static void main (String [] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         // 文件路径现在设置为参数，以便进行扫描
-        File example = new File ("C:\\Users\\username\\Desktop\\example.txt");
-        Scanner example1 = new Scanner(file);
-        while (example1.hasNextLine()) {
-            System.out.println (example1.nextLine());
+        File file = new File("C:\\Users\\username\\Desktop\\example.txt");
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
+            System.out.println(scanner.nextLine());
         }
     }
 }
@@ -1580,18 +1619,20 @@ public class ReadFromFileUsingScanner {
 
 使用 `Scanner` 类但不使用循环：
 
+
+
 ```java
 import java.io.*;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class example {
-    public static void main (String [] args) throws FileNotFoundException {
-        File example = new File ("C:\\Users\\username\\Desktop\\example.txt");
+    public static void main(String[] args) throws FileNotFoundException {
+        File example = new File("C:\\Users\\username\\Desktop\\example.txt");
         Scanner example1 = new Scanner(file);
         // 我们使用 [\\Z] 作为分隔符
-        sc.useDelimiter("\\ Z");
-        System.out.println (example1.next());
+        sc.useDelimiter("\\Z");
+        System.out.println(example1.next());
     }
 }
 ```
@@ -1603,14 +1644,14 @@ package io;
 import java.nio.*; ;;
 
 public class example {
-    public static String example (string fileName) throws Exception {
+    public static String example(String fileName) throws Exception {
         String example1 = "";
-        example1 = new String (Files.readAllBytes(Paths.get (fileName)));
+        example1 = new String(Files.readAllBytes(Paths.get(fileName)));
         return example1;
     }
-    public static void main (String [] args) throws Exception {
-        String example1 = example ("C:\\Users\\username\\Desktop\\example.java");
-        System.out.println (example1);
+    public static void main(String[] args) throws Exception {
+        String example1 = example("C:\\Users\\username\\Desktop\\example.java");
+        System.out.println(example1);
     }
 }
 ```
@@ -1618,25 +1659,28 @@ public class example {
 ### 保存到文本文件
 
 你可以使用其中一个写入方法将字节或行写入文件。记录方法包括：
-- `Write (Path, byte [], OpenOption ...)`
-- `Write (path, Iterable <CharacterSequence>, Character set, OpenOption ...)`
+
+- `Write(Path, byte[], OpenOption...)`
+- `Write(path, Iterable<CharacterSequence>, Character set, OpenOption...)`
 
 ### 移除删除文件
 
-在 Java 中，`File` 类中有一个名为 `delete(file)`的方法可以用来删除文件。用 java 保存的文件将被永久删除，而不会移动到回收箱。使用 `java.io.File.delete` 会移除此抽象路径。`java.nio.file.deleteIfExists` 如果文件存在则会删除它。如果文件未打开，它也会删除列出的文件。
+在 Java 中，`File` 类中有一个名为 `delete(file)` 的方法可以用来删除文件。用 java 保存的文件将被永久删除，而不会移动到回收站。使用 `java.io.File.delete` 会移除此抽象路径。`java.nio.file.deleteIfExists` 如果文件存在则会删除它。如果文件未打开，它也会删除列出的文件。
 
 在任何软件项目中，错误都是客观事实。细致的规划、编程和测试有助于减少错误的普遍性，但随着新功能的引入和代码复杂性的增加，它们会变得尤为明显。幸运的是，错误比其他问题更容易发现。例如，编译时错误很快就能被识别；可以使用编译器代码来识别问题所在并立即修复。然而，运行时错误可能要困难得多；它们并不总是立即出现，一旦出现，可能在远离问题真实原因的地方。泛型通过在编译时工作以识别更多 bug 来帮助稳定软件。简而言之，泛型允许在定义类、接口和技术时为类型（类和对象）提供参数。就像方法声明中更熟悉的形式参数一样，类型参数为复用相同代码提供了独立的输出。区别在于，值是形式参数的输入，而类型是对类型参数的响应。使用泛型的代码比代码具有许多优势。通过使用泛型，开发者可以实现可以在不同类型集合上运行通用算法，算法是可以自定义的，并且安全且易于阅读。
 
-泛型类型
+## 泛型类型
 
-泛型是一个带有参数化类型的类别或通用接口。可以通过修改简单的箱类来展示这一思想。考虑一个适用于任何对象的非泛型箱类别。你只需要提供两个技术：set（向箱中添加项目并接收它）、retrieving（获取）。由于它们的方法接受或返回对象，你可以传递任何内容，只要它不是基本类型即可。
+泛型是一个带有参数化类型的类别或通用接口。可以通过修改简单的箱类来展示这一思想。考虑一个适用于任何对象的非泛型箱类别。你只需要提供两个技术：`set`（向箱中添加项目并接收它）、`retrieving`（获取）。由于它们的方法接受或返回对象，你可以传递任何内容，只要它不是基本类型即可。
 
-在编译时无法检查该类是如何被使用的。一个软件可能会将一个整数放入箱中并期望从其推导出参数，而另一部分软件可能会在某行出错，导致运行时错误。通过括号（`<>`）添加的类型参数部分显示了类别的类型。指示参数（也称为因子）`T1`, `T2` 到 `T`。你通过将文件“字段”更改为“field <T>”生成泛型类型，以更新箱类别使用泛型。这代表一个类型为 `T` 的变量，可以在类内部任何地方使用。这会将所有对象转换为 `T`。任何指定的非基本类型都可以是类型变量：任何类、任何接口、任何数组以及任何其他变量。可以将相同的方法应用于泛型接口。按照惯例，类型标识符为单个字母。这与你已经理解的变量命名规范形成鲜明对比，而且很有道理：如果没有该惯例，很难区分变量与类或对象的普通名称。最常用的参数名是：
+在编译时无法检查该类是如何被使用的。一个软件可能会将一个整数放入箱中并期望从其推导出参数，而另一部分软件可能会在某行出错，导致运行时错误。通过括号（`<>`）添加的类型参数部分显示了类别的类型。指示参数（也称为因子）`T1`, `T2` 到 `T`。你通过将文件“字段”更改为“field `<T>`”生成泛型类型，以更新箱类别使用泛型。这代表一个类型为 `T` 的变量，可以在类内部任何地方使用。这会将所有对象转换为 `T`。任何指定的非基本类型都可以是类型变量：任何类、任何接口、任何数组以及任何其他变量。可以将相同的方法应用于泛型接口。按照惯例，类型标识符为单个字母。这与你已经理解的变量命名规范形成鲜明对比，而且很有道理：如果没有该惯例，很难区分变量与类或对象的普通名称。最常用的参数名是：
+
 - `E`: Element（Java 集合框架广泛使用）
 - `K`: key
 - `N`: number
 - `T`: Type
 - `S, U, V, 等`: 第二、第三、第四种类型
+
 你会在 JDK 和 API 中看到这些名称。
 
 ### 调用和创建泛型类型的实例
@@ -1644,7 +1688,7 @@ public class example {
 要在你的系统中引用字段的通用类别，你应该进行泛型调用，以产生一个具有特定值的 `T`，例如 Integer：
 
 ```
-Box <Integer> integerBox;
+Box<Integer> integerBox;
 ```
 
 你可能会认为泛型调用可以与普通的过程调用相比，但并不是向过程添加断言，而是将参数（在本例中为 Integer）移动字段本身。
@@ -1654,19 +1698,16 @@ Box <Integer> integerBox;
 要实例化此类，像往常一样使用 `new` 关键字，但在类名和括号之间包含 `<Integer>`：
 
 ```
-Box <Integer> integerBox = new Box<Integer>();
+Box<Integer> integerBox = new Box<Integer>();
 ```
-
-
-
 
 泛型技术是实现自身类型参数的技术。这与泛型类型声明相似，但类型参数的作用范围仅限于声明它的方法。除了泛型类构造函数外，还允许静态和非静态的泛型技术。
 
 泛型技术的语法包括一个位于尖括号中的类型参数列表，它们出现在过程返回类型之前。对于静态泛型技术，类型参数段必须在方法返回类型之前。`Util` 类包含了 `Compare`，这是一种用于比较两个 `Pair` 元素的通用泛型技术。
 
 ```
-Pair <Integer, String> ex1 = new Pair <> (49, "string1"); ownPair <Integer, String> ex2 = new Pair <> (64, "string2");
-logical comparison = Util.<Integer, String> compare (ex1, ex2);
+Pair<Integer, String> ex1 = new Pair<>(49, "string1"); ownPair<Integer, String> ex2 = new Pair<>(64, "string2");
+logical comparison = Util.<Integer, String>compare(ex1, ex2);
 ```
 
 ### 受限的类型参数
@@ -1681,12 +1722,13 @@ logical comparison = Util.<Integer, String> compare (ex1, ex2);
 class X { ... }
 interface Y { ... }
 interface Z { ... }
-class R <T extends X & Y & Z> { ... }
+class R<T extends X & Y & Z> { ... }
 ```
 
 如果没有先指定绑定 `X`，你将得到编译错误：
+
 ```
-class R <T extends Y & X & Z> { ... } // 编译错误
+class R<T extends Y & X & Z> { ... } // 编译错误
 ```
 
 # 第 11 章：集合
@@ -1718,9 +1760,6 @@ Java 的函数式努力如果不对其 `Collections` 库进行重构（即 `Coll
 #### Map 接口
 
 使用列表作为 map 的值时，最大的问题之一是在添加、更新或删除项之前，总是需要检查 map 是否存在。首先，你需要提取列表，如果没有找到，则创建它。例如，假设我们有一个更新作为 map 实现的数据库的方法。map 的键是电影年份，其值是该年份电影的列表。Java 8 之前的代码看起来像这样：Java 8 通过这些默认方法提供了更好的替代方案：
-
-
-
 
 在这种情况下，使用 `computeIfAbsent()` 方法就大材小用了，使用 `putIfAbsent()` 方法会更好：
 
@@ -1777,9 +1816,9 @@ JVM 代表 Java Virtual Machine（Java 虚拟机）。JVM 是一个抽象机器�
 - 规范：运行时环境的实例。
 - 实例：当命令行显示时创建的虚拟机实例，用于编写 Java 命令和运行类。
 
+
+
 这三者是密不可分的，并且都依赖于对方来发挥作用。在此，感谢你选择我的 Java 编程指南。正如你所见，它是一种简单而复杂的语言，有许多不同的方面需要学习。现在，你应该对 Java 编程的基本概念和如何使用它有了良好的理解。下一步就是练习。继续练习。我敦促你花时间学习这份指南；遵循教程，在完全理解其含义之前不要离开任何章节。为了帮助你，可以在网上找到一些非常有用的 Java 论坛，那里充满了准备好并乐意帮助和指点方向的人。还有许多在线课程，有免费的也有付费的，但它们都是有用的并可以帮助你的学习达到下一个水平。你喜欢这个指南吗？希望这正是你所需要的，甚至更多，能带你走通通梦想工作的正确道路！
-
-
 
 希望你觉得我对计算机编程的介绍对你有所帮助。这是一个非常简单的开始，但应该让你对如何入门有一个初步的了解。
 

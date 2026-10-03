@@ -1,3 +1,4 @@
+
 # 如何在 Apache Camel 中创建可重用的路线？
 
 > 原文：<https://medium.com/javarevisited/how-to-create-re-usable-routes-in-apache-camel-c4e57956e6e3?source=collection_archive---------2----------------------->
@@ -41,11 +42,11 @@ Apache Camel 支持 Bean 绑定以及与 CDI、 [Spring](https://camel.apache.or
 
 在直接进入实现之前，不要忘记看看如何使用 Apache Camel 编写第一条路线？从下面的链接
 
-<https://rohankadam965.medium.com/apache-camel-how-to-write-first-route-7f7767c86c2a>  
+<https://rohankadam965.medium.com/apache-camel-how-to-write-first-route-7f7767c86c2a>
 
 ## 步骤 1:如何使用 Spring Initializr 创建项目？
 
-<https://start.spring.io/>  
+<https://start.spring.io/>
 
 ## 步骤 2:项目中包括哪些依赖项？
 
@@ -64,7 +65,7 @@ Apache Camel 支持 Bean 绑定以及与 CDI、 [Spring](https://camel.apache.or
 让我们首先确定想要重用的路由逻辑。在我们的例子中，我们将创建一个路由名**消息路由**
 
 ```
- import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -81,7 +82,7 @@ public class MessageRoute extends RouteBuilder {
 让我们为使用的或共享的路由创建一个顶级路由
 
 ```
- import org.apache.camel.Exchange;
+import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
@@ -112,28 +113,41 @@ public class ReusableRoute extends RouteBuilder {
 为了测试我们的骆驼路线，将使用控制器端点
 
 ```
-package com.example.apachecameltest;import org.apache.camel.CamelContext;
+package com.example.apachecameltest;
+
+import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.ExchangeBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;@RestController
-public class Controler {@Autowired
-    private ProducerTemplate producerTemplate;@Autowired
-    private CamelContext camelContext;@GetMapping
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controler {
+
+    @Autowired
+    private ProducerTemplate producerTemplate;
+
+    @Autowired
+    private CamelContext camelContext;
+
+    @GetMapping
     public void function() {
         final Exchange
                 requestExchange = ExchangeBuilder
-                .*anExchange*(camelContext)
-                .build();producerTemplate
-         .send("direct:ReusableRoute",requestExchange);}
+                .anExchange(camelContext)
+                .build();
+
+        producerTemplate
+         .send("direct:ReusableRoute",requestExchange);
+    }
 }
 ```
 
-嘿，🖐，想了解更多关于 ProducerTemplate & Camel 的内容，请点击下面的链接
+嘿，🖐，想了解更多关于 `ProducerTemplate` & Camel 的内容，请点击下面的链接
 
-  <https://camel.apache.org/manual/camelcontext.html>  
+<https://camel.apache.org/manual/camelcontext.html>
 
 ## 第五步:骆驼路线输出？
 
@@ -147,6 +161,12 @@ direct:StartMessage  : Received Message from   Reusable Route
 
 ## **⚡Bibliography**
 
-**<https://camel.apache.org/>  </javarevisited/how-to-implement-exception-handling-using-apache-camel-26faad831e8f>  </javarevisited/how-to-consume-public-api-using-apache-camel-70f7382959ab>  ![](img/8952bc045d848312bfba126ae001248a.png)
+**<https://camel.apache.org/>**
 
-谢谢观众们— [罗汉·拉温德拉·卡达姆](https://medium.com/u/a1b33b7cda75?source=post_page-----c4e57956e6e3--------------------------------)**
+</javarevisited/how-to-implement-exception-handling-using-apache-camel-26faad831e8f>
+
+</javarevisited/how-to-consume-public-api-using-apache-camel-70f7382959ab>
+
+![](img/8952bc045d848312bfba126ae001248a.png)
+
+谢谢观众们— [罗汉·拉温德拉·卡达姆](https://medium.com/u/a1b33b7cda75?source=post_page-----c4e57956e6e3--------------------------------)

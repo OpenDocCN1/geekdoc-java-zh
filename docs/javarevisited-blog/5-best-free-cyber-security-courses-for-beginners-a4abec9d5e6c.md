@@ -1,3 +1,4 @@
+
 # 2023 年初学者学习的 5 门最佳免费网络安全课程
 
 > 原文：<https://medium.com/javarevisited/5-best-free-cyber-security-courses-for-beginners-a4abec9d5e6c?source=collection_archive---------0----------------------->
@@ -10,7 +11,7 @@ image_credit — udemy
 
 大家好，如果你想成为一名网络安全工程师，或者只是想学习网络安全并开始你的安全专家生涯，或者只是想提高你关于网络安全、信息安全、网络安全和计算机安全的知识，那么你来对地方了。
 
-之前，我已经分享了 [**最佳网络安全课程**](/javarevisited/7-best-cyber-security-courses-for-programmers-and-developers-50afafae050b) 和[**最佳网络安全课程**](https://javarevisited.blogspot.com/2021/10/top-5-courses-to-learn-web-security-in.html) ，在这篇文章中，我将分享学习网络安全的免费在线课程，这符合您的需求，因为当我分享付费课程时，许多人要求我分享免费的网络安全课程。
+之前，我已经分享了[最佳网络安全课程](/javarevisited/7-best-cyber-security-courses-for-programmers-and-developers-50afafae050b)和[最佳网络安全课程](https://javarevisited.blogspot.com/2021/10/top-5-courses-to-learn-web-security-in.html)，在这篇文章中，我将分享学习网络安全的免费在线课程，这符合您的需求，因为当我分享付费课程时，许多人要求我分享免费的网络安全课程。
 
 所以，我们开始吧，在这篇文章中，我从 [Udemy](https://javarevisited.blogspot.com/2020/11/top-10-udemy-courses-you-can-buy-in.html) 、 [Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F) 和 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=) 编译了免费的网络安全课程，他们绝对可以免费学习和加入。
 
@@ -24,7 +25,7 @@ image_credit — udemy
 
 本文将列出一些从零开始学习和理解网络安全的最佳免费资源。这些免费课程对想要转行从事网络安全职业的新手和有经验的 IT 专业人士都很有用。
 
-顺便说一句，如果你决心在网络安全领域发展事业，并且不介意花几个钱学习一门有用的技能，比如网络和网络安全，那么我也推荐你加入内森·豪斯在 Udemy 开设的 [**完整网络安全课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-internet-security-privacy-course-volume-1%2F) 。
+顺便说一句，如果你决心在网络安全领域发展事业，并且不介意花几个钱学习一门有用的技能，比如网络和网络安全，那么我也推荐你加入内森·豪斯在 Udemy 开设的[完整网络安全课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-internet-security-privacy-course-volume-1%2F)。
 
 [![](img/17e0f3f7ba3ba16b0000660ac7a89736.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-internet-security-privacy-course-volume-1%2F)
 
@@ -60,7 +61,7 @@ Nathan 是一位著名的网络安全专家，这门课程非常有价值，但�
 
 首先，您将对网络攻击有一个总体的了解，比如漏洞、风险以及网络攻击在现实世界中的应用。然后学习一些防御这些攻击的技术，比如使用一些身份验证解决方案和加密技术。
 
-本课程也是 Coursera 的 [**网络安全专业**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fintro-cyber-security) 介绍的一部分，由 Tandem 工程学院 NYU 提供。
+本课程也是 Coursera 的[网络安全专业](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fintro-cyber-security)介绍的一部分，由 Tandem 工程学院 NYU 提供。
 
 稍后，您将了解网络安全和防火墙以及保护它们的最佳配置。最后，概述企业基础架构安全性。
 
@@ -70,7 +71,7 @@ Nathan 是一位著名的网络安全专家，这门课程非常有价值，但�
 
 顺便说一下，如果你觉得 Coursera 的课程很有用，因为它们是由世界各地知名的公司和大学创建的，我建议你加入 Coursera Plus 的订阅计划，它可以让你无限制地访问他们最受欢迎的课程、专业知识、专业证书和指导项目。它每月花费大约 59 美元，但是可以让你获得无限的认证，这是无价的。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 3.[保持在线安全](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcybersecurity-for-kids%2F)【Udemy 免费课程】
 
@@ -100,9 +101,9 @@ Nathan 是一位著名的网络安全专家，这门课程非常有价值，但�
 
 顺便说一下，你需要一个 [*Pluralsight 会员*](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。
 
-或者，你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费进入这个课程。
+或者，你也可以使用他们的[**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费进入这个课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
 ## 5.[网络安全【免费 Udemy 课程】](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fnew-web-security-2020%2F)
 
@@ -131,16 +132,21 @@ Nathan 是一位著名的网络安全专家，这门课程非常有价值，但�
 *   Java 程序员在 2023 年可以学到的 21 项技术技能
 *   [破解任何编码面试的 5 个关键技巧](https://javarevisited.blogspot.com/2020/04/5-essential-skills-to-crack-coding-interviews.html)
 *   [针对初学者的 6 门最佳道德黑客课程](/javarevisited/6-best-ethical-hacking-courses-to-learn-online-fe1fe171d05)
-*   [如何在 2023 年成为 DevOps 工程师](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-*   [2023 年通过 CompTIA Security+考试的 5 门最佳课程](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-crack-comptia-security-certification-exam-sy0-501.html)
-*   [每个软件开发人员都应该学习的 10 件事](https://dev.to/javinpaul/10-things-every-software-developer-should-know-39pe)
-*   [每个开发人员都应该学习的 10 个 Linux 命令选项](https://javarevisited.blogspot.com/2020/08/10-examples-of-essential-linux-commands.html#axzz6nH4euiJX)
-*   [5 个免费学习 Python 编码的网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
-*   [面向开发人员和安全工程师的 7 门 Linux 课程](/javarevisited/7-best-linux-courses-for-developers-cloud-engineers-and-devops-in-2021-7415314087e1)
-*   [10 门针对初学者的免费渗透测试课程](/javarevisited/10-free-courses-to-learn-ethical-hacking-and-penetration-testing-for-beginners-84e40104aa6c)
+
+
+
+# 如何在 2023 年成为 DevOps 工程师
+
+- [如何在 2023 年成为 DevOps 工程师](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+- [2023 年通过 CompTIA Security+考试的 5 门最佳课程](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-crack-comptia-security-certification-exam-sy0-501.html)
+- [每个软件开发人员都应该学习的 10 件事](https://dev.to/javinpaul/10-things-every-software-developer-should-know-39pe)
+- [每个开发人员都应该学习的 10 个 Linux 命令选项](https://javarevisited.blogspot.com/2020/08/10-examples-of-essential-linux-commands.html#axzz6nH4euiJX)
+- [5 个免费学习 Python 编码的网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
+- [面向开发人员和安全工程师的 7 门 Linux 课程](/javarevisited/7-best-linux-courses-for-developers-cloud-engineers-and-devops-in-2021-7415314087e1)
+- [10 门针对初学者的免费渗透测试课程](/javarevisited/10-free-courses-to-learn-ethical-hacking-and-penetration-testing-for-beginners-84e40104aa6c)
 
 感谢您阅读本文。如果你喜欢这些*最好的免费网络安全在线课程*，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **p . s .**——如果你需要一个全面和最新的课程来学习网络安全，并且你不怕花钱学习有用的技能，如网络安全和道德黑客，那么我也推荐你参加 Udemy 上内森·豪斯的 [**完整的网络安全课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-internet-security-privacy-course-volume-1%2F) 。
 
-<https://javarevisited.blogspot.com/2020/03/top-5-courses-to-learn-cyber-security.html> 
+<https://javarevisited.blogspot.com/2020/03/top-5-courses-to-learn-cyber-security.html>

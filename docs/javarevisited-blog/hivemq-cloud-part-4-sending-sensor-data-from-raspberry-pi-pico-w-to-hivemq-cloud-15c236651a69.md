@@ -1,3 +1,4 @@
+
 # HiveMQ 云，第 4 部分—将传感器数据从 Raspberry Pi Pico W 发送到 HiveMQ 云
 
 > 原文：<https://medium.com/javarevisited/hivemq-cloud-part-4-sending-sensor-data-from-raspberry-pi-pico-w-to-hivemq-cloud-15c236651a69?source=collection_archive---------1----------------------->
@@ -8,19 +9,19 @@
 
 这个项目和前面三个部分的来源都是在 GitHub 上可以找到的[。](https://github.com/FDelporte/HiveMQ-examples)
 
-# 关于 HiveMQ 云
+## 关于 HiveMQ 云
 
 [HiveMQ Cloud](https://www.hivemq.com/mqtt-cloud-broker/) 是一项在线 MQTT 兼容服务，最多可对 100 台设备完全免费！即使对最热情的制造者来说，那也是一大堆微控制器或计算机！
 
 在 HiveMQ 博客上，Kudzai Manditereza 发表了一篇[文章，也描述了如何使用 Pico W](https://www.hivemq.com/blog/iot-reading-sensor-data-raspberry-pi-pico-w-micropython-mqtt-node-red/) 。
 
-# 关于树莓派
+## 关于树莓派
 
 新款 Pico W 的外形与原来的 Pico 完全相同。由于板载 LED 的连接方式发生了变化，因此布线略有变化。您应该能够在大多数现有项目中切换到新版本，没有任何问题。
 
-# 接线
+## 接线
 
-# 试验板设置
+### 试验板设置
 
 拿一块试验板和一些电线来创建这个小测试设置。与之前的 Pico 和一个额外的 Adafruit AirLift Wi-Fi 相比，现在的设置简单多了。
 
@@ -28,17 +29,21 @@
 
 唯一需要连接的部件是距离传感器。
 
-# 距离传感器
+### 距离传感器
 
 只需要 4 根线，为了简单起见，连接到前一篇文章中使用的相同引脚，但当然你可以自由使用其他的，只要你在代码中使用正确的数字。
 
 *   **Pico > HC-SR04**
+
 *   VBUS > Vcc
+
 *   GND > GND
+
 *   GP16 >回声
+
 *   GP17 >触发器
 
-# MicroPython 项目
+## MicroPython 项目
 
 在之前的 Pico 项目中， [CircuitPython](https://circuitpython.org/) 用于编写程序。不幸的是，当我开始这个项目将 Pico W 连接到 HiveMQ Cloud 时，CircuitPython 还不支持 Pico W 的 WiFi 模块。GitHub 上的[票现在似乎已经关闭并解决了，所以我让你来尝试一下。在这篇文章中，我们将使用](https://github.com/adafruit/circuitpython/issues/6558) [MicroPython](https://micropython.org/) 。
 
@@ -50,13 +55,13 @@
 
 警告！如果您使用的是装有 macOS Ventura 的 Apple 电脑，连接到 Pico 可能会有问题。见[这篇博文](https://www.raspberrypi.com/news/the-ventura-problem/?mc_cid=54f69c07e7&mc_eid=787c121758)了解更多信息。
 
-# 在 Mac 上安装 Thonny IDE
+### 在 Mac 上安装 Thonny IDE
 
 我尝试了几种 ide 来编写 Pico W，但是发现 Thonny 是最好的选择。它适用于 Windows、Mac 和 Linux。在 macOS 上你可以很容易地用`brew install --cask thonny`安装。安装后，请确保打开“查看>文件”，并在屏幕右下角选择您的主板“MicroPython (RP2040)”，如您在截图中所见。
 
 [![](img/c3b14d571202969392ba16d532f68a56.png)](https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html)
 
-# 安装库
+### 安装库
 
 我们的应用程序将使用两个库来最小化我们需要自己编写的代码。
 
@@ -74,7 +79,7 @@ Installing umqtt.simple 1.3.4 from https://micropython.org/pi/umqtt.simple/umqtt
 
 第二个库帮助我们使用 HC-SR04 传感器进行距离测量。再次，从 rsc1975 (Roberto) 的一个项目中复制 GitHub 的[这段代码，在 Thonny 中创建一个新文件，并作为文件`hcsr04.py`保存到目录`/lib/hcsr04/`中的 Pico W 中。](https://github.com/rsc1975/micropython-hcsr04/blob/master/hcsr04.py)
 
-# 秘密
+### 秘密
 
 在 Pico W 的根目录下创建一个名为`secrets.py`的文件，包含以下内容(这个文件与前一篇文章中使用的 Pico 文件相同)。
 
@@ -90,11 +95,17 @@ secrets = {
 }
 ```
 
-# 项目代码
+### 项目代码
 
 最后一部分是实际的应用程序代码。在 Pico W 的根目录下创建一个名为`main.py`的额外文件，内容如下:
 
-```
+
+
+# 从 Raspberry Pi Pico W 向 HiveMQ Cloud 发送传感器数据
+
+以下代码展示了如何从 Raspberry Pi Pico W 读取超声波传感器（HC-SR04）的测量值，并通过 MQTT 协议将数据安全地发送到 HiveMQ Cloud。
+
+```python
 import time
 import secrets
 import network
@@ -260,6 +271,6 @@ Starting the distance measurement
 
 # 结论
 
-HiveMQ Cloud 需要一个 [TLS](/javarevisited/best-https-ssl-and-tls-courses-for-beginners-4437661250b3) (安全)连接，这对于这种小型电路板来说有点挑战性。但仍然可以很容易地建立连接，从那时起，可能性是无穷的，即使是 6 美元的小电路板。
+HiveMQ Cloud 需要一个 [TLS](/javarevisited/best-https-ssl-and-tls-courses-for-beginners-4437661250b3)（安全）连接，这对于这种小型电路板来说有点挑战性。但仍然可以很容易地建立连接，从那时起，可能性是无穷的，即使是 6 美元的小电路板。
 
 *最初发布于*[*https://web techie . be*](https://webtechie.be/post/2022-12-07-sending-sensor-data-from-raspberry-pi-pico-w-to-hivemq-cloud/)*。*

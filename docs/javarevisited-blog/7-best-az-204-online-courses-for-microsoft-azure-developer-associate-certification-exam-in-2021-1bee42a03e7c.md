@@ -1,3 +1,4 @@
+
 # 2023 年微软 Azure 开发者助理认证考试的 7 门最佳 AZ-204 在线课程
 
 > 原文：<https://medium.com/javarevisited/7-best-az-204-online-courses-for-microsoft-azure-developer-associate-certification-exam-in-2021-1bee42a03e7c?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 [![](img/3d3af2b76962a9a5a88e5b2e78fc5f09.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2F70532-azure%2F)
 
-大家好，如果你的目标是在 2023 年成为**微软认证:Azure 开发者助理，并准备 AZ -204 微软 Azure 考试开发解决方案，那么你来对地方了。此前，我已经分享了 [**最佳 AZ 900 课程**](/javarevisited/5-best-azure-fundamentals-courses-to-pass-az-900-certification-exam-in-2020-9e602aea035d) ，今天，我将分享 Azure Developer associate 考试的最佳 AZ 204 在线课程和练习测试。**
+大家好，如果你的目标是在 2023 年成为**微软认证:Azure 开发者助理**，并准备 AZ-204 微软 Azure 考试开发解决方案，那么你来对地方了。此前，我已经分享了[最佳 AZ 900 课程](/javarevisited/5-best-azure-fundamentals-courses-to-pass-az-900-certification-exam-in-2020-9e602aea035d)，今天，我将分享 Azure Developer associate 考试的最佳 AZ 204 在线课程和练习测试。
 
 *披露——顺便说一句，其中一些链接是附属链接，如果你使用我的链接加入这些课程，我可能会得到报酬。*
 
@@ -18,17 +19,17 @@
 
 现在，精通微软 Azure 的开发人员是那些知道如何在微软 Azure 中设计和创建云解决方案(如服务和应用程序)的人。这涵盖了从设计、开发、部署或启动到持续维护的项目开发的全过程。
 
-**AZ 204，** **为微软 Azure 开发解决方案考试**测试开发者开发 Azure 基础设施即服务计算解决方案、Azure 存储、监控、故障排除和优化 Azure 解决方案以及实施 Azure 安全的能力。它还检查连接和使用 Azure 和第三方服务的能力。如果你是一名软件开发人员，希望成为微软认证的 Azure 开发人员，那么你可以在[微软页面](https://docs.microsoft.com/en-us/learn/certifications/exams/az-203)注册。在美国，考试费用为 165 美元，并以英语授课。
+AZ-204，为微软 Azure 开发解决方案考试，测试开发者开发 Azure 基础设施即服务计算解决方案、Azure 存储、监控、故障排除和优化 Azure 解决方案以及实施 Azure 安全的能力。它还检查连接和使用 Azure 和第三方服务的能力。如果你是一名软件开发人员，希望成为微软认证的 Azure 开发人员，那么你可以在[微软页面](https://docs.microsoft.com/en-us/learn/certifications/exams/az-203)注册。在美国，考试费用为 165 美元，并以英语授课。
 
-当你报名的时候，微软给你提供了两个备考选项。一个是免费的，另一个是收费的。[免费课程](/javarevisited/my-favorite-free-microsoft-azure-cloud-courses-for-beginners-to-learn-in-2020-3418524bb531)涵盖了微软 Azure 的大部分方面，而付费课程由讲师指导，专门针对*微软认证:Azure 开发人员-助理认证考试 AZ-204。如果你买不起付费的，不要失望，因为还有很多更实惠的选择。我在这篇文章中分享了**最好的微软 Azure 开发者助理课程**，你可以在 Udemy 上花 10 美元轻松买到。*
+当你报名的时候，微软给你提供了两个备考选项。一个是免费的，另一个是收费的。[免费课程](/javarevisited/my-favorite-free-microsoft-azure-cloud-courses-for-beginners-to-learn-in-2020-3418524bb531)涵盖了微软 Azure 的大部分方面，而付费课程由讲师指导，专门针对*微软认证:Azure 开发人员-助理认证考试 AZ-204*。如果你买不起付费的，不要失望，因为还有很多更实惠的选择。我在这篇文章中分享了**最好的微软 Azure 开发者助理课程**，你可以在 Udemy 上花 10 美元轻松买到。
 
 其中一些也是免费的。你可以使用这些免费和付费的在线课程来准备 2023 年的微软 Azure 开发者助理认证。
 
-</javarevisited/my-favorite-free-microsoft-azure-cloud-courses-for-beginners-to-learn-in-2020-3418524bb531>  
+</javarevisited/my-favorite-free-microsoft-azure-cloud-courses-for-beginners-to-learn-in-2020-3418524bb531>
 
 # 考试 AZ-204 的前 7 名 Microsoft Certified Azure Developer Associate 认证在线培训课程
 
-在不浪费你更多时间的情况下，这里有一份来自 [Udemy](/javarevisited/my-favorite-udemy-online-courses-for-programmers-and-software-engineers-f9d941dd0035) 、 [Pluralsight](/javarevisited/top-10-javascript-courses-from-pluralsight-to-learn-in-2021-26352abe4fcd) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 的最佳在线培训课程列表，教你如何通过考试 AZ-204:为微软 Azure 考试开发解决方案，以便在 2023 年成为微软认证:Azure 开发者助理。
+在不浪费你更多时间的情况下，这里有一份来自 [Udemy](/javarevisited/my-favorite-udemy-online-courses-for-programmers-and-software-engineers-f9d941dd0035)、[Pluralsight](/javarevisited/top-10-javascript-courses-from-pluralsight-to-learn-in-2021-26352abe4fcd) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 的最佳在线培训课程列表，教你如何通过考试 AZ-204:为微软 Azure 考试开发解决方案，以便在 2023 年成为微软认证:Azure 开发者助理。
 
 这些在线课程不仅涵盖考试主题和教学大纲，还提供一些使用核心 Azure 服务的真实体验，这也使它们非常适合学习。
 
@@ -36,7 +37,7 @@
 
 除了在 Udemy 上获得最高评级的微软认证:Azure Developer-Associate Exam AZ-204 课程；它还有德语、意大利语、波兰语、葡萄牙语、西班牙语、法语和英语版本。它有将近 48000 名注册学生，由斯科特·达菲创建。在本课程中，将为您提供一次定时的模拟考试，以检查您的表现以及您对实际考试的准备情况。
 
-在你考虑学习这门课程之前，你必须免费或付费订阅[微软 Azure](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html) 并对了解微软云平台充满热情。像[这样的编程语言背景。NET](/javarevisited/7-best-online-courses-to-learn-asp-net-core-and-mvc-in-depth-a68c1b728090?source=---------28------------------) 、 [NodeJS](/javarevisited/top-10-online-courses-to-learn-node-js-in-depth-8ef0e31ca139) 和 [PHP](/javarevisited/top-10-free-courses-to-learn-php-and-mysql-for-web-development-e96e69982675?source=---------34------------------) 将被证明是非常有价值的。这门课一生一次。一旦你买了它，你将永远可以使用它。在这个在线课程中，你将学习如何成为一名微软专家:开发 Azure 解决方案认证，通过微软 AZ-204 开发微软 Azure 解决方案测试，并掌握 Azure 的主要概念，超出你通常使用的概念。
+在你考虑学习这门课程之前，你必须免费或付费订阅[微软 Azure](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html) 并对了解微软云平台充满热情。像[这样的编程语言背景。NET](/javarevisited/7-best-online-courses-to-learn-asp-net-core-and-mvc-in-depth-a68c1b728090?source=---------28------------------) 、[NodeJS](/javarevisited/top-10-online-courses-to-learn-node-js-in-depth-8ef0e31ca139) 和 [PHP](/javarevisited/top-10-free-courses-to-learn-php-and-mysql-for-web-development-e96e69982675?source=---------34------------------) 将被证明是非常有价值的。这门课一生一次。一旦你买了它，你将永远可以使用它。在这个在线课程中，你将学习如何成为一名微软专家:开发 Azure 解决方案认证，通过微软 AZ-204 开发微软 Azure 解决方案测试，并掌握 Azure 的主要概念，超出你通常使用的概念。
 
 **这里是加入 AZ 204 课程的链接**——[AZ-204 为微软 Azure 考试准备开发解决方案](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2F70532-azure%2F)
 
@@ -76,7 +77,7 @@
 
 虽然我强烈推荐这种会员资格，因为它可以让你访问 7000 多门关于最新技术的在线课程，但你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 来尝试一些课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 4.[开发微软 Azure 解决方案— AZ 204 考试 edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Fdeveloping-microsoft-azure-solutions-microsoft-dev233-2)
 
@@ -98,13 +99,13 @@
 
 该学习路径提供了开发人员准备考试所需的背景和支持。
 
+
+
 **这里是加入这个 AZ 204 路径的链接** — [准备微软 Azure 考试中的开发解决方案](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpaths%2Fprepare-for-the-developing-solutions-in-microsoft-azure-exam-az-204)
 
 [![](img/a68477f303e0d95c4a0ed2667f949898.png)](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpaths%2Fprepare-for-the-developing-solutions-in-microsoft-azure-exam-az-204)
 
 顺便说一下，你需要一个 LinkedIn Learning 会员资格来观看这个课程，这个课程每月花费大约 29.99 美元，但是你也可以通过参加他们的 [**1 个月免费试用**](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts) 来免费观看这个课程，这是一个探索他们 16000 多门最新技术在线课程的好方法。
-
-  
 
 ## 6. [AZ-204 为 MS Azure 实践测试开发解决方案](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz-204-developing-solutions-for-microsoft-azure-practice-tests%2F)
 
@@ -118,22 +119,22 @@
 
 [![](img/7947f7a2ca0c94d5502eac2192f79760.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz-204-developing-solutions-for-microsoft-azure-practice-tests%2F)
 
-## 7.[微软 AZ-204 证书课程:开发 Azure 解决方案— Udemy](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-az-204%2F)
+## 7. [微软 AZ-204 证书课程:开发 Azure 解决方案— Udemy](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-az-204%2F)
 
 这是 Udemy 上的一门全新课程，为 2023 年微软 AZ-204 Cert 课程:开发 Azure 解决方案认证考试做准备。由 Skylines Academy 和 Joe Fecht 创建的这个 5.5 小时的课程将帮助您准备 Microsoft AZ-204:开发 Azure 解决方案考试。
 
 本课程基于微软的 [**AZ-204 认证**](https://docs.microsoft.com/en-us/learn/certifications/exams/az-204) 课程，并根据技能测试文档进行设置。在本课程中，Skylines Academy 作者兼讲师 Joe Fecht 将带领您了解:
 
-1.  为您的学习做准备的课程介绍
-2.  了解 Azure 基础设施即服务(IaaS)
-3.  利用容器资源
-4.  Azure 应用服务和 Azure 功能
-5.  Cosmos DB 存储和 Azure Blob 存储
-6.  身份验证和 Azure 密钥库
-7.  应用交付和监控应用
-8.  逻辑应用
-9.  API 管理
-10.  基于事件的解决方案
+1. 为您的学习做准备的课程介绍
+2. 了解 Azure 基础设施即服务(IaaS)
+3. 利用容器资源
+4. Azure 应用服务和 Azure 功能
+5. Cosmos DB 存储和 Azure Blob 存储
+6. 身份验证和 Azure 密钥库
+7. 应用交付和监控应用
+8. 逻辑应用
+9. API 管理
+10. 基于事件的解决方案
 
 使用 Skylines Academy 的方法，讲座将*向*你讲授 Azure 解决方案的条款和原则，演示将*让*你通过使用场景的实践体验*让*你在现实世界中更有能力。
 
@@ -147,28 +148,28 @@
 
 其他**微软 Azure 和云认证**你可能想了解一下
 
-*   [破解 Azure 开发人员助理考试的前 5 门课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-crack-Microsoft-Azure-Developer-Certification-Exam-AZ-203.html)
-*   [如何破解 AWS 解决方案架构师考试](https://javarevisited.blogspot.com/2019/08/how-to-crack-aws-certified-solution-architect-exam.html)
-*   [通过 Azure 管理员考试的前 5 门课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-become-microsoft-azure-administrator-certification-exam.html)
-*   [微软 Azure 基础前 5 名模拟测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)
-*   [破解 AWS 解决方案架构师认证的 5 大课程](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj)
-*   [破解 Azure 云架构师(AZ-300)考试的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-courses-to-crack-azure-architecture-technologies-certification-az-300-exam.html#axzz6E6VuRMsx)
-*   [通过 Azure 开发人员助理认证(AZ-204)的 5 门在线课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-crack-Microsoft-Azure-Developer-Certification-Exam-AZ-203.html)
-*   [通过 Azure 云架构考试的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-courses-to-crack-azure-architecture-technologies-certification-az-300-exam.html)
-*   [2023 年通过 AZ-900 认证的前 5 名课程](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-crack-az-900-microsoft-azure-fundamentals-certification-exam.html)
-*   [学习 Docker 和 Kubernetes 的十大课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
-*   [程序员前 5 名 AZ-900 模拟测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)
-*   [通过谷歌助理云工程师认证的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)
-*   [破解 AWS 解决方案架构师认证的 5 大课程](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj)
-*   [如何通过 Spring Core Professional 5.0 认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html)
-*   [如何在 2023 年成为 Azure 解决方案架构师助理](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-solution-architect-exam-az-300.html)
-*   [学习数据结构和算法的 10 门免费课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
-*   [如何破解 2023 年 AZ-103 Azure 行政考试](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-az-103-azure-administrator-associate-exam-certification.html)
-*   [如何破解 Azure Fundamentals (AZ-900)认证](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-fundamentals-certification-az-900-exam.html)
-*   [OCAJP 和 OCPJP 考试 10 道免费样题](http://www.java67.com/2017/05/10-free-java-8-certification-sample-questions-OCAJP8-OCPJP8-Mock-Exams.html)
+* [破解 Azure 开发人员助理考试的前 5 门课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-crack-Microsoft-Azure-Developer-Certification-Exam-AZ-203.html)
+* [如何破解 AWS 解决方案架构师考试](https://javarevisited.blogspot.com/2019/08/how-to-crack-aws-certified-solution-architect-exam.html)
+* [通过 Azure 管理员考试的前 5 门课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-become-microsoft-azure-administrator-certification-exam.html)
+* [微软 Azure 基础前 5 名模拟测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)
+* [破解 AWS 解决方案架构师认证的 5 大课程](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj)
+* [破解 Azure 云架构师(AZ-300)考试的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-courses-to-crack-azure-architecture-technologies-certification-az-300-exam.html#axzz6E6VuRMsx)
+* [通过 Azure 开发人员助理认证(AZ-204)的 5 门在线课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-crack-Microsoft-Azure-Developer-Certification-Exam-AZ-203.html)
+* [通过 Azure 云架构考试的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-courses-to-crack-azure-architecture-technologies-certification-az-300-exam.html)
+* [2023 年通过 AZ-900 认证的前 5 名课程](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-crack-az-900-microsoft-azure-fundamentals-certification-exam.html)
+* [学习 Docker 和 Kubernetes 的十大课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
+* [程序员前 5 名 AZ-900 模拟测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)
+* [通过谷歌助理云工程师认证的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)
+* [破解 AWS 解决方案架构师认证的 5 大课程](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj)
+* [如何通过 Spring Core Professional 5.0 认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html)
+* [如何在 2023 年成为 Azure 解决方案架构师助理](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-solution-architect-exam-az-300.html)
+* [学习数据结构和算法的 10 门免费课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
+* [如何破解 2023 年 AZ-103 Azure 行政考试](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-az-103-azure-administrator-associate-exam-certification.html)
+* [如何破解 Azure Fundamentals (AZ-900)认证](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-fundamentals-certification-az-900-exam.html)
+* [OCAJP 和 OCPJP 考试 10 道免费样题](http://www.java67.com/2017/05/10-free-java-8-certification-sample-questions-OCAJP8-OCPJP8-Mock-Exams.html)
 
 感谢您阅读本文。如果你发现这些微软 Azure 管理员课程，*AZ-103 和 AZ-104 都有用，那么，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**P. S. —** 如果你是微软 Azure 的新手，正在寻找一个免费的初学者课程来开始学习微软 Azure 平台的关键概念，那么你也可以查看一下 [**微软 Azure 概念**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-microsoft-azure-concepts%2F)——Udemy 上 Linux Academy 提供的免费课程。这是完全免费的，你只需要一个免费的 Udemy 帐户就可以在线参加这个课程。*
+**P. S. —** 如果你是微软 Azure 的新手，正在寻找一个免费的初学者课程来开始学习微软 Azure 平台的关键概念，那么你也可以查看一下 [**微软 Azure 概念**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-microsoft-azure-concepts%2F)——Udemy 上 Linux Academy 提供的免费课程。这是完全免费的，你只需要一个免费的 Udemy 帐户就可以在线参加这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-microsoft-azure-concepts%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-microsoft-azure-concepts%2F>

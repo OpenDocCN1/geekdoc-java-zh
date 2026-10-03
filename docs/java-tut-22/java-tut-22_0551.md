@@ -1,3 +1,4 @@
+
 # API 设计
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/interoperability/api-design.html`](https://docs.oracle.com/javase/tutorial/collections/interoperability/api-design.html)
@@ -10,11 +11,7 @@
 
 此外，你应该始终使用最不具体的类型。例如，如果`Collection`足够了，就不要要求一个`List`或者一个`Set`。并不是说你在输入时永远不应该要求一个`List`或者`Set`；如果一个方法依赖于这些接口的属性，那么这样做是正确的。例如，Java 平台提供的许多算法在输入时需要一个`List`，因为它们依赖于列表是有序的这一事实。然而，作为一般规则，最好在输入时使用最通用的类型：`Collection`和`Map`。
 
-* * *
-
-**注意：** 永远不要定义自己的临时`collection`类，并要求在输入时使用这些类的对象。这样做会使你失去 Java 集合框架提供的所有好处。
-
-* * *
+**注意：** 永远不要定义自己的临时`collection`类，并要求在输入时使用这些类的对象。这样做会使你失去 Java 集合框架提供的所有好处。
 
 ## 返回值
 

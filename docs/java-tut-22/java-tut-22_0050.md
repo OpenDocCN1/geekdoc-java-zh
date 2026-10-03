@@ -1,3 +1,4 @@
+
 # 对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/objects.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html)
@@ -7,7 +8,6 @@
 这里有一个小程序，名为`CreateObjectDemo`，它创建了三个对象：一个`Point`对象和两个`Rectangle`对象。您需要这三个源文件来编译这个程序。
 
 ```java
-
 public class CreateObjectDemo {
 
     public static void main(String[] args) {
@@ -35,7 +35,6 @@ public class CreateObjectDemo {
         System.out.println("Y Position of rectTwo: " + rectTwo.origin.y);
     }
 }
-
 ```
 
 该程序创建、操作并显示有关各种对象的信息。以下是输出：
@@ -48,7 +47,6 @@ X Position of rectTwo: 23
 Y Position of rectTwo: 94
 X Position of rectTwo: 40
 Y Position of rectTwo: 72
-
 ```
 
 以下三个部分使用上述示例来描述程序中对象的生命周期。通过它们，您将学习如何编写代码来在您自己的程序中创建和使用对象。您还将了解系统在对象的生命周期结束时如何清理。

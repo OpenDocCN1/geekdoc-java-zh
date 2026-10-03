@@ -1,3 +1,4 @@
+
 # Spring Boot Hello World 示例-小胡子
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-hello-world-example-mustache/>
@@ -6,31 +7,32 @@
 
 一个 [Spring Boot](http://web.archive.org/web/20220909002550/https://projects.spring.io/spring-boot/) 的 web 应用实例，使用`embedded Tomcat + Mustache template engine`，并打包成一个可执行的`JAR`文件。
 
-使用的技术:
+使用的技术：
 
-1.  Spring Boot 1.5.2 .版本
-2.  弹簧 4.3.7 .释放
-3.  jmustache 1.13
-4.  百里香叶
-5.  Tomcat Embed 8.5.11
-6.  maven3
-7.  Java 8
+1. Spring Boot 1.5.2 .版本
+2. 弹簧 4.3.7 .释放
+3. jmustache 1.13
+4. 百里香叶
+5. Tomcat Embed 8.5.11
+6. maven3
+7. Java 8
 
 **Note**
+
 Spring Boot uses [jmustache](http://web.archive.org/web/20220909002550/https://github.com/samskivert/jmustache) to integrate [Mustache](http://web.archive.org/web/20220909002550/https://mustache.github.io/) as template engine.
 
-## 1.项目目录
+## 1. 项目目录
 
 ![](img/bace6cccdfa4d534f296c79355e6304c.png)
 
-## 2.项目相关性
+## 2. 项目相关性
 
 声明`spring-boot-starter-mustache`，它将获得开发`Spring + Mustache` web 应用程序所需的任何东西。
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project  
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -95,10 +97,10 @@ pom.xml
 </project> 
 ```
 
-显示项目相关性:
+显示项目相关性：
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] Scanning for projects...
 [INFO]
@@ -168,14 +170,14 @@ pom.xml
 [INFO] ------------------------------------------------------------------------ 
 ```
 
-## 3.Spring Boot
+## 3. Spring Boot
 
 3.1 创建一个`@SpringBootApplication`类。运行这个类来启动 Spring Boot web 应用程序。
 
-SpringBootWebApplication.java
+`SpringBootWebApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -192,10 +194,12 @@ public class SpringBootWebApplication {
 
 3.2 一个简单的控制器类。
 
-WelcomeController.java
+`WelcomeController.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Map;
 
@@ -226,17 +230,19 @@ public class WelcomeController {
 		throw new RuntimeException("ABC");
 	}
 
-} 
+}
 ```
 
-## 4.小胡子+资源+静态文件
+## 4. 小胡子+资源+静态文件
 
-4.1 对于小胡子模板文件，放入`src/main/resources/templates/`
+### 4.1 小胡子模板文件
 
-src/main/resources/templates/layout/header.html
+对于小胡子模板文件，放入`src/main/resources/templates/`。
 
-```java
- <!DOCTYPE HTML>
+`src/main/resources/templates/layout/header.html`：
+
+```html
+<!DOCTYPE HTML>
 <head>
 
 <title>{{title}}</title>
@@ -246,20 +252,20 @@ src/main/resources/templates/layout/header.html
 <link rel="stylesheet" href="css/main.css" />
 
 </head>
-<!--  this is header --> 
+<!--  this is header -->
 ```
 
-src/main/resources/templates/layout/footer.html
+`src/main/resources/templates/layout/footer.html`：
 
-```java
- <!--  this is footer -->
-</html> 
+```html
+<!--  this is footer -->
+</html>
 ```
 
-src/main/resources/templates/welcome.html
+`src/main/resources/templates/welcome.html`：
 
-```java
- {{>layout/header}}
+```html
+{{>layout/header}}
 <body>
 
 	<nav class="navbar navbar-inverse">
@@ -285,30 +291,35 @@ src/main/resources/templates/welcome.html
 	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
-{{>layout/footer}} 
+{{>layout/footer}}
 ```
 
-4.2 对于 CSS 或 Javascript 等静态文件，放入`/src/main/resources/static/`
+### 4.2 静态文件
 
-/src/main/resources/static/css/main.css
+对于 CSS 或 Javascript 等静态文件，放入`/src/main/resources/static/`。
 
-```java
- h1{
+`/src/main/resources/static/css/main.css`：
+
+```css
+h1{
 	color:#0000FF;
 }
 
 h2{
 	color:#FF0000;
-} 
+}
 ```
 
-4.3 对于错误模板。
+### 4.3 错误模板
 
 **Note**
-Read this [Spring Boot – Error Handling](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-error-handling) to understand how the default error mapping page works.src/main/resources/templates/error.html
 
-```java
- <!DOCTYPE html>
+阅读 [Spring Boot – Error Handling](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-error-handling) 了解默认错误映射页面的工作原理。
+
+`src/main/resources/templates/error.html`：
+
+```html
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -316,13 +327,13 @@ Read this [Spring Boot – Error Handling](http://web.archive.org/web/2022090900
 	Something went wrong: {{status}} {{error}}
 </body>
 
-</html> 
+</html>
 ```
 
-src/main/resources/templates/error/5xx.html
+`src/main/resources/templates/error/5xx.html`：
 
-```java
- <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -330,29 +341,34 @@ src/main/resources/templates/error/5xx.html
 	I'm a 5xx
 </body>
 
-</html> 
+</html>
 ```
 
-4.4 对于属性文件，输入`/src/main/resources/`
+### 4.4 属性文件
 
-/src/main/resources/application.properties
+对于属性文件，输入`/src/main/resources/`。
 
-```java
- app.welcome.message: Hello Mkyong
-app.welcome.title: Spring Boot Mustache Hello World Example 
+`/src/main/resources/application.properties`：
+
+```properties
+app.welcome.message: Hello Mkyong
+app.welcome.title: Spring Boot Mustache Hello World Example
 ```
 
 **Note**
-Read this [Spring Boot Serving static content](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content) to understand the resource mapping.
 
-## 5.单元测试
+阅读 [Spring Boot Serving static content](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content) 了解资源映射。
 
-5.1 单元测试示例测试上面的 Spring Boot web 应用程序。
+## 5. 单元测试
 
-MustacheApplicationTests
+### 5.1 单元测试示例
+
+测试上面的 Spring Boot web 应用程序。
+
+`MustacheApplicationTests`：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -416,21 +432,30 @@ public class MustacheApplicationTests {
 
 	}
 
-} 
+}
 ```
 
-## 6.演示
+## 6. 演示
 
-Note
-In IDE, run the `@SpringBootApplication` annotated class, and the entire Spring Boot application will be started.
+**Note**
 
-6.1 启动 Spring Boot 网络应用程序。
+在 IDE 中，运行带有`@SpringBootApplication`注解的类，整个 Spring Boot 应用程序将启动。
+
+### 6.1 启动 Spring Boot 网络应用程序
 
 Terminal
 
-```java
- project$ mvn spring-boot:run
 
+
+运行以下命令启动 Spring Boot 应用：
+
+```
+project$ mvn spring-boot:run
+```
+
+启动成功后，控制台会输出类似下面的日志：
+
+```
 //...
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -467,30 +492,30 @@ Terminal
 2017-04-19 12:17:40.435  INFO 6232 --- [  restartedMain] com.mkyong.SpringBootWebApplication      : Started SpringBootWebApplication in 2.737 seconds (JVM running for 3.124) 
 ```
 
-6.2 访问 *http://localhost:8080*
+访问 `http://localhost:8080`：
 
 ![](img/8b365fd2ec8296e8e542647aaeb3d248.png)
 
-6.2 访问*http://localhost:8080/uri-not-exist*
+访问 `http://localhost:8080/uri-not-exist`：
 
 ![](img/308e082ab1c46991fed373364b070993.png)
 
-6.2 访问*http://localhost:8080/5xx*
+访问 `http://localhost:8080/5xx`：
 
 ![](img/4ae87ee2313e1453c424d16374902b28.png)
 
-## 6.构建可执行的 JAR
+## 6. 构建可执行的 JAR
 
-6.1 将项目打包，创建一个可执行的`JAR`文件。
+6.1 将项目打包，创建一个可执行的 `JAR` 文件。
 
-```java
- project$ mvn clean package 
+```
+project$ mvn clean package
 ```
 
-6.2 运行它，再次访问 *http://localhost:8080* 。
+6.2 运行它，再次访问 `http://localhost:8080`。
 
-```java
- project$ java -jar target/spring-boot-web-mustache-1.0.jar 
+```
+project$ java -jar target/spring-boot-web-mustache-1.0.jar
 ```
 
 ## 下载源代码
@@ -499,14 +524,14 @@ Download it – [spring-boot-web-mustache.zip](http://web.archive.org/web/202209
 
 ## 参考
 
-1.  [小胡子模板引擎](http://web.archive.org/web/20220909002550/https://mustache.github.io/)
-2.  jmustache——Mustache 模板语言的 Java 实现
-3.  [Spring Boot–错误处理](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-error-handling)
-4.  [Spring Boot–静态内容](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
-5.  [部署 Spring Boot 应用](http://web.archive.org/web/20220909002550/https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
-6.  [spring MVC–in ucci CSS 文件](http://web.archive.org/web/20220909002550/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)
-7.  [Spring Boot——开发者工具](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools)
-8.  [使用 Spring MVC 提供 Web 内容](http://web.archive.org/web/20220909002550/https://spring.io/guides/gs/serving-web-content/)
-9.  [Spring Boot Hello World 示例–JSP](http://web.archive.org/web/20220909002550/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/)
+1. [小胡子模板引擎](http://web.archive.org/web/20220909002550/https://mustache.github.io/)
+2. jmustache——Mustache 模板语言的 Java 实现
+3. [Spring Boot–错误处理](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-error-handling)
+4. [Spring Boot–静态内容](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
+5. [部署 Spring Boot 应用](http://web.archive.org/web/20220909002550/https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
+6. [spring MVC–in ucci CSS 文件](http://web.archive.org/web/20220909002550/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)
+7. [Spring Boot——开发者工具](http://web.archive.org/web/20220909002550/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools)
+8. [使用 Spring MVC 提供 Web 内容](http://web.archive.org/web/20220909002550/https://spring.io/guides/gs/serving-web-content/)
+9. [Spring Boot Hello World 示例–JSP](http://web.archive.org/web/20220909002550/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/)
 
 <input type="hidden" id="mkyong-current-postId" value="14550">

@@ -1,37 +1,41 @@
+
 # Spring MVC 文件上传示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-file-upload-example/>
 
-Spring 使用`MultipartResolver`接口来处理 web 应用中的文件上传，有两种实现方式:
+Spring 使用`MultipartResolver`接口来处理 web 应用中的文件上传，有两种实现方式：
 
-1.  `StandardServletMultipartResolver`–Servlet 3.0 多部分请求解析。
-2.  `CommonsMultipartResolver`–Classic commons-file upload . jar
+1. `StandardServletMultipartResolver` – Servlet 3.0 多部分请求解析。
+2. `CommonsMultipartResolver` – Classic `commons-fileupload.jar`。
 
-本文中使用的工具:
+本文中使用的工具：
 
-1.  弹簧 4.3.5 .释放
-2.  maven3
-3.  Tomcat 7 或 8、Jetty 9 或任何 Servlet 3.0 容器
+1. Spring 4.3.5.RELEASE
+2. Maven 3
+3. Tomcat 7 或 8、Jetty 9 或任何 Servlet 3.0 容器
 
 简而言之，本文向您展示了如何在 Spring MVC web 应用程序中处理文件上传，以及如何处理常见的超出最大文件大小异常。
 
-**Note**
-This article will focus on the Servlet 3.0 multipart request parsing.
+**注意**
+
+本文主要关注 Servlet 3.0 多部分请求解析。
 
 *P.S 文章从 Spring 2.5.x 更新到 Spring 4.3.x*
 
-## 1.项目结构
+## 1. 项目结构
 
 一个标准的 Maven 项目结构。
 
-![spring-mvc-file-upload-example-directory](img/f951fd06cc86e1de06fdce786253b161.png) ## 2.项目依赖性
+![spring-mvc-file-upload-example-directory](img/f951fd06cc86e1de06fdce786253b161.png)
+
+## 2. 项目依赖性
 
 标准的 Spring 依赖，不需要额外的文件上传库。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project 
+<project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
   http://maven.apache.org/maven-v4_0_0.xsd">
@@ -79,7 +83,7 @@ pom.xml
             <scope>provided</scope>
         </dependency>
 
-		<!-- Logging -->
+        <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
@@ -136,17 +140,17 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
- ## 3.MultipartConfigElement
+## 3. MultipartConfigElement
 
 创建一个 Servlet 初始化器类并注册一个`javax.servlet.MultipartConfigElement`
 
-MyWebInitializer.java
+`MyWebInitializer.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -189,26 +193,26 @@ public class MyWebInitializer extends
 
     }
 
-} 
+}
 ```
 
-查看 [MultipartConfigElement](http://web.archive.org/web/20190225100939/http://docs.oracle.com/javaee/6/api/javax/servlet/MultipartConfigElement.html) 方法签名。
+查看`MultipartConfigElement`方法签名。
 
 ```java
- public MultipartConfigElement(java.lang.String location,
+public MultipartConfigElement(java.lang.String location,
                               long maxFileSize,
                               long maxRequestSize,
-                              int fileSizeThreshold) 
+                              int fileSizeThreshold)
 ```
 
-## 4.弹簧配置
+## 4. Spring 配置
 
 注册一个`multipartResolver` bean，并返回`StandardServletMultipartResolver`
 
-SpringWebMvcConfig.java
+`SpringWebMvcConfig.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -225,15 +229,15 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan({"com.mkyong"})
 public class SpringWebMvcConfig extends WebMvcConfigurerAdapter {
 
-	// Bean name must be "multipartResolver", by default Spring uses method name as bean name.
+    // Bean name must be "multipartResolver", by default Spring uses method name as bean name.
     @Bean
     public MultipartResolver multipartResolver() {
         return new StandardServletMultipartResolver();
     }
 
-	/*
-	// if the method name is different, you must define the bean name manually like this :
-	@Bean(name = "multipartResolver")
+    /*
+    // if the method name is different, you must define the bean name manually like this :
+    @Bean(name = "multipartResolver")
     public MultipartResolver createMultipartResolver() {
         return new StandardServletMultipartResolver();
     }*/
@@ -247,20 +251,27 @@ public class SpringWebMvcConfig extends WebMvcConfigurerAdapter {
         return viewResolver;
     }
 
-} 
+}
 ```
 
 在这个阶段，Servlet 3.0 多部分请求解析配置正确，您可以开始上传文件了。
 
-## 4.单个文件上传
+## 5. 单个文件上传
 
-4.1 普通 HTML 表单标签。
+5.1 普通 HTML 表单标签。
 
-upload.jsp
+`upload.jsp`
 
-```java
- <html>
 
+
+## 4. 单文件上传示例
+
+### 4.1 创建上传页面
+
+`upload.jsp`
+
+```html
+<html>
 <body>
 <h1>Spring MVC file upload example</h1>
 
@@ -270,28 +281,28 @@ upload.jsp
 </form>
 
 </body>
-</html> 
+</html>
 ```
 
-4.2 显示上传状态的另一个页面。
+### 4.2 显示上传状态的另一个页面
 
-uploadStatus.jsp
+`uploadStatus.jsp`
 
-```java
- <html>
+```html
+<html>
 <body>
 <h1>Upload Status</h1>
 <h2>Message : ${message}</h2>
 </body>
-</html> 
+</html>
 ```
 
-4.3 在控制器中，将上传的文件映射到`MultipartFile`
+### 4.3 在控制器中，将上传的文件映射到 `MultipartFile`
 
-UploadController.java
+`UploadController.java`
 
 ```java
- package com.mkyong.controller;
+package com.mkyong.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -310,7 +321,7 @@ import java.util.StringJoiner;
 @Controller
 public class UploadController {
 
-	//Save the uploaded file to this folder
+    //Save the uploaded file to this folder
     private static String UPLOADED_FOLDER = "F://temp//";
 
     @GetMapping("/")
@@ -335,8 +346,8 @@ public class UploadController {
             Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
             Files.write(path, bytes);
 
-            redirectAttributes.addFlashAttribute("message", 
-                        "You successfully uploaded '" + file.getOriginalFilename() + "'");
+            redirectAttributes.addFlashAttribute("message",
+                    "You successfully uploaded '" + file.getOriginalFilename() + "'");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -350,18 +361,17 @@ public class UploadController {
         return "uploadStatus";
     }
 
-} 
+}
 ```
 
-## 5.多文件上传
+## 5. 多文件上传
 
-5.1 只需添加更多的文件输入。
+### 5.1 只需添加更多的文件输入
 
-uploadMulti.jsp
+`uploadMulti.jsp`
 
-```java
- <html>
-
+```html
+<html>
 <body>
 <h1>Spring MVC multi files upload example</h1>
 
@@ -373,70 +383,70 @@ uploadMulti.jsp
 </form>
 
 </body>
-</html> 
+</html>
 ```
 
-5.2 在 Spring Controller 中，将多个上传的文件映射到`MultipartFile []`
+### 5.2 在 Spring Controller 中，将多个上传的文件映射到 `MultipartFile[]`
 
-UploadController.java
+`UploadController.java`
 
 ```java
- //...
+//...
 
-    @PostMapping("/uploadMulti")
-    public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
-                                  RedirectAttributes redirectAttributes) {
+@PostMapping("/uploadMulti")
+public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
+                              RedirectAttributes redirectAttributes) {
 
-        StringJoiner sj = new StringJoiner(" , ");
+    StringJoiner sj = new StringJoiner(" , ");
 
-        for (MultipartFile file : files) {
+    for (MultipartFile file : files) {
 
-            if (file.isEmpty()) {
-                continue; //next pls
-            }
-
-            try {
-
-                byte[] bytes = file.getBytes();
-                Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-                Files.write(path, bytes);
-
-                sj.add(file.getOriginalFilename());
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+        if (file.isEmpty()) {
+            continue; //next pls
         }
 
-        String uploadedFileName = sj.toString();
-        if (StringUtils.isEmpty(uploadedFileName)) {
-            redirectAttributes.addFlashAttribute("message", 
-                        "Please select a file to upload");
-        } else {
-            redirectAttributes.addFlashAttribute("message", 
-                        "You successfully uploaded '" + uploadedFileName + "'");
-        }
+        try {
 
-        return "redirect:/uploadStatus";
+            byte[] bytes = file.getBytes();
+            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+            Files.write(path, bytes);
+
+            sj.add(file.getOriginalFilename());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
-    @GetMapping("/uploadMultiPage")
-    public String uploadMultiPage() {
-        return "uploadMulti";
+    String uploadedFileName = sj.toString();
+    if (StringUtils.isEmpty(uploadedFileName)) {
+        redirectAttributes.addFlashAttribute("message",
+                "Please select a file to upload");
+    } else {
+        redirectAttributes.addFlashAttribute("message",
+                "You successfully uploaded '" + uploadedFileName + "'");
     }
-    //... 
+
+    return "redirect:/uploadStatus";
+
+}
+
+@GetMapping("/uploadMultiPage")
+public String uploadMultiPage() {
+    return "uploadMulti";
+}
+//...
 ```
 
-## 6.超过句柄最大上传大小
+## 6. 超过句柄最大上传大小
 
-为了处理常见的超过最大上传大小的异常，声明一个`@ControllerAdvice`并捕获`MultipartException`
+为了处理常见的超过最大上传大小的异常，声明一个 `@ControllerAdvice` 并捕获 `MultipartException`
 
-GlobalExceptionHandler.java
+`GlobalExceptionHandler.java`
 
 ```java
- package com.mkyong.exception;
+package com.mkyong.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -454,7 +464,7 @@ public class GlobalExceptionHandler {
 
     }
 
-	// For commons-fileupload solution
+    // For commons-fileupload solution
     /*@ExceptionHandler(MaxUploadSizeExceededException.class)
     public String handleError2(MaxUploadSizeExceededException e, RedirectAttributes redirectAttributes) {
 
@@ -462,68 +472,62 @@ public class GlobalExceptionHandler {
         return "redirect:/uploadStatus";
 
     }*/
-} 
+}
 ```
 
 **Tomcat Connection Reset**
-If you deployed to Tomcat, and unable to catch the file size exceeded exception, this may cause by the Tomcat `maxSwallowSize` setting. Read this – [Spring file upload and connection reset issue](http://web.archive.org/web/20190225100939/http://www.mkyong.com/spring/spring-file-upload-and-connection-reset-issue/)
 
-## 7.演示
+如果您部署到 Tomcat，并且无法捕获文件大小超出的异常，这可能是由 Tomcat 的 `maxSwallowSize` 设置引起的。阅读此文档 – [Spring file upload and connection reset issue](http://web.archive.org/web/20190225100939/http://www.mkyong.com/spring/spring-file-upload-and-connection-reset-issue/)
 
-获取下面的源代码，并使用嵌入式 Jetty 服务器`mvn jetty:run`进行测试。
+## 7. 演示
 
-7.1 回顾上面的`pom.xml`，嵌入式 Jetty 将在这个`/spring4upload`上下文中部署 web 应用程序。
+获取下面的源代码，并使用嵌入式 Jetty 服务器 `mvn jetty:run` 进行测试。
+
+### 7.1 回顾上面的 `pom.xml`，嵌入式 Jetty 将在这个 `/spring4upload` 上下文中部署 web 应用程序
 
 Terminal
 
-```java
- project $ mvn jetty:run
+```bash
+project $ mvn jetty:run
 //...
 [INFO] Started o.e.j.m.p.JettyWebAppContext@341672e{/spring4upload,
-	file:/SpringMVCUploadExample/src/main/webapp/,AVAILABLE}{file:/SpringMVCUploadExample/src/main/webapp/}
+    file:/SpringMVCUploadExample/src/main/webapp/,AVAILABLE}{file:/SpringMVCUploadExample/src/main/webapp/}
 [WARNING] !RequestLog
 [INFO] Started ServerConnector@3ba1308d{HTTP/1.1}{0.0.0.0:8080}
 [INFO] Started @3743ms
 [INFO] Started Jetty Server
-[INFO] Starting scanner at interval of 10 seconds. 
+[INFO] Starting scanner at interval of 10 seconds.
 ```
 
-7.2 访问*http://localhost:8080/spring 4 upload*
+### 7.2 访问 `http://localhost:8080/spring4upload`
 
 ![spring-mvc-file-upload-example1](img/eee2d0b623476297ead31b2189f26238.png)
 
-7.3 选择一个文件'*myfirstexel . XML*'并上传。
+### 7.3 选择一个文件 `myfirstexel.xml` 并上传
 
 ![spring-mvc-file-upload-example2](img/9f2a2840a0e66ea8028aa45fbe352ec0.png)
 
-7.4 访问*http://localhost:8080/spring 4 upload/upload multipage*
+### 7.4 访问 `http://localhost:8080/spring4upload/uploadMultiPage`
 
 ![spring-mvc-file-upload-example3](img/d65f600cc454f4852c1f9ea304bc2040.png)
 
-7.5 选择几个文件并上传。
+### 7.5 选择几个文件并上传
 
 ![spring-mvc-file-upload-example4](img/812d507d4ace05de234e1d692d0cbc98.png)
 
-7.6 选择一个大于 5mb 的文件，您将访问此页面。
+### 7.6 选择一个大于 5MB 的文件，您将访问此页面
 
 ![spring-mvc-file-upload-max-size-exceed](img/4ea814d59eecd78a56c8b83b8c2418c6.png)
 
-## 8.下载源代码
+## 8. 下载源代码
 
 Download – [spring-mvc-file-upload-example.zip](http://web.archive.org/web/20190225100939/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-file-upload-example.zip) (10 KB)
 
-*P.S 对于 Spring 2.5.x，试试这个[Spring . 2.5-file-upload-example . zip](http://web.archive.org/web/20190225100939/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-FileUpload-Example.zip)(10KB)*
+*P.S 对于 Spring 2.5.x，试试这个 [SpringMVCForm-FileUpload-Example.zip](http://web.archive.org/web/20190225100939/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-FileUpload-Example.zip) (10KB)*
 
 ## 参考
 
-1.  [春季上传文件](http://web.archive.org/web/20190225100939/https://spring.io/guides/gs/uploading-files/)
-2.  [Spring 的多部分(文件上传)支持](http://web.archive.org/web/20190225100939/https://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-multipart)
+1. [春季上传文件](http://web.archive.org/web/20190225100939/https://spring.io/guides/gs/uploading-files/)
+2. [Spring 的多部分（文件上传）支持](http://web.archive.org/web/20190225100939/https://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-multipart)
 
 [file upload](http://web.archive.org/web/20190225100939/http://www.mkyong.com/tag/file-upload/) [multipart](http://web.archive.org/web/20190225100939/http://www.mkyong.com/tag/multipart/) [spring mvc](http://web.archive.org/web/20190225100939/http://www.mkyong.com/tag/spring-mvc/)
-
-
-
-
-
-
-

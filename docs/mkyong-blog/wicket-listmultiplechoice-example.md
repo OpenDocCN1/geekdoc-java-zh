@@ -1,3 +1,4 @@
+
 # Wicket ListMultipleChoice 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-listmultiplechoice-example/>
@@ -5,7 +6,7 @@
 在 Wicket 中，您可以使用`ListMultipleChoice`创建一个**多选滚动列表框**。
 
 ```java
- //Java 
+//Java 
 import org.apache.wicket.markup.html.form.ListMultipleChoice;
 ...
 //choices in list box
@@ -25,12 +26,12 @@ ListMultipleChoice<String> listNumbers = new ListMultipleChoice<String>(
 <select wicket:id="number"></select> 
 ```
 
-## 1.Wicket 多重选择列表框示例
+## 1. Wicket 多重选择列表框示例
 
-示例通过“`ListMultipleChoice`”显示一个多选可滚动列表框，并默认一个选定值。
+示例通过`ListMultipleChoice`显示一个多选可滚动列表框，并默认一个选定值。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,12 +78,12 @@ public class ListMultipleChoicePage extends WebPage {
 } 
 ```
 
- ## 2.Wicket HTML 页面
+## 2. Wicket HTML 页面
 
-页来呈现多选可滚动列表。
+页面用来呈现多选可滚动列表。
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 .feedbackPanelINFO {
@@ -108,9 +109,9 @@ public class ListMultipleChoicePage extends WebPage {
 </html> 
 ```
 
- ## 3.演示
+## 3. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问 — *http://localhost:8080/wicket examples/*
 
 “数字 6”被自动选择。
 
@@ -118,17 +119,12 @@ public class ListMultipleChoicePage extends WebPage {
 
 选择“数字 2、4、6”并点击显示按钮。
 
-![wicket listbox](img/b839c974ca5a2df2ed487e624e0afea8.png "wicket-listmultiplechoice-example2")Download it – [Wicket-ListMultipleChoice-Examples.zip](http://web.archive.org/web/20190214232815/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-ListMultipleChoice-Examples.zip) (7KB)
+![wicket listbox](img/b839c974ca5a2df2ed487e624e0afea8.png "wicket-listmultiplechoice-example2")
+
+下载 — [Wicket-ListMultipleChoice-Examples.zip](http://web.archive.org/web/20190214232815/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-ListMultipleChoice-Examples.zip) (7KB)
 
 ## 参考
 
-1.  Wicket list multiple choice Javadoc
+1. Wicket list multiple choice Javadoc
 
 [listbox](http://web.archive.org/web/20190214232815/http://www.mkyong.com/tag/listbox/) [wicket](http://web.archive.org/web/20190214232815/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

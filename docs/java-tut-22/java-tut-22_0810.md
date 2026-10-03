@@ -1,3 +1,4 @@
+
 # 创建客户端程序
 
 > 原文：[`docs.oracle.com/javase/tutorial/rmi/client.html`](https://docs.oracle.com/javase/tutorial/rmi/client.html)
@@ -14,7 +15,6 @@ package compute;
 public interface Task<T> {
     T execute();
 }
-
 ```
 
 调用`Compute`对象方法的代码必须获取对该对象的引用，创建一个`Task`对象，然后请求执行该任务。稍后将显示任务类`Pi`的定义。使用单个参数构造`Pi`对象，该参数是所需结果的精度。任务执行的结果是表示计算到指定精度的![π符号](img/1000ed6961e308609010dca5338f3e68.png)的`java.math.BigDecimal`。
@@ -47,7 +47,6 @@ public class ComputePi {
         }
     }    
 }
-
 ```
 
 像`ComputeEngine`服务器一样，客户端首先安装安全管理器。这一步是必要的，因为接收服务器远程对象存根的过程可能需要从服务器下载类定义。为了让 RMI 下载类，必须启用安全管理器。
@@ -60,7 +59,7 @@ public class ComputePi {
 
 `Pi`类实现了`Task`接口，并计算了![π符号](img/18da0a76f9e973138bc9428740982fff.png)的值到指定的小数位数。对于这个示例，实际算法并不重要。重要的是算法是计算密集型的，这意味着你希望它在一个能力强大的服务器上执行。
 
-这是``client.Pi``的源代码，该类实现了`Task`接口：
+这是`client.Pi`的源代码，该类实现了`Task`接口：
 
 ```java
 package client;
@@ -158,7 +157,6 @@ public class Pi implements Task<BigDecimal>, Serializable {
         return result;
     }
 }
-
 ```
 
 注意，所有可序列化的类，无论它们是否直接或间接实现了`Serializable`接口，都必须声明一个名为`serialVersionUID`的`private` `static` `final`字段，以确保在不同版本之间的序列化兼容性。如果该类之前没有发布过版本，则该字段的值可以是任何`long`值，类似于`Pi`使用的`227L`，只要该值在未来版本中一致使用即可。如果该类的先前版本已发布但没有显式声明`serialVersionUID`，但与该版本的序列化兼容性很重要，则必须使用先前版本的默认隐式计算值作为新版本显式声明的值。可以运行`serialver`工具来确定先前版本的默认计算值。

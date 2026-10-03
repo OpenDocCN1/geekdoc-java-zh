@@ -1,3 +1,4 @@
+
 # 如何将你的想法变成一家创业公司
 
 > 原文：<https://medium.com/javarevisited/how-to-turn-your-idea-into-startup-1f2e8c89fc99?source=collection_archive---------1----------------------->

@@ -1,3 +1,4 @@
+
 # 使用自定义类型映射
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/sqlcustommapping.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqlcustommapping.html)
@@ -9,9 +10,7 @@
 下面涵盖了以下主题：
 
 +   实现 SQLData
-
 +   使用连接的类型映射
-
 +   使用自定义类型映射
 
 ## 实现 SQLData
@@ -21,16 +20,14 @@
 结构化类型`ADDRESS`的 SQL 定义如下：
 
 ```java
-
-  CREATE TYPE ADDRESS
-  (
-    NUM INTEGER,
-    STREET VARCHAR(40),
-    CITY VARCHAR(40),
-    STATE CHAR(2),
-    ZIP CHAR(5)
-  );
-
+CREATE TYPE ADDRESS
+(
+  NUM INTEGER,
+  STREET VARCHAR(40),
+  CITY VARCHAR(40),
+  STATE CHAR(2),
+  ZIP CHAR(5)
+);
 ```
 
 为了自定义映射`ADDRESS`类型而实现`SQLData`接口的类可能如下所示：
@@ -67,7 +64,6 @@ public class Address implements SQLData {
         stream.writeString(zip);
     }
 }
-
 ```
 
 ## 使用连接的类型映射
@@ -78,7 +74,6 @@ public class Address implements SQLData {
 java.util.Map map = con.getTypeMap();
 map.put("SchemaName.ADDRESS", Class.forName("Address"));
 con.setTypeMap(map);
-
 ```
 
 每当调用`getObject`方法检索`ADDRESS`类型的实例时，驱动程序将检查与连接关联的类型映射，并看到它有一个`ADDRESS`的条目。驱动程序将注意到`Address`类的`Class`对象，创建其实例，并在后台执行许多其他操作以将`ADDRESS`映射到`Address`。您只需生成映射的类，然后在类型映射中进行条目设置，让驱动程序知道有一个自定义映射。驱动程序将完成其余所有工作。
@@ -93,7 +88,6 @@ ResultSet rs = stmt.executeQuery(
     "WHERE STORE_NO = 100003");
 rs.next();
 Struct address = (Struct)rs.getObject("LOCATION");
-
 ```
 
 变量`address`包含以下属性值：`4344`、`"First_Street"`、`"Verona"`、`"CA"`、`"94545"`。
@@ -106,7 +100,6 @@ ResultSet rs = stmt.executeQuery(
     "WHERE STORE_NO = 100003");
 rs.next();
 Address store_3 = (Address)rs.getObject("LOCATION");
-
 ```
 
 变量`store_3`现在是`Address`类的实例，每个属性值都是`Address`的一个字段的当前值。请注意，在将`getObject`方法检索的对象转换为`Address`对象并将其分配给`store_3`之前，必须记得进行转换。还要注意，`store_3`必须是一个`Address`对象。
@@ -130,10 +123,9 @@ PreparedStatement pstmt = con.prepareStatement(
     "WHERE STORE_NO = 100003");
 pstmt.setObject(1, store_3);
 pstmt.executeUpdate();
-
 ```
 
-列`LOCATION`中的值是`ADDRESS`类型的实例。驱动程序检查连接的类型映射，看到将`ADDRESS`与类`Address`关联的条目，因此使用`Address`中指示的自定义映射。当代码使用变量`*store_3*`作为第二个参数调用`setObject`方法时，驱动程序检查并看到`*store_3*`表示`Address`类的实例，该类实现了结构化类型`ADDRESS`的`SQLData`接口，并再次自动使用自定义映射。
+列`LOCATION`中的值是`ADDRESS`类型的实例。驱动程序检查连接的类型映射，看到将`ADDRESS`与类`Address`关联的条目，因此使用`Address`中指示的自定义映射。当代码使用变量`store_3`作为第二个参数调用`setObject`方法时，驱动程序检查并看到`store_3`表示`Address`类的实例，该类实现了结构化类型`ADDRESS`的`SQLData`接口，并再次自动使用自定义映射。
 
 没有`ADDRESS`的自定义映射，更新将更像这样：
 
@@ -147,7 +139,6 @@ PreparedStatement pstmt = con.prepareStatement(
     "LOCATION.ZIP = '94546' " +
     "WHERE STORE_NO = 100003");
 pstmt.executeUpdate;
-
 ```
 
 ## 使用您自己的类型映射

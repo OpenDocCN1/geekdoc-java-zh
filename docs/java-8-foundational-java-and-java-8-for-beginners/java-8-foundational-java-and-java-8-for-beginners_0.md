@@ -1,11 +1,7 @@
+
 # Java 8：Java 基础与 Java 8 初学者指南
 
-
-
 ![](img/00041.jpeg)
-
-
-
 
 ## 致谢
 
@@ -13,64 +9,61 @@
 
 向大家表示感谢。
 
-
-
-
-
-
-
-
 ## 献词
 
 本书首先献给全能的神，万物的施予者，他赋予我创作的灵感，并承诺如果我继续努力，他将为我推开那沉重的石头。其次，献给每一个相信知识就是光、相信有了知识黑暗就会消散、真光将穿透出来的人。
 
 - 第 6 章
-    - 程序选择语句
-    - 6.1 if 语句
-    - 6.2 if else 语句
-    - 6.3 三元运算符
-    - 6.4 else if 语句
-    - 6.5 Switch 语句
+  - 程序选择语句
+  - 6.1 `if` 语句
+  - 6.2 `if else` 语句
+  - 6.3 三元运算符
+  - 6.4 `else if` 语句
+  - 6.5 `Switch` 语句
 - 第 7 章
-    - 数组、ArrayList 和并行排序
-    - 7.1 数组声明
-    - 7.2 数组赋值
-    - 7.3 多维数组
-    - 7.4 增强型 For 循环
-    - 7.5 数组排序
-    - 7.5b 并行排序
-    - 7.6 数组复制
-    - 7.7 ArrayList
-    - 7.8a ArrayList 赋值和增强型 for 循环
-    - 7.8b 使用 Lambda 迭代 ArrayList
-    - 7.9 删除数组列表元素
-    - 7.10 Iterator 接口
+  - 数组、`ArrayList` 和并行排序
+  - 7.1 数组声明
+  - 7.2 数组赋值
+  - 7.3 多维数组
+  - 7.4 增强型 `For` 循环
+  - 7.5 数组排序
+  - 7.5b 并行排序
+  - 7.6 数组复制
+  - 7.7 `ArrayList`
+  - 7.8a `ArrayList` 赋值和增强型 `for` 循环
+  - 7.8b 使用 `Lambda` 迭代 `ArrayList`
+  - 7.9 删除数组列表元素
+  - 7.10 `Iterator` 接口
 - 第 8 章
-    - 字符串与正则表达式
-    - 8.1 String 类方法
-    - 8.2 正则表达式
-    - 8.3 正则表达式构造
-    - 8.4 正则表达式应用
+  - 字符串与正则表达式
+  - 8.1 `String` 类方法
+  - 8.2 正则表达式
+  - 8.3 正则表达式构造
+  - 8.4 正则表达式应用
 - 第 9 章
-    - 异常处理
-
-
-
-
+  - 异常处理
 
 ## 9.1 `try..catch` 语句模型
+
 ## 9.2 异常处理的好处
-## 9.3 在 Catch 语句中捕获两个或多个异常
+
+## 9.3 在 `Catch` 语句中捕获两个或多个异常
+
 # 9.4 异常层次
 
 # 第 10 章 XML 处理
+
 ## 10.1 使用 Java 创建 XML
+
 ## 10.2 使用 Java 读取 XML
 
 # 第 11 章 Java Applets
-## 11.1 Applet 元素
-## 11.2 Applet 的结构
-## 11.3 示例 Applet
+
+## 11.1 `Applet` 元素
+
+## 11.2 `Applet` 的结构
+
+## 11.3 示例 `Applet`
 
 # 结论
 
@@ -78,7 +71,7 @@
 
 这是一本特殊的 Java 书。它的目标是通过通简单的语言解释面向对象编程概念，消除新 Java 程序员通常会对 Java 编程的恐惧；为深入且轻松地理解软件设计开发中的设计模式理论打下坚实的基础，最终目标是传承持久的 Java 遗产；同时，通过与核心 Java API 交互，尽可能避免版本狂热症，只讨论与开发者相关的必要新增，并展示这些新增是如何变得必要的以及它们的应用。
 
-万变皆变，其道不变。虽然在 Java 中事物几乎没有变化，但新功能总是层出不断（版本狂热）。最新的新增是由于多核计算机的发展（双核甚至四核）所需的，这使得改进核心 API 变得至关重要，从而产生了带有 lambda 表达式的更智能的 Java 代码，以便它们可以在多个处理器上运行，节省时间并提高效率。这导致了书中介绍的 Java 8 的问世。尽管如此，这本书将将保持常青，并成为一本可以一直作为参考指南的宝书。
+万变皆变，其道不变。虽然在 Java 中事物几乎没有变化，但新功能总是层出不断（版本狂热）。最新的新增是由于多核计算机的发展（双核甚至四核）所需的，这使得改进核心 API 变得至关重要，从而产生了带有 `lambda` 表达式的更智能的 Java 代码，以便它们可以在多个处理器上运行，节省时间并提高效率。这导致了书中介绍的 Java 8 的问世。尽管如此，这本书将将保持常青，并成为一本可以一直作为参考指南的宝书。
 
 在此刻，我想第一个祝贺你发现了这本书，因为作为一名认证的软件开发人员和微软认证技术专家，我非常乐意与你分享我对编程、尤其是对 Java 编程的热爱。请关注我，先不要急着丢掉移动设备，因为这是一个非常特别的开始。
 
@@ -132,7 +125,7 @@ Java servlets 是基于 Web 的 Java 程序版本。
 
 步骤 5：在弹出的“环境变量”对话框中，向下滚动“系统变量”列表，并选择“变量”列下的 `path`。
 
-步骤 6：点击弹出的“编辑系统变量”对话框中的“编辑”按钮，将光标移动到内容的末尾，输入你的 jdk bin 文件夹路径，首先输入一个分号以将要添加的路径与列表中的最后一个路径隔开，如下所示：
+步骤 6：点击弹出的“编辑系统变量”对话框中的“编辑”按钮，将光标移动到内容的末尾，输入你的 `jdk` `bin` 文件夹路径，首先输入一个分号以将要添加的路径与列表中的最后一个路径隔开，如下所示：
 
 ```
 %\system32\windowsPowerShell\V1.0\;c\program files\java\jdk1.8.0_51\bin
@@ -140,18 +133,14 @@ Java servlets 是基于 Web 的 Java 程序版本。
 
 步骤 7：点击“编辑系统变量”对话框的确定按钮。
 
-步骤 8：
-
-
-
-
-
-点击“环境变量”对话框的确定按钮。
+步骤 8：点击“环境变量”对话框的确定按钮。
 
 ### 第 9 步
+
 点击“系统属性”弹出框的确定按钮以最终设置路径。
 
 ### 第 10 步
+
 你可以通过在提示符中运行下面的 `set path` 命令来确认路径已成功设置：
 
 ```cmd
@@ -164,7 +153,7 @@ C:\> set path
 
 图 1.1. 在命令提示符中运行 `set path` 命令的输出。
 
-你应该能在路径列表中看到你的 jdk 路径。如果没有，请关闭 `cmd` 窗口并重新打开。
+你应该能在路径列表中看到你的 `jdk` 路径。如果没有，请关闭 `cmd` 窗口并重新打开。
 
 ### 1.4.2 下载并安装 Java Netbeans IDE 开发工具
 
@@ -209,10 +198,6 @@ Java 作为一种面向对象的编程语言，拥有自己的数据类型和运
 | `char` | `Character` |
 
 表 2.2 数值型基本数据类型。
-
-
-
-
 
 | 常量变量 | 常量变量名称的每个字母都应该大写，单词之间用下划线分隔 | `LAST_MONTH` |
 | :--- | :--- | :--- |
@@ -347,7 +332,9 @@ result = value1 / value2;
 
 #### 算术取模二元运算符 (`%`)
 
-取模二元运算符作用于两个数值操作数，包括 java 在内的大多数语言中用百分号表示。它返回普通除法的余数。用法语法如下：
+
+
+取模二元运算符作用于两个数值操作数，包括 `java` 在内的大多数语言中用百分号表示。它返回普通除法的余数。用法语法如下：
 
 ```
 result = value1 % value2;
@@ -385,24 +372,20 @@ public class BinaryOperators
 
 图 2.2. 程序列表 2.2 的输出。
 
-
-
-
-
 关系运算符在某种程度上类似于二元运算符，因为它们也同时作用于两个操作数，不同在于它们被用于测试受影响的操作数中是否存在某些条件。可用的关系运算符及其解释如表 2.4 所示：
 
 | 关系运算符 | 解释 | 使用语法 |
 | :--- | :--- | :--- |
-| == | 等于 | `a == b` |
-| != | 不等于 | `a != b` |
-| < | 小于 | `a < b` |
-| > | 大于 | `a > b` |
-| <= | 小于等于 | `a <= b` |
-| >= | 大于等于 | `a >= b` |
+| `==` | 等于 | `a == b` |
+| `!=` | 不等于 | `a != b` |
+| `<` | 小于 | `a < b` |
+| `>` | 大于 | `a > b` |
+| `<=` | 小于等于 | `a <= b` |
+| `>=` | 大于等于 | `a >= b` |
 
 表 2.4 关系运算符及其解释。
 
-关系运算符通常用于为条件语句创建测试表达式，例如稍后将讨论的“if”语句和“while”语句。关系运算符的优先级低于算术运算符。例如，
+关系运算符通常用于为条件语句创建测试表达式，例如稍后将讨论的 `if` 语句和 `while` 语句。关系运算符的优先级低于算术运算符。例如，
 
 ```
 sum < value1 * value2
@@ -416,7 +399,7 @@ sum < (value1 * value2)
 
 ## 2.8 Lambda 间接运算符 (->)
 
-新引入的 lambda 间接运算符看起来非常像经典的 C/C++ 编程指针运算符，它执行的操作与赋值运算符 (=) 非常相似。例如，以下表达式；
+新引入的 lambda 间接运算符看起来非常像经典的 C/C++ 编程指针运算符，它执行的操作与赋值运算符 (`=`) 非常相似。例如，以下表达式；
 
 ```
 y -> y * y
@@ -528,10 +511,6 @@ public class BookLibrary
   }
 }
 ```
-
-
-
-
 
 ```java
 System.out.println("The title of my book is " + myBook.getBookTitle() );
@@ -673,6 +652,8 @@ eagle = new Bird( );
 
 由于鸟和飞机等对象可以飞行，机器人和摄像头可以移动，而鱼和潜艇可以游泳，因此行为与其类型紧密相关。这些方法通常以动词（动作词）命名。例如，该类的 `setFlightStatus()` 方法是该类别中所有对象的通用行为，因为鸟可能会决定飞向高空，或栖息在海平面某处。下面的程序列表 3.1 让这一概念生动起来。
 
+
+
 ```java
 import javax.swing.JOptionPane;
 
@@ -692,10 +673,6 @@ public class BirdObject{
 }
 ```
 
-
-
-
-
 ![](img/00005.jpeg)
 
 图 3.1 程序列表 3.1 JOption 输入面板。
@@ -704,7 +681,7 @@ public class BirdObject{
 
 图 3.2. 程序列表 3.1 的输出。
 
-程序列表 3.1 通过导入 `JOptionPane` 类开始，以便能够使用“JOptionPane”输入方法 `showInputDialog()`，这将使我们在程序后部分能够输入一个表示鸟类海拔高度的数字。此操作有助于我们更改对象（`eagle`）的飞行状态。`import` 关键字帮助我们导入可能需要的称为应用程序编程接口（`API`）的工具类和包，而且这类有很多。我们可用的有 `input`、`maths`、`string` 等，如需查看 `core API` 类的完整文档，请访问以下链接：[`docs.oracle.com/javase/8/docs/api/index.html`](http://docs.oracle.com/javase/8/docs/api/index.html)
+程序列表 3.1 通过导入 `JOptionPane` 类开始，以便能够使用 `JOptionPane` 输入方法 `showInputDialog()`，这将使我们在程序后部分能够输入一个表示鸟类海拔高度的数字。此操作有助于我们更改对象（`eagle`）的飞行状态。`import` 关键字帮助我们导入可能需要的称为应用程序编程接口（`API`）的工具类和包，而且这类有很多。我们可用的有 `input`、`maths`、`string` 等，如需查看 `core API` 类的完整文档，请访问以下链接：[`docs.oracle.com/javase/8/docs/api/index.html`](http://docs.oracle.com/javase/8/docs/api/index.html)
 
 接下来定义了一个 `public class BirdObject`，这是主类，并且一个 java 文件中只能有一个这样的类。
 
@@ -804,7 +781,7 @@ Parameters senderAddr
 Parameters status
 ```
 
-为了获得此输出，您需要在命令行提示符中使用 –parameters 选项编译程序：
+为了获得此输出，您需要在命令行提示符中使用 `–parameters` 选项编译程序：
 
 ```bash
 C:\java_codes> javac –parameters Courier.java
@@ -847,8 +824,6 @@ class MobilePhone{
   public String getTextMessage( ){
 }
 ```
-
-
 
 ```java
       return textMessage;
@@ -939,6 +914,7 @@ nokia.makeACall();
 同样，可以通过在子类中定义一个名称相似的方法，并遵循以下函数重写（覆盖）规则来重写基类方法：
 
 a) 子类必须继承自一个具有同名方法的父类
+
 b) 重写的方法签名与父类中要重写的方法签名相似
 
 例如，父类 `MobilePhone` 的 `playAGame()` 方法在子类 `SmartPhone` 中通过定义具有相同签名的方法进行了重写，如下所示：
@@ -993,7 +969,6 @@ public SmartPhonePhone
 ```
 
 参数构造函数 `SmartPhone(String nmodel)` 中的语句 `this();` 指向当前类的无参数构造函数 `SmartPhone()`。因此，该构造函数会在参数构造函数的体之前执行。请注意，如果你打算使用 `this` 和 `super` 关键字来执行构造函数，它们必须是你在构造函数中写的第一个语句，以确保默认和基构造函数在任何其他构造函数之前执行。
-
 
 
 
@@ -1119,8 +1094,6 @@ abstract class class_name{
 ```
 
 抽象方法被隐式声明为 `public`。
-
-
 
 类不继承接口，而是实现一个或多个接口。一个类一次只能继承一个类，这使得接口在应用中更具活性和多态性。根据标准，接口使用形容词形式命名，并使用 `interface` 关键字创建。如果接口存在成员变量，则被声明为 `public` 和 `static`，其成员方法默认声明为 `public` 和 `abstract`。总而言之，接口只能有常量、抽象方法和默认方法作为其成员变量和方法。创建的语法如下所示：
 
@@ -1272,29 +1245,30 @@ class AutomaticVehicle extends MotorVehicle{
 }
 ```
 
-
-
-
 括号是可选的，大括号也是可选的。如果你在右侧有多个语句，你可以像上面描述的那样将语句封装在大括号中；如果你在左侧有多个参数，也可以将它们封装在括号中。类型声明也是可选的；编译器可以从提供的参数中进行推断。此外，不需要 `return` 关键字。以下是有效的 lambda 表达式示例：
 
 ```
 (a)->a *a;
 ```
+
 接收一个参数 `a`，将其与自身相乘并返回结果。
 
 ```
 a -> a + a;
 ```
+
 接收一个参数 `a`，将它们相加并返回结果。
 
 ```
 (int a, int b) -> a – b;
 ```
+
 在间接引用左侧接收参数 `a` 和 `b`，从参数 `a` 中减去参数 `b` 的值并返回结果。
 
 ```
 (String t) -> System.out.println(t);
 ```
+
 该 lambda 表达式将字符串 `t` 的内容打印到控制台。
 
 ### 4.9.2 在函数接口中使用 Lambda 
@@ -1306,6 +1280,7 @@ interface multiplier{
   float processMyNumber(float r);
 }
 ```
+
 上文 4.8.1 节已定义。
 
 程序列表 4.4：
@@ -1382,13 +1357,15 @@ public class ForLoop
 
 ![](img/00012.jpeg)
 
+
+
 图 5.1 程序列表 5.1 的输出。
 
 程序列表 5.1 中的 `for` 循环语句从循环变量语句中的变量 `i` 初始化为 1 开始（`i = 1`）。然后它评估循环条件语句（`i<10`）以测试变量 `i` 是否仍然小于 10，如果是，则执行 `for` 循环体。如果你在 `for` 循环块中只有一行语句，可以省略循环语句的开启和关闭括号。
 
 ## 5.2 嵌套 for 循环
 
-嵌套 for 循环表示发生特定次数的迭代事件。它是另一个 `for loop` 内部的 `for loop`。`for loop` 的语法如下：
+嵌套 `for` 循环表示发生特定次数的迭代事件。它是另一个 `for loop` 内部的 `for loop`。`for loop` 的语法如下：
 
 ```java
 for(loop_var1; cond1; inc1) {
@@ -1422,17 +1399,17 @@ public class NestedFor
 
 ## 5.3 增强型 For 循环
 
-增强型 for 循环通常用于数组，其通用语法如下：
+增强型 `for` 循环通常用于数组，其通用语法如下：
 
 ```java
 for( data_type element: array_name )
 ```
 
-稍将在数组部分介绍增强型 for 循环。
+稍将在数组部分介绍增强型 `for` 循环。
 
 ## 5.4 Lambda 循环
 
-lambda foreach 随着 `stream` 类引入 `java.util.Collections` 包被引入到 Java 8 SE。`stream` 类自带了一些工具方法，如 `min`、`max`、`filter`、`findFirst` 等。现在，`stream` 可以与 lambda foreach 循环结合使用，将增强型 for 循环简化为以下语句：
+`lambda foreach` 随着 `stream` 类引入 `java.util.Collections` 包被引入到 Java 8 SE。`stream` 类自带了一些工具方法，如 `min`、`max`、`filter`、`findFirst` 等。现在，`stream` 可以与 `lambda foreach` 循环结合使用，将增强型 `for` 循环简化为以下语句：
 
 ```
 collection_name.stream().forEach((object) -> {
@@ -1440,7 +1417,7 @@ collection_name.stream().forEach((object) -> {
 })
 ```
 
-`ArrayList` 等集合现在可以使用 `stream` 方法配合 `forEach` 语句来处理它们的集合。数组是相同类型对象的集合（例如从 1 到 10 的一组整数），而 `arraylist` 是相同类型对象的集合。我们将在本章的 5.7 节和本书第七章的 7.8b 节讨论这一点。下面的程序列表 5.3 演示了通过将数组转换为 arraylist，然后使用 `forEach` 功能 lambda 表达式列出数组的内容。
+`ArrayList` 等集合现在可以使用 `stream` 方法配合 `forEach` 语句来处理它们的集合。数组是相同类型对象的集合（例如从 1 到 10 的一组整数），而 `arraylist` 是相同类型对象的集合。我们将在本章的 5.7 节和本书第七章的 7.8b 节讨论这一点。下面的程序列表 5.3 演示了通过将数组转换为 `arraylist`，然后使用 `forEach` 功能 `lambda` 表达式列出数组的内容。
 
 ```java
 import java.util.Arrays;
@@ -1458,9 +1435,6 @@ public class FilterLoop
 }
 ```
 
-
-
-
 输出如下方的 5.3 图所示：
 
 ![](img/00014.jpeg)
@@ -1471,7 +1445,7 @@ public class FilterLoop
 
 ## 5.5 While 语句
 
-while 循环用于我们需要根据条件表达式的求值结果来执行程序语句或语句块的情况。while 语句的语法如下所示：
+`while` 循环用于我们需要根据条件表达式的求值结果来执行程序语句或语句块的情况。`while` 语句的语法如下所示：
 
 ```java
 While (conditional expression){
@@ -1480,7 +1454,7 @@ While (conditional expression){
 }
 ```
 
-例如，为了生成一个在 0 到 10 之间的奇数列表，我们需要一个 while 循环，因为在开始计数之前，我们可能不知道有多少个奇数。因此，我们做的只是为程序设置一个限制，让程序为我们列出奇数，无论是在 0 到 10 的范围还是 0 到 1000 的范围。程序列表 5.4 生成了 0 到 10 范围内的奇数列表：
+例如，为了生成一个在 0 到 10 之间的奇数列表，我们需要一个 `while` 循环，因为在开始计数之前，我们可能不知道有多少个奇数。因此，我们做的只是为程序设置一个限制，让程序为我们列出奇数，无论是在 0 到 10 的范围还是 0 到 1000 的范围。程序列表 5.4 生成了 0 到 10 范围内的奇数列表：
 
 程序列表 5.4：
 
@@ -1499,7 +1473,7 @@ public class WhileLoop
 }
 ```
 
-while 循环迭代地执行“if 程序块”，递减变量 `counter` 中的值，直到 `counter` 变为 0 时 while 循环终止。`if` 语句的条件表达式通过使用模运算符（`%`）除 `counter` 来测试变量 `counter` 的值是否为奇数，该运算符返回除法的余数。如果 `if` 条件表达式返回大于 0 的值，则所涉及的操作数为奇数，并且该值被打印到输出中。程序列表 5.4 执行的输出如下方的 5.4 图所示：
+`while` 循环迭代地执行“`if` 程序块”，递减变量 `counter` 中的值，直到 `counter` 变为 0 时 `while` 循环终止。`if` 语句的条件表达式通过使用模运算符（`%`）除 `counter` 来测试变量 `counter` 的值是否为奇数，该运算符返回除法的余数。如果 `if` 条件表达式返回大于 0 的值，则所涉及的操作数为奇数，并且该值被打印到输出中。程序列表 5.4 执行的输出如下方的 5.4 图所示：
 
 ![](img/00015.jpeg)
 
@@ -1507,7 +1481,7 @@ while 循环迭代地执行“if 程序块”，递减变量 `counter` 中的值
 
 ## 5.6 Do 语句
 
-do 语句是 while 语句的一种变体。它用于我们希望程序语句或语句块至少执行一次的情况。do 语句的语法描述如下：
+`do` 语句是 `while` 语句的一种变体。它用于我们希望程序语句或语句块至少执行一次的情况。`do` 语句的语法描述如下：
 
 ```java
 do{
@@ -1516,11 +1490,11 @@ program statement;
 While(conditional _expression);
 ```
 
-do 循环语句块在条件表达式被求值之前执行。
+`do` 循环语句块在条件表达式被求值之前执行。
 
 ## 5.7 流“filter” 方法
 
-Java 8 SE 中新引入的流的 `filter` 方法可以与 `forEach`  表达式结合使用，在处理集合时替换 while 循环，为了简单起见，如下方的程序列表 5.5 所示：
+Java 8 SE 中新引入的流的 `filter` 方法可以与 `forEach` 表达式结合使用，在处理集合时替换 `while` 循环，为了简单起见，如下方的程序列表 5.5 所示：
 
 程序列表 5.5：
 
@@ -1555,7 +1529,7 @@ System.out.println("\n A list of Odd numbers: ");
 
 ## 6.1 if 语句
 
-`if` 语句仅在其条件表达式求值为布尔值 true 时才执行其语句块，如果返回布尔值 false，则将控制流转移到“if 块” 后的程序语句。`if` 语句的一般语法描述如下：
+`if` 语句仅在其条件表达式求值为布尔值 `true` 时才执行其语句块，如果返回布尔值 `false`，则将控制流转移到“`if` 块”后的程序语句。`if` 语句的一般语法描述如下：
 
 ```java
 if (conditional_expression){
@@ -1572,7 +1546,7 @@ if ((counter % 2) != 0)
 
 ## 6.2 if else 语句
 
-`if else` 语句是一种复合 `if` 语句。除了有 if 程序块外，它还有一个 else 程序块，当条件表达式的结果为 false 时会处理该 else 块。`if else` 的语法为：
+`if else` 语句是一种复合 `if` 语句。除了有 `if` 程序块外，它还有一个 `else` 程序块，当条件表达式的结果为 `false` 时会处理该 `else` 块。`if else` 的语法为：
 
 ```java
 if (conditional_expression){
@@ -1609,7 +1583,7 @@ public class IfElse
 conditional_expression ? expression-1 : expression-2;
 ```
 
-如果条件表达式返回布尔值 true，则执行 `expression-1`，否则执行并返回 `expression-2`。程序列表 6.2 展示了三元运算符的使用。
+如果条件表达式返回布尔值 `true`，则执行 `expression-1`，否则执行并返回 `expression-2`。程序列表 6.2 展示了三元运算符的使用。
 
 ```java
 public class TernaryOperator
@@ -1625,7 +1599,7 @@ public class TernaryOperator
 
 ## 6.4 else if 语句
 
-`else if` 语句是另一种复合 `if` 语句，可以测试多个备选条件表达式的返回的布尔结果，并根据返回结果执行相应的 if 块。`else if` 语句的用法描述如下：
+`else if` 语句是另一种复合 `if` 语句，可以测试多个备选条件表达式的返回的布尔结果，并根据返回结果执行相应的 `if` 块。`else if` 语句的用法描述如下：
 
 ```java
 if(conditional_expression1){
@@ -1635,10 +1609,6 @@ else if (conditional_expression2){
   program statement;
 }
 ```
-
-
-
-
 
 ```java
 else if (conditional_expression3){
@@ -1688,7 +1658,7 @@ public class ElseIf
 
 ## 6.5 Switch 语句
 
-`switch` 语句的工作原理与 `else-if` 语句非常相似，不同在于表达式必须求值为一个整数、`String` 或枚举类型，并将其与 `switch` 的 case 值进行比较，以确定执行哪个 case 块。因此，在需要根据给定的 `char`、`int` 或枚举输入值执行备选代码块的情况下，`switch` 语句是最合适的语句结构选项。`switch` 语句的通用语法如下：
+`switch` 语句的工作原理与 `else-if` 语句非常相似，不同在于表达式必须求值为一个整数、`String` 或枚举类型，并将其与 `switch` 的 `case` 值进行比较，以确定执行哪个 `case` 块。因此，在需要根据给定的 `char`、`int` 或枚举输入值执行备选代码块的情况下，`switch` 语句是最合适的语句结构选项。`switch` 语句的通用语法如下：
 
 ```java
 switch (expression)
@@ -1707,9 +1677,11 @@ switch (expression)
 }
 ```
 
-case 块不需要大大括号。case 块用如上所述的 `break` 语句终止，如果省略了 `break` 语句，程序执行将继续进行到下一个 case 块，以此类推，直到遇到 `break` 语句或到达 `switch` 语句的结束。下面的程序列表 6.4 演示了 `switch` 语句的使用：
+`case` 块不需要大大括号。`case` 块用如上所述的 `break` 语句终止，如果省略了 `break` 语句，程序执行将继续进行到下一个 `case` 块，以此类推，直到遇到 `break` 语句或到达 `switch` 语句的结束。下面的程序列表 6.4 演示了 `switch` 语句的使用：
 
 程序列表 6.4：
+
+
 
 ```java
 import javax.swing.JOptionPane;
@@ -1790,10 +1762,6 @@ public class SwitchStatement
 ### 7.4 增强型 for 循环
 
 增强型 for 循环是随 java5 引入的。它可以用于访问数组的内容，而你无需担心数组索引或检查数组长度。
-
-
-
-
 
 ```
 for (data_type slot_identifier : array_name) {
@@ -1914,9 +1882,13 @@ public class ArraySorter
 上述程序列表 7.4 的输出如下方图 7.4 所示：
 
 run:
+
 A list of array balls' content before sorting ->
+
 Array balls with 1st and 2nd contents sorted in ascending order ->
+
 Array balls contents sorted in ascending order with parallel sorting->
+
 Array balls with 1st and 2nd contents sorted in descending order ->
 
 SUCCESSFUL (total time: 0 seconds)
@@ -1972,10 +1944,6 @@ ArrayList<data_type> array_name = new ArrayList<data_type>();
 ArrayList<String> softDrinks = new ArrayList<String>();
 ```
 
-
-
-
-
 ```java
 class customerNames{
   String firstName, lastName;
@@ -2014,6 +1982,8 @@ for (customerNames t : customers)
 
 **程序列表 7.6：**
 
+
+
 ```java
 import java.util.*;
 
@@ -2046,11 +2016,11 @@ class customerNames{
 
 图 7.6 上述程序列表 7.6 的输出。
 
-Arraylists 通过在声明中使用泛泛型来确保类型安全。
+`Arraylists` 通过在声明中使用泛型来确保类型安全。
 
 ## 7.8a 使用增强型 for 循环进行 ArrayList 赋值和迭代
 
-当然，你可以使用赋值运算符如之前描述的那样为数组元素赋值，但你不能对 `ArrayList` 这样做，`ArrayList` 的 `add` 方法用于将新元素插入到 `ArrayList` 对象中。因为要插入元素的内存空间是根据请求动态创建的，而数组则已经创建了所有需要的元素槽并将其初始化为 null 值。以下语句向 `softDrinks` arraylist 对象中添加了一个元素：
+当然，你可以使用赋值运算符如之前描述的那样为数组元素赋值，但你不能对 `ArrayList` 这样做，`ArrayList` 的 `add` 方法用于将新元素插入到 `ArrayList` 对象中。因为要插入元素的内存空间是根据请求动态创建的，而数组则已经创建了所有需要的元素槽并将其初始化为 `null` 值。以下语句向 `softDrinks` `arraylist` 对象中添加了一个元素：
 
 ```java
 softDrinks.add("Coca Cola");
@@ -2062,7 +2032,7 @@ softDrinks.add("Coca Cola");
 arraylist_object.get(element_index);
 ```
 
-例如，要检索 arraylist `softDrinks` 中的第一个对象，可以使用以下语句：
+例如，要检索 `arraylist` `softDrinks` 中的第一个对象，可以使用以下语句：
 
 ```java
 softDrinks.get(0);
@@ -2096,7 +2066,7 @@ public class ArrayListProg
 
 ## 7.8b 使用 Lambda 进行 ArrayList 迭代
 
-如本书第 4 章第 4.5 节所述，引入 `Collections` 包和 `stream` 方法使得 java8 中集合的处理对于底层硬件来说变得更加简单和快速。为了说明这一点，对上面的程序列表 7.7 进行了修改，使用 `foreach` 函数语句来迭代 `softDrinks` `ArrayList` 的内容，用 lambda 的 `foreach` 语句替换了增强型 for 循环。此修改如下程序列表 7.8 所示。请享用。
+如本书第 4 章第 4.5 节所述，引入 `Collections` 包和 `stream` 方法使得 `java8` 中集合的处理对于底层硬件来说变得更加简单和快速。为了说明这一点，对上面的程序列表 7.7 进行了修改，使用 `foreach` 函数语句来迭代 `softDrinks` `ArrayList` 的内容，用 lambda 的 `foreach` 语句替换了增强型 for 循环。此修改如下程序列表 7.8 所示。请享用。
 
 **程序列表 7.8：**
 
@@ -2128,25 +2098,25 @@ public class ArrayListLambda
 
 ## 7.9 删除 ArrayList 对象
 
-可以使用 `ArrayList` 的 `clear()` 方法从 ArrayList 中删除所有对象。用法语法如下：
+可以使用 `ArrayList` 的 `clear()` 方法从 `ArrayList` 中删除所有对象。用法语法如下：
 
 ```java
 arraylist_object.clear();
 ```
 
-例如，要从 arraylist `softDrinks` 中删除所有元素，可以使用以下语句：
+例如，要从 `arraylist` `softDrinks` 中删除所有元素，可以使用以下语句：
 
 ```java
 softDrinks.clear();
 ```
 
-而要从 arraylist 删除特定的对象元素，可以使用以下语法：
+而要从 `arraylist` 删除特定的对象元素，可以使用以下语法：
 
 ```java
 arraylist_object.remove(object_element);
 ```
 
-例如，要从 arraylist `softDrinks` 中移除第一个对象，可以使用以下语句：
+例如，要从 `arraylist` `softDrinks` 中移除第一个对象，可以使用以下语句：
 
 ```java
 softDrinks.remove(0);
@@ -2154,7 +2124,7 @@ softDrinks.remove(0);
 
 ## 7.10 Iterator 接口：
 
-`ArrayList` 类实现了 `iterator` 接口，该接口具有以下方法：`next()`、`hasNext()` 和 `remove()`。`next()` 方法返回 arraylist 中的下一个对象元素。`hasNext()` 方法检查 `ArrayList` 中是否还有可用的对象元素，`remove()` 方法从列表中删除当前对象。在 java 程序中使用 `iterator` 接口，你必须从 java 工具包导入 `Iterator` 类（`java.util.Iterator`），或者使用语句 `java.util.*` 一次性导入工具包中的所有类，如下方的程序列表 7.9 所示：
+`ArrayList` 类实现了 `iterator` 接口，该接口具有以下方法：`next()`、`hasNext()` 和 `remove()`。`next()` 方法返回 `arraylist` 中的下一个对象元素。`hasNext()` 方法检查 `ArrayList` 中是否还有可用的对象元素，`remove()` 方法从列表中删除当前对象。在 `java` 程序中使用 `iterator` 接口，你必须从 `java` 工具包导入 `Iterator` 类（`java.util.Iterator`），或者使用语句 `java.util.*` 一次性导入工具包中的所有类，如下方的程序列表 7.9 所示：
 
 ```java
 import java.util.ArrayList;
@@ -2177,29 +2147,26 @@ public class IteratorProg
 }
 ```
 
-
-
-
 程序列表 7.9 展示了 `Iterator` 接口的使用，通过在 `while` 循环表达式中使用 `Iterator` 接口的 `hasNext()` 方法来测试列表是否为空，然后使用 `next()` 方法从列表中获取下一个对象元素。这再次带我们来到了另一个关于 Java 数组的启发性章节的结尾。我希望你在整理这一章节时和我一样过得愉快。请随我进入下一个章节，我们将对 `Strings` 进行更简短的讨论。
 
 # 第 8 章：字符串与正则表达式
 
-字符串数据类型在 `java` 编程语言中是一个对象。字符串表示为双引号内字符的无限组合。例如，“John” 是一个字符串字面量。现在你可以通过以下语句将字符串变量 `firstname` 定义为指向字符串字面量 “John”：
+字符串数据类型在 `java` 编程语言中是一个对象。字符串表示为双引号内字符的无限组合。例如，"John" 是一个字符串字面量。现在你可以通过以下语句将字符串变量 `firstname` 定义为指向字符串字面量 "John"：
 
 ```java
-String firstName = “John”;
+String firstName = "John";
 ```
 
-注意，一旦像上面那样将字符串内容赋值给变量，其内容就不能再更改，但变量中的字符串引用可以更改为另一个。例如，当你尝试使用加号进行字符串拼接（如下所示）来将字符串变量 `firstName` 的内容修改为新值 “Johnson”时：
+注意，一旦像上面那样将字符串内容赋值给变量，其内容就不能再更改，但变量中的字符串引用可以更改为另一个。例如，当你尝试使用加号进行字符串拼接（如下所示）来将字符串变量 `firstName` 的内容修改为新值 "Johnson"时：
 
 ```java
-firstName = firstName + “son”;
+firstName = firstName + "son";
 ```
 
 当编译器遇到上述这样的语句时，它使用其核心 API `stringBuffer` 方法 `append()` 将该语句重写如下所示：
 
 ```java
-firstName = new StringBuffer(firstName).append(“son”).toString();
+firstName = new StringBuffer(firstName).append("son").toString();
 ```
 
 并产生输出：Johnson
@@ -2216,9 +2183,9 @@ System.out.println(Arrays.toString(ballsCopy));
 
 字符串类有许多工具方法，例如用于返回字符串长度的 `length()` 方法，`charAt(int)` 返回字符串中指定位置的字符，`compareTo(string)` 用于比较两个字符串的相似性，如果字符串相似则返回整数值 0；如果比较的字符串位于提供的参数之前，则返回小于 0 的整数；如果比较的字符串位于提供的方法参数之后，则返回 1。
 
-与 `compareTo(string)` 方法类似的方法是 `compareToIgnoreCase(String)`，区别在于它执行的是不区分大小写的比较。`trim()` 方法移除字符串开头和结尾的空格，`toLowerCase()` 将字符串转换为小写。下面的程序列表 8.1 阐了字符串类方法的使用。
+与 `compareTo(string)` 方法类似的方法是 `compareToIgnoreCase(String)`，区别在于它执行的是不区分大小写的比较。`trim()` 方法移除字符串开头和结尾的空格，`toLowerCase()` 将字符串转换为小写。下面的程序列表 8.1 阐明了字符串类方法的使用。
 
-程序列表 8.1：
+**程序列表 8.1：**
 
 ```java
 import java.util.*;
@@ -2250,26 +2217,36 @@ public class StringMethods
 
 ## 8.2 正则表达式
 
-正则表达式是用于验证程序输入的字符串模式。虽然 `java` 已经了一些输入检查方法（如 `Scanner` 类提供的方法），但这些方法在大多数输入验证场景中并不十分有效。例如，你可能需要创建自己的方法来验证电话号码或特定的安全代码数字。这时，你需要创建自己的唯一模式来验证用户的输入，而这就是通过正则表达式来完成的。
+正则表达式是用于验证程序输入的字符串模式。虽然 `java` 已经有了一些输入检查方法（如 `Scanner` 类提供的方法），但这些方法在大多数输入验证场景中并不十分有效。例如，你可能需要创建自己的方法来验证电话号码或特定的安全代码数字。这时，你需要创建自己的唯一模式来验证用户的输入，而这就是通过正则表达式来完成的。
 
 ## 8.3 正则表达式的公式化
 
 正则表达式是通过使用可选量符和具有隐含含义的字符组合制而成的。某些字符和量符的表格如下方的 8.2 和 8.3 所示：
 
 | 正则表达式字符 | 含义 |
+
 | :--- | :--- |
+
 | `\d` | 代表数值输入并匹配单个数字，例如 1 |
-| `\D` | 代表非数值输入并匹配单个字符输入，例如 “a” |
+
+| `\D` | 代表非数值输入并匹配单个字符输入，例如 "a" |
+
 | `\w` | 代表单个字母数字字符，匹配 0 – 9, a – z 和 A – Z 范围内的单个输入，包括下划线 |
+
 | `/…/` | 包裹正则表达式模式 |
+
 | `\[…]` | 代表字符集或范围 |
 
 图 8.2 某些正则表达式字符及其含义的表格。
 
 | 量符 | 含义 |
+
 | :--- | :--- |
+
 | `?` | 0 次或 1 次出现 |
+
 | `*` | 0 次或多次 |
+
 | `+` | 1 次或多次 |
 
 图 8.3 正则表达式量符的表格。
@@ -2288,17 +2265,17 @@ public class StringMethods
 
 是的，你做到了。你有一个用于验证名称输入的正则表达式。但过程并不总是如此简单，例如，制定用于有效的电子邮件地址、世界各地电话号码、万事卡号等的正则表达式并不简单。但作为一名专业的软件开发人员，你应该能够完成这些。
 
-
-
-然而，本书无法详尽地介绍正则表达式，因为这显然超出了它的涵盖范畴，因为正则表达式本身是一门学科，值得专门用一本书来说。因此，作者建议你下载标题为“[[正则表达式：初级及高级程序员进阶](http://www.amazon.co.uk/dp/B00U4VPZ5U)”的正则表达式书籍。这也是作者的另一作，有助于对该主题有更深入的理解。你可以通过点击链接或在 Kindle 书店的搜索框中输入标题从亚马逊下载此书。感谢你的支持。
+然而，本书无法详尽地介绍正则表达式，因为这显然超出了它的涵盖范畴，因为正则表达式本身是一门学科，值得专门用一本书来说。因此，作者建议你下载标题为"[[正则表达式：初级及高级程序员进阶](http://www.amazon.co.uk/dp/B00U4VPZ5U)"的正则表达式书籍。这也是作者的另一作品，有助于对该主题有更深入的理解。你可以通过点击链接或在 Kindle 书店的搜索框中输入标题从亚马逊下载此书。感谢你的支持。
 
 ## 8.4 正则表达式的应用
 
 `string` 类提供了一个 `matches(string)` 方法，该方法将字符串与提供的正则表达式参数进行匹配，如果字符串匹配正则表达式，则返回 `Boolean` 值 `true`，否则返回 `false`。接下来，程序列表 8.4 使用了我们之前在上方 8.3 节中创建的名称正则表达式模式来验证名称输入。请享用。
 
-程序列表 8.4：
+**程序列表 8.4：**
 
-```
+
+
+```java
 import javax.swing.JOptionPane;
 
 public class RegularExp
@@ -2351,7 +2328,7 @@ class StringRegex{
 
 与 C++ 和 C# 中的一样，编程异常在 `try..catch` 语句块内被捕获并处理。`try..catch` 语句的通用语法如下：
 
-```
+```java
 try{
   一个可能抛出异常的语句块；
 }
@@ -2369,7 +2346,7 @@ finally{
 
 使用 `try..catch` 语句结构的益处显而易见，因为在处理捕获的异常时不需要 `if` 语句；如果需要捕获更多异常，你只需要提供更多的 `catch` 语句块来处理这些之前未被捕获的异常即可。具体操作方法如下文所示：
 
-```
+```java
 try{
   一个可能抛出异常的语句块；
 }
@@ -2395,7 +2372,7 @@ finally{
 
 如程序列表 9.1 所示，如果方法尝试访问数组边界之外的位置，则抛出 `ArrayIndexOutOfBoundsException`：
 
-```
+```java
 import javax.swing.JOptionPane;
 
 public class OutOfBound
@@ -2446,7 +2423,7 @@ class House{
 
 Java 7 允许在一个 catch 语句中捕获两个或多个异常。这通过竖线分隔异常类型来实现。其用法语法如下文所示：
 
-```
+```java
 try{
   一个可能抛出异常的语句块；
 }
@@ -2460,7 +2437,7 @@ finally{
 
 例如，程序列表 9.1 还可以测试除以零的数学异常，并在一个 catch 语句块中进行报告，如更新版本的程序列表 9.2 所示：
 
-```
+```java
 import javax.swing.JOptionPane;
 
 public class TwoExceptions
@@ -2469,13 +2446,6 @@ public class TwoExceptions
     House sheraton = new House( );
 try{
 ```
-
-
-` 标签内只有代码块，且缺少了后面对应的英文正文）。根据您提供的格式和示例，我为您翻译了代码块之后对应的描述部分。
-
-如果您有后续的完整英文正文，请提供，我将立即为您完成翻译。以下是基于您提供的代码描述部分的翻译：
-
-[content]
 
 ```java
 String roomNum = JOptionPane.showInputDialog("Please enter a room number of interest -> ");
@@ -2540,12 +2510,11 @@ class House{
 
 该语句被编写用于处理另一个算术异常（`ArithmeticException`），之后一切正常。如果你不知道你正在尝试捕获什么异常类型，简单地使用所有异常的父类（`Exception`）并打印出对象以了解你正在处理的异常类型。记住多态性。
 
-
-
-
 数据已以类似于数据库表的形式排列，便于使用 [SQL（用于关系型数据库管理系统的结构化查询语言)](http://www.amazon.co.uk/dp/B00UI3KF9K) 进行数据库处理操作。然而，我们的下一个挑战是以按照逻辑的方式组织这些数据，并以此使数据独立于任何数据库或编程应用程序，以便于共享和进程间通信。这是通过将 `ArrayList` `softDrinks` 的内容转换为 xml 文档来实现。程序列表 10.2 在程序列表 10.1 的基础上进行了改进，它使用 `DOM` 对象将 `ArrayList` `softDrinks` 转换为 xml 文档。
 
 #### 程序列表 10.2：
+
+
 
 ```java
 package xmlapplication;
@@ -2737,9 +2706,6 @@ BUILD SUCCESSFUL (total time: 0 seconds)
 
 图 10.2\. 上述程序列表 10.2 的 xml 输出。
 
-
-
-
 e) 同时将字符串表示写入文件
 
 这些是使用 DOM 对象写入 XML 文档时需要遵循的标准步骤。接下来，我们将讨论如何使用 Java 读取 XML 文档。
@@ -2755,6 +2721,8 @@ e) 同时将字符串表示写入文件
 程序列表 10.3 显示了如何使用上述 SAX 读取程序列表 10.2 创建的 XML 文档（`drinks.xml`）。
 
 程序列表 10.3：
+
+
 
 ```java
 package xmlapplication3;
@@ -2864,42 +2832,69 @@ class XmlReader{
 
 并且上述程序列表 10.3 的输出如图 10.3 所示：
 
+```
 Found the beginning of the document
+
 A starting element tag "Soft_Drinks" is located with the following attribute(s); "type" with a value "soft_drink"
+
 A starting element tag "Drink" is located
+
 A starting element tag "Name" is located
+
 with a content: "CocaCola"
+
 An Element tag "Name" is found.
+
 A starting element tag "Price" is located
+
 with a content: "0.32"
+
 An Element tag "Price" is found.
+
 An Element tag "Drink" is found.
+
 A starting element tag "Drink" is located
+
 A starting element tag "Name" is located
+
 with a content: "Fanta"
+
 An Element tag "Name" is found.
+
 A starting element tag "Price" is located
+
 with a content: "0.32"
+
 An Element tag "Price" is found.
+
 An Element tag "Drink" is found.
+
 A starting element tag "Drink" is located
+
 A starting element tag "Name" is located
+
 with a content: "Limca"
+
 An Element tag "Name" is found.
+
 A starting element tag "Price" is located
+
 with a content: "0.3"
+
 An Element tag "Price" is found.
+
 An Element tag "Drink" is found.
+
 An Element tag "Soft_Drinks" is found.
+
 End of document.
+
 BUILD SUCCESSFUL (total time: 2 seconds)
+```
 
 图 10.3。上述程序列表 10.3 的输出。
 
 我们确实走了一段很长的路。我希望你理解了这些程序列表，如果是的话，祝贺你。如果还没有，请休息一下后再尝试。在此期间，即使你理解了列表，我仍然希望你通过下载此书获取一些启发性的剂：“[Best Inspirational Quotes for Success; a subject by subject inspiration for life.](http://www.amazon.co.uk/dp/B00OBDHMSA)”来自西奥德·罗斯福、杰克·坎菲尔德、德圣母、齐格·齐格拉、亨利·福特、亚伯拉罕·林肯、本·卡森以及许多狮子般的人。
-
-
-
 
 相信我，当编程世界变得艰难时（这往往经常发生），你总是需要这些励志格言来坚持下去。因此，我为你整理了这些格言，以帮助你成为一个心理健康的程序员。请坚持下去，你很快就会看到光的。再次感谢你的付出和决心。
 
@@ -2964,8 +2959,11 @@ applet 通过 applet 元素嵌入到 html 文档中。applet 元素的描述如�
 applet 没有 java 应用程序中通用的静态 public main 方法，相反，它拥有的是公有的 `init()` 方法，用于在启动时初始化 applet。Java applets 不需要强制的方法。这些方法由浏览器根据 Java 虚拟机的要求调用。`Applet` 类（自 `Panel` 类）的以下方法对于实现 applet 至关重要：
 
 a) `public void init()`：被浏览器用于 applet 的初始化
+
 b) `pubic void start()`：被浏览器用于在初始化后启动 applet。在页面加载时调用
+
 c) `public void stop()`：被浏览器用于在页面离开时停止 applet
+
 d) `public void destroy()`：由浏览器用于销毁 applet 并清理内存
 
 上述 `Applet` 类的方法必须导入才能使用它们。applet 类的继承关系如图 11.2 所示：
@@ -2981,6 +2979,8 @@ d) `public void destroy()`：由浏览器用于销毁 applet 并清理内存
 列表 11.2 中的以下示例 applet 在浏览器启动时显示当前时间。
 
 列表 11.2：
+
+
 
 ```java
 import java.applet.Applet;
@@ -3028,10 +3028,6 @@ public class LocalTimeApplet extends Applet {
 </body>
 </html>
 ```
-
-
-
-
 
 <applet code="LocalTimeApplet.class" width=300 height=100> </applet>
 
@@ -3128,4 +3124,3 @@ b) 浏览器的安全设置可能会阻止你的 applet 执行
 ![](http://www.amazon.co.uk/dp/B00ZFVZ0K4)
 
 通过下载上面的书籍，学习制作精美的礼盒，并以你心仪的风格呈现你的礼物。下回再见，多谢，保重。拜拜。
-

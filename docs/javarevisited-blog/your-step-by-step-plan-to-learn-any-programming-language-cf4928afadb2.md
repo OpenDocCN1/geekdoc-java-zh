@@ -1,3 +1,4 @@
+
 # 学习任何编程语言的循序渐进的计划
 
 > 原文：<https://medium.com/javarevisited/your-step-by-step-plan-to-learn-any-programming-language-cf4928afadb2?source=collection_archive---------2----------------------->
@@ -22,19 +23,19 @@
 
 **把一个大任务**分解成小任务。例如:
 
-*   学习语言的一般语法；
-*   了解类、对象和异常处理；
-*   学习使用文件和 I / O 流；
-*   主[多线程](/javarevisited/8-best-multithreading-and-concurrency-courses-for-experienced-java-developers-8acfd3b25094)，
-*   了解[系列](/javarevisited/7-best-java-collections-and-stream-api-courses-for-beginners-in-2020-3ad18d52c38)；
-*   学习 [web 开发的基础知识，](/javarevisited/10-best-coursera-courses-for-web-development-and-web-design-9ec54ed92dd9)
-*   学习流行的框架，如 [Spring](/javarevisited/10-best-online-courses-to-learn-spring-framework-in-2020-f7f73599c2fd) 和 [Hibernate](/javarevisited/top-5-hibernate-online-training-courses-for-beginners-and-advance-java-programmers-469460596b2b) 等..
+- 学习语言的一般语法；
+- 了解类、对象和异常处理；
+- 学习使用文件和 I / O 流；
+- 主[多线程](/javarevisited/8-best-multithreading-and-concurrency-courses-for-experienced-java-developers-8acfd3b25094)，
+- 了解[系列](/javarevisited/7-best-java-collections-and-stream-api-courses-for-beginners-in-2020-3ad18d52c38)；
+- 学习 [web 开发的基础知识，](/javarevisited/10-best-coursera-courses-for-web-development-and-web-design-9ec54ed92dd9)
+- 学习流行的框架，如 [Spring](/javarevisited/10-best-online-courses-to-learn-spring-framework-in-2020-f7f73599c2fd) 和 [Hibernate](/javarevisited/top-5-hibernate-online-training-courses-for-beginners-and-advance-java-programmers-469460596b2b) 等..
 
 **创建一个方便的日程表**。例如:
 
-*   每天 4 小时；
-*   工作日 2 小时，周末 6 小时；
-*   只在周末，或者只在工作日。
+- 每天 4 小时；
+- 工作日 2 小时，周末 6 小时；
+- 只在周末，或者只在工作日。
 
 **跟踪进度**。你必须在学习期间跟踪你的进展，并将其与计划的里程碑进行比较，以了解你是否需要加强训练计划或在计划中添加新的主题。
 
@@ -46,13 +47,13 @@
 
 将学习过程分成几个阶段。例如:
 
-*   从 Oracle 站点和 IDE ( [IntelliJ IDEA](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05?source=---------16------------------) 、 [Eclipse](/javarevisited/6-free-best-eclipse-ide-courses-for-java-programmers-1229ee9e5d87) 或 NetBeans)安装 JDK (Java 开发工具包)；
-*   学习 Java 语法；
-*   学习[Java OOP](/javarevisited/my-favorite-courses-to-learn-object-oriented-programming-and-design-in-2019-197bab351733)；
-*   学习 Java 集合；
-*   学习流行的[库](/javarevisited/20-essential-java-libraries-and-apis-every-programmer-should-learn-5ccd41812fc7)和[框架](/javarevisited/5-essential-frameworks-every-java-developer-should-learn-6ed83315f1fb)；
-*   学习常用的 API(例如[servlet](/javarevisited/10-best-servlet-and-jsp-online-courses-for-java-developers-d23cf6902360)，JSP， [JDBC](/javarevisited/top-5-courses-to-learn-jdbc-and-database-connectivity-for-java-developers-free-and-best-of-lot-7945156fcc3?source=extreme_sidebar---------0-2----------------------) ，[JUnit](/javarevisited/5-courses-to-learn-junit-and-mockito-in-2019-best-of-lot-f217d8b93688))；
-*   掌握 [Git](/javarevisited/11-best-online-places-to-learn-git-for-beginners-in-2021-6dc2b7c6ef48) 等。
+- 从 Oracle 站点和 IDE ( [IntelliJ IDEA](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05?source=---------16------------------) 、 [Eclipse](/javarevisited/6-free-best-eclipse-ide-courses-for-java-programmers-1229ee9e5d87) 或 NetBeans)安装 JDK (Java 开发工具包)；
+- 学习 Java 语法；
+- 学习[Java OOP](/javarevisited/my-favorite-courses-to-learn-object-oriented-programming-and-design-in-2019-197bab351733)；
+- 学习 Java 集合；
+- 学习流行的[库](/javarevisited/20-essential-java-libraries-and-apis-every-programmer-should-learn-5ccd41812fc7)和[框架](/javarevisited/5-essential-frameworks-every-java-developer-should-learn-6ed83315f1fb)；
+- 学习常用的 API(例如[servlet](/javarevisited/10-best-servlet-and-jsp-online-courses-for-java-developers-d23cf6902360)，JSP， [JDBC](/javarevisited/top-5-courses-to-learn-jdbc-and-database-connectivity-for-java-developers-free-and-best-of-lot-7945156fcc3?source=extreme_sidebar---------0-2----------------------) ，[JUnit](/javarevisited/5-courses-to-learn-junit-and-mockito-in-2019-best-of-lot-f217d8b93688))；
+- 掌握 [Git](/javarevisited/11-best-online-places-to-learn-git-for-beginners-in-2021-6dc2b7c6ef48) 等。
 
 试着坚持这个计划，在理论和实践之间找到一个“中庸之道”。
 
@@ -80,8 +81,8 @@
 
 例如，您可以执行以下操作:
 
-*   设定每周和每月的目标。最好是让他们容易到达，而不是因为落后而让自己心烦意乱。
-*   **重要章节结束后分析结果。写下具体实现了什么。问问你自己，哪些进展顺利，哪些应该复制。问问自己下一个时期应该改进什么，如何改进。**
+- 设定每周和每月的目标。最好是让他们容易到达，而不是因为落后而让自己心烦意乱。
+- **重要章节结束后分析结果。写下具体实现了什么。问问你自己，哪些进展顺利，哪些应该复制。问问自己下一个时期应该改进什么，如何改进。**
 
 # 选择课程
 
@@ -89,10 +90,10 @@
 
 这里有一些你可以评估任何课程的方法，无论是在线课程还是编程书籍，这样你就知道你既有良好的理论基础，又有足够的实践空间。
 
-*   阅读这本书或在线课程的评论
-*   从同事那里获得推荐
-*   利用在线论坛、讨论组来研究哪些书或课程是好的
-*   确保课程是针对你特定的学习目标的。一个好的课程结构是一个逻辑的学习路径，有明确定义的子部分和任务，可以帮助你跟踪你的学习进度
+- 阅读这本书或在线课程的评论
+- 从同事那里获得推荐
+- 利用在线论坛、讨论组来研究哪些书或课程是好的
+- 确保课程是针对你特定的学习目标的。一个好的课程结构是一个逻辑的学习路径，有明确定义的子部分和任务，可以帮助你跟踪你的学习进度
 
 接下来要考虑的是你在向谁学习？注意课程创建者的可信度，选择那些真正的程序员，并且确实拥有他们声称的专业知识的创建者。阅读课程结束时给出的评论和证书的可信度。
 
@@ -142,19 +143,19 @@ Codecademy 是一个交互式在线平台，提供包括 Java 在内的 14 种�
 
 有时你可能需要比你的编程书籍或在线课程材料所能给你的更多的信息。谷歌搜索一个特定的问题总是可能的，但最好有几个值得信赖的额外资源来获得更多信息。这就是该领域的专家强烈推荐的做法:
 
-*   首先，不要忘记查看 Java [文档](https://docs.oracle.com/en/java/javase/index.html)，因为它是这种编程语言的基础。挖掘语言的核心总是好的。
-*   利用书籍、YouTube 视频([德里克·巴纳斯](https://www.youtube.com/user/derekbanas)、[编程知识](https://www.youtube.com/user/ProgrammingKnowledge)、 [thenewboston](https://www.youtube.com/user/thenewboston) )教程([辅导老师](https://www.tutorialsteacher.com/csharp/csharp-tutorials)、 [TutsPlus](https://tutsplus.com/) 、[学 JS](https://www.learn-js.org/) 、博客( [Softwarehow](https://www.softwarehow.com/) 、 [SitePoint](https://www.sitepoint.com/) 、[大卫·沃尔什](https://davidwalsh.name/))
-*   在学习完每个理论章节后，利用任何机会掌握自己的实践经验。它可以是在线练习、游戏，甚至是有抱负的程序员的竞赛。
+- 首先，不要忘记查看 Java [文档](https://docs.oracle.com/en/java/javase/index.html)，因为它是这种编程语言的基础。挖掘语言的核心总是好的。
+- 利用书籍、YouTube 视频([德里克·巴纳斯](https://www.youtube.com/user/derekbanas)、[编程知识](https://www.youtube.com/user/ProgrammingKnowledge)、 [thenewboston](https://www.youtube.com/user/thenewboston) )教程([辅导老师](https://www.tutorialsteacher.com/csharp/csharp-tutorials)、 [TutsPlus](https://tutsplus.com/) 、[学 JS](https://www.learn-js.org/) 、博客( [Softwarehow](https://www.softwarehow.com/) 、 [SitePoint](https://www.sitepoint.com/) 、[大卫·沃尔什](https://davidwalsh.name/))
+- 在学习完每个理论章节后，利用任何机会掌握自己的实践经验。它可以是在线练习、游戏，甚至是有抱负的程序员的竞赛。
 
 ## 与其他程序员交流
 
 新人犯的最大错误之一是试图自己解决所有编程难题。所以，不要犹豫，向更有经验的程序员同事寻求帮助。这里有一些社区，你可以加入并获得许多有用的提示和建议:
 
-*   [栈溢出](https://stackoverflow.com/):本论坛创办于 2008 年。目前，它拥有超过 5000 万用户。你必须登录，问问题，会有一些高级用户能够提供帮助。
-*   Reddit:这个平台提供来自世界各地用户的各种交流。
-*   这个对初学者和高级用户都有好处。如果你是新手，你甚至可以在这里学习 Java。此外，主题部分有关于编码的文章。
-*   [黑客新闻](https://news.ycombinator.com/):在这个论坛上，你可以找到关于网络安全和黑客攻击的新闻。
-*   [freeCodeCamp](https://www.freecodecamp.org/) :这是免费学习编码的资源，还有视频、新闻和互动课程。
+- [栈溢出](https://stackoverflow.com/):本论坛创办于 2008 年。目前，它拥有超过 5000 万用户。你必须登录，问问题，会有一些高级用户能够提供帮助。
+- Reddit:这个平台提供来自世界各地用户的各种交流。
+- 这个对初学者和高级用户都有好处。如果你是新手，你甚至可以在这里学习 Java。此外，主题部分有关于编码的文章。
+- [黑客新闻](https://news.ycombinator.com/):在这个论坛上，你可以找到关于网络安全和黑客攻击的新闻。
+- [freeCodeCamp](https://www.freecodecamp.org/) :这是免费学习编码的资源，还有视频、新闻和互动课程。
 
 这样的社区还能让你找到大量的编码资源、库、大量的开源项目，以及更多你可以贡献和分享经验的东西。
 

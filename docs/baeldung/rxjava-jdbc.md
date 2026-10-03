@@ -1,30 +1,31 @@
+
 # rxjava-jdbc 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rxjava-jdbc>
 
-## 1。概述
+## 1. 概述
 
-简单地说，rxjava-jdbc 是一个用于与关系数据库交互的 API，它允许流畅的方法调用。在这个快速教程中，我们将看看这个库，以及如何利用它的一些通用特性。
+简单地说，`rxjava-jdbc`是一个用于与关系数据库交互的 API，它允许流畅的方法调用。在这个快速教程中，我们将看看这个库，以及如何利用它的一些通用特性。
 
 如果您想了解 RxJava 的基础知识，请查看本文。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [rx Java 简介](/web/20221129015757/https://www.baeldung.com/rx-java)
+### [RxJava 简介](/web/20221129015757/https://www.baeldung.com/rx-java)
 
 Discover RxJava - a library for composing asynchronous and event-based programs.[Read more](/web/20221129015757/https://www.baeldung.com/rx-java) →
 
-## [用 RxJava 处理背压](/web/20221129015757/https://www.baeldung.com/rxjava-backpressure)
+### [用 RxJava 处理背压](/web/20221129015757/https://www.baeldung.com/rxjava-backpressure)
 
 A guide demonstrating several strategies of handling backpressure in RxJava[Read more](/web/20221129015757/https://www.baeldung.com/rxjava-backpressure) →
 
-## RxJava 中的可观察效用运算符
+### [RxJava 中的可观察效用运算符](/web/20221129015757/https://www.baeldung.com/rxjava-observable-operators)
 
 Learn how to use various RxJava utility operators.[Read more](/web/20221129015757/https://www.baeldung.com/rxjava-observable-operators) →
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-让我们从需要添加到我们的`pom.xml`中的 Maven 依赖项开始:
+让我们从需要添加到`pom.xml`中的 Maven 依赖项开始:
 
 ```java
 <dependency>
@@ -36,7 +37,7 @@ Learn how to use various RxJava utility operators.[Read more](/web/2022112901575
 
 我们可以在 [Maven Central](https://web.archive.org/web/20221129015757/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22rxjava-jdbc%22) 上找到最新版本的 API。
 
-## 3。主要部件
+## 3. 主要部件
 
 **`Database`类是运行所有常见类型的数据库交互的主要入口点。**为了创建一个`Database`对象，我们可以将一个`ConnectionProvider`接口实现的实例传递给`from()`静态方法:
 
@@ -51,10 +52,10 @@ Database db = Database.from(connectionProvider);
 
 为了做基本的操作，我们可以使用`Database`的以下 API:
 
-*   `select()`–用于 SQL 选择查询
-*   `update()`–用于 DDL 语句，如创建和删除，以及插入、更新和删除
+*   `select()` – 用于 SQL 选择查询
+*   `update()` – 用于 DDL 语句，如创建和删除，以及插入、更新和删除
 
-## 4。启动
+## 4. 启动
 
 在下一个快速示例中，我们将展示如何完成所有基本的数据库操作:
 
@@ -117,13 +118,13 @@ public class BasicQueryTypesTest {
 
 否则，代码将失败或产生不可预知的结果，除非我们指定希望查询以什么顺序执行。
 
-## 5。自动地图
+## 5. 自动映射
 
-automap 特性允许我们将选定的数据库记录映射到对象。
+`automap`特性允许我们将选定的数据库记录映射到对象。
 
 让我们看一下自动映射数据库记录的两种方法。
 
-### 5.1。使用接口自动映射
+### 5.1. 使用接口自动映射
 
 我们可以使用带注释的接口将数据库记录转换成对象。为此，我们可以创建一个带注释的接口:
 
@@ -163,7 +164,7 @@ public void whenSelectFromTableAndAutomap_thenCorrect() {
 }
 ```
 
-### 5.2。使用类自动映射
+### 5.2. 使用类自动映射
 
 我们还可以使用具体的类将数据库记录自动映射到对象。让我们看看这个类是什么样子的:
 
@@ -210,11 +211,11 @@ public void whenSelectManagersAndAutomap_thenCorrect() {
 
 有关自动映射的更多信息，请访问 GitHub 上的 [rxjava-jdbc 存储库](https://web.archive.org/web/20221129015757/https://github.com/davidmoten/rxjava-jdbc)
 
-## 6。处理大型物体
+## 6. 处理大型对象
 
 该 API 支持处理像 CLOBs 和 BLOBS 这样的大型对象。在接下来的小节中，我们将了解如何利用这一功能。
 
-### 6.1。土块
+### 6.1. CLOB
 
 让我们看看如何插入和选择 CLOB:
 
@@ -256,9 +257,9 @@ public void whenSelectCLOB_thenCorrect() throws IOException {
 }
 ```
 
-注意，`getStringFromInputStream()`是一个转换`InputStream to a String.`内容的方法
+注意，`getStringFromInputStream()`是一个转换`InputStream`到`String`内容的方法。
 
-### 6.2。斑点
+### 6.2. BLOB
 
 我们可以使用 API 以非常相似的方式处理 BLOBs。唯一的区别是，我们必须传递一个字节数组，而不是将一个`String`传递给`toSentinelIfNull()`方法。
 
@@ -291,13 +292,15 @@ public void setup() throws IOException {
 
 然后，我们可以重用前面例子中的相同测试。
 
-## 7 .**。交易**
+## 7. 事务
 
 接下来，我们来看看对事务的支持。
 
 事务管理允许我们处理用于在单个事务中分组多个数据库操作的事务，以便它们都可以被提交——永久保存到数据库，或者一起回滚。
 
 让我们看一个简单的例子:
+
+
 
 ```java
 @Test
@@ -330,11 +333,11 @@ public void whenCommitTransaction_thenRecordUpdated() {
 
 我们可以使用`rollback()`方法，同时捕捉一个`Exception`来回滚整个事务，以防代码由于任何原因而失败。我们可以为所有的`Exceptions`或特定的预期`Exceptions`这样做。
 
-## 8。返回生成的密钥
+## 8. 返回生成的密钥
 
 如果我们在正在处理的表中设置了`auto_increment`字段，我们可能需要检索生成的值。我们可以通过调用`returnGeneratedKeys()`方法来做到这一点。
 
-让我们看一个简单的例子:
+让我们看一个简单的例子：
 
 ```java
 @Test
@@ -351,8 +354,8 @@ public void whenInsertAndReturnGeneratedKey_thenCorrect() {
 }
 ```
 
-## 9。结论
+## 9. 结论
 
-在本教程中，我们已经看到了如何利用 rxjava `–` jdbc 的流畅风格的方法。我们还浏览了它提供的一些特性，比如自动映射、处理大型对象和事务。
+在本教程中，我们已经看到了如何利用`rxjava-jdbc`的流畅风格的方法。我们还浏览了它提供的一些特性，比如自动映射、处理大型对象和事务。
 
 和往常一样，GitHub 上有完整版本的代码[。](https://web.archive.org/web/20221129015757/https://github.com/eugenp/tutorials/tree/master/rxjava-modules/rxjava-libraries)

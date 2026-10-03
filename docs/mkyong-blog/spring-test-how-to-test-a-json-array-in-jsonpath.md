@@ -1,3 +1,4 @@
+
 # spring Test——如何在 jsonPath 中测试 JSON 数组
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/spring-boot/spring-test-how-to-test-a-json-array-in-jsonpath/>
@@ -5,7 +6,7 @@
 在 Spring 中，我们可以使用像`hasItem`和`hasSize`这样的 Hamcrest APIs 来测试 JSON 数组。查看以下示例:
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -70,14 +71,14 @@ public class BookControllerTest {
 
     }
 
-} 
+}
 ```
 
 用 Spring Boot 2 号进行了测试
 
 ## 参考
 
-*   [哈姆克雷斯特](http://web.archive.org/web/20210814204316/http://hamcrest.org/JavaHamcrest/)
-*   [弹簧座验证示例](/web/20210814204316/https://mkyong.com/spring-boot/spring-rest-validation-example/)
+* [哈姆克雷斯特](http://web.archive.org/web/20210814204316/http://hamcrest.org/JavaHamcrest/)
+* [弹簧座验证示例](/web/20210814204316/https://mkyong.com/spring-boot/spring-rest-validation-example/)
 
-Tags : [json](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/json/) [json array](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/json-array/) [spring test](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/spring-test/) [unit test](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/unit-test/)<input type="hidden" id="mkyong-current-postId" value="14947">
+Tags : [json](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/json/) [json array](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/json-array/) [spring test](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/spring-test/) [unit test](http://web.archive.org/web/20210814204316/https://mkyong.com/tag/unit-test/)

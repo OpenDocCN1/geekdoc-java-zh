@@ -1,30 +1,31 @@
+
 # FastJson 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/fastjson>
 
-## 1。概述
+## 1. 概述
 
 [**FastJson**](https://web.archive.org/web/20220815040838/https://github.com/alibaba/fastjson) 是一个轻量级的 Java 库，用于有效地将 Json 字符串转换成 Java 对象，反之亦然。
 
 在本文中，我们将深入研究 FastJson 库的几个具体和实际的应用程序。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-为了开始使用 FastJson，我们首先需要将它添加到我们的`pom.xml`:
+为了开始使用 FastJson，我们首先需要将它添加到我们的`pom.xml`：
 
 ```java
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>fastjson</artifactId>
     <version>1.2.13</version>
-</dependency> 
+</dependency>
 ```
 
 快速说明一下—[这是 Maven Central 上库的最新版本](https://web.archive.org/web/20220815040838/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22)。
 
-## 3。将 Java 对象转换成 JSON 格式
+## 3. 将 Java 对象转换成 JSON 格式
 
-让我们定义下面的`Person` Java bean:
+让我们定义下面的`Person` Java bean：
 
 ```java
 public class Person {
@@ -49,7 +50,7 @@ public class Person {
 }
 ```
 
-我们可以使用 **`JSON.toJSONString()`** 将 Java 对象转换成 JSON 字符串:
+我们可以使用 **`JSON.toJSONString()`** 将 Java 对象转换成 JSON 字符串：
 
 ```java
 private List<Person> listOfPersons = new ArrayList<Person>();
@@ -66,7 +67,7 @@ public void whenJavaList_thanConvertToJsonCorrect() {
 }
 ```
 
-这是结果:
+这是结果：
 
 ```java
 [  
@@ -85,7 +86,7 @@ public void whenJavaList_thanConvertToJsonCorrect() {
 
 我们还可以更进一步，开始定制输出并控制诸如**排序**，日期**格式化**，或者**序列化**标志之类的事情。
 
-例如，让我们更新 bean 并添加几个字段:
+例如，让我们更新 bean 并添加几个字段：
 
 ```java
 @JSONField(name="AGE", serialize=false)
@@ -101,13 +102,13 @@ private String firstName;
 private Date dateOfBirth;
 ```
 
-这里列出了我们可以和`**@JSONField**`注释一起使用的最基本的参数，以便定制转换过程:
+这里列出了我们可以和`@JSONField`注释一起使用的最基本的参数，以便定制转换过程：
 
 *   参数 **`format`** 用于正确格式化`date`属性
 *   默认情况下，FastJson 库完全序列化 Java bean，但是我们可以使用参数 **`serialize`** 来忽略特定字段的序列化
 *   参数 **`ordinal`** 用于指定字段顺序
 
-这是新的结果:
+这是新的结果：
 
 ```java
 [
@@ -124,13 +125,13 @@ private Date dateOfBirth;
 ]
 ```
 
-FastJson 还支持一个非常有趣的 **`BeanToArray`序列化**特性:
+FastJson 还支持一个非常有趣的 **`BeanToArray`序列化**特性：
 
 ```java
 String jsonOutput= JSON.toJSONString(listOfPersons, SerializerFeature.BeanToArray);
 ```
 
-这种情况下的输出如下所示:
+这种情况下的输出如下所示：
 
 ```java
 [
@@ -147,9 +148,9 @@ String jsonOutput= JSON.toJSONString(listOfPersons, SerializerFeature.BeanToArra
 ]
 ```
 
-## 4。创建 JSON 对象
+## 4. 创建 JSON 对象
 
-像[的其他 JSON 库](/web/20220815040838/https://www.baeldung.com/java-json)一样，从头开始创建一个 JSON 对象非常简单，只需要组合 **`JSONObject`** 和`**JSONArray**` 对象:
+像[其他的 JSON 库](/web/20220815040838/https://www.baeldung.com/java-json)一样，从头开始创建一个 JSON 对象非常简单，只需要组合 **`JSONObject`** 和`JSONArray` 对象：
 
 ```java
 @Test
@@ -166,7 +167,7 @@ public void whenGenerateJson_thanGenerationCorrect() throws ParseException {
 }
 ```
 
-这里是输出的样子:
+这里是输出的样子：
 
 ```java
 [
@@ -183,9 +184,9 @@ public void whenGenerateJson_thanGenerationCorrect() throws ParseException {
 ]
 ```
 
-## 5。将 JSON 字符串解析成 Java 对象
+## 5. 将 JSON 字符串解析成 Java 对象
 
-既然我们已经知道了如何从头开始创建 JSON 对象，以及如何将 Java 对象转换成它们的 JSON 表示，那么让我们把重点放在如何解析 JSON 表示上:
+既然我们已经知道了如何从头开始创建 JSON 对象，以及如何将 Java 对象转换成它们的 JSON 表示，那么让我们把重点放在如何解析 JSON 表示上：
 
 ```java
 @Test
@@ -203,30 +204,30 @@ public void whenJson_thanConvertToObjectCorrect() {
 
 请注意，如果您已经声明了自己的参数化构造函数，则必须定义一个**无参数或默认构造函数**，否则将抛出一个 **`com.alibaba.fastjson.JSONException`** 。
 
-下面是这个简单测试的输出:
+下面是这个简单测试的输出：
 
 ```java
 Person [age=20, fullName=John Doe, dateOfBirth=Wed Jul 20 08:51:12 WEST 2016]
 ```
 
-通过使用`@JSONField`注释中的选项`deserialize`，我们可以忽略特定字段的反序列化，在这种情况下，默认值将自动应用于被忽略的字段:
+通过使用`@JSONField`注释中的选项`deserialize`，我们可以忽略特定字段的反序列化，在这种情况下，默认值将自动应用于被忽略的字段：
 
 ```java
 @JSONField(name = "DATE OF BIRTH", deserialize=false)
 private Date dateOfBirth;
 ```
 
-这是新创建的对象:
+这是新创建的对象：
 
 ```java
 Person [age=20, fullName=John Doe, dateOfBirth=null]
 ```
 
-## 6。使用`ContextValueFilter` 配置 JSON 转换
+## 6. 使用`ContextValueFilter` 配置 JSON 转换
 
 在某些场景中，我们可能需要对从 Java 对象到 JSON 格式的转换过程有更多的控制。
 
-在这种情况下，我们可以利用 **`ContextValueFilter`** 对象对转换流进行额外的过滤和自定义处理:
+在这种情况下，我们可以利用 **`ContextValueFilter`** 对象对转换流进行额外的过滤和自定义处理：
 
 ```java
 @Test
@@ -248,7 +249,7 @@ public void givenContextFilter_whenJavaObject_thanJsonCorrect() {
 }
 ```
 
-在这个例子中，我们隐藏了`DATE OF BIRTH`字段，通过强制一个常数值，我们也忽略了所有不是`John`或`Doe:` 的字段
+在这个例子中，我们隐藏了`DATE OF BIRTH`字段，通过强制一个常数值，我们也忽略了所有不是`John`或`Doe:` 的字段：
 
 ```java
 [
@@ -261,11 +262,11 @@ public void givenContextFilter_whenJavaObject_thanJsonCorrect() {
 
 正如您所看到的，这是一个非常基本的示例，但是您当然也可以将相同的概念用于更复杂的场景——将 FastJson 提供的这些强大而轻量级的工具集结合到一个真实的项目中。
 
-## 7。使用`NameFilter`和`SerializeConfig`和
+## 7. 使用`NameFilter`和`SerializeConfig`
 
 FastJson 提供了一套工具，用于在处理任意对象时定制 Json 操作——我们没有这些对象的源代码。
 
-假设我们有一个编译版本的`Person` Java bean，最初在本文中声明，我们需要对字段命名和基本格式进行一些增强:
+假设我们有一个编译版本的`Person` Java bean，最初在本文中声明，我们需要对字段命名和基本格式进行一些增强：
 
 ```java
 @Test
@@ -282,13 +283,13 @@ public void givenSerializeConfig_whenJavaObject_thanJsonCorrect() {
 }
 ```
 
-我们已经使用 **`NameFilter`** 匿名类声明了`formatName`过滤器来处理字段名。新创建的过滤器与`Person`类相关联，然后被添加到一个全局实例中——这基本上是`**SerializeConfig**`类中的一个静态属性。
+我们已经使用 **`NameFilter`** 匿名类声明了`formatName`过滤器来处理字段名。新创建的过滤器与`Person`类相关联，然后被添加到一个全局实例中——这基本上是`SerializeConfig`类中的一个静态属性。
 
 现在我们可以轻松地将对象转换成 JSON 格式，如本文前面所示。
 
 请注意，我们使用了 **`toJSONStringWithDateFormat()`** 而不是`toJSONString()`来快速对日期字段应用相同的格式规则。
 
-这是输出结果:
+这是输出结果：
 
 ```java
 [  
@@ -307,7 +308,7 @@ public void givenSerializeConfig_whenJavaObject_thanJsonCorrect() {
 
 将 **`SerializeFilter`** 与 **`ContextValueFilter`** 结合使用，可以对任意复杂的 Java 对象的转换过程进行全面控制。
 
-## 8。结论
+## 8. 结论
 
 在本文中，我们展示了如何使用 FastJson 将 Java beans 转换为 Json 字符串，以及如何反过来。我们还展示了如何使用 FastJson 的一些核心特性来定制 Json 输出。
 

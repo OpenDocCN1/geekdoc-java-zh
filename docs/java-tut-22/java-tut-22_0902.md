@@ -1,29 +1,22 @@
+
 # 检索和解析方法修饰符
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/member/methodModifiers.html`](https://docs.oracle.com/javase/tutorial/reflect/member/methodModifiers.html)
 
 方法声明中可能包含的几个修饰符：
 
-+   访问修饰符：`public`、`protected`和`private`
++ 访问修饰符：`public`、`protected`和`private`
++ 限制为一个实例的修饰符：`static`
++ 禁止值修改的修饰符：`final`
++ 要求覆盖的修饰符：`abstract`
++ 防止重入的修饰符：`synchronized`
++ 表示在另一种编程语言中实现的修饰符：`native`
++ 强制严格浮点行为的修饰符：`strictfp`
++ 注解
 
-+   限制为一个实例的修饰符：`static`
-
-+   禁止值修改的修饰符：`final`
-
-+   要求覆盖的修饰符：`abstract`
-
-+   防止重入的修饰符：`synchronized`
-
-+   表示在另一种编程语言中实现的修饰符：`native`
-
-+   强制严格浮点行为的修饰符：`strictfp`
-
-+   注解
-
-``MethodModifierSpy``示例列出了具有给定名称的方法的修饰符。它还显示方法是否是合成的（编译器生成的）、可变参数的，或者是桥接方法（编译器生成的以支持泛型接口）。
+`MethodModifierSpy`示例列出了具有给定名称的方法的修饰符。它还显示方法是否是合成的（编译器生成的）、可变参数的，或者是桥接方法（编译器生成的以支持泛型接口）。
 
 ```java
-
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import static java.lang.System.out;
@@ -58,10 +51,9 @@ public class MethodModifierSpy {
 	}
     }
 }
-
 ```
 
-``MethodModifierSpy``产生的输出示例如下。
+`MethodModifierSpy`产生的输出示例如下。
 
 ```java
 $ *java MethodModifierSpy java.lang.Object wait*
@@ -77,7 +69,6 @@ public final native void java.lang.Object.wait(long)
   Modifiers:  public final native
   [ synthetic=false var_args=false bridge=false ]
 3 matching overloads found
-
 ```
 
 ```java
@@ -86,7 +77,6 @@ public static double java.lang.StrictMath.toRadians(double)
   Modifiers:  public static strictfp
   [ synthetic=false var_args=false bridge=false ]
 1 matching overload found
-
 ```
 
 ```java
@@ -95,7 +85,6 @@ private synchronized void MethodModifierSpy.inc()
   Modifiers: private synchronized
   [ synthetic=false var_args=false bridge=false ]
 1 matching overload found
-
 ```
 
 ```java
@@ -106,7 +95,6 @@ public java.lang.reflect.Constructor<T> java.lang.Class.getConstructor
   Modifiers: public transient
   [ synthetic=false var_args=true bridge=false ]
 1 matching overload found
-
 ```
 
 ```java
@@ -118,28 +106,24 @@ public int java.lang.String.compareTo(java.lang.Object)
   Modifiers: public volatile
   [ synthetic=true  var_args=false bridge=true  ]
 2 matching overloads found
-
 ```
 
 请注意，[`Method.isVarArgs()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#isVarArgs--)对于[`Class.getConstructor()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getConstructor-java.lang.Class...-)返回`true`。这表明方法声明如下：
 
 ```java
 public Constructor<T> getConstructor(Class<?>... parameterTypes)
-
 ```
 
 不要这样：
 
 ```java
 public Constructor<T> getConstructor(Class<?> [] parameterTypes)
-
 ```
 
 请注意，[`String.compareTo()`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#compareTo-java.lang.String-)的输出包含两种方法。在`String.java`中声明的方法：
 
 ```java
 public int compareTo(String anotherString);
-
 ```
 
 和第二个*合成*或编译器生成的*桥接*方法。这是因为[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)实现了参数化接口[`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)。在类型擦除期间，继承方法[`Comparable.compareTo()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)的参数类型从`java.lang.Object`更改为`java.lang.String`。由于`Comparable`和`String`中的`compareTo`方法的参数类型在擦除后不再匹配，因此无法进行覆盖。在所有其他情况下，这将产生编译时错误，因为接口未实现。桥接方法的添加避免了这个问题。

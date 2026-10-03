@@ -1,48 +1,51 @@
+
+
 # Spring MVC hello world 示例(Maven 和百里香叶)
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring3/spring-3-mvc-hello-world-example/>
 
 本教程向您展示了如何使用[百里香叶](http://web.archive.org/web/20221006022723/https://www.thymeleaf.org/)模板创建一个 Spring Web MVC 应用程序。
 
-使用的技术和工具:
+使用的技术和工具：
 
-*   Java 11
-*   释放弹簧
-*   百里香叶
-*   嵌入式 Jetty 服务器 9.4.45.v20220203
-*   Servlet API 4.0.4
-*   Bootstrap 5.2.0 (webjars)
-*   智能理念
-*   Maven 3.8.6
-*   弹簧测试 5.2.22 .释放
-*   哈姆克雷斯特 2.2
-*   JUnit 5.9
+- Java 11
+- 释放弹簧
+- 百里香叶
+- 嵌入式 Jetty 服务器 9.4.45.v20220203
+- Servlet API 4.0.4
+- Bootstrap 5.2.0 (webjars)
+- 智能理念
+- Maven 3.8.6
+- 弹簧测试 5.2.22 .释放
+- 哈姆克雷斯特 2.2
+- JUnit 5.9
 
-目录:
+目录：
 
-*   [1。Spring Web MVC 基础](#spring-web-mvc-basic)
-*   [2。目录结构](#directory-structure)
-*   [3。项目依赖性](#project-dependencies)
-*   [4。项目依赖关系——树形格式](#project-dependencies-tree-format)
-*   [5。弹簧控制器](#spring-controller)
-*   [6。弹簧配置](#spring-configuration)
-*   [7。Spring DispatcherServlet](#spring-dispatcherservlet)
-*   [8。查看(百里香叶)](#view-thymeleaf)
-*   [9。Spring MVC 和单元测试](#spring-mvc-and-unit-tests)
-*   10。演示
-*   [11。下载源代码](#download-source-code)
-*   10。参考文献
+- [1. Spring Web MVC 基础](#spring-web-mvc-basic)
+- [2. 目录结构](#directory-structure)
+- [3. 项目依赖性](#project-dependencies)
+- [4. 项目依赖关系——树形格式](#project-dependencies-tree-format)
+- [5. 弹簧控制器](#spring-controller)
+- [6. 弹簧配置](#spring-configuration)
+- [7. Spring DispatcherServlet](#spring-dispatcherservlet)
+- [8. 查看(百里香叶)](#view-thymeleaf)
+- [9. Spring MVC 和单元测试](#spring-mvc-and-unit-tests)
+- [10. 演示](#download-source-code)
+- [11. 下载源代码](#download-source-code)
+- [10. 参考文献](#references)
 
 **注**
+
 本教程不是 Spring Boot 应用，只是纯 Spring Web MVC！
 
-## 1。Spring Web MVC 基础
+## 1. Spring Web MVC 基础
 
-在 Spring Web MVC 中，它由 3 个标准的 [MVC](http://web.archive.org/web/20221006022723/https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) (模型、视图、控制器)组件组成:
+在 Spring Web MVC 中，它由 3 个标准的 [MVC](http://web.archive.org/web/20221006022723/https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) (模型、视图、控制器)组件组成：
 
-*   `Models`–包含数据。
-*   `Views`–使用视图技术显示数据，如百里香、FreeMarker、Groovy 标记、脚本视图(Mustache、React 等)。)，或者经典的 JSP 和 JSTL。
-*   `Controllers`–接受输入，修改它们，并传递给模型或视图。
+- `Models` – 包含数据。
+- `Views` – 使用视图技术显示数据，如百里香、FreeMarker、Groovy 标记、脚本视图(Mustache、React 等。)，或者经典的 JSP 和 JSTL。
+- `Controllers` – 接受输入，修改它们，并传递给模型或视图。
 
 Spring Web MVC 的核心组件是`DispatcherServlet`，它充当[前端控制器模式](http://web.archive.org/web/20221006022723/https://en.wikipedia.org/wiki/Front_controller)。每个 web 请求都必须经过这个`DispatcherServlet`，`DispatcherServlet`会将 web 请求分派给注册的处理程序或组件。
 
@@ -50,32 +53,33 @@ Spring Web MVC 的核心组件是`DispatcherServlet`，它充当[前端控制器
 
 ![spring web mvc DispatcherServlet](img/eb9ed24625579edf4b7e8b15570ebf8d.png)
 
-**图 1.1** :图片复制自 Spring MVC 参考，稍加修改。
+**图 1.1**：图片复制自 Spring MVC 参考，稍加修改。
 
 **注**
+
 请参考官方 [Spring Web MVC doc](http://web.archive.org/web/20221006022723/https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc) 。
 
-## 2。目录结构
+## 2. 目录结构
 
 下面是这个项目的标准 Maven 目录结构。
 
 ![directory structure](img/b3f4793a9e9bd81a46cd5c0eb37cb127.png)
 
-## 3。项目依赖性
+## 3. 项目依赖性
 
 以下是该项目的核心依赖项；`spring-webmvc`依赖是必须的，但是其他的依赖依赖于你的项目需求。
 
-*   `spring-webmvc`–用于 Spring core 相关的 web 组件。
-*   `thymeleaf-spring5`–用于百里香视图模板和 Spring 5 集成。
-*   `org.webjars.bootstrap`–用于 [WebJars](http://web.archive.org/web/20221006022723/https://www.webjars.org/) 管理客户端 web 库，例如 bootstrap。
-*   `jakarta.servlet-api`–我们需要 servlet-api 来编译 web 应用程序，设置为`provided`范围；通常，嵌入式服务器会提供这种功能。
-*   `maven-compiler-plugin`–编译项目。
-*   `jetty-maven-plugin`–在嵌入式 Jetty 服务器中运行这个项目，就像`mvn jetty:run`一样。
+- `spring-webmvc` – 用于 Spring core 相关的 web 组件。
+- `thymeleaf-spring5` – 用于百里香视图模板和 Spring 5 集成。
+- `org.webjars.bootstrap` – 用于 [WebJars](http://web.archive.org/web/20221006022723/https://www.webjars.org/) 管理客户端 web 库，例如 bootstrap。
+- `jakarta.servlet-api` – 我们需要 servlet-api 来编译 web 应用程序，设置为`provided`范围；通常，嵌入式服务器会提供这种功能。
+- `maven-compiler-plugin` – 编译项目。
+- `jetty-maven-plugin` – 在嵌入式 Jetty 服务器中运行这个项目，就像`mvn jetty:run`一样。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project 
+<project 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/maven-v4_0_0.xsd">
@@ -184,17 +188,20 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
-## 4。项目依赖关系——树形格式
+## 4. 项目依赖关系——树形格式
 
 再次检查树结构中的项目依赖关系。
 
 Terminal
 
+
+
+
 ```java
- mvn dependency:tree
+mvn dependency:tree
 
 [INFO] Scanning for projects...
 [INFO]
@@ -233,17 +240,17 @@ Terminal
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  0.877 s
 [INFO] Finished at: 2022-09-23T20:17:05+08:00
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
 ## 5。弹簧控制器
 
 下面是一个 Spring Web MVC 控制器，用于处理对`/`和`/hello/{name}`的 Web 请求并显示消息。
 
-HelloController.java
+### HelloController.java
 
 ```java
- package com.mkyong.web;
+package com.mkyong.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -274,20 +281,21 @@ public class HelloController {
       return "welcome";
   }
 
-} 
+}
 ```
 
 ## 6。弹簧配置
 
 对于 Spring 配置，实现`WebMvcConfigurer`并覆盖所需的方法，或者在这里声明额外的 beans，例如，Spring + Thymeleaf 视图解析器等。
 
-**注**
+### 注
+
 更详细的解释请参考官方[百里香+春光融合](http://web.archive.org/web/20221006022723/https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html)的文件。
 
-SpringWebConfig.java
+### SpringWebConfig.java
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -348,19 +356,19 @@ public class SpringWebConfig implements WebMvcConfigurer {
       return viewResolver;
   }
 
-} 
+}
 ```
 
 ## 7。Spring DispatcherServlet
 
 我们可以扩展`AbstractAnnotationConfigDispatcherServletInitializer`来注册`DispatcherServlet`，这样 Servlet 容器就知道在哪里可以找到上面的 Spring 配置`SpringWebConfig`来加载和启动 Spring Web MVC 应用程序。
 
-这个`MyServletInitializer`将由 Servlet 容器自动检测(例如，Jetty 或 Tomcat)。
+这个`MyServletInitializer`将由 Servlet 容器自动检测（例如，Jetty 或 Tomcat）。
 
-MyServletInitializer.java
+### MyServletInitializer.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.config.SpringWebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -384,64 +392,25 @@ public class MyServletInitializer
   protected String[] getServletMappings() {
       return new String[]{"/"};
   }
-} 
+}
 ```
 
-## 8。查看(百里香叶)
+## 8。查看（百里香叶）
 
 一个显示 hello world 消息的简单 Thylemeaf 模板也展示了如何集成 webjars 的引导和定制 CSS 和 JS 文件。
 
-webapp/WEB-INF/template/welcome.html
+`webapp/WEB-INF/template/welcome.html`
 
-```java
- <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Spring Web MVC Thymeleaf Hello World Example</title>
 
-  <!-- Boostrap core css -->
-  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}"/>
-
-  <!-- custom style -->
-  <link rel="stylesheet" th:href="@{/css/main.css}"/>
-
-</head>
-
-<body>
-
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Mkyong.com</a>
-</nav>
-
-<main role="main" class="container">
-
-  <div class="starter-template">
-      <h1>Spring Web MVC Thymeleaf Example</h1>
-      <h2>
-          <span th:text="'Hello, ' + ${message}"></span>
-      </h2>
-  </div>
-
-</main>
-<!-- /.container -->
-
-<!-- Boostrap core js -->
-<script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
-</body>
-</html> 
-```
-
-## 9。Spring MVC 和单元测试
+## 9. Spring MVC 和单元测试
 
 Spring MVC 5 和 JUnit 5 的例子。
 
-HelloControllerTest.java
+`HelloControllerTest.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.config.SpringWebConfig;
 import org.junit.jupiter.api.BeforeEach;
@@ -503,22 +472,22 @@ public class HelloControllerTest {
 
     }
 
-} 
+}
 ```
 
-## 10。演示
+## 10. 演示
 
 进入终端，项目文件夹，运行`mvn jetty:run`。
 
 Terminal
 
 ```java
- mvn jetty:run
+mvn jetty:run
 
 ...
 [INFO] Started ServerConnector@5b3755f4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
 [INFO] Started @3134ms
-[INFO] Started Jetty Server 
+[INFO] Started Jetty Server
 ```
 
 Spring Web MVC 应用程序默认部署在端口`8080`的 Jetty 容器中。
@@ -531,23 +500,23 @@ Spring Web MVC 应用程序默认部署在端口`8080`的 Jetty 容器中。
 
 ![spring web mvc hello world demo 2](img/19e552760533154ae77fc17c16228ab5.png)
 
-## 11。下载源代码
+## 11. 下载源代码
 
-$ git 克隆[https://github.com/mkyong/spring-mvc/](http://web.archive.org/web/20221006022723/https://github.com/mkyong/spring-mvc/)
-
+```bash
+$ git clone https://github.com/mkyong/spring-mvc/
 $ cd spring-mvc-hello-world
+$ mvn clean jetty:run
+```
 
-$ mvn 清洁码头:运行
+请访问 `http://localhost:8080/spring`
 
-请访问 http://localhost:8080/spring
+请访问 `http://localhost:8080/spring/hello/mkyong`
 
-请访问 http://localhost:8080/spring/hello/mkyong
+## 12. 参考文献
 
-## 10。参考文献
-
-*   [教程:百里香叶+春天](http://web.archive.org/web/20221006022723/https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html)
-*   [维基百科–模型–视图–控制器](http://web.archive.org/web/20221006022723/https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-*   [Spring Boot Hello World 示例–百里香叶](http://web.archive.org/web/20221006022723/https://mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)
-*   [Spring MVC hello world 示例(Gradle 和 JSP)](http://web.archive.org/web/20221006022723/https://mkyong.com/spring-mvc/gradle-spring-mvc-web-project-example/)
+* [教程：Thymeleaf + Spring](http://web.archive.org/web/20221006022723/https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html)
+* [维基百科 – 模型–视图–控制器](http://web.archive.org/web/20221006022723/https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+* [Spring Boot Hello World 示例 – Thymeleaf](http://web.archive.org/web/20221006022723/https://mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)
+* [Spring MVC hello world 示例（Gradle 和 JSP）](http://web.archive.org/web/20221006022723/https://mkyong.com/spring-mvc/gradle-spring-mvc-web-project-example/)
 
 <input type="hidden" id="mkyong-current-postId" value="6441">

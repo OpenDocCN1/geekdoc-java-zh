@@ -1,6 +1,5 @@
+
 # Java 入门指南：Java 初学者学习完全指南 (计算机编程)
-
-
 
 ![](img/cover.jpeg)
 
@@ -23,6 +22,7 @@
 所使用的商标均未经任何许可，且商标的发布未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，并由所有者所有，与本文档无关。
 
 # 目录
+
 - 引言
 - 第 1 章：开始学习 Java
 - 第 2 章：Java 变量
@@ -34,22 +34,25 @@
 - 第 8 章：重写
 - 第 9 章：多态
 - 第 10 章：抽象
-- 第 11 章-封装
-- 第 12 章-接口
-- 第 13 章-包
-- 第 14 章-命令行参数
-- 第 15 章-递归
-- 第 16 章-方法调用
-- 第 17 章-Java Applets
+- 第 11 章：封装
+- 第 12 章：接口
+- 第 13 章：包
+- 第 14 章：命令行参数
+- 第 15 章：递归
+- 第 16 章：方法调用
+- 第 17 章：Java Applets
 - 结语
 
 # 引言
-Java 是一种广泛的编程语言，包含了许多适用于应用程序开发的特性。它是设计/开发桌面应用程序的很好的编程语言。这些程序作为独立应用程序非常流行。如果你需要分布式应用程序，Java 是最适合使用的语言。Java Applets 可以嵌入/添加到网页中。Java 提供的许多特性使其成为一种受欢迎的编程语言。其广泛的特性使其适用于各行业应用的开发。要编写 Java 代码，你应该获取 Java 编译器。Java 是编译的，而不是解释的。你需要一个可以在其中编写 Java 代码的编辑器。记事本非常适合这个。有了这些工具，你就可以开始编写和运行你的 Java 代码了。这意味着上手 Java 非常容易，使得 Java 成为初学者的良好语言。Java 字节码（通常在编译 Java 源代码后生成）是平台无关的，这意味着它可以在包括 Windows、Solaris、Linux 在内的任何平台上运行。Java 应用通过安全机制确保安全。
+
+Java 是一种广泛的编程语言，包含了许多适用于应用程序开发的特性。它是设计/开发桌面应用程序的很好的编程语言。这些程序作为独立应用程序非常流行。如果你需要分布式应用程序，Java 是最适合使用的语言。`Java Applets` 可以嵌入/添加到网页中。Java 提供的许多特性使其成为一种受欢迎的编程语言。其广泛的特性使其适用于各行业应用的开发。要编写 Java 代码，你应该获取 Java 编译器。Java 是编译的，而不是解释的。你需要一个可以在其中编写 Java 代码的编辑器。记事本非常适合这个。有了这些工具，你就可以开始编写和运行你的 Java 代码了。这意味着上手 Java 非常容易，使得 Java 成为初学者的良好语言。Java 字节码（通常在编译 Java 源代码后生成）是平台无关的，这意味着它可以在包括 Windows、Solaris、Linux 在内的任何平台上运行。Java 应用通过安全机制确保安全。
 
 # 第 1 章：开始学习 Java
-Java 是一种广泛的编程语言，包含了许多适用于应用程序开发的特性。它是设计/开发桌面应用程序的很好的编程语言。这些程序作为独立应用程序非常流行。如果你需要分布式应用程序， Java 是最适合使用的语言。Java Applets 可以嵌入/添加到网页中。Java 提供的许多特性使其成为一种受欢迎的编程语言。其广泛的特性使其适用于各行业应用的开发。要编写 Java 代码，你应该获取 Java 编译器。Java 是编译的，而不是解释的。你需要一个可以在其中编写 Java 代码的编辑器。记事本非常适合这个。有了这些工具，你就可以开始编写和运行你的 Java 代码了。这意味着上手 Java 非常容易，使得 Java 成为初学者的良好语言。Java 字节码（通常在编译 Java 源代码后生成）是平台无关的，这意味着它可以在包括 Windows、Solaris、Linux 在内的任何平台上运行。Java 应用通过安全机制确保安全。
+
+Java 是一种广泛的编程语言，包含了许多适用于应用程序开发的特性。它是设计/开发桌面应用程序的很好的编程语言。这些程序作为独立应用程序非常流行。如果你需要分布式应用程序，Java 是最适合使用的语言。`Java Applets` 可以嵌入/添加到网页中。Java 提供的许多特性使其成为一种受欢迎的编程语言。其广泛的特性使其适用于各行业应用的开发。要编写 Java 代码，你应该获取 Java 编译器。Java 是编译的，而不是解释的。你需要一个可以在其中编写 Java 代码的编辑器。记事本非常适合这个。有了这些工具，你就可以开始编写和运行你的 Java 代码了。这意味着上手 Java 非常容易，使得 Java 成为初学者的良好语言。Java 字节码（通常在编译 Java 源代码后生成）是平台无关的，这意味着它可以在包括 Windows、Solaris、Linux 在内的任何平台上运行。Java 应用通过安全机制确保安全。
 
 ## 环境配置
+
 为了编写和运行 Java 程序，你需要一个编辑器和 Java 编译器。Java 随 `JDK`（Java 开发工具包）提供。你甚至可以使用像记事本这样的基础编辑器。不过，也有更高级的 Java 编辑器，例如 `Eclipse` 和 `Netbeans`。
 
 首先，在你的电脑上下载并安装 `JDK`。之后，你将拥有 Java。打开浏览器并输入或粘贴以下 URL：
@@ -59,6 +62,7 @@ Java 是一种广泛的编程语言，包含了许多适用于应用程序开发
 从那里你可以获取最新版本的 `JDK`。你需要设置环境变量以告知正确的 Java 安装目录。这意味着你需要设置 `path` 变量。通常安装路径是 `C:\Program Files\java\jdk`。在 Windows 上正确设置路径的方法是：“我的电脑”，选择“属性”，打开“高级系统设置”，然后选择“环境变量”。添加 `C:\Program Files\java\jdk\bin` 路径。Linux 用户请阅读你的 shell 文档。
 
 ## Java 语法
+
 Java 程序由通过相互调用方法的对象组成。以下是 Java 程序中的主要构造部分：
 
 - **对象**：对象以状态和行为为特征。例如，猫有颜色、品种名称等状态，以及吃、喵喵和摇尾巴等行为。
@@ -66,6 +70,7 @@ Java 程序由通过相互调用方法的对象组成。以下是 Java 程序中
 - **方法**：方法是一种行为。逻辑写在方法中，并且可以用于数据处理。
 
 ## 第一个程序
+
 这是我们的第一个 Java 程序。执行后它应该打印出“Hello World”：
 
 ```java
@@ -75,10 +80,6 @@ public class OurFirstProgram{
     }
 }
 ```
-
-
-
-
 
 打开你的文本编辑器（如 `Notepad`），创建一个名为 `FirstProgram.java` 的新文件。保存该文件。`.java` 扩展名将文件标记为 Java 文件。在文件中输入上述程序代码并保存更改。打开命令提示符，然后导航到你保存文件的目录。在该目录下运行给出的命令：
 
@@ -101,7 +102,7 @@ public class FirstProgram{
 
 该行简单地声明了一个名为 `FirstProgram` 的类。Java 是一种区分大小写的语言，因此该类必须始终按照上面写的方式来引用。`public` 关键字将该类声明为公有，这意味着它可以从相同包内的任何其他类进行访问。`{` 声明了类体的开始，它应该由 `}` 关闭。
 
-注意：编写程序时的文件名应与类名匹配；否则，在运行程序时会遇到麻烦。在我们的案例中，类名为 `FirstProgram`，因此文件名应该是 `FirstProgram.java`。
+> **注意**：编写程序时的文件名应与类名匹配；否则，在运行程序时会遇到麻烦。在我们的案例中，类名为 `FirstProgram`，因此文件名应该是 `FirstProgram.java`。
 
 考虑从代码中提取的以下行：
 
@@ -109,7 +110,9 @@ public class FirstProgram{
 public static void main(String args[]){
 ```
 
-这是 `main` 方法。没有这个方法，Java 程序将无法被执行或运行。考虑从代码中提取的以下行：
+这是 `main` 方法。没有这个方法，Java 程序将无法被执行或运行。
+
+考虑从代码中提取的以下行：
 
 ```java
 System.out.println("Hello World");
@@ -121,7 +124,7 @@ System.out.println("Hello World");
 
 # 第 2 章：Java 变量
 
-变量变量可以被视为一个容器，在程序的生命周期内负责持有一个值。每个变量都有特定的数据类型，规定了它可以持有的值类型。使用 Java 变量有两个步骤，即变量声明和变量初始化。
+变量可以被视为一个容器，在程序的生命周期内负责持有一个值。每个变量都有特定的数据类型，规定了它可以持有的值类型。使用 Java 变量有两个步骤，即变量声明和变量初始化。
 
 ## 变量声明
 
@@ -169,7 +172,7 @@ Java 支持三种变量类型：
 
 ## 实例变量
 
-这些是在没有使用 `STATIC` 关键字定义的变量。这些变量属于特定的对象。
+这些是在没有使用 `static` 关键字定义的变量。这些变量属于特定的对象。
 
 ## 静态变量
 
@@ -179,10 +182,10 @@ Java 支持三种变量类型：
 
 ```java
 class JavaVariables {
-    int i = 10; //一个实例变量 
-    static int b = 2; //一个静态变量 
+    int i = 10; // 一个实例变量 
+    static int b = 2; // 一个静态变量 
     void methodExample() {
-        int c = 3; //一个局部变量 
+        int c = 3; // 一个局部变量 
     }
 }
 ```
@@ -195,7 +198,7 @@ class JavaVariables {
 
 ### 基本数据类型
 
-这些是 Java 提供的预定义数据类型。共有 8 个，包括 `byte`、`short`、`long`、`char`、`int`、`float`、`Boolean` 和 `double` 数据类型。
+这些是 Java 提供的预定义数据类型。共有 8 个，包括 `byte`、`short`、`long`、`char`、`int`、`float`、`boolean` 和 `double` 数据类型。
 
 ### 非基本数据类型
 
@@ -214,7 +217,7 @@ public class VariableAddition{
 } 
 ```
 
-我们定义了三个整数变量 `ax`、`jk` 和 `z`。`x`、`j` 和 `z` 的值（此处应指 ax,jk,z）已定义。`ax`、`jk` 和 `z` 的值被使用。`System.out.println(z)` 输出结果。
+我们定义了三个整数变量 `ax`、`jk` 和 `z`。`ax`、`jk` 和 `z` 的值已定义。`ax`、`jk` 和 `z` 的值被使用。`System.out.println(z)` 输出结果。
 
 # 第 3 章：Java 运算符
 
@@ -236,7 +239,7 @@ class UnaryExample{
 }
 ```
 
-程序将打印 0、2、1、0。`++` 表示在执行增加之前读取 `j` 的值，因此我们得到的 `j` 的值为 0。如果是 `++j`，我们将得到第一个值为 1。
+程序将打印 0、2、1、0。`j++` 表示在执行增加之前读取 `j` 的值，因此我们得到的 `j` 的值为 0。如果是 `++j`，我们将得到第一个值为 1。
 
 ## 算术运算符
 
@@ -262,16 +265,12 @@ public class JavaArithmeticOperators{
 
 这些运算符与布尔值一起使用。它们有助于评估循环和条件语句中的条件。它们包括 `||`、`&&`、`!`。假设有两个布尔变量 `a1` 和 `a2`，适用以下条件：
 
-`a1&&a2` 在 `a1` 和 `a2` 都为真时返回真，否则返回假。
-
-`a1||a2` 在 `a1` 和 `a2` 都为假时返回假，否则返回真。
-
-
-
-
-`!a1` 将返回 `a1` 的反值。
+- `a1 && a2` 在 `a1` 和 `a2` 都为真时返回真，否则返回假。
+- `a1 || a2` 在 `a1` 和 `a2` 都为假时返回假，否则返回真。
+- `!a1` 将返回 `a1` 的反值。
 
 示例：
+
 ```java
 public class LogicalOperatorExample {
   public static void main(String args[]) {
@@ -283,6 +282,7 @@ public class LogicalOperatorExample {
   }
 }
 ```
+
 程序将返回 false, true, true。
 
 ## 比较运算符
@@ -294,53 +294,55 @@ Java 支持 6 种比较运算符，`==`、`!=`、 `<`, `>`, `>=`, `<=`：
 - `>` 如果左侧大于右侧，则返回 `true`。
 - `<` 如果左侧小于右侧，则返回 `true`。
 - `>=` 如果左侧大于或等于右侧，则返回 `true`。
-- `<=` 如果左侧小于右侧，则返回 `true`。
+- `<=` 如果左侧小于或等于右侧，则返回 `true`。
 
 示例：
+
 ```java
 public class JavaRelationalOperatorExample {
   public static void main(String args[]) {
       int n1 = 20;
       int n2 = 30;
       if (n1==n2) {
-System.out.println("n1 and n2 are equal");
+          System.out.println("n1 and n2 are equal");
       }
       else{
-System.out.println("n1 and n2 aren’t equal");
+          System.out.println("n1 and n2 aren’t equal");
       }
       if( n1 != n2 ){
-System.out.println("n1 and n2 aren’t equal");
+          System.out.println("n1 and n2 aren’t equal");
       }
       else{
-System.out.println("n1 and n2 are equal");
+          System.out.println("n1 and n2 are equal");
       }
       if( n1 > n2 ){
-System.out.println("n1 is greater than n2");
+          System.out.println("n1 is greater than n2");
       }
       else{
-System.out.println("n1 isn’t greater than n2");
+          System.out.println("n1 isn’t greater than n2");
       }
       if( n1 >= n2 ){
-System.out.println("n1 is equal to or greater than n2");
+          System.out.println("n1 is equal to or greater than n2");
       }
       else{
-System.out.println("n1 is less than n2");
+          System.out.println("n1 is less than n2");
       }
       if( n1 < n2 ){
-System.out.println("n1 is less than n2");
+          System.out.println("n1 is less than n2");
       }
       else{
-System.out.println("n1 isn’t less than n2");
+          System.out.println("n1 isn’t less than n2");
       }
       if( n1 <= n2){
-System.out.println("n1 is equal to or less than n2");
+          System.out.println("n1 is equal to or less than n2");
       }
       else{
-System.out.println("n1 is greater than n2");
+          System.out.println("n1 is greater than n2");
       }
   }
 }
 ```
+
 程序使用了在后续章节中讨论的 `if` 语句。
 
 # 第 4 章：Java 数组
@@ -357,7 +359,8 @@ System.out.println("n1 is greater than n2");
 
 `<elementDataType> <arrayName>[];`
 
-示例：
+
+
 ```java
 int arrayExample[];
 int []arrayExample;
@@ -374,6 +377,7 @@ int []arrayExample;
 值 5 将存储在数组的索引 0，20 存储在索引 1，依此类推。
 
 示例：
+
 ```java
 public class JavaArrayExample{
     public static void main(String args[]){
@@ -388,6 +392,7 @@ public class JavaArrayExample{
       }
 }
 ```
+
 数组将打印位于不同索引处的元素。你还将获得数组长度，即 8。
 
 ## 多维数组
@@ -397,6 +402,7 @@ public class JavaArrayExample{
 `int array2[ ][ ] = new int[6][10] ;`
 
 你有权控制多维数组的长度。示例：
+
 ```java
 public class JavaArrayExample2 {
 public static void main(String[] args) {
@@ -409,6 +415,7 @@ public static void main(String[] args) {
   System.out.print(array2[0][0] + " ");
 }
 ```
+
 程序将返回存储在索引 [0][0] 处的值，即 2。
 
 # 第 5 章：决策
@@ -420,22 +427,29 @@ public static void main(String[] args) {
 该语句帮助我们根据条件的结果执行语句。其语法如下：
 
 `if(boolean expression) {`
+
 `// statements`
+
 `}`
 
-如果 `if` 语句中的条件为尔，则执行执行体内的语句。
+如果 `if` 语句中的条件为**真**，则执行执行体内的语句。
 
 ## if...else 语句
 
 该语句将 `if` 与 `else` 结合，如果条件为假，则执行 `else` 部分。语法如下：
 
 `if(boolean expression) {`
+
 `// statements`
+
 `}else {`
+
 `// statements`
+
 `}`
 
 示例：
+
 ```java
 public class JavaElseStatement {
   public static void main(String args[]) {
@@ -446,6 +460,7 @@ public class JavaElseStatement {
   }
 }
 ```
+
 如果条件为真，则执行语句。
 
 ## if...else if...else 语句
@@ -453,16 +468,25 @@ public class JavaElseStatement {
 如果你有多个条件需要评估，使用此语句。语法如下：
 
 `if(boolean expression a) {`
+
 `// statements`
+
 `}else if(boolean expression b) {`
+
 `// statements`
+
 `}else if(boolean expression c) {`
+
 `// statements`
+
 `}else {`
+
 `// statements`
+
 `}`
 
 示例：
+
 ```java
 public class JavaIfElseStatement {
   public static void main(String args[]) {
@@ -479,6 +503,7 @@ public class JavaIfElseStatement {
   }
 }
 ```
+
 程序的结果将是 20。
 
 ## 嵌套 if
@@ -486,13 +511,19 @@ public class JavaIfElseStatement {
 `if...else` 语句可以嵌套，这意味着你可以在另一个 `if` 中使用 `if` 或在另一个 `if...else` 中使用 `if...else`。嵌套语法所示：
 
 `if(boolean expression a) {`
+
 `// statements`
+
 `if(boolean expression b) {`
+
 `// statements`
+
 `}`
+
 }`
 
 示例：
+
 ```java
 public class NestingExample {
   public static void main(String args[]) {
@@ -512,18 +543,24 @@ public class NestingExample {
 该语句允许我们对某个变量与某些值列表进行等性测试。每个值都被称为 `case`。使用的语法如下：
 
 `switch(an_expression) {`
+
 `case value:`
+
 `// statements`
+
 `break; //optional`
+
 `case value:`
+
 `// statements`
+
 `break; //optional`
+
 `default : //Optional`
+
 `// statements`
+
 `}`
-
-
-
 
 ```java
 public class JavaSwitchStatement {
@@ -557,7 +594,7 @@ public class JavaSwitchStatement {
 
 # 第 6 章：循环
 
-Java 循环帮助我们重复执行某些任务。循环按顺序执行语句。首先运行第一个，紧接着是第二个，以此此类推。让我们讨论一下 Java 循环：
+Java 循环帮助我们重复执行某些任务。循环按顺序执行语句。首先运行第一个，紧接着是第二个，以此类推。让我们讨论一下 Java 循环：
 
 ## for 循环
 
@@ -566,7 +603,9 @@ Java 循环帮助我们重复执行某些任务。循环按顺序执行语句。
 `for(initialization; loop_condition ; Increment/decrement_part)`
 
 {
+
   the_statement(s);
+
 }
 
 `initialization` 定义了循环条件的初始值。`loop_condition` 指定了循环运行所需的必须始终为真的条件。`loop_increment/decrement` 定义了每次迭代后初始化值所增加或减少的量。示例下：
@@ -588,7 +627,9 @@ public class ForLoopDemo {
 只要指定的条件为真，此循环就会执行语句。首先求值条件，如果为真，则执行循环语句。如果条件变为假，控制将跳转去执行循环之后的语句。建议你在循环中添加一个递增/递减操作和一个测试条件，以便循环在条件变为假时停止执行。否则，循环可能会无限运行。语法下所示：
 
 `while(A_boolean_expression) {
+
   // Statement(s)
+
 }`
 
 示例：
@@ -613,8 +654,11 @@ public class JavaWhileLoop {
 这与 while 循环密切相关。在 `while` 中，循环条件的执行是在循环体执行之前完成的。在 `do…while` 循环中相反，体在条件之前先执行。在 `while` 循环中，循环体可能永远不会执行，但在 `do…while` 循环中，循环体必须执行一次。语法如下：
 
 `do
+
 {
+
   Statement or statements;
+
 } while(loop_condition);`
 
 示例：
@@ -656,6 +700,7 @@ public class DoLoopExample {
 此语句会导致循环停止，并跳转到循环之后的语句。它用于 `switch` 语句中的情况。语法下：
 
 `jump-statement;
+
 break;`
 
 示例：
@@ -695,6 +740,7 @@ public class Break2 {
 此语句使循环立即跳转到下一次迭代。它帮助循环在跳转后继续。注意在之前的情况下，循环立即停止了。此语句可以帮助它在跳转后的下一次迭代中恢复执行。示例：
 
 `your_jump-statement;
+
 continue;`
 
 示例：
@@ -729,8 +775,7 @@ public class ContinueStatament2 {
 }
 ```
 
-
-
+# 第 7 章：继承
 
 在继承中，一个对象获取另一个对象的行为和属性。获取行为和属性的对象是子类，而它们继承自的对象是父类。它们也可以分别称为子类和超类。继承使得信息能够以分层级的顺序进行管理。在父类中定义的方法可以在子类中重用，而无需再次定义。
 
@@ -765,54 +810,62 @@ public class JavaProgrammer extends CompanyEmployee{
 
 在这种情况下，一个类继承自另一个类。之前提供的 `Worker` 和 `DBA` 类就是这种类型的示例。示例：
 
+
+
+# Java 继承与多态
+
+## 单继承
+
 ```java
-class Mammal{
-    void drink(){
+class Mammal {
+    void drink() {
         System.out.println("Drinking...");
     }
 }
 
-class Cow extends Mammal{
-    void moow(){System.out.println("Moowing...");}
+class Cow extends Mammal {
+    void moow() {
+        System.out.println("Moowing...");
+    }
 }
 
-public class JavaInheritanceTest{
-    public static void main(String args[]){
-        Cow c=new Cow();
+public class JavaInheritanceTest {
+    public static void main(String args[]) {
+        Cow c = new Cow();
         c.moow();
         c.drink();
     }
 }
 ```
 
-在上面的示例中，`drink()` 方法在 `Mammal` 类中定义，而 `moow()` 方法在 `Cow` 类中定义，`Cow` 类继承了 `Mammal` 类。在 `InheritanceTest` 类中，我们创建了一个 `Cow` 类的实例并命名为 `c`。然后我们使用该实例来访问在两个不同类中定义的方法。这就是单继承的工作方式。
+在上面的示例中，`drink()` 方法在 `Mammal` 类中定义，而 `moow()` 方法在 `Cow` 类中定义，`Cow` 类继承了 `Mammal` 类。在 `JavaInheritanceTest` 类中，我们创建了一个 `Cow` 类的实例并命名为 `c`。然后我们使用该实例来访问在两个不同类中定义的方法。这就是单继承的工作方式。
 
 ## 多级继承
 
 当类 `B` 继承自类 `A`，而类 `C` 继承自类 `B` 时，发生这种继承。示例：
 
 ```java
-class Mammal{
-    void drink(){
+class Mammal {
+    void drink() {
         System.out.println("Drinking...");
     }
 }
 
-class Cow extends Mammal{
-    void moow(){
+class Cow extends Mammal {
+    void moow() {
         System.out.println("Moowing...");
     }
 }
 
-class BabyCow extends Cow{
-    void jump(){
+class BabyCow extends Cow {
+    void jump() {
         System.out.println("Jumping...");
     }
 }
 
-public class JavaInheritanceTest2{
-    public static void main(String args[]){
-        BabyCow bc=new BabyCow();
+public class JavaInheritanceTest2 {
+    public static void main(String args[]) {
+        BabyCow bc = new BabyCow();
         bc.moow();
         bc.jump();
         bc.drink();
@@ -820,52 +873,53 @@ public class JavaInheritanceTest2{
 }
 ```
 
-`drink()` 方法在 `Mammal` 类中定义。`moow()` 方法在 `Cow` 类中定义，`Cow` 类继承了 `Mammal` 类。`jump` 方法在 `BabyCow` 类中定义，`BabyCow` 类继承了 `Cow` 类。在 `InheritanceTest2` 类中，我们创建了一个名为 `bc` 的 `BabyCow` 类实例。该实例随后被用于访问各种属性或方法。我们能够使用 `BabyCow` 类的实例来访问在 `Cow` 和 `Mammal` 类中定义的方法。各种类中的方法可以视为它们的属性。
+`drink()` 方法在 `Mammal` 类中定义。`moow()` 方法在 `Cow` 类中定义，`Cow` 类继承了 `Mammal` 类。`jump` 方法在 `BabyCow` 类中定义，`BabyCow` 类继承了 `Cow` 类。在 `JavaInheritanceTest2` 类中，我们创建了一个名为 `bc` 的 `BabyCow` 类实例。该实例随后被用于访问各种属性或方法。我们能够使用 `BabyCow` 类的实例来访问在 `Cow` 和 `Mammal` 类中定义的方法。各种类中的方法可以视为它们的属性。
 
 ## 层级继承
 
 这种继承可以通过像示例所示所示：
 
 ```java
-class Mammal{
-    void drink(){
+class Mammal {
+    void drink() {
         System.out.println("Drinking...");
     }
 }
 
-class Cow extends Mammal{
-    void moow(){
+class Cow extends Mammal {
+    void moow() {
         System.out.println("Moowing...");
     }
 }
 
-class Goat extends Mammal{
-    void meew(){
+class Goat extends Mammal {
+    void meew() {
         System.out.println("Meewing...");
     }
 }
 
-public class JavaInheritanceTest3{
-    public static void main(String args[]){
-        Goat g=new Goat();
+public class JavaInheritanceTest3 {
+    public static void main(String args[]) {
+        Goat g = new Goat();
         g.meew();
         g.drink();
-        //g.moow(); will give an Error
+        // g.moow(); will give an Error
     }
 }
 ```
 
-在 `InheritanceTest3` 类中创建 `Goat` 类的实例后，我们能够继承 `Mammal` 类中定义的属性。然而，我们无法访问 `Cow` 类中定义的属性，因为 `Goat` 类没有继承自 `Cow` 类。如果我们尝试这样做，例如运行 `g.moow();`，将会得到错误。
+在 `JavaInheritanceTest3` 类中创建 `Goat` 类的实例后，我们能够继承 `Mammal` 类中定义的属性。然而，我们无法访问 `Cow` 类中定义的属性，因为 `Goat` 类没有继承自 `Cow` 类。如果我们尝试这样做，例如运行 `g.moow();`，将会得到错误。
 
 某些语言支持多继承，即一个类继承自两个类。Java 不支持这种特性，我们能接近此点的做法是创建一个接口，然后在接口上使用 `implements`。假设我们创建了一个名为 `Interface1` 的接口，然后我们可以创建一个名为 `Class2` 的类，它继承了 `Class1` 并实现了 `Interface1`：
 
 ```java
-public class Class2 extends Class1 implements Interface1{
+public class Class2 extends Class1 implements Interface1 {
+}
 ```
 
 这是我们在 Java 中能实现的最接近多继承的特性。对于类，我们使用 `extends` 关键字，但这不能用于接口。相反，我们使用 `implements` 关键字。这样，我们就可以继承接口的功能。继承有助于属性和方法的重用。
 
-# 第 8 章：重写 (overriding)
+# 第 8 章：重写 (Overriding)
 
 子类可以重写父类中定义的方法，如果该方法没有用 `final` 关键字声明。重写简单意味着对现有方法的功能的重写。示例：
 
@@ -892,41 +946,43 @@ public class TestOverriding {
 }
 ```
 
-在这种情况下，`b` 是 `Mammal` 类型，但可以使用 `Cow` 类定义的方法。示例 2：给出一个银行示例。不同的银行对贷款提供不同的利率：
+在这种情况下，`b` 是 `Mammal` 类型，但可以使用 `Cow` 类定义的方法。
+
+示例 2：给出一个银行示例。不同的银行对贷款提供不同的利率：
 
 ```java
-class Banks{
-    int getRat(){
+class Banks {
+    int getRat() {
         return 0;
     }
 }
 
-class Bank1 extends Banks{
-    int getRat(){
+class Bank1 extends Banks {
+    int getRat() {
         return 5;
     }
 }
 
-class Bank2 extends Banks{
-    int getRat(){
+class Bank2 extends Banks {
+    int getRat() {
         return 7;
     }
 }
 
-class Bank3 extends Banks{
-    int getRat(){
+class Bank3 extends Banks {
+    int getRat() {
         return 9;
     }
 }
 
-public class TestBanks{
-    public static void main(String args[]){
-        Bank1 b1=new Bank1();
-        Bank2 b2=new Bank2();
-        Bank3 b3=new Bank3();
-        System.out.println("Bank1 Interest Rate: "+b1.getRat());
-        System.out.println("Bank1 Interest Rate: "+b2.getRat());
-        System.out.println("Bank1 Interest Rate: "+b3.getRat());
+public class TestBanks {
+    public static void main(String args[]) {
+        Bank1 b1 = new Bank1();
+        Bank2 b2 = new Bank2();
+        Bank3 b3 = new Bank3();
+        System.out.println("Bank1 Interest Rate: " + b1.getRat());
+        System.out.println("Bank2 Interest Rate: " + b2.getRat());
+        System.out.println("Bank3 Interest Rate: " + b3.getRat());
     }
 }
 ```
@@ -953,7 +1009,7 @@ class Cow extends Mammals {
 
 public class TestCow {
     public static void main(String args[]) {
-        Mammal c = new Cow(); // mammal reference but Cow object
+        Mammals c = new Cow(); // mammal reference but Cow object
         c.drink(); // to execute method in Cow class
     }
 }
@@ -964,12 +1020,11 @@ public class TestCow {
 这一特性允许我们通过不同的方式执行操作。通过多态，一个对象可以采取不同的形式。示例：
 
 ```java
-public interface Animals{}
+public interface Animals {}
 
-public class Mammals{}
+public class Mammals {}
 
-public class Cow extends Animals implements Mammals{
-
+public class Cow extends Animals implements Mammals {
 }
 ```
 
@@ -985,27 +1040,26 @@ Animals an = c;
 Object ob = c;
 ```
 
-
-
 上述所有引用变量都指向同一个对象。所有变量都指向同一个对象。
 
 示例：
 
 ```java
-class Cars{ 
-  void consume(){
-      System.out.println("Cars consume fuel");
-  } 
-} 
+class Cars {
+    void consume() {
+        System.out.println("Cars consume fuel");
+    }
+}
 
-public class Mercedez extends Cars{ 
-  void consume(){
-      System.out.println("Mercedez consumes petrol");
-  } 
-  public static void main(String args[]){ 
-    Cars cr = new Mercedez();//upcasting 
-    cr.consume(); 
-  } 
+public class Mercedez extends Cars {
+    void consume() {
+        System.out.println("Mercedez consumes petrol");
+    }
+
+    public static void main(String args[]) {
+        Cars cr = new Mercedez(); // upcasting
+        cr.consume();
+    }
 }
 ```
 
@@ -1014,73 +1068,72 @@ public class Mercedez extends Cars{
 通过多态，可以通过不同的方式执行操作。如果你有一个带有 `sound()` 方法的 `Mammals` 类，那么该方法的实现对于 `Goat`、`Cow`、`Donkey` 等不同动物类将是不同的。你会得到 `meow`、`moow` 等。示例：
 
 ```java
-public class Animals{
-  public void makeSound(){
-      System.out.println("Animals make sound");  
-  }
+public class Animals {
+    public void makeSound() {
+        System.out.println("Animals make sound");
+    }
 }
 ```
 
 我们可以有一个会喵喵的 `Cats` 类，并继承 `Animals` 类：
 
 ```java
-Class Cats extends Animals{
-  @Override
-  public void makeSound(){
-      System.out.println("Meow");
-  }
-  public static void main(String args[]){
- Animals anim = new Cats();
- anim.makeSound();
-  }
+class Cats extends Animals {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+
+    public static void main(String args[]) {
+        Animals anim = new Cats();
+        anim.makeSound();
+    }
 }
 ```
 
 我们可以有一个继承 `Animals` 类的 `Cows` 类，如下：
 
 ```java
-Class Cows extends Animals{
-  @Override
-  public void makeSound(){
-      System.out.println("Moow");
-  }
-  public static void main(String args[]){
- Animals anim = new Cows();
- anim.makeSound();
-  }
+class Cows extends Animals {
+    @Override
+    public void makeSound() {
+        System.out.println("Moow");
+    }
+
+    public static void main(String args[]) {
+        Animals anim = new Cows();
+        anim.makeSound();
+    }
 }
 ```
 
 我们通过方法重载实现了编译时多态。示例：
 
 ```java
-class Class1
-{
-  void demoMethod (int ab)
-  {
-      System.out.println ("ab: " + ab);
-  }
-  void demoMethod (int ab, int bc)
-  {
-      System.out.println ("ab and bc: " + ab + "," + bc);
-  }
-  double demoMethod(double ab) {
-      System.out.println("double ab: " + ab);
-      return ab*ab;
-  }
+class Class1 {
+    void demoMethod(int ab) {
+        System.out.println("ab: " + ab);
+    }
+
+    void demoMethod(int ab, int bc) {
+        System.out.println("ab and bc: " + ab + "," + bc);
+    }
+
+    double demoMethod(double ab) {
+        System.out.println("double ab: " + ab);
+        return ab * ab;
+    }
 }
 
-public class Class2
-{
-  public static void main (String args [])
-  {
-      Class1 cs1 = new Class1();
-      double res;
-      cs1 .demoMethod(5);
-      cs1 .demoMethod(5, 10);
-      res = cs1 .demoMethod(10.5);
-      System.out.println("Finally : " + res);
-  }
+public class Class2 {
+    public static void main(String args[]) {
+        Class1 cs1 = new Class1();
+        double res;
+        cs1.demoMethod(5);
+        cs1.demoMethod(5, 10);
+        res = cs1.demoMethod(10.5);
+        System.out.println("Finally : " + res);
+    }
 }
 ```
 
@@ -1094,51 +1147,60 @@ public class Class2
 
 ```java
 abstract class cars {
-  abstract void consume();
+    abstract void consume();
 }
 
 public class Mercedez extends cars {
-  void consume() {
-   System.out.println("Mercedez consumes petrol")
-  }
-  public static void main(String argu[]) {
-  cars cr = new Mercedez();
-  cr.consume();
-  System.out.println("Done")
+    void consume() {
+        System.out.println("Mercedez consumes petrol");
+    }
+
+    public static void main(String argu[]) {
+        cars cr = new Mercedez();
+        cr.consume();
+        System.out.println("Done");
+    }
 }
 ```
-
-抽象类必须包含抽象方法是必须。你不能实例化抽象类。这就是为什么我们实例化 `Mercedez` 类，因为它拥有一个自抽象类的方法。示例：
-
-```java
-public abstract class Worker {
-  private String workerName;
-  private String workerAddress;
-  private int workerNumber;
-  public Worker(String workerName, String workerAddress, int workerNumber) {
-    System.out.println("Worker")
-    this.workerName = workerName;
-    this.workerAddress = workerAddress;
-    this.workerNumber = workerNumber;
-  }
-  public double getWorkerPay() {
-    System.out.println("Inside getWorkerPay")
-    return 0.00;
-  }
-  public void checkMail() {
-    System.out.println("Sending check to " + this.workerName + " " + this.workerAddress);
-  }
-  public String toString() {
-    return workerName;
-  }
-}
-```
-*(注：原文示例代码此处似乎缺少了右大括号，翻译时保持逻辑一致)*
 
 抽象类中包含抽象方法是必须的。你不能实例化抽象类。这就是为什么我们实例化 `Mercedez` 类，因为它拥有来自抽象类的方法。示例：
 
 ```java
 public abstract class Worker {
+    private String workerName;
+    private String workerAddress;
+    private int workerNumber;
+
+    public Worker(String workerName, String workerAddress, int workerNumber) {
+        System.out.println("Worker");
+        this.workerName = workerName;
+        this.workerAddress = workerAddress;
+        this.workerNumber = workerNumber;
+    }
+
+    public double getWorkerPay() {
+        System.out.println("Inside getWorkerPay");
+        return 0.00;
+    }
+
+    public void checkMail() {
+        System.out.println("Sending check to " + this.workerName + " " + this.workerAddress);
+    }
+
+    public String toString() {
+        return workerName;
+    }
+}
+```
+
+*(注：原文示例代码此处似乎缺少了右大括号，翻译时保持逻辑一致)*
+
+抽象类中包含抽象方法是必须的。你不能实例化抽象类。这就是为什么我们实例化 `Mercedez` 类，因为它拥有来自抽象类的方法。
+
+
+
+```java
+public abstract class Worker {
   private String workerName;
   private String workerAddress;
   private int workerNumber;
@@ -1160,11 +1222,9 @@ public abstract class Worker {
   }
 }
 ```
+
 *(注：由于原文文本中存在大量重复和代码片段断裂，此处已根据上下文逻辑进行结构对齐翻译)*
 
-重新审视提供的原始文本，原文在 `Worker` 类之后出现了大量的逻辑重复和代码错乱。以下是基于原文每一行文本的忠实翻译：
-
-[content]
 上述所有引用变量都指向同一个对象。所有变量都指向同一个对象。
 
 示例：
@@ -1202,14 +1262,14 @@ public class Animals{
 我们可以有一个会喵喵的 `Cats` 类，并继承 `Animals` 类：
 
 ```java
-Class Cats extends Animals{
+class Cats extends Animals{
   @Override
   public void makeSound(){
       System.out.println("Meow");
   }
   public static void main(String args[]){
- Animals anim = new Cats();
- anim.makeSound();
+    Animals anim = new Cats();
+    anim.makeSound();
   }
 }
 ```
@@ -1217,14 +1277,14 @@ Class Cats extends Animals{
 我们可以有一个继承 `Animals` 类的 `Cows` 类，如下：
 
 ```java
-Class Cows extends Animals{
+class Cows extends Animals{
   @Override
   public void makeSound(){
       System.out.println("Moow");
   }
   public static void main(String args[]){
- Animals anim = new Cows();
- anim.makeSound();
+    Animals anim = new Cows();
+    anim.makeSound();
   }
 }
 ```
@@ -1254,9 +1314,9 @@ public class Class2
   {
       Class1 cs1 = new Class1();
       double res;
-      cs1 .demoMethod(5);
-      cs1 .demoMethod(5, 10);
-      res = cs1 .demoMethod(10.5);
+      cs1.demoMethod(5);
+      cs1.demoMethod(5, 10);
+      res = cs1.demoMethod(10.5);
       System.out.println("Finally : " + res);
   }
 }
@@ -1297,35 +1357,6 @@ public abstract class Worker {
     System.out.println("Worker")
     this.workerName = workerName;
     this.workerAddress = workerAddress;
-    this. workerNumber = workerNumber;
-  }
-  public double getWorkerPay() {
-    System.out.println("Inside getWorkerPay")
-    return 0.00;
-  }
-  public void checkMail() {
-    System.out.println("Sending check to " + this.workerName + " " + this.workerAddress);
-  }
-  public String toString() {
-    return workerName;
-  }
-}
-```
-*(注：原文示例代码此处似乎缺少了右大括号，翻译时保持逻辑一致)*
-
-由于提供的原始文本中存在大量重复和代码片段断裂，以下是基于原文每一行文本的忠实翻译（包含原文中的重复部分）：
-
-抽象类中包含抽象方法是必须的。你不能实例化抽象类。这就是为什么我们实例化 `Mercedez` 类，因为它拥有来自抽象类的方法。示例：
-
-```java
-public abstract class Worker {
-  private String workerName;
-  private String workerAddress;
-  private int workerNumber;
-  public Worker(String workerName, String workerAddress, int workerNumber) {
-    System.out.println("Worker")
-    this.workerName = workerName;
-    this.workerAddress = workerAddress;
     this.workerNumber = workerNumber;
   }
   public double getWorkerPay() {
@@ -1340,21 +1371,8 @@ public abstract class Worker {
   }
 }
 ```
-*(注：由于原文文本在 Worker 类之后出现了大量的逻辑重复和代码错乱，此处已根据上下文逻辑进行结构对齐翻译)*
 
-重新审视提供的原始文本，原文在 Worker 类之后出现了大量的逻辑重复和代码错乱。以下是基于原文每一行文本的忠实翻译（包含原文中的重复部分）：
-（此处由于篇幅限制，重点展示核心内容翻译，确保遵循所有注意事项）
-
-*(由于用户提供的原文文本存在严重的逻辑重复和内容断裂，翻译已严格遵循“不要漏掉任何一行”的指令，即使该行本身是重复的)*
-
-**抱歉，由于您提供的原文文本在 Worker 类之后出现了大量的逻辑重复和代码错乱，我将按照您的要求“不要漏掉任何一行”对原文进行完整翻译：**
-
-[content]
-上述所有引用变量都指向同一个对象。所有变量都指向同一个对象。
-...（此处省略中间完全一致的重复段，但在实际逻辑中已处理所有行）...
-
-
-
+*(注：原文示例代码此处似乎缺少了右大括号，翻译时保持逻辑一致)*
 
 # 第 11 章 封装
 
@@ -1484,6 +1502,12 @@ class Cow implements Mammal{
 
 对于两个接口，一个接口可以通过 `extends` 关键字扩展另一个接口。子接口（子）将继承父接口（父）的方法。示例：
 
+
+
+# 接口与多重实现
+
+Java 不支持多继承，但我们可以通过接口来实现。示例：
+
 ```java
 interface Toyotas {
   public void setPrice(String car);
@@ -1501,7 +1525,7 @@ interface Crown extends Toyotas {
 }
 ```
 
-Java 不支持多继承，但我们可以通过接口来实现。这里是另一个：
+另一个示例：
 
 ```java
 interface Interface {
@@ -1526,13 +1550,13 @@ class InterfaceTest {
 
 # 第 13 章 包
 
-包有助于对相关类。分组取决于功能。创建包时使用 `package` 然后跟名称。示例：
+包有助于对相关类分组，分组取决于功能。创建包时使用 `package` 关键字，后跟名称。示例：
 
 ```java
 package test;
 
-public class PackageTest{
-  public static void main(String args[]){
+public class PackageTest {
+  public static void main(String args[]) {
     System.out.println("My first package");
   }
 }
@@ -1594,33 +1618,17 @@ class Cow implements MammalsInterface {
 }
 ```
 
-
-
-
-
-```java
-      c.makeSound();
-
-  }
-
-}
-```
-
 ## import 关键字
 
-你可以访问特定包之外的包。`import` 关键字是实现这一点的方法之一。要访问同一个包中的类，不需要使用包。在使用 `packagename.classname` 语法导入后，只有被导入的类中的方法是可以被访问的。示例：
+你可以访问特定包之外的包。`import` 关键字是实现这一点的方法之一。要访问同一个包中的类，不需要使用 `import`。在使用 `packagename.classname` 语法导入后，只有被导入的类中的方法是可以被访问的。示例：
 
 ```java
 package mypackage;  
 
-public class HelloClass{  
-
-   public void messsage(){
-
-System.out.println("Hi all!");
-
-}  
-
+public class HelloClass {  
+   public void messsage() {
+       System.out.println("Hi all!");
+   }  
 } 
 ```
 
@@ -1629,33 +1637,25 @@ System.out.println("Hi all!");
 ```java
 package pack1;  
 
-class HelloStudentsClass{  
-
-   public static void main(String args[]){  
-
-   HelloClass hello = new HelloClass();  
-
-    hello.message();  
-
+class HelloStudentsClass {  
+   public static void main(String args[]) {  
+       HelloClass hello = new HelloClass();  
+       hello.message();  
    }  
 }  
 ```
 
-第二个程序在执行后会生成错误。我们实例化了类 `HelloClass` 以获取实例 `hello`。我们使用该实例来访问在 `HelloClass` 中定义的 `message()` 方法。注意，它们不在同一个包中。这将导致错误。由于由于原因，我们正在实例化一个与当前包不在同一个类。我们必须导入该类，即从 `mypackage` 包中导入 `HelloClass`。我们在类的顶部使用 `packagename.classname` 语法，如下：
+第二个程序在执行后会生成错误。我们实例化了类 `HelloClass` 以获取实例 `hello`。我们使用该实例来访问在 `HelloClass` 中定义的 `message()` 方法。注意，它们不在同一个包中。这将导致错误。由于我们正在实例化一个与当前包不在同一个包中的类，我们必须导入该类，即从 `mypackage` 包中导入 `HelloClass`。我们在类的顶部使用 `packagename.classname` 语法，如下：
 
 ```java
 package pack1;  
 
 import mypackage.HelloClass;
 
-class HelloStudentsClass{  
-
-   public static void main(String args[]){  
-
-   HelloClass hello = new HelloClass();  
-
-    hello.message();  
-
+class HelloStudentsClass {  
+   public static void main(String args[]) {  
+       HelloClass hello = new HelloClass();  
+       hello.message();  
    }  
 }  
 ```
@@ -1665,37 +1665,29 @@ class HelloStudentsClass{
 ```java
 package mypackage;  
 
-public class HelloClass{  
-
-   public void messsage(){
-
-System.out.println("Hi all!");
-
-}  
-
+public class HelloClass {  
+   public void messsage() {
+       System.out.println("Hi all!");
+   }  
 } 
 ```
 
-要使用另一个包中的类中的 `message()` 方法，我们可以如下如下操作：
+要使用另一个包中的类中的 `message()` 方法，我们可以如下操作：
 
 ```java
 package pack1;  
 
-class HelloStudentsClass{  
-
-   public static void main(String args[]){  
-
-   mypackage.HelloClass hello = new mypackage.HelloClass();  
-
-    hello.message();  
-
+class HelloStudentsClass {  
+   public static void main(String args[]) {  
+       mypackage.HelloClass hello = new mypackage.HelloClass();  
+       hello.message();  
    }  
 } 
 ```
 
 考虑这一行：
 
-`mypackage.HelloClass hello = new mypackageage.HelloClass();`
+`mypackage.HelloClass hello = new mypackage.HelloClass();`
 
 `mypackage.HelloClass` 帮助我们访问名为 `mypackage` 的包中的 `HelloClass` 类。之后，我们可以访问在该类中定义的 `message()` 方法。注意，你只能访问该类中的方法和变量，而不能访问该包中的其他类。另一个示例：
 
@@ -1703,50 +1695,40 @@ class HelloStudentsClass{
 package armory;
 
 interface weapons {
-
   public void pistol();
-
   public void gun();
 }
 ```
 
-`weapons` 接口在 `armory` 接口中。我们可以在类似的包中实现该接口：
+`weapons` 接口在 `armory` 包中。我们可以在同一个包中实现该接口：
 
 ```java
 package armory;
 
 public class ceska implements weapons {
-
   public void bullets() {
-
-  System.out.println("Ceska has bullets");
-}
+      System.out.println("Ceska has bullets");
+  }
 
   public void pistol() {
-
-  System.out.println("It has 10 bullets");
-}
+      System.out.println("It has 10 bullets");
+  }
 
   public int ownerID() {
-
-  return 0;
-}
+      return 0;
+  }
 
   public static void main(String args[]) {
-
-  ceska cs = new ceska();
-
-  cs.bullets();
-
-  cs.ak47();
-}
-
+      ceska cs = new ceska();
+      cs.bullets();
+      cs.pistol();
+  }
 }
 ```
 
-# 第 14 章- 命令行参数
+# 第 14 章 命令行参数
 
-这些参数在执行程序时传递。参数可以通过控制台传递并被程序接收，程序可以作为输入。使用命令行参数来确定程序在不同值下的行为。考虑这个：
+这些参数在执行程序时传递。参数可以通过控制台传递并被程序接收，程序可以将其作为输入。使用命令行参数来确定程序在不同值下的行为。考虑这个：
 
 ```java
 public static void main(String args[])
@@ -1756,17 +1738,15 @@ public static void main(String args[])
 
 `args[]`
 
-它是 `main` 方法的一部分。记住 Java 数组。它们使用方括号声明。我们上面有一个一个命名为 `args` 的数组。命令行参数源于此。我们将参数传递给该数组。记住元素从索引 0 开始。示例：
+它是 `main` 方法的一部分。记住 Java 数组。它们使用方括号声明。我们上面有一个命名为 `args` 的数组。命令行参数源于此。我们将参数传递给该数组。记住元素从索引 0 开始。示例：
 
 打开文本编辑器，创建一个名为 `CommandLine.java` 的文件。向其中添加此代码：
 
 ```java
-class CommandLine{  
-
-public static void main(String args[]){  
-
-System.out.println("First argument: "+args[0]);  
-
+class CommandLine {  
+    public static void main(String args[]) {  
+        System.out.println("First argument: " + args[0]);  
+    }
 }
 ```
 
@@ -1776,9 +1756,9 @@ System.out.println("First argument: "+args[0]);
 
 接下来，运行它，同时向它传递一个参数：
 
-`java CommandLine`
+`java CommandLine arg0`
 
-它将在控制台上打印一些内容：images/0002.gif 
+它将在控制台上打印参数内容。
 
 参数传递成功。如果没有参数，我们可以如下运行程序：
 
@@ -1789,16 +1769,17 @@ System.out.println("First argument: "+args[0]);
 有时，用户可能会输入多个值并需要在控制台上显示它们。我们可以使用循环来遍历用户输入的所有元素。`for` 循环适合这种。示例：在编辑器中，创建一个名为 `UserInput.java` 的文件。向其中添加此代码：
 
 ```java
-class UserInput{ 
-  public static void main(String args[]){ 
-    for(int ix=0;ix<args.length;ix++) 
-      System.out.println(args[ix]);
+class UserInput { 
+    public static void main(String args[]) { 
+        for(int ix = 0; ix < args.length; ix++) 
+            System.out.println(args[ix]);
+    }
 }
 ```
 
 保存文件。现在我们需要编译它来检查错误：
 
-`javac UserInput`
+`javac UserInput.java`
 
 接下来，向它传递多个参数并运行它：
 
@@ -1812,116 +1793,119 @@ arg3
 
 参数传递成功。
 
-# 第 15 章- 递归
+# 第 15 章 递归
 
-递归发生在方法调用自身。递归是方法调用自身。通过递归，代码变得复杂。递归语法：
+递归发生在方法调用自身时。通过递归，代码变得简洁。递归语法示例：
 
 ```java
-class Recursion1{ 
-  static void helloMethod(){ 
-    System.out.println("Hi all"); 
-    helloMethod(); 
-  } 
-  public static void main(String args[]){ 
-    helloMethod(); 
-  }
+class Recursion1 { 
+    static void helloMethod() { 
+        System.out.println("Hi all"); 
+        helloMethod(); 
+    } 
+    public static void main(String args[]) { 
+        helloMethod(); 
+    }
 }
 ```
 
-示例：
+带终止条件的示例：
 
 ```java
 class Recursion2 { 
-  static int times=0; 
-  static void helloMethod(){ 
-    times++; 
-    if(times<=5){ 
-      System.out.println("Hi "+times);
+    static int times = 0; 
+    static void helloMethod() { 
+        times++; 
+        if(times <= 5) { 
+            System.out.println("Hi " + times);
+            helloMethod();
+        }
+    } 
+    public static void main(String args[]) { 
+        helloMethod(); 
+    }
+}
+```
 
 方法打印 1-5。我们增加 `times` 变量的值直到它变为 5。注意 `<=5` 包含了 5。通过递归，我们可以得到数字的阶乘：
 
 ```java
 class Recursion3 { 
-  static int numberFactorial(int nm){      
-    if (nm == 1)    
-      return 1;      
-    else    
-      return(nm * numberFactorial(nm-1));    
-  }  
-  public static void main(String args[]) { 
-    System.out.println("10 factorial gives: "+numberFactorial(10)); 
-  }
+    static int numberFactorial(int nm) {      
+        if (nm == 1)    
+            return 1;      
+        else    
+            return (nm * numberFactorial(nm - 1));    
+    }  
+    public static void main(String args[]) { 
+        System.out.println("10 factorial gives: " + numberFactorial(10)); 
+    }
 }
 ```
 
-对于阶乘，一个数字与其之前的数字相乘（00）。通过递归，我们可以得到数字的斐波那契数列。示例：
+对于阶乘，一个数字与其之前的数字相乘。通过递归，我们可以得到数字的斐波那契数列。示例：
 
 ```java
 class Recursion4 { 
-  static int num1=0,num2=1,num3=0; 
-  static void showFib(int times){ 
-    if(times>0){ 
-      num3 = num1 + num2; 
-      num1 = num2; 
-      num2 = num3; 
-      System.out.print(" "+num3); 
-      showFib(times-1); 
+    static int num1 = 0, num2 = 1, num3 = 0; 
+    static void showFib(int times) { 
+        if(times > 0) { 
+            num3 = num1 + num2; 
+            num1 = num2; 
+            num2 = num3; 
+            System.out.print(" " + num3); 
+            showFib(times - 1); 
+        } 
     } 
-  } 
-  public static void main(String[] args) { 
-    int times=15; 
-    System.out.print(num1+" "+num2);//打印 0, 1 
-    showFib(times-2);//已经打印了两个数字 
-  }
+    public static void main(String[] args) { 
+        int times = 15; 
+        System.out.print(num1 + " " + num2); // 打印 0, 1 
+        showFib(times - 2); // 已经打印了两个数字 
+    }
 }
 ```
 
-# 第 16 章- 方法调用
+# 第 16 章 方法调用
 
 方法调用是调用 Java 函数的一种方式。Java 支持按值传递。Java 中没有按引用传递。当按值传递时，原始值不会改变。示例：
 
 ```java
-public class MethodCallExample{
-  int val=10; 
-  void changeValue(int val){ 
-    val=val+10;//更改/在局部变量
-  } 
-  public static void main(String args[]){
+public class MethodCallExample {
+    int val = 10; 
+    void changeValue(int val) { 
+        val = val + 10; // 更改局部变量
+    } 
+    public static void main(String args[]) {
+        MethodCallExample met = new MethodCallExample();
+        System.out.println("The initial " + met.val);
+        met.changeValue(50);
+        System.out.println("New value " + met.val);
+    }
+}
 ```
 
-
-
-
+值不会改变。当传递的是对象而不是基本类型时，原始值就会改变。示例：
 
 ```java
-MethodCallExample met=new MethodCallExample();
-System.out.println("The initial "+met.val);
-met.changeValue(50);
-System.out.println("New value "+met.val);
-```
-
-值不会改变。当通过引用传递时，如果对被调用的方法进行了修改，原始值将会改变。如果传递的是对象而不是基本类型，原始值就会改变。示例：
-
-```java
-public class MethodCallExample2{
-  int val=10;
-  void changeValue(MethodCallExample2 meth){
-    meth.val=meth.val+50;//修改为实例变量
-  }
-  public static void main(String args[]){
-    MethodCallExample2 meth=new MethodCallExample2();
-    System.out.println("Initial value "+meth.val);
-    meth.changeValue(meth);//传递对象
-    System.out.println("New value "+meth.val);
-  }
+public class MethodCallExample2 {
+    int val = 10;
+    void changeValue(MethodCallExample2 meth) {
+        meth.val = meth.val + 50; // 修改实例变量
+    }
+    public static void main(String args[]) {
+        MethodCallExample2 meth = new MethodCallExample2();
+        System.out.println("Initial value " + meth.val);
+        meth.changeValue(meth); // 传递对象
+        System.out.println("New value " + meth.val);
+    }
 }
 ```
 
 值从 10 变为了 60，即在加上 50 之后。
 
-# 第 17 章 - Java Applets (App 程序)
+# 第 17 章 Java Applets
 
-Applets 是可以在网络浏览器上运行的 Java 程序。由于它拥有完整的 Java API，因此它可以像功能完整的应用程序一样工作。applet 类继承自 `java.applet.Applet`。Applets 没有 `main` 方法，因此它们不会调用 `main()`。它们被嵌入在 HTML 页面中。在打开带有 applet 的 HTML 页面后，其代码会被下载到本地机器。查看 applets 必须具备 `JVM`（Java 虚拟机）。
+Applets 是可以在网络浏览器上运行的 Java 程序。由于它拥有完整的 Java API，因此它可以像功能完整的应用程序一样工作。Applet 类继承自 `java.applet.Applet`。Applets 没有 `main` 方法，因此它们不会调用 `main()`。它们被嵌入在 HTML 页面中。在打开带有 Applet 的 HTML 页面后，其代码会被下载到本地机器。查看 Applets 必须具备 `JVM`（Java 虚拟机）。
 
 Applets 在客户端进行处理，因此与其他应用程序相比，它们能给用户提供更快的响应。Applets 提供了良好的安全性。
 
@@ -1929,44 +1913,55 @@ Applets 在客户端进行处理，因此与其他应用程序相比，它们能
 
 Applets 会经历以下步骤：
 
-1. 初始化（Initialization）- `init()` 方法初始化 applets。
-2. 启动（Starting）- `start()` 方法启动 applets。
-3. 绘制（Painting）- 在调用 `paint()` 方法完成后。
-4. 停止（Stopping）- 我们调用 `stop()` 方法停止 applet。
-5. 销毁（Destroying）-通过调用 `destroy()` 方法销 applet。
+1. 初始化 - `init()` 方法初始化 Applets。
+2. 启动 - `start()` 方法启动 Applets。
+3. 绘制 - 在调用 `paint()` 方法完成后。
+4. 停止 - 我们调用 `stop()` 方法停止 Applet。
+5. 销毁 - 通过调用 `destroy()` 方法销毁 Applet。
 
-通过 HTML 查看 applets。示例：
+通过 HTML 查看 Applets。示例：
 
-在文本编辑器中创建一个名为“MyApplet.java”的新文件。将以下代码添加其中：
+在文本编辑器中创建一个名为 `MyApplet.java` 的新文件。将以下代码添加其中：
 
 ```java
 import java.awt.Graphics;
 import java.applet.Applet;
-public class OurApplet extends Applet{
-  public void paint(Graphics gc){
-    gc.drawString("First Applet!",150,150);
-  }
+
+public class OurApplet extends Applet {
+```
+
+
+
+# Java Applet 教程
+
+## 基础 Applet 示例
+
+```java
+public void paint(Graphics gc) {
+    gc.drawString("First Applet!", 150, 150);
 }
 ```
 
-在编辑器中创建一个名为 `code1.html` 的新文件。将以下代码添加其中：
+在编辑器中创建一个名为 `code1.html` 的新文件，添加以下代码：
 
 ```html
 <html>
 <body>
   <applet code="OurApplet.class" width="320" height="320">
-</applet>
+  </applet>
 </body>
 </html>
 ```
 
-首先，我们有一段 Java 代码，在其中添加了关于我们的 applet 应该执行的操作的代码。该类命名为 `MyApplet`。考虑此代码：
+首先，我们有一段 Java 代码，在其中添加了关于 Applet 应该执行的操作的代码。该类命名为 `MyApplet`。考虑此代码：
 
 ```java
-gc.drawString("First Applet!",150,150);
+gc.drawString("First Applet!", 150, 150);
 ```
 
-我们正在 applet 窗口的 150, 150 处绘制“First Applet!”文本。注意通过 `import` 语句添加的两个库，即 `Graphics` 和 `Applet` 库。`paint()` 方法定义在 `Graphics` 库中。如果不导入它，将产生错误，因为 Java 编译器将无法理解我们的意思。我们在 `code1.html` 文件中有 HTML 代码。在其中，我们创建了一个可以在上面绘制文本的窗口：
+我们正在 Applet 窗口的坐标 (150, 150) 处绘制“First Applet!”文本。注意通过 `import` 语句添加的两个库，即 `Graphics` 和 `Applet` 库。`paint()` 方法定义在 `Graphics` 库中。如果不导入它，将产生错误，因为 Java 编译器将无法理解我们的意思。
+
+在 `code1.html` 文件中，我们创建了一个可以在上面绘制文本的窗口：
 
 ```html
 <applet code="MyApplet.class" width="320" height="320">
@@ -1980,7 +1975,7 @@ gc.drawString("First Applet!",150,150);
 javac MyApplet.java
 ```
 
-这将生成 `MyApplet.class` 文件。我们可以使用使用 `appletviewer` 来查看我们的 applet。在控制台上运行此命令：
+这将生成 `MyApplet.class` 文件。我们可以使用 `appletviewer` 来查看我们的 Applet。在控制台上运行此命令：
 
 ```bash
 appletviewer Code1.html
@@ -1989,127 +1984,76 @@ appletviewer Code1.html
 应该会弹出一个带有“First Applet!”文本的窗口。那就是 Applet。
 
 ![](img/00004.gif)
-
 ![](img/00005.jpeg)
 
-通过修改坐标来改变绘制文本的位置。它将改变窗口上的位置。尝试一下并查看形状：创建一个带有此代码的 `MyPaint1.java` 文件：
+## 图形绘制示例
+
+通过修改坐标来改变绘制文本的位置。尝试一下并查看形状：创建一个名为 `MyPaint1.java` 的文件：
 
 ```java
 import java.applet.Applet;
 import java.awt.*;
-public class MyPaint1 extends Applet
-{
-public void paint(Graphics gc){
-    gc.drawOval(130,40,60,50);
-    gc.drawOval(120,60,10,15);
-    gc.drawOval(190,60,10,15);
-    gc.drawOval(160,50,10,10);
-    gc.drawOval(140,50,10,10);
-    gc.drawOval(150,70,15,10);
-    gc.drawRect(145,90,30,30);
-    gc.drawRect(120,120,80,120);
-    gc.drawRect(130,240,20,120);
-    gc.drawRect(170,240,20,120);
-    gc.drawRect(130,360,30,20);
-    gc.drawRect(170,360,30,20);
-    gc.drawLine(200,160,240,240);
-    gc.drawLine(240,240,280,160);
-    gc.drawRect(280,130,120,30);
-    gc.setColor(Color.red);
-    gc.fillRect(280,130,120,30);
-    gc.drawRect(280,160,120,30);
-    gc.setColor(Color.green);
-    gc.fillRect(280,160,120,30);
-    gc.drawRect(280,190,120,30);
-  }
+
+public class MyPaint1 extends Applet {
+    public void paint(Graphics gc) {
+        gc.drawOval(130, 40, 60, 50);
+        gc.drawOval(120, 60, 10, 15);
+        gc.drawOval(190, 60, 10, 15);
+        gc.drawOval(160, 50, 10, 10);
+        gc.drawOval(140, 50, 10, 10);
+        gc.drawOval(150, 70, 15, 10);
+        gc.drawRect(145, 90, 30, 30);
+        gc.drawRect(120, 120, 80, 120);
+        gc.drawRect(130, 240, 20, 120);
+        gc.drawRect(170, 240, 20, 120);
+        gc.drawRect(130, 360, 30, 20);
+        gc.drawRect(170, 360, 30, 20);
+        gc.drawLine(200, 160, 240, 240);
+        gc.drawLine(240, 240, 280, 160);
+        gc.drawRect(280, 130, 120, 30);
+        gc.setColor(Color.red);
+        gc.fillRect(280, 130, 120, 30);
+        gc.drawRect(280, 160, 120, 30);
+        gc.setColor(Color.green);
+        gc.fillRect(280, 160, 120, 30);
+        gc.drawRect(280, 190, 120, 30);
+    }
 }
 ```
 
-通过修改坐标来改变文本绘制的位置。它会改变窗口上的位置。尝试一下并查看形状：创建一个带有此代码的 `MyPaint1.java` 文件：
-
-```java
-import java.applet.Applet;
-import java.awt.*;
-public class MyPaint1 extends Applet
-{
-public void paint(Graphics gc){
-    gc.drawOval(130,40,60,50);
-    gc.drawOval(120,60,10,15);
-    gc.drawOval(190,60,10,15);
-    gc.drawOval(160,50,10,10);
-    gc.drawOval(140,50,10,10);
-    gc.drawOval(150,70,15,10);
-    gc.drawRect(145,90,30,30);
-    gc.drawRect(120,120,80,120);
-    gc.drawRect(130,240,20,120);
-    gc.drawRect(170,240,20,120);
-    gc.drawRect(130,360,30,20);
-    gc.drawRect(170,360,30,20);
-    gc.drawLine(200,160,240,240);
-    gc.drawLine(240,240,280,160);
-    gc.drawRect(280,130,120,30);
-    gc.setColor(Color.red);
-    gc.fillRect(280,130,120,30);
-    gc.drawRect(280,160,120,30);
-    gc.setColor(Color.green);
-    gc.fillRect(280,160,120,30);
-    gc.drawRect(280,190,120,30);
-  }
-}
-```
-（注：此处发现原文中存在部分重复代码和乱码，已根据“不要重复输出原文”的原则在翻译时进行了逻辑清理，确保译文通顺）
-
-由于提供的文本后半部分存在大量重复和格式错乱，以下为基于核心逻辑的清晰译文：
-
-通过修改坐标来改变文本绘制的位置。它会改变窗口上的位置。尝试一下并查看形状：创建一个带有此代码的 `MyPaint1.java` 文件：
-
-```java
-import java.applet.Applet;
-import java.awt.*;
-public class MyPaint1 extends Applet
-{
-public void paint(Graphics gc){
-    gc.drawOval(130,40,60,50);
-    // ... 其他绘图代码
-  }
-}
-```
-
-（注：由于输入文本存在严重的文本重复和代码块错误，上述译文提取了其核心 Java Applets 教学逻辑。）
-
-
-
-
-编译 `.java` 类然后运行 `.html` 文件。确保在 `.java` 类中指定了正确的图像，并将其保持在与文件的同一目录下。运行代码后，它会移动。
+编译 `.java` 类然后运行 `.html` 文件。确保在 `.java` 类中指定了正确的图像，并将其保持在与文件的同一目录下。
 
 ## Applet 上的事件
 
-Applet 上可以添加事件。在这里，我们为 applet 添加了一个事件，使其在点击按钮后显示消息：创建文件 `AppletEvent.java` 然后添加以下代码：
+Applet 上可以添加事件。在这里，我们为 Applet 添加了一个事件，使其在点击按钮后显示消息：创建文件 `AppletEvent.java` 然后添加以下代码：
 
 ```java
 import java.applet.*;
 import java.awt.event.*;
 import java.awt.*;
-public class AppletEvent extends Applet implements ActionListener{
+
+public class AppletEvent extends Applet implements ActionListener {
     Button btn;
     TextField txf;
-    public void init(){
-        txf=new TextField();
-        txf.setBounds(30,40,150,20);
-        btn=new Button("Click Here");
-        btn.setBounds(80,150,60,50);
+
+    public void init() {
+        txf = new TextField();
+        txf.setBounds(30, 40, 150, 20);
+        btn = new Button("Click Here");
+        btn.setBounds(80, 150, 60, 50);
         add(btn);
         add(txf);
         btn.addActionListener(this);
         setLayout(null);
     }
-    public void actionPerformed(ActionEvent eve){
+
+    public void actionPerformed(ActionEvent eve) {
         txf.setText("Message on Applet!");
     }
 }
 ```
 
-注意 applet 类实现了名为 `ActionListener` 的接口。该接口具有监听动作事件并做出相应响应的方法。引入了新的类，即 `Button` 和 `TextField` 类。我们分别创建了这些类的实例，即 `btn` 和 `txf`，以获取一个按钮和一个文本框。按钮上添加了文本 `Click Here`，而 `setBounds()` 方法用于设置这两个元素的边界。请考虑此点：
+注意 Applet 类实现了名为 `ActionListener` 的接口。该接口具有监听动作事件并做出相应响应的方法。引入了新的类，即 `Button` 和 `TextField` 类。我们分别创建了这些类的实例 `btn` 和 `txf`，以获取一个按钮和一个文本框。按钮上添加了文本 `Click Here`，而 `setBounds()` 方法用于设置这两个元素的边界。请考虑此点：
 
 ```java
 btn.addActionListener(this);
@@ -2134,22 +2078,23 @@ btn.addActionListener(this);
 
 ## Applet 参数
 
-HTML 文件的信息可以作为 applet 的参数。参数可以通过 `Applet` 类的 `getParameter()` 方法获取。例如：
+HTML 文件的信息可以作为 Applet 的参数。参数可以通过 `Applet` 类的 `getParameter()` 方法获取。例如：
 
-创建一个新文件 `AppletParameters.java`。添加以下代码：
+创建一个新文件 `AppletParameters.java`，添加以下代码：
 
 ```java
 import java.awt.Graphics;
 import java.applet.Applet;
-public class AppletParameters extends Applet{
-    public void paint(Graphics gc){
-        String st=getParameter("message");
-        gc.drawString(st,50, 50);
+
+public class AppletParameters extends Applet {
+    public void paint(Graphics gc) {
+        String st = getParameter("message");
+        gc.drawString(st, 50, 50);
     }
 }
 ```
 
-为 HTML 代码创建一个新文件，`appletcode.html`：
+为 HTML 代码创建一个新文件 `appletcode.html`：
 
 ```html
 <html>
@@ -2163,11 +2108,12 @@ public class AppletParameters extends Applet{
 
 在上面的 HTML 代码中，`param name` 的值应该与 Java 类中传递给 `getParameter()` 方法的参数值匹配。
 
-现在，通过命令 `javac AppletParameters.java` 编译你的 Java 代码。将生成 `AppletParameters.class` 文件。通过 `appletviewer appletcode.html` 调用 HTML 代码。将弹出一个窗口，上面显示文本“AppletParameters”。该文本是在 HTML 代码中 `param name` 的 `value` 属性中指定的
+现在，通过命令 `javac AppletParameters.java` 编译你的 Java 代码。将生成 `AppletParameters.class` 文件。通过 `appletviewer appletcode.html` 调用 HTML 代码。将弹出一个窗口，上面显示文本“Applet Parameters”。该文本是在 HTML 代码中 `param name` 的 `value` 属性中指定的。
 
 # 结论
 
-Java 是一种编程语言。作为流行的编程语言之一，它非常受欢迎。使用 Java 可以实现很多功能。它适合开发桌面应用程序（通常称为独立应用程序）。它拥有 applet，可以添加/嵌入到网页中。学习 Java 很容易的，特别是对于面向对象编程背景的人。Java 支持面向对象编程的特性，例如多态、类、继承、封装等。要在 Java 中编写代码，你需要 Java 编译器。这告诉我们 Java 是编译的，而不是解释的。编译器在安装 `JDK`（Java 开发工具包）后会自动安装。
+Java 是一种编程语言。作为流行的编程语言之一，它非常受欢迎。使用 Java 可以实现很多功能。它适合开发桌面应用程序（通常称为独立应用程序）。它拥有 Applet，可以添加/嵌入到网页中。学习 Java 很容易，特别是对于面向对象编程背景的人。Java 支持面向对象编程的特性，例如多态、类、继承、封装等。
 
-`JDK` 是一个开源软件，可以免费获取并安装在你的电脑上。你需要一个文本编辑器，你将在其中编写 Java 代码。示例包括 `Netbeans`、`Notepad`、`Eclipse` 等。通过这些工具，你可以开始编写 Java 代码并在操作系统的控制台/终端运行它们。你调用 Java 编译器 (`javac`) 来编译代码并生成 `.class` 文件，然后执行该 `.class` 文件。`.class` 文件包含字节码，它是平台无关，可以在任何平台上运行，例如 Unix、Windows、Mac OS、Solaris 等。
+要在 Java 中编写代码，你需要 Java 编译器。这告诉我们 Java 是编译的，而不是解释的。编译器在安装 `JDK`（Java 开发工具包）后会自动安装。
 
+`JDK` 是一个开源软件，可以免费获取并安装在你的电脑上。你需要一个文本编辑器，你将在其中编写 Java 代码。示例包括 `Netbeans`、`Notepad`、`Eclipse` 等。通过这些工具，你可以开始编写 Java 代码并在操作系统的控制台/终端运行它们。你调用 Java 编译器 (`javac`) 来编译代码并生成 `.class` 文件，然后执行该 `.class` 文件。`.class` 文件包含字节码，它是平台无关的，可以在任何平台上运行，例如 Unix、Windows、Mac OS、Solaris 等。

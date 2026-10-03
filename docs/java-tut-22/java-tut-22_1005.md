@@ -1,3 +1,4 @@
+
 # 身份验证机制
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/auth_mechs.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/auth_mechs.html)

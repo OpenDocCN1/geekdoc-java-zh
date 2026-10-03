@@ -1,34 +1,36 @@
+
 # Spring Boot Ajax 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-ajax-example/>
 
 本文将向您展示如何使用`jQuery.ajax`向`Spring REST API`发送 HTML 表单请求并返回 JSON 响应。
 
-使用的工具:
+使用的工具：
 
-1.  Spring Boot 1.5.1 .版本
-2.  弹簧 4.3.6 释放
-3.  maven3
-4.  jQuery
-5.  自举 3
+1. Spring Boot 1.5.1 版本
+2. Spring 4.3.6 版本
+3. Maven 3
+4. jQuery
+5. Bootstrap 3
 
-**Note**
-You may interest at this classic [Spring MVC Ajax example](http://web.archive.org/web/20221008082838/http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/)
+**注意**
 
-## 1.项目结构
+您可能对这个经典的 [Spring MVC Ajax 示例](http://web.archive.org/web/20221008082838/http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/) 感兴趣。
+
+## 1. 项目结构
 
 一个标准的 Maven 项目结构。
 
 ![spring boot ajax example](img/fe4b5322ff6895b0cdece81d205d5d22.png)
 
-## 2.项目依赖性
+## 2. 项目依赖
 
 一个正常的 Spring Boot 依赖和一些`webjars`资源。
 
-pom.xml
+`pom.xml`
 
-```java
- <project 
+```xml
+<project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 	http://maven.apache.org/maven-v4_0_0.xsd">
@@ -86,17 +88,17 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
-## 3.Spring REST API
+## 3. Spring REST API
 
-3.1 一个休息控制器，接受一个`SearchCriteria`并返回一个`ResponseEntity`
+### 3.1 一个 REST 控制器，接受一个`SearchCriteria`并返回一个`ResponseEntity`
 
-SearchController.java
+`SearchController.java`
 
 ```java
- package com.mkyong.controller;
+package com.mkyong.controller;
 
 import com.mkyong.model.AjaxResponseBody;
 import com.mkyong.model.SearchCriteria;
@@ -152,15 +154,15 @@ public class SearchController {
 
     }
 
-} 
+}
 ```
 
-3.2 一些 POJO。
+### 3.2 一些 POJO
 
-AjaxResponseBody.java
+`AjaxResponseBody.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 import java.util.List;
 
@@ -171,13 +173,13 @@ public class AjaxResponseBody {
 
     //getters and setters
 
-} 
+}
 ```
 
-User.java
+`User.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 public class User {
 
@@ -192,15 +194,15 @@ public class User {
     }
 
     //getters and setters
-} 
+}
 ```
 
-3.3 验证。
+### 3.3 验证
 
-SearchCriteria.java
+`SearchCriteria.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -216,15 +218,15 @@ public class SearchCriteria {
     public void setUsername(String username) {
         this.username = username;
     }
-} 
+}
 ```
 
-3.4 初始化一些用户进行搜索的服务。
+### 3.4 初始化一些用户进行搜索的服务
 
-UserService.java
+`UserService.java`
 
 ```java
- package com.mkyong.services;
+package com.mkyong.services;
 
 import com.mkyong.model.User;
 import org.springframework.stereotype.Service;
@@ -266,15 +268,15 @@ public class UserService {
 
     }
 
-} 
+}
 ```
 
-3.5 Spring Boot 起动机。
+### 3.5 Spring Boot 启动器
 
-UserService.java
+`SpringBootWebApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -286,17 +288,19 @@ public class SpringBootWebApplication {
         SpringApplication.run(SpringBootWebApplication.class, args);
     }
 
-} 
+}
 ```
 
-## 4.HTML 表单+ jQuery Ajax
+## 4. HTML 表单 + jQuery Ajax
 
-4.1 一个简单的 HTML 表单，用 bootstrap 装饰。
+### 4.1 一个简单的 HTML 表单，用 Bootstrap 装饰
 
-ajax.html
+`ajax.html`
 
-```java
- <!DOCTYPE html>
+
+
+```html
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -358,15 +362,15 @@ ajax.html
 <script type="text/javascript" src="js/main.js"></script>
 
 </body>
-</html> 
+</html>
 ```
 
-4.2 获取 HTML 表单，通过`JSON.stringify`将搜索条件转换成 JSON 格式，通过`jQuery.ajax`发送 POST 请求
+## 4.2 获取 HTML 表单，通过 `JSON.stringify` 将搜索条件转换成 JSON 格式，通过 `jQuery.ajax` 发送 POST 请求
 
-main.js
+`main.js`
 
-```java
- $(document).ready(function () {
+```javascript
+$(document).ready(function () {
 
     $("#search-form").submit(function (event) {
 
@@ -416,19 +420,19 @@ function fire_ajax_submit() {
         }
     });
 
-} 
+}
 ```
 
 完成了。
 
-## 5.演示
+## 5. 演示
 
-5.1 启动 Spring Boot
+### 5.1 启动 Spring Boot
 
 Terminal
 
-```java
- $ mvn spring-boot:run
+```bash
+$ mvn spring-boot:run
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -440,33 +444,33 @@ Terminal
 
 2017-02-03 14:56:36 DEBUG com.mkyong.SpringBootWebApplication - Running with Spring Boot v1.5.1.RELEASE, Spring v4.3.6.RELEASE
 2017-02-03 14:56:36 INFO  com.mkyong.SpringBootWebApplication - No active profile set, falling back to default profiles: default
-2017-02-03 14:56:39 INFO  com.mkyong.SpringBootWebApplication - Started SpringBootWebApplication in 2.828 seconds (JVM running for 3.295) 
+2017-02-03 14:56:39 INFO  com.mkyong.SpringBootWebApplication - Started SpringBootWebApplication in 2.828 seconds (JVM running for 3.295)
 ```
 
-5.2 访问 *http://localhost:8080/*
+### 5.2 访问 `http://localhost:8080/`
 
 ![](img/7c9b35acf8ac81667b823c9a7447c47a.png)
 
-5.3 如果用户名为空！
+### 5.3 如果用户名为空！
 
-![](img/7b2d91c1467c73a0389ed17ae162bba3.png)![](img/78d4e9d97390a161a42b4a3c928c477d.png)
+![](img/7b2d91c1467c73a0389ed17ae162bba3.png) ![](img/78d4e9d97390a161a42b4a3c928c477d.png)
 
-5.4 如果找不到用户名！
+### 5.4 如果找不到用户名！
 
 ![](img/7f1a13a0b3c435428e75662753822d76.png)
 
-5.5 如果找到用户名！
+### 5.5 如果找到用户名！
 
-![](img/d16709a70df37a5512105d4261fb6781.png)![](img/3bdcaed83b42c160ca44f3576b7ec894.png)
+![](img/d16709a70df37a5512105d4261fb6781.png) ![](img/3bdcaed83b42c160ca44f3576b7ec894.png)
 
-## 6.下载源代码
+## 6. 下载源代码
 
 Download – [spring-boot-ajax-example.zip](http://web.archive.org/web/20221008082838/http://www.mkyong.com/wp-content/uploads/2017/02/spring-boot-ajax-example.zip) (10 KB)
 
 ## 参考
 
-1.  [Spring IO——构建 RESTful Web 服务](http://web.archive.org/web/20221008082838/https://spring.io/guides/gs/rest-service/)
-2.  [MDN–JSON . stringify()](http://web.archive.org/web/20221008082838/https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-3.  [Spring 4 MVC Ajax Hello World 示例](http://web.archive.org/web/20221008082838/http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/)
+1. [Spring IO——构建 RESTful Web 服务](http://web.archive.org/web/20221008082838/https://spring.io/guides/gs/rest-service/)
+2. [MDN–JSON . stringify()](http://web.archive.org/web/20221008082838/https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+3. [Spring 4 MVC Ajax Hello World 示例](http://web.archive.org/web/20221008082838/http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/)
 
 <input type="hidden" id="mkyong-current-postId" value="14398">

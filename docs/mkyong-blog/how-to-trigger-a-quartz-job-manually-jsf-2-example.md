@@ -1,36 +1,39 @@
-# 如何手动触发 Quartz 作业(JSF 2 示例)
+
+# 如何手动触发 Quartz 作业（JSF 2 示例）
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/jsf2/how-to-trigger-a-quartz-job-manually-jsf-2-example/>
 
-在 Quartz 中，您可以通过以下模式手动触发作业:
+在 Quartz 中，您可以通过以下模式手动触发作业：
 
 ```java
- JobKey jobKey = new JobKey(jobName, jobGroup);
-scheduler.triggerJob(jobKey); //trigger a job by jobkey 
+JobKey jobKey = new JobKey(jobName, jobGroup);
+scheduler.triggerJob(jobKey); // trigger a job by job key
 ```
 
-在本教程中，我们将向您展示一个 JSF 2 web 应用程序，显示`dataTable`上的所有 Quartz 作业，并允许用户点击一个链接来手动启动作业。
+在本教程中，我们将向您展示一个 JSF 2 Web 应用程序，显示`dataTable`上的所有 Quartz 作业，并允许用户点击一个链接来手动启动作业。
 
-使用的工具:
+## 使用的工具
 
-1.  JSF 2.1.11
-2.  石英 2.1.5
-3.  Eclipse 4.2
-4.  maven3
-5.  在 Tomcat 6 和 7 上测试
+1. JSF 2.1.11
+2. Quartz 2.1.5
+3. Eclipse 4.2
+4. Maven 3
+5. 在 Tomcat 6 和 7 上测试
 
-## 1.项目目录
+## 1. 项目目录
 
 最终项目目录。
 
-![final project directory](img/563a13e9b96e899fce291e2031a3757d.png "project-directory") ## 2.项目依赖性
+![final project directory](img/563a13e9b96e899fce291e2031a3757d.png "project-directory")
+
+## 2. 项目依赖
 
 本教程的所有依赖项。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
-```java
- <project ...>
+```xml
+<project ...>
 
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -92,12 +95,12 @@ scheduler.triggerJob(jobKey); //trigger a job by jobkey
 </project> 
 ```
 
- ## 3.石英工作
+## 3. Quartz 作业
 
-通过`web.xml`中的监听器，创造两份工作并与 JSF 整合。
+通过`web.xml`中的监听器，创建两份作业并与 JSF 整合。
 
 ```java
- package com.mkyong.jobs;
+package com.mkyong.jobs;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -112,11 +115,11 @@ public class JobA implements Job {
 
 	}
 
-} 
+}
 ```
 
 ```java
- package com.mkyong.jobs;
+package com.mkyong.jobs;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -131,13 +134,13 @@ public class JobB implements Job {
 
 	}
 
-} 
+}
 ```
 
-*文件:quartz.properties*
+*文件：`quartz.properties`*
 
-```java
- org.quartz.scheduler.instanceName = MyScheduler
+```properties
+org.quartz.scheduler.instanceName = MyScheduler
 org.quartz.threadPool.threadCount = 3
 org.quartz.jobStore.class = org.quartz.simpl.RAMJobStore
 org.quartz.plugin.jobInitializer.class =org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin 
@@ -145,10 +148,10 @@ org.quartz.plugin.jobInitializer.fileNames = quartz-config.xml
 org.quartz.plugin.jobInitializer.failOnFileNotFound = true 
 ```
 
-*文件:quartz.config*
+*文件：`quartz.config`*
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <job-scheduling-data
 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -193,13 +196,13 @@ org.quartz.plugin.jobInitializer.failOnFileNotFound = true
 			</cron>
 		</trigger>
 	</schedule>
-</job-scheduling-data> 
+</job-scheduling-data>
 ```
 
-*文件:web.xml*
+*文件：`web.xml`*
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
@@ -251,15 +254,17 @@ org.quartz.plugin.jobInitializer.failOnFileNotFound = true
 		</listener-class>
 	</listener>
 
-</web-app> 
+</web-app>
 ```
 
-## 4.JSF 豆
+## 4. JSF Bean
 
-一个 JSF 比恩为后来的`dataTable`提供数据。在构造函数中，获取所有现有的作业并添加到一个列表中，然后返回它。
+一个 JSF Bean 为后面的`dataTable`提供数据。在构造函数中，获取所有现有的作业并添加到一个列表中，然后返回它。
+
+
 
 ```java
- package com.mkyong.scheduler;
+package com.mkyong.scheduler;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -379,17 +384,17 @@ public class SchedulerBean implements Serializable {
 
 	}
 
-} 
+}
 ```
 
-## 5.JSF 页面
+## 5. JSF 页面
 
-一个网页，通过 EL `#{scheduler.quartzJobList}`获取所有已有的作业，通过`dataTable`组件显示。当单击“fireNow”链接时，它将立即启动指定的作业。
+一个网页，通过 EL `#{scheduler.quartzJobList}` 获取所有已有的作业，通过 `dataTable` 组件显示。当单击“fireNow”链接时，它将立即启动指定的作业。
 
-*文件:welcome.xhtml*
+*文件：`welcome.xhtml`*
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html 
@@ -435,60 +440,53 @@ public class SchedulerBean implements Serializable {
 	   </h:dataTable>
 	</h:form>
 </h:body>
-</html> 
+</html>
 ```
 
-*文件:table-style.css*
+*文件：`table-style.css`*
 
-```java
- .quartz-table{   
-	border-collapse:collapse;
+```css
+.quartz-table {
+	border-collapse: collapse;
 }
 
-.quartz-table-header{
-	text-align:center;
-	background:none repeat scroll 0 0 #E5E5E5;
-	border-bottom:1px solid #BBBBBB;
-	padding:16px;
+.quartz-table-header {
+	text-align: center;
+	background: none repeat scroll 0 0 #E5E5E5;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 16px;
 }
 
-.quartz-table-odd-row{
-	text-align:center;
-	background:none repeat scroll 0 0 #FFFFFFF;
-	border-top:1px solid #BBBBBB;
-	padding:20px;
+.quartz-table-odd-row {
+	text-align: center;
+	background: none repeat scroll 0 0 #FFFFFFF;
+	border-top: 1px solid #BBBBBB;
+	padding: 20px;
 }
 
-.quartz-table-even-row{
-	text-align:center;
-	background:none repeat scroll 0 0 #F9F9F9;
-	border-top:1px solid #BBBBBB;
-	padding:20px;
-} 
+.quartz-table-even-row {
+	text-align: center;
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-top: 1px solid #BBBBBB;
+	padding: 20px;
+}
 ```
 
-## 6.演示
+## 6. 演示
 
-请参见最终输出。*http://localhost:8080/Java server faces/*
+请参见最终输出：<http://localhost:8080/Java%20server%20faces/>
 
 ![list all quartz jobs](img/e63bed9e4774753fb3bddd6fb9f91416.png "all-quartz-jobs")
 
 ## 下载源代码
 
-Download it – [JSF-Quartz-Trigger-Job-Manually.zip](http://web.archive.org/web/20190219073326/http://www.mkyong.com/wp-content/uploads/2012/08/JSF-Quartz-Trigger-Job-Manually.zip) (28 kb)
+Download it – [JSF-Quartz-Trigger-Job-Manually.zip](http://web.archive.org/web/20190219073326/http://www.mkyong.com/wp-content/uploads/2012/08/JSF-Quartz-Trigger-Job-Manually.zip)（28 kb）
 
 ## 参考
 
-1.  [Quartz 2 管理员页面示例](http://web.archive.org/web/20190219073326/http://neopatel.blogspot.com/2010/02/quartz-admin-jsp.html)
-2.  [石英 2 + JSF 2 集成示例](http://web.archive.org/web/20190219073326/http://www.mkyong.com/jsf2/jsf-2-quartz-2-example/)
-3.  jquartzinitializer listener JavaDoc
-4.  [石英中的多项工作](http://web.archive.org/web/20190219073326/http://www.mkyong.com/java/example-to-run-multiple-jobs-in-quartz/)
+1. [Quartz 2 管理员页面示例](http://web.archive.org/web/20190219073326/http://neopatel.blogspot.com/2010/02/quartz-admin-jsp.html)
+2. [石英 2 + JSF 2 集成示例](http://web.archive.org/web/20190219073326/http://www.mkyong.com/jsf2/jsf-2-quartz-2-example/)
+3. `jquartzinitializer listener` JavaDoc
+4. [石英中的多项工作](http://web.archive.org/web/20190219073326/http://www.mkyong.com/java/example-to-run-multiple-jobs-in-quartz/)
 
 [jsf2](http://web.archive.org/web/20190219073326/http://www.mkyong.com/tag/jsf2/) [quartz](http://web.archive.org/web/20190219073326/http://www.mkyong.com/tag/quartz/) [scheduler](http://web.archive.org/web/20190219073326/http://www.mkyong.com/tag/scheduler/)
-
-
-
-
-
-
-

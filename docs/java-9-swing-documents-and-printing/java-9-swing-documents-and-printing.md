@@ -1,72 +1,16 @@
+
 # Java 9：Swing、文档与打印
-
-
-
-
-
-
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_0_0.png)
 
-
-
-
-
 Ove Thomsen, EA Dania 同行评审
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_3_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 + 9.2 数值格式化 222
 
-
 + 10.2 分析 230
+
 + 10.4 编程 239
 
 # 前言
@@ -77,60 +21,12 @@ Ove Thomsen, EA Dania 同行评审
 
 所有书籍都以一两个较大的示例程序结束，主要侧重于解释程序是如何编写的。另一方面，代码只在有限范围内出现——如果全部的话，读者应该在测试程序时顺便研究完成的代码。此外，它还展示了比示例更大的程序开发过程。
 
-
 Ove Thomsen, EA Dania 同行评审
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 + 9.2 数值格式化 222
 
-
 + 10.2 分析 230
+
 + 10.4 编程 239
 
 # 前言
@@ -141,19 +37,24 @@ Ove Thomsen, EA Dania 同行评审
 
 所有书籍都以一两个较大的示例程序结束，主要侧重于解释程序是如何编写的。另一方面，代码只在有限范围内出现——如果全部的话，读者应该在测试程序时顺便研究完成的代码。此外，它还展示了比示例更大的程序开发过程。
 
-
 Ove Thomsen, EA Dania 同行评审
 
-
-
 + 1. Swing details
+
 2. Layout
+
 3. Swing components
+
 4. User defined components
+
 5. The clipboard
+
 6. Drag and drop
+
 7. Edit text
+
 8. Internationalization
+
 9. Final example
 
 后续部分可能超出了日常生活的需要，但作为重要的问题，我将特别强调拖放以及剪贴板，我还将提到自定义组件的开发。
@@ -161,12 +62,17 @@ Ove Thomsen, EA Dania 同行评审
 # Java 9：Swing、文档与打印
 
 Java 9：Swing、文档与打印：软件开发
+
 第一版
+
 © 2017 Poul Klausen & bookboon.com
+
 ISBN 978-87-403-1933-0
+
 Ove Thomsen, EA Dania 同行评审
 
 在 bookboon.com 免费下载电子书
+
 # 目录
 
 前言 7
@@ -199,7 +105,6 @@ Ove Thomsen, EA Dania 同行评审
 
 问题 3 69
 
-
 4.1 JProgressBar 72
 
 4.2 JTree 81
@@ -216,7 +121,6 @@ Ove Thomsen, EA Dania 同行评审
 
 5.4 日期选择器 (DatePicker) 126
 
-
 6.1 MIME 类型 134
 
 6.2 对象序列化 138
@@ -225,11 +129,9 @@ Ove Thomsen, EA Dania 同行评审
 
 6.3 剪贴板上的图像 145
 
-
 7.1 拖动图像 162
 
 问题 4 167
-
 
 8.1 JFormattedTextField 175
 
@@ -253,16 +155,20 @@ Ove Thomsen, EA Dania 同行评审
 
 问题 5 214
 
-
 + 9.1 资源包 219
+
 + 9.2 数值格式化 222
+
 + 练习 9 226
 
-
 + 10.1 任务构化 229
+
 + 10.2 分析 230
+
 + 10.3 设计 234
+
 + 10.4 编程 239
+
 + 10.5 测试 252
 
 # 前言
@@ -273,11 +179,6 @@ Ove Thomsen, EA Dania 同行评审
 
 所有书籍都以一两个较大的示例程序结束，主要侧重于解释程序是如何编写的。另一方面，代码只在有限范围内出现——如果全部的话，读者应该在测试程序时顺便研究完成的代码。此外，它还展示了比示例更大的程序开发过程。
 
-
-
-
-
-
 首先，我想提到一下 Swing Utilities，它是一个包含许多静态工具方法的类。我曾使用 `invokeLater()` 和 `invokeAndWait()` 方法来确保某个方法在事件分发线程（event dispatcher thread）中执行。还有许多其他方法，你应该研究这个类以及它提供的方法。大多数方法你很少会用到，但了解它们的存在是有好处的。
 
 另一个类叫做 SwingConstants，正如其名，该类定义了许多常量。鼓励你去研究哪些是常量。通常情况下，不同的 Swing 组件会定义自己的常量，例如关于对齐的常量。也就是说，这些常量被定义在多个地方，而 `SwingConstants` 的意义在于：与其使用各个组件类中定义的常量，你应该使用 `SwingConstants` 中的常量。
@@ -286,16 +187,17 @@ Ove Thomsen, EA Dania 同行评审
 
 对比本书中关于 Swing 的描述与《Java 2》一书，你对 Swing 提供的用于编写图形用户界面程序的功能大部分熟悉。并不是所有内容都得到了解释，在实践中，必须不断查阅在线文档，部分是因为 Swing 过于庞大，不可能学习所有内容，部分是因为 Swing 仍在发展中。Swing 是一个开发 GUI 程序的非常成功的 API，但也因其列表冗长而受到批评。这没错，但如果你开发了适合你通常解决的任务的自定义类库，Swing 实际上可以运行得非常高效。然而，也有替代方案，当语言是 Java 时，替代方案是 javafx，它是一个用于开发图形用户界面的新 API，但它是《Java 16》一书的主题。
 
-
 程序的用户界面是通过组件开发的，用户可以对这些组件进行操作，例如 `JButton` 和 `JTextField`。大约有 30 个组件（稍微多一点，取决于你如何计数）——因此有很多工作要做。基础组件被称为 `JComponent`，它是一个包含了所有 Swing 组件共同内容的抽象类。
 
 如今所有的 Swing 组件都支持 Java Beans 规范，这意味着组件由属性组成，属性是一个带有访问器方法的实例变量。如果例如，一个变量名为 `propertyName` 并描述了组件的某个属性，你可以预期该组件拥有 `setPropertyName()` 和 `getPropertyName()` 方法，或者 `isPropertyName()` 方法。前者仅在属性值必须更改时存在，后者仅当其类型为布尔型时存在。
 
 属性可以分为几类：
 
--   简单属性（Simple properties）：它们是属性，当值改变时不会触发事件。
--   绑定属性（Bound properties）：当值改变时会触发 `PropertyChangeEvent`，且类型为 `PropertyChangeListener` 的对象可以通过 `addPropertyChangeListener()` 方法注册为该 `PropertyChangeEvent` 的监听器。
--   受约束属性（Constrained properties）：也会触发 `PropertyChangeEvent`，但是在值改变之前。类型为 `VetoableChangeListener` 的对象可以通过 `addVetoableChangeListener()` 方法注册为这些事件的监听器（只有少数组件会触发这些事件）。
+- 简单属性（Simple properties）：它们是属性，当值改变时不会触发事件。
+
+- 绑定属性（Bound properties）：当值改变时会触发 `PropertyChangeEvent`，且类型为 `PropertyChangeListener` 的对象可以通过 `addPropertyChangeListener()` 方法注册为该 `PropertyChangeEvent` 的监听器。
+
+- 受约束属性（Constrained properties）：也会触发 `PropertyChangeEvent`，但是在值改变之前。类型为 `VetoableChangeListener` 的对象可以通过 `addVetoableChangeListener()` 方法注册为这些事件的监听器（只有少数组件会触发这些事件）。
 
 `PropertyChangeEvent` 分配了三个值：属性名称、旧值和新值。
 
@@ -306,8 +208,6 @@ Ove Thomsen, EA Dania 同行评审
 ```
 component.putClientProperty("propertyName", propertyValue);
 ```
-
-
 
 并且你可以使用以下语句将其删除：
 
@@ -390,10 +290,7 @@ class ClickHandler implements ActionListener {
 
 
 
-
-
 请注意，`ModelAndView` 实现了 `PropertyChangeListener` 接口，可以注册为 `PropertyChangeEvent` 的监听器。否则，最重要的方法是 `createButton()`，它会创建一个按钮。如何为按钮定义一个客户端属性（client property），这意味着按钮有一个从开始值值为 0 的计数器。按钮的事件处理程序类型为 `CommandHandler`（一个内部类），它会显示上述消息框中的第一个。你应该注意如何引用客户端属性 `clickCounter`，还要注意事件处理程序会将该属性计数加 1。当这种情况发生时，按钮会触发一个 `PropertyChangeEvent`，在这种情况下，将执行 `ModelAndView` 的 `propertyChange()` 方法（`MainView` 已注册为监听器），该方法会打开选择器对话框。
-
 
 创建 `PropertiesProgram` 项目的副本。你现在必须修改程序使其执行逻辑与之前完全相同，但不再与按钮关联客户端属性，而是应该编写一个扩展 `JButton` 的类型 `CounterButton`，并带有属性 `counter`，窗口应该包含 9 个 `Counter` 组件。注意，这意味着 `setCount()` 方法应该触发一个 `PropertyChangeEvent`。
 
@@ -401,9 +298,9 @@ class ClickHandler implements ActionListener {
 
 正如《Java 2》书中所述，组件的尺寸由三个 `Dimension` 类型的属性定义：
 
-- 1. `preferredSize`
-- 2. `minimumSize`
-- 3. `maximumSize`
+1. `preferredSize`
+2. `minimumSize`
+3. `maximumSize`
 
 但这些属性的用途，正如《Java 2》中所解释的那样，完全取决于当前的布局管理器（layout manager）。事实上，允许编写一个完全忽略这些属性的布局管理器。绝对必须提到，组件在窗口中的精确尺寸和位置是由当前的布局管理器决定的。你也可以通过 `setBounds()` 定义组件的尺寸和位置，但此时你应该意识到，布局管理器会抑制通过 `setBounds()`（或 `setSize()`）以及 `setLocation()` 设置的值。如果你想以这种方式放置组件，请通过将布局管理器设置为 `null` 来移除布局管理器。
 
@@ -421,12 +318,11 @@ class ClickHandler implements ActionListener {
 - `setAlignmentX()`
 - `setAlignmentY()`
 
-这两个方法都带有一个浮点参数，其中0表示左或上，1表示右或下，这两个极端值之间的值表示组件需要调整的程度。例如0.5表示居中。唯一使用这些属性的布局管理器是 `BoxLayout` 或 `OverlayLayout`。
+这两个方法都带有一个浮点参数，其中 0 表示左或上，1 表示右或下，这两个极端值之间的值表示组件需要调整的程度。例如 0.5 表示居中。唯一使用这些属性的布局管理器是 `BoxLayout` 或 `OverlayLayout`。
 
 作为所有内容的示例，我将展示一个打开以下窗口的程序：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_16_0.png)
-
 
 窗口有 8 个按钮，当你点击按钮时，你会得到一个消息框。窗口有一个 `BorderLayout`，它布局了五个面板：
 
@@ -457,18 +353,15 @@ private JPanel top() {
 
 > “在丹麦，你可以找到极好的工程工作并在专业领域提升自己。特别是在风能领域，你可以向行业内最优秀的人学习，并在稳定的工作中晋升你的职业。”
 
-Mireia Mare,
-来自西班牙的高级工程师。
-自2010年起在丹麦的风能行业工作。
+Mireia Mare, 来自西班牙的高级工程师。自 2010 年起在丹麦的风能行业工作。
 
 在 bookboom.com 下载免费电子书。点击广告阅读更多信息
-
 
 如果你点击顶部的按钮，你会得到结果：
 
 | Message |
 | --- |
-| Width: 150
+| Width: 150 |
 | Height: 50 |
 | Preferred size: (150, 50) |
 | OK |
@@ -477,7 +370,7 @@ Mireia Mare,
 
 | Message |
 | --- |
-| Width: 500
+| Width: 500 |
 | Height: 60 |
 | Preferred size: (160, 60) |
 | OK |
@@ -499,12 +392,11 @@ private JPanel left() {
 }
 ```
 
-
 如果你点击按钮 A，你会得到消息：
 
 | Message |
 | --- |
-| Width: 50
+| Width: 50 |
 | Height: 84 |
 | Preferred size: (50, 50) |
 | OK |
@@ -513,7 +405,7 @@ private JPanel left() {
 
 | Message |
 | --- |
-| Width: 50
+| Width: 50 |
 | Height: 84 |
 | Preferred size: (50, 50) |
 | OK |
@@ -537,29 +429,24 @@ private JPanel bottom() {
 
 | Message |
 | --- |
-| Width: 150
+| Width: 150 |
 | Height: 50 |
 | Preferred size: (150, 50) |
 | OK |
 
 正如第一种情况，按钮的当前尺寸是由其首选尺寸决定的，并且对应于 `FlowLayout` 布局，使得尺寸是其首选尺寸。
 
-
-
-
-
-
 | 信息 |
 | --- |
 | i 宽度: 150 <br>高度: 50 <br>首选大小: (150, 50) <br> OK |
 
-也就是说，在所有三种情况下，按钮的当前大小与其首选大小相同，然后 BoxLayout 使用组件的首选大小来确定组件的大小。如果你点击面板底部，你会得到：
+也就是说，在所有三种情况下，按钮的当前大小与其首选大小相同，然后 `BoxLayout` 使用组件的首选大小来确定组件的大小。如果你点击面板底部，你会得到：
 
 | 信息 |
 | --- |
 | i 宽度: 150 <br>高度: 168 <br>首选大小: (150, 120) <br> OK |
 
-因此，右侧面板的大小为组件的最大宽度，同时也等于窗口的高度。你需要注意的是，面板的首选高度为 120，这是三个按钮高度之和，而 BorderLayout 忽略了此值（EAST 使用窗口高度）。
+因此，右侧面板的大小为组件的最大宽度，同时也等于窗口的高度。你需要注意的是，面板的首选高度为 120，这是三个按钮高度之和，而 `BorderLayout` 忽略了此值（EAST 使用窗口高度）。
 
 回到中间面板：
 
@@ -583,16 +470,15 @@ private JPanel center() {
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_23_0.png)
 
-这显示按钮的当前大小就是它的首选大小，就像在 FlowLayout 中一样。点击按钮外部，你会得到：
+这显示按钮的当前大小就是它的首选大小，就像在 `FlowLayout` 中一样。点击按钮外部，你会得到：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_23_1.png)
 
-从此可以看出，BorderLayout 中的 CENTER 忽略了面板的首选大小。
+从此可以看出，`BorderLayout` 中的 CENTER 忽略了面板的首选大小。
 
 该示例展示了首选大小的使用方式是不同的。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_23_2.png)
-
 
 事件通常在按下键盘按键或鼠标发生某些操作（点击按钮或移动鼠标）时出现。Swing 组件可以触发不同类型的事件，这些类型定义在 `java.awt.event` 或 `javax.swing.event` 中，其中许多是特定于组件。每个事件类型至少定义了触发该事件的对象，但还会包含有关对象状态的其他信息。还有一些事件不是由组件提出的。
 
@@ -619,9 +505,8 @@ public void doThreadSafeWork() {
     }
 }
 ```
-在这里首先测试代码是否由事件分发线程执行。当 SwingUtilities 通过 `invokeLater()` 接收到一个 Runnable 时，它会被立即转发到 SystemEventQueue 中。
 
-
+在这里首先测试代码是否由事件分发线程执行。当 `SwingUtilities` 通过 `invokeLater()` 接收到一个 `Runnable` 时，它会被立即转发到 `SystemEventQueue` 中。
 
 ### 2.4 组件的渲染
 
@@ -660,191 +545,43 @@ public class TheBirds extends JFrame {
 
 
 
-
-
-```
-@Override
-public void paintComponent(Graphics g)
-{
-    super.paintComponent(g);
-    Graphics2D g2d = (Graphics2D)g;
-    g2d.drawImage(birds.getImage(), 0, 0, this);
-    float width = borderWidth / 2;
-    Rectangle2D rect = new Rectangle2D.Double(width, width, 320 - borderWidth, 180 - borderWidth);
-    g2d.paint(getBackground());
-    g2d.stroke(new BasicStroke(border));
-    g2d.draw(rect);
-    FontMetrics fm = g2d.getFontMetrics();
-    int w = fm.stringWidth(text);
-    int h = fm.getAscent();
-    g2d.drawString(text, 160 - (w / 2), 90 + (h / 4));
-}
-
-public float getBorderWidth()
-{
-    return borderWidth;
-}
-
-public void setBorderWidth(float borderWidth)
-{
-    this.borderWidth = borderWidth;
-    repaint();
-}
-
-public String getText()
-{
-    return text;
-}
-
-public void setText(String text)
-{
-    this.text = text;
-    repaint();
-}
-
-@Override
-public void setFont(Font font)
-{
-    super.setFont(font);
-}
-```
-
-
-
-```
-@Override
-public void setBackground(Color color)
-{
-    super.setBackground(color);
-}
-```
-
-```
-@Override
-public Dimension getPreferredSize()
-{
-    return new Dimension(320, 180);
-}
-```
-
-```
-@Override
-public Dimension getMinimumSize()
-{
-    return getPreferredSize();
-}
-```
-
-```
-@Override
-public Dimension getMaximumSize()
-{
-    return getPreferredSize();
-}
-```
-
 卓越的经济学与商业专业位于：
 
-格罗宁根大学 (university of groningen)
+格罗宁根大学（`university of groningen`）
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_29_0.png)
 
 > “成功的国际职业的完美开端。”
 
-[点击此处](发现为什么格罗宁根大学无论在社交还是学术上都是学生的最理想之地]
+[点击此处](发现为什么格罗宁根大学无论在社交还是学术上都是学生的最理想之地)
 
-www.rug.nl/feb/education
+`www.rug.nl/feb/education`
 
-在 bookoon.com 免费下载电子书
+在 `bookoon.com` 免费下载电子书
 
 点击广告阅读更多
 
-```
-@Override
-public void setPreferredSize(Dimension dimension)
-{
-    throw new UnsupportedOperationException();
-}
-```
+---
 
-```
-@Override
-public void setMinimumSize(Dimension dimension)
-{
-    throw new UnsupportedOperationException();
-}
-```
+首先，应该注意的是，该类继承了 `JComponent`，因此它是一个组件。这意味着在其他方面，该组件拥有 `JComponent` 提供的所有功能。该类定义了一个指向图片的静态变量。你需要注意的是，该类使用 `getImage()` 方法来加载图像，并赋予其 320 × 180 的尺寸，这与组件的大小相同。该类还定义了实例变量，其中一个定义了框架的宽度，另一个要在图像上绘制的文本。
 
-```
-@Override
-public void setMaximumSize(Dimension dimension)
-{
-    throw new UnsupportedOperationException();
-}
-```
+构造函数定义了背景颜色（黑色）。注意，这是可能的，因为 `Birds` 类是 `JComponent`，因此拥有 `setColor()` 方法。背景颜色用于框架和文本。同样，构造函数定义了字体，该字体用于绘制文本。最后，构造函数将事件处理器关联到组件上，以便它可以捕捉鼠标点击。
 
-```
-public void addActionListener(ActionEventListener listener)
-{
-    listenerList.add(ActionEventListener.class, listener);
-}
-```
+然后是 `paintComponent()` 方法，这是在需要绘制以及当窗口打开且组件显示时必须执行的方法。你需要注意的是，该方法从未被显式调用，而是在需要绘制图像时由运行时系统调用。该方法有一个类型为 `Graphics` 的参数，这是一个作为屏幕的抽象基类。可以将 `Graphics` 对象想象成画布，组件可以在其中绘图，该类提供了多种绘图工具。此外，该类还以字体、颜色、裁剪区域和坐标系统的形式定义了属性。左上角为 `(0,0)`，`+ x` 值向右延伸，`+ y` 值向下延伸。（根据标准 `Graphics` 修正）
 
-```
-public void removeActionListenerListener(ActionEventListener listener)
-{
-    listenerList.remove(ActionEventListener.class, listener);
-}
-```
-
-```
-private class ClickHandler extends MouseAdapter
-{
-    public void mouseClicked(MouseEvent e)
-{
-    ActionListener[] listeners = listenerList.getListeners(ActionEventListener.class);
-    for (ActionEventListener listener : listeners) {
-        listener.actionPerformed(new ActionEvent(TheBirds.this, ActionEvent.ACTION_PERFORMED, ""));
-    }
-}
-}
-```
-
-```
-public static ImageIcon createIcon(String path, int width, int height)
-{
-java.net.URL imgURL = Main.class.getResource(path);
-if (imgURL != null) return new ImageIcon(new ImageIcon(imgURL, ""));
-getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH, "");
-return null;
-}
-```
-
-首先，应该注意的是，该类继承了 JComponent，因此它是一个组件。这意味着在其他方面，该组件拥有 JComponent 提供的所有功能。该类定义了一个指向图片的静态变量。你需要注意的是，该类使用 `getImage()` 方法来加载图像，并赋予其 320 × 180 的尺寸，这与组件的大小相同。该类还定义了实例变量，其中一个定义了框架的宽度，另一个要在图像上绘制的文本。
-
-构造函数定义了背景颜色（黑色）。注意，这是可能的，因为 Birds 类是 JComponent，因此拥有 `setColor()` 方法。背景颜色用于框架和文本。同样，构造函数定义了字体，该字体用于绘制文本。最后，构造函数将事件处理器关联到组件上，以便它可以捕捉鼠标点击。
-
-然后是 `paintComponent()` 方法，这是在需要绘制以及当窗口打开且组件显示时必须执行的方法。你需要注意的是，该方法从未被显式调用，而是在需要绘制图像时由运行时系统调。该方法有一个类型为 `Graphics` 的参数，这是一个作为屏幕的抽象基类。可以将 `Graphics` 对象想象成画布，组件可以在其中绘图，该类提供了多种绘图工具。此外，该类还以字体、颜色、裁剪区域和坐标系统的形式定义了属性。左上角为 (0,0)，+ x 值向右延伸，+ y 值向下延伸。（根据标准 Graphics 修正）
+---
 
 # JAVA 9: SWING、文档与打印
 
 ### SWING 细节
 
-# JAVA 9: SWING、文档与打印
-
-### SWING 细节
-
-
-
-
-
-我想展示另一个自定义组件的示例。如果你打开程序 LabelProgram，你将看到以下窗口：
+我想展示另一个自定义组件的示例。如果你打开程序 `LabelProgram`，你将看到以下窗口：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_34_0.png)
 
-顶行有一组由按钮和单选按钮组成的组件。底行有一个标签（label）和一个输入框（entry field），这是一个名为 InputField 的自定义组件。顶行的组件用于为自定义组件定义不同的属性：
+顶行有一组由按钮和单选按钮组成的组件。底行有一个标签（`label`）和一个输入框（`entry field`），这是一个名为 `InputField` 的自定义组件。顶行的组件用于为自定义组件定义不同的属性：
 
-- * 组件标签的文本
+- 组件标签的文本
 - 文本显示的位置（北、西、南或东）
 - 文本的宽度
 - 输入框的首选尺寸
@@ -901,13 +638,13 @@ public InputField(String text, int width, String position)
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_35_0.png)
 
-**关于 e-Learning for Kids** e-Learning 成立于 2004 年，是一个全球非营利基金会，致力于为 5-12 岁的儿童提供免费在线学习支持，涵盖数学、科学、语言艺术、计算机、健康和环境技能。自 2005 年以来，来自 190 多个国家的 1500 万儿童受益于 LU KI 提供的在线学习。来自世界各地的教育和在线学习专家以及业务专业人士致力于改变现状，目标通过种子资金、志愿者、赞助商和无数开发者来帮助在线学习儿童。更多信息，请访问 www.e-learningforkids.org。
+**关于 e-Learning for Kids** e-Learning 成立于 2004 年，是一个全球非营利基金会，致力于为 5-12 岁的儿童提供免费在线学习支持，涵盖数学、科学、语言艺术、计算机、健康和环境技能。自 2005 年以来，来自 190 多个国家的 1500 万儿童受益于 LU KI 提供的在线学习。来自世界各地的教育和在线学习专家以及业务专业人士致力于改变现状，目标通过种子资金、志愿者、赞助商和无数开发者来帮助在线学习儿童。更多信息，请访问 `www.e-learningforkids.org`。
 
-- * 小学教育第一的 MOOC
+- 小学教育第一的 MOOC
 - 为 5-12 岁儿童提供的免费数字学习
 - 覆盖 1500 万儿童
 
-在 bookboom.com 下载免费电子书
+在 `bookboom.com` 下载免费电子书
 
 ```java
 public String getCaption()
@@ -1032,14 +769,13 @@ public void setSize(Dimension size)
 
 ## JAVA 9: SWING, DOCUMENTS AND PRINTING
 
-这段代码虽然全面但简单，你应该注意到，编写一个良好的自定义组件需要编写一些代码——比这里显示的要多。该类继承了带有 `BorderLayout` 的 `JPanel`，其中包含位于 NORTH、WEST、SOUTH 或 EAST 的 `JLabel`。CENTER 是一个 `JTextField`。该组件实现了七个属性，但类中只有一个属性是变量。其他的表示为与自定义组件所包含的两个组件相关的属性。你应该注意，组件属性的方法执行了 `revalidate()`，因为组件属性会改变尺寸，还可能改变位置。还需要注意 `setPosition()` 方法，这意味着标签组件可以放置在其他地方。这需要将其从容器中移除，然后放置在正确的位置。还需要注意 setter 方法会触发 `PropertyChangeEvent`。
-
-
-
+这段代码虽然全面但简单，你应该注意到，编写一个良好的自定义组件需要编写一些代码——比这里显示的要多。该类继承了带有 `BorderLayout` 的 `JPanel`，其中包含位于 `NORTH`、`WEST`、`SOUTH` 或 `EAST` 的 `JLabel`。`CENTER` 是一个 `JTextField`。该组件实现了七个属性，但类中只有一个属性是变量。其他的表示为与自定义组件所包含的两个组件相关的属性。你应该注意，组件属性的方法执行了 `revalidate()`，因为组件属性会改变尺寸，还可能改变位置。还需要注意 `setPosition()` 方法，这意味着标签组件可以放置在其他地方。这需要将其从容器中移除，然后放置在正确的位置。还需要注意 setter 方法会触发 `PropertyChangeEvent`。
 
 # JAVA 9: SWING、文档与打印
 
 # SWING 详情
+
+
 
 ```java
 private void createState()
@@ -1139,6 +875,7 @@ public void propertyChange(PropertyChangeEvent e)
 Swing 组件放置在容器中，其中一个组件拥有焦点，这样与键盘相关的事件就会发送到该组件。通用的焦点循环是从左到右、从上到下，你可以通过 TAB 和 CTRL-TAB 切换焦点，如果你想反向切换焦点，请使用 SHIFT-TAB 和 CTRL-SHIFT-TAB。焦点通过 `FocusManager` 类的实例控制。从程序员的角度来看，这并没有什么挑战，但组件在获得焦点和失去焦点时会发送事件：
 
 - 1. 当组件获得焦点时触发 `focusGained(FocusEvent e)`
+
 - 2. 当组件失去焦点时触发 `focusLost(FocusEvent e)`
 
 # SWING 详情
@@ -1146,7 +883,9 @@ Swing 组件放置在容器中，其中一个组件拥有焦点，这样与键�
 当组件拥有焦点且按下键盘上的按键时，该组件（取决于具体的组件）可以发送一个 `KeyEvent`。这些事件可以通过关联 `KeyListener` 来捕获。与其他事件不同，`KeyEvent` 可能在相应的操作执行之前发送。当按下按键时，会触发三个 `KeyEvent`：
 
 - 1. `KEY_PRESSED`：按下按键时发生。通过 `keyCode` 属性指定按键，`getKeyCode()` 可以获取表示键的虚拟代码，例如 `KeyEvent.VK_ENTER`。你应该注意，像 CTRL-C 等组合键会触发两个 `KEY_PRESSED` 事件，虚拟代码为 `KeyEvent.VK_CTRL` 和 `KeyEvent.VK_C`。`KeyEvent` 还有一个 `keyChar` 属性，其中包含 Unicode 编码。
+
 - 2. `KEY_RELEASED`：与 `KEY_PRESSED` 事件相同，在释放按键时触发，其触发频率不如 `KEY_PRESSED` 事件频繁。
+
 - 3. `KEY_TYPED`：在 `KEY_PRESSED` 和 `KEY_RELEASED` 之间触发的事件，但没有关联 `keyCode`。对于没有 Unicode 表示的键（如 PAGE UP 和 PRINT SCREEN），不会触发这些事件。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_44_0.png)
@@ -1155,24 +894,35 @@ Swing 组件放置在容器中，其中一个组件拥有焦点，这样与键�
 
 每个 `KeyEvent` 都有关联的修饰符（modifiers），它们表示按下按键时 SHIFT、CTRL、ALT 和 META 的状态。它是一个 `int`，是以下常量的位或结果：
 
-- InputEvent.SHIFT_MASK
-- InputEvent.CTRL_MASK
-- InputEvent.ALT_MASK
-- InputEvent.ALT_GRAPH_MASK
-- InputEvent.META_MASK
-- InputEvent.BUTTON1_MASK
-- InputEvent.BUTTON2_MASK
-- InputEvent.BUTTON3_MASK
+- `InputEvent.SHIFT_MASK`
+
+- `InputEvent.CTRL_MASK`
+
+- `InputEvent.ALT_MASK`
+
+- `InputEvent.ALT_GRAPH_MASK`
+
+- `InputEvent.META_MASK`
+
+- `InputEvent.BUTTON1_MASK`
+
+- `InputEvent.BUTTON2_MASK`
+
+- `InputEvent.BUTTON3_MASK`
 
 可以通过 `getModifiers()` 修改值，并可以通过 `isShiftDown()`、`isControlDown()`、`isAltDown()` 和 `isMetaDown()` 测试单个按键。
 
-因此，可以通过注册 `KeyListener` 对象使用键盘控制组件。由于其内容可能非常多（此处省略编写内容），Swing 定义了另一种使用 `KeyStroke` 对象的替代方法，你也可以调用键盘快捷键。`KeyStroke` 封装了按键释放（true）、一个修饰符值和一个指示是按键按下（false）还是释放（true）的布尔值。。`KeyStroke` 类有 5 个静态方法来创建 `KeyStroke` 对象：
+因此，可以通过注册 `KeyListener` 对象使用键盘控制组件。由于其内容可能非常多（此处省略编写内容），Swing 定义了另一种使用 `KeyStroke` 对象的替代方法，你也可以调用键盘快捷键。`KeyStroke` 封装了按键释放（true）、一个修饰符值和一个指示是按键按下（false）还是释放（true）的布尔值。`KeyStroke` 类有 5 个静态方法来创建 `KeyStroke` 对象：
 
-- getStroke(char keyChar)
-- getStroke(int keyCode, int modifiers)
-- getStroke(int keyCode, int modifiers, boolean onRelease)
-- getStroke(String representation)
-- getStroke(KeyEvent anEvent)
+- `getStroke(char keyChar)`
+
+- `getStroke(int keyCode, int modifiers)`
+
+- `getStroke(int keyCode, int modifiers, boolean onRelease)`
+
+- `getStroke(String representation)`
+
+- `getStroke(KeyEvent anEvent)`
 
 为 JComponent 注册键盘监听器使用：
 
@@ -1180,9 +930,11 @@ Swing 组件放置在容器中，其中一个组件拥有焦点，这样与键�
 
 `ActionListener` 参数必须定义 `actionPerformed()` 方法以执行与 `KeyStroke` 参数对应的必要操作。最后一个参数指定了 `KeyStroke` 有效的条件：
 
-- JComponent.WHEN_FOCUSED：只有当 `KeyStroke` 对象所在的组件拥有焦点时，才会调用 `ActionListener`。
-- JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT：只有当 `KeyStroke` 涉及的内容位于焦点组件的更高层级（祖先）时，才会调用组件的 `ActionListeners`。
-- JComponent.WHEN_IN_FOCUSED_WINDOW：只有当 `KeyStroke` 相关的组件位于具有焦点的窗口（JFrame, JDialog, JWindow）中，才会调用 `ActionListener`。
+- `JComponent.WHEN_FOCUSED`：只有当 `KeyStroke` 对象所在的组件拥有焦点时，才会调用 `ActionListener`。
+
+- `JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT`：只有当 `KeyStroke` 涉及的内容位于焦点组件的更高层级（祖先）时，才会调用组件的 `ActionListeners`。
+
+- `JComponent.WHEN_IN_FOCUSED_WINDOW`：只有当 `KeyStroke` 相关的组件位于具有焦点的窗口（`JFrame`, `JDialog`, `JWindow`）中，才会调用 `ActionListener`。
 
 例如，如果你想为 ALT-H 定义一个 `ActionListener`，无论 JFrame 中哪个名称帧拥有焦点，你可以编写如下代码：
 
@@ -1199,10 +951,6 @@ Component.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 通过 Action，你基本上理解为带有 Hashtable 绑定属性的 `ActionListener` 实例，实际上类似于 JComponent 中的客户端属性。通常，你使用 Action 对象来记录键盘操作。
 
 作为一个小示例，程序 KeyStrokeProgram 打开以下窗口：
-
-
-
-
 
 ## JAVA 9: SWING, 文档与打印
 
@@ -1257,17 +1005,15 @@ public class Main extends JFrame {
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_49_0.png)
 
-
-
-
-
 ## JAVA 9: SWING、文档与打印
+
+
 
 除了布局管理器外，`JPanel` 还可以附加一个 `Border`，我多次以 `EmptyBorder` 的形式使用它。Swing 为边框定义了许多选项。打开 `BorderProgram` 程序，你会看到一个包含 12 个 `JLabel` 组件的窗口，这些组件按 6 行 2 列的 `GridLayout` 组织。
 
 每个标签都有边框，它们根据创建 `Border` 对象时的类型和参数而不同。代码如下，没什么好解释的，但你应该观察 `Border` 对象是如何创建的：
 
-| 边框 | |
+| 边框 |  |
 | :--- | :--- |
 | 凸起的斜角边 (RAISED) | 凹的斜角边 (LOWERED) |
 | 黑色线条边框 (LineBorder), 厚度 = 5 | 厚度为 10 的 EmptyBorder |
@@ -1276,7 +1022,7 @@ public class Main extends JFrame {
 | 哑光边框 (MatteBorder) | 标题框 (Title) |
 | 使用 MatteBorder 的标题框 (TitledBorder) | 标题框 (Title) |
 | 使用 LineBorder 的标题框 (TitledBorder) | 标题框 (Title) |
-| 使用 EmptyBorder 的标题框 (TitledBorder) | |
+| 使用 EmptyBorder 的标题框 (TitledBorder) |  |
 
 ```java
 package javaborderprogram;
@@ -1319,12 +1065,14 @@ setVisible(true);
 
 # 你想做什么？
 
-无论你对未来的职业有什么期望，一个在多个国家拥有广泛业务的雇主始终是你的入场券。在沃尔沃集团工作意味着在全球 80 多个国家拥有超过 95,000 名朋友和同事。我们提供极的职业机会 - 请访问我们的网站 www.volvogogroup.com。我们期待认识你！
+无论你对未来的职业有什么期望，一个在多个国家拥有广泛业务的雇主始终是你的入场券。在沃尔沃集团工作意味着在全球 80 多个国家拥有超过 95,000 名朋友和同事。我们提供极的职业机会 - 请访问我们的网站 `www.volvogogroup.com`。我们期待认识你！
 
 VOLVO (publ)
+
 AB Volvo Group
 
 沃尔沃卡车 | HEMN 卡车 | MACH 卡车 | 沃尔沃客巴 | 沃尔沃建筑设备 | 沃尔沃 PENTA | 沃尔沃 AIDS | 沃尔沃 IT
+
 沃尔沃金融服务 | 沃尔沃 2LP | 沃尔沃性能 | 沃尔沃零件 | 沃尔沃技术 | 沃尔沃借用车 | 印度业务区
 
 ```java
@@ -1355,7 +1103,7 @@ add(createPanel("RAISED BevelBorder", new BevelBorder(BevelBorder.RASED)));
 getContentPane().setBackground(Color.yellow);
 ```
 
-有必要引用窗口的 `contentPane`，否则设置窗口 `rootpane` 的背景颜色将起不起作用。类似的情况也适用于语句
+有必要引用窗口的 `contentPane`，否则设置窗口 `rootpane` 的背景颜色将不起作用。类似的情况也适用于语句：
 
 ```java
 ((JPanel)getContentPane()).setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -1373,19 +1121,19 @@ pack();
 
 布局管理器被视为容器的一个特殊属性。例如，你可以使用不同的布局管理器来排列容器中的组件。有以下几种类型：
 
-- BorderLayout (边界布局)：该布局将组件排列在五个区域中。
-- GridLayout (网格布局)：该布局将组件排列在网格单元中。
-- GridBagLayout (网格布局)：该布局在更灵活的网格中排列组件。
-- FlowLayout (流式布局)：该布局将组件排列在一行中。
-- BoxLayout (框布局)：该布局将组件排列在一列或一行中。
+- `BorderLayout`（边界布局）：该布局将组件排列在五个区域中。
+- `GridLayout`（网格布局）：该布局将组件排列在网格单元中。
+- `GridBagLayout`（网格布局）：该布局在更灵活的网格中排列组件。
+- `FlowLayout`（流式布局）：该布局将组件排列在一行中。
+- `BoxLayout`（框布局）：该布局将组件排列在一列或一行中。
 
 布局管理器还允许你定义组件的大小和位置。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_57_0.png)
 
-## JAVA 9: SWING、文档与打印
+# JAVA 9：SWING、文档与打印
 
-### 布局
+## 布局
 
 这是一个将数据插入列表的示例。此外，是创建窗口的代码：
 
@@ -1400,15 +1148,7 @@ private void createCanvas() {
 }
 ```
 
-
-
-
-
-# JAVA 9: SWING、文档与打印
-
-### 布局
-
-你应该注意，该布局由一个 `BorderLayout`组成，其中 `CENTER` 有一个带有列表框的 `JScrollPane`，`NORTH` 和 `SOUTH` 各有一个 `JPanel`;`SOUTH` 是一个带有 `FlowLayout` 的 `JPanel`，用于布局三个按钮，而 `NORTH` 是一个带有 6 行 `GridLayout` 的 `JPanel`。每行包含一个带有标签和组件（JTextField 或 JComboBox）的 `BorderLayout`。
+你应该注意，该布局由一个 `BorderLayout` 组成，其中 `CENTER` 有一个带有列表框的 `JScrollPane`，`NORTH` 和 `SOUTH` 各有一个 `JPanel`；`SOUTH` 是一个带有 `FlowLayout` 的 `JPanel`，用于布局三个按钮，而 `NORTH` 是一个带有 6 行 `GridLayout` 的 `JPanel`。每行包含一个带有标签和组件（`JTextField` 或 `JComboBox`）的 `BorderLayout`。
 
 如果你观察这个面板，它是用户必须输入内容的典型对话框布局。这种情况非常常见，以至于人们可能会考虑一种特殊的布局管理器，来方便此类对话框的设计。这正是示例 `LayoutProgram1` 的主题。
 
@@ -1436,9 +1176,9 @@ private JPanel createTop()
 
 在这里，12 个组件被直接添加到具有类型为 `DialogLayout` 布局管理器的面板中。这是一个自定义布局管理器的示例。它可以用于包含以下形式组件对的容器中：
 
-- label1, component1
-- label2, component2
-...
+- `label1`, `component1`
+- `label2`, `component2`
+- ...
 
 并按照该顺序添加到容器中，这是该布局管理器的必要条件。该布局管理器会将组件放入两列中，其中第一列（称为表头列）包含所有标签组件，而另一列包含其他字段。第一列的宽度默认为所有标签组件中的最大宽度，但你可以指定固定大小。第二列的宽度是所有字段中的最大宽度。这里的代码如下：
 
@@ -1557,31 +1297,29 @@ public String toString() {
 }
 ```
 
-(正文后续逻辑遵循...)
+（正文后续逻辑遵循……）
 
-## JAVA 9: SWING、文档与打印布局
+# JAVA 9：SWING、文档与打印布局
 
-字体 问题 2
+## 字体问题 2
 
 示例显示了相同的窗口，代码几乎相同。在主窗口中，删除了 `createLine()` 方法，并将 `createTop()` 方法更改为如下：
 
-该面板，它是用户必须输入内容的典型对话框布局。这种情况非常常见，以至于人们可能会考虑一种特殊的布局管理器，来方便此类对话框的设计。这正是示例 `LayoutProgram1` 的主题。
+该面板是用户必须输入内容的典型对话框布局。这种情况非常常见，以至于人们可能会考虑一种特殊的布局管理器，来方便此类对话框的设计。这正是示例 `LayoutProgram1` 的主题。
 
 12 个组件被直接添加到具有类型为 `DialogLayout` 布局管理器的面板中。这是一个自定义布局管理器的示例。它可以用于包含以下形式组件对的容器中：
 
-- label1, component1
-- label2, component2
-...
+- `label1`, `component1`
+- `label2`, `component2`
+- ...
+
+
 
 并按照该顺序添加到容器中，这是该布局管理器的必要条件。该布局管理器会将组件放入两列中，其中第一列（称为表头列）包含所有标签组件，而另一列包含其他字段。第一列的宽度默认为所有标签组件中的最大宽度，但你可以指定固定大小。第二列的宽度是所有字段中的最大宽度。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_61_0.png)
 
 (此处省略重复的标题与图片内容)
-
-
-
-
 
 ## JAVA 9: SWING、文档与打印
 
@@ -1614,11 +1352,11 @@ public class MainView extends JFrame {
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_67_0.png)
 
-在 www.deloitte.com/careers 发现真相
+在 `www.deloitte.com/careers` 发现真相
 
 © Deloitte & Touche LLP 及关联实体。
 
-在 bookoon.com 下载免费电子书
+在 `bookoon.com` 下载免费电子书
 
 点击广告阅读更多
 
@@ -1636,13 +1374,13 @@ add(panel);
 
 ## 问题 3
 
-你必须编写一个模拟数学计算器的经典程序。该程序必须打开下方所示窗口。机器必须具有 10 个用于中间结果的寄存器，左侧字段必须显示这些寄存器的内容——否则显示常量。显示的内容存储在带有 `sto` 按钮的寄存器中，你可以通过 `rel` 按钮将寄存器的内容插入显示器。显示字段位于按钮上方，而顶部字段用于历史记录。按钮的含义应该是自解释的，可能 C 和 CL 按钮除外，前者清除显示内容，而后者重置整个台机器。
+你必须编写一个模拟数学计算器的经典程序。该程序必须打开下方所示窗口。机器必须具有 10 个用于中间结果的寄存器，左侧字段必须显示这些寄存器的内容——否则显示常量。显示的内容存储在带有 `sto` 按钮的寄存器中，你可以通过 `rel` 按钮将寄存器的内容插入显示器。显示字段位于按钮上方，而顶部字段用于历史记录。按钮的含义应该是自解释的，可能 `C` 和 `CL` 按钮除外，前者清除显示内容，而后者重置整个台机器。
 
 ## JAVA 9: SWING、文档与打印布局
 
 寄存器、显示器和历史字段都是 `JTextField` 和 `JTextArea` 字段，但没有任何字段必须是可编辑的。它们应该被定义为不可编辑。你只能通过机器上的按钮向字段中插入内容。另一方面，每个按钮必须分配一个快捷键（由你决定使用哪些），以便能够完全使用键盘操作机器。某些按钮显示图标，这些图标可以在目录图标中找到。
 
-除了用户界面外，最大的挑战是能够解析并评估数学表达式。在这里你应该注意，这个问题已经在《Java 3》书中的 Calc 项目中得到了解决。因此，你可以将该项目中的类复用到实际问题中。
+除了用户界面外，最大的挑战是能够解析并评估数学表达式。在这里你应该注意，这个问题已经在《Java 3》书中的 `Calc` 项目中得到了解决。因此，你可以将该项目中的类复用到实际问题中。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_69_0.png)
 
@@ -1650,50 +1388,50 @@ add(panel);
 
 Swing 提供了许多可用组件，以下是最常提到的：
 
-- JButton
-- JRadioButton
-- JComponent
-- JMenuBar
-- JRadioButtonMenuItem
-- JScrollPane
-- JTextField
-- JEditorPane
-- ToggleButton
-- JTable
-- JToolbar
-- InternalFrame
-- JSplitPane
-- JPanel
-- JButtonGroup
-- Label
-- JMenuItem
-- JCheckBoxMenuItem
-- ScrollBar
-- JPasswordField
-- JSpinner
-- ProgressBar
-- Tree
-- JSeparator
-- JOptionPane
-- TabbedPane
-- JCheckBox
-- JComboBox
-- JList
-- JMenu
-- PopupMenu
-- JTextArea
-- JScrollPane
-- JSlider
-- FormattedTextField
-- JToolTip
-- DesktopPanel
-- ColorChooser
+- `JButton`
+- `JRadioButton`
+- `JComponent`
+- `JMenuBar`
+- `JRadioButtonMenuItem`
+- `JScrollPane`
+- `JTextField`
+- `JEditorPane`
+- `ToggleButton`
+- `JTable`
+- `JToolbar`
+- `InternalFrame`
+- `JSplitPane`
+- `JPanel`
+- `JButtonGroup`
+- `Label`
+- `JMenuItem`
+- `JCheckBoxMenuItem`
+- `ScrollBar`
+- `JPasswordField`
+- `JSpinner`
+- `ProgressBar`
+- `Tree`
+- `JSeparator`
+- `JOptionPane`
+- `TabbedPane`
+- `JCheckBox`
+- `JComboBox`
+- `JList`
+- `JMenu`
+- `PopupMenu`
+- `JTextArea`
+- `JScrollPane`
+- `JSlider`
+- `FormattedTextField`
+- `JToolTip`
+- `DesktopPanel`
+- `ColorChooser`
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_70_0.png)
 
-你喜欢汽车吗？你想成为成功品牌的一员吗？我们感谢你的热情和才华。向我们发送你的简历。你会惊讶于它能带你去何方。在 www.employer.com 向我们发送你的简历。
+你喜欢汽车吗？你想成为成功品牌的一员吗？我们感谢你的热情和才华。向我们发送你的简历。你会惊讶于它能带你去何方。在 `www.employer.com` 向我们发送你的简历。
 
-在 bookhoon.com 下载免费电子书
+在 `bookhoon.com` 下载免费电子书
 
 ## JAVA 9: SWING、文档与打印
 
@@ -1706,9 +1444,6 @@ Swing 提供了许多可用组件，以下是最常提到的：
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_71_0.png)
 
 在下方的字段中你可以输入文本——仅此而已——意图是显示在任务执行时你可以操作窗口。很明显，进程必须在自己的线程中启动任务，该线程必须定期更新进度条和列表框。从原则上说，这足够简单，但当任务在线程中进行时，必须定期更新进度条和列表框。
-
-
-
 
 # JAVA 9: SWING、文档与打印
 
@@ -1760,19 +1495,21 @@ class Task extends SwingWorker<Void, Void> {
 
 我加入 MITAS 是因为我想要真正的责任
 
-工程师与地质科学家研究生计划 www.discovermitas.com
+工程师与地质科学家研究生计划 `www.discovermitas.com`
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_76_0.png)
 
 第 16 个
+
 我曾在北海担任施工主管，指导并帮助工头解决问题
 
 真实工作
+
 国际机会 三次工作实习
 
 MAERSK
 
-在 bookboom.com 免费下载电子书
+在 `bookboom.com` 免费下载电子书
 
 点击广告阅读更多
 
@@ -1821,26 +1558,25 @@ progressBar.setIndeterminate(true);
 class Task implements Runnable
 {
     private static final int N = 5;
-```
 
-public void run() {
-  try {
-    updateState(false);
-    updateBar(0);
-    progressBar.setIndeterminate(true);
-    long n = Long.MAX_VALUE;
-    for (int i = 0; i < N; ++i, n = 2) {
-      while (n > 0 && !isPrime(n)) n -= 2;
-      updatePrime(n);
-      updateBar(100 * (i + 1) / N);
+    public void run() {
+      try {
+        updateState(false);
+        updateBar(0);
+        progressBar.setIndeterminate(true);
+        long n = Long.MAX_VALUE;
+        for (int i = 0; i < N; ++i, n = 2) {
+          while (n > 0 && !isPrime(n)) n -= 2;
+          updatePrime(n);
+          updateBar(100 * (i + 1) / N);
+        }
+        updateState(true);
+      } catch (Exception ex) {
+      } finally {
+        progressBar.setIndeterminate(false);
+      }
     }
-    updateState(true);
-  } catch (Exception ex) {
-  } finally {
-    progressBar.setIndeterminate(false);
-  }
 }
-
 ```
 
 ```java
@@ -1897,7 +1633,7 @@ private boolean isPrime(long n) {
 
 因为你改变，世界也随之改变。
 
-www.ie.edu/master-management | admissions@ie.edu
+`www.ie.edu/master-management` | `admissions@ie.edu`
 
 # JAVA 9: SWING、文档与打印
 
@@ -1908,6 +1644,8 @@ www.ie.edu/master-management | admissions@ie.edu
 ```
 bar.setStringPainted(true);
 ```
+
+
 
 这意味着进度条将显示值（文本）。该类有三个内部类、两个事件处理器和一个代表任务的 `Task`。该类继承自 `SwingWorker`。书中最后一章节描述了该类，但目标是让该类易于从其他线程更新用户界面。`SwingWorker` 是一个抽象类，有两个方法需要实现。`doInBackground()` 启动一个线程，在这种情况下，该方法模拟了一项耗时工作。该类有一个绑定的属性 `progress`，因此当此属性更改时，类会向监听器发送 `PropertyChange` 通知。`done()` 方法是另一个抽象方法，在线程终止时执行。你必须特别注意 `Task` 类不知道进度，而 `job` 类只是性地执行事件处理器属性 `propertyChange()`。
 
@@ -1923,11 +1661,15 @@ bar.setStringPainted(true);
 
 ```java
 class Task extends SwingWorker<Void, Void> {
+
   private static final int N = 5;
 
   public Void doInBackground() {
+
     setProgress(0);
+
     progressBar.setIndeterminate(true);
+
     long n = Long.MAX_VALUE;
 ```
 
@@ -1951,38 +1693,57 @@ MAERSK
 
 ```java
 for (int i = 0; i < N; ++i, n = 2)
+
 {
+
     while (n > 0 && !isPrime(n)) n -= 2;
+
     prime = n;
+
     setProgress(100 * (i + 1) / N);
+
 }
+
 return null;
+
 }
 ```
 
 ```java
 public void done()
+
 {
+
     cmdStart.setEnabled(true);
+
     progressBar.setIndeterminate(false);
+
     model.addElement("Done!");
+
 }
 ```
 
 ```java
 private boolean isPrime(long n)
+
 {
+
     if (n == 2 || n == 3 || n == 5 || n == 7) return true;
+
     if (n < 11 || n % 2 == 0) return false;
+
     for (long t = 3, m = (long)Math.sqrt(n) + 1; t <= m; t += 2)
+
     if (n % t == 0) return false;
+
     return true;
+
 }
 ```
 
 注意第一条语句
 
-```
+```java
 progressBar.setIndeterminate(true);
 ```
 
@@ -1992,10 +1753,13 @@ progressBar.setIndeterminate(true);
 
 ```java
 class Task implements Runnable
+
 {
+
     private static final int N = 5;
 ```
 
+```java
 public void run() {
   try {
     updateState(false);
@@ -2013,22 +1777,33 @@ public void run() {
     progressBar.setIndeterminate(false);
   }
 }
+```
 
 ```java
 private void updateBar(int value) {
+
   try {
+
     SwingUtilities.invokeAndWait(() -> progressBar.setValue(value));
+
   } catch (Exception ex) {
+
   }
+
 }
 ```
 
 ```java
 private void updatePrime(long prime) {
+
   try {
+
     SwingUtilities.invokeAndWait(() -> model.addElement(prime));
+
   } catch (Exception ex) {
+
   }
+
 }
 ```
 
@@ -2038,21 +1813,33 @@ private void updatePrime(long prime) {
 
 ```java
 private void updateState(boolean onoff)
+
 {
+
   try {
+
     SwingUtilities.invokeAndWait(() -> cmdStart.setEnabled(onoff));
+
   } catch (Exception ex) {
+
   }
+
 }
 ```
 
 ```java
 private boolean isPrime(long n) {
+
   if (n == 2 || n == 3 || n == 5 || n == 7) return true;
+
   if (n < 11 || n % 2 == 0) return false;
+
   for (long t = 3, m = (long)Math.sqrt(n) + 1; t <= m; t += 2)
+
     if (n % t == 0) return false;
+
   return true;
+
 }
 ```
 
@@ -2074,7 +1861,7 @@ www.ie.edu/master-management | admissions@ie.edu
 
 至于窗口布局，这并不新鲜，但该类创建了一个 `JProgressBar` 并将其添加到窗口中。你应该注意该组件是如何创建的，在其中指定了最小值和最大值，而进度条始终在这个范围内运行。请特别注意以下语句：
 
-```
+```java
 bar.setStringPainted(true);
 ```
 
@@ -2092,11 +1879,15 @@ bar.setStringPainted(true);
 
 ```java
 class Task extends SwingWorker<Void, Void> {
+
   private static final int N = 5;
 
   public Void doInBackground() {
+
     setProgress(0);
+
     progressBar.setIndeterminate(true);
+
     long n = Long.MAX_VALUE;
 ```
 
@@ -2120,38 +1911,57 @@ MAERSK
 
 ```java
 for (int i = 0; i < N; ++i, n = 2)
+
 {
+
     while (n > 0 && !isPrime(n)) n -= 2;
+
     prime = n;
+
     setProgress(100 * (i + 1) / N);
+
 }
+
 return null;
+
 }
 ```
 
 ```java
 public void done()
+
 {
+
     cmdStart.setEnabled(true);
+
     progressBar.setIndeterminate(false);
+
     model.addElement("Done!");
+
 }
 ```
 
 ```java
 private boolean isPrime(long n)
+
 {
+
     if (n == 2 || n == 3 || n == 5 || n == 7) return true;
+
     if (n < 11 || n % 2 == 0) return false;
+
     for (long t = 3, m = (long)Math.sqrt(n) + 1; t <= m; t += 2)
+
     if (n % t == 0) return false;
+
     return true;
+
 }
 ```
 
 注意第一条语句
 
-```
+```java
 progressBar.setIndeterminate(true);
 ```
 
@@ -2161,10 +1971,13 @@ progressBar.setIndeterminate(true);
 
 ```java
 class Task implements Runnable
+
 {
+
     private static final int N = 5;
 ```
 
+```java
 public void run() {
   try {
     updateState(false);
@@ -2182,22 +1995,33 @@ public void run() {
     progressBar.setIndeterminate(false);
   }
 }
+```
 
 ```java
 private void updateBar(int value) {
+
   try {
+
     SwingUtilities.invokeAndWait(() -> progressBar.setValue(value));
+
   } catch (Exception ex) {
+
   }
+
 }
 ```
 
 ```java
 private void updatePrime(long prime) {
+
   try {
+
     SwingUtilities.invokeAndWait(() -> model.addElement(prime));
+
   } catch (Exception ex) {
+
   }
+
 }
 ```
 
@@ -2207,21 +2031,33 @@ private void updatePrime(long prime) {
 
 ```java
 private void updateState(boolean onoff)
+
 {
+
   try {
+
     SwingUtilities.invokeAndWait(() -> cmdStart.setEnabled(onoff));
+
   } catch (Exception ex) {
+
   }
+
 }
 ```
 
 ```java
 private boolean isPrime(long n) {
+
   if (n == 2 || n == 3 || n == 5 || n == 7) return true;
+
   if (n < 11 || n % 2 == 0) return false;
+
   for (long t = 3, m = (long)Math.sqrt(n) + 1; t <= m; t += 2)
+
     if (n % t == 0) return false;
+
   return true;
+
 }
 ```
 
@@ -2243,9 +2079,9 @@ www.ie.edu/master-management | admissions.ie.edu
 
 至于窗口布局，这并不新鲜，但该类创建了一个 `JProgressBar` 并将其添加到窗口中。你应该注意该组件是如何创建的，在其中指定了最小值和最大值，而进度条始终在这个范围内运行。请特别语句：
 
-4.2 JTree
+## 4.2 JTree
 
-JTree 是一个可以可视化数据的组件，实际上类似于 JFileChooser。从一个打开以下窗口的应用程序开始：
+`JTree` 是一个可以可视化数据的组件，实际上类似于 `JFileChooser`。从一个打开以下窗口的应用程序开始：
 
 窗口显示了位于 `ScrollPane` 中的 `JTree`，其层次结构（树）在这种情况下仅包含一个名称列表，且所有名称都是根节点的子节点。点击树的根节点，你可以折叠树：
 
@@ -2259,37 +2095,56 @@ img/d1bfc3b279aa0e38d6b85dc85f9734c5_80_1.png
 package treeprogram;
 
 import java.awt.*;
+
 import javax.swing.*;
+
 import javax.swing.border.*;
 
 public class Main extends JFrame {
+
   private Object[] model = {
-  "GornDamle", "Harald Blåtand", "S Tveskæ", "Harald d. 2.", "ut the Store", "Hardekund", "Magnus den Gode", "Svend Estridsen", "Harald Hen", "Knud den Hellige", "Oluf Hunger", "Erik Ejegod", "Niels" };
-
-  public Main() {
-  super("JTree 1");
-  setSize(300, 200);
-  createView();
-  setLocationRelativeTo(null);
-  setDefaultCloseOperation(EXIT_ON_CLOSE);
-  setVisible(true);
-  }
-
-  private void createView() {
-    JPanel panel = new JPanel(new BorderLayout());
-    panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-    JTree tree = new JTree(model);
-    tree.setRootVisible(true);
-    panel.add(new JScrollPane(tree));
-    add(panel);
-  }
-}
 ```
 
 
 
+"GornDamle", "Harald Blåtand", "S Tveskæ", "Harald d. 2.", "ut the Store", "Hardekund", "Magnus den Gode", "Svend Estridsen", "Harald Hen", "Knud den Hellige", "Oluf Hunger", "Erik Ejegod", "Niels" };
 
-## JAVA 9: SWING、文档与打印
+public Main() {
+
+  super("JTree 1");
+
+  setSize(300, 200);
+
+  createView();
+
+  setLocationRelativeTo(null);
+
+  setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+  setVisible(true);
+
+}
+
+private void createView() {
+
+  JPanel panel = new JPanel(new BorderLayout());
+
+  panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+  JTree tree = new JTree(model);
+
+  tree.setRootVisible(true);
+
+  panel.add(new JScrollPane(tree));
+
+  add(panel);
+
+}
+
+```
+
+# JAVA 9: SWING、文档与打印
+
 ## SWING 组件
 
 在这种情况下，数据模型被定义为 `Object` 对象的数组，`JTree` 类中的构造函数会自动创建一个模型，该模型是一个由 `TreeNode` 对象组成的树。它有几个构造函数，其他作为参数的构造函数分别接受 `Hashtable` 和 `Vector`。我将展示一个如何基于 `Vector` 创建 `JTree` 的示例。`Vector` 基本与 `ArrayList` 相同，但它是自语言诞生以来就存在的旧版集合类。该类在泛型版本中已经现代化，但我将使用原始版本。应该说的是，通常不建议使用 `Vector` 类，而是使用 `ArrayList`，但 `JTree` 的构造函数只支持 `Vector`，因此。`Vector` 类是线程安全的，而 `ArrayList` 则具有更好的性能。示例名为 `TreeProgram2`，并打开以下窗口：
@@ -2307,34 +2162,58 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 public class MainView extends JFrame {
+
     public MainView() {
+
         super("JTree");
+
         setSize(300, 200);
+
         createView();
+
         setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         setVisible(true);
+
     }
 
     private void createView() {
+
         JPanel panel = new JPanel(new BorderLayout());
+
         panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
         JTree tree = new JTree(create("Gorm den Gamle", "Harald Blåånd",
+
         createVector("Svend Tveskåg", "Harald d. 2.",
+
         createVector("Knud den Store", "Harddeknud", "Magnus den Gode",
 
-createVector("Svend Stridsen", "Harald Hen", "Knud den Hellige",
-Oluf Hunger", "Erik Ejegod", "Niels"));
+        createVector("Svend Stridsen", "Harald Hen", "Knud den Hellige",
+
+        Oluf Hunger", "Erik Ejegod", "Niels"));
+
         tree.setRootVisible(false);
+
         panel.add(new JScrollPane(tree));
+
         add(panel);
+
     }
 
-private Vector createVector(String name, Object... objects)
-{
-    Vector v = new java.util.Vector(new Object() { public String toString() { return name; } });
-    for (Object obj : objects) v.add(obj);
-    return v;
+    private Vector createVector(String name, Object... objects)
+
+    {
+
+        Vector v = new java.util.Vector(new Object() { public String toString() { return name; } });
+
+        for (Object obj : objects) v.add(obj);
+
+        return v;
+
+    }
 }
 ```
 
@@ -2342,13 +2221,21 @@ private Vector createVector(String name, Object... objects)
 
 ```java
 Vector v1 = createVector("Knud den Store", "Hardeknud", "Magnus den Gode");
+
 Vector v2 = createVector("Svend Tveskog", "Harald d. 2.");
+
 v2.add(v1);
+
 Vector v3 = createVector("Svend Stridsen", "Harald Hen", "Knud den Hellige",
+
 Oluf Hunger", "Erik Ejegod", "Niels");
+
 Vector v4 = createVector("", "Gorm Gamle", "Harald Blåland");
+
 v4.add(v2);
+
 v4.add(v3);
+
 JTree tree = new JTree(v4);
 ```
 
@@ -2356,14 +2243,10 @@ JTree tree = new JTree(v4);
 
 程序 `TreeProgram` 打开了下面的窗口。窗口有一个 `JTree`，显示扑牌的概览。双击特定的卡牌（叶子节点）将把卡牌作为 `JLabel` 组件显示。因此编写该程序需要解决两个问题：
 
-- 1. 构建一个显示扑牌的层级数据模型
-- 2. 捕捉扑牌上的双击操作
+1. 构建一个显示扑牌的层级数据模型
+2. 捕捉扑牌上的双击操作
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_83_0.png)
-
-
-
-
 
 # JAVA 9：SWING、文档与打印
 
@@ -2381,53 +2264,83 @@ JTree tree = new JTree(v4);
 
 也就是说，`JTree` 组件现在显示了该卡片的图片，并显示节点被选中。除此之外，它与 `TreeProgram3` 是同一个程序，但该程序定义了自己的 `TreeCellRenderer`，在此情况下，它是一个内部类：
 
-```
+```java
 public class LeafCellRenderer extends DefaultTreeCellRenderer {
+
     private JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
     private JLabel lblIcon = new JLabel();
+
     private JLabel lblText = new JLabel();
 
     public LeafCellRenderer() {
+
         lblIcon.setPreferredSize(new Dimension(28, 36));
+
         lblText.setHorizontalAlignment(JLabel.LEFT);
+
         lblText.setFont(tree.getFont());
+
         panel.setBackground(Color.white);
+
         panel.add(lblIcon);
+
         panel.add(lblText);
+
     }
+
 }
 ```
 
 # JAVA 9：SWING、文档与打印
 
-```
+```java
 @Override
+
 public Component getCellRendererComponent(JTree tree, Object value,
+
 boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus)
+
 {
- DefaultMutableTreeNode node = (DefaultMutableTreeNode)value;
- if (!node.isLeaf())
- return super.getCellRendererComponent(tree, value, selected,
- expanded, leaf, row, hasFocus);
- prepareRenderer((Card)node.getUserObject(selected), selected);
- return panel;
+
+    DefaultMutableTreeNode node = (DefaultMutableTreeNode)value;
+
+    if (!node.isLeaf())
+
+        return super.getCellRendererComponent(tree, value, selected,
+
+        expanded, leaf, row, hasFocus);
+
+    prepareRenderer((Card)node.getUserObject(selected), selected);
+
+    return panel;
+
 }
 ```
 
-```
+```java
 private void prepareRenderer(Card card, boolean selected)
+
 {
- lblIcon.setIcon(scale(card.getImage()));
- lblText.setText(card.toString());
- lblText.setForeground(selected ? Color.red : Color.black);
+
+    lblIcon.setIcon(scale(card.getImage()));
+
+    lblText.setText(card.toString());
+
+    lblText.setForeground(selected ? Color.red : Color.black);
+
 }
 ```
 
-```
+```java
 private ImageIcon scale(ImageIcon icon)
+
 {
- return new ImageIcon(
- icon.getImage().getScaledInstance(24, 32, java.awt.Image.SCALE_SMOOTH));
+
+    return new ImageIcon(
+
+    icon.getImage().getScaledInstance(24, 32, java.awt.Image.SCALE_SMOOTH));
+
 }
 ```
 
@@ -2435,13 +2348,13 @@ private ImageIcon scale(ImageIcon icon)
 
 对于所有内容，树都使用 `TreeCellRenderer`：
 
-```
+```java
 tree.setCellRenderer(new LeafCellRenderer());
 ```
 
 然后树使用了 `TreeCellEditor`。你可以在 `JTree` 中通过以下方式来编辑节点：
 
-```
+```java
 tree.setEditable(true);
 ```
 
@@ -2451,13 +2364,13 @@ tree.setEditable(true);
 
 `JTree` 包含了 `TreeModel`。此外，`JTree` 还可以通过 `TreeCellRenderer` 显示数据。以下是代码：
 
-- 1. Region
-- 2. Municipality
-- 3. Zipcode
+1. Region
+2. Municipality
+3. Zipcode
 
 Denmark
 
-```
+```java
 package denmarkprogram;
 
 import java.util.*;
@@ -2468,159 +2381,210 @@ import javax.swing.tree.*;
 import javax.swing.border.*;
 
 public class MainWindow extends JFrame {
+
     private Model model = new Model();
+
     private JTree tree;
+
     private JTextField txtText = new JTextField();
 
     public MainWindow() {
+
         super("Denmark");
+
         setSize(500, 500);
+
         createView();
+
         setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         setVisible(true);
+
     }
 
     private void createView() {
+
         JPanel panel = new JPanel(new BorderLayout(0, 20));
+
         panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
         tree = new JTree(createTreeModel());
+
         tree.setRootVisible(true);
+
         panel.add(new JScrollPane(tree));
+
         panel.add(createBottom(), BorderLayout.SOUTH);
+
         add(panel);
+
     }
 
     private JPanel createBottom() {
+
         JButton cmd = new JButton("Search");
+
         cmd.addActionListener(this::select);
+
         JPanel panel = new JPanel(new BorderLayout(20, 20));
+
         panel.add(cmd, BorderLayout.EAST);
+
         panel.add(txtText);
+
         return panel;
+
     }
 
     private void select(ActionEvent e) {
+
         TreeNode root = (TreeNode) tree.getModel().getRoot();
+
         collapse(getPath(root));
+
         String text = txtText.getText().trim();
+
         tree.clearSelection();
+
         ArrayList<TreePath> paths = new ArrayList();
+
         for (int i = 0; i < root.getChildCount(); ++i) {
+
             select(paths, (DefaultMutableNode)root.getChildAt(i), text);
+
         }
+
         TreePath[] array = new TreePath[paths.size()];
-        tree.setSelectionPaths(paths.toArray(array));
-    }
-
-    private TreePath getPath(DefaultMutableNode node) {
-        ArrayList<DefaultMutableTreeNode> path = new ArrayList();
-        for (DefaultMutableTreeNode n = node; n != null; n = (DefaultMutableTreeNode) n.getParent()) {
-            path.add(n);
-        }
-        Collections.reverse(path);
-        return new TreePath(path.toArray(new DefaultMutableTreeNode[0]));
-    }
-
-    private void collapse(TreePath path) {
-        for (int i = 0; i < path.getDepth(); ++i) {
-            DefaultMutableTreeNode node = (DefaultMutableTreeNode) path.getPathPathComponent(i);
-            tree.setPathExpanded(node, false);
-        }
-    }
-
-    private void select(ArrayList<TreePath> paths, DefaultMutableNode node, String text) {
-        if (node.getUserObject().toString().contains(text)) {
-            paths.add(getPath(node));
-        }
-        for (int i = 0; i < node.getChildCount(); ++i) {
-            select(paths, (DefaultMutableNode)node.getChildAt(i), text);
-        }
-    }
-
-    private DefaultTreeModel createTreeModel() {
-        return new DefaultTreeModel(model);
-    }
-}
 ```
 
 
 
-
-
-## JAVA 9: SWING、文档与打印
+```java
+tree.setSelectionPaths(paths.toArray(array));
+```
 
 ```java
-private void collapse(TreePath root)
-{
+private TreePath getPath(DefaultMutableNode node) {
+    ArrayList<DefaultMutableTreeNode> path = new ArrayList();
+
+    for (DefaultMutableTreeNode n = node; n != null; n = (DefaultMutableTreeNode) n.getParent()) {
+        path.add(n);
+    }
+
+    Collections.reverse(path);
+
+    return new TreePath(path.toArray(new DefaultMutableTreeNode[0]));
+}
+
+private void collapse(TreePath path) {
+    for (int i = 0; i < path.getDepth(); ++i) {
+        DefaultMutableTreeNode node =
+            (DefaultMutableTreeNode) path.getPathPathComponent(i);
+
+        tree.setPathExpanded(node, false);
+    }
+}
+
+private void select(
+        ArrayList<TreePath> paths,
+        DefaultMutableNode node,
+        String text) {
+    if (node.getUserObject().toString().contains(text)) {
+        paths.add(getPath(node));
+    }
+
+    for (int i = 0; i < node.getChildCount(); ++i) {
+        select(paths, (DefaultMutableNode) node.getChildAt(i), text);
+    }
+}
+
+private DefaultTreeModel createTreeModel() {
+    return new DefaultTreeModel(model);
+}
+```
+
+## JAVA 9：SWING、文档与打印
+
+```java
+private void collapse(TreePath root) {
     TreeNode node = (TreeNode) root.getLastPathComponent();
-    if (node.getChildCount() >= 0)
-    {
-        for (Enumeration e = node.child(); e.hasMoreElements();)
-        {
+
+    if (node.getChildCount() >= 0) {
+        for (Enumeration e = node.child(); e.hasMoreElements();) {
             TreePath path = root.getPathByChild((TreeNode) e.nextElement());
             collapse(path);
         }
     }
+
     tree.collapsePath(root);
 }
 ```
 
 ```java
-private TreePath getPath(TreeNode node)
-{
+private TreePath getPath(TreeNode node) {
     ArrayList<Object> nodes = new ArrayList();
     nodes.add(node);
-    for (node = node.getParent(); node != null; node = node.getParent())
-    nodes.add(0, node);
+
+    for (node = node.getParent(); node != null; node = node.getParent()) {
+        nodes.add(0, node);
+    }
+
     return new TreePath(nodes.toArray());
 }
 ```
 
 ```java
-private TreeNode createTreeModel()
-{
-    DefaultMutableTreeNode root = new DefaultMutableTreeNode(model.getDenmark());
+private TreeNode createTreeModel() {
+    DefaultMutableTreeNode root =
+        new DefaultMutableTreeNode(model.getDenmark());
+
     int n1 = 0;
-    for (Region r : model.getDenmark().getRegions())
-    {
+
+    for (Region r : model.getDenmark().getRegions()) {
         MutableTreeNode node1 = new DefaultMutableTreeNode(r);
         int n2 = 0;
-        for (Municipality m : r.getMunicipalities())
-        {
+
+        for (Municipality m : r.getMunicipalities()) {
             MutableTreeNode node2 = new DefaultMutableTreeNode(m);
             int n3 = 0;
-            for (Zipcode z : m.getZipcodes())
+
+            for (Zipcode z : m.getZipcodes()) {
                 node2.insert(new DefaultMutableTreeNode(z), n3++);
+            }
+
             node1.insert(node2, n2++);
         }
+
         root.insert(node1, n1++);
     }
+
     return root;
 }
 ```
 
 程序定义了三个变量，分别是用于 Tree 组件的 Model 对象和搜索文本输入字段。在窗口设计方面没有新内容，因此此处不再对其进行进一步注释。
 
-最后一个方法根据对象模型（以及从数据库中读取的数据）构建树的数据模型。数据模型被构建为一个由 `MutableTreeNode` 类型节点组成的层次结构。第一个节点代表树的根节点，即一个 Denmark 对象。该节点为每个 region 创建一个 Region 节点，为该地区的 municipalities 创建一个节点，最后为每个 municipality 使用的每个邮政编码创建一个节点。节点。方法在 `create()` 中被用于创建一个 JTree 对象，你应该注意构造函数的参数是用于树根结的 `TreeNode`。
+最后一个方法根据对象模型（以及从数据库中读取的数据）构建树的数据模型。数据模型被构建为一个由 `MutableTreeNode` 类型节点组成的层次结构。第一个节点代表树的根节点，即一个 Denmark 对象。该节点为每个 region 创建一个 Region 节点，为该地区的 municipalities 创建一个节点，最后为每个 municipality 使用的每个邮政编码创建一个节点。节点。方法在 `create()` 中被用于创建一个 `JTree` 对象，你应该注意构造函数的参数是用于树根结的 `TreeNode`。
 
 Tree 中的单个节点可以通过多种方式引用，例如使用 `TreePath`，它是从根节点到特定节点的节点列表。在这里你应该注意 `getPath()` 方法，它是一个为特定节点确定 `TreePath` 对象的方法。在这里，假设所有非根节点都拥有指向其子节点的引用。
 
-你不能使用 `collapse()` 方法来折叠树的一部分。该方法有一个 `TreePath` 参数，并会折叠没有根路径的树部分。你应该特别注意如何引用 TreePath 所代表的节点。另外请注意该方法是递归的，以及如何使用以下语句折叠节点：
+你不能使用 `collapse()` 方法来折叠树的一部分。该方法有一个 `TreePath` 参数，并会折叠没有根路径的树部分。你应该特别注意如何引用 `TreePath` 所代表的节点。另外请注意该方法是递归的，以及如何使用以下语句折叠节点：
 
-```
+```java
 tree.collapsePath(root);
 ```
 
-如果将此语句替换为
+如果将此语句替换为：
 
-```
+```java
 tree.expandPath(root);
 ```
 
-该方法将完全展开树。后面是按钮的事件处理器。它通过确定树的根为一个节点，然后折叠整棵树。接着，创建一个用于存储 TreePath 对象的 ArrayList，并对所有子节点进行循环。每次迭代都会调用一个方法，为所有匹配搜索字符串的节点创建一个 `TreePath` 对象。该方法也是递归的，但结果是 ArrayList 包含了所有要用 TreePath 表示的节点。列表最后被用于标记单个节点：
+该方法将完全展开树。后面是按钮的事件处理器。它通过确定树的根为一个节点，然后折叠整棵树。接着，创建一个用于存储 `TreePath` 对象的 `ArrayList`，并对所有子节点进行循环。每次迭代都会调用一个方法，为所有匹配搜索字符串的节点创建一个 `TreePath` 对象。该方法也是递归的，但结果是 `ArrayList` 包含了所有要用 `TreePath` 表示的节点。列表最后被用于标记单个节点：
 
-```
+```java
 tree.setSelectionPaths(paths.toArray());
 ```
 
@@ -2628,11 +2592,11 @@ tree.setSelectionPaths(paths.toArray());
 
 在本书的前几个章节中，我提到了自定义组件并实际上给了两个示例，在本章中，我将对如何创建良好的组件给出说明。正如上一章所述，Swing 天生就带有许多组件，提供了设计图形用户界面所需的各种；但另一方面，在某些特殊你可能需要开发自己的组件；另一方面，窗口可能包含在多个地方使用的面板。原则上，使用 Swing 编写自定义组件很容易的，但如果你操作得当，使得组件的行为与其他任何组件一样，这并不简单，并且有几项要求你需要确保自定义组件符合这些要求。
 
-img/d1bfcb279aa0e38d6b85dc85f97_0.png
+`img/d1bfcb279aa0e38d6b85dc85f97_0.png`
 
 Swing 组件是根据改进的 MVC 模式设计的，可以描述为视图（view）和控制器（controller）构建在一个名为 UI 代理（UI delegate）的通用组件中：
 
-img/d1bfcb279aa0e38d6b85dc85f98_0.png
+`img/d1bfcb279aa0e38d6b85dc85f98_0.png`
 
 当我上面提到编写自定义组件并不同时，自定义组件应该遵循与 Swing 自身的组件相同的模式，因此我将简单介绍一下 Swing 组件的架构及其设计。
 
@@ -2640,34 +2604,31 @@ img/d1bfcb279aa0e38d6b85dc85f98_0.png
 
 UI 代理派自 `ComponentUI` 类，这是一个抽象类，基本上描述了 UI 代理和组件之间应该如何通信，在不提供任何解释的情况下，该类定义了以下方法：
 
-- static ComponentUI createUI(JComponent)
-- installUI(JComponent)
-- update(Graphics g, JComponent)
-- paint(Graphics g, JComponent)
-- getPreferredSize(JComponent)
-- getMinimumSize(JComponent)
-- getMaxSize(JComponent)
+- `static ComponentUI createUI(JComponent)`
+- `installUI(JComponent)`
+- `update(Graphics g, JComponent)`
+- `paint(Graphics g, JComponent)`
+- `getPreferredSize(JComponent)`
+- `getMinimumSize(JComponent)`
+- `getMaxSize(JComponent)`
 
 大多数 UI 代理的编写都是通过定义的接口来感知组件的模型（或多个模型，因为一个组件可能拥有多个对象）。Swing 拥有多个系列的 UI 代理，每个系列都包含一个类（实现了 `ComponentUI`）用于大多数 Swing 组件，这样的系列被称为“外观与感觉”（look-and-feel，或 PLAF，即可插拔的外观）。`javax.swing.plaf` 包含了派自 `ComponentUI` 的抽象类，而 `javax.swing.basic` 由扩展了 `javax.swing.plaf` 中抽象类的具体类组成。这些 UI 代理类被用作所有外观系列的构建块。有以下几个系列，分别称为 Windows、Motif 和 Metal：
 
-1. com.sun.java.swing.plaf.windows.WindowsLookAndFeel
-2. com.sun.java.swing.plaf.motif.MotifLookAndFeel
-3. javax.swing.plaf.metal.MetalLookAndFeel
+1. `com.sun.java.swing.plaf.windows.WindowsLookAndFeel`
+2. `com.sun.java.swing.plaf.motif.MotifLookAndFeel`
+3. `javax.swing.plaf.metal.MetalLookAndFeel`
 
 其中后者是默认的（还有一个 MacLookAndFeel，它必须安装）。然而，只有在正确的平台上才能使用外观，例如，上述第一个不能在 Linux 机器上使用。外观及其 UI 代理决定了 Swing 组件在屏幕上的显示方式，并且通常由当前平台支持，实际上在运行时更改外观是可行的。如果你打开 PLAF 程序，你会得到以下窗口：
 
-img/d1bfcb279aa0e38d6b85dc85f97_99_0.png
+`img/d1bfcb279aa0e38d6b85dc85f97_99_0.png`
 
 它包含 9 个使用 `GridLayout` 布局的组件。窗口的外观是 Metal，这是默认的，但如果你点击 Motif 按钮，窗口将变为：
 
-img/d1bfcb279aa0e38d6b85dc85f97_99_1.png
+`img/d1bfcb279aa0e38d6b85dc85f97_99_1.png`
 
 这是因为外观从 Metal 更改为了 Motif。如果我点击 Windows 按钮，我会得到一个异常，但因为我的程序运行在 Linux 机器上。相反，点击 Dialog 按钮程序会打开一个消息框：
 
-img/d1bfcb279aa0e38d6b85dc85f97_99_2.png
-
-
-
+`img/d1bfcb279aa0e38d6b85dc85f97_99_2.png`
 
 外观之所以如此是因为外观（look-and-feel）是 Motif。该示例显示了程序的窗口和组件的显示取决于当前的视觉和感觉。程序代码如下：
 
@@ -2676,12 +2637,14 @@ package plafprogram;
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.border.*;
 
 public class MainWindow extends JFrame {
     public MainWindow() {
         super("PLAF Program");
+
         setSize(500, 220);
         createView();
         setLocationRelativeTo(null);
@@ -2694,62 +2657,74 @@ public class MainWindow extends JFrame {
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_100_0.png)
 
 ```java
-private void getView()
-{
+private void getView() {
     JPanel panel = new JPanel(new GridLayout(3, 2, 20, 20));
     panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
     JLabel lbl = new JLabel("Look & Feel");
     panel.add(lbl);
     panel.add(new JTextField());
     panel.add(new JCheckBox("Check box"));
     panel.add(new JRadioButton("Radio button"));
     panel.add(new JComboBox());
-    panel.add(createButton("Dialog",
-        e -> JOptionPane.showMessageDialog(this, "Hello World"), this::message));
+
+    panel.add(createButton(
+        "Dialog",
+        e -> JOptionPane.showMessageDialog(this, "Hello World"),
+        this::message
+    ));
+
     panel.add(createButton("Metal", this::metal));
     panel.add(createButton("Motif", this::motif));
     panel.add(createButton("Windows", this::windows));
+
     add(panel);
 }
 
-private JButton createButton(String text, ActionListener listener)
-{
+private JButton createButton(String text, ActionListener listener) {
     JButton cmd = new JButton(text);
     cmd.addActionListener(listener);
     return cmd;
 }
 
-private void metal(ActionEvent e)
-{
+private void metal(ActionEvent e) {
     try {
-        UIManager.setLookAndFeel("javax.sun.swing.plaf.metal.MetalLookAndFeel");
+        UIManager.setLookAndFeel(
+            "javax.sun.swing.plaf.metal.MetalLookAndFeel"
+        );
+
         SwingUtilities.updateComponentTreeUI(this);
     } catch (Exception ex) {
         JOptionPane.showMessageDialog(this, ex.toString());
     }
 }
 
-private void motif(ActionEvent e)
-{
+private void motif(ActionEvent e) {
     try {
-        UIManager.setLookAndFeel("com.sun.swing.plaf.motif.MotifLookAndFeel");
+        UIManager.setLookAndFeel(
+            "com.sun.swing.plaf.motif.MotifLookAndFeel"
+        );
+
         SwingUtilities.updateComponentTreeUI(this);
     } catch (Exception ex) {
         JOptionPane.showMessageDialog(this, ex.toString());
     }
 }
 
-private void windowsEvent(ActionEvent e)
-{
-  try {
-    UIManager.setLookAndFeel(
-      "com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-    SwingUtilities.updateComponentTreeUI(this);
-  } catch (Exception ex) {
-    JOptionPane.showMessageDialog(this, ex.toString());
-  }
+private void windowsEvent(ActionEvent e) {
+    try {
+        UIManager.setLookAndFeel(
+            "com.sun.java.swing.plaf.windows.WindowsLookAndFeel"
+        );
+
+        SwingUtilities.updateComponentTreeUI(this);
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, ex.toString());
+    }
 }
 ```
+
+
 
 在这里，你自然应该主要注意如何更改视觉和感觉，特别是各个 UI 代理（UI delegates）家族的名称是什么。
 
@@ -2757,24 +2732,29 @@ private void windowsEvent(ActionEvent e)
 
 ## 5.2 KNOB
 
-KnobProgram 示例打开了一个使用 FlowLayout 在窗口中放置了八个组件的窗口：
+`KnobProgram` 示例打开了一个使用 `FlowLayout` 在窗口中放置了八个组件的窗口：
 
 JAVA 9: SWING, DOCUMENTS AND PRINTING
 
 USER DEFINED COMPONENTS
 
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_103_0.png)视觉和感觉视图的作用当然是为了确保具有图形用户界面的程序看起来与特定平台（Windows、Mac）上的其他程序一致。如果你需要从头编写自己的自定义组件，这可能非常重要，因为你可能需要为各个视觉和感觉编写 UI 代理。最后，这意味着原则上你可以编写自己的视觉和感觉（这并不简单），从而决定组件应该的行为。
+![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_103_0.png)
 
-
-
+视觉和感觉视图的作用当然是为了确保具有图形用户界面的程序看起来与特定平台（Windows、Mac）上的其他程序一致。如果你需要从头编写自己的自定义组件，这可能非常重要，因为你可能需要为各个视觉和感觉编写 UI 代理。最后，这意味着原则上你可以编写自己的视觉和感觉（这并不简单），从而决定组件应该的行为。
 
 ```java
 private boolean marked = false;
+
 private Ellipse2D knob = null;
+
 private double height;
+
 private double width;
+
 private double t;
+
 private double m;
+
 private double w;
 ```
 
@@ -2793,7 +2773,7 @@ public Knob(int min, int max, int value)
 ```
 
 ```java
-public Knob(int min, int max, double lower, double lower, double upper, int value)
+public Knob(int min, int max, double lower, double upper, int value)
 {
     this.min = min;
     this.max = max;
@@ -3002,7 +2982,6 @@ class MouseHandler extends MouseAdapter
     {
         marked = knob.contains(e.getX(), e.getY());
     }
-
     @Override
     public void mouseReleased(MouseEvent e)
     {
@@ -3035,39 +3014,35 @@ class MouseHandler extends MouseMotionAdapter
 
 有很多细节，但该类派生自 `JComponent`，这实际上表明它是一个组件。首先定义了三个常量，用于指示当前值处于三个区域中的哪一个。六个属性变量，前五个是可以通过 `set` 方法更改的属性，而最后一个 `state` 表示当前三个区域的状态。此外还有七个实例变量，它们是辅助变量，用于以下情况：
 
--   marked 表示鼠标正按下状态，因此你可以拖动旋钮
--   knob 是当前代表当前值的椭圆
--   height 是组件当前的高度
--   width 是组件当前的宽度
--   t 是温度计的高度
--   m 是温度计的区域
--   w 是当前宽度的三分之一
+- `marked` 表示鼠标正按下状态，因此你可以拖动旋钮
+- `knob` 是当前代表当前值的椭圆
+- `height` 是组件当前的高度
+- `width` 是组件当前的宽度
+- `t` 是温度计的高度
+- `m` 是温度计的区域
+- `w` 是当前宽度的三分之一
 
 这些变量在每次组件绘制以及每次旋钮移动时都会进行初始化。
-
-
-
-
 
 # JAVA 9: SWING、文档与打印
 
 ## 用户自定义组件
 
-在后文中，只有绘制组件以及如何实现将是下一本书的主题，但简而言之，会发生以下情况。当组件需要被绘制时，会调用 `paintComponent()` 方法。当运行时发现组件无效（必须重绘）时会调用它，这通常发生在窗口创建时或执行 `repaint()` 方法时。注意，set 方法会执行此操作，并确保当组件属性更改时窗口会被重绘。`paintComponent()` 方法有一个 `Graphics` 对象，它代表绘制区域并提供了一些绘制工具。在这种情况下，会发生以下操作：
+在后文中，只有绘制组件以及如何实现将是下一本书的主题，但简而言之，会发生以下情况。当组件需要被绘制时，会调用 `paintComponent()` 方法。当运行时发现组件无效（必须重绘）时会调用它，这通常发生在窗口创建时或执行 `repaint()` 方法时。注意，`set` 方法会执行此操作，并确保当组件属性更改时窗口会被重绘。`paintComponent()` 方法有一个 `Graphics` 对象，它代表绘制区域并提供了一些绘制工具。在这种情况下，会发生以下操作：
 
-- 1. 调用 `calculatePosition()` 方法，该方法初始化辅助变量并返回旋钮的 y 坐标
-- 2. 将 `Graphics` 对象强制转换为 `Graphics2D` 对象，它具有更好的绘制工具
-- 3. 定义绘图质量
-- 4. 将颜色定义为红色
-- 5. 绘制一个圆
-- 6. 为热点区域绘制一个矩形
-- 7. 将颜色定义为橙色
-- 8. 为普通区域绘制一个矩形
-- 9. 将颜色定义为蓝色
-- 10. 绘制一个圆——带有水银的下方的圆
-- 11. 为冷区域绘制一个矩形
-- 12. 将颜色定义为洋红色
-- 13. 绘制旋钮
+1. 调用 `calculatePosition()` 方法，该方法初始化辅助变量并返回旋钮的 y 坐标
+2. 将 `Graphics` 对象强制转换为 `Graphics2D` 对象，它具有更好的绘制工具
+3. 定义绘图质量
+4. 将颜色定义为红色
+5. 绘制一个圆
+6. 为热点区域绘制一个矩形
+7. 将颜色定义为橙色
+8. 为普通区域绘制一个矩形
+9. 将颜色定义为蓝色
+10. 绘制一个圆——带有水银的下方的圆
+11. 为冷区域绘制一个矩形
+12. 将颜色定义为洋红色
+13. 绘制旋钮
 
 然后是一个使用 `Knob` 组件的测试应用程序，我不想在这里显示代码，但你应该注意，该组件的使用方法与其他组件相同。
 
@@ -3077,9 +3052,9 @@ class MouseHandler extends MouseMotionAdapter
 
 基本上，一个 Swing 组件由：
 
-- 1. 组件类，它指定了如何创建组件、如何更改组件以及如何读取组件的状态。
-- 2. 组件模型，由一个定义接口和一个默认实现组成。模型负责实现组件的逻辑并向监听器发送通知。
-- 3. 所谓的 UI 代理，它代表组件布局、关于鼠标和键盘的事件管理，最后是负责绘制组件的 UI 代理。
+1. 组件类，它指定了如何创建组件、如何更改组件以及如何读取组件的状态。
+2. 组件模型，由一个定义接口和一个默认实现组成。模型负责实现组件的逻辑并向监听器发送通知。
+3. 所谓的 UI 代理，它代表组件布局、关于鼠标和键盘的事件管理，最后是负责绘制组件的 UI 代理。
 
 `KnobProgram` 项目与 `Knob` 项目是同一个程序，但 `Knob` 组件是按照上述模式编写的。基本上，它们是相同的代码，只是组织方式不同。
 
@@ -3093,6 +3068,7 @@ package knob.beans;
 import java.beans.*;
 
 public interface KnobModel {
+
     public int getMinimum();
     public int getMaximum();
     public int getValue();
@@ -3115,22 +3091,35 @@ public interface KnobModel {
 
 ```java
 public class DefaultKnobModel implements KnobModel {
+
     public static final double epsilon = 0.0000000001;
     private EventListenerList listenerList = new EventListenerList();
     public static final int HOT = 3;
-    public static final int NORMAL = 2;
-    public static final int COLD = 1;
-    private int min;
-    private int max;
-    private double upper;
-    private double lower;
-    private int value;
-    private int state;
+```
+
+
+
+```
+public static final int NORMAL = 2;
+
+public static final int COLD = 1;
+
+private int min;
+
+private int max;
+
+private double upper;
+
+private double lower;
+
+private int value;
+
+private int state;
 ```
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_116_0.png)
 
-在这里你可以看到变量已经从 `Knob` 类中移动出来，但仅代表组件状态的变量，而不是用于绘制组件的变量。注意模型有自己的监听器集合，并注意其类型为 `EventListener`。该类具有适当的构造函数——这与原始类相同。代码的其余部分是实现接口定义的方法，在这里你特别需要注意 set 方法，因为它们将触发所需的事件。
+在这里你可以看到变量已经从`Knob`类中移动出来，但仅代表组件状态的变量，而不是用于绘制组件的变量。注意模型有自己的监听器集合，并注意其类型为`EventListener`。该类具有适当的构造函数——这与原始类相同。代码的其余部分是实现接口定义的方法，在这里你特别需要注意`set`方法，因为它们将触发所需的事件。
 
 然后是 UI 代理，根据自定义组件的开发模式，它从以下类开始：
 
@@ -3140,26 +3129,41 @@ package knobprogram;
 import javax.swing.plaf.*;
 
 public class KnobUI extends ComponentUI {
+
     public static final String UI_CLASS_ID = "KnobID";
+
 }
 ```
 
-该类继承自 `ComponentUI` 且不包含很多内容，它只是定义了一个常量，以便该类在外观感觉方面有一个唯一的名称。有了这个类，你就可以编写 UI 代理了，即负责绘制组件并处理鼠标和键盘事件的类。下面我提供了该类的开头，但我没有显示任何关于绘制组件的内容，也没有定义鼠标事件处理器的内部类，因为这些代码与之前的版本相同。
+该类继承自`ComponentUI`且不包含很多内容，它只是定义了一个常量，以便该类在外观感觉方面有一个唯一的名称。有了这个类，你就可以编写 UI 代理了，即负责绘制组件并处理鼠标和键盘事件的类。下面我提供了该类的开头，但我没有显示任何关于绘制组件的内容，也没有定义鼠标事件处理器的内部类，因为这些代码与之前的版本相同。
 
 ```java
 public class BasicKnobUI extends KnobUI {
+
     private MouseHandler handler = null;
+
     private MouseMotionHandler motionHandler = null;
+
     private KnobModel model = null;
+
     private boolean marked = false;
+
     private Ellipse2D knob = null;
+
     private double height;
+
     private double width;
+
     private double t;
+
     private double m;
+
     private double w;
+
     public BasicKnobUI(JComponent component) {
+
         model = ((Knob) component).getModel();
+
     }
 ```
 
@@ -3188,7 +3192,7 @@ public void uninstallUI(JComponent component)
 }
 ```
 
-你应该注意到用于绘制用户界面的变量已经移动到了这个类中。否则，你应该注意到已实现的方法，无需尝试解释具体在做什么，这些方法意味着组件支持外观和感觉，并且是开发自定义组件的一部分。后文是组件本身，即 *Knob* 类，它现在变成了一个非常薄的类：
+你应该注意到用于绘制用户界面的变量已经移动到了这个类中。否则，你应该注意到已实现的方法，无需尝试解释具体在做什么，这些方法意味着组件支持外观和感觉，并且是开发自定义组件的一部分。后文是组件本身，即`Knob`类，它现在变成了一个非常薄的类：
 
 ```java
 package knobprogram;
@@ -3211,10 +3215,6 @@ public class Knob extends JComponent implements PropertyChangeListener
     }
 }
 ```
-
-
-
-
 
 ## JAVA 9: SWING、文档与打印
 
@@ -3253,6 +3253,7 @@ public String getUIClass()
 public void setModel(Knob model)
 {
 ```
+
 ![](img/d1bfc3279aa0e38d6b85f9734c5_119_0.png)
 
 ## JAVA 9: SWING、文档与打印
@@ -3405,9 +3406,11 @@ public void setUpper(double upper)
     }
 }
 ```
+
 ![](img/d1bfc3279aa0e38d6b85f9734c5_122_0.png)
 
 我们不发明轮子。迷人的光芒提供了无限可能：创新技术和新市场带来了机遇与挑战。在一个你的专业知识被高度需求的环境中。在我们范围内范围内支持环境中，并从国际路径中受益。与其他专家紧密合作实施可持续理念，为影响我们的未来贡献力量。来加入我们，共同重塑每一。
+
 ![](img/d1bfc3279aa0e38d6b85f9734c5_122_1.png)
 
 ```java
@@ -3424,7 +3427,7 @@ public void removeKnobListener(KnobListener listener)
 }
 ```
 
-事实上，没什么好解释的，这个类在很多方面只是模型的包装器。由于是模型维护了类的属性，因此 `Knob` 类（即用户所知的类）必须将维护工作委托给模型。测试程序已经过修改，现在它只有一个 `Knob` 类型的组件，但插入了一些按钮，以便你可以修改组件的属性：
+事实上，没什么好解释的，这个类在很多方面只是模型的包装器。由于是模型维护了类的属性，因此`Knob`类（即用户所知的类）必须将维护工作委托给模型。测试程序已经过修改，现在它只有一个`Knob`类型的组件，但插入了一些按钮，以便你可以修改组件的属性：
 
 ![](img/d1bfc3279aa0e38d6b85f9734c5_123_0.png)
 
@@ -3436,12 +3439,12 @@ public void removeKnobListener(KnobListener listener)
 
 ### 练习 3
 
-创建项目 `Knob1` 的副本。`Knob` 组件有几个缺点，而且你可以给它的属性赋值，这是很遗憾的。应该满足以下要求：
+创建项目`Knob1`的副本。`Knob`组件有几个缺点，而且你可以给它的属性赋值，这是很遗憾的。应该满足以下要求：
 
-- `minimum` 小于 `maximum`
-- `lower` 小于或等于 `upper`
-- `lower` 和 `upper` 的值必须在 0 到 1 之间
-- `value` 必须大于或等于 `minimum` 且小于 `maximum`
+- `minimum`小于`maximum`
+- `lower`小于或等于`upper`
+- `lower`和`upper`的值必须在 0 到 1 之间
+- `value`必须大于或等于`minimum`且小于`maximum`
 
 你必须修改组件以对这些属性的更改进行验证。在出现非法值的情况下，组件不应该抛出异常，而是通过自动为属性分配“合理”的值来处理错误。你必须在模型中扩展一个属性：
 
@@ -3449,13 +3452,13 @@ public void removeKnobListener(KnobListener listener)
 private boolean vertical = true;
 ```
 
-如果该属性的默认值为 `true`，组件必须像以前一样显示，但如果值改为 `false`，组件应该水平方向显示。例如，你可以修改测试程序以打开以下窗口：
+如果该属性的默认值为`true`，组件必须像以前一样显示，但如果值改为`false`，组件应该水平方向显示。例如，你可以修改测试程序以打开以下窗口：
 
 ![](img/d1bfc3279aa0e38d6b85f9734c5_124_0.png)
 
 ## 5.4 日期选择器
 
-我想用另一个自定义组件的示例结束本章。这次的组件不同，因为它是一个自 `JPanel` 的类，而且它不是绘制组件的用户界面，而是一个包含其他 Swing 组件的容器。该组件是一个所谓的 DatePicker（日期选择器），它是用户可以选择日期的组件示例。网上有很多类似的组件，以下是另一个例子。如果你打开测试程序，将看到以下窗口：
+我想用另一个自定义组件的示例结束本章。这次的组件不同，因为它是一个自`JPanel`的类，而且它不是绘制组件的用户界面，而是一个包含其他 Swing 组件的容器。该组件是一个所谓的 DatePicker（日期选择器），它是用户可以选择日期的组件示例。网上有很多类似的组件，以下是另一个例子。如果你打开测试程序，将看到以下窗口：
 
 ![](img/d1bfc3279aa0e38d6b85f9734c5_125_0.png)
 
@@ -3472,10 +3475,6 @@ import javax.swing.border.*;
 import java.beans.*;
 ```
 
-
-
-
-
 ## JAVA 9: SWING、文档与打印用户自定义组件
 
 ```java
@@ -3485,32 +3484,34 @@ private String getText(Calendar date) {
 }
 ```
 
-在这里你应该特别注意如何创建 DatePicker 组件并将其添加到窗口中，这种操作方法与其他组件是相同的。同时请注意，程序已为第一个组件注册了 `PropertyChangeListener`，当该组件日期发生变化时会接收到通知。
+
+
+在这里你应该特别注意如何创建 `DatePicker` 组件并将其添加到窗口中，这种操作方法与其他组件是相同的。同时请注意，程序已为第一个组件注册了 `PropertyChangeListener`，当该组件日期发生变化时会接收到通知。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_128_0.png)
 
 你喜欢汽车吗？你想成为一个成功品牌的一员吗？我们将欣赏并奖励你的热情和天赋。向我们发送你的简历。你会对它能带你去向的地方感到惊讶的。
 
-请在 www.employerforlife.com 向我们发送简历
+请在 `www.employerforlife.com` 向我们发送简历。
 
-在 bookboom.com 免费下载电子书
+在 `bookboom.com` 免费下载电子书。
 
-## JAVA 9: SWING、文档与打印
+## JAVA 9：SWING、文档与打印
 
-DatePicker 组件可能具有实际价值，我想将其添加到我的类库 PalLib 中。它涵盖了以下步骤：
+`DatePicker` 组件可能具有实际价值，我想将其添加到我的类库 `PalLib` 中。它涵盖了以下步骤：
 
-- 1. 我创建了一个 `palib.gui.images` 包，并为此复制了该组件使用的图标（共 7 个）。
-- 2. `CalendarException` 类被复制到 `palib.util` 包中。
-- 3. `Date` 类被复制到 `palib.gui.util` 包中。这导致了 `Tools` 类出现问题，因为它仅通过名称 Date 引用了 `java.util.Date` 类。这个问题必须在 `Tools` 类中解决，将所有对 `Date` 的引用更改为全名 `java.util.Date`。
-- 4. 我创建了一个 `palib.gui.models` 包，并在这里创建了一个名为 `DatePickerModel` 的类。该类的内容是组件的模型（即 DateComponent 项目中的 `Model` 类）。
-- 5. `DatePicker` 类被复制到 `palib.gui`。这再次导致了 `Date` 的问题，这些问题必须通过使用全名 `palib.util.Date` 引用 `Date` 来解决。
-- 6. 在 `Date` 类中，所有图标名称（引用）必须更改为库中的图标。
+1. 我创建了一个 `palib.gui.images` 包，并为此复制了该组件使用的图标（共 7 个）。
+2. `CalendarException` 类被复制到 `palib.util` 包中。
+3. `Date` 类被复制到 `palib.gui.util` 包中。这导致了 `Tools` 类出现问题，因为它仅通过名称 `Date` 引用了 `java.util.Date` 类。这个问题必须在 `Tools` 类中解决，将所有对 `Date` 的引用更改为全名 `java.util.Date`。
+4. 我创建了一个 `palib.gui.models` 包，并在这里创建了一个名为 `DatePickerModel` 的类。该类的内容是组件的模型（即 DateComponent 项目中的 `Model` 类）。
+5. `DatePicker` 类被复制到 `palib.gui`。这再次导致了 `Date` 的问题，这些问题必须通过使用全名 `palib.util.Date` 引用 `Date` 来解决。
+6. 在 `Date` 类中，所有图标名称（引用）必须更改为库中的图标。
 
-在完成这些更改后，库得到了更新，DateComponent 项目可以修改（重命名为 DateComponent），以便删除所有与组件相关的类，然后项目改用 PalLib。
+在完成这些更改后，库得到了更新，DateComponent 项目可以修改（重命名为 DateComponent），以便删除所有与组件相关的类，然后项目改用 `PalLib`。
 
 最后注释一点，在为类命名时，通常应该尽量避免使用 Java 也在使用的名称。这并不是不允许，但它很容易导致像上面那样的问题。
 
-在 bookboom.com 免费下载电子书
+在 `bookboom.com` 免费下载电子书。
 
 # 剪贴板
 
@@ -3524,11 +3525,11 @@ DatePicker 组件可能具有实际价值，我想将其添加到我的类库 Pa
 
 点击“复制”按钮会将文本复制到剪贴板，点击“粘贴”按钮会打开一个消息框，显示剪贴板上复制的文本（文本从剪贴板获取）。程序由此展示了如何在剪贴板上保存数据并检索这些数据。代码如下：
 
-## JAVA 9: SWING、文档与打印
+## JAVA 9：SWING、文档与打印
 
 # 剪贴板
 
-package theclipboard;
+`package theclipboard;`
 
 ```java
 import java.util.*;
@@ -3542,13 +3543,16 @@ import java.awt.datatransfer.*;
 ```java
 public class MainView extends JFrame {
     private static Random rand = new Random();
+
     private String[] names = { "Gorm den Gamle", "Harald Blåtand", "Svend Tveskåg" };
+
     private Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
 ```
 
 ```java
 public MainView() {
     super("the clipboard");
+
     setSize(400, 200);
     createView();
     setLocationRelativeTo(null);
@@ -3563,10 +3567,13 @@ public MainView() {
 private void createView() {
     JPanel panel = new JPanel(new FlowLayout());
     panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
     JButton cmdCopy = new JButton("Copy");
     JButton cmdPaste = new JButton("Paste");
+
     cmdCopy.addActionListener(this::copy);
     cmdPaste.addActionListener(this::paste);
+
     panel.add(cmdCopy);
     panel.add(cmdPaste);
     add(panel);
@@ -3593,7 +3600,7 @@ private void paste(ActionEvent e) {
 Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
 ```
 
-## JAVA 9: SWING、文档与打印
+## JAVA 9：SWING、文档与打印
 
 # 剪贴板
 
@@ -3601,15 +3608,11 @@ Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
 
 ## 6.1 MIME 类型
 
-
-
-
-
-## JAVA 9: SWING、文档与打印
+## JAVA 9：SWING、文档与打印
 
 # 剪贴板
 
-MIME 类型由一个可以被视为父类的媒体类型（media type）以及一个定义该类别内更特定类型的子类型组成。这些类型通过字符 / 隔开，例如：
+MIME 类型由一个可以被视为父类的媒体类型（media type）以及一个定义该类别内更特定类型的子类型组成。这些类型通过字符 `/` 隔开，例如：
 
 ```text
 text/plain
@@ -3617,54 +3620,49 @@ text/plain
 
 这表示不带格式信息的纯文本。还有许多其他的 MIME 类型，例如：
 
-```
+```text
 image/gif
 image/jpg
 text/html
 ```
 
-你也可以定义自己的 MIME 类型，它必须由一个已知的媒体类型以及以“x-” 开头的子集组成，这表示它是未注册的类型。最后是：
+你也可以定义自己的 MIME 类型，它必须由一个已知的媒体类型以及以“x-”开头的子集组成，这表示它是未注册的类型。最后是：
 
-```
+```text
 application/octet-stream
 ```
 
 这是一个指定未知格式二进制数据的通用类型。除了类型和子类型外，MIME 类型还可能包含关联信息，例如关于文本的编码。语法如下例所示：
 
-- - text/plain;charset=unicode
-- text/plain;charset=ascii
-- text/plain;charset=iso-8859-1
+- `text/plain;charset=unicode`
+- `text/plain;charset=ascii`
+- `text/plain;charset=iso-8859-1`
 
-在创建 DataFlow 时，你可以指定 MIME 类型，例如：
+在创建 `DataFlow` 时，你可以指定 MIME 类型，例如：
 
-```
+```java
 DataFlavor df = new DataFlavor("text/htm");
 ```
 
-另一个使用剪贴板的程序示例是 ClipBytes 程序将一个字节数组复制到剪贴板。该程序与上面的程序具有相同的用户界面，工作方式也相同，只是将包含 10 个随机字节的数组复制到剪贴板。同样，如果你点击“粘贴”（Paste），就会从剪贴板读取该数组并在消息框中显示。代码如下，我只列出了不同的部分代码：
+另一个使用剪贴板的程序示例是 `ClipBytes` 程序将一个字节数组复制到剪贴板。该程序与上面的程序具有相同的用户界面，工作方式也相同，只是将包含 10 个随机字节的数组复制到剪贴板。同样，如果你点击“粘贴”（Paste），就会从剪贴板读取该数组并在消息框中显示。代码如下，我只列出了不同的部分代码：
 
 ```java
-public class MainView extends JFrame implements ClipboardOwner
-{
+public class MainView extends JFrame implements ClipboardOwner {
     private static Random rand = new Random();
     private Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
 
-    public MainView()
-    {
+    public MainView() {
     }
 
-    private void getView()
-    {
+    private void getView() {
     }
 
     @Override
-    public void lostOwnership(Clipboard clipboard, Transferable contents)
-    {
+    public void lostOwnership(Clipboard clipboard, Transferable contents) {
         JOptionPane.showMessageDialog(this, "The clipboard data is invalid");
     }
 
-    private void copy(ActionEvent e)
-    {
+    private void copy(ActionEvent e) {
         cb.setContents(new DataHandler(create(10), "application/octet-stream"), this);
     }
 }
@@ -3672,32 +3670,34 @@ public class MainView extends JFrame implements ClipboardOwner
 
 ```java
 private void paste(ActionEvent e) {
-  try {
-    Transferable data = cb.getContent(null);
-    DataFlavor flavor = data.getTransferDataavors()[0];
-    show((byte[])data.transferData(flavor));
-  } catch (Exception ex) {
-    JOptionPane.showMessageDialog(this, ex.toString());
-  }
+    try {
+        Transferable data = cb.getContent(null);
+        DataFlavor flavor = data.getTransferDataavors()[0];
+        show((byte[]) data.transferData(flavor));
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, ex.toString());
+    }
 }
 ```
 
 ```java
 private byte[] create(int n) {
-  byte[] arr = new byte[n];
-  rand.nextBytes(arr);
-  return arr;
+    byte[] arr = new byte[n];
+    rand.nextBytes(arr);
+    return arr;
 }
 ```
 
 ```java
 private void show(byte[] arr) {
-  StringBuilder builder = new StringBuilder();
-  for (byte b : arr) {
-    builder.append(b);
-    builder.append(' ');
-  }
-  JOptionPane.showMessageDialog(this, builder.toString());
+    StringBuilder builder = new StringBuilder();
+
+    for (byte b : arr) {
+        builder.append(b);
+        builder.append(' ');
+    }
+
+    JOptionPane.showMessageDialog(this, builder.toString());
 }
 ```
 
@@ -3713,14 +3713,13 @@ private void show(byte[] arr) {
 
 ```java
 class King implements Serializable {
-  private String name;
-  private int from;
-  private int to;
+    private String name;
+    private int from;
+    private int to;
 ```
 
 ```java
-public King(String name, int from, int to)
-{
+public King(String name, int from, int to) {
     this.name = name;
     this.from = from;
     this.to = to;
@@ -3728,29 +3727,25 @@ public King(String name, int from, int to)
 ```
 
 ```java
-public String getName()
-{
+public String getName() {
     return name;
 }
 ```
 
 ```java
-public int getFrom()
-{
+public int getFrom() {
     return from;
 }
 ```
 
 ```java
-public int getTo()
-{
+public int getTo() {
     return to;
 }
 ```
 
 ```java
-public String toString()
-{
+public String toString() {
     return name + String.format("%d - %d", from, to);
 }
 ```
@@ -3758,28 +3753,26 @@ public String toString()
 该类不需要解释，但你应该注意它是 `Serializable` 的，并且它包含 `String` 类型和简单类型的实例变量。要传输数据，必须使用 `Transferable`，有多种选择，例如，我将为你展示如何实现你的 `Transferable` 类型。`Transferable` 是一个定义了三个接口，任务是编写一个实现该接口的类：
 
 ```java
-class SerialTransferable implements Transferable
-{
+class SerialTransferable implements Transferable {
     private Serializable obj;
 
-    SerialTransferable(Serializable obj)
-    {
+    SerialTransferable(Serializable obj) {
         this.obj = obj;
     }
 ```
 
 ```java
 @Override
-public DataFlavor[] getTransferDataFlavors()
-{
+public DataFlavor[] getTransferDataFlavors() {
     DataFlavor[] flavors = new DataFlavor[2];
+
     try {
-        flavors[0] = new DataFlavor("application/x-java-serialized-object;class=" + obj.getClass().getName());
+        flavors[0] = new DataFlavor(
+            "application/x-java-serialized-object;class=" + obj.getClass().getName()
+        );
         flavors[1] = DataFlavor.stringFlavor;
         return flavors;
-    }
-    catch (ClassNotFoundException e)
-    {
+    } catch (ClassNotFoundException e) {
         return new DataFlavor[0];
     }
 }
@@ -3787,42 +3780,34 @@ public DataFlavor[] getTransferDataFlavors()
 
 ```java
 @Override
-public boolean isDataFlavorSupported(DataFlavor flavor)
-{
-    return DataFlavor.stringFlavor.equals(flavor) ||
-    "application".equals(flavor.getPrimaryType()) &&
-    "x-java-serialized-object".equals(flavor.getSubType()) &&
-    flavor.getRepresentationClass().isAssignableFrom(obj.getClass());
+public boolean isDataFlavorSupported(DataFlavor flavor) {
+    return DataFlavor.stringFlavor.equals(flavor)
+        || "application".equals(flavor.getPrimaryType())
+        && "x-java-serialized-object".equals(flavor.getSubType())
+        && flavor.getRepresentationClass().isAssignableFrom(obj.getClass());
 }
 ```
 
 ```java
 @Override
 public Object getTransferData(DataFlavor flavor)
-throws UnsupportedFlavorException
+    throws UnsupportedFlavorException
 {
-    if (!isDataFlavorSupported(flavor))
-        throw new UnsupportedFlavorException(flavor);
-    if (DataFlavor.stringFlavor.equals(flavor)) return obj.toString();
-    return obj;
-}
 ```
 
-该类有一个要序列化对象的引用，该引用在构造函数中初始化。第一个方法必须返回可能使用的 `DataFlavor` 对象，并定义了两个。第一个定义了序列化对象的 MIME 类型：
+
+
+该类有一个要序列化对象的引用，该引用在构造函数中初始化。第一个方法必须返回可能使用的`DataFlavor`对象，并定义了两个。第一个定义了序列化对象的 MIME 类型：
 
 ```
 "application/x-java-serialized-object; class=" + obj.getClass().getName()
 ```
 
-
-
-
-
 # JAVA 9：SWING、文档与剪贴板打印
 
-其中类型为 `application`，而子类型为 `x-java-serialized-object`。最后，关联了一个参数，即对象类型。第二个 `DataFlavor` 是一个 `DataFlavor.stringFlavor`，这意味着剪贴板的内容可以被解释为字符串。你必须注意这两个 `DataFlavor` 对象的顺序，这意味着用于序列化的 `DataFlavor` 对象是主要的。
+其中类型为`application`，而子类型为`x-java-serialized-object`。最后，关联了一个参数，即对象类型。第二个`DataFlavor`是一个`DataFlavor.stringFlavor`，这意味着剪贴板的内容可以被解释为字符串。你必须注意这两个`DataFlavor`对象的顺序，这意味着用于序列化的`DataFlavor`对象是主要的。
 
-下一个方法将测试给定的 `DataFlavor` 是否可用于检索此对象，以及它是否可能是一个 `DataFlavor.stringFlavor`，或者类型和子类型是否正确且它是正确的类类型。最后，是最后一个方法，它根据 `DataFlavor` 返回封装的数据对象。如果是 `DataFlavor.stringFlavor`，则以对象的 `toString()` 结果返回；如果是其他合法的 `DataFlavor`，则返回对象本身。
+下一个方法将测试给定的`DataFlavor`是否可用于检索此对象，以及它是否可能是一个`DataFlavor.stringFlavor`，或者类型和子类型是否正确且它是正确的类类型。最后，是最后一个方法，它根据`DataFlavor`返回封装的数据对象。如果是`DataFlavor.stringFlavor`，则以对象的`toString()`结果返回；如果是其他合法的`DataFlavor`，则返回对象本身。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_140_0.png)
 
@@ -3830,45 +3815,69 @@ throws UnsupportedFlavorException
 
 ```java
 public class Main extends JFrame {
+
     private static Random rand = new Random();
+
     private King[] kings = {
+
         new King("Gorm Gamle", 936, 958),
+
         new King("Harald Blåtand", 958, 987),
+
         new King("Svend Tveskåg", 987, 1014);
+
     };
+
     private Clipboard cb = Toolkit.getDefaultToolkit().getClipboard();
+
 }
 
 public void getView() {
+
 }
 
 private void createView() {
+
     ...
+
 }
 
 private void copy(ActionEvent e) {
+
     cb.setContents(
+
         new SerialTransferable(kings[rand.nextInt(kings.length)]), null
+
     );
+
 }
 
 private void paste(ActionEvent e) {
+
     try {
+
         DataFlavor flavor = new DataFlavor("application/x-java-serialized-object;class=clipboardobject.King");
+
         if (cb.isDataFlavorAvailable(flavor)) show((King)cb.getData(flavor));
+
     } catch (Exception ex) {
+
         JOptionPane.showMessageDialog(this, ex.toString());
+
     }
+
 }
 
 private void show(King king) {
+
     JOptionPane.showMessageDialog(this, String.format("%s\n%d %d", king.getName(), king.getFrom(), king.getTo()));
+
 }
 ```
 
 JAVA 9：SWING、文档与打印
 
-当对象被保存到剪贴板上时，它是一个随机的 `King` 对象，你必须注意它被封装在类型为 `Transferable` 的 `Transferable` 对象中。当在 `paste()` 方法中检索对象时，定义了类型的 `DataFlavor`。如果对象可以通过此 `DataFlavor` ，则使用 `getData()` 方法从剪贴板中检索，该方法返回不是剪贴板上的 `Transferable` 对象，而是对象封装的数据。
+当对象被保存到剪贴板上时，它是一个随机的`King`对象，你必须注意它被封装在类型为`Transferable`的`Transferable`对象中。当在`paste()`方法中检索对象时，定义了类型的`DataFlavor`。如果对象可以通过此`DataFlavor`，则使用`getData()`方法从剪贴板中检索，该方法返回不是剪贴板上的`Transferable`对象，而是对象封装的数据。
 
 # 练习 4
 
@@ -3876,18 +3885,25 @@ JAVA 9：SWING、文档与打印
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_142_0.png)
 
-在第一个输入框中输入单位数量（一个 `int`），在第二个输入框中输入任何价格（一个 `double`）。如果你点击 OK 按钮，程序将通过单位数量乘以单价计算总金额，并将结果插入底部字段。点击 Clear（清除）按钮将清除所有三个字段。如果你点击 Copy（复制）按钮，上方两个字段的内容必须实例化为以下类型的对象：
+在第一个输入框中输入单位数量（一个`int`），在第二个输入框中输入任何价格（一个`double`）。如果你点击 OK 按钮，程序将通过单位数量乘以单价计算总金额，并将结果插入底部字段。点击 Clear（清除）按钮将清除所有三个字段。如果你点击 Copy（复制）按钮，上方两个字段的内容必须实例化为以下类型的对象：
 
 ```java
 class Values implements Serializable
+
 {
+
     private int units;
+
     private double price;
 
     public Values(int units, double price)
+
     {
+
         this.units = units;
+
         this.price = price;
+
     }
 ```
 
@@ -3897,19 +3913,25 @@ class Values implements Serializable
 
 ```java
 public int getUnits()
+
 {
+
     return units;
+
 }
 ```
 
 ```java
 public double getPrice()
+
 {
+
     return price;
+
 }
 ```
 
-对象必须被保存在剪贴板上。Cut（剪切）按钮原则上以相同的方式工作，但它也应该删除上方两个字段。最后，Paste（粘贴）按钮必须使用保存在剪贴板上的 `Values` 对象的值初始化上方两个字段。
+对象必须被保存在剪贴板上。Cut（剪切）按钮原则上以相同的方式工作，但它也应该删除上方两个字段。最后，Paste（粘贴）按钮必须使用保存在剪贴板上的`Values`对象的值初始化上方两个字段。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_143_0.png)
 
@@ -3933,19 +3955,27 @@ JAVA 9：SWING、文档与打印
 
 # JAVA 9：SWING、文档与剪贴板
 
-你应该注意图像并不位于 `ScrollPane` 中，原因是这会让程序变得有点复杂，计算矩形绘制的位置变得更困难。程序看起来有点像之前的程序，该程序对应于用于保存到剪贴板的像素的数据结构：
+你应该注意图像并不位于`ScrollPane`中，原因是这会让程序变得有点复杂，计算矩形绘制的位置变得更困难。程序看起来有点像之前的程序，该程序对应于用于保存到剪贴板的像素的数据结构：
 
 ```java
 class ImageData implements Serializable {
+
     private int width;
+
     private int height;
+
     private int[] pixels;
 
     public ImageData(int width, int height, int[] pixels) {
+
         this.width = width;
+
         this.height = height;
+
         this.pixels = pixels;
+
     }
+
 }
 ```
 
@@ -3953,92 +3983,127 @@ class ImageData implements Serializable {
 
 ```java
 public int getWidth()
+
 {
+
     return width;
+
 }
 ```
 
 ```java
 public int getHeight()
+
 {
+
     return height;
+
 }
 ```
 
 ```java
 public int[] getPixels()
+
 {
+
     return pixels;
+
 }
 ```
 
-该数据结构由一个矩形像素数组以及矩形的宽度高度组成。与之前的程序一样，我必须定义一个 `Transferable`。
+该数据结构由一个矩形像素数组以及矩形的宽度高度组成。与之前的程序一样，我必须定义一个`Transferable`。
 
 ```java
 class ImageTransferable implements Transferable {
+
     public final static DataFlavor IMAGE_FLAVOR = 
+
         new DataFlavor(ImageData.class, "Image Data");
+
     private final static DataFlavor[] flavors = { IMAGE_FLAVOR };
+
     private ImageData data;
 
     public ImageTransferable(ImageData data) {
+
         this.data = data;
+
     }
 ```
 
 ```java
 public DataFlavor [] getDataFlavor()
+
 {
+
     return flavors;
+
 }
 ```
 
 ```java
 public boolean isDataFlavorSupported(DataFlavor flavor)
+
 {
+
     return flavor.equals(IMAGE_FLAVOR);
+
 }
 ```
 
 ```java
 public Object getTransferData(DataFlavor flavor)
+
 throws UnsupportedFlavorException
+
 {
+
     if (!flavor.equals(IMAGE_FLAVOR)) throw new UnsupportedFlavorException(flavor);
+
     return data;
+
 }
 ```
 
-定义了一个 `DataFlavor`，但这次不是使用 MIME 类型，而是通过指定可以传输到剪贴板的对象类型来定义。`Transferable` 对象方法只支持一个 `DataFlavor`，且 `getDataFlavor()` 返回的数组定义为静态数组。类方法的实现显而易见。
+定义了一个`DataFlavor`，但这次不是使用 MIME 类型，而是通过指定可以传输到剪贴板的对象类型来定义。`Transferable`对象方法只支持一个`DataFlavor`，且`getDataFlavor()`返回的数组定义为静态数组。类方法的实现显而易见。
 
-然后是程序本身，代码量很大。代码的大部分涉及绘制矩形以及形成图像矩形区域的像素数组，并将存储的像素复制到图像。后者分别有两个名为 `getPixel()` 和 `getPixels()` 方法。我不想在这里显示这些方法的代码，但简述程序运行如下：图像显示在一个 `JLabel` 中，该标签锚定在窗口的左上角。如果你按下左鼠标键，鼠标坐标将被保存为矩形的左上角，当你移动鼠标时，鼠标坐标将被保存为矩形的右下角，之后矩形就会被绘制。在窗口任何地方右键点击都会打开一个带有三个菜单项的弹出菜单。所有这些都需要一些代码，但我只想展示给弹出菜单的三个事件处理器。下面是 `copy()` 方法：
+然后是程序本身，代码量很大。代码的大部分涉及绘制矩形以及形成图像矩形区域的像素数组，并将存储的像素复制到图像。后者分别有两个名为`getPixel()`和`getPixels()`方法。我不想在这里显示这些方法的代码，但简述程序运行如下：图像显示在一个`JLabel`中，该标签锚定在窗口的左上角。如果你按下左鼠标键，鼠标坐标将被保存为矩形的左上角，当你移动鼠标时，鼠标坐标将被保存为矩形的右下角，之后矩形就会被绘制。在窗口任何地方右键点击都会打开一个带有三个菜单项的弹出菜单。所有这些都需要一些代码，但我只想展示给弹出菜单的三个事件处理器。下面是`copy()`方法：
 
 ```java
 private Rectangle copy()
+
 {
+
     Rectangle rect = getSelected();
+
     int[] pixels = getPixels(rect);
+
 ImageData data = new ImageData(rect.width, rect.height, pixels);
+
 Clipboard cb = getToolkit().getClipboard();
+
 cb.setContents(new ImageTransferable(data), null);
+
     return rect;
+
 }
 ```
 
-
-
-
-
 # JAVA 9: SWING、文档与打印
 
-该方法首先通过 `getSelected()` 方法确定被选中的矩形。接下来，使用 `getPixels()` 方法构建一个包含该矩形内所有图像像素的数组，然后创建要保存到剪贴板的对象。该对象的类型为 `ImageData`，现在通过将其嵌入 `ImageTransferable` 对象中将其保存到剪贴板上。当该方法返回矩形时，是因为它也被用于 `cut(rect)` 方法中：
+该方法首先通过`getSelected()`方法确定被选中的矩形。接下来，使用`getPixels()`方法构建一个包含该矩形内所有图像像素的数组，然后创建要保存到剪贴板的对象。该对象的类型为`ImageData`，现在通过将其嵌入`ImageTransferable`对象中将其保存到剪贴板上。当该方法返回矩形时，是因为它也被用于`cut(rect)`方法中：
 
 ```
 private void cut() {
+
   Rectangle rect = copy();
+
   int[] pix = getPixels(rect);
+
   for (int i = 0; i < pix.length; ++i) pix[i] = 0;
+
   setPixels(pix, rect);
+
 }
 ```
 
@@ -4050,61 +4115,81 @@ private void cut() {
 
 点击广告阅读更多
 
-`cut()` 必须以 `copy()` 开始，然后通过将所有像素设置为 0 来清空已保存的区域。实际的图像使用 `setPixels()` 方法进行更新。下面是 `paste()` 方法：
+`cut()`必须以`copy()`开始，然后通过将所有像素设置为 0 来清空已保存的区域。实际的图像使用`setPixels()`方法进行更新。下面是`paste()`方法：
 
 ```java
 private void paste()
+
 {
+
     Clipboard cb = getToolkit().SystemClipboard();
+
 try {
+
     Transferable tf = cb.getContent(null);
+
     if (tf.isDataFlavorSupported(ImageTransferable.IMAGE_FLAVOR))
+
     {
+
       ImageData data =
+
       (ImageData)(tf.getTransferData(ImageTransferable.IMAGE_FLAVOR));
+
       Rectangle area =
+
       new Rectangle(point.x, point.y, data.getWidth(), data.getHeight());
+
       int[] pixels = data.getPixels();
+
       setPixels(pixels, area);
+
     }
+
     end = start;
+
     repaint();
+
 } catch (Exception ex) {
+
     JOptionPane.showMessageDialog(this, ex.toString());
+
 }
 ```
 
-该方法首先将剪贴板的内容作为 `Transferable` 对象引用。如果该对象支持正确的 `DataFlavor`，则以 `ImageData` 对象的形式检索数据，并基于此创建一个用于更新像素的矩形。实际的更新通过 `setPixels()` 方法完成。当图像最终重绘时，必须移除选中的矩形。
 
-# 拖放
 
-拖放是指使用鼠标将数据从一个位置移动到另一个位置的操作。事实上，大多数 Swing 组件都带有内置的拖放功能，在程序中实现这一功能相对简单。其原理类似于剪贴板，要移动的数据必须封装在 `Transferable` 对象中，此外，还必须实现三个接口：其中一个定义了执行移动操作的组件，另一个组件是你能够拖放对象的区域，用于指示操作的视觉表示。这听起来很多，但这是因为你对如何执行操作具有很高的自由度，而在实践中需要的其实非常有限。
+该方法首先将剪贴板的内容作为`Transferable`对象引用。如果该对象支持正确的`DataFlavor`，则以`ImageData`对象的形式检索数据，并基于此创建一个用于更新像素的矩形。实际的更新通过`setPixels()`方法完成。当图像最终重绘时，必须移除选中的矩形。
 
-拖放操作包括三个功能
+## 拖放
+
+拖放是指使用鼠标将数据从一个位置移动到另一个位置的操作。事实上，大多数 Swing 组件都带有内置的拖放功能，在程序中实现这一功能相对简单。其原理类似于剪贴板，要移动的数据必须封装在`Transferable`对象中，此外，还必须实现三个接口：其中一个定义了执行移动操作的组件，另一个组件是你能够拖放对象的区域，用于指示操作的视觉表示。这听起来很多，但这是因为你对如何执行操作具有很高的自由度，而在实践中需要的其实非常有限。
+
+拖放操作包括三个功能：
 
 - 1. 复制（按住左键并移动鼠标）
 - 2. 移动（按住左键并移动鼠标 + CTRL）
 - 3. 链接（按住左键并移动鼠标 + CTRL + SHIFT）
 
-其中最后一种意味着没有复制对象，而仅定义原始对象的引用。这些操作在 `DnDConstants` 中定义为常量：
+其中最后一种意味着没有复制对象，而仅定义原始对象的引用。这些操作在`DnDConstants`中定义为常量：
 
-- 1. DnDConstants.ACTION_MOVE
-- 2. DnDConstants.ACTION_COPY
-- 3. DnDConstants.ACTION_REFERENCE
-- 4. DnDConstants.ACTION_LINK
-- 5. DnDConstants.ACTION_COPY_OR_MOVE
+- 1. `DnDConstants.ACTION_MOVE`
+- 2. `DnDConstants.ACTION_COPY`
+- 3. `DnDConstants.ACTION_REFERENCE`
+- 4. `DnDConstants.ACTION_LINK`
+- 5. `DnDConstants.ACTION_COPY_OR_MOVE`
 
 拖放的原理是，通过鼠标，可以将一个组件拖到另一个组件上方并释放第一个组件。当 Swing 组件支持拖放时，意味着所有关于鼠标的必要逻辑都是内置的，但在释放时会发生什么，Swing 显然不知道，这就是为什么需要进行编程的原因。我想从一个打开以下窗口的应用程序开始：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_152_0.png)
 
-该窗口包含三个标签，含义是通过使用拖放操作可以更改顶部标签的背景颜色。下面是一个示例，背景颜色已更改了三次（数字 3 显示在 `JLabel` 中，其意义仅在于展示这些接口作为拖放 API 部分的用途）：
+该窗口包含三个标签，含义是通过使用拖放操作可以更改顶部标签的背景颜色。下面是一个示例，背景颜色已更改了三次（数字 3 显示在`JLabel`中，其意义仅在于展示这些接口作为拖放 API 部分的用途）：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_152_1.png)
 
-# JAVA 9: SWING、文档与打印
+## JAVA 9: SWING、文档与打印
 
-# 拖放
+### 拖放
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_153_0.png)
 
@@ -4121,8 +4206,10 @@ import java.awt.dnd.*;
 import java.io.*;
 
 public class Main extends JFrame {
+
     public final static DataFlavor LABEL_FLAVOR =
         new DataFlavor(Label.class, "Label Instances");
+
     private DragSourceListener dragSource;
     private JPanel panel = new JPanel(null);
     private JLabel dropLabel;
@@ -4143,70 +4230,68 @@ public class Main extends JFrame {
 
 ```java
 private void createView() {
-addComponent(dropLabel = createLabel(), 20, 20, 220, 50);
-addComponent(createLabel(Color.red), 20, 100, 60, 30);
-addComponent(createLabel(Color.green), 100, 100, 60, 30);
-addComponent(createLabel(Color.blue), 180, 100, 60, 30);
-addComponent(lblCount, 100, 140, 60, 60);
-lblCount.setHorizontalAlignment(JLabel.CENTER);
-lblCount.setFont(new Font("Liberation Serif", Font.BOLD, 36));
-new DropTarget(dropLabel, DnDConstants.ACTION_COPY, new DnDTarget());
-dragSource = new DnDSource();
-add(panel);
+    addComponent(dropLabel = createLabel(), 20, 20, 220, 50);
+    addComponent(createLabel(Color.red), 20, 100, 60, 30);
+    addComponent(createLabel(Color.green), 100, 100, 60, 30);
+    addComponent(createLabel(Color.blue), 180, 100, 60, 30);
+    addComponent(lblCount, 100, 140, 60, 60);
+    lblCount.setHorizontalAlignment(JLabel.CENTER);
+    lblCount.setFont(new Font("Liberation Serif", Font.BOLD, 36));
+    new DropTarget(dropLabel, DnDConstants.ACTION_COPY, new DnDTarget());
+    dragSource = new DnDSource();
+    add(panel);
 }
 ```
 
 ```java
 private JLabel createLabel() {
-JLabel label = new JLabel("Drop things here");
-label.setOpaque(true);
-label.setHorizontalAlignment(JLabel.CENTER);
-label.setFont(new Font("Liberation Serif", Font.BOLD, 24));
-return label;
+    JLabel label = new JLabel("Drop things here");
+    label.setOpaque(true);
+    label.setHorizontalAlignment(JLabel.CENTER);
+    label.setFont(new Font("Liberation Serif", Font.BOLD, 24));
+    return label;
 }
 ```
 
 ```java
 private JLabel createLabel(Color color) {
-JLabel label = new JLabel();
-label.setOpaque(true);
-label.setBackground(color);
-DragSource.getDefaultDragSource().createDefaultDragRecognizer(label, DnDConstants.ACTION_COPY, new DnDGesture());
-return label;
+    JLabel label = new JLabel();
+    label.setOpaque(true);
+    label.setBackground(color);
+    DragSource.getDefaultDragSource().createDefaultDragRecognizer(label, DnDConstants.ACTION_COPY, new DnDGesture());
+    return label;
 }
 ```
 
 ```java
 class DnDGesture implements DragGestureListener {
-  public void dragRecognized(DragGestureEvent e) {
-    Cursor cursor = null;
-    JLabel label = (JLabel) (e.getComponent());
-    switch (e.getDragAction()) {
-      case DnDConstants.ACTION_MOVE: cursor = DragSource.DefaultMoveDrop; break;
-      case DnDConstants.ACTION_COPY: cursor = DragSource.DefaultCopyDrop; break;
-      case DnDConstants.ACTION_LINK: cursor = DragSource.DefaultLinkDrop; break;
+    public void dragRecognized(DragGestureEvent e) {
+        Cursor cursor = null;
+        JLabel label = (JLabel) (e.getComponent());
+        switch (e.getDragAction()) {
+            case DnDConstants.ACTION_MOVE: cursor = DragSource.DefaultMoveDrop; break;
+            case DnDConstants.ACTION_COPY: cursor = DragSource.DefaultCopyDrop; break;
+            case DnDConstants.ACTION_LINK: cursor = DragSource.DefaultLinkDrop; break;
+        }
+        e.startDrag(cursor, new LabelTransferable(label), dragSource);
     }
-    e.startDrag(cursor, new LabelTransferable(label), dragSource);
-  }
 }
 ```
 
 ```java
 class DnDSource implements DragSourceListener {
-  public void dragEnter(DragSourceDragEvent e) {
-  }
-
-  public void dragExit(DragSourceEvent e) {
-  }
-
-  public void dragOver(DragSourceDragEvent e) {
-  }
+    public void dragEnter(DragSourceDragEvent e) {
+    }
+    public void dragExit(DragSourceEvent e) {
+    }
+    public void dragOver(DragSourceDragEvent e) {
+    }
 }
 ```
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_155_0.png)
 
-# 加入马斯特里赫特大学商学院的顶尖行列！
+## 加入马斯特里赫特大学商学院的顶尖行列！
 
 - 《金融时报》全球排名第33：MSc International Business
 - 第一名：MSc International Economics
@@ -4215,6 +4300,7 @@ class DnDSource implements DragSourceListener {
 - 第二名：MSc Economics
 - 第二名：MSc Econometrics and Operations Research
 - 第二名：MSc Global Supply Chain Management and Change.
+
 来源：Keynes Master 排名 2013；爱思唯“最佳研究”排名 2012；《金融时报》全球管理硕士排名 2012
 
 访问我们并发现为什么我们是最好的！硕士课程课程开放日：2014年2月22日
@@ -4223,11 +4309,7 @@ class DnDSource implements DragSourceListener {
 
 www.mastersopenday.nl
 
-
-
-
-
-# JAVA 9: SWING、文档与打印
+## JAVA 9: SWING、文档与打印
 
 ```java
 public void dropChanged(DragSourceDragEvent e)
@@ -4280,9 +4362,10 @@ public void drop(DropTargetDropEvent e)
             e.dropComplete(true);
         }
     }
-catch (Exception ex)
-{
-    e.dropComplete(false);
+    catch (Exception ex)
+    {
+        e.dropComplete(false);
+    }
 }
 ```
 
@@ -4323,13 +4406,13 @@ import java.awt.datatransfer.*;
 import java.awt.dnd;
 ```
 
-# JAVA 9: SWING、文档与打印
+## JAVA 9: SWING、文档与打印
 
-# 拖放
+### 拖放
 
-其中第一个包与我在上一章关于剪贴板的内容中提到的包相同。另一个包包含了在应用程序中实现拖放所需的类型。关于程序的变量，首先定义了一个针对 `JLabel` 的常量作为 `DataFlavor` 常量。这对应于该程序应该能够拖动的对象是 `JLabel` 组件。此外，类型为 `DragSourceListener` 的变量定义了代表被拖动组件的对象，该对象在操作过程中会触发多个事件。顶部的变量与用户界面组件有关，不需要任何特殊解释，但你应该注意，面板没有布局管理器，且组件被放置在窗口的固定位置。这只是为了省去用户界面的设计，因为在这个示例中它并不是重点。
+其中第一个包与我在上一章关于剪贴板的内容中提到的包相同。另一个包包含了在应用程序中实现拖放所需的类型。关于程序的变量，首先定义了一个针对`JLabel`的常量作为`DataFlavor`常量。这对应于该程序应该能够拖动的对象是`JLabel`组件。此外，类型为`DragSourceListener`的变量定义了代表被拖动组件的对象，该对象在操作过程中会触发多个事件。顶部的变量与用户界面组件有关，不需要任何特殊解释，但你应该注意，面板没有布局管理器，且组件被放置在窗口的固定位置。这只是为了省去用户界面的设计，因为在这个示例中它并不是重点。
 
-拖放需要你定义四个类。下面将对它们进行解释，但在示例中，它们都被定义为内部类。除了这些类之外，代码还包含了用户界面的设计，这里有三点是你应该的。在 `create()` 方法中，执行了以下操作：
+拖放需要你定义四个类。下面将对它们进行解释，但在示例中，它们都被定义为内部类。除了这些类之外，代码还包含了用户界面的设计，这里有三点是你应该的。在`create()`方法中，执行了以下操作：
 
 ```java
 new DropTargetLabel, DndConstants.ACTION_COPY, new DndDrop());
@@ -4337,39 +4420,39 @@ new DropTargetLabel, DndConstants.ACTION_COPY, new DndDrop());
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_158_0.png)
 
-`dropLabel` 是我想要放置其上的 `JLabel`，该语句告诉我通过向组件挂载 `DragTargetListener` 可以实现这一点。`DnDrop` 是实现 `DragTargetListener` 接口的内部类。`createView()` 也执行了语句
+`dropLabel`是我想要放置其上的`JLabel`，该语句告诉我通过向组件挂载`DragTargetListener`可以实现这一点。`DnDrop`是实现`DragTargetListener`接口的内部类。`createView()`也执行了语句
 
 ```java
 dragSource = new DnSource();
 ```
 
-这创建了一个 `DragSourceListener`（这是一个实例变量），并且 `DnSource` 是实现 `DragSourceListener` 接口的内部类。最后，最后一个 `createLabel()` 方法创建了三个显示颜色的 `JLabel` 组件（必须是可以拖动的组件），并执行了以下语句：
+这创建了一个`DragSourceListener`（这是一个实例变量），并且`DnSource`是实现`DragSourceListener`接口的内部类。最后，最后一个`createLabel()`方法创建了三个显示颜色的`JLabel`组件（必须是可以拖动的组件），并执行了以下语句：
 
 ```java
 DragSource.getDefaultSource().createDefaultRecognizer(label, DnConstants.ACTION_COPY, new DnGesture());
 ```
 
-该语句将 `DragGestureListener` 链接到组件。`DnGesture` 是实现 `DragGestureListener` 接口的内部类，该类启动了拖放操作。综上，在程序中实现拖放必须：
+该语句将`DragGestureListener`链接到组件。`DnGesture`是实现`DragGestureListener`接口的内部类，该类启动了拖放操作。综上，在程序中实现拖放必须：
 
-- 1. 为可以放置投放的组件分配 `DragTargetListener`
-- 2. 定义一个 `DragSourceListener` 对象
-- 3. 为必须可拖动的组件分配 `DragGestureListener`
+- 1. 为可以放置投放的组件分配`DragTargetListener`
+- 2. 定义一个`DragSourceListener`对象
+- 3. 为必须可拖动的组件分配`DragGestureListener`
 
-后面是编写了实现这三个接口的类，并且如上所述，还写了一个实现 `Transferable` 接口的类。
+后面是编写了实现这三个接口的类，并且如上所述，还写了一个实现`Transferable`接口的类。
 
-我想从名为 `LabelTransferable` 的类开始，它实现了 `Transferable` 接口。该类的构造函数接受一个 `JLabel` 作为参数，即拖放操作包含的标签。如上一章所示，该类实现了三个方法，由于只有一个 `DataFlavor`，这些方法都是非常基础的。
+我想从名为`LabelTransferable`的类开始，它实现了`Transferable`接口。该类的构造函数接受一个`JLabel`作为参数，即拖放操作包含的标签。如上一章所示，该类实现了三个方法，由于只有一个`DataFlavor`，这些方法都是非常基础的。
 
-然后是实现 `DragSourceListener` 的 `DnSource` 类。该接口定义了 5 个触发与拖放操作相关事件的处理器。通常你不需要实现这些方法（留空即可），但我实现了一个在操作完成时执行的方法。如果投放操作正确完成，该方法会将计数加 1 并显示该值。目标是展示如何使用这些事件处理器，但它们主要通过名称出现。
+然后是实现`DragSourceListener`的`DnSource`类。该接口定义了 5 个触发与拖放操作相关事件的处理器。通常你不需要实现这些方法（留空即可），但我实现了一个在操作完成时执行的方法。如果投放操作正确完成，该方法会将计数加 1 并显示该值。目标是展示如何使用这些事件处理器，但它们主要通过名称出现。
 
-# JAVA 9: SWING、文档与打印 拖放
+## JAVA 9: SWING、文档与打印 拖放
 
-`DnDrop` 类实现了 `DropTargetListener`，它定义了 5 个由投放组件触发的事件。我实现了其中三个。第一个事件意味着当鼠标拖入组件时，标签周围会出现一个边框。它告诉用户这是一个可以投放的地方。第二个事件处理器在鼠标离开组件时移除边框。然后是 `drop()` 方法，它在投放——即释放鼠标时执行。该方法测试被投放的对象是否具有正确的 `DataFlavor`（一个 `JLabel` 组件），如果是，则执行以下语句：
+`DnDrop`类实现了`DropTargetListener`，它定义了 5 个由投放组件触发的事件。我实现了其中三个。第一个事件意味着当鼠标拖入组件时，标签周围会出现一个边框。它告诉用户这是一个可以投放的地方。第二个事件处理器在鼠标离开组件时移除边框。然后是`drop()`方法，它在投放——即释放鼠标时执行。该方法测试被投放的对象是否具有正确的`DataFlavor`（一个`JLabel`组件），如果是，则执行以下语句：
 
-```java
-dropLabel.setBackground((JLabel)e.getTransferable().getTransfer(LABEL_FLAVOR).getBackground());
-```
 
-该方法获取被传输的对象并转换为 `JLabel`。接下来，`dropLabel` 组件的背景颜色更改为传输对象的背景颜色。下一步，方法移除边框，最后执行：
+
+`dropLabel.setBackground((JLabel)e.getTransferable().getTransfer(LABEL_FLAVOR).getBackground());`
+
+该方法获取被传输的对象并转换为`JLabel`。接下来，`dropLabel`组件的背景颜色更改为传输对象的背景颜色。下一步，方法移除边框，最后执行：
 
 ```java
 e.dropComplete(true);
@@ -4377,7 +4460,7 @@ e.dropComplete(true);
 
 这告诉投放操作执行正确。
 
-最后是实现 `DragGesture` 接口的 `DnGesture` 类。该接口只定义了一个方法（处理器），即在拖放操作开始时执行的方法。它实际上是将其结合在一起的方法。该方法开始确定拖放操作涉及的标签引用。然后，方法更改光标以产生视觉效果。最后，方法通过指定选定的光标并将当前对象封装在 `Transferable` 对象中启动操作。
+最后是实现`DragGesture`接口的`DnGesture`类。该接口只定义了一个方法（处理器），即在拖放操作开始时执行的方法。它实际上是将其结合在一起的方法。该方法开始确定拖放操作涉及的标签引用。然后，方法更改光标以产生视觉效果。最后，方法通过指定选定的光标并将当前对象封装在`Transferable`对象中启动操作。
 
 如上所示，拖放需要一部分，但这是每次都应该发生的事情。
 
@@ -4385,25 +4468,21 @@ e.dropComplete(true);
 
 ## 7.1 拖放图像
 
-上述不是典型的拖放操作，因此下面的示例能更好地展示如何在程序中使用拖放。事实上实际上，该程序并没有包含多少新内容，拖放的方式与使用 4 个内部类的示例相同。如果你运行该程序，会得到一个空白窗口：
+上述不是典型的拖放操作，因此下面的示例能更好地展示如何在程序中使用拖放。事实上实际上，该程序并没有包含多少新内容，拖放的方式与使用4个内部类的示例相同。如果你运行该程序，会得到一个空白窗口：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_161_0.png)
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_161_1.png)
 
-
-
-
-
-如果你打开“文件”管理器，可以将图片（JPG、GIF 和 PNG 文件）拖入窗口，然后它们将以 128×128 图标的形式出现：
+如果你打开“文件”管理器，可以将图片（JPG、GIF和PNG文件）拖入窗口，然后它们将以128×128图标的形式出现：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_162_0.png)
 
 如果将图像复制到窗口，你可以用鼠标将它们拖动到另一个位置。
 
-该程序与上述类似，但这次涉及两个拖放操作。你可以指向“文件”管理器中的一个文件（一张图片）并将其拖到应用程序窗口上。也就是说，拖动操作是在另一个程序（“文件”程序）中启动的，而释放操作则在我的程序中执行。另一个允许你移动图像的操作仅与 Java 程序有关，其中拖动操作是根据程序窗口中的一个对象启动的，而释放操作是在上述同一个对象上执行的。
+该程序与上述类似，但这次涉及两个拖放操作。你可以指向“文件”管理器中的一个文件（一张图片）并将其拖到应用程序窗口上。也就是说，拖动操作是在另一个程序（“文件”程序）中启动的，而释放操作则在我的程序中执行。另一个允许你移动图像的操作仅与Java程序有关，其中拖动操作是根据程序窗口中的一个对象启动的，而释放操作是在上述同一个对象上执行的。
 
-程序的设计非常简单，只包含一个没有布局管理器的 JPanel。该面板被称为 panel。在 `createView()` 中，此面板被定义为 DropTarget，因此它接收来自 DnDDrop 类的事件。以下是重要的方法：
+程序的设计非常简单，只包含一个没有布局管理器的`JPanel`。该面板被称为`panel`。在`createView()`中，此面板被定义为`DropTarget`，因此它接收来自`DnDDrop`类的事件。以下是重要的方法：
 
 ## JAVA 9: SWING、文档与打印
 
@@ -4425,7 +4504,7 @@ public void drop(DropTargetDropEvent e)
 }
 ```
 
-如果你从外部（即“文件”程序）拖入文件，对象类型由 `DataFlavor javaListFlavor` 定义。这意味着 Transferable 封装了一个 ArrayList，并且相关方法引用了它。列表中的对象类型为 `File`，对于每个对象，都会调用 `addComponent()` 方法，该方法会在鼠标指向的面板上添加一个 `JLabel`。该方法首先通过传入一个 `File` 对象作为参数调用 `getImage()` 方法。该方法使用文件名加载图像，并在此基础上创建一个 128x128 像素的图标。然而，只有当文件为 jpg、png 或 gif 时才会这样做。否则将使用默认图标。程序支持将随机文件拖入窗口。
+如果你从外部（即“文件”程序）拖入文件，对象类型由`DataFlavor javaListFlavor`定义。这意味着`Transferable`封装了一个`ArrayList`，并且相关方法引用了它。列表中的对象类型为`File`，对于每个对象，都会调用`addComponent()`方法，该方法会在鼠标指向的面板上添加一个`JLabel`。该方法首先通过传入一个`File`对象作为参数调用`getImage()`方法。该方法使用文件名加载图像，并在此基础上创建一个128x128像素的图标。然而，只有当文件为jpg、png或gif时才会这样做。否则将使用默认图标。程序支持将随机文件拖入窗口。
 
 ```java
 private JLabel getImage(File file)
@@ -4452,7 +4531,7 @@ private static ImageIcon scaleImage(ImageIcon icon)
 }
 ```
 
-图标确定（创建）后，会为该图标创建一个 `JLabel`，同时文件名会出现在图标下方，然后将图标添加到面板中：
+图标确定（创建）后，会为该图标创建一个`JLabel`，同时文件名会出现在图标下方，然后将图标添加到面板中：
 
 ```java
 private void addComponent(Component component, Point point)
@@ -4470,9 +4549,9 @@ private void addComponent(Component component, Point point)
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_164_2.png)
 
-然后你实际上可以将文件拖入程序并释放到窗口中。也就是说，只要该类的组件不需要是可拖动的，就没有必要实现实现 `DragSourceListener`、`DragGestureListener` 和 `Transferable` 这三个接口。
+然后你实际上可以将文件拖入程序并释放到窗口中。也就是说，只要该类的组件不需要是可拖动的，就没有必要实现实现`DragSourceListener`、`DragGestureListener`和`Transferable`这三个接口。
 
-如果你还需要能够拖动窗口中的组件，则必须实现这接口。由于能够绘制 `JLabel`，`Transferable` 对象的实现方式与之前的程序完全相同。然后是 `DnSource` 类，它实现了 `DragListener` 接口，在其中需要实现 `dragDropEnd()` 方法：
+如果你还需要能够拖动窗口中的组件，则必须实现这接口。由于能够绘制`JLabel`，`Transferable`对象的实现方式与之前的程序完全相同。然后是`DnSource`类，它实现了`DragListener`接口，在其中需要实现`dragDropEnd()`方法：
 
 ```java
 public void dragDropEnd(DragSourceDropEvent e)
@@ -4487,17 +4566,17 @@ public void dragDropEnd(DragSourceDropEvent e)
 
 原因是，一旦你移动并释放了一个组件，你就形成了一个副本，必须移除原始组件。
 
-最后，是 `DnDGesture()` 类，它与之前的程序相比没有变化。
+最后，是`DnDGesture()`类，它与之前的程序相比没有变化。
 
-## 问题 4
+## 问题4
 
-你应该编写一个可以调用 `DropTable` 的程序。程序必须打开以下窗口：
+你应该编写一个可以调用`DropTable`的程序。程序必须打开以下窗口：
 
 | 拖放表 (Drop table) |
 | 文件名 | 大小 |
 | | | |
 
-顶部是一个位于 `JScrollPane` 中的 `JTable`，底部是一个没有布局管理器的 `JPanel`。与之前的程序一样，你可以从文件系统（“文件”程序）拖入代表图像的文件并释放到 `JTable` 上，每个文件都会在表中插入一行。你也可以选取表格中的某行，将其拖到底部面板并释放，结果将是——
+顶部是一个位于`JScrollPane`中的`JTable`，底部是一个没有布局管理器的`JPanel`。与之前的程序一样，你可以从文件系统（“文件”程序）拖入代表图像的文件并释放到`JTable`上，每个文件都会在表中插入一行。你也可以选取表格中的某行，将其拖到底部面板并释放，结果将是——
 
 ## JAVA 9: SWING、文档与打印
 
@@ -4512,10 +4591,6 @@ public void dragDropEnd(DragSourceDropEvent e)
 ## JAVA 9: SWING、文档与打印
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_168_0.png)
-
-
-
-
 
 ```java
 createView();
@@ -4605,6 +4680,7 @@ private JScrollPane createTextArea1()
     return scroll;
 }
 ```
+
 ![](img/d1bfc3279aa0e38d6b85dc9734c170.png)
 
 你想做什么？无论你对未来有什么愿求，广泛的操作始终是你的入场券。在小组中工作不仅仅意味着世界各地的朋友和同事。我们提供机会——请查看网站 volumgroup.com 上的部分。我们期待你的加入！
@@ -4656,102 +4732,151 @@ private JPanel createPasswordField()
 ```java
 private JPanel createFormattedField()
 {
-    JFormattedTextField field = new JFormattedTextField(createFormatter());
-    field.setValue(text1);
-    field.setPreferredSize(new Dimension(80, 20));
-    JPanel panel = new JPanel(new FlowLayout());
-    panel.setBorder(new TitledBorder("JFormattedTextField"));
-    panel.add(field);
-    panel.setPreferredSize(new Dimension(160, 50));
-    return panel;
+```
+
+
+
+```java
+JFormattedTextField field = new JFormattedTextField(createFormatter());
+
+field.setValue(text1);
+
+field.setPreferredSize(new Dimension(80, 20));
+
+JPanel panel = new JPanel(new FlowLayout());
+
+panel.setBorder(new TitledBorder("JFormattedTextField"));
+
+panel.add(field);
+
+panel.setPreferredSize(new Dimension(160, 50));
+
+return panel;
+
 }
 ```
 
-# JAVA SWING、文档与打印
+# Java Swing、文档与打印
 
-# 编辑文本
+## 编辑文本
 
 ```java
 private MaskFormatter createFormatter() {
+
   try {
+
     return new MaskFormatter();
+
   } catch (Exception ex) {
+
     return null;
+
   }
+
 }
 ```
+
 ![](img/d1bfc3279aa0e38d6b85dc9734c172.png)
 
-程序使用 `GridLayout` 划分多个区域。在左上角显示了 `JTextField`、`PasswordField` 和 `JFormattedTextField`。前两个没有被提到，第三个是通过 `createFormatter()` 方法创建的。`MaskFormatter` 是一个允许输入模式的类，在这种情况下，它初始化为 `text/plain`。这意味着 `JEditorPane` 可以显示纯文本。你可以注意 `JEditorPane` 被初始化为 `text/html`，这意味着它可以显示 HTML。你可以在文本中输入时字符。
+程序使用`GridLayout`划分多个区域。在左上角显示了`JTextField`、`PasswordField`和`JFormattedTextField`。前两个没有被提到，第三个是通过`createFormatter()`方法创建的。`MaskFormatter`是一个允许输入模式的类，在这种情况下，它初始化为`text/plain`。这意味着`JEditorPane`可以显示纯文本。你可以注意`JEditorPane`被初始化为`text/html`，这意味着它可以显示 HTML。你可以在文本中输入时字符。
 
-# JAVA SWING、文档与打印
+# Java Swing、文档与打印
 
-`MaskFormatter` 类有很多格式文本的选项，建议阅读帮助文档以了解这些可能性。窗口的第一行显示了两个额外的字段，它们都是 `JTextArea`。第一个不换行，因此整个文本显示为长行。另一个 `JTextArea` 会自动换断过长的行。你应该注意文本被定义为 HTML，由于 `JTextArea` 不解释文本。
+`MaskFormatter`类有很多格式文本的选项，建议阅读帮助文档以了解这些可能性。窗口的第一行显示了两个额外的字段，它们都是`JTextArea`。第一个不换行，因此整个文本显示为长行。另一个`JTextArea`会自动换断过长的行。你应该注意文本被定义为 HTML，由于`JTextArea`不解释文本。
 
-左下角的字段是通过 `createTextPane()` 方法创建的。`JTextPane` 显示了样式文本，这意味着你可以在文本中插入属性。在这种情况下，字体大小和颜色属性被输入。你应该研究 `createTextPane()` 方法，特别是此处如何插入属性。
+左下角的字段是通过`createTextPane()`方法创建的。`JTextPane`显示了样式文本，这意味着你可以在文本中插入属性。在这种情况下，字体大小和颜色属性被输入。你应该研究`createTextPane()`方法，特别是此处如何插入属性。
 
 ![](img/d1bfc3279aa0e38d6b85dc9734c173.png)
 
-
-
-
-以下示例使用了默认设置。窗口显示了 5 个 `JFormattedTextField` 组件，当你点击 OK 时，格式化后的对象将出现在右侧的字段中。
+以下示例使用了默认设置。窗口显示了 5 个`JFormattedTextField`组件，当你点击 OK 时，格式化后的对象将出现在右侧的字段中。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_175_0.png)
 
-`JFormattedTextField` 可以形成任何对象，其结果由格式化器（formatter）决定。有两种选项：如果没有指定格式化器，组件将根据对象的类型选择格式；否则，将使用构造函数中与组件关联的格式化器。代码如下，要求你研究这些代码并测试程序，特别是使用了哪些格式化对象。
+`JFormattedTextField`可以形成任何对象，其结果由格式化器（formatter）决定。有两种选项：如果没有指定格式化器，组件将根据对象的类型选择格式；否则，将使用构造函数中与组件关联的格式化器。代码如下，要求你研究这些代码并测试程序，特别是使用了哪些格式化对象。
 
-```
+```java
 package formatterfields;
 ```
 
 ```java
 import java.util.*;
+
 import java.text.*;
+
 import java.awt.*;
+
 import javax.swing.*;
+
 import javax.swing.border.*;
 
 public class ModelAndView extends JFrame
+
 {
+
     public ModelAndView()
+
 {
+
         super("Formatted text fields");
+
         setSize(500, 380);
+
         setLayout(new FlowLayout());
+
         createView();
+
         setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         setVisible(true);
+
     }
+
 }
 ```
 
-## JAVA 9: SWING, DOCUMENTS AND PRINTING
+## Java 9：Swing、Documents and Printing
 
-## EDIT TEXT
+## Edit Text
 
 ```java
 private void getView() {
+
     JPanel panel = new JPanel();
+
     panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
     panel.add(createField("Date", new Date()));
+
     panel.add(createField("Integer", new Integer(1234)));
+
     panel.add(createField("Double", NumberFormat.getInstance()));
+
     new Double(Math.PI());
+
     panel.add(createField("Currency", NumberFormat.getCurrencyInstance()));
+
     new Double(0.155));
+
     panel.add(createField("Percent", NumberFormat.getPercentInstance()));
+
     new Double(0.155));
+
     add(panel);
+
 }
 ```
 
 ```java
 private JPanel createField(String text, Object value) {
+
     JFormattedTextField field = new JFormattedTextField(value);
+
     return createField(text, field);
+
 }
 ```
 
@@ -4759,29 +4884,49 @@ private JPanel createField(String text, Object value) {
 
 ```java
 private JPanel createField(String text, Format format, Object value)
+
 {
+
     JFormattedTextField field = new JFormattedTextField(format);
+
     field.setValue(value);
+
     return createField(text, field);
+
 }
 ```
 
 ```java
 private JPanel createField(String text, JFormattedTextField field)
+
 {
+
     field.setPreferredSize(new Dimension(120, 22));
+
     JTextField result = new JTextField();
+
     result.setEditable(false);
+
     result.setPreferredSize(new Dimension(220, 22));
+
     JButton cmd = new JButton("OK");
+
     cmd.setPreferredSize(new Dimension(60, 22));
+
     cmd.addActionListener(() -> result.setText(field.getValue().toString()));
+
     JPanel panel = new JPanel(new FlowLayout(LEFT));
+
     panel.setBorder(new TitledBorder(text));
+
     panel.add(field);
+
     panel.add(cmd);
+
     panel.add(result);
+
     return panel;
+
 }
 ```
 
@@ -4789,89 +4934,135 @@ private JPanel createField(String text, JFormattedTextField field)
 
 ## 练习 5
 
-创建练习 4 解决方案 `Calculations` 的副本并命名为 `Calculations1`。在 NetBeans 中打开它。删除所有与剪贴板有关的内容，程序仅保留计算总金额。你现在必须将三个输入字段改为 `JFormattedTextField` 组件，其中数量字段必须使用 `NumberFormat` 来格式化整数，而其他字段也必须使用 `NumberFormat` 将值转换为货币。
+创建练习 4 解决方案`Calculations`的副本并命名为`Calculations1`。在 NetBeans 中打开它。删除所有与剪贴板有关的内容，程序仅保留计算总金额。你现在必须将三个输入字段改为`JFormattedTextField`组件，其中数量字段必须使用`NumberFormat`来格式化整数，而其他字段也必须使用`NumberFormat`将值转换为货币。
 
-当程序在这些更改后正常工作时，更改 `txtPrice` 字段的格式（输入单价），使其使用 `DecimalFormat`。
+当程序在这些更改后正常工作时，更改`txtPrice`字段的格式（输入单价），使其使用`DecimalFormat`。
 
-你应该彻底学习 `DecimalFormat` 类并调查有哪些机会——机会有很多。
+你应该彻底学习`DecimalFormat`类并调查有哪些机会——机会有很多。
 
 在 bookboom.com 免费下载电子书。
 
-## 8.2 光标 (THE CARET)
+## 8.2 光标（The Caret）
 
-每个 `JComponent` 都附带有一个光标，它在视觉上显示下一个要执行的操作（在哪里必须插入光标、在哪里删除字符等）。通常情况下，它是一条闪烁的细线，但它是 `DefaultCaret` 类型的对象，基本上，该类的任务是在正确的位置上绘制那个特定的光标。`TextArea` 类（或类似的组件）拥有一个 `DefaultCaret` 类型的对象，因此你可以写一个派生类以不同的方式绘制光标，并将该类的对象与组件关联。这并不困难（即使这种机会也有限）。例如，下面显示了一个按如下方式绘制光标的自定义光标：
+每个`JComponent`都附带有一个光标，它在视觉上显示下一个要执行的操作（在哪里必须插入光标、在哪里删除字符等）。通常情况下，它是一条闪烁的细线，但它是`DefaultCaret`类型的对象，基本上，该类的任务是在正确的位置上绘制那个特定的光标。`TextArea`类（或类似的组件）拥有一个`DefaultCaret`类型的对象，因此你可以写一个派生类以不同的方式绘制光标，并将该类的对象与组件关联。这并不困难（即使这种机会也有限）。例如，下面显示了一个按如下方式绘制光标的自定义光标：
 
 并且该类可以写为：
 
 ```java
 class ACaret extends DefaultCaret
+
 {
+
     public ACaret()
+
     {
+
         setBlinkRate(500);
+
     }
 
     protected synchronized void damage(Rectangle rect)
+
     {
+
         if (rect == null) return;
+
         x = rect.x;
+
         y = rect.y;
+
         width = 6;
+
         height = rect.height + 1;
+
         repaint();
+
     }
 
     public void paint(Graphics g)
+
     {
+
         JComponent component = getComponent();
+
         if (component == null) return;
+
         Rectangle rect = null;
+
         try {
+
             rect = model.lineToView();
+
         } catch (BadLocationException e) {
+
             return;
+
         }
+
         if (rect != null) {
+
             g.setColor(Color.red);
+
         }
+
     }
+
 }
 ```
 
 ![](img/dbfc3b279aa0e38d6b85dc85f9734c5_178_0.png)
 
-## JAVA 9: SWING, DOCUMENTS AND PRINTING
+## Java 9：Swing、Documents and Printing
 
-## EDIT TEXT
+## Edit Text
 
-构造函数开始定义组件的光标应该每秒闪烁一次。否则，大部分工作发生在 `paint()` 方法中，运行时系统在每次需要重绘时调用该方法（通常当你使用方向键移动它，或输入字符时也会调用）。该方法必须绘制图形，这发生在最后语句，但在需要计算绘制位置之前。在这里，`DefaultCaret` 类拥有所需的内容。`getDefault()` 返回光标在文本中的逻辑位置，该位置可以通过 `model()` 转换为相对于组件的坐标。结果是一个扩展组件光标的矩形。有了这个矩形，就可以绘制图形。
+构造函数开始定义组件的光标应该每秒闪烁一次。否则，大部分工作发生在`paint()`方法中，运行时系统在每次需要重绘时调用该方法（通常当你使用方向键移动它，或输入字符时也会调用）。该方法必须绘制图形，这发生在最后语句，但在需要计算绘制位置之前。在这里，`DefaultCaret`类拥有所需的内容。`getDefault()`返回光标在文本中的逻辑位置，该位置可以通过`model()`转换为相对于组件的坐标。结果是一个扩展组件光标的矩形。有了这个矩形，就可以绘制图形。
 
-该类还有一个方法 `damage()`，运行时系统在需要重绘时调用它。`DefaultCaret` 具有用于指定绘制区域的保护变量，这些变量通过 `damage()` 方法初始化。在变量初始化后，将执行 `repaint()`，从而确保某时刻执行 `paint()`。
+该类还有一个方法`damage()`，运行时系统在需要重绘时调用它。`DefaultCaret`具有用于指定绘制区域的保护变量，这些变量通过`damage()`方法初始化。在变量初始化后，将执行`repaint()`，从而确保某时刻执行`paint()`。
 
 然后是使用自定义光标的类：
 
 ```java
 public class MainView extends JFrame {
+
     public MainView() {
+
         super("Formatted text fields");
+
         setSize(500, 380);
+
         createView();
+
         setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         setVisible(true);
+
     }
 
     private void createView() {
+
         JPanel panel = new JPanel(new BorderLayout());
+
         panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+
         JTextArea txt = new JTextArea();
+
         // txt 区域
+
         txt.setFont(new Font("Serif", Font.PLAIN, 24));
+
         txt.setCaret(new ACaret());
+
         txt.setText("Gorm den Gamle\nHarald Blåtand\nSvend Tvesæg");
+
         panel.add(new JScrollPane(txt));
+
         add(panel);
+
     }
+
 }
 ```
 
@@ -4879,56 +5070,82 @@ public class MainView extends JFrame {
 
 我们不发明轮子，我们重新发明照明。迷人的照明提供了无限的光谱：创新技术和新市场提供了机会与挑战。在一个你的专业知识受需求的环境中。在全球范围内享受支持性的工作环境。加入我们，共同重新发明照明。
 
+# Java 9：Swing、文档与打印
 
-
-
-JAVA 9: SWING、文档与打印
-
-没有什么好解释的，但你应该注意如何定义 `JTextArea` 组件必须使用另一个光标（caret）。带有注释的语句是为了显示新光标也遵循另一种字体。下面是一个程序运行的示例，其中注释已被移除，光标移动了位置：
+没有什么好解释的，但你应该注意如何定义`JTextArea`组件必须使用另一个光标（caret）。带有注释的语句是为了显示新光标也遵循另一种字体。下面是一个程序运行的示例，其中注释已被移除，光标移动了位置：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_181_0.png)
 
-## 8.3 高亮器 (HIGHLIGHTER)
+## 8.3 高亮器（Highlighter）
 
-文本组件还有一个所谓的“高亮器”（highlighter），这是一个用于显示所选文本的对象。默认情况下，它用不同的背景颜色显示高亮文本，并由 `Highlighter` 接口定义的 `HighlightPainter` 对象执行，该接口是 `Highlighter` 接口中的一个内部接口。你可以自己实现这个接口（尽管几乎没有理由），但下面的类是一个用红色下划线高亮文本的示例：
+文本组件还有一个所谓的“高亮器”（highlighter），这是一个用于显示所选文本的对象。默认情况下，它用不同的背景颜色显示高亮文本，并由`Highlighter`接口定义的`HighlightPainter`对象执行，该接口是`Highlighter`接口中的一个内部接口。你可以自己实现这个接口（尽管几乎没有理由），但下面的类是一个用红色下划线高亮文本的示例：
 
 ```java
 class HighlightPainter implements Highlighter.HighlightPainter
+
 {
+
     private void paintLine(Graphics g, Rectangle rect, int x)
+
     {
+
         g.fillRect(rect.x, rect.y + rect.height - 3, x - rect.x, 3);
+
     }
 
     public void paint(Graphics g, int p0, int p1, Shape shape,
+
                       JTextFieldComponent component)
+
     {
+
         Rectangle rect0 = null;
+
         Rectangle rect1 = null;
+
         try
+
         {
+
             rect0 = component.modelToView(p0);
+
             rect1 = component.modelToView(p1);
+
         catch (BadLocationException ex)
+
         {
+
             return;
+
         if (rect0 == null || rect1 == null) return;
+
         Rectangle rect2 = shape.getBounds();
+
         int max = rect2.x + rect2.width;
+
         g.setColor(Color.red);
+
         if (rect0.y == rect1.y) paintLine(g, rect0, rect1.x);
+
         else {
+
             paintLine(g, rect0, max);
+
             rect0.y += rect0.height;
+
             rect0.x = rect2.x;
+
             while (rect0.y < rect1.y) {
+
                 paintLine(g, rect0, max);
-                rect0.y += rect0.height;
-            }
-            paintLine(g, rect0, rect1.x);
-        }
-    }
-}
+```
+
+
+
+`rect0.y += rect0.height;`
+
+```
+paintLine(g, rect0, rect1.x);
 ```
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_182_0.png)
@@ -4956,7 +5173,7 @@ private void createView() {
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_183_0.png)
 
-### 8.4 一个 JTEXTP
+## 8.4 一个 JTEXTP
 
 本节的主题是 `JTextPane` 组件，这是一个极其先进的组件，具有许多设置选项以及许多以接口和类形式存在的相关类型。接下来的也将仅仅是一个介绍，足以让你对 `JTextPane` 能做什么以及在实践中如何使用该组件有一个印象。
 
@@ -4964,21 +5181,17 @@ private void createView() {
 
 基本上，你可以将 `JTextPane` 想象成一个 `JTextArea` 以及一个可以输入和编辑文本行的组件，巨大的区别在于该组件支持文本的样式化。这意味着单个文本元素被分配了样式对象（例如字体和颜色）。该组件实际上可以做更多，它还可以显示图像甚至其他的 Swing 组件。像其他 Swing 组件一样，`JTextPane` 是通过 MVC 设计的，模型（类似于其他文本组件）定义为 `Document` 接口，并且
 
-
-
-
-
 # JAVA 9: SWING、文档与打印
 
 这里定义了三个实例变量，其中第一个是待插入的图标，最后一个方法是我多次使用的那个方法，它用于从我的 jar 文件中加载并缩放图像。变量 `counter` 用于可能插入的按钮的文本，以便它们能够相互区分。最后，有一个对 `JTextPane` 组件的引用，以便在三个按钮的事件处理器中引用它。该组件像其他组件一样被插入到窗口中，在三个事件处理器中会有一些需要注意的地方。你应该注意 `JTextPane` 上的以下方法：
 
-- replaceSelection()
-- insertIcon()
-- insertComponent()
+- `replaceSelection()`
+- `insertIcon()`
+- `insertComponent()`
 
 它们分别用于插入文本、插入图标和插入组件。无论名称如何，它们的工作方式相同，都会替换标记为待插入内容的内容——如果选择了某些内容则进行替换，否则在光标位置插入。
 
-然后是以属性（attributes）和样式（styles）形式存在的。你可以将属性附加到单个字符、段落以及整个文档。字符属性涉及字体和文本颜色。关于段落的属性可能还涉及缩进和行间距。样式（Style）是属性的组，可以用于文档中的多个地方，并且可以是一个通过名称的命名样式。如果你通过样式（附加到文档）更改属性，那么文档中所有使用该样式的文本属性都会发生变化。如果将样式分配给一个段落，可以通过向该段落文本的局部附加属性来覆盖其属性。属性是一个键/值对，而属性族由三个接口定义：`AttributeSet`、`MutableAttributeSet` 和 `Style`。
+然后是以属性（attributes）和样式（styles）形式存在的。你可以将属性附加到单个字符、段落以及整个文档。字符属性涉及字体和文本颜色。关于段落的属性可能还涉及缩进和行间距。样式（`Style`）是属性的组，可以用于文档中的多个地方，并且可以是一个通过名称的命名样式。如果你通过样式（附加到文档）更改属性，那么文档中所有使用该样式的文本属性都会发生变化。如果将样式分配给一个段落，可以通过向该段落文本的局部附加属性来覆盖其属性。属性是一个键/值对，而属性族由三个接口定义：`AttributeSet`、`MutableAttributeSet` 和 `Style`。
 
 现在我将展示一个使用样式的 `JTextPane` 程序。该程序会打开一个带有 `JTextPane` 和菜单的窗口：
 
@@ -5063,10 +5276,6 @@ public void clear() {
 }
 ```
 
-
-
-
-
 # JAVA 9: SWING、文档与打印
 
 ## 编辑文本
@@ -5113,7 +5322,7 @@ public void modStyle(ActionEvent e)
 
 ## 练习 6
 
-你必须创建上述项目（StyledText）的副本。你必须添加一个名为 Select color（选择颜色）的菜单，必须包含以下颜色的菜单项：
+你必须创建上述项目（`StyledText`）的副本。你必须添加一个名为 Select color（选择颜色）的菜单，必须包含以下颜色的菜单项：
 
 - 红、绿、蓝、黄、橙、灰、浅灰、洋红、粉和黑色
 
@@ -5131,7 +5340,7 @@ JAVA 9: SWING, DOCUMENTS AND PRINTING
 
 ## 8.4 文档 (DOCUMENT)
 
-如所述，所有文本组件都使用一个模型，如上述由 `Document` 接口定义的。模型代表用户编辑的文本，如果是格式化文档，则它也是表示属性的模型。`Document` 接口没有定义任何关于样式的内容，而是在一个子接口 `StyledDocument` 中完成的。因此，可以通过下面的图说明具体模型，其中 `AbstractDocument`（如其名所示）是一个抽象类，而 `PlainDocument` 和 `DefaultStyledDocument` 是具体类。`PlainDocument` 是 `JTextField`  和 `JTextArea` 组件的模型，而 `DefaultStyledDocument` 是 `JTextPane` 和 `JEditorPane` 的模型。
+如所述，所有文本组件都使用一个模型，如上述由 `Document` 接口定义的。模型代表用户编辑的文本，如果是格式化文档，则它也是表示属性的模型。`Document` 接口没有定义任何关于样式的内容，而是在一个子接口 `StyledDocument` 中完成的。因此，可以通过下面的图说明具体模型，其中 `AbstractDocument`（如其名所示）是一个抽象类，而 `PlainDocument` 和 `DefaultStyledDocument` 是具体类。`PlainDocument` 是 `JTextField` 和 `JTextArea` 组件的模型，而 `DefaultStyledDocument` 是 `JTextPane` 和 `JEditorPane` 的模型。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_196_1.png)
 
@@ -5181,17 +5390,33 @@ public class MainView extends JFrame
 
     private void createView()
     {
-        textField.setDocument(new MaxDocument(20));
-        textField.setPreferredSize(new Dimension(200, 20));
-        JButton cmd = new JButton("OK");
-        cmd.addActionListener(e -> JOptionPane.showMessageDialog(this, textField.getText()));
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        panel.setBorder(new EmptyBorder(25, 25, 25, 25));
-        panel.add(new JLabel("Enter text (max 20 characters)"));
-        panel.add(textField);
-        panel.add(cmd);
-        add(panel);
-    }
+```
+
+
+
+```java
+textField.setDocument(new MaxDocument(20));
+
+textField.setPreferredSize(new Dimension(200, 20));
+
+JButton cmd = new JButton("OK");
+
+cmd.addActionListener(e -> JOptionPane.showMessageDialog(this, textField.getText()));
+
+JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
+panel.setBorder(new EmptyBorder(25, 25, 25, 25));
+
+panel.add(new JLabel("Enter text (max 20 characters)"));
+
+panel.add(textField);
+
+panel.add(cmd);
+
+add(panel);
+
+}
+
 }
 ```
 
@@ -5201,16 +5426,21 @@ public class MainView extends JFrame
 JFormattedTextField(new MaskFormatter("****************"))
 ```
 
-# JAVA 9: SWING、文档与打印
+# JAVA 9：SWING、文档与打印
 
 ## 编辑文本
 
 ```java
 JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
 panel.setBorder(new EmptyBorder(25, 25, 25, 25));
+
 panel.add(new JLabel("Enter text (max 20 characters)"));
+
 panel.add(textField);
+
 panel.add(cmd);
+
 add(panel);
 ```
 
@@ -5222,7 +5452,9 @@ add(panel);
 
 其中上方组件是 `JTextPane`，底部是 `JTextField`。上方组件使用以下字符串初始化：
 
+```text
 "Gorm den Gamle\nHarald Blåtand\nSvend Tveskåg\nHarald d. 2.\nKnud den Store"
+```
 
 在显示字符串之前，必须为这五个名称分别分配指示颜色大小大小属性。
 
@@ -5234,19 +5466,17 @@ add(panel);
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_200_0.png)
 
+## 8.5 `JEditorPane`
 
+作为 Swing 文本组件的最后一个，应该提到 `JEditorPane`。它是一个很少有人对其感兴趣的组件，但它可以被视为样式化文本组件的基类，而 `JTextPane` 则是派生自 `JEditorPane` 的文本组件的一个示例。如上所示，`JTextPane` 是一个可以用于编辑带有样式信息的文档的组件。实际文本由 `StyledDocument` 表示，但控制文本和样式如何被编辑（可以执行哪些操作）的逻辑全部封装在 `EditorKit` 中。如 `JTextField` 和 `JTextArea` 等简单文本组件使用 `DefaultEditorKit`，而 `JTextPane` 使用派生类 `StyledEditorKit`。`JEditorPane` 的目标是让你能够通过定义自己的 `EditorKit` 和 `Document` 类型，定义一个派生自 `JEditorPane` 的自有文本组件，从而定义恰好支持你所需任务的文本组件。事实上，Swing 自带了两个可以编辑 HTML 和 RTF 文档的示例。
 
+在本节中，我将说明如何编写你自己的 HTML 编辑器。目标不是实现一个完善的 HTML 编辑器（那是很复杂的），而是为了更多地展示文本组件以及 `EditorKit` 是什么。我想从一个名为 `AEditorPane` 的示例开始。如果你运行该程序，你将得到下面的消息框：
 
-
-## 8.5 JEditorPane
-
-作为 Swing 文本组件的最后一个，应该提到 JEditorPane。它是一个很少有人对其感兴趣的组件，但它可以被视为样式化文本组件的基类，而 JTextPane 则是派生自 JEditorPane 的文本组件的一个示例。如上所示，JTextPane 是一个可以用于编辑带有样式信息的文档的组件。实际文本由 `StyledDocument` 表示，但控制文本和样式如何被编辑（可以执行哪些操作）的逻辑全部封装在 `EditorKit` 中。如 `JTextField` 和 `JTextArea` 等简单文本组件使用 `DefaultEditorKit`，而 `JTextPane` 使用派生类 `StyledEditorKit`。JEditorPane 的目标是让你能够通过定义自己的 `EditorKit` 和 `Document` 类型，定义一个派生自 JEditorPane 的自有文本组件，从而定义恰好支持你所需任务的文本组件。事实上，Swing 自带了两个可以编辑 html 和 rtf 文档的示例。
-
-在本节中，我将说明如何编写你自己的 html 编辑器。目标不是实现一个完善的 html 编辑器（那是很复杂的），而是为了更多地展示文本组件以及 `EditorKit` 是什么。我想从一个名为 `AEditorPane` 的示例开始。如果你运行该程序，你将得到下面的消息框：
-
-```
+```text
 Message
+
 javax.swing.text.HTMLEditorKit
+
 OK
 ```
 
@@ -5254,9 +5484,9 @@ OK
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_201_0.png)
 
-# JAVA 9: SWING、文档与打印
+# JAVA 9：SWING、文档与打印
 
-窗口显示了保存在项目中的以下 html 文档：
+窗口显示了保存在项目中的以下 HTML 文档：
 
 ```html
 <html>
@@ -5278,7 +5508,7 @@ OK
 
 也就是说，文档被解释是因为组件识别各个独立元素，因此知道如何解释它们。特别是最后一行，它是一个指向该页面的链接：
 
-http://danmarkhistorien.dk/forside
+`http://danmarkhistorien.dk/forside`
 
 点击此链接将在窗口中显示该页面。结果不是很好，但这是因为该页面包含了许多组件无法解释的内容（现代网站在内容方面非常复杂），该示例说明你可以加载任何网页，并以较或少较好的结果在文本组件中显示页面内容。该示例是通向简单浏览器迈出的一步。程序代码如下：
 
@@ -5296,10 +5526,11 @@ import javax.swing.border.*;
 
 ```java
 public class MainView extends JFrame {
+
   private JEditorPane txtPane = null;
 ```
 
-编辑文本
+## 编辑文本
 
 ```java
 public MainView()
@@ -5316,67 +5547,76 @@ private void createView()
 {
     JPanel panel = new JPanel(new BorderLayout());
     panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+
     try {
         JEditorPane txtPane = new JEditorPane(loadPage());
         txtPane.addHyperlinkListener(new LinkHandler());
-        JOptionPane.showMessageDialog(this,
-            txtPane.getEditorKit().getClass().getName());
+        JOptionPane.showMessageDialog(
+            this,
+            txtPane.getEditorKit().getClass().getName()
+        );
     }
     catch (Exception ex) {
-}
 ```
 
 ```java
 JOptionPane.showMessageDialog(this, ex.toString());
+
 System.exit(1);
+
 txtPane.setEditable(false);
+
 panel.add(new JScrollPane(txtPane));
+
 add(panel);
 ```
 
 ```java
 private static URL loadPage()
 {
-return Main.class.getResource("/aeditorpane/kings.html");
+    return Main.class.getResource("/aeditorpane/kings.html");
 }
 ```
 
 ```java
 class LinkHandler implements HyperlinkListener
 {
-public void hyperlinkUpdate(HyperlinkEvent e)
-{
-try
-{
-if (e.getType() == HyperlinkEvent.EventType.ACTIVATED)
-txtPane.setPage(e.getUrl());
-}
-catch (Exception ex)
-{
-JOptionPane.showMessageDialog(Main.this, ex.toString());
-}
-}
+    public void hyperlinkUpdate(HyperlinkEvent e)
+    {
+        try
+        {
+            if (e.getType() == HyperlinkEvent.EventType.ACTIVATED)
+                txtPane.setPage(e.getUrl());
+        }
+        catch (Exception ex)
+        {
+            JOptionPane.showMessageDialog(Main.this, ex.toString());
+        }
+    }
 }
 ```
 
-程序定义了一个单实例变量，其类型为 `JEditorPane`。它在 `getView()` 方法中创建，其中上述 html 文档作为 `URL` 传递给类构造函数。html 文档封装在程序文件中，并在 `loadPage()` 中从 jar 文件加载。`JEditorPane` 组件创建后，会关联一个点击链接的事件处理器。它是一个实现了 `HyperlinkListener` 接口的类，该接口定义了一个名为 `hyperlinkUpdate()` 的方法，该方法在窗口中点击链接时执行。结果是组件的内容被所链接网站的内容覆盖。
+程序定义了一个单实例变量，其类型为 `JEditorPane`。它在 `getView()` 方法中创建，其中上述 HTML 文档作为 `URL` 传递给类构造函数。HTML 文档封装在程序文件中，并在 `loadPage()` 中从 JAR 文件加载。`JEditorPane` 组件创建后，会关联一个点击链接的事件处理器。它是一个实现了 `HyperlinkListener` 接口的类，该接口定义了一个名为 `hyperlinkUpdate()` 的方法，该方法在窗口中点击链接时执行。结果是组件的内容被所链接网站的内容覆盖。
 
 当此事件处理器与组件关联后，第一个消息框打开了。（注：此处原文中存在大量重复句子，已过滤）。
 
-
-
-
-
-## JAVA 9：SWING、文档与打印
+# JAVA 9：SWING、文档与打印
 
 ```java
 JMenu menu2 = new JMenu("More actions");
+
 for (int i = n; i < actions.length; ++i) menu2.add(actions[i]);
+
 JMenu menu = new JMenu("Actions");
+
 menu.add(menu);
+
 menu.add(menu2);
+
 MenuBar bar = new JMenuBar();
+
 bar.add(menu);
+
 setMenuBar(bar);
 ```
 
@@ -5398,77 +5638,119 @@ setMenuBar(bar);
 
 ```java
 public class MainView extends JFrame {
+
   private JTextComponent txtComp = new JTextArea();
+
   private Action openAction = new OpenAction();
+
   private Action saveAction = new SaveAction();
 
   public MainView() {
+
   }
 
   protected void createView() {
+
   ((JTextArea)txtComp).setLineWrap(true);
+
   JPanel panel = new JPanel(new BorderLayout());
+
   panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+
   panel.add(new JScrollPane(txtComp));
+
   defineActions();
+
   panel.add(createToolbar(), BorderLayout.NORTH);
+
   createMenu();
+
   add(panel);
+
   }
 
   protected void defineActions() {
+
     defineAction(txtComp.getActionMap().get(DefaultEditorKit.cutAction), "Cut", "/simpleeditor/images/cut.png");
+
     defineAction(txtComp.getActionMap().get(DefaultEditorKit.copyAction), "Copy", "/simpleeditor/images/copy.png");
+
     defineAction(txtComp.getActionMap().get(DefaultEditorKit.pasteAction), "Paste", "/simpleeditor/images/paste.png");
+
   }
 
   private void defineAction(Action action, String name, String icon) {
+
     action.putValue(Action.NAME, name);
+
     if (icon != null) action.putValue(Action.SMALL_ICON, createImage(icon));
+
   }
+
 }
 ```
 
-## JAVA 9：SWING、文档与打印
+# JAVA 9：SWING、文档与打印
 
 ```java
 private JToolBar createToolBar() {
+
     JToolBar bar = new JToolBar();
+
     bar.add(openAction).setText("");
+
     bar.add(saveAction).setText("");
+
     bar.addSeparator();
+
     bar.add(txtComp.getActionMap().get(DefaultEditorKit.cutAction)).setText("");
+
     bar.add(txtComp.getActionMap().get(DefaultEditorKit.copyAction)).setText("");
+
     bar.add(txtComp.getActionMap().get(DefaultEditorKit.pasteAction)).setText("");
+
     return bar;
+
 }
 ```
 
 ```java
 private void createMenu() {
+
     JMenu file = new JMenu("File");
+
     file.add(openAction);
+
     file.add(saveAction);
+
     file.add(new ExitAction());
+
     JMenu edit = new JMenu("Edit");
+
     edit.add(txtComp.getActionMap().get(DefaultEditorKit.cutAction));
 ```
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_209_0.png)
 
-## JAVA 9：SWING、文档与打印
+# JAVA 9：SWING、文档与打印
 
 ```java
 edit.add(txtComp.getActionMap().get(DefaultEditorKit.copyAction()));
+
 edit.add(txtComp.getActionMap().get(DefaultEditorKit.pasteAction()));
+
 JMenuBar bar = new JMenuBar();
+
 bar.add(file);
+
 bar.add(edit);
+
 setMenuBar(bar);
 ```
 
 ```java
 class ExitAction extends AbstractAction {
+
     public ExitAction() {
         super("Exit");
     }
@@ -5476,57 +5758,94 @@ class ExitAction extends AbstractAction {
     public void actionPerformed(ActionEvent e) {
         System.exit(0);
     }
+
 }
 ```
 
 ```java
 class OpenAction extends AbstractAction {
+
     public OpenAction() {
         super("Open", createImage("/simpleeditor/images/open.png"));
-    }
-```
-
-```java
-public void actionPerformed(ActionEvent e) {
-    JJFileChooser chooser = new JFileChooser();
-    if (chooser.showOpenDialog(Main.this) != JFileChooser.APPROVE_OPTION)
-        return;
-    File file = chooser.getSelectedFile();
-    if (file == null) return;
-    try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-        txtComp.read(reader, null);
-    } catch (IOException e) {
-        // handle exception
     }
 }
 ```
 
-## JAVA 9：SWING、文档与打印 编辑
+```java
+public void actionPerformed(ActionEvent e) {
+```
+
+
+
+```java
+JJFileChooser chooser = new JFileChooser();
+
+if (chooser.showOpenDialog(Main.this) != JFileChooser.APPROVE_OPTION)
+
+    return;
+
+File file = chooser.getSelectedFile();
+
+if (file == null) return;
+
+try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+
+    txtComp.read(reader, null);
+
+} catch (IOException e) {
+
+    // handle exception
+
+}
+
+}
+```
+
+## JAVA 9：SWING、文档与打印编辑
 
 ```java
 class SaveAction extends AbstractAction {
+
     public SaveAction() {
+
         super("Save", createImage("/simpleeditor/images/save.png"));
+
     }
 
     public void actionPerformed(ActionEvent e) {
+
         JFileChooser chooser = new JFileChooser();
+
         if (chooser.showOpenDialog(Main.this) != JFileChooser.APPROVE_OPTION) {
+
             return;
+
         }
+
         File file = chooser.getSelectedFile();
+
         if (file == null) return;
+
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+
             txtComp.write(writer);
+
         } catch (IOException e) {
+
             JOptionPane.showMessageDialog(Main.this, "File error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
         }
+
     }
 
     private static ImageIcon createImage(String path) {
+
         URL imgURL = MainView.class.getResource(path);
+
         return new ImageIcon(new ImageIcon(imgURL).getScaledInstance(24, 24, Image.SCALE_SMOOTH));
+
     }
+
 }
 ```
 
@@ -5534,27 +5853,25 @@ class SaveAction extends AbstractAction {
 
 `defineActions()` 方法用于自定义操作。`JTextArea` 有剪切、粘贴操作，但通常你想给它们命名并可能附带图标。这在 `defineActions()` 中发生。例如，引用操作：
 
-```
+```java
 txtComp.getActionMap().get(DefaultEditorKit.cutAction)
 ```
 
-这里，DefaultEditorKit.cut 是标识此操作的常量，Action 对象被传递给 `defineAction()` 方法，以及要显示的文本和图标。
+这里，`DefaultEditorKit.cut` 是标识此操作的常量，`Action` 对象被传递给 `defineAction()` 方法，以及要显示的文本和图标。
 
 ## JAVA 9：SWING、文档与打印
 
-`createToolbar()` 方法创建一个包含 5 个图标或操作的工具栏。你应该注意到前两个是实例变量操作，而另外三个是以上述方式引用的。注意对于所有 5 个 Action 对象都执行了 `setText()` 方法，将文本置为空。这是因为工具栏不会显示对象的属性。
+`createToolbar()` 方法创建一个包含 5 个图标或操作的工具栏。你应该注意到前两个是实例变量操作，而另外三个是以上述方式引用的。注意对于所有 5 个 `Action` 对象都执行了 `setText()` 方法，将文本置为空。这是因为工具栏不会显示对象的属性。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_212_0.png)
 
 ## JAVA 9：SWING、文档与打印
 
-`createMenu()` 方法原理上是相同的。相反，`JMenuItem` 对象与 Action 关联。注意 File 菜单有一个 `ExitAction` 操作，它也是一个表示操作的内部类。
+`createMenu()` 方法原理上是相同的。相反，`JMenuItem` 对象与 `Action` 关联。注意 File 菜单有一个 `ExitAction` 操作，它也是一个表示操作的内部类。
 
-后面是定义 Action 对象的三个内部类。我不会详细介绍这三个类，但你会注意到它们是如何继承 `AbstractAction` 的。还会注意到最后两个关联了图标，然后注意 `JTextField` 具有可以直接从流读取来初始化组件并将组件内容写入流的方法。
+后面是定义 `Action` 对象的三个内部类。我不会详细介绍这三个类，但你会注意到它们是如何继承 `AbstractAction` 的。还会注意到最后两个关联了图标，然后注意 `JTextField` 具有可以直接从流读取来初始化组件并将组件内容写入流的方法。
 
-## JAVA 9：SWING、文档与打印
-
-# 问题 5
+## 问题 5
 
 你必须编写一个可以调用 `StyledEditor` 的程序，它将打开以下窗口：
 
@@ -5568,16 +5885,11 @@ txtComp.getActionMap().get(DefaultEditorKit.cutAction)
 - 下划线
 - 斜体
 - 字体
-- SansSerif
-- Serif
+- `SansSerif`
+- `Serif`
 - 等宽字体
 
-
-
-
-[content]
-
-# JAVA 9: SWING、文档与打印
+## JAVA 9：SWING、文档与打印
 
 | 尺寸 |
 | :--- |
@@ -5595,33 +5907,31 @@ txtComp.getActionMap().get(DefaultEditorKit.cutAction)
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_214_0.png)
 
-# JAVA 9: SWING、文档与打印
-
-# 9 国际化
+## 9 国际化
 
 有时程序必须在多个国家使用，因此需要多种语言，这对用户界面的能力以及数据的显示方式就提出了要求。一种方案是编写同一程序的多个版本（英语版、丹麦语版等），但从维护角度考虑，这不是最优解决方案。然而，Java 支持国际化，因此程序本身可以根据其运行的所在地决定如何显示数据。这是本章的主题，它绝非简单，接下来的内容是对其概念的介绍。
 
 基本上，它涉及到程序用于显示文本的语言，以及日期、时间和数字的格式。实际上，有两点：国际化（internationalization）意味着程序支持多种语言和格式，而本地化（localization）被理解为程序确定使用哪语言和格式的过程。由于更多国家使用同一种语言，某些国家使用多种语言，这一切变得复杂；同样，语言与格式规则之间没有明确的区别。从 Java 的角度来看，起点是 `Locale` 类，它基本上由三个属性组成：
 
-- 1. 语言代码 (ISO-639)
-- 2. 国家代码 (ISO-3166)
+- 1. 语言代码（ISO-639）
+- 2. 国家代码（ISO-3166）
 - 3. 一个可选的变体代码
 
 语言代码为两个或三个字符，例如：
 
-英语 en eng
-法语 fr fra
-德语 deu
-丹麦语 da dän
+- 英语：`en`、`eng`
+- 法语：`fr`、`fra`
+- 德语：`deu`
+- 丹麦语：`da`、`dän`
 
 同样，国家代码也是两个或三个字符，例如：
 
-英国 gb gbr
-法国 fr fra
-德国 de deu
-丹麦 dk dnk
+- 英国：`gb`、`gbr`
+- 法国：`fr`、`fra`
+- 德国：`de`、`deu`
+- 丹麦：`dk`、`dnk`
 
-在 bookboom.com 下载免费的电子书
+在 bookboom.com 下载免费的电子书。
 
 `Locale` 类使用 2 字符代码（如果没有 2 字符代码，则允许 3 字符的语言代码）。该类通常没有提供太多功能，但许多方法都有一个 `Locale` 参数，这是该类的主要目的。以下程序展示了使用 `Locale` 示例：
 
@@ -5630,52 +5940,66 @@ package localeprogram;
 
 import java.util.*;
 
-public class LocaleProgram
-{
-    public static void main(String[] args)
-    {
+public class LocaleProgram {
+
+    public static void main(String[] args) {
+
         test1();
+
         test2();
+
         test3();
+
     }
 
-    private static void test1()
-    {
+    private static void test1() {
+
         Locale loc = Locale.getDefault();
+
         print(loc);
+
     }
 
-    private static void test2()
-    {
+    private static void test2() {
+
         Locale.setDefault(Locale.US);
+
         test1();
+
     }
 
-    private static void test3()
-    {
+    private static void test3() {
+
         Locale[] locales = Locale.getAvailableLocales();
+
         System.out.println(locales.length);
-        for (Locale loc : locales) System.out.println(String.format("%s: %s, %s: %s",
-            loc.getDisplayCountry(), loc.getCountry(),
-            loc.getDisplayLanguage(), loc.getLanguage()));
+
+        for (Locale loc : locales) {
+            System.out.println(String.format("%s: %s, %s: %s",
+                loc.getDisplayCountry(), loc.getCountry(),
+                loc.getDisplayLanguage(), loc.getLanguage()));
+        }
+
     }
 
-    private static void print(Locale loc)
-    {
+    private static void print(Locale loc) {
+
         System.out.println(String.format("%s, %s",
             loc.getDisplayCountry(), loc.getCountry()));
+
         System.out.println(String.format("%s, %s",
             loc.getDisplayLanguage(), loc.getLanguage()));
+
     }
+
 }
 ```
 
-# JAVA 9: SWING、文档与打印
-
-# 国际化
+## 国际化
 
 ```java
 System.out.println(String.format(loc, "%1.2f", 1234.56));
+
 System.out.println(String.format(loc, "%tD", Calendar.getInstance()));
 ```
 
@@ -5687,7 +6011,7 @@ System.out.println(String.format(loc, "%tD", Calendar.getInstance()));
 
 赋能人才。改进商业。BI 学院是欧洲最大的学院之一，欢迎学生。科学硕士是一个为期两年的课程。
 
-# 9.1 资源包 (RESOURCE BOUNDLES)
+## 9.1 资源包（RESOURCE BUNDLES）
 
 如果程序需要国际化，意味着文本应该支持多种语言，尽管 Java 支持国际化，但翻译文本是开发部门的任务。
 
@@ -5700,7 +6024,7 @@ sp=Spar
 cl=Kl\u008r
 ```
 
-其中包含了四个键值对。内容可以解释为扑牌的颜色。注意最后一个值中的 ‘o’ 是使用字符代码编码的。文件名 `Cards.properties` 是非常重要的。另一个版本的文件，写有英文名称：
+其中包含了四个键值对。内容可以解释为扑克牌的花色。注意最后一个值中的 `o` 是使用字符代码编码的。文件名 `Cards.properties` 是非常重要的。另一个版本的文件，写有英文名称：
 
 ```properties
 di=Diamond
@@ -5716,49 +6040,58 @@ package resourceprogram;
 
 import java.util.*;
 
-public class ResourceProgram
-{
-    public static void main(String[] args)
-    {
+public class ResourceProgram {
+
+    public static void main(String[] args) {
+
         ResourceBundle bundle1 = ResourceBundle.getBundle("Cards");
+
         System.out.println(bundle1.getString("di"));
+
         System.out.println(bundle1.getString("he"));
+
         System.out.println(bundle1.getString("sp"));
+
         System.out.println(bundle1.getString("ci"));
+
         ResourceBundle bundle2 = ResourceBundle.getBundle("Cards", Locale.US);
+
         for (Enumeration<String> keys = bundle2.keySet(); keys.hasMoreElements(); ) {
             System.out.println(bundle2.getString(keys.nextElement()));
         }
+
         ResourceBundle bundle3 = ResourceBundle.getBundle("Cards", Locale.GERMAN);
+
         System.out.println(bundle1.getString("di"));
+
     }
+
 }
 ```
 
+
+
 运行程序的结果如下：
 
-- Ruder
-- Hjerte
-- Spar
-- Kler
-- Club
-- Diamond
-- Spade
-- Heart
-- Ruder
-
-[/content]
-
-
-
+```
+Ruder
+Hjerte
+Spar
+Kler
+Club
+Diamond
+Spade
+Heart
+Ruder
+```
 
 ## JAVA 9: SWING、文档与打印
 
 ## 国际化
 
-程序启动时创建一个名为 `bundle1` 的 ResourceBundle，在不指定任何语言环境（Locale）的情况下，它将读取 `Cards.properties` 文件，这就是基础属性文件。接下来，打印四个键的值，结果是前几行。接着，创建了另一个名为 `bundle2` 的 ResourceBundle，但这次添加了语言环境。结果是读取了该语言环境的文件，即 `Cards_en_US.properties`。下一条语句遍历所有所有的键并打印英文名称。最后，创建了一个名为 `bundle3` 的 ResourceBundle，但使用了德语的本地化。它将会查找 `Cards_de.properties`，但该文件并不存在，因此它将读取作为基础属性文件的 `Cards.properties`。因此，最后一条语句写入了 ResourceBundle。
+程序启动时创建一个名为`bundle1`的`ResourceBundle`，在不指定任何语言环境（`Locale`）的情况下，它将读取`Cards.properties`文件，这就是基础属性文件。接下来，打印四个键的值，结果是前几行。接着，创建了另一个名为`bundle2`的`ResourceBundle`，但这次添加了语言环境。结果是读取了该语言环境的文件，即`Cards_en_US.properties`。下一条语句遍历所有所有的键并打印英文名称。最后，创建了一个名为`bundle3`的`ResourceBundle`，但使用了德语的本地化。它将会查找`Cards_de.properties`，但该文件并不存在，因此它将读取作为基础属性文件的`Cards.properties`。因此，最后一条语句写入了`ResourceBundle`。
 
-基于属性的 ResourceBundle 提供了巨大的优势，即它们可以在程序外部进行维护，从而使程序的不同语言版本具有灵活性。然而，需要注意的是，键是不能更改的，因为它们在程序中被引用了。另一个问题是属性文件应该放在哪里，它们应该简单地放在项目目录的 src 目录（（见下文）。如果程序被安装在其他地方（实际情况如此），则属性必须与 jar 文件一起复制并放在相同的位置。
+基于属性的`ResourceBundle`提供了巨大的优势，即它们可以在程序外部进行维护，从而使程序的不同语言版本具有灵活性。然而，需要注意的是，键是不能更改的，因为它们在程序中被引用了。另一个问题是属性文件应该放在哪里，它们应该简单地放在项目目录的`src`目录（见下文）。如果程序被安装在其他地方（实际情况如此），则属性必须与`jar`文件一起复制并放在相同的位置。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_220_0.png)
 
@@ -5798,61 +6131,95 @@ Helpmyassignment
 
 在程序国际化的背景下，数字的格式化起着重要的作用，而日期和时间的格式更为。这不仅涉及到这些值如何显示，还涉及到如何解析与输入数据相关的字符串。
 
-日期和时间长期以来由 `Calendar` 接口表示，由 `GregorianCalendar` 类实现，但现在新增了 `java.time` 包，其中包含新的日期和时间类型。我不想在这里处理这些类型，只需指出它们的存在，并且实际上有一些类型建议你去查看它们的 API。为了说明这一点，`DateTimeProgram` 应用程序是一个简单的控制台程序，展示了如何格式化和输入日期与时间。例如，以下方法展示了如何创建一个 `Instant` 对象，这是一种新类型：
+日期和时间长期以来由`Calendar`接口表示，由`GregorianCalendar`类实现，但现在新增了`java.time`包，其中包含新的日期和时间类型。我不想在这里处理这些类型，只需指出它们的存在，并且实际上有一些类型建议你去查看它们的 API。为了说明这一点，`DateTimeProgram`应用程序是一个简单的控制台程序，展示了如何格式化和输入日期与时间。例如，以下方法展示了如何创建一个`Instant`对象，这是一种新类型：
 
 ```
 private static void test() {
+
     Instant dt = Instant.now();
+
     System.out.println(dt);
+
     System.out.println(String.format("%d %d", dt.getEpochSecond(), dt.getNano()));
+
 }
 ```
 
-在这里你注意到了 `getEpochSecond()` 方法，它返回自 1970-01-01T00:00:00 之后的的秒数，而 `getNano()` 方法返回当前秒钟内的纳秒数。
+在这里你注意到了`getEpochSecond()`方法，它返回自 1970-01-01T00:00:00 之后的的秒数，而`getNano()`方法返回当前秒钟内的纳秒数。
 
-`test2()` 方法展示了如何在新的时间表示法和 `Calendar` 对象之间进行转换：
+`test2()`方法展示了如何在新的时间表示法和`Calendar`对象之间进行转换：
 
 ```java
 private static void test2() 
+
 {
+
     Calendar dt1 = Calendar.getInstance();
+
     Instant dt2 = Instant.ofEpochMilli(dt1.getTimeInMillis());
+
     Calendar dt3 = GregorianCalendar.from(ZonedDateTime.ofInstant(dt2, ZoneId.systemDefault()));
+
     System.out.println(dt1);
+
     System.out.println(dt2);
+
     System.out.println(dt3);
+
 }
 ```
 
-下一个方法展示了如何将日期和时间转换为指定的语言环境（Locale）。
+下一个方法展示了如何将日期和时间转换为指定的语言环境（`Locale`）。
 
 ```java
 private static void test3() 
+
 {
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.SHORT));
+
     DateFormat.getTimeInstance(DateFormat.SHORT);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.SHORT, Locale.US));
+
     DateFormat.getTimeInstance(DateFormat.SHORT, Locale.US);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.MEDIUM));
+
     DateFormat.getTimeInstance(DateFormat.MEDIUM);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.US));
+
     DateFormat.getTimeInstance(DateFormat.MEDIUM, Locale.US);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.LONG));
+
     DateFormat.getTimeInstance(DateFormat.LONG);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.LONG, Locale.US));
+
     DateFormat.getTimeInstance(DateFormat.LONG, Locale.US);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.FULL));
+
     DateFormat.getTimeInstance(DateFormat.FULL);
+
     print(Calendar.getInstance(), DateFormat.getDateInstance(DateFormat.FULL, Locale.US));
+
     DateFormat.getTimeInstance(DateFormat.FULL, Locale.US);
+
 }
 ```
 
 ```java
 private static void print(Calendar dt, DateFormat dFormatter, DateFormat tFormatter) 
+
 {
+
     System.out.println(dFormatter.format(dt.getTime()));
+
     System.out.println(tFormatter.format(dt.getTime()));
+
 }
 ```
 
@@ -5860,9 +6227,13 @@ private static void print(Calendar dt, DateFormat dFormatter, DateFormat tFormat
 
 ```
 27-04-17
+
 11:49
+
 4/27/2017
+
 11:49 AM
+
 27-04-2017
 ```
 
@@ -5884,10 +6255,15 @@ Thursday, April 27, 2017
 
 ```java
 private static void test4() {
+
     System.out.println(enterDate(DateFormat.getInstance(DateFormat.MEDIUM)));
+
     System.out.println(enterDate(DateFormat.getInstance(DateFormat.MEDIUM, Locale.US)));
+
     System.out.println(enterTime(DateFormat.getTimeInstance(DateFormat.SHORT)));
+
     System.out.println(enterTime(DateFormat.getTimeInstance(DateFormat.SHORT, Locale.US)));
+
 }
 ```
 
@@ -5909,77 +6285,119 @@ private static void test4() {
 
 ```java
 private static Date enterDate(DateFormat formatter)
+
 {
+
     Scanner kb = new Scanner(System.in);
+
     while (true) {
+
         System.out.print("Enter date: ");
+
         try {
+
             return formatter.parse(kb.nextLine());
+
         } catch (Exception ex) {
+
             System.out.println("Illegal date...");
+
         }
+
     }
+
 }
 ```
 
-为了格式化数字，你拥有 `NumberFormat` 类，在这种语境下，该类支持使用 `Locale` 对象。该类由以下程序说明：
+为了格式化数字，你拥有`NumberFormat`类，在这种语境下，该类支持使用`Locale`对象。该类由以下程序说明：
 
 ```java
 package numberProgram;
 
 import java.text.*;
+
 import java.util.*;
 
 public class NumberProgram {
+
     public static void main(String[] args) {
+
         test1();
+
         test2();
+
     }
 
     private static void test1() {
+
         System.out.println(NumberFormat.getInstance().format(123456.789));
+
         System.out.println(NumberFormat.getInstance(Locale.US)
+
             format(123456.789));
+
         System.out.println(NumberFormat.getCurrencyInstance().format(123456.789));
+
         System.out.println(NumberFormat.getCurrencyInstance(Locale.US)
+
             format(123456.789));
+
         System.out.println(NumberFormat.getPercentInstance().format(123456.789));
+
         System.out.println(NumberFormat.getPercentInstance(Locale.US)
+
             format(123456.789));
+
     }
+
 }
 ```
-
-
-
-
 
 # JAVA 9: SWING、文档处理与打印
 
 ```java
 private static void test2()
+
 {
+
     System.out.println(enterNumber(NumberFormat.getNumberInstance()));
+
     System.out.println(enterNumber(NumberFormat.getNumberInstance(Locale.US)));
+
 }
 ```
 
 ```java
 private static Number enterNumber(NumberFormat formatter)
+
 {
+
     Scanner kb = new Scanner(System.in);
+
     while (true)
+
     {
+
         System.out.print("Enter number: ");
+
         try
+
         {
+
             return formatter.parse(kb.nextLine());
+
         }
+
         catch (Exception ex)
+
         {
+
             System.out.println("Illegal number...");
+
         }
+
     }
+
 }
 ```
 
@@ -5987,24 +6405,35 @@ private static Number enterNumber(NumberFormat formatter)
 
 ```
 123.456,789
+
 123.456.789
+
 kr 123,456,79
+
 $123,456.79
+
 12.345,679%
+
 12,345,679%
+
 Enter number: 123456,789
+
 123456.789
+
 Enter number: 123456,789
+
 123456.789
 ```
 
+
+
 # 练习 9
 
-创建程序 *PersonProgram* 的副本。如果你运行该程序，将打开下面的窗口。
+创建程序 `PersonProgram` 的副本。如果你运行该程序，将打开下面的窗口。
 
-这是一个简单的程序，你可以在其中创建一个带有出生日期和余额的人员。人员存储在 *ArrayList* 中，当创建、修改或删除人员时，该列表就会被序列化。你可以使用顶部的两个按钮浏览列表。请运行程序并研究代码，以确保你了解代码是如何运作的。
+这是一个简单的程序，你可以在其中创建一个带有出生日期和余额的人员。人员存储在 `ArrayList` 中，当创建、修改或删除人员时，该列表就会被序列化。你可以使用顶部的两个按钮浏览列表。请运行程序并研究代码，以确保你了解代码是如何运作的。
 
-# 维护人员
+## 维护人员
 
 | 名字 | 上一个 (Prev) |
 | :--- | :--- |
@@ -6013,13 +6442,11 @@ Enter number: 123456,789
 | 出生日期 | 清空 (Clear) |
 | 余额 | 保存 (Save) |
 
-该程序没有进行国际化，你的任务是为程序进行语言版本处理。首先创建一个包含英文文本的基础属性文件，为程序使用的所有文本都设置一个键/值对。将程序中的所有文本替换为来自属性文件的 ResourceBundle 文本。
+该程序没有进行国际化，你的任务是为程序进行语言版本处理。首先创建一个包含英文文本的基础属性文件，为程序使用的所有文本都设置一个键/值对。将程序中的所有文本替换为来自属性文件的 `ResourceBundle` 文本。
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_226_0.png)
 
-在 book.com 免费下载电子书 点击广告阅读更多
-
-然后编写另一个属性文件，但使用另一种语言的文本（根据你的选择）。在类的构造函数中，你可以将默认 Locale 设置为这种语言，并检查程序是否使用了你选择的语言。以下是丹麦语版本的程序：
+然后编写另一个属性文件，但使用另一种语言的文本（根据你的选择）。在类的构造函数中，你可以将默认 `Locale` 设置为这种语言，并检查程序是否使用了你选择的语言。以下是丹麦语版本的程序：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_227_0.png)
 
@@ -6037,13 +6464,7 @@ Enter number: 123456,789
 
 你不应该能够使用“真实”钱进行游戏，但程序必须能够模拟玩家投入钱和获得钱的过程。
 
-JAVA 9: SWING、文档处理与打印
-
-一台老虎机
-
 机器必须是可配置的，你应该能够选择使用 3 个还是 4 个轮子进行游戏。在配置机器方面，还必须能够选择每个轮子上应该有哪些以及多少个图形，哪些组合会中奖以及奖金是多少，最后还应该可以选择使用哪些图像。玩家必须能够从几种配置中进行选择。在设置配置时，确保长期配置能为机器所有者（赌场）带来利润，但同时，机器必须经常盈利，以确保机器确实提供了这么多回报。
-
-正如提到的，我想关注过程。至少在分析和设计方面，该程序是相当大的，在编程过程中，我将主要描述做了什么，以及你在阅读代码时应该特别注意什么，但不会过多介绍它是如何实现的，因为页数将非常多。出于相同的原因，我将不会描述如何编写安装脚本，但你可以像其他程序显示的那样进行。
 
 ## 10.2 分析
 
@@ -6051,17 +6472,13 @@ JAVA 9: SWING、文档处理与打印
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_229_0.png)
 
-在 book.com 免费下载电子书
-
-# JAVA 9: SWING、文档处理与打印
-
-# 规范
+### 规范
 
 机器必须是可配置的，你应该能够选择使用 3 个还是 4 个轮子进行游戏。在配置机器方面，还必须能够选择每个轮子上应该有哪些以及多少个图形，哪些组合会中奖以及奖金是多少，最后还应该可以选择使用哪些图像。玩家必须能够从几种配置中进行选择。在设置配置时，确保长期配置能为机器所有者（赌场）带来利润，但同时，机器必须经常盈利，以确保机器确实提供了这么多回报。
 
 在支付方面，程序模拟了玩家账户中筹得的资金。所有交易都必须记录，以便玩家始终能看到投入和提取了多少钱。
 
-# 用户模式
+### 用户模式
 
 在用户模式下，玩家可以执行以下操作：
 
@@ -6081,7 +6498,7 @@ JAVA 9: SWING、文档处理与打印
 - 姓名
 - 电话号码
 
-# 用户模式（继续）
+### 用户模式（继续）
 
 当然，最重要的功能是玩，这通过点击按钮或等等操作完成。必须能够固定单个轮子，类似于以下要求：
 
@@ -6097,7 +6514,7 @@ JAVA 9: SWING、文档处理与打印
 - 作为轮子组合的结果
 - 奖金（如果没有收益则为 0）
 
-# 管理员模式
+### 管理员模式
 
 如果你以管理员身份登录，除了玩机器，你还可以配置它并管理用户账户。
 
@@ -6116,83 +6533,71 @@ JAVA 9: SWING、文档处理与打印
 - 修改玩家密码
 - 删除玩家，并将玩家的余额转移到玩家账户中
 
-
-
-
-
-## JAVA 9: SWING、文档与打印
-
 最后，管理员应该能够打印一份统计表，显示每种配置的行为。在这里你可以看到其他内容，例如配置是否产生了正收益，以及单次奖金随时间变化的分布。
 
-## 原型
+### 原型
 
-已开发了一个原型用于演示用户界面以及它在机器上的运行方式。如果你点击游戏按钮，原型会选择随机图形（共有 15 个可用），但图形会在一段时间内变换以模拟轮盘的旋转。窗口顶部的工具栏是玩家可使用的功能，其中右侧的图标用于登录。原型被称为 SlotMachine。（img/d1bfc3b279aa0e38d6b85f）
+已开发了一个原型用于演示用户界面以及它在机器上的运行方式。如果你点击游戏按钮，原型会选择随机图形（共有 15 个可用），但图形会在一段时间内变换以模拟轮盘的旋转。窗口顶部的工具栏是玩家可使用的功能，其中右侧的图标用于登录。原型被称为 `SlotMachine`。
 
 ## 10.3 设计
 
 关于玩家和配置的信息必须储存在某处。我将从该数据库的设计开始，设计在如下 ER 图中概述，其中包含以下实体：
 
-1. Config 代表机器的一个具体配置
-2. Wheel 代表某个配置的轮盘
-3. Figure 代表轮盘上的图形
-4. Winning 代表特定图形组合带来的收益
-5. Player 代表玩家
-6. Game 代表机器上的某场游戏
-7. Transaction 是玩家插入或增加账户的金额
+1. `Config` 代表机器的一个具体配置
+2. `Wheel` 代表某个配置的轮盘
+3. `Figure` 代表轮盘上的图形
+4. `Winning` 代表特定图形组合带来的收益
+5. `Player` 代表玩家
+6. `Game` 代表机器上的某场游戏
+7. `Transaction` 是玩家插入或增加账户的金额
 
-Config 和 Wheel 之间的属性表示轮盘的位置，同样，Wheel 和 Figure 之间的属性表示图形在轮盘上的位置。（img/d1bfc3b279aa0e38d6b85dc85f9734c5_33.png）
+`Config` 和 `Wheel` 之间的属性表示轮盘的位置，同样，`Wheel` 和 `Figure` 之间的属性表示图形在轮盘上的位置。
 
-如果你向图中添加属性，概念数据库可以如下所示所示：（img/d1bfc3b279aa0e38d6b85dc85f9734c5_34.png）
+如果你向图中添加属性，概念数据库可以如下所示：
 
-## 字典：
+### 字典
 
 | 表 | 列 | 类型 | 约束 |
 | :--- | :--- | :--- | :--- |
-| Player | id | INT | 主键 |
-| | email | VARCHAR(100) | 唯一 |
-| | password | VARCHAR(200) | 加密 |
-| | name | VARCHAR(50) | 非空 |
-| | phone | VARCHAR(20) | |
-| | card | VARCHAR(20) | 非空 |
-| | date | DATE | 非空 |
-| | code | INT | 非空 |
-| | balance | DECIMAL | |
-| Transaction | id | INT | 主键 |
-| | amount | INT | 非空 |
-| | type | BOOLEAN | true = 存款, false = 支付 |
-| Config | id | INT | 主键 |
-| | name | VARCHAR(50) | 非空 |
-| | amount | INT | 非空 |
-| | size | INT | 必须是 3 或 4 |
-| Figure | id | INT | 主键 |
-| | name | VARCHAR(50) | 非空 |
-| | image | BINARY | 非空 |
-| Wheel | id | INT | 主键 |
-| Winning | id | INT | 主键 |
-| | amount | INT | 奖金，可能为 0 |
-| Game | id | INT | 主键 |
-| | time | DATETIME | 中奖的时间 |
+| `Player` | `id` | `INT` | 主键 |
+| | `email` | `VARCHAR(100)` | 唯一 |
+| | `password` | `VARCHAR(200)` | 加密 |
+| | `name` | `VARCHAR(50)` | 非空 |
+| | `phone` | `VARCHAR(20)` | |
+| | `card` | `VARCHAR(20)` | 非空 |
+| | `date` | `DATE` | 非空 |
+| | `code` | `INT` | 非空 |
+| | `balance` | `DECIMAL` | |
+| `Transaction` | `id` | `INT` | 主键 |
+| | `amount` | `INT` | 非空 |
+| | `type` | `BOOLEAN` | true = 存款, false = 支付 |
+| `Config` | `id` | `INT` | 主键 |
+| | `name` | `VARCHAR(50)` | 非空 |
+| | `amount` | `INT` | 非空 |
+| | `size` | `INT` | 必须是 3 或 4 |
+| `Figure` | `id` | `INT` | 主键 |
+| | `name` | `VARCHAR(50)` | 非空 |
+| | `image` | `BINARY` | 非空 |
+| `Wheel` | `id` | `INT` | 主键 |
+| `Winning` | `id` | `INT` | 主键 |
+| | `amount` | `INT` | 奖金，可能为 0 |
+| `Game` | `id` | `INT` | 主键 |
+| | `time` | `DATETIME` | 中奖的时间 |
 
-上面的 ER 模型可以映射到如下所示的关系模型中。除了名称外，只有几处变动。关于交易，删除了类型字段，并决定正数交易意味着已存账户，负数交易意味着账户已增加。（img/d1bfc3b279aa0e38d6b85dc85f9734c5_36.png）
+上面的 ER 模型可以映射到如下所示的关系模型中。除了名称外，只有几处变动。关于交易，删除了类型字段，并决定正数交易意味着已存账户，负数交易意味着账户已增加。
 
-Wheel 实体已更改为 Config 和 Figure 之间的关系，这两个位置即是该关系中的属性，分别表示轮盘编号和图形位置。所有关系都是简单的且符合第三范式的，参考上述数据字典，我可以立即编写脚本并创建数据库。此处未显示脚本。（img/d1bfc3b279aa0e38d6b85dc85f9734c5_37.png）
+`Wheel` 实体已更改为 `Config` 和 `Figure` 之间的关系，这两个位置即是该关系中的属性，分别表示轮盘编号和图形位置。所有关系都是简单的且符合第三范式的，参考上述数据字典，我可以立即编写脚本并创建数据库。此处未显示脚本。
 
-作为设计的一部分，创建了一个 NetBeans 项目，作为分析阶段项目的副本，定义了模型层的设计。还存在程序（CreateDefault 项目），它用于创建默认配置。该程序的目标是在编程开始之前准备好配置。关于轮盘的图形（图像），决定机器必须使用小分辨率的正方形图像，以免它们占用过多空间。
+作为设计的一部分，创建了一个 NetBeans 项目，作为分析阶段项目的副本，定义了模型层的设计。还存在程序（`CreateDefault` 项目），它用于创建默认配置。该程序的目标是在编程开始之前准备好配置。关于轮盘的图形（图像），决定机器必须使用小分辨率的正方形图像，以免它们占用过多空间。
 
 遵循这些步骤后，数据库还额外添加了两个更改：
 
-1. figure 表扩展了一个 `series` 列。该列包含短文本，用于对图形进行分类。上述程序已向数据库上传了 16 个图形，位于 Default 分类中。
+1. `figure` 表扩展了一个 `series` 列。该列包含短文本，用于对图形进行分类。上述程序已向数据库上传了 16 个图形，位于 `Default` 分类中。
 2. 数据库扩展了一个包含两列的简单表 `admin`。该表必须包含管理员的密码和邮箱地址。
 
 ## 10.4 编程
 
 如果你已经进行了仔细的分析，并可能结合了一个或多个原型，那么在编程阶段开始时你应该已经了所有的需求。这至少在理论上是可行的，通过实践，它适用于小型项目。然而，必须承认，无论你多仔细，在编程期间规范都可能发生变化，包括对某种特定方式实现功能的愿望，甚至是新的愿望。事实上，这并不奇怪，在程序开发过程中，对应用程序用途以及需求的理解可能会发生变化。
-
-
-
-
-
-# JAVA 9：SWING、文档与打印
 
 正如前面提到的，设计与编程之间的界限并不是清晰的，这可能导致重大决策被推迟到编程阶段。通常情况下，你应该保持谨慎，因为在设计阶段往往存在一种倾向或风险，即没有发现必须解决的挑战和问题。这表明在设计过程中没有利用充分的时间，忽视或低估了编程期间可能出现的问题。要在这设计和编程之间做出正确的界定是困难的，但相反，如果在设计阶段只画出大纲而不编写程序，结果就是，如果将重大决策推迟到编程阶段，那么所编写的大部分代码将必须修改，在最坏的情况下甚至重写。因此，在编写程序之前处理所有主要挑战至关重要。
 
@@ -6202,55 +6607,37 @@ Wheel 实体已更改为 Config 和 Figure 之间的关系，这两个位置即�
 
 另一个问题是更改或删除配置会发生什么。这样做，与该配置的游戏所记录的数据可能不再有效，这意味着关于单个玩家使用机器的信息不再有效。所涉及的数据不能删除，因为这也会删掉玩家的输负记录。这也是一个在设计阶段已经解决的问题示例。
 
-# 当前程序
+### 当前程序
 
 对于一个稍大的程序，编程阶段应该分为多次迭代，其中迭代被定义为可以独立开发和测试的程序部分，我之前说明过这一点。这同样适用于当前程序，但我这次不想回顾具体的迭代，而只关注最终结果，指出做了哪些工作以及最大的挑战在哪里。
 
-# JAVA 9：SWING、文档与打印 - 一台老虎机
-
-我想使用 PalLib 库，并且在它不包含所需的库方法范围内，应对对其进行更新。因此，任务的结果既是当前程序也是一个更新后的库。程序程序采用了经典的 MVC 架构：
+我想使用 `PalLib` 库，并且在它不包含所需的库方法范围内，应对对其进行更新。因此，任务的结果既是当前程序也是一个更新后的库。程序采用了经典的 MVC 架构：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_241_0.png)
 
-dal 层只有一个类 DB。该类被写为单例，并拥有所有维护数据库的方法。该类非常详尽，但不包含任何新内容。
+`dal` 层只有一个类 `DB`。该类被写为单例，并拥有所有维护数据库的方法。该类非常详尽，但不包含任何新内容。
 
-模型层包含了设计中的类。它们在实现方法时都经过修改，并添加了一些新类，但总的来说，扩展很少且结构简单。具体来说，有一个 Repository 类，它是到 dal 层的一个相当薄的适配器类。原则上，这个类是没有意义的，因为它除了将方法调用委托给 DB 类之外什么都不做，它的唯一目的是让视图层和控制层不感知 dal 层。
+模型层包含了设计中的类。它们在实现方法时都经过修改，并添加了一些新类，但总的来说，扩展很少且结构简单。具体来说，有一个 `Repository` 类，它是到 `dal` 层的一个相当薄的适配器类。原则上，这个类是没有意义的，因为它除了将方法调用委托给 `DB` 类之外什么都不做，它的唯一目的是让视图层和控制层不感知 `dal` 层。
 
-大部分代码位于视图层，它定义了不少于 33 个类型（类和接口）。这个数量夸大了，几个类是 JTable 组件的模型类以及 CellRenderer 类，许多其他类与简单的对话框有关。这对应于几乎有两个不是简单对话框的窗口，而控制层只有 7 个类。
+大部分代码位于视图层，它定义了不少于 33 个类型（类和接口）。这个数量夸大了，几个类是 `JTable` 组件的模型类以及 `CellRenderer` 类，许多其他类与简单的对话框有关。这对应于几乎有两个不是简单对话框的窗口，而控制层只有 7 个类。
 
 当你打开程序时，你会遇到以下窗口：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_242_0.png)
 
-如果你点击 *Logon* 对话框中的 *Close* 或点击右上角的叉号，程序将结束，因此在没有玩家之前你无法游戏。如果你不是玩家，可以点击 *New player*，你将得到一个对话框，你可以在其中创建一个玩家玩家：
-
-# JAVA 9：SWING、文档与打印 - 一台老虎机
+如果你点击 `Logon` 对话框中的 `Close` 或点击右上角的叉号，程序将结束，因此在没有玩家之前你无法游戏。如果你不是玩家，可以点击 `New player`，你将得到一个对话框，你可以在其中创建一个玩家：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_243_0.png)
-
-简约而不凡
-
-ŠKODA 
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_243_1.png)
-
-你喜欢汽车吗？你想成为一个成功品牌的一部分吗？我们将欣赏并奖励你的热情和才华。向我们发送你的简历。如果能录取你，你会惊讶的。
-
-在 www.employerforlife.com 向我们发送简历
-
-# JAVA 9：SWING、文档与打印
 
 关于支付卡，虽然是伪造的，但卡号必须是 16 位，其中每 4 位之间可以插入空格。校验码必须是 3 个字符，但与卡号一样，并没有被任何使用。最后是有效期，程序在机器上游戏时会与当前日期进行比对。电子邮件地址必须具有合法的邮箱格式，并且是唯一的，因为它被用作用户标识。密码至少 10 个字符。
 
 如果你用合法的数据创建一个用户，对话框会关闭，登录窗口的对话框也会关闭，你就可以准备好游戏了。登录和创建用户的两个对话框都附有一个控制器，除此之外它们非常简单。至于创建玩家的对话框，当玩家想要保留账户时，从主工具栏打开的对话框。
 
-为了实现游戏本身（以及因此 Main 类，它是程序中两个复杂窗口之一），编写了一个 WheelComponent 类，它是一个代表轮子的视图，而 MainView 使用了三个或四个该组件的实例。正是这个组件启动了一个线程来模拟轮子的旋转。游戏功能类似于原型，仅对涉及轮子旋转的部分进行了微小的更改。游戏功能还必须确保锁住按钮（hold buttons）的逻辑被正确实现，以测试是否中以及玩家余额是否已更新。此外，游戏功能必须确保如果玩家账户为空，则无法游戏。这些功能实现在 Main 类中，并且每局游戏都会更新数据库，这是所有游戏都必须写入日志（run 表）的要求。与数据库设计相比，该表扩展了两列：游戏结果的金额以及所玩配置的 ID。这是为了简化某些其他功能。
+为了实现游戏本身（以及因此 `Main` 类，它是程序中两个复杂窗口之一），编写了一个 `WheelComponent` 类，它是一个代表轮子的视图，而 `MainView` 使用了三个或四个该组件的实例。正是这个组件启动了一个线程来模拟轮子的旋转。游戏功能类似于原型，仅对涉及轮子旋转的部分进行了微小的更改。游戏功能还必须确保锁住按钮（hold buttons）的逻辑被正确实现，以测试是否中以及玩家余额是否已更新。此外，游戏功能必须确保如果玩家账户为空，则无法游戏。这些功能实现在 `Main` 类中，并且每局游戏都会更新数据库，这是所有游戏都必须写入日志（`run` 表）的要求。与数据库设计相比，该表扩展了两列：游戏结果的金额以及所玩配置的 ID。这是为了简化某些其他功能。
 
 然后是工具栏中的功能。第一个是退出登录，如果你点击它，你将再次获得登录窗口。下一个功能是向账户存入金额，点击按钮将给你一个简单的对话框，你在其中输入金额和密码。最后一个是确保他人不会向账户中过度存款，从而增加在注册支付卡上的金额。工具栏的第三个功能供玩家用于维护用户数据，并且如提到的，它打开一个类似于上面创建用户的简单对话框。玩家无法更改其电子邮件地址，因为它被视为密钥。密码字段是空的，你不输入旧密码。只有当你想要更改密码时，才填写这些字段。第四个功能打开一个简单的对话框，显示以下概览：
 
-# JAVA 9：SWING、文档与打印
-
-# 老虎机
+### 老虎机
 
 | 收益表 |
 | --- |
@@ -6263,15 +6650,7 @@ dal 层只有一个类 DB。该类被写为单例，并拥有所有维护数据�
 | 🍉 🍉 🍉 | 14 |
 | 🍉 🍉 🍉 JACK | 20 |
 
-其内容仅仅是一个显示中奖机会的 JTable。上述描述了机器对玩家是如何运作的，在程序实现上，工作在 DB 类中以实现数据库功能，在 MainModel 类将跟踪所有关于玩游戏的逻辑，最后 MainView 类包含了所有视觉内容。该类由于 3 个和 4 个轮子的选择而变得复杂，这意味着组件的布局和窗口的布局取决于这一选择，同样也适用于上述中奖组合对话框。
-
-
-
-
-
-## JAVA 9: SWING、文档与打印
-
-### 老虎机
+其内容仅仅是一个显示中奖机会的 `JTable`。上述描述了机器对玩家是如何运作的，在程序实现上，工作在 `DB` 类中以实现数据库功能，在 `MainModel` 类将跟踪所有关于玩游戏的逻辑，最后 `MainView` 类包含了所有视觉内容。该类由于 3 个和 4 个轮子的选择而变得复杂，这意味着组件的布局和窗口的布局取决于这一选择，同样也适用于上述中奖组合对话框。
 
 接下是管理部分。如果你点击工具栏右侧的图标，将弹出以下对话框：
 
@@ -6283,20 +6662,6 @@ dal 层只有一个类 DB。该类被写为单例，并拥有所有维护数据�
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_246_2.png)
 
-# 丹麦正在招聘
-
-你是否希望在一个具有良好工作与生活平衡的创新环境中进一步发展你的清洁技术职业生涯？考虑一下丹麦吧！访问 cleantech.talentattractiondenmark.com
-
-> “在丹麦，你可以找到极佳的工程工作并提升专业能力。特别是在风能领域，你可以向行业内最优秀的人学习，并在稳定的就业市场中推进职业发展。”
-
-Mireia Mare,
-来自西班牙的高级工程师。
-自 2010 年以来一直工作在丹麦的风能行业。
-
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印
-
 该功能用于将图像上传到数据库、维护用户、维护配置以及更改管理员密码。最后一个功能非常简单，此处不再赘详述。用户维护功能会打开一个带有 `JTable` 的对话框，该表格显示了所有用户。如果你双击表格中的某个用户，将弹出以下对话框：
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_247_0.png)
@@ -6307,11 +6672,7 @@ JAVA 9: SWING、文档与打印
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_247_1.png)
 
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-对话框显示了数据库中的所有图形，但你可以对系列（series）设置过滤器。当你上传一个图形时，必须先输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
+对话框显示了数据库中的所有图形，但你可以对系列（`series`）设置过滤器。当你上传一个图形时，必须先输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
 
 如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
 
@@ -6321,155 +6682,36 @@ JAVA 9: SWING、文档与打印 老虎机
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_248_1.png)
 
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-其中必须输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
-
-如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
-
-# 修改配置
+### 修改配置
 
 ![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_249_0.png)
 
-左侧显示一个包含所有配置的表格。在这里你可以激活或禁用配置。如果你点击 `Result`（结果），将打开一个窗口显示使用该配置的结果以及该配置返回的金额。我在这里不会显示该窗口。如果你点击 `Create`（创建），你可以创建一个新配置：
+左侧显示一个包含所有配置的表格。在这里你可以激活或禁用配置。如果你点击 `Result`（结果），将打开一个窗口显示使用该配置的结果以及该配置返回的金额。我在这里不会显示该窗口。如果你点击 `Create`（创建），你可以创建一个新配置。
 
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-其中必须输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
-
-如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
-
-# 修改配置
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_249_0.png)
-
-左侧显示一个包含所有配置的表格。在这里你可以激活或禁用配置。如果你点击 `Result`（结果），将打开一个窗口显示使用该配置的结果以及该配置返回的金额。我在这里不会显示该窗口。如果你点击 `Create`（创建），你可以创建一个新配置：
-
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-其中必须输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
-
-如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
-
-# 修改配置
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_249_0.png)
-
-显示一个所有配置的表格。在这里你可以激活或禁用配置。如果你点击 `Result`（结果），将打开一个窗口显示使用该配置的结果以及该配置返回的金额。我在这里不会显示该窗口。如果你点击 `Create`（创建），你可以创建一个新配置：
-
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-其中必须输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
-
-如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
-
-# 修改配置
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_249_0.png)
-
-显示一个所有配置的表格。在这里你可以激活或禁用配置。如果你点击 `Result`（结果），将打开一个窗口显示使用该配置的结果以及该配置返回的金额。我在这里不会显示该窗口。如果你点击 `Create`（创建），你可以创建一个新配置：
-
-(抱歉，由于原文中存在大量重复和逻辑错乱，上述翻译基于您提供的文本片段进行了处理。以下是针对您提供的文本内容的完整翻译：)
-
-## JAVA 9: SWING、文档与打印
-
-### 老虎机
-
-接下是管理部分。如果你点击工具栏右侧的图标，将弹出以下对话框：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_246_0.png)
-
-系统中只能有一个管理员。你必须输入管理员密码（长度至少为 10 个字符），并且如果尚未创建管理员，系统将创建一个管理员，然后你就可以使用相应的密码以管理员身份登录（因为管理员可能会更改）。你应该注意，这种实际用途中的管理员信息维护非常简单，解决方案可能是允许某个特定用户注册并拥有管理员权限——这个问题我将在下一本书中提到。在以管理员身份登录后，工具栏将扩展出 4 个新图标：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_246_1.png)
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_246_2.png)
-
-# 丹麦正在招聘
-
-你是否希望在一个具有良好工作与生活平衡的创新环境中进一步发展你的清洁技术职业生涯？考虑一下丹麦吧！访问 cleantech.talentattractiondenmark.com
-
-> “在丹麦，你可以找到极佳的工程工作并提升专业能力。特别是在风能领域，你可以向行业内最优秀的人学习，并在稳定的就业市场中推进职业发展。”
-
-Mireia Mare,
-来自西班牙的高级工程师。
-自 2010 年以来一直工作在丹麦的风能行业。
-
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印
-
-该功能用于将图像上传到数据库、维护用户、维护配置以及更改管理员密码。最后一个功能非常简单，此处不再赘详述。用户维护功能会打开一个带有 `JTable` 的对话框，该表格显示了所有用户。如果你双击表格中的某个用户，将弹出以下对话框：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_247_0.png)
-
-管理员可以在此处更改用户密码（从而为用户分配新密码）并可能删除该用户。
-
-然后是向数据库上传图像的功能。如果你选择该功能时，将弹出以下对话框：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_247_1.png)
-
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-对话框显示了数据库中的所有图形，但你可以对系列（series）设置过滤器。当你上传一个图形时，必须先输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
-
-如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_248_0.png)
-
-显示一个包含所有配置的表格。在这里你可以激活或禁用配置。如果你点击 `Result`（结果），将打开一个窗口显示使用该配置的结果以及该配置返回的金额。我在这里不会显示该窗口。如果你点击 `Create`（创建），你可以创建一个新配置：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_248_1.png)
-
-在 bookboom.com 下载免费电子电子书
-
-JAVA 9: SWING、文档与打印 老虎机
-
-其中必须输入系列名称，然后浏览文件系统查找图像。程序使用文件名作为图形的名称，但你可以编辑表格并更改名称和系列。如果你想移除某个图形，可以双击该图像。
-
-如果你在工具栏中点击维护配置的图标，将弹出以下对话框：
-
-![](img/d1bfc3b279aa0e38d6b85dc85f9734c5_248_0.png)
-
-(注：由于提供的原文中存在大量重复段落和乱码，以上翻译已按要求进行了结构整理。)
-
-
-
-
-接下来我再次修改了 MainView，使其必须登录。然后我打开程序并执行以下操作：
+接下来我再次修改了 `MainView`，使其必须登录。然后我打开程序并执行以下操作：
 
 1. 以上述三个用户中的第一个身份登录
 2. 使用默认配置玩 20 局游戏
-3. 选择配置“大型”（Big game）
+3. 选择配置“大型”（`Big game`）
 4. 使用该配置玩至少 50 局游戏
 5. 再次选择默认配置
 6. 使用默认配置玩 20 局游戏
 7. 退出登录
 8. 以第二个玩家身份登录
-9. 选择配置“高级”（Advanced）
+9. 选择配置“高级”（`Advanced`）
 10. 使用该配置玩 100 局游戏
 11. 以管理员身份登录
-12. 打开“高级”（Advanced）配置
+12. 打开“高级”（`Advanced`）配置
 13. 洗牌轮子并保存配置
 14. 以管理员身份退出
 15. 检查当前用户的交易记录
 16. 退出登录
 17. 以最后一个用户的身份登录
-18. 使用“旧配置”（Old）玩 100 局游戏
+18. 使用“旧配置”（`Old`）玩 100 局游戏
 19. 退出登录
 20. 以第一个用户的身份登录
 21. 以管理员身份登录
-22. 删除“旧配置”（Old）
+22. 删除“旧配置”（`Old`）
 23. 删除最后两个用户
 
 如果一切进展如预期，我将认为该程序已经完成——至少可以供内部选定的测试用户使用了。

@@ -1,24 +1,36 @@
+
 # 开发 Applet
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/developingApplet.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/developingApplet.html)
 
 使用基于组件的架构设计的应用程序可以开发为 Java applet。考虑具有基于 Swing 的图形用户界面（GUI）的 Java applet 的示例。通过组件化设计，GUI 可以使用更小的构建块或组件构建。以下是用于创建 applet GUI 的一般步骤：
 
-+   创建一个名为`MyTopJPanel`的类，它是`javax.swing.JPanel`的子类。在`MyTopJPanel`类的构造函数中布置您的 applet 的 GUI 组件。
-
-+   创建一个名为`MyApplet`的类，它是`javax.swing.JApplet`的子类。
-
-+   在`MyApplet`的`init`方法中，实例化`MyTopJPanel`并将其设置为 applet 的内容窗格。
++ 创建一个名为`MyTopJPanel`的类，它是`javax.swing.JPanel`的子类。在`MyTopJPanel`类的构造函数中布置您的 applet 的 GUI 组件。
++ 创建一个名为`MyApplet`的类，它是`javax.swing.JApplet`的子类。
++ 在`MyApplet`的`init`方法中，实例化`MyTopJPanel`并将其设置为 applet 的内容窗格。
 
 以下部分通过使用动态树演示 applet 更详细地探讨这些步骤。如果您对 Swing 不熟悉，请参阅使用 Swing 创建 GUI 以了解更多关于使用 Swing GUI 组件的信息。
 
-//&lt;![CDATA[ var attributes = { code:'appletComponentArch.DynamicTreeApplet.class', archive:'examples/dist/applet_ComponentArch_DynamicTreeDemo/DynamicTreeDemo.jar', width:300, height:300} ; var parameters = {jnlp_href: 'examples/dist/applet_ComponentArch_DynamicTreeDemo/dynamictree_applet.jnlp'} ; deployJava.runApplet(attributes, parameters, '1.4'); //]]&gt;
+```
+//<![CDATA[
+var attributes = {
+    code:'appletComponentArch.DynamicTreeApplet.class',
+    archive:'examples/dist/applet_ComponentArch_DynamicTreeDemo/DynamicTreeDemo.jar',
+    width:300,
+    height:300
+};
+var parameters = {
+    jnlp_href: 'examples/dist/applet_ComponentArch_DynamicTreeDemo/dynamictree_applet.jnlp'
+};
+deployJava.runApplet(attributes, parameters, '1.4');
+//]]>
+```
 
-* * *
+---
 
 **注意：** 如果您看不到示例运行，请确保在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
 
-* * *
+---
 
 ## 创建顶部`JPanel`类
 
@@ -65,7 +77,6 @@ public class DynamicTreePanel extends JPanel implements ActionListener {
     }
     // ...
 }
-
 ```
 
 ## 创建 Applet
@@ -102,7 +113,6 @@ public class DynamicTreeApplet extends JApplet {
         setContentPane(newContentPane);        
     }        
 }
-
 ```
 
 ## 将核心功能与最终部署机制分离的好处

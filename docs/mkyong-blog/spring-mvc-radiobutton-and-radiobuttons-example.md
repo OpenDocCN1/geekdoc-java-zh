@@ -1,149 +1,153 @@
+
 # Spring MVC 单选按钮和单选按钮示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-radiobutton-and-radiobuttons-example/>
 
-在 Spring MVC 中， **<表单:radiobutton / >** 用于渲染一个 HTML 单选按钮，单选按钮值硬编码在 JSP 页面内部；而 **<表单:radiobuttons / >** 用于呈现多个单选按钮，单选按钮值在运行时生成。
+在 Spring MVC 中，`<form:radiobutton />`用于渲染一个 HTML 单选按钮，单选按钮值硬编码在 JSP 页面内部；而`<form:radiobuttons />`用于呈现多个单选按钮，单选按钮值在运行时生成。
 
-在本教程中，我们将向您展示如何使用 **<表单:radiobutton / >** 和 **<表单:radio button/>**。
+在本教程中，我们将向您展示如何使用`<form:radiobutton />`和`<form:radiobuttons />`。
 
-## 1.<radiobutton></radiobutton>
+## 1. `<radiobutton>`
 
 生成一个单选按钮，并硬编码该值。
 
 ```java
- public class Customer{
-	String sex;
-	//...
-} 
+public class Customer{
+    String sex;
+    //...
+}
 ```
 
 ```java
- <form:radiobutton path="sex" value="M"/>Male 
+<form:radiobutton path="sex" value="M"/>Male 
 <form:radiobutton path="sex" value="F"/>Female 
 ```
 
-**Default value…**
-To make the “**Male**” as the default selected value in above radio buttons, just set the “**sex**” property to “**M**“, for example :
+**默认值…**
+
+要使上述单选按钮中的“**Male**”成为默认选中值，只需将“**sex**”属性设置为“**M**”，例如：
 
 ```java
- public class Customer{
-	String sex = "M";
-	//...
-} 
+public class Customer{
+    String sex = "M";
+    //...
+}
 ```
 
 或者
 
 ```java
- //SimpleFormController...
+//SimpleFormController...
 @Override
 protected Object formBackingObject(HttpServletRequest request)
-	throws Exception {
+    throws Exception {
 
-	Customer cust = new Customer();
-	//Make "Male" as the default radio button selected value
-	cust.setSex("M");
+    Customer cust = new Customer();
+    //Make "Male" as the default radio button selected value
+    cust.setSex("M");
 
-	return cust;
-
-} 
+    return cust;
+}
 ```
 
- ## 2.<radiobuttons></radiobuttons>
+## 2. `<radiobuttons>`
 
 生成多个单选按钮，这些值在运行时生成。
 
 ```java
- //SimpleFormController...
+//SimpleFormController...
 protected Map referenceData(HttpServletRequest request) throws Exception {
 
-	Map referenceData = new HashMap();
+    Map referenceData = new HashMap();
 
-	List<String> numberList = new ArrayList<String>();
-	numberList.add("Number 1");
-	numberList.add("Number 2");
-	numberList.add("Number 3");
-	numberList.add("Number 4");
-	numberList.add("Number 5");
-	referenceData.put("numberList", numberList);
+    List<String> numberList = new ArrayList<String>();
+    numberList.add("Number 1");
+    numberList.add("Number 2");
+    numberList.add("Number 3");
+    numberList.add("Number 4");
+    numberList.add("Number 5");
+    referenceData.put("numberList", numberList);
 
-	return referenceData;		
-} 
+    return referenceData;		
+}
 ```
 
 ```java
- <form:radiobuttons path="favNumber" items="${numberList}"  /> 
+<form:radiobuttons path="favNumber" items="${numberList}" />
 ```
 
-**Default value…**
-To make the “**Number 1**” as the default selected value in above radio buttons, just set the “**favNumber**” property to “**Number 1**“, for example :
+**默认值…**
+
+要使上述单选按钮中的“**Number 1**”成为默认选中值，只需将“**favNumber**”属性设置为“**Number 1**”，例如：
 
 ```java
- public class Customer{
-	String favNumber = "Number 1";
-	//...
-} 
+public class Customer{
+    String favNumber = "Number 1";
+    //...
+}
 ```
 
 或者
 
 ```java
- //SimpleFormController...
+//SimpleFormController...
 @Override
 protected Object formBackingObject(HttpServletRequest request)
-	throws Exception {
+    throws Exception {
 
-	Customer cust = new Customer();
-	//Make "Number 1" as the default radio button selected value
-	cust.setFavNumber("Number 1")
+    Customer cust = new Customer();
+    //Make "Number 1" as the default radio button selected value
+    cust.setFavNumber("Number 1")
 
-	return cust;	
-} 
+    return cust;	
+}
 ```
 
-**Note**
-For radio button selection, as long as the “**path**” or “**property**” is equal to the “**radio button value**“, the radio button will be selected automatically. ## 完整的单选按钮示例
+**注意**
 
-让我们来看一个完整的 Spring MVC 单选按钮示例:
+对于单选按钮选择，只要“**path**”或“**property**”等于“**单选按钮值**”，该单选按钮将自动被选中。
 
-## 1.模型
+## 完整的单选按钮示例
+
+让我们来看一个完整的 Spring MVC 单选按钮示例：
+
+## 1. 模型
 
 存储单选按钮值的客户模型类。
 
-*文件:Customer.java*
+*文件：`Customer.java`*
 
 ```java
- package com.mkyong.customer.model;
+package com.mkyong.customer.model;
 
 public class Customer{
 
-	String favNumber;
-	String sex;
+    String favNumber;
+    String sex;
 
-	public String getFavNumber() {
-		return favNumber;
-	}
-	public void setFavNumber(String favNumber) {
-		this.favNumber = favNumber;
-	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
-} 
+    public String getFavNumber() {
+        return favNumber;
+    }
+    public void setFavNumber(String favNumber) {
+        this.favNumber = favNumber;
+    }
+    public String getSex() {
+        return sex;
+    }
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+}
 ```
 
-## 2.控制器
+## 2. 控制器
 
 一个`SimpleFormController`来处理表单单选按钮的值。将单选按钮“M”设为默认选定值。
 
-*文件:RadioButtonController.java*
+*文件：`RadioButtonController.java`*
 
 ```java
- package com.mkyong.customer.controller;
+package com.mkyong.customer.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -159,56 +163,56 @@ import com.mkyong.customer.model.Customer;
 
 public class RadioButtonController extends SimpleFormController{
 
-	public RadioButtonController(){
-		setCommandClass(Customer.class);
-		setCommandName("customerForm");
-	}
+    public RadioButtonController(){
+        setCommandClass(Customer.class);
+        setCommandName("customerForm");
+    }
 
-	@Override
-	protected Object formBackingObject(HttpServletRequest request)
-		throws Exception {
+    @Override
+    protected Object formBackingObject(HttpServletRequest request)
+        throws Exception {
 
-		Customer cust = new Customer();
-		//Make "Make" as default radio button checked value
-		cust.setSex("M");
+        Customer cust = new Customer();
+        //Make "Make" as default radio button checked value
+        cust.setSex("M");
 
-		return cust;
-	}
+        return cust;
+    }
 
-	@Override
-	protected ModelAndView onSubmit(HttpServletRequest request,
-		HttpServletResponse response, Object command, BindException errors)
-		throws Exception {
+    @Override
+    protected ModelAndView onSubmit(HttpServletRequest request,
+        HttpServletResponse response, Object command, BindException errors)
+        throws Exception {
 
-		Customer customer = (Customer)command;
-		return new ModelAndView("CustomerSuccess","customer",customer);
-	}
+        Customer customer = (Customer)command;
+        return new ModelAndView("CustomerSuccess","customer",customer);
+    }
 
-	protected Map referenceData(HttpServletRequest request) throws Exception {
+    protected Map referenceData(HttpServletRequest request) throws Exception {
 
-		Map referenceData = new HashMap();
+        Map referenceData = new HashMap();
 
-		List<String> numberList = new ArrayList<String>();
-		numberList.add("Number 1");
-		numberList.add("Number 2");
-		numberList.add("Number 3");
-		numberList.add("Number 4");
-		numberList.add("Number 5");
-		referenceData.put("numberList", numberList);
+        List<String> numberList = new ArrayList<String>();
+        numberList.add("Number 1");
+        numberList.add("Number 2");
+        numberList.add("Number 3");
+        numberList.add("Number 4");
+        numberList.add("Number 5");
+        referenceData.put("numberList", numberList);
 
-		return referenceData;
-	}
-} 
+        return referenceData;
+    }
+}
 ```
 
-## 3.验证器
+## 3. 验证器
 
 一个简单的表单验证器，确保“**性别**”和“**号码**”单选按钮被选中。
 
-*文件:RadioButtonValidator.java*
+*文件：`RadioButtonValidator.java`*
 
 ```java
- package com.mkyong.customer.validator;
+package com.mkyong.customer.validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -218,145 +222,146 @@ import com.mkyong.customer.model.Customer;
 
 public class RadioButtonValidator implements Validator{
 
-	@Override
-	public boolean supports(Class clazz) {
-		//just validate the Customer instances
-		return Customer.class.isAssignableFrom(clazz);
-	}
+    @Override
+    public boolean supports(Class clazz) {
+        //just validate the Customer instances
+        return Customer.class.isAssignableFrom(clazz);
+    }
 
-	@Override
-	public void validate(Object target, Errors errors) {
+    @Override
+    public void validate(Object target, Errors errors) {
 
-		Customer cust = (Customer)target;
+        Customer cust = (Customer)target;
 
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "sex", "required.sex");
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "favNumber", "required.favNumber");
-
-	}
-} 
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "sex", "required.sex");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "favNumber", "required.favNumber");
+    }
+}
 ```
 
-*文件:message.properties*
+*文件：`message.properties`*
 
 ```java
- required.sex = Please select a sex!
-required.favNumber = Please select a number! 
+required.sex = Please select a sex!
+required.favNumber = Please select a number!
 ```
 
-## 4.视角
+## 4. 视图
 
-一个 JSP 页面展示了 Spring 的表单标签**<form:radio button/>**和**<form:radio button/>**的使用。
+一个 JSP 页面展示了 Spring 的表单标签`<form:radiobutton />`和`<form:radiobuttons />`的使用。
 
-*文件:CustomerForm.jsp*
+*文件：`CustomerForm.jsp`*
 
 ```java
- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <style>
 .error {
-	color: #ff0000;
+    color: #ff0000;
 }
 
 .errorblock {
-	color: #000;
-	background-color: #ffEEEE;
-	border: 3px solid #ff0000;
-	padding: 8px;
-	margin: 16px;
+    color: #000;
+    background-color: #ffEEEE;
+    border: 3px solid #ff0000;
+    padding: 8px;
+    margin: 16px;
 }
 </style>
 </head>
 
 <body>
-	<h2>Spring's form radio button example</h2>
+    <h2>Spring's form radio button example</h2>
 
-	<form:form method="POST" commandName="customerForm">
-		<form:errors path="*" cssClass="errorblock" element="div" />
-		<table>
-			<tr>
-				<td>Sex :</td>
-				<td><form:radiobutton path="sex" value="M" />Male <form:radiobutton
-					path="sex" value="F" />Female</td>
-				<td><form:errors path="sex" cssClass="error" /></td>
-			</tr>
-			<tr>
-				<td>Choose a number :</td>
-				<td><form:radiobuttons path="favNumber" items="${numberList}" />
+    <form:form method="POST" commandName="customerForm">
+        <form:errors path="*" cssClass="errorblock" element="div" />
+        <table>
+            <tr>
+                <td>Sex :</td>
+                <td><form:radiobutton path="sex" value="M" />Male <form:radiobutton
+                    path="sex" value="F" />Female</td>
+                <td><form:errors path="sex" cssClass="error" /></td>
+            </tr>
+            <tr>
+                <td>Choose a number :</td>
+                <td><form:radiobuttons path="favNumber" items="${numberList}" />
                                 </td>
-				<td><form:errors path="favNumber" cssClass="error" /></td>
-			</tr>
-			<tr>
-				<td colspan="3"><input type="submit" /></td>
-			</tr>
-		</table>
-	</form:form>
+                <td><form:errors path="favNumber" cssClass="error" /></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" /></td>
+            </tr>
+        </table>
+    </form:form>
 
 </body>
-</html> 
+</html>
 ```
 
 使用 JSTL 循环遍历提交的单选按钮值，并显示它。
 
-*文件:CustomerSuccess.jsp*
+*文件：`CustomerSuccess.jsp`*
 
 ```java
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
 <body>
-	<h2>Spring's form radio button example</h2>
-	Sex : ${customer.sex}
-	<br /> Favourite Number : ${customer.favNumber}
-	<br />
+    <h2>Spring's form radio button example</h2>
+    Sex : ${customer.sex}
+    <br /> Favourite Number : ${customer.favNumber}
+    <br />
 </body>
-</html> 
+</html>
 ```
 
-## 5.弹簧豆配置
+## 5. Spring Bean 配置
 
 全部链接起来~
 
 ```java
- <beans 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+<beans 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
   <bean
   class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
 
-	<bean class="com.mkyong.customer.controller.RadioButtonController">
-		<property name="formView" value="CustomerForm" />
-		<property name="successView" value="CustomerSuccess" />
+    <bean class="com.mkyong.customer.controller.RadioButtonController">
+        <property name="formView" value="CustomerForm" />
+        <property name="successView" value="CustomerSuccess" />
 
-		<!-- Map a validator -->
-		<property name="validator">
-			<bean class="com.mkyong.customer.validator.RadioButtonValidator" />
-		</property>
-	</bean>
+        <!-- Map a validator -->
+        <property name="validator">
+            <bean class="com.mkyong.customer.validator.RadioButtonValidator" />
+        </property>
+    </bean>
 
-	<!-- Register the Customer.properties -->
-	<bean id="messageSource"
-		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="message" />
-	</bean>
+    <!-- Register the Customer.properties -->
+    <bean id="messageSource"
+        class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="message" />
+    </bean>
 
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/pages/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean>
-</beans> 
+    <bean id="viewResolver"
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/pages/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+</beans>
 ```
 
-## 6.演示
+## 6. 演示
 
-访问页面-**http://localhost:8080/SpringMVCForm/radio button . htm**
+访问页面 - `http://localhost:8080/SpringMVCForm/radiobutton.htm`
+
+
 
 ![SpringMVC-RadioButton-Example-1](img/7679850c0f61d8fe304ce622d5fa47df.png "SpringMVC-RadioButton-Example-1")
 
@@ -370,11 +375,6 @@ required.favNumber = Please select a number!
 
 ## 下载源代码
 
-Download it – [SpringMVCForm-RadioButton-Example.zip](http://web.archive.org/web/20190224144757/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-RadioButton-Example.zip) (9KB)[radio button](http://web.archive.org/web/20190224144757/http://www.mkyong.com/tag/radio-button/) [spring mvc](http://web.archive.org/web/20190224144757/http://www.mkyong.com/tag/spring-mvc/)
+Download it – [SpringMVCForm-RadioButton-Example.zip](http://web.archive.org/web/20190224144757/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-RadioButton-Example.zip) (9KB)
 
-
-
-
-
-
-
+[radio button](http://web.archive.org/web/20190224144757/http://www.mkyong.com/tag/radio-button/) [spring mvc](http://web.archive.org/web/20190224144757/http://www.mkyong.com/tag/spring-mvc/)

@@ -1,17 +1,18 @@
+
 # Struts 文件上传示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts/struts-file-upload-example/>
 
-在本教程中，您将学习如何使用 Struts **< html:file >** 标签将文件上传到服务器文件系统。
+在本教程中，您将学习如何使用 Struts `<html:file>` 标签将文件上传到服务器文件系统。
 
-Download this Struts file upload example – [Struts-FileUpload-Example.zip](http://web.archive.org/web/20190303052435/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-FileUpload-Example.zip)
+下载此 Struts 文件上传示例 – [Struts-FileUpload-Example.zip](http://web.archive.org/web/20190303052435/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-FileUpload-Example.zip)
 
-## 1.动作形式
+## 1. 动作表单
 
-在 Action form 中，创建一个**org . Apache . struts . upload . form file**变量来保存上传的文件，以及上传文件的表单验证。
+在 Action 表单中，创建一个 `org.apache.struts.upload.FormFile` 变量来保存上传的文件，以及上传文件的表单验证。
 
 ```java
- package com.mkyong.common.form;
+package com.mkyong.common.form;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -62,15 +63,15 @@ public class FileUploadForm extends ActionForm{
 
 	    return errors;
 	}
-} 
+}
 ```
 
- ## 2.行动
+## 2. 动作
 
 在 Action 类中，只需获取上传的文件并将其保存到服务器文件系统中，并将新创建的文件详细信息存储到一个会话中以备后用。
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -126,43 +127,42 @@ public class FileUploadAction extends Action{
 	    }
 		return mapping.findForward("success");
 	}
-} 
+}
 ```
 
- ## 3.JSP
+## 3. JSP
 
-你要将 **< html:form >** 标签的编码类型设置为“ **multipart/form-data** ”，并将 HTTP 方法指定为“ **post** ”。
+你要将 `<html:form>` 标签的编码类型设置为“`multipart/form-data`”，并将 HTTP 方法指定为“`post`”。
 
 **fileupload.jsp**
 
-```java
+```jsp
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 
-<message key="label.common.title"></message>
+<html:form action="/Upload" method="post" enctype="multipart/form-data">
 
+<bean:message key="label.common.file.label"/>: <html:file property="file" size="50"/><html:submit><bean:message key="label.common.button.submit"/></html:submit>
+
+</html:form>
 ```
-
-<form action="/Upload" method="post" enctype="multipart/form-data">
-<message key="label.common.file.label">: <file property="file" size="50"><submit><message key="label.common.button.submit"></message></submit>
 
 **display.jsp**
 
-```java
+```jsp
+File uploaded to : <%= request.getAttribute("uploadedFilePath") %>
 
-	File uploaded to : <%= request.getAttribute("uploadedFilePath") %>
-
-	">
+<a href="<%= request.getAttribute("uploadedFilePath") %>">
         Click here to download it
-
+</a>
 ```
 
-## 4.struts-config.xml
+## 4. struts-config.xml
 
 将所有连接在一起
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts-config PUBLIC 
 "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
 "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
@@ -198,24 +198,21 @@ public class FileUploadAction extends Action{
 	<message-resources
 		parameter="com.mkyong.common.properties.Common" />
 
-</struts-config> 
+</struts-config>
 ```
 
 ## 测试一下
 
-**http://localhost:8080/struts example/upload page . do**
+`http://localhost:8080/struts-example/uploadPage.do`
+
 选择一个文件，点击提交按钮。
 
 ![Struts-file-upload-example1](img/8ac07aab9536389740970b6106e0b1bd.png "Struts-file-upload-example1")
 
-**http://localhost:8080/struts example/upload . do**
-它会转发到 display.jsp 并显示上传的文件详情。
+`http://localhost:8080/struts-example/upload.do`
 
-![Struts-file-upload-example2](img/096ac3a3b5c90f4f46e08df514aca583.png "Struts-file-upload-example2")[file upload](http://web.archive.org/web/20190303052435/http://www.mkyong.com/tag/file-upload/) [struts](http://web.archive.org/web/20190303052435/http://www.mkyong.com/tag/struts/)</file></message></form>
+它会转发到 `display.jsp` 并显示上传的文件详情。
 
+![Struts-file-upload-example2](img/096ac3a3b5c90f4f46e08df514aca583.png "Struts-file-upload-example2")
 
-
-
-
-
-
+[file upload](http://web.archive.org/web/20190303052435/http://www.mkyong.com/tag/file-upload/) [struts](http://web.archive.org/web/20190303052435/http://www.mkyong.com/tag/struts/)

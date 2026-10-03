@@ -1,14 +1,15 @@
+
+
 # C 与 Java 编程练习
 
+## 打印你的名字
 
+### 题目
 
-
-
-
-# 打印你的名字
-## 生和手机号
+生和手机号
 
 ### C 代码
+
 ```c
 #include <stdio.h>
 int main() 
@@ -19,15 +20,19 @@ int main()
     return(0);
 }
 ```
+
 ### 输出
-```
+
+```text
 Name   : JJ Tam
 DOB     : July 14,1975
 Mobile  : 99-9999999
 ```
 
-# 打印一个大区块
+## 打印一个大区块
+
 ### C 代码
+
 ```c
 #include <stdio.h>
 int main()
@@ -41,15 +46,19 @@ int main()
     return(0);
 }
 ```
+
 ### 输出
-```
+
+```text
 ######
 #
 #
 ```
 
-# 打印大写的 BLOCK
+## 打印大写的 BLOCK
+
 ### C 代码
+
 ```c
 #include <stdio.h>
 int main()
@@ -67,8 +76,10 @@ int main()
     return(0);
 }
 ```
+
 ### 输出
-```
+
+```text
 ######
 ##
 #
@@ -78,8 +89,10 @@ int main()
 ######
 ```
 
-# 计算矩形的周长和面积
+## 计算矩形的周长和面积
+
 ### C 代码
+
 ```c
 #include <stdio.h>
 /* height and width of a rectangle */
@@ -97,14 +110,18 @@ int main() {
     return(0);
 }
 ```
+
 ### 输出
-```
+
+```text
 Perimeter of the rectangle = 24 inches
 Area of the rectangle = 35 square inches
 ```
 
-# C 编程：圆的面积和周长
+## C 编程：圆的面积和周长
+
 ### C 代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -118,26 +135,52 @@ int main() {
     return(0);
 }
 ```
+
 ### 输出
-```
+
+```text
 Perimeter of the Circle = 37.680000 inches
 Area of the Circle = 113.040000 square inches
 ```
 
-# 显示多个变量
+## 显示多个变量
+
 C 程序显示以下变量：
-`a+ c`, `x + c`, `dx + x`, `((int) dx) + ax`, `a + x`, `s + b`, `ax + b`, `ax + c`, `ax + ux`
+
+`a + c`、`x + c`、`dx + x`、`((int) dx) + ax`、`a + x`、`s + b`、`ax + b`、`ax + c`、`ax + ux`
 
 变量声明：
-`int a = 125, b = 12345;`
-`long ax = 1234567890;`
-`short s = 4043;`
-`float x = 2.14359;`
-`double dx = 1.1415927;`
-`char c = 'W';`
-`unsigned long ux = 2541567890;`
+
+```c
+int a = 125, b = 12345;
+```
+
+```c
+long ax = 1234567890;
+```
+
+```c
+short s = 4043;
+```
+
+```c
+float x = 2.14359;
+```
+
+```c
+double dx = 1.1415927;
+```
+
+```c
+char c = 'W';
+```
+
+```c
+unsigned long ux = 2541567890;
+```
 
 ### C 代码
+
 ```c
 #include <stdio.h>
 int main()
@@ -162,8 +205,10 @@ int main()
     return 0;
 }
 ```
+
 ### 输出
-```
+
+```text
 a + c = 252
 x + c = 89.134590
 dx + x = 3.276183
@@ -176,8 +221,10 @@ ax + c = 1234567917
 ax + ux = 2541692680
 ```
 
-# 将指定的日期转换为年和周
+## 将指定的日期转换为年和周
+
 ### C 代码
+
 ```c
 #include <stdio.h>
 int main()
@@ -193,25 +240,27 @@ int main()
     return 0;
 }
 ```
+
 ### 输出
-```
+
+```text
 Years: 3
 Weeks: 33
 Days: 3
 ```
 
-
-
-
-
 ### 输出
+
+```text
 输入第一个整数: 25
 输入第二个整数: 38
 上述两个整数之和 = 63
+```
 
-# 计算两个整数的积
+## 计算两个整数的积
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main()
@@ -227,13 +276,17 @@ int main()
 ```
 
 ### 输出
+
+```text
 输入第一个整数: 25
 输入第二个整数: 15
 上述两个整数的积 = 375
+```
 
-# 找出三个整数中的最大值
+## 找出三个整数中的最大值
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -255,16 +308,20 @@ int main()
 ```
 
 ### 输出
+
+```text
 输入第一个整数: 25
 输入第二个整数: 35
 输入第三整数: 15
 三个整数中的最大值: 35
+```
 
-# 计算两点间的距离
+## 计算两点间的距离
 
 ![](img/image00104.jpeg)
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -286,15 +343,19 @@ float x1, y1, x2, y2, gdistance;
 ```
 
 ### 输出
+
+```text
 输入 x1: 25
 输入 y1: 15
 输入 x2: 35
 输入 y2: 10
 所述点间的距离: 11.1803
+```
 
-# 将给定的整数转换为小时、分钟和秒
+## 将给定的整数转换为小时、分钟和秒
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -310,12 +371,16 @@ int main() {
 ```
 
 ### 输出
+
+```text
 输入秒数: 25300
 H:M:S - 7:1:40
+```
 
-# 所有值的的和：读取 5 个数字并求所有奇数的和的 C 程序
+## 所有值的的和：读取 5 个数字并求所有奇数的和的 C 程序
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -343,16 +408,20 @@ int main() {
 ```
 
 ### 输出
+
+```text
 输入第一个数字: 11
 输入第二个数字: 7
 输入第三个数字: 13
 输入第四个数字: 2
 输入第五个数字: 5
 所有奇数的和: 46
+```
 
-# 打印所有给定的正整数的平均值
+## 打印所有给定的正整数的平均值
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -383,6 +452,8 @@ int main() {
 ```
 
 ### 输出
+
+```text
 输入第一个数字: 5
 输入第二个数字: 8
 输入第三个数字: 10
@@ -390,10 +461,12 @@ int main() {
 输入第五个数字: 25
 正整数的数量: 4
 正整数的平均值: 2.0
+```
 
-# 检查密码直到正确，输出“错误密码”
+## 检查密码直到正确，输出“错误密码”
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -416,12 +489,16 @@ int main() {
 ```
 
 ### 输出
+
+```text
 输入密码: 234
 密码正确
+```
 
-# 计算指定 5 个数字序列的值 `S = 1 + 1/2 + 1/3 + … + 1/5`
+## 计算指定 5 个数字序列的值 `S = 1 + 1/2 + 1/3 + … + 1/5`
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -436,13 +513,17 @@ int main() {
 ```
 
 ### 输出
-S 的值: 2.28
 
-# 读取整数并找到所有因子
+```text
+S 的值: 2.28
+```
+
+## 读取整数并找到所有因子
 
 ![](img/image00105.jpeg)
 
 ### C 语言代码
+
 ```c
 #include <stdio.h>
 int main() {
@@ -460,6 +541,8 @@ int main() {
 ```
 
 ### 输出
+
+```text
 输入一个整数: 45
 45 的因子有:
 1
@@ -468,12 +551,14 @@ int main() {
 9
 15
 45
+```
 
-# 计算单利
+## 计算单利
 
 ![](img/image00106.jpeg)
 
 ### C 语言代码
+
 ```c
 #include<stdio.h>
 int main()
@@ -486,28 +571,27 @@ int main()
 }
 ```
 
-
-
-
-
-```
+```c
 return 0;
 }
 ```
 
 ### 输出
 
-输入数据: `p = 10000`, `r = 10%`, `t = 12 year`
+输入数据：`p = 10000`、`r = 10%`、`t = 12 year`
 
 根据本金、利率和时间计算单利的原理：
 
 单利 = 12000
 
-# 打印 2 的幂表
+## 打印 2 的幂表
 
-## 幂 0 到 10
+### 幂 0 到 10
 
-### C 语言代码
+#### C 语言代码
+
+
+
 
 ```c
 #include<stdio.h>
@@ -536,9 +620,7 @@ int main() {
 
 ![](img/image00107.jpeg)
 
-# 读取学生的五门科目成绩 (0-100)
-
-## 并计算平均分
+# 读取学生的五门科目成绩（0-100）并计算平均分
 
 ### C 语言代码
 
@@ -568,18 +650,24 @@ int main () {
 ### 输出
 
 输入五门科目成绩(0-100):
+
 75
+
 84
+
 56
+
 98
+
 68
+
 平均分 = 76.20
 
 # 温度转换
 
 ## 从摄氏度到华氏度
 
-C = (5/9) * (F - 32)
+`C = (5/9) * (F - 32)`
 
 ### C 语言代码
 
@@ -601,11 +689,12 @@ return(0);
 ### 输出
 
 输入温度（摄氏度）: 45
+
 113.000000 华氏度
 
 # 计算球体体积
 
-## V = 4/3*π*r3
+## `V = 4/3*π*r3`
 
 ### C 语言代码
 
@@ -629,9 +718,10 @@ return(0);
 ### 输出
 
 输入球半径 : 2.6
-球体体积为 70.276237.# 将每小时公里转换为
 
-## 每小时英里
+球体积为 70.276237。
+
+# 将每小时公里转换为每小时英里
 
 ![](img/image00108.jpeg)
 
@@ -656,9 +746,10 @@ return(0);
 ### 输出
 
 输入每小时公里: 15
+
 9.320568 每小时英里
 
-# 计算总小时数分钟
+# 计算总小时数和分钟数
 
 ![](img/image00109.jpeg)
 
@@ -685,13 +776,14 @@ return(0);
 ### 输出
 
 输入分钟: 546
+
 9 小时, 6 分钟。
 
 # 打印结果
 
 ## 分行打印指定操作的结果
 
-### JAVA 代码
+### Java 代码
 
 ```java
 public class Main {
@@ -705,11 +797,9 @@ public class Main {
 }
 ```
 
-# 打印和
+# 打印两个数字的和
 
-# 两个数字
-
-### JAVA 代码
+### Java 代码
 
 ```java
 public class Main {
@@ -725,9 +815,7 @@ public class Main {
 }
 ```
 
-# 两个数字
-
-## 在屏幕上打印
+# 在屏幕上打印两个数字
 
 ### C 语言代码
 
@@ -743,10 +831,6 @@ public class Main {
     }
 ```
 
-
-
-
-
 ```java
 Scanner io = new Scanner(System.in);
 System.out.println("输入圆的半径： ");
@@ -758,14 +842,19 @@ System.out.println("面积为 = " + (Math.PI * radius * radius));
 ```
 
 ### 输出
+
 输入圆的半径：
+
 10
+
 周长为 = 62.83185307179586
+
 面积为 = 314.1592653589
 
 # 交换两个变量
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -784,15 +873,21 @@ public static void main(String[] args) {
 ```
 
 ### 输出
+
 输入第一个数字：
+
 25
+
 输入第二个数字：
+
 50
+
 交换后的值为：50 和 25
 
 # 打印数组
 
-### JAVA 代码
+### Java 代码
+
 ```java
 public class Main {
 public static void main(String[] args) {
@@ -809,15 +904,21 @@ public static void main(String[] args) {
 ```
 
 ### 输出
+
 第一个
+
 第二个
+
 第三个
+
 第四个
+
 第五个
 
 # 华氏度转摄氏度
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -832,12 +933,15 @@ public class Main {
 ```
 
 ### 输出
+
 输入华氏度：96
+
 96.0 华氏度等于 35.55555555555 摄氏度
 
 # 英寸转米
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -852,12 +956,15 @@ public class Main {
 ```
 
 ### 输出
+
 输入英寸数值：5
+
 5.0 英寸等于 1.27 米
 
 # 相加所有数字
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -879,13 +986,17 @@ public class Main {
 ```
 
 ### 输出
+
 输入一个 0 到 1000 之间的整数：750
+
 750 的所有数字之和为 12
 
 # 打印年数和天数
 
-# 从分钟计算
-### JAVA 代码
+## 从分钟计算
+
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -902,14 +1013,17 @@ public class Main {
 ```
 
 ### 输出
+
 输入分钟数：123456
+
 123456 分钟大约是 0 年 85 天
 
-# 计算 (BMI)
+# 计算 BMI
 
 ## 身体质量指数
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -927,28 +1041,28 @@ public class Main {
 
 
 
-
-
 ```java
-      if (negative_num && n2 > 0 || positive_num && n2 < 0) {
-        result -= n2;
-      } else {
-        result += n2;
-      }
-    return result;
-  }
+if (negative_num && n2 > 0 || positive_num && n2 < 0) {
+  result -= n2;
+} else {
+  result += n2;
+}
+return result;
+}
+
 public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);
-    System.out.print("输入第一个数字: ");
-    int n1 = in.nextInt();
-    System.out.print("输入第二个数字: ");
-    int n2 = in.nextInt();
-    System.out.println("\n 结果: " + multiply(n1,n2));
-  }
+  Scanner in = new Scanner(System.in);
+  System.out.print("输入第一个数字: ");
+  int n1 = in.nextInt();
+  System.out.print("输入第二个数字: ");
+  int n2 = in.nextInt();
+  System.out.println("\n 结果: " + multiply(n1, n2));
+}
 }
 ```
 
 ### 输出
+
 ```
 输入第一个数字: 25
 输入第二个数字: 30
@@ -959,29 +1073,31 @@ public static void main(String[] args) {
 
 ![](img/image00114.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args)
-    {
-        Scanner in = new Scanner(System.in);
-        System.out.print("输入第一个整数: ");
-        int firstInt = in.nextInt();
-        System.out.print("输入第二个整数: ");
-        int secondInt = in.nextInt();
-        System.out.printf("两个整数的和和: %d%n", firstInt + secondInt);
-        System.out.printf("两个整数的差: %d%n", firstInt - secondInt);
-        System.out.printf("两个整数的乘积: %d%n", firstInt * secondInt);
-        System.out.printf("两个整数的平均值: %.2f%n", (double) (firstInt + secondInt) / 2);
-        System.out.printf("两个整数的距离: %d%n", Math.abs(firstInt - secondInt));
-        System.out.printf("最大整数: %d%n", Math.max(firstInt, secondInt));
-        System.out.printf("最小整数: %d%n", Math.min(firstInt, secondInt));
-    }
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    System.out.print("输入第一个整数: ");
+    int firstInt = in.nextInt();
+    System.out.print("输入第二个整数: ");
+    int secondInt = in.nextInt();
+    System.out.printf("两个整数的和和: %d%n", firstInt + secondInt);
+    System.out.printf("两个整数的差: %d%n", firstInt - secondInt);
+    System.out.printf("两个整数的乘积: %d%n", firstInt * secondInt);
+    System.out.printf("两个整数的平均值: %.2f%n", (double) (firstInt + secondInt) / 2);
+    System.out.printf("两个整数的距离: %d%n", Math.abs(firstInt - secondInt));
+    System.out.printf("最大整数: %d%n", Math.max(firstInt, secondInt));
+    System.out.printf("最小整数: %d%n", Math.min(firstInt, secondInt));
+  }
 }
 ```
 
 ### 输出
+
 ```
 输入第一个整数: 50
 输入第二个整数: 30
@@ -998,9 +1114,11 @@ public class Main {
 
 ![](img/image00115.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
@@ -1010,12 +1128,15 @@ public class Main {
     int num2 = in.nextInt();
     System.out.print("输入第三个数字: ");
     int num3 = in.nextInt();
+
     if (num1 > num2)
       if (num1 > num3)
         System.out.println("最大值: " + num1);
+
     if (num2 > num1)
       if (num2 > num3)
         System.out.println("最大值: " + num2);
+
     if (num3 > num1)
       if (num3 > num2)
         System.out.println("最大值: " + num3);
@@ -1024,6 +1145,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```
 输入第一个数字: 25
 输入第二个数字: 5
@@ -1033,25 +1155,28 @@ public class Main {
 
 # 显示给定整数的乘法表
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
+
 public class Main {
-  public static void main(String[] args)
-  {
-    int j,n;
+  public static void main(String[] args) {
+    int j, n;
     System.out.print("输入要计算的数字: ");
     System.out.print("输入项数: ");
     Scanner in = new Scanner(System.in);
     n = in.nextInt();
     System.out.println("\n");
-    for(j=0;j<=n;j++)
-      System.out.println(n+" X "+j+" = " +n*j);
+
+    for (j = 0; j <= n; j++)
+      System.out.println(n + " X " + j + " = " + n * j);
   }
 }
 ```
 
 ### 输出
+
 ```
 输入要计算的数字: 输入项数: 7
 
@@ -1068,19 +1193,20 @@ public class Main {
 
 ![](img/image00116.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
+
 public class Main {
-  public static void main(String[] args)
-  {
-    int i,j,n;
+  public static void main(String[] args) {
+    int i, j, n;
     System.out.print("输入行数: ");
     Scanner in = new Scanner(System.in);
     n = in.nextInt();
-    for(i=1;i<=n;i++)
-    {
-      for(j=1;j<=i;j++)
+
+    for (i = 1; i <= n; i++) {
+      for (j = 1; j <= i; j++)
         System.out.print(j);
       System.out.println("");
     }
@@ -1088,6 +1214,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```
 输入行数: 9
 1
@@ -1104,27 +1231,28 @@ public class Main {
 
 ![](img/image00117.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
+
 public class Main {
-  public static void main(String[] args)
-  {
-    int i,j,n,s,x;
+  public static void main(String[] args) {
+    int i, j, n, s, x;
     System.out.print("输入行数: ");
     Scanner in = new Scanner(System.in);
     n = in.nextInt();
-    s=n+4;
-    for(i=1;i<=n;i++)
-    {
-      for(x=s;x!=0;x--)
-      {
+    s = n + 4;
+
+    for (i = 1; i <= n; i++) {
+      for (x = s; x != 0; x--) {
         System.out.print(" ");
       }
-      for(j=1;j<=i;j++)
-      {
+
+      for (j = 1; j <= i; j++) {
         System.out.print(i);
       }
+
       System.out.println();
       s--;
     }
@@ -1133,6 +1261,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```
 输入行数: 7
          1
@@ -1148,59 +1277,57 @@ public class Main {
 
 ![](img/image00118.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
+
 public class Main {
-  public static void main(String args[])
-    {
-      Scanner in = new Scanner(System.in);
-      System.out.print("输入数字:  ");
-      int n = in.nextInt();
-      int count = 1;
-      int no_of_spaces = 1;
-      int start = 0;
-      for (int i = 1; i < (n * 2); i++)
-      {
-        for (int spc = n - no_of_spaces; spc > 0; spc--)
-        {
-          System.out.print(" ");
-        }
-        if (i < n)
-        {
-          start = i;
-          no_of_spaces++;
-        }
-        else
-        {
-          start = n * 2 - i;
-          no_of_spaces--;
-        }
-        for (int j = 0; j < count; j++)
-        {
-          System.out.print(start);
-          if (j < count / 2)
-          {
-            start--;
-          }
-          else
-          {
-            start++;
-          }
-        }
-        if (i < n)
-        {
-          count = count + 2;
-        } else {
-          count = count - 2;
-        }
-        System.out.println();
+  public static void main(String args[]) {
+    Scanner in = new Scanner(System.in);
+    System.out.print("输入数字:  ");
+    int n = in.nextInt();
+    int count = 1;
+    int no_of_spaces = 1;
+    int start = 0;
+
+    for (int i = 1; i < (n * 2); i++) {
+      for (int spc = n - no_of_spaces; spc > 0; spc--) {
+        System.out.print(" ");
       }
+
+      if (i < n) {
+        start = i;
+        no_of_spaces++;
+      } else {
+        start = n * 2 - i;
+        no_of_spaces--;
+      }
+
+      for (int j = 0; j < count; j++) {
+        System.out.print(start);
+
+        if (j < count / 2) {
+          start--;
+        } else {
+          start++;
+        }
+      }
+
+      if (i < n) {
+        count = count + 2;
+      } else {
+        count = count - 2;
+      }
+
+      System.out.println();
     }
+  }
 }
 ```
 
 ### 输出
+
 ```
 输入数字:  7
       1
@@ -1217,4 +1344,3 @@ public class Main {
      212
       1
 ```
-

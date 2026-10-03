@@ -1,3 +1,4 @@
+
 # 什么是继承？
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/concepts/inheritance.html`](https://docs.oracle.com/javase/tutorial/java/concepts/inheritance.html)
@@ -19,7 +20,6 @@ class MountainBike extends Bicycle {
     // a mountain bike would go here
 
 }
-
 ```
 
 这使得`MountainBike`拥有与`Bicycle`相同的所有字段和方法，但允许其代码专注于使其独特的特征。这使得子类的代码易于阅读。然而，您必须小心地记录每个超类定义的状态和行为，因为该代码不会出现在每个子类的源文件中。

@@ -1,3 +1,4 @@
+
 # 使用大对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/blob.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/blob.html)
@@ -9,11 +10,8 @@
 以下主题涵盖：
 
 +   向数据库添加大对象类型对象
-
 +   检索 CLOB 值
-
 +   添加和检索 BLOB 对象
-
 +   释放大对象占用的资源
 
 ## 向数据库添加大对象类型对象
@@ -21,8 +19,8 @@
 以下摘录自`ClobSample.addRowToCoffeeDescriptions`向`COFFEE_DESCRIPTIONS`表中添加`CLOB` SQL 值。`Clob` Java 对象`myClob`包含由`fileName`指定的文件的内容。
 
 ```java
-  public void addRowToCoffeeDescriptions(String coffeeName,
-                                         String fileName) throws SQLException {
+public void addRowToCoffeeDescriptions(String coffeeName,
+                                       String fileName) throws SQLException {
     String sql = "INSERT INTO COFFEE_DESCRIPTIONS VALUES(?,?)";
     Clob myClob = this.con.createClob();
     try (PreparedStatement pstmt = this.con.prepareStatement(sql);
@@ -42,28 +40,25 @@
     } catch (Exception ex) {
       System.out.println("Unexpected exception: " + ex.toString());
     }
-  }
-
+}
 ```
 
 下一行创建一个`Clob` Java 对象：
 
 ```java
 Clob myClob = this.con.createClob();
-
 ```
 
 下一行检索一个流（在本例中为名为`clobWriter`的`Writer`对象），用于将一系列字符写入`Clob` Java 对象`myClob`。`ClobSample.readFile`方法写入这些字符流；流来自由`String` `fileName`指定的文件。方法参数`1`表示`Writer`对象将从`Clob`值的开头开始写入字符流：
 
 ```java
 Writer clobWriter = myClob.setCharacterStream(1);
-
 ```
 
 `ClobSample.readFile`方法逐行读取由文件`fileName`指定的文件，并将其写入由`writerArg`指定的`Writer`对象：
 
 ```java
-  private String readFile(String fileName, Writer writerArg) throws IOException {
+private String readFile(String fileName, Writer writerArg) throws IOException {
     try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
       String nextLine = "";
       StringBuffer sb = new StringBuffer();
@@ -74,27 +69,25 @@ Writer clobWriter = myClob.setCharacterStream(1);
       }
       // Convert the content into to a string
       String clobData = sb.toString();
-	  // Return the data.
+      // Return the data.
       return clobData;
-	}
-  }
-
+    }
+}
 ```
 
 以下摘录创建一个`PreparedStatement`对象`pstmt`，将`Clob` Java 对象`myClob`插入`COFFEE_DESCRIPTIONS`中：
 
 ```java
-    String sql = "INSERT INTO COFFEE_DESCRIPTIONS VALUES(?,?)";
-    Clob myClob = this.con.createClob();
-    try (PreparedStatement pstmt = this.con.prepareStatement(sql);
-      // ...
-      ) {
-      // ...
-      pstmt.setString(1, coffeeName);
-      pstmt.setClob(2, myClob);
-      pstmt.executeUpdate();
-      // ...
-
+String sql = "INSERT INTO COFFEE_DESCRIPTIONS VALUES(?,?)";
+Clob myClob = this.con.createClob();
+try (PreparedStatement pstmt = this.con.prepareStatement(sql);
+  // ...
+  ) {
+  // ...
+  pstmt.setString(1, coffeeName);
+  pstmt.setClob(2, myClob);
+  pstmt.executeUpdate();
+  // ...
 ```
 
 ## 检索 CLOB 值
@@ -102,8 +95,8 @@ Writer clobWriter = myClob.setCharacterStream(1);
 方法`ClobSample.retrieveExcerpt`从`COFFEE_DESCRIPTIONS`表中`COF_NAME`列的值等于`coffeeName`参数指定的`String`值的行中检索存储在`COF_DESC`列中的`CLOB` SQL 值：
 
 ```java
-  public String retrieveExcerpt(String coffeeName,
-                                int numChar) throws SQLException {
+public String retrieveExcerpt(String coffeeName,
+                              int numChar) throws SQLException {
 
     String description = null;
     Clob myClob = null;
@@ -123,22 +116,19 @@ Writer clobWriter = myClob.setCharacterStream(1);
       System.out.println("Unexpected exception: " + ex.toString());
     }
     return description;
-  }
-
+}
 ```
 
 下一行从`ResultSet`对象`rs`中检索`Clob` Java 值：
 
 ```java
 myClob = rs.getClob(1);
-
 ```
 
 以下行从`myClob`对象中检索子字符串。子字符串从`myClob`值的第一个字符开始，最多有`numChar`指定的连续字符数，其中`numChar`是一个整数。
 
 ```java
 description = myClob.getSubString(1, numChar);
-
 ```
 
 ## 添加和检索 BLOB 对象
@@ -155,5 +145,4 @@ description = myClob.getSubString(1, numChar);
 Clob aClob = con.createClob();
 int numWritten = aClob.setString(1, val);
 aClob.free();
-
 ```

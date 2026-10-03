@@ -1,3 +1,4 @@
+
 # 更快更好地开始编码的 6 个技巧
 
 > 原文：<https://medium.com/javarevisited/6-tips-to-start-coding-faster-and-better-e152ec17f41?source=collection_archive---------3----------------------->

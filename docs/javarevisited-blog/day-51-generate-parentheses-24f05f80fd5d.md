@@ -1,3 +1,4 @@
+
 # 第 51 天—生成括号
 
 > 原文：<https://medium.com/javarevisited/day-51-generate-parentheses-24f05f80fd5d?source=collection_archive---------1----------------------->

@@ -1,3 +1,4 @@
+
 # 如何准备 Scrum Master 认证？
 
 > 原文：<https://medium.com/javarevisited/how-to-prepare-for-scrum-master-certification-938e723bb957?source=collection_archive---------2----------------------->

@@ -1,3 +1,4 @@
+
 # Java 面向对象编程——多重继承
 
 > 原文：<https://medium.com/javarevisited/object-oriented-programming-in-java-multiple-inheritance-d76963d05e59?source=collection_archive---------2----------------------->

@@ -1,3 +1,4 @@
+
 # 合成声音
 
 > 原文：[`docs.oracle.com/javase/tutorial/sound/MIDI-synth.html`](https://docs.oracle.com/javase/tutorial/sound/MIDI-synth.html)
@@ -9,19 +10,14 @@
 对于不熟悉 MIDI 的读者来说，合成架构可能看起来很复杂。其 API 包括三个接口：
 
 +   [`合成器`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/Synthesizer.html)
-
 +   [`Midi 通道`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/MidiChannel.html)
-
 +   [`声音库`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/Soundbank.html)
 
 和四个类：
 
 +   [`乐器`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/Instrument.html)
-
 +   [`补丁`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/Patch.html)
-
 +   [`声音库资源`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/SoundbankResource.html)
-
 +   [`VoiceStatus`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/VoiceStatus.html)
 
 作为对所有这些 API 的定位，下一节解释了一些 MIDI 合成的基础知识以及它们如何在 Java Sound API 中反映。随后的部分将更详细地查看 API。
@@ -88,7 +84,6 @@ MIDI 1.0 规范提供了银行选择和程序更改命令，这些命令影响�
 
 ```java
 Instrument[] getLoadedInstruments() 
-
 ```
 
 并遍历返回的数组，查看当前加载的确切乐器。很可能，你会在用户界面中显示乐器的名称（使用`Instrument`的`getName`方法），让用户决定是否使用这些乐器或加载其他乐器。`Instrument` API 包括一个报告乐器属于哪个声音库的方法。声音库的名称可能帮助你的程序或用户确定乐器的确切信息。
@@ -97,7 +92,6 @@ Instrument[] getLoadedInstruments()
 
 ```java
 Soundbank getDefaultSoundbank() 
-
 ```
 
 给出默认的声音库。`Soundbank` API 包括检索声音库名称、供应商和版本号的方法，通过这些信息，程序或用户可以验证库的身份。然而，当你第一次获得一个合成器时，不能假设默认声音库中的乐器已经被加载到合成器中。例如，一个合成器可能有大量内置乐器可供使用，但由于其有限的内存，它可能不会自动加载它们。
@@ -108,14 +102,12 @@ Soundbank getDefaultSoundbank()
 
 ```java
 Instrument[] getAvailableInstruments()
-
 ```
 
 你可以通过调用以下方法加载任何这些乐器：
 
 ```java
 boolean loadInstrument(Instrument instrument) 
-
 ```
 
 乐器被加载到合成器中，位置由乐器的`Patch`对象指定（可以使用`Instrument`的`getPatch`方法检索）。
@@ -126,7 +118,6 @@ boolean loadInstrument(Instrument instrument)
 boolean loadAllInstruments(Soundbank soundbank) 
 boolean loadInstruments(Soundbank soundbank, 
   Patch[] patchList) 
-
 ```
 
 正如名称所示，第一个加载给定声音库中的所有乐器，第二个加载声音库中选择的乐器。你也可以使用`Soundbank`的`getInstruments`方法访问所有乐器，然后遍历它们，并使用`loadInstrument`逐个加载选择的乐器。
@@ -139,7 +130,6 @@ boolean loadInstruments(Soundbank soundbank,
 
 ```java
 boolean remapInstrument(Instrument from, Instrument to) 
-
 ```
 
 此方法从合成器中卸载其第一个参数，并将其第二个参数放置在第一个参数占用的合成器补丁位置。
@@ -159,7 +149,6 @@ boolean remapInstrument(Instrument from, Instrument to)
 ```java
     public long getLatency()
     public int getMaxPolyphony()
-
 ```
 
 延迟度量了传递 MIDI 消息到合成器并合成器实际产生相应结果之间的最坏情况延迟。例如，合成器在接收到音符开启事件后可能需要几毫秒才开始生成音频。
@@ -168,7 +157,6 @@ boolean remapInstrument(Instrument from, Instrument to)
 
 ```java
 public VoiceStatus[] getVoiceStatus()
-
 ```
 
 返回的数组中的每个 `VoiceStatus` 报告了音色的当前活动或非活动状态、MIDI 通道、银行和程序号、MIDI 音符号码和 MIDI 音量。数组的长度通常应该与 `getMaxPolyphony` 返回的相同数量一样。如果合成器没有播放，所有其 `VoiceStatus` 对象的 active 字段都设置为 `false`。
@@ -185,51 +173,49 @@ public VoiceStatus[] getVoiceStatus()
 
 然而，在某些情况下，音乐是在播放时即时生成的。例如，用户界面可能会显示一个音乐键盘或吉他指板，并允许用户通过鼠标点击随意弹奏音符。另一个例子，一个应用程序可能使用合成器不是为了演奏音乐本身，而是为了根据用户的操作生成音效。这种情况在游戏中很典型。最后一个例子，应用程序可能确实正在播放从文件中读取的音乐，但用户界面允许用户与音乐互动，动态地改变它。在所有这些情况下，应用程序直接向合成器发送命令，因为 MIDI 消息需要立即传递，而不是被安排在将来的某个确定时间点。
 
-有至少两种方法可以将 MIDI 消息发送到合成器而不使用序列器。第一种方法是构造一个 `MidiMessage` 并通过 `Receiver` 的 send 方法将其传递给合成器。例如，要在 MIDI 通道 5（从 1 开始计数）上立即产生中央 C（MIDI 音符号码 60），可以执行以下操作：
+
+
+有至少两种方法可以将 MIDI 消息发送到合成器而不使用序列器。第一种方法是构造一个 `MidiMessage` 并通过 `Receiver` 的 `send` 方法将其传递给合成器。例如，要在 MIDI 通道 5（从 1 开始计数）上立即产生中央 C（MIDI 音符号码 60），可以执行以下操作：
 
 ```java
-    ShortMessage myMsg = new ShortMessage();
-    // Play the note Middle C (60) moderately loud
-    // (velocity = 93)on channel 4 (zero-based).
-    myMsg.setMessage(ShortMessage.NOTE_ON, 4, 60, 93); 
-    Synthesizer synth = MidiSystem.getSynthesizer();
-    Receiver synthRcvr = synth.getReceiver();
-    synthRcvr.send(myMsg, -1); // -1 means no time stamp
-
+ShortMessage myMsg = new ShortMessage();
+// Play the note Middle C (60) moderately loud
+// (velocity = 93)on channel 4 (zero-based).
+myMsg.setMessage(ShortMessage.NOTE_ON, 4, 60, 93); 
+Synthesizer synth = MidiSystem.getSynthesizer();
+Receiver synthRcvr = synth.getReceiver();
+synthRcvr.send(myMsg, -1); // -1 means no time stamp
 ```
 
 第二种方法是完全绕过消息传递层（即 `MidiMessage` 和 `Receiver` API），直接与合成器的 `MidiChannel` 对象交互。您首先需要检索合成器的 `MidiChannel` 对象，使用以下 `Synthesizer` 方法：
 
 ```java
 public MidiChannel[] getChannels()
-
 ```
 
-之后，您可以直接调用所需的`MidiChannel`方法。这比将相应的`MidiMessages`发送到合成器的`Receiver`并让合成器处理与其自己的`MidiChannels`的通信更直接。例如，前面示例对应的代码将是：
+之后，您可以直接调用所需的 `MidiChannel` 方法。这比将相应的 `MidiMessages` 发送到合成器的 `Receiver` 并让合成器处理与其自己的 `MidiChannels` 的通信更直接。例如，前面示例对应的代码将是：
 
 ```java
-    Synthesizer synth = MidiSystem.getSynthesizer();
-    MidiChannel chan[] = synth.getChannels(); 
-    // Check for null; maybe not all 16 channels exist.
-    if (chan[4] != null) {
-         chan[4].noteOn(60, 93); 
-    }
-
+Synthesizer synth = MidiSystem.getSynthesizer();
+MidiChannel chan[] = synth.getChannels(); 
+// Check for null; maybe not all 16 channels exist.
+if (chan[4] != null) {
+     chan[4].noteOn(60, 93); 
+}
 ```
 
 ### 获取通道的当前状态
 
-`MidiChannel`接口提供了与 MIDI 规范中定义的每个“通道音频”或“通道模式”消息一一对应的方法。我们在前面的示例中看到了使用 noteOn 方法的情况。但是，除了这些经典方法之外，Java Sound API 的`MidiChannel`接口还添加了一些“get”方法，用于检索最近由相应的音频或模式“set”方法设置的值：
+`MidiChannel` 接口提供了与 MIDI 规范中定义的每个“通道音频”或“通道模式”消息一一对应的方法。我们在前面的示例中看到了使用 `noteOn` 方法的情况。但是，除了这些经典方法之外，Java Sound API 的 `MidiChannel` 接口还添加了一些“get”方法，用于检索最近由相应的音频或模式“set”方法设置的值：
 
 ```java
-    int       getChannelPressure()
-    int       getController(int controller)
-    boolean   getMono()
-    boolean   getOmni() 
-    int       getPitchBend() 
-    int       getPolyPressure(int noteNumber)
-    int       getProgram()
-
+int       getChannelPressure()
+int       getController(int controller)
+boolean   getMono()
+boolean   getOmni() 
+int       getPitchBend() 
+int       getPolyPressure(int noteNumber)
+int       getProgram()
 ```
 
 这些方法可能对向用户显示通道状态或决定随后发送给通道的值很有用。
@@ -241,11 +227,10 @@ Java Sound API 添加了每个通道独奏和静音的概念，这不是 MIDI �
 如果静音打开，该通道将不会发声，但其他通道不受影响。如果独奏打开，该通道和任何其他独奏的通道将会发声（如果它没有被静音），但其他通道不会发声。同时被独奏和静音的通道将不会发声。`MidiChannel` API 包括四种方法：
 
 ```java
-    boolean      getMute() 
-    boolean      getSolo()
-    void         setMute(boolean muteState) 
-    void         setSolo(boolean soloState)
-
+boolean      getMute() 
+boolean      getSolo()
+void         setMute(boolean muteState) 
+void         setSolo(boolean soloState)
 ```
 
 ## 允许播放合成声音

@@ -1,8 +1,9 @@
+
 # 如何使用图标
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/icon.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/icon.html)
 
-许多 Swing 组件，如标签、按钮和选项卡窗格，可以用*图标*进行装饰  一个固定大小的图片。图标是一个遵循[`Icon`](https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html)接口的对象。Swing 提供了一个特别有用的`Icon`接口实现：[`ImageIcon`](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html)，它可以从 GIF、JPEG 或 PNG 图像绘制图标。
+许多 Swing 组件，如标签、按钮和选项卡窗格，可以用*图标*进行装饰 — 一个固定大小的图片。图标是一个遵循[`Icon`](https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html)接口的对象。Swing 提供了一个特别有用的`Icon`接口实现：[`ImageIcon`](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html)，它可以从 GIF、JPEG 或 PNG 图像绘制图标。
 
 这是一个带有三个标签的应用程序快照，其中两个标签装饰有图标：
 
@@ -16,7 +17,6 @@ ImageIcon icon = createImageIcon("images/middle.gif",
 label1 = new JLabel("Image and Text", icon, JLabel.CENTER);
 ...
 label3 = new JLabel(icon);
-
 ```
 
 `createImageIcon`方法（在前面的片段中使用）是我们在许多代码示例中使用的方法。它查找指定的文件并为该文件返回一个`ImageIcon`，如果找不到该文件则返回`null`。以下是一个典型的实现：
@@ -33,7 +33,6 @@ protected ImageIcon createImageIcon(String path,
         return null;
     }
 }
-
 ```
 
 在前面的片段中，`ImageIcon`构造函数的第一个参数是相对于当前类位置的，并将解析为绝对 URL。`description`参数是一个字符串，允许辅助技术帮助视觉障碍用户理解图标传达的信息。
@@ -43,7 +42,6 @@ protected ImageIcon createImageIcon(String path,
 ```java
 ImageIcon icon = new ImageIcon("images/middle.gif",
                                "a pretty but meaningless splat");
-
 ```
 
 当您向`ImageIcon`构造函数指定文件名或 URL 时，处理将被阻塞，直到图像数据完全加载或数据位置被证明无效为止。如果数据位置无效（但非空），则仍会成功创建`ImageIcon`；只是它没有大小，因此不会绘制任何内容。如`createImageIcon`方法所示，建议在将 URL 传递给`ImageIcon`构造函数之前首先验证 URL 是否指向现有文件。这样可以在文件不存在时进行优雅的错误处理。如果您希望在图像加载时获得更多信息，可以通过调用其`setImageObserver`方法在图像图标上注册观察者。
@@ -52,19 +50,13 @@ ImageIcon icon = new ImageIcon("images/middle.gif",
 
 本节的其余部分涵盖以下主题：
 
-+   更复杂的图像图标示例
-
-+   使用 getResource 加载图像
-
-+   将图像加载到小程序中
-
-+   提高加载图像图标时的感知性能
-
-+   创建自定义图标实现
-
-+   图像图标 API
-
-+   使用图标的示例
++ 更复杂的图像图标示例
++ 使用 getResource 加载图像
++ 将图像加载到小程序中
++ 提高加载图像图标时的感知性能
++ 创建自定义图标实现
++ 图像图标 API
++ 使用图标的示例
 
 ## 更复杂的图像图标示例
 
@@ -72,25 +64,24 @@ ImageIcon icon = new ImageIcon("images/middle.gif",
 
 ![IconDemo 应用程序的初始视图。](img/4617f2ff9f63ed8367f163465c7d94dd.png)
 
-* * *
+---
 
 **试试这个：**
 
-1.  单击“启动”按钮以使用 [Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html) 运行 IconDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
+1. 单击“启动”按钮以使用 [Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html) 运行 IconDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
 
-    ![启动 IconDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/IconDemoProject/IconDemo.jnlp)
+   ![启动 IconDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/IconDemoProject/IconDemo.jnlp)
 
-1.  单击任何缩略图图像以查看全尺寸照片。
+2. 单击任何缩略图图像以查看全尺寸照片。
 
-1.  将鼠标悬停在照片上。将显示一个工具提示，显示照片标题。
+3. 将鼠标悬停在照片上。将显示一个工具提示，显示照片标题。
 
-* * *
+---
 
 **IconDemoApp** 展示了以下方式中使用的图标：
 
-+   作为附加到按钮的 GUI 元素（按钮上的缩略图图像）。
-
-+   用于显示图像（五张照片）。
++ 作为附加到按钮的 GUI 元素（按钮上的缩略图图像）。
++ 用于显示图像（五张照片）。
 
 照片通过 `loadimages.execute` 在单独的线程中加载。稍后在本节中显示 `loadimages` 代码。
 
@@ -131,7 +122,6 @@ private class ThumbnailAction extends AbstractAction{
         setTitle("Icon Demo: " + getValue(SHORT_DESCRIPTION).toString());
     }
 }
-
 ```
 
 ## 使用 getResource 加载图像
@@ -141,7 +131,9 @@ private class ThumbnailAction extends AbstractAction{
 | ![显示 MyDemo.class 和父目录下的 images/myImage.png 的图示](img/9de368875ce1c42803d589313c45d4da.png) | ![显示 MyDemo.class 和父目录下的 image.jar 的图示](img/560ebeab3a2da9e72493e858e0e04af3.png) |
 | --- | --- |
 | 类文件与包含 PNG 格式图像文件的图像目录相邻。 | 类文件与 JAR 文件在同一目录中。JAR 文件中包含一个 `images` 目录，其中包含所有图像。 |
+
 | ![显示 MyDemo.jar 和 image.jar 在父目录下的图表](img/e5ca4c45d831df8fef68a3ec627cd0f5.png) | ![显示 MyDemo.class 和 images/myImage.png 在同一个 JAR 文件中的图表](img/7ed96fa2516c4bcc4cc253ef2615bb6a.png) |
+| --- | --- |
 | 类文件在一个 JAR 文件中，图片在另一个 JAR 文件中。 | 类和图片文件在同一个 JAR 文件中。 |
 
 如果你正在编写真实世界的应用程序，很可能（也建议）将文件放入包中。有关包的更多信息，请参阅创建和使用包中的学习 Java 语言教程。以下是使用名为"omega"的包的一些可能配置：
@@ -149,7 +141,9 @@ private class ThumbnailAction extends AbstractAction{
 | ![显示 omega 包中 MyDemo.class 和 image/myImage.png 的图表](img/92c2ea5565706ddda646025c53c070d4.png) | ![显示 omega 包中 MyDemo.class 和 image.jar 的图表](img/645a401beae83a2ce6e06d70a1f6b07b.png) |
 | --- | --- |
 | 类文件在名为`omega`的目录中。图片在`omega/images`目录中。 | 类文件在`omega`目录中。图片在不在`omega`目录内的 JAR 文件中，但是按照`omega/images`层次结构创建。 |
+
 | ![显示包含 omega/MyDemo.class 和 omega/images/myImage.png 的 omega.jar 的图表](img/fbe2810858a9c42bf945b2cc2a5e075b.png) |
+| --- |
 | 一个包含类文件在`omega`目录下，图片文件在`omega/images`目录下的大型 JAR 文件。 |
 
 所有七种配置都是有效的，相同的代码读取图片：
@@ -160,73 +154,70 @@ java.net.URL imageURL = myDemo.class.getResource("images/myImage.gif");
 if (imageURL != null) {
     ImageIcon icon = new ImageIcon(imageURL);
 }
-
 ```
 
 `getResource`方法会导致类加载器在程序的类路径中查找目标文件，一旦找到所需文件就会返回一个 URL。在这个例子中，MyDemo 程序尝试从`omega`类加载`images/myImage.png`文件。类加载器会在程序的类路径中查找`/omega/images/myImage.png`。如果类加载器找到了文件，就会返回包含该文件的 JAR 文件或目录的 URL。如果类路径中的另一个 JAR 文件或目录包含`images/myImage.png`文件，类加载器会返回第一个包含该文件的实例。
 
 有三种指定类路径的方式：
 
-+   使用`-cp`或`-classpath`命令行参数。例如，在图片存储在名为`images.jar`的 JAR 文件中，而类文件在当前目录的情况下：
++ 使用`-cp`或`-classpath`命令行参数。例如，在图片存储在名为`images.jar`的 JAR 文件中，而类文件在当前目录的情况下：
 
-    ```java
-    java -cp  .;images.jar  MyDemo  [Microsoft Windows]
-    java -cp ".;images.jar" MyDemo  [UNIX-emulating shell on Microsoft
-                                    Windows  you must quote the path]
-    java -cp  .:images.jar  MyDemo  [UNIX]
+  ```java
+  java -cp  .;images.jar  MyDemo  [Microsoft Windows]
+  java -cp ".;images.jar" MyDemo  [UNIX-emulating shell on Microsoft
+                                  Windows — you must quote the path]
+  java -cp  .:images.jar  MyDemo  [UNIX]
+  ```
 
-    ```
+  如果你的图片和类文件存储在不同的 JAR 文件中，你的命令行会类似于：
 
-    如果你的图片和类文件存储在不同的 JAR 文件中，你的命令行会类似于：
+  ```java
+  java -cp .;MyDemo.jar;images.jar MyDemo  [Microsoft Windows]
+  ```
 
-    ```java
-    java -cp .;MyDemo.jar;images.jar MyDemo  [Microsoft Windows]
+  在所有文件都在一个 JAR 文件中的情况下，你可以使用以下任一命令：
 
-    ```
+  ```java
+  java -jar MyAppPlusImages.jar
+  java -cp .;MyAppPlusImages.jar MyApp  [Microsoft Windows]
+  ```
 
-    在所有文件都在一个 JAR 文件中的情况下，你可以使用以下任一命令：
+  欲了解更多信息，请参阅 JAR 文件教程。
 
-    ```java
-    java -jar MyAppPlusImages.jar
-    java -cp .;MyAppPlusImages.jar MyApp  [Microsoft Windows]
++ 在程序的 JNLP 文件中（Java Web Start 使用）。例如，这是`DragPictureDemo`使用的 JNLP 文件：
 
-    ```
+  ```java
+  <?xml version="1.0" encoding="utf-8"?>
+  <!-- JNLP File for DragPictureDemo -->
+  <jnlp
+    spec="1.0+"
+    codebase="https://docs.oracle.com/javase/tutorialJWS/src/uiswing/misc/examples"
+    href="DragPictureDemo.jnlp">
+    <information>
+      <title>DragPictureDemo</title>
+      <vendor>The Java(tm) Tutorial: Sun Microsystems, Inc.</vendor>
+      <homepage href="https://docs.oracle.com/javase/tutorial/uiswing/misc/examples/index.html#DragPictureDemo"/>
+      <description>DragPictureDemo</description>
+      <description kind="short">A demo showing how to install
+          data transfer on a custom component.</description>
+      <offline-allowed/>
+    </information>
+    <resources>
+      <j2se version="1.6+"/>
+      <jar href="allClasses.jar"/>
+      <jar href="images.jar"/>
+    </resources>
+    <application-desc main-class="DragPictureDemo"/>
+  </jnlp>
+  ```
 
-    欲了解更多信息，请参阅 JAR 文件教程。
+  在这个例子中，类文件和图片文件分别存储在不同的 JAR 文件中。使用 XML `jar`标签指定 JAR 文件。
 
-+   在程序的 JNLP 文件中（Java Web Start 使用）。例如，这是`DragPictureDemo`使用的 JNLP 文件：
++ 设置`CLASSPATH`环境变量。这种方法*不推荐*。如果未设置`CLASSPATH`，则默认使用当前目录(".")，然后是随 JRE 一起提供的系统类的位置。
 
-    ```java
-    <?xml version="1.0" encoding="utf-8"?>
-    <!-- JNLP File for DragPictureDemo -->
-    <jnlp
-      spec="1.0+"
-      codebase="https://docs.oracle.com/javase/tutorialJWS/src/uiswing/misc/examples"
-      href="DragPictureDemo.jnlp">
-      <information>
-        <title>DragPictureDemo</title>
-        <vendor>The Java(tm) Tutorial: Sun Microsystems, Inc.</vendor>
-        <homepage href="https://docs.oracle.com/javase/tutorial/uiswing/misc/examples/index.html#DragPictureDemo"/>
-        <description>DragPictureDemo</description>
-        <description kind="short">A demo showing how to install
-            data transfer on a custom component.</description>
-        <offline-allowed/>
-      </information>
-      <resources>
-        <j2se version="1.6+"/>
-        <jar href="allClasses.jar"/>
-        <jar href="images.jar"/>
-      </resources>
-      <application-desc main-class="DragPictureDemo"/>
-    </jnlp>
+大多数 Swing 教程示例将图像放在包含示例类文件的目录下的`images`目录中。当为示例创建 JAR 文件时，我们保持相同的相对位置，尽管通常我们将类文件放在与图像 JAR 文件不同的 JAR 文件中。无论类文件和图像文件在文件系统中的位置如何 — 在一个 JAR 文件中，或在多个 JAR 文件中，在命名包中，或在默认包中 — 相同的代码使用`getResource`查找图像文件。
 
-    ```
 
-    在这个例子中，类文件和图片文件分别存储在不同的 JAR 文件中。使用 XML `jar`标签指定 JAR 文件。
-
-+   设置`CLASSPATH`环境变量。这种方法*不推荐*。如果未设置`CLASSPATH`，则默认使用当前目录(".")，然后是随 JRE 一起提供的系统类的位置。
-
-大多数 Swing 教程示例将图像放在包含示例类文件的目录下的`images`目录中。当为示例创建 JAR 文件时，我们保持相同的相对位置，尽管通常我们将类文件放在与图像 JAR 文件不同的 JAR 文件中。无论类文件和图像文件在文件系统中的位置如何  在一个 JAR 文件中，或在多个 JAR 文件中，在命名包中，或在默认包中  相同的代码使用`getResource`查找图像文件。
 
 欲了解更多信息，请参阅[以位置无关的方式访问资源](https://docs.oracle.com/javase/8/docs/technotes/guides/lang/resources.html)和[应用程序开发注意事项](https://docs.oracle.com/javase/8/docs/technotes/guides/javaws/developersguide/development.html)。
 
@@ -238,7 +229,7 @@ Applets 通常从提供 applet 的计算机加载图像数据。`APPLET`标签�
 
 由于访问照片图像可能很慢，`IconDemoApp.java`使用`SwingWorker`来改善用户感知的程序性能。
 
-**后台图像加载**  该程序使用[javax.swing.SwingWorker](https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html)对象在后台线程中加载每张照片图像并计算其缩略图。使用`SwingWorker`可以防止程序在加载和缩放图像时出现冻结的情况。
+**后台图像加载** — 该程序使用[javax.swing.SwingWorker](https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html)对象在后台线程中加载每张照片图像并计算其缩略图。使用`SwingWorker`可以防止程序在加载和缩放图像时出现冻结的情况。
 
 这是处理每个图像的代码：
 
@@ -294,12 +285,11 @@ private SwingWorker<Void, ThumbnailAction> loadimages = new SwingWorker<Void, Th
         }
     }
 };
-
 ```
 
-SwingWorker 在后台线程中调用`doInBackground`方法。该方法将全尺寸图像、缩略图图像和标题放入`ThumbnailAction`对象中。然后，SwingWorker 将`ThumbnailAction`传递给`process`方法。`process`方法在事件分发线程上执行，并通过向工具栏添加按钮来更新 GUI。`JButton`有一个接受动作对象的构造函数。动作对象确定按钮的许多属性。在我们的情况下，按钮图标、标题和按下按钮时执行的操作都由`ThumbnailAction`确定。
+`SwingWorker`在后台线程中调用`doInBackground`方法。该方法将全尺寸图像、缩略图图像和标题放入`ThumbnailAction`对象中。然后，`SwingWorker`将`ThumbnailAction`传递给`process`方法。`process`方法在事件分发线程上执行，并通过向工具栏添加按钮来更新 GUI。`JButton`有一个接受动作对象的构造函数。动作对象确定按钮的许多属性。在我们的情况下，按钮图标、标题和按下按钮时执行的操作都由`ThumbnailAction`确定。
 
-**开销**  该程序最终将所有源图像加载到内存中。这在所有情况下可能并不理想。加载大量非常大的文件可能会导致程序分配大量内存。应注意管理加载的图像数量和大小。
+**开销** — 该程序最终将所有源图像加载到内存中。这在所有情况下可能并不理想。加载大量非常大的文件可能会导致程序分配大量内存。应注意管理加载的图像数量和大小。
 
 与所有与性能相关的问题一样，这种技术在某些情况下适用，而在其他情况下则不适用。此外，这里描述的技术旨在改善程序的感知性能，但不一定影响其实际性能。
 
@@ -352,7 +342,6 @@ public class MissingIcon implements Icon{
         return height;
     }
 }
-
 ```
 
 `paintIcon`方法接收一个`Graphics`对象。`Graphics`对象使`paintIcon`方法可以访问整个 Java2D API。有关绘图和 Java2D 的更多信息，请参见执行自定义绘图。
@@ -371,12 +360,11 @@ if(icon != null) {
     // so load a placeholder instead
     thumbAction = new ThumbnailAction(placeholderIcon, placeholderIcon, imageCaptions[i]);
 }
-
 ```
 
 使用自定义图标会有一些影响：
 
-+   因为图标的外观是动态确定的，图标绘制代码可以使用任何信息  例如组件和应用程序状态  来确定要绘制什么。
++   因为图标的外观是动态确定的，图标绘制代码可以使用任何信息 — 例如组件和应用程序状态 — 来确定要绘制什么。
 
 +   根据平台和图像类型，使用自定义图标可能会提高性能，因为绘制简单形状有时比复制图像更快。
 
@@ -394,9 +382,10 @@ if(icon != null) {
 
 +   观察图像图标的图像加载状态
 
-设置、获取和绘制图像图标的图像
+### 设置、获取和绘制图像图标的图像
 
 | 方法或构造函数 | 目的 |
+
 | --- | --- |
 
 | [ImageIcon()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#ImageIcon--) [ImageIcon(byte[])](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#ImageIcon-byte:A-) |
@@ -416,23 +405,35 @@ if(icon != null) {
 [ImageIcon(URL, String)](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#ImageIcon-java.net.URL-java.lang.String-) | 创建一个`ImageIcon`实例，并初始化为包含指定图像。第一个参数指示源——图像、字节数组、文件名或 URL——从中应加载图像图标的图像。源必须是`java.awt.Image`类支持的格式：即 GIF、JPEG 或 PNG。第二个参数（如果存在）为图像提供描述。描述也可以通过`setDescription`设置，并为辅助技术提供有用的文本信息。 |
 
 | [void setImage(Image)](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#setImage-java.awt.Image-) [Image getImage()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#getImage--) | 设置或获取图像图标显示的图像。 |
+
 | --- | --- |
+
 | [void paintIcon(Component, Graphics, int, int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#paintIcon-java.awt.Component-java.awt.Graphics-int-int-) | 在指定的图形上下文中绘制图像图标的图像。只有在实现执行自己的绘图的自定义图标时才会覆盖此方法。`Component`对象用作图像观察者。您可以依赖`Component`类提供的默认行为，并传入任何组件。两个`int`参数指定绘制图标的左上角。 |
+
 | [URL getResource(String)](https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html#getResource-java.lang.String-) in (*java.lang.ClassLoader*) | 查找具有给定名称的资源。有关更多信息，请参见使用 getResource 加载图像。 |
+
 | [InputStream getResourceAsStream(String)](https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html#getResourceAsStream-java.lang.String-) in (*java.lang.ClassLoader*) | 查找具有给定名称的资源，并返回用于读取资源的输入流。有关更多信息，请参见将图像加载到小程序中讨论。 |
 
-设置或获取有关图像图标的信息
+### 设置或获取有关图像图标的信息
 
 | 方法 | 目的 |
+
 | --- | --- |
+
 | [void setDescription(String)](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#setDescription-java.lang.String-) [String getDescription()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#getDescription--) | 设置或获取图像的描述。此描述供辅助技术使用。 |
+
 | [int getIconWidth()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#getIconWidth--) [int getIconHeight()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#getIconHeight--) | 获取图像图标的宽度或高度（以像素为单位）。 |
 
-观察图像图标的图像加载
+### 观察图像图标的图像加载
 
 | 方法 | 目的 |
+
 | --- | --- |
+
+
+
 | [void setImageObserver(ImageObserver)](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#setImageObserver-java.awt.image.ImageObserver-) [ImageObserver getImageObserver()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#getImageObserver--) | 为图像图标设置或获取图像观察器。 |
+
 | [int getImageLoadStatus()](https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html#getImageLoadStatus--) | 获取图像图标的图像加载状态。此方法返回的值由`MediaTracker`定义。 |
 
 ## 使用图标的示例
@@ -453,8 +454,4 @@ if(icon != null) {
 | `ActionDemo` | 如何使用操作 | 展示如何使用`Action`在工具栏按钮或菜单项中指定图标。 |
 | `FileChooserDemo2` | 如何使用文件选择器 | 使用了 `PNG` 图像。展示了如何在文件选择器中实现图像预览和图像过滤器。 |
 
-* * *
-
 **注意：** `IconDemo` 中使用的照片版权归 ©2006 [spriggs.net](http://photos.spriggs.net/) 所有，并在 [知识共享许可协议](http://creativecommons.org/licenses/by-sa/3.0/) 下授权使用。
-
-* * *

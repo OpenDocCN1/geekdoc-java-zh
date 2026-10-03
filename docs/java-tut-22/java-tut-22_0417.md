@@ -1,3 +1,4 @@
+
 # 如何使用`JLayer`类装饰组件
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/misc/jlayer.html`](https://docs.oracle.com/javase/tutorial/uiswing/misc/jlayer.html)
@@ -6,17 +7,12 @@
 
 本文档描述了展示`JLayer`类功能的示例。提供完整的源代码。
 
-+   使用`JLayer`类
-
-+   使用`LayerUI`类
-
-+   在组件上绘制
-
-+   响应事件
-
-+   动画繁忙指示器
-
-+   验证文本字段
+- 使用`JLayer`类
+- 使用`LayerUI`类
+- 在组件上绘制
+- 响应事件
+- 动画繁忙指示器
+- 验证文本字段
 
 要了解本页面上的材料的简要介绍，请观看以下视频。
 
@@ -28,13 +24,10 @@
 
 `javax.swing.JLayer`类是一个团队的一半。另一半是`javax.swing.plaf.LayerUI`类。假设您想在`JButton`对象上方进行一些自定义绘制（*装饰*`JButton`对象）。您想要装饰的组件是*目标*。
 
-+   创建目标组件。
-
-+   创建`LayerUI`子类的实例来进行绘制。
-
-+   创建包装目标和`LayerUI`对象的`JLayer`对象。
-
-+   使用`JLayer`对象在用户界面中就像使用目标组件一样。
+1. 创建目标组件。
+2. 创建`LayerUI`子类的实例来进行绘制。
+3. 创建包装目标和`LayerUI`对象的`JLayer`对象。
+4. 使用`JLayer`对象在用户界面中就像使用目标组件一样。
 
 例如，要将`JPanel`子类的实例添加到`JFrame`对象中，可以类似地执行以下操作：
 
@@ -44,7 +37,6 @@ JFrame f = new JFrame();
 JPanel panel = createPanel();
 
 f.add (panel);
-
 ```
 
 要装饰`JPanel`对象，可以类似地执行以下操作：
@@ -57,7 +49,6 @@ LayerUI<JPanel> layerUI = new MyLayerUISubclass();
 JLayer<JPanel> jlayer = new JLayer<JPanel>(panel, layerUI);
 
 f.add (jlayer);
-
 ```
 
 使用泛型确保`JPanel`对象和`LayerUI`对象是兼容的类型。在上一个示例中，`JLayer`对象和`LayerUI`对象都与`JPanel`类一起使用。
@@ -72,11 +63,9 @@ f.add (jlayer);
 
 `LayerUI`类大部分行为都继承自`ComponentUI`类。以下是最常重写的方法：
 
-+   当目标组件需要绘制时，会调用`paint(Graphics g, JComponent c)`方法。为了以与 Swing 相同的方式呈现组件，调用`super.paint(g, c)`方法。
-
-+   当你的`LayerUI`子类与一个组件关联时，会调用`installUI(JComponent c)`方法。在这里执行任何必要的初始化。传入的组件是相应的`JLayer`对象。使用`JLayer`类的`getView()`方法检索目标组件。
-
-+   当你的`LayerUI`子类不再与给定组件关联时，会调用`uninstallUI(JComponent c)`方法。如果需要，进行清理。
+- 当目标组件需要绘制时，会调用`paint(Graphics g, JComponent c)`方法。为了以与 Swing 相同的方式呈现组件，调用`super.paint(g, c)`方法。
+- 当你的`LayerUI`子类与一个组件关联时，会调用`installUI(JComponent c)`方法。在这里执行任何必要的初始化。传入的组件是相应的`JLayer`对象。使用`JLayer`类的`getView()`方法检索目标组件。
+- 当你的`LayerUI`子类不再与给定组件关联时，会调用`uninstallUI(JComponent c)`方法。如果需要，进行清理。
 
 ## 在组件上绘制
 
@@ -100,7 +89,6 @@ class WallpaperLayerUI extends LayerUI<JComponent> {
     g2.dispose();
   }
 }
-
 ```
 
 `paint()`方法是自定义绘制发生的地方。调用`super.paint()`方法会绘制`JPanel`对象的内容。在设置了 50%透明度的合成后，绘制颜色渐变。
@@ -161,7 +149,6 @@ public class Wallpaper {
     return p;
   }
 }
-
 ```
 
 这是结果：
@@ -170,9 +157,8 @@ public class Wallpaper {
 
 源代码：
 
-`Wallpaper NetBeans 项目`
-
-`Wallpaper.java`
+- `Wallpaper NetBeans 项目`
+- `Wallpaper.java`
 
 使用[Java Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行：
 
@@ -223,7 +209,6 @@ class BlurLayerUI extends LayerUI<JComponent> {
     g2.drawImage(mOffscreenImage, mOperation, 0, 0);
   }
 }
-
 ```
 
 在`paint()`方法中，面板被渲染到一个离屏图像中。离屏图像使用卷积运算符进行处理，然后绘制到屏幕上。
@@ -234,9 +219,8 @@ class BlurLayerUI extends LayerUI<JComponent> {
 
 源代码：
 
-`Myopia NetBeans 项目`
-
-`Myopia.java`
+- `Myopia NetBeans 项目`
+- `Myopia.java`
 
 使用[Java Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行：
 
@@ -257,7 +241,6 @@ public void installUI(JComponent c) {
     AWTEvent.MOUSE_MOTION_EVENT_MASK
   );
 }
-
 ```
 
 所有发送到你的`JLayer`子类的事件都会路由到一个事件处理方法，其名称与事件类型匹配。例如，你可以通过重写相应的方法来响应鼠标和鼠标移动事件：
@@ -270,10 +253,11 @@ protected void processMouseEvent(MouseEvent e, JLayer l) {
 protected void processMouseMotionEvent(MouseEvent e, JLayer l) {
   // ...
 }
-
 ```
 
 以下是一个`LayerUI`子类，它在面板内鼠标移动时绘制一个半透明的圆圈。
+
+
 
 ```java
 class SpotlightLayerUI extends LayerUI<JPanel> {
@@ -336,7 +320,6 @@ class SpotlightLayerUI extends LayerUI<JPanel> {
     l.repaint();
   }
 }
-
 ```
 
 `mActive`变量指示鼠标是否在面板坐标内。在`installUI()`方法中，调用`setLayerEventMask()`方法来指示`LayerUI`子类对接收鼠标和鼠标移动事件的兴趣。

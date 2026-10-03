@@ -1,28 +1,34 @@
-# hibernate–多对多示例(注释)
+
+# Hibernate 多对多示例（注释）
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/hibernate/hibernate-many-to-many-relationship-example-annotation/>
 
 在本教程中，它将重用之前的“[Hibernate many to many example–XML mapping](http://web.archive.org/web/20190310100450/http://www.mkyong.com/hibernate/hibernate-many-to-many-relationship-example/)”教程的整个基础设施，并对其进行增强以支持 Hibernare / JPA 注释。
 
 **Note**
+
 For many to many with extra columns in join table, please refer to this [tutorial](http://web.archive.org/web/20190310100450/http://www.mkyong.com/hibernate/hibernate-many-to-many-example-join-table-extra-column-annotation/).
 
 ## 项目结构
 
 查看本教程的新项目结构。
 
-![many to many project folder](img/8e61c049346ae4edb0c563749c076919.png "many-to-many-annotation-project-folder") ## 1.“多对多”表关系
+![many to many project folder](img/8e61c049346ae4edb0c563749c076919.png "many-to-many-annotation-project-folder")
+
+## 1. “多对多”表关系
 
 再看前面的多对多表关系。
 
-![many to many ER diagram](img/2262d7d950a544f8a9481a3213878aaa.png "many-to-many-diagram") ## 2.Hibernate 模型类
+![many to many ER diagram](img/2262d7d950a544f8a9481a3213878aaa.png "many-to-many-diagram")
+
+## 2. Hibernate 模型类
 
 更新以前的模型类—`Stock.java`和`Category.java`，并在其中定义新的注释代码。
 
-*文件:Stock.java*
+### 文件：`Stock.java`
 
 ```java
- package com.mkyong.stock;
+package com.mkyong.stock;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -94,9 +100,9 @@ public class Stock implements java.io.Serializable {
 	}
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "stock_category", catalog = "mkyongdb", joinColumns = { 
-			@JoinColumn(name = "STOCK_ID", nullable = false, updatable = false) }, 
-			inverseJoinColumns = { @JoinColumn(name = "CATEGORY_ID", 
+	@JoinTable(name = "stock_category", catalog = "mkyongdb", joinColumns = {
+			@JoinColumn(name = "STOCK_ID", nullable = false, updatable = false) },
+			inverseJoinColumns = { @JoinColumn(name = "CATEGORY_ID",
 					nullable = false, updatable = false) })
 	public Set<Category> getCategories() {
 		return this.categories;
@@ -106,13 +112,13 @@ public class Stock implements java.io.Serializable {
 		this.categories = categories;
 	}
 
-} 
+}
 ```
 
-*文件:Category.java*
+### 文件：`Category.java`
 
 ```java
- package com.mkyong.stock;
+package com.mkyong.stock;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -186,17 +192,17 @@ public class Category implements java.io.Serializable {
 		this.stocks = stocks;
 	}
 
-} 
+}
 ```
 
-## 3.休眠配置文件
+## 3. 休眠配置文件
 
-将带注释的类`Stock.java`和`Category.java`放在`hibernate.cfg.xml`中，如下所示:
+将带注释的类`Stock.java`和`Category.java`放在`hibernate.cfg.xml`中，如下所示：
 
-*文件:hibernate.cfg.xml*
+### 文件：`hibernate.cfg.xml`
 
-```java
- <?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
@@ -212,17 +218,17 @@ public class Category implements java.io.Serializable {
     <mapping class="com.mkyong.stock.Stock" />
     <mapping class="com.mkyong.stock.Category" />
 </session-factory>
-</hibernate-configuration> 
+</hibernate-configuration>
 ```
 
-## 4.运行它
+## 4. 运行它
 
 运行它，结果不言自明。
 
-*文件:App.java*
+### 文件：`App.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -257,62 +263,57 @@ public class App {
 	session.getTransaction().commit();
 	System.out.println("Done");
 	}
-} 
+}
 ```
 
-*输出*
+### 输出
 
-```java
- Hibernate many to many (Annotation)
-Hibernate: 
-    insert 
+```text
+Hibernate many to many (Annotation)
+Hibernate:
+    insert
     into
         mkyongdb.stock
-        (STOCK_CODE, STOCK_NAME) 
+        (STOCK_CODE, STOCK_NAME)
     values
         (?, ?)
-Hibernate: 
-    insert 
+Hibernate:
+    insert
     into
         mkyongdb.category
-        (`DESC`, NAME) 
+        (`DESC`, NAME)
     values
         (?, ?)
-Hibernate: 
-    insert 
+Hibernate:
+    insert
     into
         mkyongdb.category
-        (`DESC`, NAME) 
+        (`DESC`, NAME)
     values
         (?, ?)
-Hibernate: 
-    insert 
+Hibernate:
+    insert
     into
         mkyongdb.stock_category
-        (STOCK_ID, CATEGORY_ID) 
+        (STOCK_ID, CATEGORY_ID)
     values
         (?, ?)
-Hibernate: 
-    insert 
+Hibernate:
+    insert
     into
         mkyongdb.stock_category
-        (STOCK_ID, CATEGORY_ID) 
+        (STOCK_ID, CATEGORY_ID)
     values
         (?, ?)
-Done 
+Done
 ```
 
-Download it – [Hibernate-many-to-many-annotation.zip](http://web.archive.org/web/20190310100450/http://www.mkyong.com/wp-content/uploads/2011/04/Hibernate-many-to-many-annotation.zip) (9KB)
+下载它 – [Hibernate-many-to-many-annotation.zip](http://web.archive.org/web/20190310100450/http://www.mkyong.com/wp-content/uploads/2011/04/Hibernate-many-to-many-annotation.zip)（9KB）。
 
 ## 参考
 
-1.  Hibernate 文档–多对多关系。
+1. Hibernate 文档–多对多关系。
+
+
 
 [hibernate](http://web.archive.org/web/20190310100450/http://www.mkyong.com/tag/hibernate/) [many-to-many](http://web.archive.org/web/20190310100450/http://www.mkyong.com/tag/many-to-many/)
-
-
-
-
-
-
-
